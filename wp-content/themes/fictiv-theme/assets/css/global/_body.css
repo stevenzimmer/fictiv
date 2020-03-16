@@ -1,0 +1,59 @@
+/*! purgecss start ignore */
+body {
+    @apply font-normal not-italic leading-normal text-16 text-default leading-normal h-full;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*max-width: 1440px;*/
+}
+
+.section {
+	@apply py-12;
+
+	@screen md {
+		@apply py-20;
+	}
+
+	&-half {
+		@apply py-6;
+
+		@screen md {
+			@apply py-10;
+		}		
+	}
+}
+
+
+.lazyload {
+	@apply block border-0 opacity-0;
+
+	&:not(.initial) {
+		transition: opacity 1s;
+	}
+	&.initial,
+	&.loaded,
+	&.error {
+		@apply opacity-100;
+	}
+	&:not([src]) {
+		@apply visible;
+	}
+}
+
+.block {
+
+	&-link {
+
+		a {
+			transition: color .2s ease-in-out;
+		}
+
+		&:hover {
+
+			a {
+				@apply text-red-dark;
+			}
+		}
+	}
+}
+
+/*! purgecss end ignore */

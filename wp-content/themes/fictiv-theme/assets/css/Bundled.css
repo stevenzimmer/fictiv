@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./global/_body.css";
+
+@import "./modules/_careers.css";
+@import "./modules/_post-content.css";
+
+@import "./components/_btns.css";
+@import "./components/_nav.css";

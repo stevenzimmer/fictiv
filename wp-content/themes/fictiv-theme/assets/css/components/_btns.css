@@ -1,0 +1,37 @@
+.btn {
+	@apply py-8 px-12 uppercase text-18 inline-block font-fat text-center;
+
+	&-primary {
+		@apply text-white bg-teal-dark;
+
+		&:hover {
+			@apply bg-teal-light;
+		}
+	}
+
+	&-secondary {
+		@apply text-white bg-blue-light;
+
+		&:hover {
+			@apply bg-blue-dark;
+		}
+	}
+
+	&-rounded {
+		@apply text-16 py-2 px-8 inline-block rounded-full font-bold;
+
+		&-primary {
+			@apply bg-blue-light text-white;
+
+
+		}
+	}
+
+	&-ghost {
+		@apply bg-transparent;
+
+		&-primary {
+			@apply border border-teal-dark border-2 text-teal-dark;
+		}
+	}
+}
