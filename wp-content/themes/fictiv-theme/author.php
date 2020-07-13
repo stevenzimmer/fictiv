@@ -3,7 +3,7 @@ get_header();
 // print_r( get_queried_object() );
 $curauth = get_queried_object();
 
-print_r( $curauth )
+// print_r( $curauth )
 // print_r( get_queried_object() );
 // $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 

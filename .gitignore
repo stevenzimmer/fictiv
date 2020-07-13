@@ -25,10 +25,8 @@ wp-content/themes/twenty*
 wp-content/ai1wm-*/
 
 wp-config\.php
-_wpeprivate
-wp-content\/uploads
+_wpeprivate 
 wp-content\/blogs\.dir
-wp-content\/upgrade
 wp-content\/object-cache\.php
 wp-content\/mysql\.sql
 wp-content\/mu-plugins\/mu-plugin\.php

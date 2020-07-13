@@ -2,7 +2,6 @@ const path = require("path");
 const glob = require("glob-all");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const PurifyCSSPlugin = require("purifycss-extended-webpack");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const FontminPlugin = require('fontmin-webpack');
 
@@ -70,16 +69,21 @@ module.exports = {
                 test: /\.(png|jpg|svg)$/,
                 loader: "url-loader"
             },
-            
-            {
+
+             {
                 test: /\.(woff(2)?|ttf|otf|)(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "file-loader",
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: 'fonts/',
-                    publicPath: url => '../../fonts/' + url
-                }
+                loader: "url-loader"
             }
+            
+            // {
+            //     test: /\.(woff(2)?|ttf|otf|)(\?v=\d+\.\d+\.\d+)?$/,
+            //     loader: "file-loader",
+            //     options: {
+            //         name: '[name].[ext]',
+            //         outputPath: 'fonts/',
+            //         publicPath: url => './../../fonts/' + url
+            //     }
+            // }
         ]
     },
 

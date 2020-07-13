@@ -4,10 +4,6 @@
 	&-content {
 		@apply text-grey-600 text-14 font-museo-500;
 
-		p,hr,ol,ul {
-			@apply mb-6;
-		}
-
 		ul,ol {
 			@apply pl-8;
 		}
@@ -28,7 +24,7 @@
 			}
 		}
 
-		p, span, h4, h5, h6,img {
+		p, span, h4, h5, h6,img, hr,ol,ul {
 			@apply mb-6;
 		}
 
