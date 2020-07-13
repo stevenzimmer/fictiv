@@ -53,8 +53,8 @@ if ( have_posts() ) :
 					<a class="hover:text-grey-600" href="/resource-center/">Resources Center</a> / <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>">Blog Articles</a> / <a class="hover:text-grey-600" href="<?php echo $topic_link; ?>"><?php echo $topic_name; ?></a>
 				
 				</div>
-				<div class="flex flex-wrap -mx-6 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-6">
+				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
+					<div class="w-11/12 lg:w-4/12 px-4">
 						<div class="bg-grey-200 h-64 flex items-center justify-center mb-12">
 							<div>
 								In Progress
@@ -145,7 +145,7 @@ if ( have_posts() ) :
 						</div>
 						
 					</div>
-					<div class="w-11/12 lg:w-8/12 px-6">
+					<div class="w-11/12 lg:w-8/12 px-4">
 						
 						<div class="flex flex-wrap justify-between items-center mb-4">
 							<div class="w-full lg:w-1/2 ">
