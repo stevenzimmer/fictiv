@@ -1,0 +1,10 @@
+.carousel {
+
+	&-dot {
+
+		&.active {
+			@apply bg-grey-600;
+		}
+	}
+
+}

@@ -2,10 +2,67 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
 @import "./global/_body.css";
 
 @import "./modules/_careers.css";
 @import "./modules/_post-content.css";
+@import "./modules/_page-content.css";
+@import "./modules/_homepage.css";
+
 
 @import "./components/_btns.css";
 @import "./components/_nav.css";
+@import "./components/_footer.css";
+@import "./components/_toggle-modules.css";
+@import "./components/_tolerance-chart.css";
+@import "./components/_form.css";
+@import "./components/_carousel.css";
+
+@import "./pages/_partners.css";
+
+
+@import "./pages/_2018-state-of-hardware-report.css";
+
+@font-face {
+    font-family: 'museo-300';
+    src: url('./../fonts/museo-sans/300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-500';
+    src: url('./../fonts/museo-sans/500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-700';
+    src: url('./../fonts/museo-sans/700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-900';
+    src: url('./../fonts/museo-sans/900.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'slab-300';
+    src: url('./../fonts/museo-slab/300.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'slab-500';
+    src: url('./../fonts/museo-slab/500.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+

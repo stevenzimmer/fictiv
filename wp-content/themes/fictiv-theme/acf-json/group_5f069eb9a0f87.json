@@ -1,0 +1,45 @@
+{
+    "key": "group_5f069eb9a0f87",
+    "title": "Teardown Authors",
+    "fields": [
+        {
+            "key": "field_5f069ec1bdcbb",
+            "label": "Select Authors",
+            "name": "teardowns_authors",
+            "type": "user",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": [
+                "editor",
+                "author"
+            ],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_teardown"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594269663
+}

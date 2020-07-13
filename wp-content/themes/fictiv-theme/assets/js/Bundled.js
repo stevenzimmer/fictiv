@@ -1,1 +1,16 @@
+// import './jquery/_scripts';
+// import './legacy/_scripts';
+// import $ from 'jquery';
+// import 'slick-carousel';
+
+
 import './careers/_scripts';
+import './hwg/_menu-toggle';
+
+import './lazyload/_scripts';
+import './homepage/_scripts';
+import './tolerance/_scripts';
+import './partners/_scripts';
+import './face-shields/_scripts';
+import './social-share/_scripts';
+

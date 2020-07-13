@@ -1,308 +1,223 @@
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	max-height: 100%;
-	overflow: scroll;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 999;
-	background-color: #fff;
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: opacity .2s ease-in;
-	-o-transition: opacity .2s ease-in;
-	transition: opacity .2s ease-in;
-	padding: 60px 0;
-	display: none;
+/*! purgecss start ignore */
+.jobs {
+	&-overlay {
+		@apply fixed w-full h-full max-h-full inset-0 bg-white invisible opacity-0 transition-opacity duration-200 py-20 overflow-scroll hidden;
+		z-index: 999;
 
-	&.active {
-		opacity: 1;
-		visibility: visible;
-		display: block;
+		&.active {
+			@apply opacity-100 visible block;
+		}
+	}
+
+	&-modal {
+
+		&-top {
+			@apply mb-12
+		}
+
+		&-inner {
+			@apply mx-auto;
+			width: 70%;
+		}
+
+		&-content {
+
+			h1,h2,h3 {
+				@apply mb-8 font-museo-900 text-blue-dark;
+			}
+
+			h1 {
+				@apply text-20;
+			}
+
+			h2, h3 {
+				@apply text-18;
+			}
+
+			ul {
+				@apply list-disc pl-8;
+			}
+
+			p, ul li {
+				@apply mb-4 font-museo-500 text-default;
+			}
+		}
+
+		&-title {
+
+			h2 {
+				@apply text-blue-dark font-museo-900;
+			}
+		}
+
+		&-location {
+			width: 58%;
+
+			p {
+				@apply text-default font-museo-500;
+			}
+			
+		}
+	}
+
+	&-item {
+		@apply flex py-4 px-2 border-b border-grey-100;
+
+		@screen lg {
+			@apply px-8 py-4;
+		}
+
+		p {
+			@apply m-0 font-museo-500 text-12 text-default;
+
+			@screen lg {
+				@apply text-14;
+			}
+		}
+
+		.jobs {
+
+			&-title, &-location {
+				width: 45%;
+			}
+
+			&-apply {
+				width: 10%;
+
+				a {
+					@apply m-0 font-museo-500 text-blue-dark text-right text-12;
+
+					@screen lg {
+						@apply text-14;
+
+					}
+				}
+			}
+		}
+	}
+
+	&-wrapper {
+		padding: 0 5px 40px;
+
+		@screen lg {
+			padding: 0 10px 40px;
+		}
 	}
 }
 
-.job-modal-title h2 {
-	color: #0c0a70;
-	font-family: 'Museosans 900', sans-serif;
-	font-weight: 900;
-	margin-bottom: 40px;
+.careers {
+
+	&-header {
+		padding: 40px 0;
+	}
+
+	&-top {
+
+		&-header {
+			@apply text-center pb-12;
+
+			h3 {
+				@apply text-20 font-museo-900 mb-12 text-blue-light uppercase;
+
+				@screen lg {
+					@apply text-30;
+
+				}
+			}
+
+			p {
+				@apply text-18 font-museo-500;
+
+				@screen lg {
+					@apply text-20;
+				}
+			}
+		}
+	}
 }
 
-.job-modal-location p {
-	color: #333;
-	font-family: 'Museosans 500', sans-serif;
-	font-weight: 500;
-}
+.department {
 
-.border-bottom {
-			border-bottom: 1px solid #f0f4f5;
+	&-header {
+		background-color: #f0f4f5;
+		padding: 10px 0;
+		text-align: center;
+
+		@screen lg {
+			padding: 20px 0;
 		}
 
-		.overlay-inner {
-			padding: 40px 0;
+		h3 {
+			@apply text-16 font-museo-900 uppercase text-blue-dark;
+
+			@screen lg {
+				@apply text-20;
+
+			}
 		}
+	}
 
-		.job-modal-top {
-			margin-bottom: 40px;
-		}
-		.job-modal-inner {
-			width: 70%;
-			margin: auto;
-		}
+	&-list {
 
-		.job-modal-content h1,
-		.job-modal-content h2,
-		.job-modal-content h3 {
-			margin-bottom: 20px;
-			font-family: 'Museosans 900', sans-serif;
-			font-weight: 900;
-			color: #0c0a70;
-		}
-
-		.job-modal-content h1 {
-			font-size: 20px;
-		}
-
-		.job-modal-content h2,
-		.job-modal-content h3 {
-			font-size: 18px;
-		}
-
-		.job-modal-content p, .job-modal-content ul li {
-			margin-bottom: 10px;
-		}
-
-		.job-modal-content p, 
-		.job-modal-content ul li {
-			font-family: 'Museosans 500', sans-serif;
-			font-weight: 500;
-			font-size: 16px;
-			line-height: 24px;
-			color: #333;
-		}
-
-		.careers-header {
-			padding: 40px 0;
-		}
-
-		.careers-top-header {
-			text-align: center;
-			padding: 60px 0 40px;
-		}
-
-		.careers-top-header h3 {
-			font-size: 20px;
-			line-height: 30px;
-			font-family: 'Museosans 900', sans-serif;
-			font-weight: 900;
-			margin-bottom: 20px;
-			color: #5b87f2;
-			text-transform: uppercase;
-			letter-spacing: 0.2px;
-		}
-
-		.careers-top-header p {
-			font-size: 18px;
-			font-family: 'Museosans 500', sans-serif;
-			font-weight: 500;
-		}
-
-		
-
-		.department-header {
-			background-color: #f0f4f5;
-			padding: 10px 0;
-			text-align: center;
-		}
-
-		.department-header h3 {
-			margin: 0;
-			font-family: 'Museosans 900', sans-serif;
-			font-weight: 900;
-			text-transform: uppercase;
-			font-size: 16px;
-			line-height: 28px;
-			color: #0c0a70;
-		}
-
-		.job-item {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			padding: 15px 5px;
-			border-bottom: 1px solid #f0f4f5;
-		}
-
-
-		.job-item p {
-			margin: 0;
-			font-family: 'Museosans 500', sans-serif;
-			font-weight: 500;
-			font-size: 12px;
-			line-height: 20px;
-			color: #333;
-		}
-
-		.job-item .job-title {
-			width: 45%;
-		}
-
-		.job-item .job-location {
-			width: 45%;
-		}
-
-		.job-item .job-apply a {
-			margin: 0;
-			font-family: 'Museosans 500', sans-serif;
-			font-weight: 500;
-			text-decoration: none;
-			font-size: 12px;
-			line-height: 20px;
-			color: #0c0a70;
-			text-align: right;
-			display: inherit;
-		}
-
-		.job-item .job-apply {
-			width: 10%;
-		}
-
-		.jobs-wrapper {
-			padding: 0 5px 40px;
-		}
-
-		.noscroll {
-			overflow: hidden;
-		}
-
-		.overlay-wrapper {
-			padding: 40px 10px;
-		}
-
-		.job-modal-location {
-			width: 58%;
-		}
-
-		.filter-by-department-row {
-			padding: 0 10px 20px;
-		}
-
-		.filter-by-department-select {
-			background-color: #fff;
-			border: 1px solid #333;
-			border-radius: 4px;
-			width: 75%;
-			color: #333;
-			appearance: none;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			padding: 1.15rem 2rem 1.15rem 1rem;
-			font-size: 18px;
-			font-family: 'Museosans 500', sans-serif;
-			font-weight: 500;
-		}
-
-		.filter-by-department-select:after {
-			display: block;
-			position: absolute;
-			right: 1rem;
-			top: 2px;
-			content: "\e603";
-			width: 1rem;
-			pointer-events: none;
-			height: calc(100% - 4px);
-			background-size: 1rem 1rem;
-			background-repeat: no-repeat;
-			background-position-y: center;
-		}
-
-		.department-list.hidden {
+		&.hidden {
 			display: none;
 		}
+	}
+}
 
-		.flickity-enabled.is-draggable .flickity-viewport {
-			height: 150px!important;
-		}
+.filter {
 
-		.carousel-cell {
-			width: 75%;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			height: 16rem;
-		}
+	&-by {
 
-		.carousel-cell img {
-			max-width: 100%;
-			height: auto;
-			display: block;
-			vertical-align: middle;
-		}
+		&-department {
 
-		@media screen and ( min-width: 768px ) {
-
-			.carousel-cell {
-				width: 33.333%;
+			&-row {
+				padding: 0 10px 20px;
 			}
 
-			.department-header {
-				padding: 20px 0;
-			}
+			&-select {
+				@apply bg-white border border-grey-light rounded w-3/4 text-default text-18 font-museo-500;
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				padding: 1.15rem 2rem 1.15rem 1rem;
 
-			.department-header h3 {
-				font-size: 20px;
-				line-height: 28px;
-			}
+				@screen lg {
+					width: 35%;
+				}
 
-			.jobs-wrapper {
-				padding: 0 10px 40px;
-			}
+				@screen xl {
+					width: 30%;
+				}
 
-			.job-item {
-				padding: 20px 10px;
-			}
-
-			.job-item p {
-				font-size: 14px;
-				line-height: 26px;
-			}
-
-			.job-item .job-apply a {
-				font-size: 14px;
-				line-height: 26px;
-			}
-
-			.overlay-wrapper {
-				padding: 40px 0;
-			}
-
-			.careers-top-header h3 {
-				font-size: 30px;
-				line-height: 36px;
-			}
-
-			.careers-top-header p {
-				font-size: 20px;
-			}
-
-			.filter-by-department-select {
-				width: 35%;
+				&:after {
+					@apply block absolute w-4 bg-no-repeat;
+					right: 1rem;
+					top: 2px;
+					content: "\e603";
+					pointer-events: none;
+					height: calc(100% - 4px);
+					background-size: 1rem 1rem;
+					background-position-y: center;
+				}
 			}
 		}
+	}
+}
 
-		@media screen and ( min-width: 992px ) {
-			.job-modal-title h2 {
-				margin-bottom: 0;
-			}
+.overlay {
 
-			.filter-by-department-select {
-				width: 30%;
-			}
+	&-wrapper {
+		padding: 40px 10px;
 
-			.flickity-enabled.is-draggable .flickity-viewport {
-				height: 250px!important;
-			}
+		@screen lg {
+			padding: 40px 0;
 		}
+
+	}
+}
+
+.noscroll {
+	overflow: hidden;
+}
+/*! purgecss end ignore */

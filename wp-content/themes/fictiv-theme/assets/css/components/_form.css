@@ -1,0 +1,179 @@
+/*! purgecss start ignore */
+.mktoForm {
+	@apply w-full !important;
+
+	.mktoFormRow {
+		@apply w-full flex -mx-1;
+
+        .mktoClear {
+            @apply hidden;
+        }
+
+		.mktoFieldDescriptor, .mktoFormCol {
+			@apply w-full float-none relative px-1 mb-1 min-h-0 !important;
+
+            .mktoOffset {
+                @apply hidden;
+            }
+
+			.mktoFieldWrap {
+				@apply w-full p-0 float-none inline-block !important;
+
+                .mktoGutter {
+                    @apply hidden;
+                }
+
+                &.mktoRequiredField {
+
+                    .mktoLabel {
+
+                        .mktoAsterix {
+                            @apply hidden;
+                        }
+                    }
+                }
+
+				.mktoLabel {
+					@apply hidden;
+
+                    &:not([for="Email_Opt_in_Consent__c"]) {
+                        @apply hidden;
+                    }
+
+                    &[for="Email_Opt_in_Consent__c"] {
+                        @apply float-none inline-block mb-2 text-blue-dark font-museo-300 text-14;
+                        width: 235px !important;
+
+                        @screen lg {
+                            width: 242px !important;
+                        }
+
+                        @screen xl {
+                            width: 454px !important;
+                        }
+                    }
+				}
+
+                textarea {
+
+                    &.mktoField {
+                        @apply h-16 !important;
+                    }
+                }
+
+				.mktoField {
+					@apply w-full inline-block h-10 bg-white p-2 outline-none rounded border border-grey-light text-default text-14 !important;
+
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+                    &:focus {
+                        @apply text-blue-light;
+                        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                    }
+				}
+
+				.mktoHtmlText {
+					@apply w-full py-0 px-1 text-blue-dark font-museo-900 !important;
+				}
+
+                .mktoRadioList {
+                    @apply flex flex-wrap w-full !important;
+
+                    .mktoField {
+                        @apply h-4 w-4 mr-2 mb-2 !important;
+                    }
+
+                    label {
+                        @apply ml-0 mr-4 text-default font-museo-500;
+                    }
+                }
+			}
+
+			.mktoOffset {
+				@apply hidden !important;
+			}
+		}
+	}
+
+	.mktoButtonRow {
+		@apply w-full py-0 px-1 my-0 !important;
+
+		.mktoButtonWrap.mktoSimple {
+			@apply w-full ml-0 !important;
+
+			.mktoButton {
+				@apply py-2 px-6 w-full bg-teal-dark text-center rounded-none border-0 uppercase font-museo-900 transition-colors duration-200 ease-in-out text-14 !important;
+				background-image: none;
+
+				&:hover {
+					@apply bg-teal-light text-white !important;
+				}
+			}
+		}
+	}
+
+	
+}
+.gdpr {
+
+	&-text {
+
+		a {
+			@apply text-blue-light;
+
+			&:hover {
+				@apply text-red-dark;
+			}
+		}
+	}
+}
+
+
+
+.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#Email_Opt_in_Consent__c,
+.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#subscriptionFictivHardwareRoundup {
+    height: 21px;
+    float: left;
+    border: none;
+    box-shadow: none;
+}
+
+
+.navbar-2.no-scroll {
+    background-color: #fff;
+    position: relative;
+}
+
+@media only screen and (min-width: 320px) {
+    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
+        width: 279px !important;
+    }
+}
+
+@media only screen and ( max-width: 480px ) {
+
+    .mktoForm .mktoCheckboxList {
+        width: 30px !important;
+    }
+}
+
+@media only screen and (min-width: 568px) {
+    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
+        width: 429px !important;
+    }
+}
+
+@media only screen and (min-width: 667px) {
+    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
+        width: 548px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
+        width: 386px !important;
+    }
+}
+/*! purgecss end ignore */

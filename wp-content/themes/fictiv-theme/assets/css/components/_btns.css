@@ -1,5 +1,5 @@
 .btn {
-	@apply py-8 px-12 uppercase text-18 inline-block font-fat text-center;
+	@apply py-2 px-6 uppercase text-18 inline-block font-museo-900 text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
 
 	&-primary {
 		@apply text-white bg-teal-dark;
@@ -30,8 +30,20 @@
 	&-ghost {
 		@apply bg-transparent;
 
+		&-white {
+			@apply border border-white text-white border-2;
+		}
+
 		&-primary {
 			@apply border border-teal-dark border-2 text-teal-dark;
+		}
+
+		&-secondary {
+			@apply border border-blue-light border-2 text-blue-light;
+
+			&:hover {
+				@apply bg-blue-light text-white;
+			}
 		}
 	}
 }

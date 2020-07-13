@@ -1,21 +1,563 @@
+/*! purgecss start ignore */
 .post {
 
 	&-content {
+		@apply text-grey-600 text-14 font-museo-500;
 
-		p,h2,hr {
-			@apply mb-8;
+		p,hr,ol,ul {
+			@apply mb-6;
+		}
+
+		ul,ol {
+			@apply pl-8;
+		}
+
+		ul {
+			@apply list-disc;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+		
+		blockquote {
+			@apply mb-6 py-2 px-5 border-l-8 border-grey-light;
+
+			p {
+				@apply w-full;
+			}
+		}
+
+		p, span, h4, h5, h6,img {
+			@apply mb-6;
+		}
+
+/*		p {
+			@apply  leading-relaxed;
+		}*/
+
+		iframe {
+			@apply max-w-full mx-auto;
+		}
+
+		a {
+			@apply text-teal-light;
+
+			&:hover {
+				@apply underline;
+			}
+
+			&[role="button"] {
+				@apply inline-block px-4 py-2 text-16 font-bold text-center text-white bg-teal-light;
+				min-width: 140px;
+			}
 		}
 
 		h1 {
-			@apply text-36 font-bold;
+			@apply text-24;
+
+			@screen md {
+				@apply text-36;
+			}
 		}
 
 		h2 {
-			@apply text-24 font-bold;
+			@apply text-20 mb-6 text-teal-light font-museo-500 leading-tight;
+
+			@screen md {
+				@apply text-29;
+			}
 		}
 
-		p {
-			@apply text-18;
+		h3 {
+			@apply text-16 mb-6 font-museo-500;
+		}
+
+		ul, ol {
+			@apply pl-8;
+
+			li {
+				@apply mb-1;
+
+				span {
+					@apply mb-0;
+				}
+			}
+		}
+
+		ul {
+			@apply list-disc;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
+		/*
+		 * Default WP Alignment Classes
+		 *****************************************************************************/
+
+		.aligncenter,
+		.alignleft,
+		.alignright,
+		.alignnone {
+			@apply block p-0;
+		}
+
+		.alignnone {
+		    margin: 5px 20px 20px 0;
+		}
+
+		.aligncenter {
+		    @apply float-none text-center;
+		    margin: .5em auto 1em;
+		}
+
+		.alignright {
+		    float: right;
+		    margin: .5em 0 1em 1em;
+		}
+
+		.alignleft {
+		    float: left;
+		    margin: .5em 1em 1em 0;
+		}
+
+
+
+		.blocks {
+
+			&-gallery {
+
+				&-grid {
+					@apply mb-0;
+				}
+
+				&-item {
+
+					figure {
+					
+						img {
+							@apply mb-0;
+						}
+					}
+				}
+
+				&-caption {
+					@apply mt-0;
+				}
+			}
+		}
+			
+	
+		.wp {
+
+			&-caption {
+				@apply py-2 text-center max-w-full;
+
+				img {
+					@apply inline;
+				}
+
+				&-text {
+					@apply mt-2 p-0 text-center text-12 italic;
+				}
+			}
+
+			&-block {
+
+				&-eedee {
+				
+					&-block {
+				
+						&-gutenslider {
+							@apply m-0 mb-6;
+						}
+					}
+				}
+
+				&-cover {
+					@apply mb-6;
+				}
+
+				&-columns {
+					@apply mb-6;
+
+					
+					.wp {
+
+						&-block {
+
+							&-column {
+								@apply mb-6;
+
+								@screen lg {
+									@apply mb-0;
+								}
+
+								&:not(:first-child) {
+
+									@screen lg {
+										margin-left: 15px;
+									}
+								}
+
+								p {
+									@apply mb-0;
+								}
+
+								.wp {
+
+									&-block {
+
+										&-image {
+											@apply mb-1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&-image {
+					@apply mb-6;
+
+					figcaption {
+						@apply text-center text-12 block my-0;
+					}
+
+					img {
+						@apply mb-0;
+					}
+
+					figure {
+
+						img {
+							@apply mb-0;
+						}
+
+						&.alignright {
+							@apply float-right ml-4;
+						}
+
+						&.alignleft {
+							@apply float-left mr-4;
+						}
+
+						&.aligncenter {
+
+							img {
+								@apply mx-auto;	
+							}
+							
+						}
+					}
+				}
+
+				&-quote {
+					@apply mb-4 py-2 px-5 border-l-4 border-grey-300 bg-grey-100;
+
+					p {
+						@apply text-teal-light text-20 mb-0;
+
+
+					}
+				}
+
+				&-gallery {
+					@apply mb-6;
+
+					.blocks {
+
+						&-gallery {
+
+							&-grid {
+								@apply list-none pl-0;
+							}
+
+							&-caption {
+								@apply w-full text-center;
+							}
+						}
+					}
+
+				}
+
+				&-embed {
+					@apply mb-8;
+
+					&__wrapper {
+						@apply relative h-0 p-0 overflow-hidden;
+						padding-top: 56.25%;
+
+						iframe {
+							@apply absolute top-0 left-0 bottom-0 w-full h-full border-0;
+						}
+					}
+				}
+			}
 		}
 	}
 }
+
+
+
+
+.has {
+
+	&-background {
+		@apply p-6;
+	}
+
+	&-teal {
+
+		&-lighter {
+
+			&-color {
+				@apply text-teal-lighter;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-teal-lighter;
+				}
+			}
+		}
+
+		&-light {
+
+			&-color {
+				@apply text-teal-light;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-teal-light;
+				}
+			}
+		}
+
+		&-dark {
+
+			&-color {
+				@apply text-teal-dark;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-teal-dark;
+				}
+			}
+		}
+	}
+
+	&-blue {
+
+		&-light {
+
+			&-color {
+				@apply text-blue-light;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-blue-light;
+				}
+			}
+		}
+
+		&-dark {
+
+			&-color {
+				@apply text-blue-dark;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-blue-dark;
+				}
+			}
+		}
+	}
+
+	&-red {
+
+		&-dark {
+			&-color {
+				@apply text-red-dark;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-red-dark;
+				}
+			}	
+		}
+
+			
+	}
+
+	&-yellow {
+
+		&-dark {
+			&-color {
+				@apply text-yellow-dark;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-yellow-dark;
+				}
+			}	
+		}
+
+			
+	}
+
+	&-grey {
+
+		&-color {
+			@apply text-default;
+		}
+
+		&-background {
+
+			&-color {
+				@apply bg-default;
+			}
+		}
+
+		&-100 {
+			&-color {
+				@apply text-grey-100;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-100;
+				}
+			}
+		}
+
+		&-200 {
+			&-color {
+				@apply text-grey-200;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-200;
+				}
+			}
+		}
+
+		&-300 {
+			&-color {
+				@apply text-grey-300;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-300;
+				}
+			}
+		}
+
+		&-400 {
+			&-color {
+				@apply text-grey-400;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-400;
+				}
+			}
+		}
+
+		&-500 {
+			&-color {
+				@apply text-grey-500;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-500;
+				}
+			}
+		}
+
+		&-600 {
+			&-color {
+				@apply text-grey-600;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-600;
+				}
+			}
+		}	
+	}
+
+	&-black {
+
+		&-color {
+			@apply text-black;
+		}
+
+		&-background {
+
+			&-color {
+				@apply bg-black;
+			}
+		}		
+	}
+
+	&-white {
+
+		&-color {
+			@apply text-white;
+		}
+
+		&-background {
+
+			&-color {
+				@apply bg-white;
+			}
+		}		
+	}
+
+	&-background {
+		@apply p-4;
+	}
+
+	&-text {
+
+		&-color {
+
+		}
+	}
+
+	&-blue {
+
+		&-color {
+
+		}
+	}
+}
+/*! purgecss end ignore */

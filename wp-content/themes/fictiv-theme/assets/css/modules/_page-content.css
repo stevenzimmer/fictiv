@@ -1,0 +1,236 @@
+/*! purgecss start ignore */
+.page {
+	
+	&-content {
+		p,hr,ol,ul {
+			@apply mb-8;
+		}
+
+		ul,ol {
+			@apply pl-8;
+		}
+
+		ul {
+			@apply list-disc;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
+		h1 {
+			@apply text-36 font-bold;
+		}
+
+		h2 {
+			@apply text-24 font-bold mt-12 mb-8 leading-tight;
+		}
+		
+		blockquote {
+			@apply mb-6 py-2 px-5 border-l-8 border-grey-light;
+
+			p {
+				@apply w-full;
+			}
+		}
+
+		p, span, h4, h5, h6,img {
+			@apply mb-6;
+		}
+
+		p {
+			@apply text-16 leading-relaxed;
+
+			@screen md {
+				@apply text-18;
+			}
+		}
+
+		iframe {
+			@apply max-w-full mx-auto;
+		}
+
+		a {
+			@apply text-blue-light;
+
+			&:hover {
+				@apply underline;
+			}
+
+			&[role="button"] {
+				@apply inline-block px-4 py-2 text-16 font-bold text-center text-white bg-teal-light;
+				min-width: 140px;
+			}
+		}
+
+		h1 {
+			@apply text-24;
+
+			@screen md {
+				@apply text-36;
+			}
+		}
+
+		h2 {
+			@apply text-20 mb-6;
+
+			@screen md {
+				@apply text-24;
+			}
+		}
+
+		h3 {
+			@apply text-18 mb-6;
+
+			@screen md {
+				@apply text-20;
+			}
+		}
+
+		ul, ol {
+			@apply pl-8;
+
+			li {
+				@apply mb-4;
+
+				span {
+					@apply mb-0;
+				}
+			}
+		}
+
+		ul {
+			@apply list-disc;
+		}
+
+		ol {
+			@apply list-decimal;
+		}
+
+		/*
+		 * Default WP Alignment Classes
+		 *****************************************************************************/
+
+		.aligncenter,
+		.alignleft,
+		.alignright,
+		.alignnone {
+			@apply block p-0;
+		}
+
+		.alignnone {
+		    margin: 5px 20px 20px 0;
+		}
+
+		.aligncenter {
+		    float: none;
+		    margin: .5em auto 1em;
+		}
+
+		.alignright {
+		    float: right;
+		    margin: .5em 0 1em 1em;
+		}
+
+		.alignleft {
+		    float: left;
+		    margin: .5em 1em 1em 0;
+		}
+
+		.wp {
+
+			&-caption {
+				@apply py-2 text-center max-w-full;
+
+				img {
+					@apply inline;
+				}
+
+				&-text {
+					@apply mt-2 p-0 text-center text-12 italic;
+				}
+			}
+
+			&-block {
+
+				&-cover {
+					@apply mb-6;
+				}
+
+				&-columns {
+					@apply mb-4;
+				}
+
+				&-image {
+					@apply mb-6;
+
+					figcaption {
+						@apply text-center text-14 block;
+					}
+
+					figure {
+
+						&.alignright {
+							@apply float-right ml-4;
+						}
+
+						&.alignleft {
+							@apply float-left mr-4;
+						}
+
+						&.aligncenter {
+
+							img {
+								@apply mx-auto;	
+							}
+							
+						}
+					}
+				}
+
+				&-quote {
+					@apply mb-6 py-2 px-5 border-l-4 border-grey-light;
+
+					p {
+						@apply text-teal-light text-20 mb-0;
+
+
+					}
+				}
+
+				&-gallery {
+					@apply mb-6;
+
+					.blocks {
+
+						&-gallery {
+
+							&-grid {
+								@apply list-none pl-0;
+							}
+
+							&-caption {
+								@apply w-full text-center;
+							}
+						}
+					}
+
+				}
+
+				&-embed {
+					@apply mb-8;
+
+					&__wrapper {
+						@apply relative h-0 p-0 overflow-hidden;
+						padding-top: 56.25%;
+
+						iframe {
+							@apply absolute top-0 left-0 bottom-0 w-full h-full border-0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*! purgecss end ignore */

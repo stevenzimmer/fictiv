@@ -38,7 +38,7 @@
         "tailwindcss": "^1.1.4",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "url-loader": "^1.1.2",
-        "vanilla-lazyload": "^12.4.0",
+        "vanilla-lazyload": "^12.5.1",
         "webpack": "^4.41.2",
         "webpack-cli": "^3.3.10"
     },
@@ -48,7 +48,9 @@
         "babel-loader": "^8.0.6",
         "babel-preset-env": "^1.7.0",
         "fontface-loader": "0.0.8",
-        "jquery": "^3.4.1"
+        "jquery": "^3.4.1",
+        "siema": "^1.5.1",
+        "slick-carousel": "^1.8.1"
     },
     "keywords": []
 }

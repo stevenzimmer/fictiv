@@ -6,15 +6,15 @@
 <header class="section relative">
 	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/careers-header.jpg'; ?>)"></div>
 	<div class="container relative">
-		<div class="flex justify-start">
-			<div class="w-3/5">
+		<div class="flex justify-center lg:justify-start">
+			<div class="w-11/12 lg:w-3/5">
 				<div>
-					<p class="text-blue-dark text-18 uppercase font-fat">
+					<p class="text-blue-dark text-18 uppercase font-museo-900">
 						work at fictiv
 					</p>
 				</div>
 				<div class="mb-4">
-					<h1 class="text-h1 uppercase font-fat text-blue-dark">Build the future of manufacturing</h1>
+					<h1 class="text-36 lg:text-h1 uppercase font-museo-900 text-blue-dark leading-tight">Build the future of manufacturing</h1>
 				</div>
 				<div>
 					<?php 
@@ -28,9 +28,9 @@
 <section class="section bg-white">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-3/5 ">
+			<div class="w-11/12 lg:w-3/5 ">
 				<div class="mb-4 text-center">
-					<h2 class="text-24 font-fat text-blue-light mb-4">
+					<h2 class="text-24 font-museo-900 text-blue-light mb-4">
 						TRANSFORMING HOW PRODUCTS ARE MADE
 					</h2>
 					<p class="text-18 text-blue-dark">
@@ -38,7 +38,7 @@
 					</p>
 				</div>
 				<div class="flex justify-center">
-					<div class="w-3/4">
+					<div class="w-4/5 lg:w-3/4">
 						<div class="w-full border-2 border-dotted border-teal-dark p-4">
 							<div class="flex justify-between">
 								<div class="w-1/5">
@@ -49,7 +49,7 @@
 										<p class="text-blue-dark uppercase text-16 mb-2">
 											fictiv values
 										</p>
-										<p class="text-18 font-bold text-blue-dark mb-2">
+										<p class="text-18 font-bold text-blue-dark mb-2 font-museo-700">
 											#1: CREATOR SPIRIT
 										</p>
 										<p class="text-16 class text-blue-dark">
@@ -71,12 +71,12 @@
 	</div>
 </section>
 
-<section class="section bg-white">
+<section class="section bg-grey-100">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-3/5 ">
+			<div class="w-11/12 lg:w-3/5 ">
 				<div class="mb-4 text-center">
-					<h2 class="text-24 font-fat text-blue-light mb-4">
+					<h2 class="text-24 font-museo-900 text-blue-light mb-4">
 						OPPORTUNITIES FOR GROWTH
 					</h2>
 					<p class="text-18 text-blue-dark">
@@ -84,7 +84,7 @@
 					</p>
 				</div>
 				<div class="flex justify-center">
-					<div class="w-3/4">
+					<div class="w-4/5 lg:w-3/4">
 						<div class="w-full border-2 border-dotted border-teal-dark p-4">
 							<div class="flex justify-between">
 								<div class="w-1/5">
@@ -95,7 +95,7 @@
 										<p class="text-blue-dark uppercase text-16 mb-2">
 											fictiv values
 										</p>
-										<p class="text-18 font-bold text-blue-dark mb-2">
+										<p class="text-18 font-bold text-blue-dark mb-2 font-museo-700">
 											#2: SERVICE MENTALITY
 										</p>
 										<p class="text-16 class text-blue-dark">
@@ -121,9 +121,9 @@
 <section class="section bg-white">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-3/4 ">
+			<div class="w-11/12 lg:w-3/4 ">
 				<div class="mb-4 text-center">
-					<h2 class="text-24 font-fat text-blue-light mb-4">
+					<h2 class="text-24 font-museo-900 text-blue-light mb-4">
 						A DIVERSE, COLLABORATIVE TEAM
 					</h2>
 					<p class="text-18 text-blue-dark">
@@ -134,7 +134,7 @@
 					<img alt="fictiv locations map" src="<?php echo get_template_directory_uri(); ?>/assets/images/background/fictiv-locations.png">
 				</div>
 				<div class="flex justify-center">
-					<div class="w-3/4">
+					<div class="w-4/5 lg:w-3/4">
 						<div class="w-full border-2 border-dotted border-teal-dark p-4">
 							<div class="flex justify-between">
 								<div class="w-1/5">
@@ -145,7 +145,7 @@
 										<p class="text-blue-dark uppercase text-16 mb-2">
 											fictiv values
 										</p>
-										<p class="text-18 font-bold text-blue-dark mb-2">
+										<p class="text-18 font-bold text-blue-dark mb-2 font-museo-700">
 											#3: CONSTANTLY SEEKING TO LEARN
 										</p>
 										<p class="text-16 class text-blue-dark">
@@ -170,9 +170,9 @@
 
 <section class="section bg-white">
 	<div class="container">
-		<div class="flex">
-			<div class="w-1/2"></div>
-			<div class="w-1/2">
+		<div class="flex flex-wrap justify-center lg:justify-start">
+			<div class="w-11/12 lg:w-1/2"></div>
+			<div class="w-11/12 lg:w-1/2">
 				<div>
 					<!-- Logo -->
 				</div>
@@ -196,7 +196,7 @@
 		</div>
 
 		<div class="flex justify-center">
-			<div class="w-3/5 ">
+			<div class="w-11/12 lg:w-3/5 ">
 				<div class="flex justify-center">
 					<div class="w-3/4">
 						<div class="w-full border-2 border-dotted border-teal-dark p-4">
@@ -209,7 +209,7 @@
 										<p class="text-blue-dark uppercase text-16 mb-2">
 											fictiv values
 										</p>
-										<p class="text-18 font-bold text-blue-dark mb-2">
+										<p class="text-18 font-bold text-blue-dark mb-2 font-museo-700">
 											#4: GRIT
 										</p>
 										<p class="text-16 class text-blue-dark">
@@ -231,132 +231,86 @@
 	</div>
 </section>
 
-<section class="section bg-gray-100">
+<section class="section bg-grey-100">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-3/4 ">
+			<div class="w-11/12 lg:w-3/4 ">
 				<div class="mb-4 text-center">
-					<h2 class="text-24 font-fat text-blue-light mb-4">
+					<h2 class="text-24 font-fat text-blue-light mb-4 font-museo-900">
 						PERKS AND BENEFITS
 					</h2>
 				</div>
-				<div class="flex flex-wrap -mx-2 mb-8">
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
+				<div class="flex flex-wrap -mx-2 mb-8 items-stretch">
+					<?php 
+						$perks = array(
+							array(
+								'icon' => 'food',
+								'text' => 'Free catered lunch, snacks, and drinks'
+							),
+
+							array(
+								'icon' => 'learning',
+								'text' => 'Learning and development stipend'
+							),
+
+							array(
+								'icon' => 'food',
+								'text' => 'Free catered lunch, snacks, and drinks'
+							),
+
+							array(
+								'icon' => 'learning',
+								'text' => 'Learning and development stipend'
+							),
+
+							array(
+								'icon' => 'food',
+								'text' => 'Free catered lunch, snacks, and drinks'
+							),
+
+							array(
+								'icon' => 'learning',
+								'text' => 'Learning and development stipend'
+							),
+
+							
+						);
+
+						foreach ($perks as $i => $perk ) :
+						
+					?>
+					<div class="w-full md:w-1/2 lg:w-1/3 text-center px-2 mb-4">
+						<div class="p-4 bg-white h-full">
 							<div class="mb-4">
 								<div class="flex items-center justify-center h-24">
 									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-food.svg">
+										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-<?php echo $perk['icon']; ?>.svg">
 									</div>
 								</div>
 								
 							</div>
 							<div>
 								<p class="text-blue-dark font-bold">
-									Free catered lunch, snacks, and drinks
+									<?php echo $perk['text']; ?>
 								</p>
 							</div>
 						</div>
 						
 					</div>
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
-							<div class="mb-4">
-								<div class="flex items-center justify-center h-24">
-									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-learning.svg">
-									</div>
-								</div>
-								
-							</div>
-							<div>
-								<p class="text-blue-dark font-bold">
-									Learning and development stipend
-								</p>
-							</div>
-						</div>
-						
-					</div>
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
-							<div class="mb-4">
-								<div class="flex items-center justify-center h-24">
-									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-food.svg">
-									</div>
-								</div>
-								
-							</div>
-							<div>
-								<p class="text-blue-dark font-bold">
-									Free catered lunch, snacks, and drinks
-								</p>
-							</div>
-						</div>
-						
-					</div>
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
-							<div class="mb-4">
-								<div class="flex items-center justify-center h-24">
-									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-learning.svg">
-									</div>
-								</div>
-								
-							</div>
-							<div>
-								<p class="text-blue-dark font-bold">
-									Learning and development stipend
-								</p>
-							</div>
-						</div>
-						
-					</div>
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
-							<div class="mb-4">
-								<div class="flex items-center justify-center h-24">
-									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-food.svg">
-									</div>
-								</div>
-								
-							</div>
-							<div>
-								<p class="text-blue-dark font-bold">
-									Free catered lunch, snacks, and drinks
-								</p>
-							</div>
-						</div>
-						
-					</div>
-					<div class="w-1/3 text-center px-2 mb-4">
-						<div class="p-4 bg-white">
-							<div class="mb-4">
-								<div class="flex items-center justify-center h-24">
-									<div class=" w-full">
-										<img class="mx-auto" alt="fictiv values" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-learning.svg">
-									</div>
-								</div>
-								
-							</div>
-							<div>
-								<p class="text-blue-dark font-bold">
-									Learning and development stipend
-								</p>
-							</div>
-						</div>
-						
-					</div>
+					<?php 
+						endforeach;
+					?>
+					
+					
+					
 				</div>
 
 			</div>
 		</div>
 		<div class="flex justify-center">
-			<div class="w-3/5 ">
+			<div class="w-11/12 lg:w-3/5 ">
 				<div class="flex justify-center">
-					<div class="w-3/4">
+					<div class="w-4/5 lg:w-3/4">
 						<div class="w-full border-2 border-dotted border-teal-dark p-4">
 							<div class="flex justify-between">
 								<div class="w-1/5">
@@ -367,7 +321,7 @@
 										<p class="text-blue-dark uppercase text-16 mb-2">
 											fictiv values
 										</p>
-										<p class="text-18 font-bold text-blue-dark mb-2">
+										<p class="text-18 font-bold text-blue-dark mb-2 font-museo-700">
 											#5: COMPASSION FOR OTHERS
 
 										</p>
@@ -394,9 +348,9 @@
 <section class="section bg-white">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-3/5 ">
+			<div class="w-11/12 lg:w-3/5 ">
 				<div class="mb-4 text-center">
-					<h2 class="text-24 font-fat text-blue-light mb-4 uppercase">
+					<h2 class="text-24 font-museo-900 text-blue-light mb-4 uppercase">
 						our investors
 					</h2>
 					
@@ -442,7 +396,7 @@
 <section class="section bg-blue-dark">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-2/5 ">
+			<div class="w-11/12 lg:w-2/5 ">
 				<div class="mb-4 text-center">
 					<h2 class="text-24 font-fat text-white mb-4 uppercase">
 						join our team
@@ -452,7 +406,7 @@
 					</p>
 					<div>
 						<?php 
-							primary_button('explore careers');
+							// primary_button('explore careers');
 						?>
 					</div>
 				</div>
@@ -478,23 +432,28 @@
 
 		<div id="jobs-wrapper" class="jobs-wrapper"></div>
 
-		<div id="overlay" class="overlay" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="overlayLabel">
-			<div class="overlay-wrapper" role="document">
+		<div id="jobs-overlay" class="jobs-overlay bg-white z-50" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="overlayLabel">
+			<div class="overlay-wrapper bg-white" role="document">
 				<div class="container relative">
+					<div class="flex justify-center">
+						<div class="w-11/12 lg:w-full">
+							<div class="pb-12 border-b border-grey-light">
+								<p>
+									<a href="#all-jobs" class="trigger-overlay-close btn btn-ghost btn-ghost-primary" aria-label="Close">Back to Listings</a>
+								</p>
+							</div>
+							
+							<div id="overlay-inner" class="relative overlay-inner border-bottom py-12 mb-12"></div>
 
-					<div class="pb-40 border-bottom">
-						<p>
-							<a href="#all-jobs" class="trigger-overlay-close btn btn-ghost btn-ghost-primary" aria-label="Close">Back to Listings</a>
-						</p>
+							<div class="pb-12">
+								<p>
+									<a href="#all-jobs" class="trigger-overlay-close btn btn-ghost btn-ghost-primary" aria-label="Close" >Back to Listings</a>
+								</p>
+							</div>
+						</div>
 					</div>
+
 					
-					<div id="overlay-inner" class="relative overlay-inner border-bottom pb-40 mb-40"></div>
-
-					<div class="pb-40">
-						<p>
-							<a href="#all-jobs" class="trigger-overlay-close btn btn-ghost btn-ghost-primary" aria-label="Close" >Back to Listings</a>
-						</p>
-					</div>
 				</div>
 			</div>
 		</div>

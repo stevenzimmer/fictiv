@@ -1,0 +1,17 @@
+/*! purgecss start ignore */
+.stacked {
+
+	&-toggle {
+
+		&-module {
+			@apply border-l border-transparent;
+
+			&.active {
+				@apply bg-grey-200 border-blue-light;
+			}
+		}
+		
+	}
+}
+
+/*! purgecss end ignore */

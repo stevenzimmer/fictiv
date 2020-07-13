@@ -19,13 +19,15 @@ module.exports = {
 
       default: "#333",
 
-      gray: {
-        100: '#f7fafc',
-        200: '#edf2f7',
-        300: '#e2e8f0',
-        400: '#cbd5e0',
-        500: '#a0aec0',
-        600: '#718096',
+      grey: {
+        light: "#b8b8b8",
+        dark: "#525154",
+        100: "#F0F4F5",
+        200: '#DBDCDE',
+        300: '#C6C8CA',
+        400: '#9D9FA1',
+        500: '#888888',
+        600: '#76787A',
         700: '#4a5568',
         800: '#2d3748',
         900: '#1a202c',
@@ -54,6 +56,7 @@ module.exports = {
         900: '#7b341e',
       },
       yellow: {
+        'dark': '#fcbb47',
         100: '#fffff0',
         200: '#fefcbf',
         300: '#faf089',
@@ -76,8 +79,9 @@ module.exports = {
         900: '#22543d',
       },
       teal: {
-        light:  "#28d1a5",
-        dark:   "#1cbe94",
+        lighter: "#BDEAE1",
+        light:  "#16BC9C",
+        dark:   "#0E957B",
         
         100: '#e6fffa',
         200: '#b2f5ea',
@@ -90,10 +94,10 @@ module.exports = {
         900: '#234e52',
       },
       blue: {
-        light:  "#5b87f2",
-        dark:   "#0c0a70",
+        light:  "#5B87F2",
+        dark:   "#0D0B70",
         
-        100: '#ebf8ff',
+        100: '#f0f9fb',
         200: '#bee3f8',
         300: '#90cdf4',
         400: '#63b3ed',
@@ -236,6 +240,30 @@ module.exports = {
       default: '1',
     },
     fontFamily: {
+      'museo-300': [
+          'museo-300',
+          'sans-serif'
+      ],
+      'museo-500': [
+          'museo-500',
+          'sans-serif'
+      ],
+      'museo-700': [
+          'museo-700',
+          'sans-serif'
+      ],
+      'museo-900': [
+          'museo-900',
+          'sans-serif'
+      ],
+
+      'slab-300': [
+          'slab-300'
+      ],
+      'slab-500': [
+          'slab-500'
+      ],
+
       sans: [
         'system-ui',
         '-apple-system',
@@ -265,12 +293,16 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '12' : '12px',
       '14': '14px',
       '16': '16px',
       '18': '18px',
       '20': '20px',
       '24': '24px',
+      '29': '29px',
+      '30': '30px',
       '36': '36px',
+      '40': '40px',
       '48': '48px',
       'h1': '60px'
     },
@@ -632,10 +664,10 @@ module.exports = {
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: ['responsive'],
-    borderColor: ['responsive', 'hover', 'focus'],
+    borderColor: ['responsive', 'hover', 'focus', 'last'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
-    borderWidth: ['responsive'],
+    borderWidth: ['responsive', 'last'],
     boxShadow: ['responsive', 'hover', 'focus'],
     boxSizing: ['responsive'],
     cursor: ['responsive'],
@@ -660,7 +692,7 @@ module.exports = {
     lineHeight: ['responsive'],
     listStylePosition: ['responsive'],
     listStyleType: ['responsive'],
-    margin: ['responsive'],
+    margin: ['responsive', 'last'],
     maxHeight: ['responsive'],
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
@@ -680,7 +712,7 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['responsive', 'hover', 'focus'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     textDecoration: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
     userSelect: ['responsive'],

@@ -4,58 +4,17 @@
 
 	function create_post_types() {
 
-		// Register Resouce Post Type
-		register_post_type(
-			'cpt_blog',
-			array(
-				'labels'		=> array(
-					'name'					=> __('Blogs'),
-					'singular_name' 		=> __('Blog'),
-					'add_new'				=> __('Add New Blog'),
-					'add_new_item'			=> __('Add New Blog'),
-					'edit_item'				=> __('Edit Blog'),
-					'view_item'				=> __('View Blog'),
-					'view_items'			=> __('View Blog'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Blog List'),
-					'archives'				=> __('Blog Archive')
-					
-				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Blog description goes here',
-				'public' 		=> true,
-				'hierarchical'  => true,
-				'has_archive' 	=> true,
-				'show_in_nav_menus'	=> true,
-				'supports'		=> array(
-					'title',
-					'excerpt', 
-					'thumbnail',
-				), 
-				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-welcome-write-blog',
-				'show_ui'		=> true,
-				'show_in_rest'	=> true,
-				'rest_base'		=> 'blog',
-				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'blog'),
-			)
-		);
-
 		register_post_type(
 			'cpt_hwg',
 			array(
 				'labels'		=> array(
 					'name'					=> __('Hardware Guide'),
 					'singular_name' 		=> __('Hardware Guide'),
-					'add_new'				=> __('Add New Post'),
-					'add_new_item'			=> __('Add New Post'),
-					'edit_item'				=> __('Edit Post'),
-					'view_item'				=> __('View Post'),
-					'view_items'			=> __('View Post'),
+					'add_new'				=> __('Add to Hardware Guide'),
+					'add_new_item'			=> __('Add to Hardware Guide'),
+					'edit_item'				=> __('Edit Hardware Guide'),
+					'view_item'				=> __('View Hardware Guide'),
+					'view_items'			=> __('View Hardware Guide'),
 					'featured_image' 		=> __('Thumbnail Image'),
 					'set_featured_image' 	=> __('Upload Thumbnail Image'),
 					'remove_featured_image' => __('Remove Thumbnail Image'),
@@ -64,8 +23,10 @@
 					'archives'				=> __('Hardware Guide')
 					
 				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Hardware Guide description goes here',
+				'taxonomies'	=> array(
+					'fictiv_hwg_category'
+				),
+				'description' 	=> 'The Hardware Guide is a collection of the best articles from the hardware community, uncovering collective knowledge around strategic prototyping methods, lessons learned from development experience, and expert insights.<br />In the guide, you’ll find articles organized by six major stages in the hardware development lifecycle: R&D (Research and Development), Plan, Design, Fabricate, Assemble, and Test. These stages are not always linear, and most often cyclical—teams move between and through these stages until a product is fully refined.',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -87,164 +48,211 @@
 			)
 		);
 
+	
+
+		// register_post_type(
+		// 	'cpt_industries',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Industries'),
+		// 			'singular_name' 		=> __('Industry'),
+		// 			'add_new'				=> __('Add New Industry'),
+		// 			'add_new_item'			=> __('Add New Industry'),
+		// 			'edit_item'				=> __('Edit Industry'),
+		// 			'view_item'				=> __('View Industry'),
+		// 			'view_items'			=> __('View Industries'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Industries List'),
+		// 			'archives'				=> __('Industries Archive')
+					
+		// 		),
+		// 		'taxonomies'	=> array(),
+		// 		'description' 	=> 'Industries description goes here',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> true,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'excerpt', 
+		// 			'thumbnail',
+		// 		), 
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-building',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'industries',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'industries'),
+		// 	)
+		// );
+
+		// register_post_type(
+		// 	'cpt_tools',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Services'),
+		// 			'singular_name' 		=> __('Service'),
+		// 			'add_new'				=> __('Add New Service'),
+		// 			'add_new_item'			=> __('Add New Service'),
+		// 			'edit_item'				=> __('Edit Service'),
+		// 			'view_item'				=> __('View Service'),
+		// 			'view_items'			=> __('View Services'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Services List'),
+		// 			// 'archives'				=> __('Tools Archive')
+					
+		// 		),
+		// 		'taxonomies'	=> array(),
+		// 		'description' 	=> 'Services description goes here',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> false,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'excerpt', 
+		// 			'thumbnail',
+		// 		), 
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-businessman',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'tools',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'tools'),
+		// 	)
+		// );
+
+		// register_post_type(
+		// 	'cpt_customer_stories',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Customer Stories'),
+		// 			'singular_name' 		=> __('Customer Story'),
+		// 			'add_new'				=> __('Add New Customer Story'),
+		// 			'add_new_item'			=> __('Add New Customer Story'),
+		// 			'edit_item'				=> __('Edit Customer Story'),
+		// 			'view_item'				=> __('View Customer Story'),
+		// 			'view_items'			=> __('View Customer Story'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Customer Stories List'),
+					
+		// 		),
+		// 		'taxonomies'	=> array(),
+		// 		'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> true,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'excerpt',
+		// 			'editor', 
+		// 			'thumbnail'
+		// 		), 
+		// 		// 'supports' => true,
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-book-alt',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'customer-stories',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'customer-stores'),
+		// 	)
+		// );
+
 		register_post_type(
-			'cpt_resources',
+			'cpt_partners',
 			array(
 				'labels'		=> array(
-					'name'					=> __('Resources'),
-					'singular_name' 		=> __('Resource'),
-					'add_new'				=> __('Add New Resource'),
-					'add_new_item'			=> __('Add New Resource'),
-					'edit_item'				=> __('Edit Resource'),
-					'view_item'				=> __('View Resource'),
-					'view_items'			=> __('View Resources'),
+					'name'					=> __('Partners'),
+					'singular_name' 		=> __('Partner'),
+					'add_new'				=> __('Add New Partner'),
+					'add_new_item'			=> __('Add New Partner'),
+					'edit_item'				=> __('Edit Partner'),
+					'view_item'				=> __('View Partner'),
+					'view_items'			=> __('View Partner'),
 					'featured_image' 		=> __('Thumbnail Image'),
 					'set_featured_image' 	=> __('Upload Thumbnail Image'),
 					'remove_featured_image' => __('Remove Thumbnail Image'),
 					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Resource List'),
-					'archives'				=> __('Resource Archive')
+					'items_list'			=> __('Partner List'),
 					
 				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Resources description goes here',
+				'taxonomies'	=> array(
+					'fictiv_partners_category'
+				),
+				'description' 	=> '',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
 				'show_in_nav_menus'	=> true,
 				'supports'		=> array(
 					'title',
-					'excerpt', 
-					'thumbnail',
+					'excerpt',
+					'editor', 
+					'thumbnail'
 				), 
+				// 'supports' => true,
 				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-welcome-learn-more',
+				'menu_icon'		=> 'dashicons-groups',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
-				'rest_base'		=> 'resources',
+				'rest_base'		=> 'partners',
 				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'resources'),
+				'rewrite' => array('slug' => 'partners'),
 			)
 		);
 
-		register_post_type(
-			'cpt_capabilities',
-			array(
-				'labels'		=> array(
-					'name'					=> __('Capabilities'),
-					'singular_name' 		=> __('Capability'),
-					'add_new'				=> __('Add New Capability'),
-					'add_new_item'			=> __('Add New Capability'),
-					'edit_item'				=> __('Edit Capability'),
-					'view_item'				=> __('View Capability'),
-					'view_items'			=> __('View Capabilities'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Capabilities List'),
-					'archives'				=> __('Capabilities Archive')
+		// register_post_type(
+		// 	'cpt_press',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Press'),
+		// 			'singular_name' 		=> __('Press'),
+		// 			'add_new'				=> __('Add New Press'),
+		// 			'add_new_item'			=> __('Add New Press'),
+		// 			'edit_item'				=> __('Edit Press'),
+		// 			'view_item'				=> __('View Press'),
+		// 			'view_items'			=> __('View Press'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Customer Stories List'),
 					
-				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Capabilities description goes here',
-				'public' 		=> true,
-				'hierarchical'  => true,
-				'has_archive' 	=> true,
-				'show_in_nav_menus'	=> true,
-				'supports'		=> array(
-					'title',
-					'excerpt', 
-					'thumbnail',
-				), 
-				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-clipboard',
-				'show_ui'		=> true,
-				'show_in_rest'	=> true,
-				'rest_base'		=> 'capabilities',
-				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'capabilities'),
-			)
-		);
-
-		register_post_type(
-			'cpt_industries',
-			array(
-				'labels'		=> array(
-					'name'					=> __('Industries'),
-					'singular_name' 		=> __('Industry'),
-					'add_new'				=> __('Add New Industry'),
-					'add_new_item'			=> __('Add New Industry'),
-					'edit_item'				=> __('Edit Industry'),
-					'view_item'				=> __('View Industry'),
-					'view_items'			=> __('View Industries'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Industries List'),
-					'archives'				=> __('Industries Archive')
-					
-				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Industries description goes here',
-				'public' 		=> true,
-				'hierarchical'  => true,
-				'has_archive' 	=> true,
-				'show_in_nav_menus'	=> true,
-				'supports'		=> array(
-					'title',
-					'excerpt', 
-					'thumbnail',
-				), 
-				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-building',
-				'show_ui'		=> true,
-				'show_in_rest'	=> true,
-				'rest_base'		=> 'industries',
-				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'industries'),
-			)
-		);
-
-		register_post_type(
-			'cpt_tools',
-			array(
-				'labels'		=> array(
-					'name'					=> __('Services'),
-					'singular_name' 		=> __('Service'),
-					'add_new'				=> __('Add New Service'),
-					'add_new_item'			=> __('Add New Service'),
-					'edit_item'				=> __('Edit Service'),
-					'view_item'				=> __('View Service'),
-					'view_items'			=> __('View Services'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Services List'),
-					// 'archives'				=> __('Tools Archive')
-					
-				),
-				'taxonomies'	=> array(),
-				'description' 	=> 'Services description goes here',
-				'public' 		=> true,
-				'hierarchical'  => true,
-				'has_archive' 	=> false,
-				'show_in_nav_menus'	=> true,
-				'supports'		=> array(
-					'title',
-					'excerpt', 
-					'thumbnail',
-				), 
-				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-businessman',
-				'show_ui'		=> true,
-				'show_in_rest'	=> true,
-				'rest_base'		=> 'tools',
-				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'tools'),
-			)
-		);
+		// 		),
+		// 		'taxonomies'	=> array(),
+		// 		'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> true,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'excerpt',
+		// 			'editor', 
+		// 			'thumbnail'
+		// 		), 
+		// 		// 'supports' => true,
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-book-alt',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'customer-stories',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'customer-stores'),
+		// 	)
+		// );
 	}
 ?>

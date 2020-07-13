@@ -1,0 +1,47 @@
+/*! purgecss start ignore */
+.footer {
+
+	&-nav {
+
+		.menu {
+
+			&-item {
+
+				a {
+					@apply inline-block text-16 font-museo-900 uppercase text-blue-dark;
+				}
+
+				.sub {
+
+					&-menu {
+						@apply mt-4;
+
+						.menu {
+
+							&-item {
+								/*@apply mb-2;*/
+
+								a {
+								 	@apply font-museo-300 text-14 normal-case;
+
+								 	&:hover {
+								 		@apply text-red-dark;
+								 	}
+
+								 	&:not([href]) {
+
+								 		&:hover {
+									 		@apply text-blue-dark;
+									 	}
+
+								 	}
+								} 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*! purgecss end ignore */
