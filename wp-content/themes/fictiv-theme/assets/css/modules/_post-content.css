@@ -217,7 +217,7 @@
 				}
 
 				&-image {
-					@apply mb-6;
+					@apply mb-6 m-0;
 
 					figcaption {
 						@apply text-center text-12 block my-0;
@@ -281,7 +281,7 @@
 				}
 
 				&-embed {
-					@apply mb-8;
+					@apply mb-6 m-0;
 
 					&__wrapper {
 						@apply relative h-0 p-0 overflow-hidden;
