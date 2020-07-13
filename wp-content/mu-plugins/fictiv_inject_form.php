@@ -7,12 +7,12 @@
 	 	
 	 	else:
 	 		
-	 		$paragraphAfter = 3; // number of paragraphs to display subscribe after.
 		    $content = explode("</p>", $content);
+		    $paragraphAfter = round( count( $content ) / 4, 0 );
 		    $blog_subscribe = '';
 		    for ($i = 0; $i < count($content); $i++) :
 		    
-		        if ( $i === $paragraphAfter ) :
+		        if ( $i == $paragraphAfter ) :
 		        	$blog_subscribe .= '
 		        	<div class="bg-blue-dark border-radius p-4 lg:float-right max-w-xs mt-1 ml-4 mb-6 md:mb-4 subscribe-box-float shadow-lg content-subscribe-wrapper">
 				    	<div class="mb-2">
