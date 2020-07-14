@@ -44,7 +44,9 @@ if ( have_posts() ) :
 				<div class="flex justify-center">
 					<div class="w-11/12 lg:w-full">
 						<div class="mb-6 font-museo-500 text-14 text-grey-300 ">
-							<a class="hover:text-grey-600" href="#">Home</a> / <a class="hover:text-grey-600" href="#">Library</a> / <a class="hover:text-grey-600" href="#">Date</a>
+							<a class="hover:text-grey-600" href="#">Home</a> / <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>"><?php 
+								echo get_post_type_object( get_queried_object()->post_type )->labels->name;
+							?></a>
 						
 						</div>
 					</div>
