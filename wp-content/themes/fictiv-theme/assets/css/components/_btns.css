@@ -1,8 +1,8 @@
 .btn {
-	@apply py-2 px-6 uppercase text-18 inline-block font-museo-900 text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
+	@apply py-2 px-6 uppercase text-18 inline-block leading-tight font-museo-900 text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
 
 	&-primary {
-		@apply text-white bg-teal-dark;
+		@apply text-white bg-teal-light;
 
 		&:hover {
 			@apply bg-teal-light;
@@ -24,6 +24,14 @@
 			@apply bg-blue-light text-white;
 
 
+		}
+	}
+
+	&-download {
+		@apply w-full font-museo-700 text-16 text-white bg-teal-light;
+
+		@screen md {
+			width: 290px;
 		}
 	}
 

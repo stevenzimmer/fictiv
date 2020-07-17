@@ -18,11 +18,12 @@
 @import "./components/_tolerance-chart.css";
 @import "./components/_form.css";
 @import "./components/_carousel.css";
+@import "./components/_hero.css";
 
 @import "./pages/_partners.css";
 
 
-@import "./pages/_2018-state-of-hardware-report.css";
+/*@import "./pages/_2018-state-of-hardware-report.css";*/
 
 @font-face {
     font-family: 'museo-300';

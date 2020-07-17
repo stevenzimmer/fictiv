@@ -4,6 +4,21 @@
 	&-content {
 		@apply text-grey-600 text-14 font-museo-500;
 
+		&.ebook {
+
+			h2 {
+				@apply text-20 leading-normal font-museo-700;
+			}
+
+			ul {
+				list-style-image: url('./../images/icons/list-item-checkbox.svg');
+
+				li {
+					@apply mb-6;
+				}
+			}
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}

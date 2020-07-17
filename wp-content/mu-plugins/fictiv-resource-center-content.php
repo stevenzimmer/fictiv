@@ -28,7 +28,7 @@
 					'fictiv_role',
 					'fictiv_topic',
 					'fictiv_industry',
-					'fictiv_manufacturing_process',
+					'fictiv_manufacturing_process'
 				),
 				'description' 	=> 'Blog description goes here',
 				'public' 		=> true,
@@ -46,9 +46,9 @@
 				'menu_icon'		=> 'dashicons-welcome-write-blog',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
-				'rest_base'		=> 'blog-articles',
+				'rest_base'		=> 'blog',
 				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'blog-articles'),
+				'rewrite' => array('slug' => 'blog'),
 			)
 		);
 
@@ -74,10 +74,9 @@
 				'taxonomies'	=> array(
 					'fictiv_role',
 					'fictiv_topic',
-					'fictiv_industry',
-					'fictiv_manufacturing_process',
+					'fictiv_industry'
 				),
-				'description' 	=> 'Blog description goes here',
+				'description' 	=> 'Teardown description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -99,11 +98,112 @@
 			)
 		);
 
+		register_post_type(
+			'cpt_webinar',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Webinars'),
+					'singular_name' 		=> __('Webinar'),
+					'add_new'				=> __('Add New Webinar'),
+					'add_new_item'			=> __('Add New Webinar'),
+					'edit_item'				=> __('Edit Webinar'),
+					'view_item'				=> __('View Webinar'),
+					'view_items'			=> __('View Webinar'),
+					'featured_image' 		=> __('Hero Image'),
+					'set_featured_image' 	=> __('Upload Hero Image'),
+					'remove_featured_image' => __('Remove Hero Image'),
+					'use_featured_image'	=> __('Use as Hero Image'),
+					'items_list'			=> __('Webinar List'),
+					'archives'				=> __('Webinar Archive')
+					
+				),
+				'taxonomies'	=> array(
+					'fictiv_role',
+					'fictiv_topic',
+					'fictiv_industry'
+				),
+				'description' 	=> 'Webinar description goes here',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'editor',
+					'excerpt', 
+					'thumbnail',
+					'page-attributes'
+				), 
+				'menu_position'	=> 5,
+				'menu_icon'		=> 'dashicons-video-alt3',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'webinars',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'webinars'),
+			)
+		);
+
+		register_post_type(
+			'cpt_ebook',
+			array(
+				'labels'		=> array(
+					'name'					=> __('eBooks'),
+					'singular_name' 		=> __('eBook'),
+					'add_new'				=> __('Add New eBook'),
+					'add_new_item'			=> __('Add New eBook'),
+					'edit_item'				=> __('Edit eBook'),
+					'view_item'				=> __('View eBook'),
+					'view_items'			=> __('View eBook'),
+					'featured_image' 		=> __('Hero Image'),
+					'set_featured_image' 	=> __('Upload Hero Image'),
+					'remove_featured_image' => __('Remove Hero Image'),
+					'use_featured_image'	=> __('Use as Hero Image'),
+					'items_list'			=> __('eBook List'),
+					'archives'				=> __('eBook Archive')
+					
+				),
+				'taxonomies'	=> array(
+					'fictiv_role',
+					'fictiv_topic',
+					'fictiv_industry',
+					'fictiv_manufacturing_process'
+				),
+				'description' 	=> 'eBook description goes here',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'editor',
+					'excerpt', 
+					'thumbnail',
+					'page-attributes'
+				), 
+				'menu_position'	=> 5,
+				'menu_icon'		=> 'dashicons-book',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'ebooks',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'ebooks'),
+			)
+		);
+
+
+
+
+
+		// Custom Taxonomies for Resources
+
 		register_taxonomy(
 			'fictiv_role',
 			array (
 				'cpt_blog',
-				'cpt_teardown'
+				'cpt_teardown',
+				'cpt_webinar',
+				'cpt_ebook'
 			),
 			array(
 				'labels'	=> array(
@@ -130,7 +230,9 @@
 			'fictiv_topic',
 			array (
 				'cpt_blog',
-				'cpt_teardown'
+				'cpt_teardown',
+				'cpt_webinar',
+				'cpt_ebook'
 			),
 			array(
 				'labels'	=> array(
@@ -157,7 +259,9 @@
 			'fictiv_industry',
 			array (
 				'cpt_blog',
-				'cpt_teardown'
+				'cpt_teardown',
+				'cpt_webinar',
+				'cpt_ebook'
 			),
 			array(
 				'labels'	=> array(
@@ -184,6 +288,8 @@
 			'fictiv_manufacturing_process',
 			array (
 				'cpt_blog',
+				'cpt_webinar',
+				'cpt_ebook'
 				// 'cpt_teardown'
 			),
 			array(

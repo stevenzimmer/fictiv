@@ -1,6 +1,30 @@
 /*! purgecss start ignore */
 .mktoForm {
-	@apply w-full !important;
+	@apply w-full p-0 text-grey-600 font-museo-300 text-12 leading-tight !important;
+
+    @screen md {
+        @apply p-4;
+    }
+
+    &.form {
+
+        &-underline {
+        
+            .mktoFormRow {
+        
+                .mktoFieldDescriptor, .mktoFormCol {
+
+                    .mktoFieldWrap {
+
+
+                        .mktoField {
+                            @apply border-t-0 border-l-0 border-r-0 rounded-none shadow-none border-b border-grey-200 px-0 py-1 h-8 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 	.mktoFormRow {
 		@apply w-full flex -mx-1;
@@ -10,11 +34,13 @@
         }
 
 		.mktoFieldDescriptor, .mktoFormCol {
-			@apply w-full float-none relative px-1 mb-1 min-h-0 !important;
+			@apply w-full float-none relative px-2 mb-0 min-h-0 !important;
 
             .mktoOffset {
                 @apply hidden;
             }
+
+
 
 			.mktoFieldWrap {
 				@apply w-full p-0 float-none inline-block !important;
@@ -33,23 +59,38 @@
                     }
                 }
 
-				.mktoLabel {
-					@apply hidden;
+                .mktoLogicalField {
+                    @apply w-8 !important;
+                }
 
-                    &:not([for="Email_Opt_in_Consent__c"]) {
-                        @apply hidden;
-                    }
+                .mktoHtmlText {
+                  @apply font-museo-300 text-grey-400 w-full py-2 px-0;
+                }
 
-                    &[for="Email_Opt_in_Consent__c"] {
-                        @apply float-none inline-block mb-2 text-blue-dark font-museo-300 text-14;
-                        width: 235px !important;
+				label {
 
-                        @screen lg {
-                            width: 242px !important;
+                    &.mktoLabel {
+    					@apply hidden;
+
+                        &:not([for="Email_Opt_in_Consent__c"]) {
+                            @apply hidden;
                         }
 
-                        @screen xl {
-                            width: 454px !important;
+                        &[for="Email_Opt_in_Consent__c"] {
+                            @apply float-none inline-block pt-0 font-museo-300 text-12 text-grey-400;
+                            width: 235px !important;
+
+                            @screen md {
+                                width: 449px !important;
+                            }
+
+                            @screen lg {
+                                width: 320px !important;
+                            }
+
+                            @screen xl {
+                                width: 392px !important;
+                            }
                         }
                     }
 				}
@@ -62,8 +103,7 @@
                 }
 
 				.mktoField {
-					@apply w-full inline-block h-10 bg-white p-2 outline-none rounded border border-grey-light text-default text-14 !important;
-
+					@apply w-full inline-block h-8 bg-white p-1 outline-none rounded border border-grey-200 text-grey-600 text-12 !important;
                     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
                     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 
@@ -72,10 +112,12 @@
                         box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
                         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
                     }
-				}
 
-				.mktoHtmlText {
-					@apply w-full py-0 px-1 text-blue-dark font-museo-900 !important;
+                    &#Email_Opt_in_Consent__c {
+                        @apply float-left border-none shadow-none h-4 w-4 !important;
+                        /*height: 21px !important;*/
+
+                    }
 				}
 
                 .mktoRadioList {
@@ -100,12 +142,12 @@
 	.mktoButtonRow {
 		@apply w-full py-0 px-1 my-0 !important;
 
-		.mktoButtonWrap.mktoSimple {
+		.mktoButtonWrap {
 			@apply w-full ml-0 !important;
 
 			.mktoButton {
-				@apply py-2 px-6 w-full bg-teal-dark text-center rounded-none border-0 uppercase font-museo-900 transition-colors duration-200 ease-in-out text-14 !important;
-				background-image: none;
+				@apply bg-teal-light py-2 px-6 w-full text-center rounded-none border-0 uppercase font-museo-900 transition-colors duration-200 ease-in-out text-14 !important;
+				background-image: none !important;
 
 				&:hover {
 					@apply bg-teal-light text-white !important;
@@ -116,37 +158,23 @@
 
 	
 }
-.gdpr {
-
-	&-text {
-
-		a {
-			@apply text-blue-light;
-
-			&:hover {
-				@apply text-red-dark;
-			}
-		}
-	}
-}
 
 
-
-.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#Email_Opt_in_Consent__c,
+/*.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#Email_Opt_in_Consent__c,
 .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#subscriptionFictivHardwareRoundup {
     height: 21px;
     float: left;
     border: none;
     box-shadow: none;
 }
-
+*/
 
 .navbar-2.no-scroll {
     background-color: #fff;
     position: relative;
 }
 
-@media only screen and (min-width: 320px) {
+/*@media only screen and (min-width: 320px) {
     .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
         width: 279px !important;
     }
@@ -175,5 +203,5 @@
     .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
         width: 386px !important;
     }
-}
+}*/
 /*! purgecss end ignore */
