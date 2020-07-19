@@ -2,88 +2,106 @@
 get_header();
 // print_r( get_queried_object() );
 $curauth = get_queried_object();
-
-// print_r( $curauth )
+// print_r(coauthors());
 // print_r( get_queried_object() );
 // $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 
 // print_r( $curauth );
 ?>
-<header class="relative py-32">
+<header class="relative pt-24 pb-12">
 	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php the_field( 'author_background_image', get_queried_object() ) ?>);"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
-		<div>
+		<div class="lg:w-2/3">
 			<div>
-				<h1 class="text-white"><?php echo $curauth->display_name; ?></h1>
+				<h1 class="text-white"><?php echo $curauth->display_name; ?> <?php 
+					if ( get_field( 'author_title', get_queried_object() ) ) :
+						echo ' | ' . get_field( 'author_title', get_queried_object() );
+					endif;
+				 
+				?></h1>
 			</div>
 			<div class="mb-2">
-				<p class="text-white">
+				<p class="text-white font-museo-700 text-20">
 					<?php echo $curauth->description; ?>
 				</p>
 			</div>
 			<div class="flex -mx-2">
-				<div class=" px-2 ">
-					<div class="border border-white p-4 flex items-center justify-center">
-						<div class="w-2 h-2 bg-white rounded-full"></div>
-					</div>
+				
+				<?php 
+					if ( get_the_author_meta('twitter', $curauth->data->ID) ) :
+					
+				?>
+				<div class="px-2">
+					<a target="_blank" href="<?php the_author_meta( 'twitter', $curauth->data->ID ); ?>">
+						<?php 
+							echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/twitter-border-white.svg');
+						?>
+					</a>
 				</div>
-				<div class=" px-2 ">
-					<div class="border border-white p-4 flex items-center justify-center">
-						<div class="w-2 h-2 bg-white rounded-full"></div>
-					</div>
+				<?php 
+					endif;
+				
+					if ( get_the_author_meta('linkedin', $curauth->data->ID) ) :
+					
+				?>
+				<div class=" px-2">
+					<a target="_blank" href="<?php the_author_meta( 'linkedin', $curauth->data->ID ); ?>">
+						<?php 
+							echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/linkedin-border-white.svg');
+						?>
+					</a>
 				</div>
+				<?php 
+					endif;
+				?>
+		
+			
 			</div>
 			
 		</div>
 	</div>
 </header>
 
-<section>
+<section class="py-20">
 	<div class="container">
-		<div>
-			<p class="uppercase">
+		<div class="mb-6">
+			<p class="uppercase text-16 text-grey-600 font-museo-500">
 				All articles from the author
 			</p>
 			
 		</div>
 		<div class="flex flex-wrap -mx-4">
 			<?php 
-				// print_r($curauth->ID);
-				$args = array(
-					'post_type' => array('cpt_blog', 'cpt_teardown'),
-		            'author__in' => array( $curauth->data->ID ),
-		            'posts_per_page' => -1
-		        );
+
+		        $args = array( 
+		        	'post_type' => array('cpt_blog', 'cpt_teardown'),
+		        	'posts_per_page' => -1,
+		  			'post_parent' => 0,
+				    'tax_query' => array(
+				        array(
+				            'taxonomy' => 'author',
+				            'terms' => $curauth->data->user_login,
+				            'field' => 'name',         
+				        ),
+				    ),
+				);
 
 		        $author = new WP_Query( $args );
 				if( $author->have_posts() ) : 
 
 				    while ( $author->have_posts() ) : 
 				        $author->the_post();
-				        the_title();
-
-				        // $content_types = get_the_terms( get_the_id(), 'fictiv_content_type' );
-				        // $topics = get_the_terms( get_the_id(), 'fictiv_topic' );
-				        // $topic_name = $topics[0]->name;
-				        // $topic_link = get_category_link( $topics[0]->term_id );
-				        // $content_type_name = $content_types[0]->name;
-
+				        include( get_template_directory() . '/inc/post-topics.php');
+				       
 			?>
-			<!-- <div class="lg:w-1/3 px-4">
-				<div class="relative h-0 mb-2" style="padding-bottom: 56.25%">
-					 <img class="absolute inset-0 w-full h-full" src="<?php //the_post_thumbnail_url(); ?>">
-				</div>
-				<div>
-					<div>
-						<a title="See more <?php // echo $topic_name ?> <?php // echo $content_type_name; ?>s" href="<?php // echo $topic_link ?>">
-							<?php // echo $topic_name; ?>
-						</a>
-					</div>
-					<?php // the_title(); ?>
-				</div>
-				
-			</div> -->
+			<div class="md:w-1/2 lg:w-1/3 px-4 mb-6">
+			
+			<?php
+				fictiv_post_card( $topic_name );
+			?>
+			</div>
+
 			<?php 
 					endwhile;
 					wp_reset_postdata();

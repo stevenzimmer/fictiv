@@ -8,21 +8,15 @@ if ( have_posts() ) :
 
     while ( have_posts() ) : 
         the_post();
-        $has_parent = wp_get_post_parent_id( get_the_id() );
-        // print_r( $parent );
-        $topics = get_the_terms( $has_parent, 'fictiv_topic' );
-        $topic_link = get_category_link( $topics[0]->term_id );
-        $topic_name = $topics[0]->name;
+        include( get_template_directory() . '/inc/post-topics.php');
 
-        $hero_graphic = ( $has_parent ? get_the_post_thumbnail_url( $has_parent ) : get_the_post_thumbnail_url() );
-
-        $post_title = ( $has_parent ? 'Thank you for signing up for our exclusive content' : get_the_title( $has_parent ) );
+        include( get_template_directory() . '/inc/hero-vars.php');
 
 ?>
 
-<header class="relative pt-12 md:pt-20 ">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php echo $hero_graphic; ?>)"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+<header class="relative pt-12 md:pt-24 pb-0">
+	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php echo $hero_graphic; ?>)"></div>
+	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
 		<div class="flex justify-center">
 			<div class="w-full lg:w-10/12">
@@ -48,7 +42,7 @@ if ( have_posts() ) :
 							if ( get_field( 'download_asset_link' ) ) :
 						?>
 						<div class="mt-4">
-							<a class="btn btn-download" href="<?php the_field('download_asset_link') ?>">download now</a>
+							<a target="_blank" class="btn btn-download" href="<?php the_field('download_asset_link') ?>">download now</a>
 						</div>
 						<?php 
 							endif;
@@ -72,37 +66,23 @@ if ( have_posts() ) :
 							if( !$has_parent ) :
 						?>
 						<div class="bg-white h-full p-4 ">
-							
-							<div>
-								<div class="mb-2">
-									<p class="uppercase font-museo-700 text-grey-400 text-14"><?php the_field('form_header'); ?></p>
-								</div>
-								<div class="">
-									<form class="form-underline h-56" id="mktoForm_<?php the_field('mkto_form_id'); ?>"></form>
-								</div>
-								<div class="text-center">
+						<?php
 
-									<?php 
-										get_template_part('partials/gdpr', 'text');
-									?>
-								
-								</div>
-							
-							</div>
-							
-						</div>							
+
+								asset_form( get_field('form_header'), get_field('mkto_form_id') );
+						?>
+						</div>			
 						
 						<?php
 							else :
 						?>
 						<div class="">
-							<img class="mx-auto" alt="<?php the_title(); ?> thumbnail" src="<?php 
+							<img class="mx-auto lazyload" alt="<?php the_title(); ?> thumbnail" data-src="<?php 
 								the_field('asset_thumbnail', $has_parent );
 							?>">
 						</div> 
 						<?php
 							endif;
-
 
 						?>
 
@@ -118,23 +98,15 @@ if ( have_posts() ) :
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
 			<div class="w-full lg:w-10/12">
-				<div class="flex justify-center">
-					<div class="w-11/12 md:w-full">
-						<div class="mb-6 font-museo-500 text-14 text-grey-300 ">
-							<a class="hover:text-grey-600" href="#">Home</a> / <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>"><?php 
-								echo get_post_type_object( get_queried_object()->post_type )->labels->name;
-							?></a>
-						
-						</div>
-					</div>
-				</div>
 				
 				<?php 
+					get_template_part('partials/single', 'breadcrumbs');
+				
 					if ( !$has_parent ) :
 				?>
-				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
+				<div class="flex flex-wrap justify-center lg:justify-start -mx-6">
 				
-					<div class="w-11/12 lg:w-1/2 px-6">
+					<div class="w-full lg:w-1/2 px-6">
 						
 						<div class="post-content ebook">
 							<?php 
@@ -142,8 +114,8 @@ if ( have_posts() ) :
 							?>
 						</div>
 					</div>
-					<div class="w-11/12 lg:w-1/2 px-6">
-						<img class="mx-auto" alt="<?php the_title(); ?> thumbnail" src="<?php 
+					<div class="w-full lg:w-1/2 px-6">
+						<img class="lg:mx-auto" alt="<?php the_title(); ?> thumbnail" src="<?php 
 							the_field('asset_thumbnail', $has_parent );
 						?>">
 					</div>

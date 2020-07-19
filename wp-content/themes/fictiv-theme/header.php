@@ -12,6 +12,78 @@
 </head><!--/head-->
 
 <body <?php body_class() ?>>
+
+	<nav class="absolute w-full top-0 left-0 h-18 flex items-center z-50">
+		<div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div>
+		<div class="container relative">
+			<div class="flex justify-center">
+				<div class="w-11/12 md:w-full">
+					
+				
+					<div class="flex justify-between items-center">
+						<div class="flex w-full -mx-6">
+							<div class="w-24 px-6">
+								<a href="<?php echo home_url() ?>">
+									<?php 
+										echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg');
+									?>
+								</a>
+							</div>
+							<div class="w-4/5 px-6 hidden lg:block">
+								<ul class="flex justify-between items-center text-white font-museo-700 ">
+									<li>
+										<a href="/our-platform/">
+											Why Fictiv
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											Capabilities
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Materials
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											Industry Solutions
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											Resources
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											Request a Demo
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											Log In
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="">
+							<?php 
+								primary_button();
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 	
 	<nav class="absolute w-full left-0 right-0 top-0 bg-transparent z-50 hidden">
 		<!-- <div class="absolute w-full h-full bg-white inset-0 opacity-75"></div> -->

@@ -1,0 +1,116 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/*@import "./pages/_2018-state-of-hardware-report.css";*/
+
+@font-face {
+    font-family: 'museo-300';
+    src: url('./../../fonts/museo-sans/300.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-500';
+    src: url('./../../fonts/museo-sans/500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-700';
+    src: url('./../../fonts/museo-sans/700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo-900';
+    src: url('./../../fonts/museo-sans/900.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'slab-300';
+    src: url('./../../fonts/museo-slab/300.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'slab-500';
+    src: url('./../../fonts/museo-slab/500.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.wp {
+
+    &-block {
+        max-width: 722px;
+
+        &[data-align="wide"] {
+            max-width: 1080px;
+        }
+
+        &[data-align="full"] {
+            max-width: none;
+        }
+
+    
+    }
+}
+
+.editor-post-title {
+    .wp-block {
+
+        textarea {
+            @apply text-36 font-museo-500 leading-tight;
+        }
+    }
+}
+ 
+.block-editor-block-list__layout {
+    @apply text-grey-600 text-14 font-museo-500;
+
+    .wp {
+
+        &-block {
+            @apply mb-6 mt-0;
+            max-width: 722px;
+
+            &[data-align="wide"] {
+                max-width: 1080px;
+            }
+
+            &[data-align="full"] {
+                max-width: none;
+            }
+
+            h2 {
+                @apply text-20 mb-6 text-teal-light font-museo-500 leading-tight;
+
+                @screen md {
+                    @apply text-29;
+                }
+            }
+
+            h3 {
+                @apply text-16 mb-6 font-museo-500;
+            }
+
+            a {
+                @apply text-teal-light;
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+        }
+    }
+
+}

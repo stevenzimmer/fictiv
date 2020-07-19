@@ -1,13 +1,10 @@
 <?php 
 get_header();
+include( get_template_directory() . '/inc/post-type-vars.php');
 
-$archive_name = ( is_tax() ? get_queried_object()->name : get_queried_object()->labels->name );
 
-$resource_type = ( is_tax() ? get_queried_object()->taxonomy . '-' .get_queried_object()->slug : get_queried_object()->name );
-
-$body_heading = ( is_tax() ? $archive_name . ' ' . get_taxonomy( get_queried_object()->taxonomy )->label : get_queried_object()->labels->name );
 ?>
-<header class="relative py-32">
+<header class="relative py-32 hidden">
 	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php // the_post_thumbnail_url(); ?>);"></div>
 	<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
 	<div class="container relative">
@@ -16,7 +13,7 @@ $body_heading = ( is_tax() ? $archive_name . ' ' . get_taxonomy( get_queried_obj
 				<p class="text-white">
 					<a >
 						<?php 
-							echo $archive_name;
+							echo $post_type_name;
 						?>
 					</a>
 					
@@ -24,7 +21,7 @@ $body_heading = ( is_tax() ? $archive_name . ' ' . get_taxonomy( get_queried_obj
 			</div>
 			<div>
 				<h1 class="text-white">
-					<?php echo get_queried_object()->description; ?>
+					<?php echo $post_description; ?>
 				</h1>
 			</div>
 		</div>
@@ -34,34 +31,66 @@ $body_heading = ( is_tax() ? $archive_name . ' ' . get_taxonomy( get_queried_obj
 <?php
 if ( have_posts() ) :
 ?>
-<section>
+<section class="section">
 	<div class="container">
-		<div >
-			<h3 class="mb-8 font-museo-900">
-			Read the latest
-			<?php 
-				
-				echo $body_heading;
 		
-			?></h3>		
-		</div>
-			
-		<div class="flex" data-resource-type="<?php echo $resource_type; ?>" data-count="<?php // echo $term->count ?>">
-<?php
+		<div class="flex justify-center">
+			<div class="lg:w-11/12">
+				<?php 
+					get_template_part('partials/single', 'breadcrumbs');
+				?>
+				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
+					<div class="w-11/12 lg:w-4/12 px-4">
+						<?php 
+							get_sidebar();
+						?>
+						
+					</div>
+					<div class="w-full lg:w-8/12 px-4">
+						<div class="flex justify-center">
+							<div class="w-11/12 md:w-full">
+								<div class="mb-6">
+									<h3 class="font-museo-700 text-20 text-grey-600">
+									Latest 
+									<?php 
+										
+										echo strtolower( $post_type_name );
+								
+									?></h3>		
+								</div>
+							</div>
+						</div>
+						
+						<div class="flex -mx-4 flex-wrap justify-center sm:justify-start" data-resource-type="<?php echo $post_type; ?>">
+							<?php
 
-	while( have_posts() ) :
-		the_post();
-?>
-			<div class="mb-12 lg:w-1/3">
-			    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>  
+								while( have_posts() ) :
+
+									the_post();
+
+									include( get_template_directory() . '/inc/post-topics.php');
+
+
+							?>
+							<div class="w-full sm:w-1/2 px-4 mb-6">
+								<?php 
+									fictiv_post_card( $topic_name );
+								?>
+							
+							</div>
+							<?php 
+								endwhile;
+								wp_reset_postdata();
+							?>
+						</div>
+					</div>
+				</div>
 			</div>
-<?php
-	endwhile;
-	wp_reset_postdata();
-?>
 		</div>
 	</div>
 </section>
+
+	
 <?php
 
 endif;    

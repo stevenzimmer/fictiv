@@ -9,8 +9,8 @@
 			'cpt_blog',
 			array(
 				'labels'		=> array(
-					'name'					=> __('Blog Articles'),
-					'singular_name' 		=> __('Blog Article'),
+					'name'					=> __('Blog Posts'),
+					'singular_name' 		=> __('Blog'),
 					'add_new'				=> __('Add New Article'),
 					'add_new_item'			=> __('Add New Article'),
 					'edit_item'				=> __('Edit Article'),
@@ -191,8 +191,46 @@
 			)
 		);
 
-
-
+		// register_post_type(
+		// 	'cpt_customer_stories',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Customer Stories'),
+		// 			'singular_name' 		=> __('Customer Story'),
+		// 			'add_new'				=> __('Add New Customer Story'),
+		// 			'add_new_item'			=> __('Add New Customer Story'),
+		// 			'edit_item'				=> __('Edit Customer Story'),
+		// 			'view_item'				=> __('View Customer Story'),
+		// 			'view_items'			=> __('View Customer Story'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Customer Stories List'),
+					
+		// 		),
+		// 		'taxonomies'	=> array(),
+		// 		'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> true,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'excerpt',
+		// 			'editor', 
+		// 			'thumbnail'
+		// 		), 
+		// 		// 'supports' => true,
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-book-alt',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'customer-stories',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'customer-stores'),
+		// 	)
+		// );
 
 
 		// Custom Taxonomies for Resources

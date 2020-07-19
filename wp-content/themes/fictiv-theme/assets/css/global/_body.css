@@ -4,7 +4,11 @@ body {
 }
 
 h1 {
-	@apply font-museo-500 text-36;
+	@apply font-museo-500 text-29;
+
+	@screen md {
+		@apply text-36;
+	}
 }
 
 h2 {
@@ -29,7 +33,24 @@ h2 {
 	}
 }
 
+.max {
 
+	&-lines {
+		@apply overflow-hidden;
+		display: box;
+		display: -moz-box;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+
+		&-2 {
+			-webkit-line-clamp: 2;
+		}
+
+		&-3 {
+			-webkit-line-clamp: 3;
+		}
+	}
+}
 
 
 .block {
@@ -62,6 +83,13 @@ h2 {
 	}
 	&:not([src]) {
 		@apply visible;
+	}
+}
+
+.thumbnail {
+
+	&-ratio {
+		padding-bottom: 65.25%;
 	}
 }
 

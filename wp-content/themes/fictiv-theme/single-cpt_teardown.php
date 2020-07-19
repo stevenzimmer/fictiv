@@ -15,9 +15,9 @@ if ( have_posts() ) :
         $authors = get_coauthors( get_the_id() );
         
 ?>
-<header class="relative py-24">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+<header class="relative pt-24 pb-12">
+	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php the_post_thumbnail_url(); ?>)"></div>
+	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-10/12">
@@ -41,21 +41,11 @@ if ( have_posts() ) :
 		
 		<div class="flex justify-center">
 			<div class="lg:w-11/12">
-				<div class="flex justify-center">
-					<div class="w-11/12 lg:w-full">
-						<div class="mb-6 font-museo-500 text-14 text-grey-300 ">
-							<a class="hover:text-grey-600" href="#">Home</a> / <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>"><?php 
-								echo get_post_type_object( get_queried_object()->post_type )->labels->name;
-							?></a>
-						
-						</div>
-					</div>
-				</div>
+				<?php 
+					get_template_part('partials/single', 'breadcrumbs');
+				?>
 				
-				<div class="mb-6 font-museo-500 text-14 text-grey-300 hidden">
-					<a class="hover:text-grey-600" href="/resource-center/">Resources Center</a> / <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>">Blog Articles</a> / <a class="hover:text-grey-600" href="<?php echo $topic_link; ?>"><?php echo $topic_name; ?></a>
-				
-				</div>
+			
 				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
 					<div class="w-11/12 lg:w-4/12 px-4">
 						<div class="bg-grey-200 h-64 flex items-center justify-center mb-12">

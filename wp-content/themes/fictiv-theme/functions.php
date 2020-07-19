@@ -22,43 +22,90 @@
 <?php
     }
 
-    
-add_filter( 'image_send_to_editor', 'add_vimeo_data_to_image', 10, 2 );
+    function asset_form( $header_text, $form_number ) {
 
-function add_vimeo_data_to_image( $html, $attachment_id ) {
 
-    print_r( $html );
+?>
+        <div>
+            <div class="mb-2">
+                <p class="uppercase font-museo-700 text-grey-400 text-14"><?php 
 
-    print_r( $attachment_id );
+                    echo $header_text;
 
-    $document = new DOMDocument();
-    $document->loadHTML($html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+                ?></p>
+            </div>
+            <div class="mb-2">
+                <form class="form-underline " id="mktoForm_<?php echo $form_number; ?>"></form>
+            </div>
+            <div class="text-center">
 
-    $imgs = $document->getElementsByTagName('img');
-
-    foreach ($imgs as $img) :
-        //get the current class
-        $current_image_class = $img->getAttribute('class');
-
-        //add new class along with current class
-        $img->setAttribute('class', $current_image_class . ' video-thumb');
-
-        //add the data attribute
-        $img->setAttribute('data-vimeo-id', $vimeo_id);
-
-    endforeach;
-
-    $html = $document->saveHTML();
-
-    // if ($attachment_id) {
-    //     //check if there is vimeo video id for the image
-    //     $vimeo_id = get_post_meta($attachment_id, 'vimeo-id', true);
-
-    //     //if there is a vimeo id set for the image, add class and data-attr
+                <?php 
+                    get_template_part('partials/gdpr', 'text');
+                ?>
+            
+            </div>
         
-    // }
+        </div> 
+<?php
+    }
 
-    return $html;
-}
+    function exclude_child_posts_in_loop( $query ) {
+    
+        if( is_archive() ) :
 
+            $query->set( 'post_parent', 0 );
+        
+        endif;
+    }
+
+
+    add_action( 'pre_get_posts', 'exclude_child_posts_in_loop' );
+
+
+    //* Load cusomt editor styles for the block editor (Gutenberg)
+    function block_editor_styles() {
+        // wp_enqueue_style( 'site-block-editor-styles', get_theme_file_uri( '/style-editor.css' ), false, '1.0', 'all' );
+
+        wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/editor/js/scripts.min.js', [], '1.0', true);
+    
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/editor/css/style.min.css', [], '1.2');
+    }
+
+    add_action( 'enqueue_block_editor_assets', 'block_editor_styles' );
+
+    function add_body_class_to_block_editor( $classes ) {
+        //get current page
+        global $pagenow;
+
+        //check if the current page is post.php and if the post parameteris set
+        if ( $pagenow ==='post.php' && isset($_GET['post']) ) :
+            //get the post type via the post id from the URL
+            $postType = get_post_type( $_GET['post']);
+            //append the new class
+            $classes .= ' single-' . $postType;
+
+        //next check if this is a new post
+        elseif ( $pagenow ==='post-new.php' )  :
+            
+            //check if the post_type parameter is set
+            if( isset($_GET['post_type']) ) :
+            
+                //in this case you can get the post_type directly from the URL
+                $classes .= ' single-' . urldecode($_GET['post_type']);
+            
+            else :
+            
+                //if post_type is not set, a 'post' is being created
+                $classes .= ' single-post';
+            
+            endif;
+
+
+        endif;
+    
+        return $classes;
+    } 
+
+    add_filter('admin_body_class', 'add_body_class_to_block_editor'); 
+     
 ?>

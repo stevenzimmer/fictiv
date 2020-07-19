@@ -19,63 +19,65 @@ if ( $related_posts->have_posts() ) :
 ?>
 <section class="py-10">
 	<div class="container">
+		
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-full">
+			<div class="w-11/12">
 				<div class="mb-2">
 					<h3 class="uppercase text-16 font-museo-500 text-grey-600">
 						You might also be interested in
 					</h3>
 				</div>
-				<div class="flex flex-wrap -mx-2">
-					<?php 
-						
-
-						while ( $related_posts->have_posts() ) : 
-						    $related_posts->the_post();
-					?>
-					<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-						<div class="h-full">
-							<?php 
-								if( has_post_thumbnail() ) :
-							?>
-							<div class="relative h-0" style="padding-bottom: 40.25%">
-								<img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
-							</div>
-							<?php 
-								else :
-							?>
-							<div class="w-full h-64 bg-grey-100">
-								<div class="flex justify-center items-center h-full">
-									Please upload Hero graphic to this post
-								</div>
-							</div>
-							<?php 
-								endif;
-							?>
-							<div class="p-4">
-								<h3 class="text-14 font-museo-700">
-									<a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
-										<?php 
-											the_title();
-										?>
-									</a>
-									
-								</h3>
-							</div>
-						</div>
-						
-					</div>
-					<?php
-						endwhile;
-						wp_reset_postdata();
-						
-					?>
-					
-				</div>
 			</div>
+		</div>
+		
+		<div class="flex flex-wrap -mx-2">
+			<?php 
+				
+
+				while ( $related_posts->have_posts() ) : 
+				    $related_posts->the_post();
+			?>
+			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
+				<div class="h-full">
+					<?php 
+						if( has_post_thumbnail() ) :
+					?>
+					<div class="relative h-0" style="padding-bottom: 40.25%">
+						<img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
+					</div>
+					<?php 
+						else :
+					?>
+					<div class="w-full h-64 bg-grey-100">
+						<div class="flex justify-center items-center h-full">
+							Please upload Hero graphic to this post
+						</div>
+					</div>
+					<?php 
+						endif;
+					?>
+					<div class="p-4">
+						<h3 class="text-14 font-museo-700">
+							<a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
+								<?php 
+									the_title();
+								?>
+							</a>
+							
+						</h3>
+					</div>
+				</div>
+				
+			</div>
+			<?php
+				endwhile;
+				wp_reset_postdata();
+				
+			?>
 			
 		</div>
 	</div>
+		
 </section>
 <?php 
 	endif;

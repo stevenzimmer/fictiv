@@ -19,6 +19,16 @@
 			}
 		}
 
+		> {
+			h2,h3,h4,h5,h6,p,ul,ol {
+				@apply px-4;
+
+				@screen md {
+					@apply px-0;
+				}
+			}
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}
@@ -42,10 +52,6 @@
 		p, span, h4, h5, h6,img, hr,ol,ul {
 			@apply mb-6;
 		}
-
-/*		p {
-			@apply  leading-relaxed;
-		}*/
 
 		iframe {
 			@apply max-w-full mx-auto;
