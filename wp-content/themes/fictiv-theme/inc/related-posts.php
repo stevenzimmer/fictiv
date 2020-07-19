@@ -21,7 +21,7 @@ if ( $related_posts->have_posts() ) :
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="w-11/12">
+			<div class="w-11/12 lg:w-full">
 				<div class="mb-2">
 					<h3 class="uppercase text-16 font-museo-500 text-grey-600">
 						You might also be interested in
