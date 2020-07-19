@@ -47,7 +47,7 @@
     font-style: normal;
 }
 
-
+/*! purgecss start ignore */
 .wp {
 
     &-block {
@@ -112,5 +112,6 @@
             }
         }
     }
-
 }
+
+/*! purgecss end ignore */

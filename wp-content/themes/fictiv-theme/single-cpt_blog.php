@@ -13,7 +13,7 @@ if ( have_posts() ) :
         
 ?>
 <header class="relative pt-24 pb-12">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
+	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
 	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
 		<div class="flex justify-center">

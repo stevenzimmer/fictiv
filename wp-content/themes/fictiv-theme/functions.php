@@ -9,7 +9,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.0', true);
     
-        // wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -66,9 +66,9 @@
     function block_editor_styles() {
         // wp_enqueue_style( 'site-block-editor-styles', get_theme_file_uri( '/style-editor.css' ), false, '1.0', 'all' );
 
-        wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/editor/js/scripts.min.js', [], '1.0', true);
+        wp_enqueue_script('editor-js', get_template_directory_uri() . '/dist/editor/js/scripts.min.js', [], '1.0', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/editor/css/style.min.css', [], '1.2');
+        wp_enqueue_style('editor-style', get_template_directory_uri() . '/dist/editor/css/style.min.css', [], '1.2');
     }
 
     add_action( 'enqueue_block_editor_assets', 'block_editor_styles' );
