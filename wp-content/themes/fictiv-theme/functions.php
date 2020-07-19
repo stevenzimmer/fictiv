@@ -51,7 +51,7 @@
 
     function exclude_child_posts_in_loop( $query ) {
     
-        if( $query->is_main_query() && !$query->is_feed() && !is_admin()  ) :
+        if( $query->is_post_type_archive && $query->is_archive && !$query->is_admin  ) :
 
             $query->set( 'post_parent', 0 );
         
