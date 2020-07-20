@@ -101,6 +101,7 @@
 		register_post_type(
 			'cpt_webinar',
 			array(
+
 				'labels'		=> array(
 					'name'					=> __('Webinars'),
 					'singular_name' 		=> __('Webinar'),
@@ -244,6 +245,8 @@
 				'cpt_ebook'
 			),
 			array(
+				// 'capability_type' => 'fictiv_role',
+				// 'map_meta_cap' => true,
 				'labels'	=> array(
 					'name'			=> 'Roles',
 					'singular_name'	=> 'Role',

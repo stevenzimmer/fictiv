@@ -174,6 +174,7 @@
 		register_post_type(
 			'cpt_partners',
 			array(
+
 				'labels'		=> array(
 					'name'					=> __('Partners'),
 					'singular_name' 		=> __('Partner'),

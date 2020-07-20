@@ -107,5 +107,48 @@
     } 
 
     add_filter('admin_body_class', 'add_body_class_to_block_editor'); 
+
+    add_action('admin_init', function () {
+    // Redirect any user trying to access comments page
+    global $pagenow;
+    if ($pagenow === 'edit-comments.php') :
+        wp_redirect( admin_url() );
+        exit;
+    endif;
+    // Remove comments metabox from dashboard
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+    // Disable support for comments and trackbacks in post types
+    foreach ( get_post_types() as $post_type ) :
+        if ( post_type_supports( $post_type, 'comments' ) ) :
+            remove_post_type_support( $post_type, 'comments' );
+            remove_post_type_support( $post_type, 'trackbacks' );
+        endif;
+    endforeach;
+});
+// Close comments on the front-end
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+// Hide existing comments
+add_filter('comments_array', '__return_empty_array', 10, 2);
+// Remove comments page in menu
+add_action('admin_menu', function () {
+    remove_menu_page('edit-comments.php');
+});
+// Remove comments links from admin bar
+add_action('init', function () {
+    if ( is_admin_bar_showing() ) :
+        remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+    endif;
+});
+function remove_jquery_migrate( $scripts ) {
+   if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) :
+        $script = $scripts->registered['jquery'];
+        if ( $script->deps ) :
+            // Check whether the script has any dependencies
+            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+        endif;
+    endif;
+}
+add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
      
 ?>
