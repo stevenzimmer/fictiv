@@ -135,7 +135,7 @@
 					'thumbnail',
 					'page-attributes'
 				), 
-				'menu_position'	=> 1,
+				'menu_position'	=> 2,
 				'menu_icon'		=> 'dashicons-video-alt3',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
