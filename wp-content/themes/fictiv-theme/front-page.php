@@ -4,11 +4,12 @@
 
 <header class="py-40 relative">
 	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>)"></div>
+	<div class="bg-white absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
-		<div class="flex justify-center md:justify-start">
-			<div class="w-11/12 md:w-6/12">
+		<div class="flex justify-center lg:justify-start">
+			<div class="w-11/12 lg:w-6/12">
 				<div class="mb-4">
-					<h1 class="uppercase text-blue-dark font-museo-900 leading-none text-h1">
+					<h1 class="uppercase text-blue-dark font-museo-900 leading-none text-29 md:text-h1 ">
 						MANUFACTURING AGILITY MADE POSSIBLE
 					</h1>
 				</div>
@@ -22,8 +23,8 @@
 						primary_button();
 					?>
 				</div>
-				<div class="flex items-center justify-start">
-					<div class="flex items-center">
+				<div class="flex items-center justify-start flex-wrap -mx-6">
+					<div class="flex items-center md:w-1/2 px-6 mb-0">
 						<div class="mr-2">
 							<!-- Icon -->
 							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
@@ -34,8 +35,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="w-10"></div>
-					<div class="flex items-center">
+					<div class="flex items-center md:w-1/2 px-6">
 						<div class="mr-2">
 							<!-- Icon -->
 							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/clock.png">
@@ -71,60 +71,67 @@
 ?>
 <section class="bg-white">
 	<div class="container">
-		<div class="flex -mx-2 relative" style="top: -60px">
-			<?php 
-
-				while ( $services->have_posts() ) :
-					$services->the_post();
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-full">
 				
-			?>
-			<div class="w-1/4  block-link px-2 ">
-				<div class="relative shadow group">
-					<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
-					<div class="w-full bg-white p-4">
-						<img class="lazyload" class="object-fit inline-block" data-src="<?php the_post_thumbnail_url(); ?>">
+			
+				<div class="flex flex-wrap justify-center -mx-2 relative" style="top: -60px">
+
+					<?php 
+
+						while ( $services->have_posts() ) :
+							$services->the_post();
+						
+					?>
+					<div class="w-11/12 md:w-1/2 lg:w-1/4  block-link px-2 ">
+						<div class="relative shadow group">
+							<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
+							<div class="w-full bg-white p-4">
+								<img class="lazyload w-full" class=" inline-block" data-src="<?php the_post_thumbnail_url(); ?>">
+							</div>
+							<div class="text-center p-4">
+								<div class="mb-2 h-12">
+									<p class="font-museo-900 text-18 text-blue-dark uppercase">
+										<?php 
+											the_title();
+										?>
+									</p>
+								</div>
+								
+								<div class="mb-2 h-20">
+									<p class="text-blue-dark">
+										<?php 
+											echo get_the_excerpt();
+										?>
+									</p>
+								</div>
+								<div>
+									<p class="text-blue-light underline font-bold group-hover:text-red-dark">Learn more</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="text-center p-4">
-						<div class="mb-2 h-12">
-							<p class="font-museo-900 text-18 text-blue-dark uppercase">
-								<?php 
-									the_title();
-								?>
-							</p>
+
+					<?php 
+						endwhile;
+					?>
+
+				</div>
+				<div class="flex justify-center pb-10">
+					<div class="flex items-center text-center relative group">
+						<a href="<?php echo get_post_type_archive_link('cpt_capabilities') ?>" class="w-full absolute inset-0"></a>
+						<div class="mr-2">
+							<!-- Icon -->
+							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-right-circle.png">
 						</div>
 						
-						<div class="mb-2 h-20">
-							<p class="text-blue-dark">
-								<?php 
-									echo get_the_excerpt();
-								?>
+						<div>
+							
+							<p class="text-14 font-museo-900 text-14 uppercase text-blue-dark group-hover:text-red-dark">
+								see our full capabilies
 							</p>
 						</div>
-						<div>
-							<p class="text-blue-light underline font-bold group-hover:text-red-dark">Learn more</p>
-						</div>
 					</div>
-				</div>
-			</div>
-
-			<?php 
-				endwhile;
-			?>
-
-		</div>
-		<div class="flex justify-center pb-10">
-			<div class="flex items-center text-center relative group">
-				<a href="<?php echo get_post_type_archive_link('cpt_capabilities') ?>" class="w-full absolute inset-0"></a>
-				<div class="mr-2">
-					<!-- Icon -->
-					<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-right-circle.png">
-				</div>
-				
-				<div>
-					
-					<p class="text-14 font-museo-900 text-14 uppercase text-blue-dark group-hover:text-red-dark">
-						see our full capabilies
-					</p>
 				</div>
 			</div>
 		</div>
@@ -219,7 +226,7 @@
 			</h2>
 		</div>
 		<div class="flex justify-center flex-col items-center">
-			<div class="w-3/5 toggle-module-wrapper">
+			<div class="w-full md:w-3/5 toggle-module-wrapper">
 				<?php 
 					
 
@@ -238,7 +245,7 @@
 					<?php 
 						foreach( $module['dots'] as $k => $dot ) :
 					?>
-					<div class="absolute module-<?php echo str_replace(' ', '-', strtolower($module['name']) ); ?>-<?php echo $k + 1; ?> w-48">
+					<div class="absolute hidden md:block module-<?php echo str_replace(' ', '-', strtolower($module['name']) ); ?>-<?php echo $k + 1; ?> w-48">
 						<div class="flex items-center <?php 
 							if( $dot['position'] !== 'left' ) :
 								echo 'flex-row-reverse';
@@ -285,14 +292,14 @@
 
 				
 			</div>
-			<div class="flex mb-8 toggle-btns-wrappper">
+			<div class="flex mb-8 flex-wrap justify-center md:justify-start toggle-btns-wrappper">
 			<?php 
 
 				foreach ( $modules as $i => $module ) :
 				
 			?>
 
-				<a href="#manufacturing-module-<?php echo $i; ?>" class="btn-rounded btn-rounded-primary module-toggle-btn inline-btn <?php 
+				<a href="#manufacturing-module-<?php echo $i; ?>" class="btn-rounded btn-rounded-primary module-toggle-btn inline-btn mb-6 md:mb-0 <?php 
 
 					if( $i === 0 ) :
 				
@@ -353,11 +360,11 @@
 
 <section class="section bg-white">
 	<div class="container">
-		<div class="flex justify-between">
-			<div class="w-5/12">
+		<div class="flex flex-wrap justify-center lg:justify-between">
+			<div class="w-6/12 lg:w-5/12">
 				<img class="lazyload" alt="Quip screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/quip-screenshot.jpg">
 			</div>
-			<div class="w-1/2">
+			<div class="w-11/12 lg:w-1/2">
 				<div class="mb-4">
 					<?php 
 						echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/quip-logo.svg');
@@ -409,43 +416,52 @@
 </section>
 <section class="section relative">
 	<div class="absolute w-full h-full inset-0">
-		<div class="flex h-full w-full">
-			<div class="w-1/2 h-full bg-blue-dark"></div>	
-			<div class="w-1/2 h-full bg-teal-light"></div>
+		<div class="flex-wrap h-full w-full hidden lg:flex">
+			<div class="w-full lg:w-1/2 h-full bg-blue-dark"></div>	
+			<div class="w-full lg:w-1/2 h-full bg-teal-light"></div>
 		</div>
 	</div>
 	<div class="container relative">
-		<div class="flex justify-between">
-			<div class="w-5/12">
-				<div class="mb-4">
-					<p class="text-white text-18 uppercase font-fat">live webinar</p>	
+		<div class="flex flex-wrap justify-center lg:justify-between">
+			<div class="w-full lg:w-5/12 bg-blue-dark py-20 lg:py-0">
+				<div class="flex justify-center w-full">
+					<div class="w-11/12 lg:w-full">
+						<div class="mb-4">
+							<p class="text-white text-18 uppercase font-fat">live webinar</p>	
+						</div>
+						<div class="mb-4">
+							<p class="text-white text-36 font-fat">The Hidden Costs of Supply Chain Unpredictability</p>
+						</div>
+						<div class="mb-4">
+							<p class="text-white text-20">
+								March 12 at 10am PST
+							</p>
+						</div>
+						<div>
+							<a href="" class="btn btn-secondary">register now</a>
+						</div>
+					</div>
 				</div>
-				<div class="mb-4">
-					<p class="text-white text-36 font-fat">The Hidden Costs of Supply Chain Unpredictability</p>
-				</div>
-				<div class="mb-4">
-					<p class="text-white text-20">
-						March 12 at 10am PST
-					</p>
-				</div>
-				<div>
-					<a href="" class="btn btn-secondary">register now</a>
-				</div>
+				
 			</div>
-			<div class="w-5/12">
-				<div class="mb-4">
-					<p class="text-white text-18 uppercase font-fat">live webinar</p>	
-				</div>
-				<div class="mb-4">
-					<p class="text-white text-36 font-fat">Get smart on injection molding</p>
-				</div>
-				<div class="mb-4">
-					<p class="text-blue-dark text-20">
-						A collection of industry best practices including; recommended wall thickness, boss design, and gate types.
-					</p>
-				</div>
-				<div>
-					<a href="" class="btn btn-secondary">register now</a>
+			<div class="w-full lg:w-5/12 bg-teal-light  py-20 lg:py-0">
+				<div class="flex justify-center">
+					<div class="w-11/12 lg:w-full">
+						<div class="mb-4">
+							<p class="text-white text-18 uppercase font-fat">live webinar</p>	
+						</div>
+						<div class="mb-4">
+							<p class="text-white text-36 font-fat">Get smart on injection molding</p>
+						</div>
+						<div class="mb-4">
+							<p class="text-blue-dark text-20">
+								A collection of industry best practices including; recommended wall thickness, boss design, and gate types.
+							</p>
+						</div>
+						<div>
+							<a href="" class="btn btn-secondary">register now</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

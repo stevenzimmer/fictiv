@@ -36,9 +36,12 @@ if ( have_posts() ) :
 		
 		<div class="flex justify-center">
 			<div class="lg:w-11/12">
-				<?php 
-					get_template_part('partials/single', 'breadcrumbs');
-				?>
+				<div class="mb-6">
+					<?php 
+						get_template_part('partials/single', 'breadcrumbs');
+					?>
+				</div>
+				
 				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
 					<div class="w-11/12 lg:w-4/12 px-4">
 						<?php 

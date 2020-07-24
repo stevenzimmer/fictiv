@@ -1,9 +1,6 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-// $post_taxonomies = get_object_taxonomies( get_queried_object()->post_type, 'objects' );
 
-// print_r( $post_taxonomies );
 if ( have_posts() ) : 
 
     while ( have_posts() ) : 
@@ -24,13 +21,13 @@ if ( have_posts() ) :
 						<div class="pt-4 mb-2">
 							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
 								<?php 
-									echo $label_text . ' ' . get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
+									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
 								?>
 						
 							</p>
 						</div>
 						<div >
-							<h1 class="text-white font-museo-500 text-3 leading-tight"><?php echo $webinar_title; ?></h1>
+							<h1 class="text-white font-museo-500 text-3 leading-tight"><?php echo $post_title; ?></h1>
 						</div>
 						<?php 
 							if ( get_field('hero_subparagraph', $has_parent ) ) :					
@@ -43,56 +40,12 @@ if ( have_posts() ) :
 							</p>
 						</div>
 						<?php 
-							endif;
-
-							if ( !$on_demand && $webinar_date ) :
-							
+							endif;	
 						?>
-						<div class="mt-2">
-							<p class="text-white font-museo-500">
-								<?php 
-									echo $webinar_date . ', &nbsp;' . $webinar_time;
-								?>
-							</p>
-
-						</div>
-						<?php 
-							endif;
-						?>
+					
 					</div>
 					
-					<div class="w-full lg:w-1/2 px-4 lg:h-64">
-						
-						
-						<?php 
-							if( !$has_parent ) :
-						?>
-						<div class="bg-white h-full p-4 ">
-							
-							<?php 
-								
-								asset_form( $form_header_text, get_field('mkto_form_id') );
-							?>
-							
-						</div>							
-						
-						<?php
-							elseif( $has_parent && !get_field( 'webinar_youtube_id', $has_parent )  ) :
-						?>
-						<div class="bg-white h-full p-4 ">
-							<div class="post-content">
-								<?php
-									the_content();
-								?>
-							</div>
-						</div> 
-						<?php
-							endif;
-
-
-						?>
-
-					</div>
+					<div class="w-full lg:w-1/2 px-4 lg:h-64"></div>
 					
 				</div>
 			</div>
@@ -105,23 +58,17 @@ if ( have_posts() ) :
 		<div class="flex justify-center flex-wrap">
 			<div class="w-full lg:w-10/12">
 				
-
 				<div class="mb-6">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
 				</div>
 				
-				<?php 
-					if( $has_parent && $on_demand ) :
-				?>
+			
 				<div class="relative h-0 p-0 overflow-hidden mb-6" style="padding-top: 56.25%">
-					<iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/<?php echo get_field('webinar_youtube_id', $has_parent); ?>?rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/<?php echo get_field('youtube_id', $has_parent); ?>?rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			
-				<?php 
-					endif;
-				?>
 				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
 				
 					<div class="w-full lg:w-1/2 px-6">
@@ -185,25 +132,7 @@ if ( have_posts() ) :
 
 ?>
 <script type="text/javascript">
-	MktoForms2.loadForm("//info.fictiv.com", "852-WGR-716", <?php the_field('mkto_form_id'); ?>);
-	MktoForms2.whenReady( function( form ) {
-		form.onSuccess( function( e ) {
-			window.location = window.location.origin + window.location.pathname + 'thanks/';
-			return false;
-		});
-	});
-	// // MktoForms2.loadForm("//info.fictiv.com", "852-WGR-716", 937 );
- // // 	MktoForms2.whenReady( function( form ) {
- // //      if( form.getId() === 937 ) {
- // //          const subscribeHeader = document.getElementById('subscribe-header');
- // //          const formWrapper = document.getElementById('form-wrapper');
- // //          form.onSuccess( function( e ) {
- // //              subscribeHeader.innerText = "Thank you for Subscribing!"
- // //              formWrapper.style.display = 'none';
- // //              return false;
- // //          });
- // //      }
- //  });
+
 </script>
 
  <?php

@@ -46,6 +46,30 @@
                 "operator": "==",
                 "value": "top_level"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_video"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_tool"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
         ]
     ],
     "menu_order": 0,
@@ -56,5 +80,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594995274
+    "modified": 1595336539
 }

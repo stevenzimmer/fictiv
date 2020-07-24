@@ -1,11 +1,11 @@
 {
-    "key": "group_5f11b38a8fcb2",
-    "title": "Hero Label",
+    "key": "group_5edbc817c41c6",
+    "title": "Youtube ID",
     "fields": [
         {
-            "key": "field_5f11b39bef053",
-            "label": "Add Label",
-            "name": "hero_label",
+            "key": "field_5edbc831b12e1",
+            "label": "Add YouTube ID",
+            "name": "youtube_id",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -27,24 +27,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "cpt_ebook"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_tool"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
+                "value": "cpt_video"
             }
         ]
     ],
@@ -56,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595336933
+    "modified": 1595335729
 }

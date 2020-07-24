@@ -42,7 +42,7 @@
 					'excerpt', 
 					'thumbnail',
 				), 
-				'menu_position'	=> 5,
+				'menu_position'	=> 1,
 				'menu_icon'		=> 'dashicons-welcome-write-blog',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
@@ -88,7 +88,7 @@
 					'excerpt', 
 					'thumbnail',
 				), 
-				'menu_position'	=> 5,
+				'menu_position'	=> 1,
 				'menu_icon'		=> 'dashicons-hammer',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
@@ -135,7 +135,7 @@
 					'thumbnail',
 					'page-attributes'
 				), 
-				'menu_position'	=> 2,
+				'menu_position'	=> 1,
 				'menu_icon'		=> 'dashicons-video-alt3',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
@@ -192,46 +192,135 @@
 			)
 		);
 
-		// register_post_type(
-		// 	'cpt_customer_stories',
-		// 	array(
-		// 		'labels'		=> array(
-		// 			'name'					=> __('Customer Stories'),
-		// 			'singular_name' 		=> __('Customer Story'),
-		// 			'add_new'				=> __('Add New Customer Story'),
-		// 			'add_new_item'			=> __('Add New Customer Story'),
-		// 			'edit_item'				=> __('Edit Customer Story'),
-		// 			'view_item'				=> __('View Customer Story'),
-		// 			'view_items'			=> __('View Customer Story'),
-		// 			'featured_image' 		=> __('Thumbnail Image'),
-		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
-		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
-		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
-		// 			'items_list'			=> __('Customer Stories List'),
+		register_post_type(
+			'cpt_case_study',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Case Studies'),
+					'singular_name' 		=> __('Case Study'),
+					'add_new'				=> __('Add New Case Study'),
+					'add_new_item'			=> __('Add New Case Study'),
+					'edit_item'				=> __('Edit Case Study'),
+					'view_item'				=> __('View Case Study'),
+					'view_items'			=> __('View Case Study'),
+					'featured_image' 		=> __('Hero Image'),
+					'set_featured_image' 	=> __('Upload Hero Image'),
+					'remove_featured_image' => __('Remove Hero Image'),
+					'use_featured_image'	=> __('Use as Hero Image'),
+					'items_list'			=> __('Case Study List'),
 					
-		// 		),
-		// 		'taxonomies'	=> array(),
-		// 		'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
-		// 		'public' 		=> true,
-		// 		'hierarchical'  => true,
-		// 		'has_archive' 	=> true,
-		// 		'show_in_nav_menus'	=> true,
-		// 		'supports'		=> array(
-		// 			'title',
-		// 			'excerpt',
-		// 			'editor', 
-		// 			'thumbnail'
-		// 		), 
-		// 		// 'supports' => true,
-		// 		'menu_position'	=> 5,
-		// 		'menu_icon'		=> 'dashicons-book-alt',
-		// 		'show_ui'		=> true,
-		// 		'show_in_rest'	=> true,
-		// 		'rest_base'		=> 'customer-stories',
-		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-		// 		'rewrite' => array('slug' => 'customer-stores'),
-		// 	)
-		// );
+				),
+				'taxonomies'	=> array(
+					'fictiv_industry',
+					'fictiv_manufacturing_process'
+				),
+				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'excerpt',
+					'editor', 
+					'thumbnail'
+				), 
+				'menu_position'	=> 1,
+				'menu_icon'		=> 'dashicons-analytics',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'case-studies',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'case-studies'),
+			)
+		);
+
+		register_post_type(
+			'cpt_video',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Videos'),
+					'singular_name' 		=> __('Video'),
+					'add_new'				=> __('Add New Video'),
+					'add_new_item'			=> __('Add New Video'),
+					'edit_item'				=> __('Edit Video'),
+					'view_item'				=> __('View Video'),
+					'view_items'			=> __('View Video'),
+					'featured_image' 		=> __('Thumbnail Image'),
+					'set_featured_image' 	=> __('Upload Thumbnail Image'),
+					'remove_featured_image' => __('Remove Thumbnail Image'),
+					'use_featured_image'	=> __('Use as Thumbnail Image'),
+					'items_list'			=> __('Video List'),
+					
+				),
+				'taxonomies'	=> array(
+					'fictiv_industry',
+					'fictiv_manufacturing_process'
+				),
+				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'excerpt',
+					'editor', 
+					'thumbnail'
+				), 
+				'menu_position'	=> 1,
+				'menu_icon'		=> 'dashicons-format-video',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'videos',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'videos'),
+			)
+		);
+
+		register_post_type(
+			'cpt_tool',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Tools'),
+					'singular_name' 		=> __('Tool'),
+					'add_new'				=> __('Add New Tool'),
+					'add_new_item'			=> __('Add New Tool'),
+					'edit_item'				=> __('Edit Tool'),
+					'view_item'				=> __('View Tool'),
+					'view_items'			=> __('View Tool'),
+					'featured_image' 		=> __('Thumbnail Image'),
+					'set_featured_image' 	=> __('Upload Thumbnail Image'),
+					'remove_featured_image' => __('Remove Thumbnail Image'),
+					'use_featured_image'	=> __('Use as Thumbnail Image'),
+					'items_list'			=> __('Tool List'),
+					
+				),
+				'taxonomies'	=> array(
+					'fictiv_industry',
+					'fictiv_manufacturing_process'
+				),
+				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'excerpt',
+					'editor', 
+					'thumbnail',
+					'page-attributes'
+				), 
+				'menu_position'	=> 1,
+				'menu_icon'		=> 'dashicons-admin-tools',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'tools',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'tools'),
+			)
+		);
 
 
 		// Custom Taxonomies for Resources
@@ -302,7 +391,10 @@
 				'cpt_blog',
 				'cpt_teardown',
 				'cpt_webinar',
-				'cpt_ebook'
+				'cpt_ebook',
+				'cpt_case_study',
+				'cpt_video',
+				'cpt_tool'
 			),
 			array(
 				'labels'	=> array(
@@ -330,8 +422,10 @@
 			array (
 				'cpt_blog',
 				'cpt_webinar',
-				'cpt_ebook'
-				// 'cpt_teardown'
+				'cpt_ebook',
+				'cpt_case_study',
+				'cpt_video',
+				'cpt_tool'
 			),
 			array(
 				'labels'	=> array(

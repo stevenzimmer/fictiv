@@ -22,19 +22,24 @@ if ( have_posts() ) :
 			<div class="w-full lg:w-10/12">
 				<div class="flex flex-wrap justify-center lg:justify-start -mx-4">
 					<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
-						<?php 
-							if ( get_field('hero_label', $has_parent ) ) :					
-						?>
+				
 						<div class="pt-4 mb-2">
-							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+							<p class=" uppercase font-museo-700 text-grey-400 text-14">
 								<?php 
-									the_field('hero_label', $has_parent);
+
+									if ( get_field('hero_label', $has_parent ) ) :					
+						
+										the_field('hero_label', $has_parent);
+									
+									else :
+
+										echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
+								
+									endif;
 								?>
 							</p>
 						</div>
-						<?php 
-							endif;
-						?>
+					
 						<div>
 							<h1 class="text-white font-museo-500 text-3 leading-tight"><?php echo $post_title; ?></h1>
 						</div>
@@ -46,7 +51,9 @@ if ( have_posts() ) :
 						</div>
 						<?php 
 							endif;
-							if ( get_field('hero_subparagraph', $has_parent ) ) :					
+
+
+							if ( get_field('hero_subparagraph', $has_parent && $has_parent ) ) :					
 						?>
 						<div>
 							<p class="text-white text-20">
@@ -75,6 +82,9 @@ if ( have_posts() ) :
 						
 						<?php
 							else :
+
+								if( get_field( 'asset_thumbnail', $has_parent ) ) :
+				
 						?>
 						<div class="">
 							<img class="mx-auto lazyload" alt="<?php the_title(); ?> thumbnail" data-src="<?php 
@@ -82,6 +92,7 @@ if ( have_posts() ) :
 							?>">
 						</div> 
 						<?php
+								endif;
 							endif;
 
 						?>
@@ -104,6 +115,7 @@ if ( have_posts() ) :
 					?>
 				</div>
 				<?php 
+					
 				
 					if ( !$has_parent ) :
 				?>
@@ -117,19 +129,25 @@ if ( have_posts() ) :
 							?>
 						</div>
 					</div>
+
+					<?php 
+						if( get_field( 'asset_thumbnail', $has_parent ) ) :
+					?>
 					<div class="w-full lg:w-1/2 px-6">
 						<img class="lg:mx-auto" alt="<?php the_title(); ?> thumbnail" src="<?php 
 							the_field('asset_thumbnail', $has_parent );
 						?>">
 					</div>
+					<?php 
+						endif;
+					?>
 				
 				</div>
-
 				<?php 
 					else :
 				?>
-				
 				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
+				
 					<div class="w-11/12 lg:w-1/2 px-6">
 						<div class="post-content ebook">
 							<p>

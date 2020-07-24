@@ -4,7 +4,7 @@
 	<footer class="py-10 border-t border-teal-lighter">
 		<div class="container">
 			<div class="flex justify-center">
-				<div class="w-11/12 md:w-full">
+				<div class="w-11/12 md:w-10/12">
 					<div class="flex justify-between mb-12 flex-wrap -mx-6">
 						<div class="w-full sm:w-1/3 md:w-1/4 mb-12 md:mb-0 px-6">
 							<div class="w-24 mb-4">
@@ -121,7 +121,7 @@
 						</div>
 					</div>
 					<div class="flex justify-center">
-						<div class="w-full md:w-1/2">
+						<div class="w-full md:w-7/12 ">
 				
 							<div class="flex">
 								<div class="border-2 border-teal-light py-2 px-4">

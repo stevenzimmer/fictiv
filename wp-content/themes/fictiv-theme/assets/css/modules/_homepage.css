@@ -41,18 +41,45 @@
 		&-pricing {
 
 			&-1 {
-				top: 80px;
-				left: -110px;
+
+
+				@screen md {
+					top: 50px;
+					left: -110px;
+				}
+
+				@screen lg {
+					top: 80px;
+					left: -110px;
+				}
+				
 			}
 
 			&-2 {
-				top: 80px;
-				right: -110px;
+
+				@screen md {
+					top: 40px;
+					right: -110px;
+				}
+
+				@screen lg {
+					top: 80px;
+				}
+				
 			}
 
 			&-3 {
-				top: 200px;
-				right: -110px;
+
+				@screen md {
+					top: 150px;
+					right: -110px;
+				}
+
+				@screen lg {
+					top: 200px;
+					right: -110px;
+				}
+				
 			}
 		}
 	}

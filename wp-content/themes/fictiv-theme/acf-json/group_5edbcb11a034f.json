@@ -1,13 +1,13 @@
 {
-    "key": "group_5f11b8b62734c",
-    "title": "Asset Thumbnail",
+    "key": "group_5edbcb11a034f",
+    "title": "Case Study Logo",
     "fields": [
         {
-            "key": "field_5f11b8d51e2ce",
-            "label": "Upload thumbnail",
-            "name": "asset_thumbnail",
+            "key": "field_5edbcb1bc7fce",
+            "label": "Upload Logo",
+            "name": "case_study_logo",
             "type": "image",
-            "instructions": "",
+            "instructions": ".png file on transparent background no more than 600px wide",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -21,7 +21,7 @@
             "min_width": "",
             "min_height": "",
             "min_size": "",
-            "max_width": 900,
+            "max_width": 600,
             "max_height": "",
             "max_size": "",
             "mime_types": ""
@@ -32,24 +32,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "cpt_ebook"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_tool"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
+                "value": "cpt_case_study"
             }
         ]
     ],
@@ -61,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595336940
+    "modified": 1595372430
 }

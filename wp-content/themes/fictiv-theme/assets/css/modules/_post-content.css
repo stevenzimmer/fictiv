@@ -19,16 +19,6 @@
 			}
 		}
 
-		> {
-			h2,h3,h4,h5,h6,p,ul,ol {
-				@apply px-4;
-
-				@screen md {
-					@apply px-0;
-				}
-			}
-		}
-
 		ul,ol {
 			@apply pl-8;
 		}
@@ -49,8 +39,12 @@
 			}
 		}
 
-		p, span, h4, h5, h6,img, hr,ol,ul {
+		p, span, h4, h5, h6,img,ol,ul {
 			@apply mb-6;
+		}
+
+		hr {
+			@apply my-6;
 		}
 
 		iframe {
@@ -87,7 +81,7 @@
 		}
 
 		h3 {
-			@apply text-16 mb-6 font-museo-500;
+			@apply text-20 mb-6;
 		}
 
 		ul, ol {
@@ -183,6 +177,10 @@
 
 			&-block {
 
+				&-separator {
+					@apply border-grey-200;
+				}
+
 				&-eedee {
 				
 					&-block {
@@ -198,24 +196,27 @@
 				}
 
 				&-columns {
-					@apply mb-6;
+					@apply mb-6 mx-0 px-0;
 
+					@screen sm {
+						@apply -mx-2;
+					}
 					
 					.wp {
 
 						&-block {
 
 							&-column {
-								@apply mb-6;
+								@apply mb-6 ml-0 px-0;
 
-								@screen lg {
-									@apply mb-0;
+								@screen sm {
+									@apply mb-0 px-2;
 								}
 
 								&:not(:first-child) {
 
 									@screen lg {
-										margin-left: 15px;
+										@apply ml-0;
 									}
 								}
 
@@ -227,8 +228,46 @@
 
 									&-block {
 
+										&-columns {
+
+											.wp {
+
+												&-block {
+
+													&-column {
+														flex-basis: 100%!important;
+
+														@screen lg {
+															flex-basis: calc(50% - 16px)!important;
+														}
+
+														&:last-child {
+
+															.wp {
+
+																&-block {
+
+																	&-image {
+																		@apply mb-0;
+																	}
+																}
+															}
+															
+														}
+														
+													}
+												}
+											}
+										}
+
+										&-group {
+											
+										}
+
 										&-image {
-											@apply mb-1;
+										
+
+										
 										}
 									}
 								}
@@ -238,14 +277,22 @@
 				}
 
 				&-image {
-					@apply mb-6 mx-0 mt-0;
+					@apply -mx-5;
+
+					@screen sm {
+						@apply mx-0;
+					}
 
 					figcaption {
 						@apply text-center text-12 block my-0;
 					}
 
 					img {
-						@apply mb-0;
+						@apply mb-0 w-full;
+
+						@screen md {
+							@apply w-auto;
+						}
 					}
 
 					figure {
@@ -277,8 +324,6 @@
 
 					p {
 						@apply text-teal-light text-20 mb-0;
-
-
 					}
 				}
 
@@ -312,6 +357,25 @@
 							@apply absolute top-0 left-0 bottom-0 w-full h-full border-0;
 						}
 					}
+
+					figcaption {
+						@apply px-4;
+
+						@screen md {
+							@apply px-0;
+						}
+					}
+				}
+
+				&-group {
+
+					&.has {
+
+						&-background {
+							@apply px-2 py-4;
+						}
+					}
+					
 				}
 			}
 		}
@@ -324,7 +388,7 @@
 .has {
 
 	&-background {
-		@apply p-6;
+		@apply py-6;
 	}
 
 	&-teal {
@@ -574,6 +638,85 @@
 
 		&-color {
 
+		}
+	}
+}
+
+.single {
+
+	&-cpt {
+
+		&_case {
+
+			&_study {
+
+				.post {
+
+					&-content {
+
+						.wp {
+
+							&-block {
+
+								&-columns {
+									@apply mb-0;
+								}
+
+								&-column {
+									@apply mb-0;
+
+									.wp {
+
+										&-block {
+										
+											&-group {
+												@apply mb-0;
+
+												@screen md {
+													@apply mb-4;
+												}
+											}
+										}
+									}
+
+									p {
+										@apply mb-6;
+									}
+								}
+
+								&-group {
+
+									&.has {
+
+										&-background {
+											@apply mb-4;
+
+										}
+									}
+
+									&__inner {
+
+										&-container {
+
+											h3 {
+												@apply text-teal-light text-20 font-museo-700 mb-2;
+											}
+
+											p {
+												@apply mb-4;
+
+												&:last-child {
+													@apply mb-0;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -9,7 +9,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.0', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
+        // wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -23,7 +23,6 @@
     }
 
     function asset_form( $header_text, $form_number ) {
-
 
 ?>
         <div>
@@ -49,106 +48,48 @@
 <?php
     }
 
-    function exclude_child_posts_in_loop( $query ) {
-    
-        if( $query->is_post_type_archive && $query->is_archive && !$query->is_admin  ) :
 
-            $query->set( 'post_parent', 0 );
+
+// function lazyload_post_images( $content ) {
+
+//     // $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+//     $document = new DOMDocument('1.0', 'utf-8');
+
+//     $document->loadHTML( mb_convert_encoding( $content, 'UTF-8', 'HTML-ENTITIES' ) );
+
+//     $imgs = $document->getElementsByTagName('img');
+
+//     foreach ( $imgs as $img ) :
         
-        endif;
-    }
+//         echo '<br /><br />';
 
+//         $orig_src = $img->getAttribute('src');
+//         $orig_srcset = $img->getAttribute('srcset');
+//         $existing_class = $img->getAttribute('class');
 
-    add_action( 'pre_get_posts', 'exclude_child_posts_in_loop' );
+//         $img->setAttribute('src','');
+//         $img->setAttribute('srcset','');
 
+//         $img->setAttribute('class',$existing_class . ' lazyload');
+//         $img->setAttribute('data-src',$orig_src);
+//         $img->setAttribute('data-srcset',$orig_srcset);
 
-    //* Load cusomt editor styles for the block editor (Gutenberg)
-    function block_editor_styles() {
-        // wp_enqueue_style( 'site-block-editor-styles', get_theme_file_uri( '/style-editor.css' ), false, '1.0', 'all' );
+//         // print_r( $img );
 
-        wp_enqueue_script('editor-js', get_template_directory_uri() . '/dist/editor/js/scripts.min.js', [], '1.0', true);
-    
-        wp_enqueue_style('editor-style', get_template_directory_uri() . '/dist/editor/css/style.min.css', [], '1.2');
-    }
-
-    add_action( 'enqueue_block_editor_assets', 'block_editor_styles' );
-
-    function add_body_class_to_block_editor( $classes ) {
-        //get current page
-        global $pagenow;
-
-        //check if the current page is post.php and if the post parameteris set
-        if ( $pagenow ==='post.php' && isset($_GET['post']) ) :
-            //get the post type via the post id from the URL
-            $postType = get_post_type( $_GET['post']);
-            //append the new class
-            $classes .= ' single-' . $postType;
-
-        //next check if this is a new post
-        elseif ( $pagenow ==='post-new.php' )  :
+//         foreach ( $img->attributes as $i => $attr ) :
             
-            //check if the post_type parameter is set
-            if( isset($_GET['post_type']) ) :
-            
-                //in this case you can get the post_type directly from the URL
-                $classes .= ' single-' . urldecode($_GET['post_type']);
-            
-            else :
-            
-                //if post_type is not set, a 'post' is being created
-                $classes .= ' single-post';
-            
-            endif;
+//             // print_r( $attr );
 
+//             echo '<br /><br />';
 
-        endif;
-    
-        return $classes;
-    } 
+//         endforeach;
 
-    add_filter('admin_body_class', 'add_body_class_to_block_editor'); 
+//     endforeach;
 
-    add_action('admin_init', function () {
-    // Redirect any user trying to access comments page
-    global $pagenow;
-    if ($pagenow === 'edit-comments.php') :
-        wp_redirect( admin_url() );
-        exit;
-    endif;
-    // Remove comments metabox from dashboard
-    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
-    // Disable support for comments and trackbacks in post types
-    foreach ( get_post_types() as $post_type ) :
-        if ( post_type_supports( $post_type, 'comments' ) ) :
-            remove_post_type_support( $post_type, 'comments' );
-            remove_post_type_support( $post_type, 'trackbacks' );
-        endif;
-    endforeach;
-});
-// Close comments on the front-end
-add_filter('comments_open', '__return_false', 20, 2);
-add_filter('pings_open', '__return_false', 20, 2);
-// Hide existing comments
-add_filter('comments_array', '__return_empty_array', 10, 2);
-// Remove comments page in menu
-add_action('admin_menu', function () {
-    remove_menu_page('edit-comments.php');
-});
-// Remove comments links from admin bar
-add_action('init', function () {
-    if ( is_admin_bar_showing() ) :
-        remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
-    endif;
-});
-function remove_jquery_migrate( $scripts ) {
-   if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) :
-        $script = $scripts->registered['jquery'];
-        if ( $script->deps ) :
-            // Check whether the script has any dependencies
-            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
-        endif;
-    endif;
-}
-add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
-     
+//     $html = $document->saveHTML();
+//     // print_r( $html );
+//     // return $html;
+// }
+// add_filter ('the_content', 'lazyload_post_images');
+
 ?>
