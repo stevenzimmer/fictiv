@@ -17,7 +17,7 @@ if ( have_posts() ) :
 	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full lg:w-10/12">
+			<div class="w-full px-5 lg:px-0 lg:w-10/12">
 				<div>
 					<p class="text-white uppercase font-museo-700 text-grey-400">
 						<?php 
@@ -37,7 +37,7 @@ if ( have_posts() ) :
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="lg:w-11/12">
+			<div class="w-full px-5 lg:px-0 lg:w-11/12">
 				<div class="mb-6">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
@@ -55,7 +55,7 @@ if ( have_posts() ) :
 					<div class="w-full lg:w-8/12 px-4">
 						
 						<div class="flex flex-wrap justify-center md:justify-between items-center mb-4">
-							<div class="w-11/12 lg:w-1/2 ">
+							<div class="w-full lg:w-1/2 ">
 								<div class="flex ">
 									<div class="lg:w-1/6">
 										<img width="40" src="<?php echo get_avatar_url( get_the_author_meta('ID') ); ?>">

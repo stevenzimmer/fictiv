@@ -41,11 +41,13 @@ if ( have_posts() ) :
 <section class="section">
 	<div class="container">	
 		<div class="flex justify-center">
-			<div class="lg:w-11/12">
+			<div class="w-full px-5 lg:px-0 lg:w-11/12">
+				<div class="mb-6">
+					<?php 
+						get_template_part('partials/single', 'breadcrumbs');
+					?>
+				</div>
 				
-				<?php 
-					get_template_part('partials/single', 'breadcrumbs');
-				?>
 				
 				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
 					
@@ -64,7 +66,7 @@ if ( have_posts() ) :
 									<div class="lg:w-3/12">
 										<div class="flex -mx-1">
 											<?php 
-												 foreach ($authors as $i => $author ) :
+												 foreach ( $authors as $i => $author ) :
 											?>
 											<div class="lg:w-1/2 px-1">
 												<img alt="<?php echo $author->display_name; ?> headshot" width="40" src="<?php echo get_avatar_url( $author->data->ID ); ?>">
@@ -122,7 +124,7 @@ if ( have_posts() ) :
 								foreach ( $authors as $i => $author ) :
 								
 							?>
-							<div class="w-11/12 lg:w-1/2 mb-8 lg:mb-0 px-4">
+							<div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-4">
 								<div class="flex justify-start -mx-2">
 									<div class="w-1/6 md:w-auto lg:w-1/5 xl:w-1/6 px-2">
 										<img class="lazyload mx-auto" alt="<?php echo $author->display_name; ?> headshot" width="40" data-src="<?php echo get_avatar_url( $author->data->ID ); ?>">

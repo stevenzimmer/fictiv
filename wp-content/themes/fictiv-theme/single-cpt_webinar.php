@@ -103,7 +103,7 @@ if ( have_posts() ) :
 <section class="py-10">
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
-			<div class="w-full lg:w-10/12">
+			<div class="w-full lg:w-10/12 px-5 lg:px-0">
 				
 
 				<div class="mb-6">
@@ -132,7 +132,7 @@ if ( have_posts() ) :
 							?>
 						</div>
 					</div>
-					<div class="w-11/12 lg:w-1/2 px-6">
+					<div class="w-full lg:w-1/2 px-6">
 						<?php 
 							if( have_rows('webinar_hosts', $has_parent) ):
 						?>

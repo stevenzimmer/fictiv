@@ -14,7 +14,7 @@
 		    
 		        if ( $i == $paragraphAfter ) :
 		        	$blog_subscribe .= '
-		        	<div class="bg-blue-dark border-radius p-4 lg:float-right max-w-xs mt-1 ml-4 mb-6 md:mb-4 subscribe-box-float shadow-lg content-subscribe-wrapper">
+		        	<div class="bg-blue-dark border-radius p-4 md:float-right max-w-xs mt-1 md:ml-4 mb-6 md:mb-4 subscribe-box-float shadow-lg content-subscribe-wrapper">
 				    	<div class="mb-2">
 				    		<h3 class="text-white text-16 font-museo-500">Download tolerance analysis calculator</h3>
 				    	</div>

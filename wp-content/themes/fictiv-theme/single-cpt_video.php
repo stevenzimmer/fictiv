@@ -58,7 +58,7 @@ if ( have_posts() ) :
 		<div class="flex justify-center flex-wrap">
 			<div class="w-full lg:w-10/12">
 				
-				<div class="mb-6">
+				<div class="mb-6 px-5 lg:px-0">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
