@@ -1,13 +1,15 @@
 <?php 
 
 	function fictiv_post_card( $topic ) {
+// echo get_the_post_thumbnail('medium_large');
+// echo wp_get_attachment_url(get_the_id(), 'medium_large' );
 
-
+$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
 
 ?>
 <div class="border border-grey-200 relative h-full">
 	<div class="relative h-0 thumbnail-ratio" >
-		<img class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo get_the_post_thumbnail_url(); ?>">
+		<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail_src; ?>">
 	</div>
 	<div class="p-4 relative">
 		<div class="mb-1">

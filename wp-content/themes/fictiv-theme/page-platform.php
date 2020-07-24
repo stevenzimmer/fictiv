@@ -59,7 +59,7 @@
 		<div class="flex items-center justify-center lg:justify-start flex-wrap">
 			<div class="w-11/12 lg:w-1/2">
 
-				<div class="w-8/12">
+				<div class="w-full md:w-8/12">
 					<h2 class="text-blue-dark text-30 leading-tight mb-4 font-museo-500">
 						Easily upload native CAD & 2D drawings
 					</h2>
@@ -68,7 +68,7 @@
 					</p>
 					
 				</div>
-				<div class="flex items-center">
+				<div class="flex items-center mb-6 md:mb-0">
 					<div>
 						<p class="font-bold text-16">
 							Available For 
@@ -137,7 +137,7 @@
 			</div>
 		</div>
 		<div class="flex -mx-4 flex-wrap justify-center lg:justify-start">
-			<div class="w-11/12 lg:w-1/2 px-4">
+			<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
 				<div class="mb-4">
 					<img class="shadow-lg lazyload" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/faster-quotes-1.png">
 				</div>
@@ -200,7 +200,7 @@
 <section class="section">
 	<div class="container">
 		<div class="flex justify-center lg:justify-between flex-wrap">
-			<div class="w-11/12 lg:w-4/12">
+			<div class="w-11/12 lg:w-4/12 mb-6 lg:mb-0">
 				<div>
 					<h2 class="text-blue-dark text-30 leading-tight mb-4 font-museo-500">
 						Online Manufacturing Feedback

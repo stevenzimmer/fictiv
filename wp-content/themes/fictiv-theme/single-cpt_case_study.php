@@ -54,7 +54,6 @@ if ( have_posts() ) :
 </header>
 <section class="py-10">
 	<div class="container">
-		
 		<div class="flex justify-center">
 			<div class="w-full md:w-11/12 lg:w-10/12">
 				<div class="flex justify-between items-center">

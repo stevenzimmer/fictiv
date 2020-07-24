@@ -48,48 +48,22 @@
 <?php
     }
 
-
-
-// function lazyload_post_images( $content ) {
-
-//     // $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-//     $document = new DOMDocument('1.0', 'utf-8');
-
-//     $document->loadHTML( mb_convert_encoding( $content, 'UTF-8', 'HTML-ENTITIES' ) );
-
-//     $imgs = $document->getElementsByTagName('img');
-
-//     foreach ( $imgs as $img ) :
+    function lazyload_images_in_posts( $content ) {
         
-//         echo '<br /><br />';
+        //-- Change src/srcset to data attributes.
+        $content = preg_replace("/<img(.*?)(src=|srcset=)(.*?)>/i", '<img$1data-$2$3>', $content);
 
-//         $orig_src = $img->getAttribute('src');
-//         $orig_srcset = $img->getAttribute('srcset');
-//         $existing_class = $img->getAttribute('class');
+        //-- Add .lazyload class to each image that already has a class.
+        $content = preg_replace('/<img(.*?)class=\"(.*?)\"(.*?)>/i', '<img$1class="$2 lazyload"$3>', $content);
 
-//         $img->setAttribute('src','');
-//         $img->setAttribute('srcset','');
+        //-- Add .lazyload class to each image that doesn't already have a class.
+        $content = preg_replace('/<img((.(?!class=))*)\/?>/i', '<img class="lazyload"$1>', $content);
 
-//         $img->setAttribute('class',$existing_class . ' lazyload');
-//         $img->setAttribute('data-src',$orig_src);
-//         $img->setAttribute('data-srcset',$orig_srcset);
+        
+        return $content;
+    }
 
-//         // print_r( $img );
+    add_filter('the_content', 'lazyload_images_in_posts');
 
-//         foreach ( $img->attributes as $i => $attr ) :
-            
-//             // print_r( $attr );
-
-//             echo '<br /><br />';
-
-//         endforeach;
-
-//     endforeach;
-
-//     $html = $document->saveHTML();
-//     // print_r( $html );
-//     // return $html;
-// }
-// add_filter ('the_content', 'lazyload_post_images');
 
 ?>

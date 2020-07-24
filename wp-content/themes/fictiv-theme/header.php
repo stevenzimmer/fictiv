@@ -13,7 +13,7 @@
 
 <body <?php body_class() ?>>
 
-	<nav class="absolute w-full top-0 left-0 h-18 flex items-center z-50 hidden">
+	<nav class="absolute w-full top-0 left-0 h-18 flex items-center z-50">
 		<div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div>
 		<div class="container relative">
 			<div class="flex justify-center">

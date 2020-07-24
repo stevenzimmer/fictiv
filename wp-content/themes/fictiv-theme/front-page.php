@@ -24,7 +24,7 @@
 					?>
 				</div>
 				<div class="flex items-center justify-start flex-wrap -mx-6">
-					<div class="flex items-center md:w-1/2 px-6 mb-0">
+					<div class="flex items-center w-full mb-6 md:mb-0 md:w-1/2 xl:w-1/3 px-6 mb-0">
 						<div class="mr-2">
 							<!-- Icon -->
 							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
@@ -35,7 +35,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="flex items-center md:w-1/2 px-6">
+					<div class="flex items-center w-full md:w-1/2 xl:w-5/12 px-6">
 						<div class="mr-2">
 							<!-- Icon -->
 							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/clock.png">
@@ -221,7 +221,7 @@
 			<p class="text-blue-light text-18 uppercase font-museo-900">fictiv digital manufacturing</p>	
 		</div>
 		<div class="text-center mb-8">
-			<h2 class="text-blue-dark font-museo-900 text-48">
+			<h2 class="text-blue-dark font-museo-900 text-29 md:text-48">
 				EVERYTHING IN ONE PLACE
 			</h2>
 		</div>
