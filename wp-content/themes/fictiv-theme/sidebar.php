@@ -51,6 +51,7 @@ $taxonomies = array();
 		<?php
 
 			foreach ( get_post_type_object( $type )->taxonomies as $j => $tax ) :
+				
 				if ( !in_array( $tax, $taxonomies ) ) :
 					
 					array_push($taxonomies, $tax);

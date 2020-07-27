@@ -179,7 +179,7 @@
 					else :
 				?>
 				<div>
-					
+					<h1 class="text-white font-museo-500 leading-tight"><?php echo $args['title']; ?></h1>
 				</div>
 				<?php
 					endif;
