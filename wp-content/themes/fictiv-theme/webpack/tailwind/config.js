@@ -20,6 +20,7 @@ module.exports = {
       default: "#333",
 
       grey: {
+        lighter: "#f5f5f5",
         light: "#b8b8b8",
         dark: "#525154",
         100: "#F0F4F5",
@@ -369,7 +370,7 @@ module.exports = {
     },
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',
-      xs: '20rem',
+      xs: '16rem',
       sm: '24rem',
       md: '28rem',
       lg: '32rem',

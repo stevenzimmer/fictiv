@@ -10,29 +10,23 @@ if ( have_posts() ) :
 
         include( get_template_directory() . '/inc/post-topics.php');
 
+        $args = array(
+        	'bg' => get_the_post_thumbnail_url(),
+        	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
+        	'title' => $post_title,
+        	'post_type' => get_queried_object()->post_type,
+        	// 'download_link' => get_field('download_asset_link'),
+        	// 'subparagraph' => get_field('hero_subparagraph', $has_parent),
+        	// 'form_header' =>  get_field('form_header'),
+        	// 'form_id' => get_field('mkto_form_id'),
+        	// 'thumbnail' => get_field('asset_thumbnail', $has_parent ),
+        	// 'parent_id' => $has_parent,
+
+        );
+
+        hero_section( $args );
         
 ?>
-<header class="relative pt-24 pb-12">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-full px-5 lg:px-0 lg:w-10/12">
-				<div>
-					<p class="text-white uppercase font-museo-700 text-grey-400">
-						<?php 
-							echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
-						?>
-				
-					</p>
-				</div>
-				<div>
-					<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
 <section class="section">
 	<div class="container">
 		

@@ -9,7 +9,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.0', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
+        // wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -64,6 +64,25 @@
     }
 
     add_filter('the_content', 'lazyload_images_in_posts');
+
+    function resource_center_cpt() {
+
+        global $resource_post_types;
+        $resource_post_types = array(
+
+            'cpt_case_study',
+            'cpt_blog',
+            'cpt_teardown',
+            'cpt_tool',
+            'cpt_webinar',
+            'cpt_ebook',
+            'cpt_video'            
+
+        );
+
+    }
+
+    require get_theme_file_path('/inc/custom-rest-route.php');
 
 
 ?>

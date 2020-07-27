@@ -1,9 +1,9 @@
-.hero {
+.section {
 
-	&-section {
+	&-hero {
 
-		@screen lg {
-			height: 300px;
+		@screen md {
+			min-height: 300px;
 		}
 	}
 }

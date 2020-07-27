@@ -9,7 +9,22 @@ $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id(
 ?>
 <div class="border border-grey-200 relative h-full">
 	<div class="relative h-0 thumbnail-ratio" >
+		<?php 
+			if( $thumbnail_src ) :
+		?>
 		<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail_src; ?>">
+
+		<?php 
+			else :
+		?>
+		<div class="bg-grey-100 absolute inset-0 w-full h-full flex items-center justify-center">
+			<div>
+				<p>Upload hero image to this post</p>
+			</div>
+		</div>
+		<?php
+			endif;
+		?>
 	</div>
 	<div class="p-4 relative">
 		<div class="mb-1">

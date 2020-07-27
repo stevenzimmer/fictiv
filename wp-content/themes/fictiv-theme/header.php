@@ -55,7 +55,7 @@
 									</li>
 
 									<li>
-										<a href="#">
+										<a href="/resources/">
 											Resources
 										</a>
 									</li>
@@ -66,7 +66,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="https://app.fictiv.com/users/sign_in">
 											Log In
 										</a>
 									</li>

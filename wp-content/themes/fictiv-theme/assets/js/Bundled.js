@@ -13,4 +13,6 @@ import './tolerance/_scripts';
 import './partners/_scripts';
 import './face-shields/_scripts';
 import './social-share/_scripts';
+import './filter/_scripts';
+import './resources/_scripts';
 

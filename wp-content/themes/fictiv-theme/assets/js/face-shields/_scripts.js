@@ -4,8 +4,8 @@ if ( document.body.classList.contains('page-template-page-face-shields')  ) {
 
 
 const faceShieldCarousel = new Siema({
-	 selector: '.face-shield-carousel',
-  	duration: 200,
+	selector: '.face-shield-carousel',
+    duration: 200,
   	easing: 'ease-out',
   	perPage: 1,
   	startIndex: 0,

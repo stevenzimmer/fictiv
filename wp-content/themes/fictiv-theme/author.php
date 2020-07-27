@@ -1,12 +1,10 @@
 <?php 
 get_header();
 // print_r( get_queried_object() );
-$curauth = get_queried_object();
-// print_r(coauthors());
-// print_r( get_queried_object() );
-// $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 
-// print_r( $curauth );
+$curauth = get_queried_object();
+
+
 ?>
 <header class="relative pt-24 pb-12">
 	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php the_field( 'author_background_image', get_queried_object() ) ?>);"></div>

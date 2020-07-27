@@ -10,48 +10,23 @@ if ( have_posts() ) :
 
         include( get_template_directory() . '/inc/post-topics.php');
 
+           $args = array(
+        	'bg' => get_the_post_thumbnail_url(),
+        	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
+        	'title' => get_the_excerpt(),
+        	'post_type' => get_queried_object()->post_type,
+        	'logo' => get_field( 'case_study_logo' ),
+        	'download_link' => get_field('download_asset_link'),
+        	'subparagraph' => get_field('hero_subparagraph', $has_parent),
+
+        	'parent_id' => $has_parent,
+
+        );
+
+        hero_section( $args );
+
 ?>
-<header class="relative pt-24 pb-12">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-11/12 md:w-11/12 lg:w-10/12">
-				<div class="flex flex-wrap">
-					<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
-						<div>
-							<p class="text-white uppercase font-museo-700 text-grey-400">
-								<?php 
-									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
-								?>
-						
-							</p>
-						</div>
-						<div>
-							<h1 class="text-white font-museo-500 leading-tight"><?php echo get_the_excerpt(); ?></h1>
-						</div>
-					</div>
-					<?php 
-						if ( get_field( 'case_study_logo' ) ) :
-					?>
-					<div class="w-1/3">
-						<div class="flex lg:justify-end">
-							<div class="w-full sm:w-7/12">
-								<img class="lazyload" data-src="<?php the_field( 'case_study_logo' ); ?>">
-							</div>
-						</div>
-						
-					</div>
-					<?php 
-						endif;
-					?>
-				</div>
-				
-				
-			</div>
-		</div>
-	</div>
-</header>
+
 <section class="py-10">
 	<div class="container">
 		<div class="flex justify-center">

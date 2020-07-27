@@ -1,0 +1,29 @@
+.filter {
+
+	&-item {
+
+		&-checkbox {
+
+			&:checked {
+
+				+ label {
+					@apply text-teal-light font-museo-700;
+				}
+			}
+		}
+	}
+
+	&-content {
+
+		&-btn {
+
+			&.active {
+				@apply border-teal-light;
+
+				p {
+					@apply text-teal-light;
+				}
+			}
+		}
+	}
+}

@@ -12,99 +12,35 @@ if ( have_posts() ) :
 
         include( get_template_directory() . '/inc/hero-vars.php');
 
+        $tool_label = ( get_field('hero_label', $has_parent ) ? 
+        		get_field('hero_label', $has_parent)
+
+        	: 
+        		get_post_type_object( get_queried_object()->post_type )->labels->singular_name
+        );				
+        $form_header = (get_field('form_header') ? get_field('form_header') : 'download now' );	
+					
+					
+
+        $args = array(
+        	'bg' => $hero_graphic,
+        	'label' => $tool_label,
+        	'title' => $post_title,
+        	'post_type' => get_queried_object()->post_type,
+        	'download_link' => get_field('download_asset_link'),
+        	'subparagraph' => get_field('hero_subparagraph', $has_parent),
+        	'form' => array(
+        		'header' => $form_header,
+        		'id' => get_field('mkto_form_id')
+        	),
+        	'thumbnail' => get_field('asset_thumbnail', $has_parent ),
+        	'parent_id' => $has_parent,
+
+        );
+
+        hero_section( $args );
+
 ?>
-
-<header class="relative pt-12 md:pt-24 pb-0">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php echo $hero_graphic; ?>)"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-full lg:w-10/12">
-				<div class="flex flex-wrap justify-center lg:justify-start -mx-4">
-					<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
-				
-						<div class="pt-4 mb-2">
-							<p class=" uppercase font-museo-700 text-grey-400 text-14">
-								<?php 
-
-									if ( get_field('hero_label', $has_parent ) ) :					
-						
-										the_field('hero_label', $has_parent);
-									
-									else :
-
-										echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
-								
-									endif;
-								?>
-							</p>
-						</div>
-					
-						<div>
-							<h1 class="text-white font-museo-500 text-3 leading-tight"><?php echo $post_title; ?></h1>
-						</div>
-						<?php 
-							if ( get_field( 'download_asset_link' ) ) :
-						?>
-						<div class="mt-4">
-							<a target="_blank" class="btn btn-download" href="<?php the_field('download_asset_link') ?>">download now</a>
-						</div>
-						<?php 
-							endif;
-
-
-							if ( get_field('hero_subparagraph', $has_parent && $has_parent ) ) :					
-						?>
-						<div>
-							<p class="text-white text-20">
-								<?php 
-									the_field('hero_subparagraph', $has_parent);
-								?>
-							</p>
-						</div>
-						<?php 
-							endif;
-						?>
-				
-					</div>
-					<div class="w-full lg:w-1/2 px-4 lg:h-64">
-						
-						<?php 
-							if( !$has_parent ) :
-						?>
-						<div class="bg-white h-full p-4 ">
-						<?php
-
-
-								asset_form( get_field('form_header'), get_field('mkto_form_id') );
-						?>
-						</div>			
-						
-						<?php
-							else :
-
-								if( get_field( 'asset_thumbnail', $has_parent ) ) :
-				
-						?>
-						<div class="">
-							<img class="mx-auto lazyload" alt="<?php the_title(); ?> thumbnail" data-src="<?php 
-								the_field('asset_thumbnail', $has_parent );
-							?>">
-						</div> 
-						<?php
-								endif;
-							endif;
-
-						?>
-
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
 <section class="py-10">
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
@@ -123,7 +59,7 @@ if ( have_posts() ) :
 				
 					<div class="w-full lg:w-1/2 px-6">
 						
-						<div class="post-content ebook">
+						<div class="post-content resource">
 							<?php 
 								echo get_post_field( 'post_content', $has_parent );
 							?>

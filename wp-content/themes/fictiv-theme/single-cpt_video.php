@@ -9,8 +9,20 @@ if ( have_posts() ) :
         include( get_template_directory() . '/inc/post-topics.php');
         include( get_template_directory() . '/inc/hero-vars.php');
 
+        $args = array(
+        	'bg' => $hero_graphic,
+        	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
+        	'title' => $post_title,
+        	'post_type' => get_queried_object()->post_type,
+        	'subparagraph' => get_field('hero_subparagraph', $has_parent),
+        	'parent_id' => $has_parent
+
+        );
+
+        hero_section( $args );
+
 ?>
-<header class="relative pt-12 md:pt-24 pb-0">
+<header class="relative pt-24 pb-0 lg:pb-8 hidden">
 	<div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload"  data-bg="url(<?php echo $hero_graphic; ?>)"></div>
 	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
@@ -20,6 +32,7 @@ if ( have_posts() ) :
 					<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
 						<div class="pt-4 mb-2">
 							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+								
 								<?php 
 									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
 								?>
@@ -44,9 +57,6 @@ if ( have_posts() ) :
 						?>
 					
 					</div>
-					
-					<div class="w-full lg:w-1/2 px-4 lg:h-64"></div>
-					
 				</div>
 			</div>
 		</div>
@@ -73,7 +83,7 @@ if ( have_posts() ) :
 				
 					<div class="w-full lg:w-1/2 px-6">
 						
-						<div class="post-content">
+						<div class="post-content resource">
 							<?php 
 								echo get_post_field('post_content', $has_parent);
 							?>
