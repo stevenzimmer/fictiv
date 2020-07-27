@@ -370,8 +370,8 @@ module.exports = {
     },
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',
-      xs: '16rem',
-      sm: '24rem',
+      xs: '14rem',
+      sm: '16rem',
       md: '28rem',
       lg: '32rem',
       xl: '36rem',

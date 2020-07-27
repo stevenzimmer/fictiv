@@ -6,7 +6,7 @@ include( get_template_directory() . '/inc/post-type-vars.php');
 ?>
 
 <div class=" font-museo-500 text-14 text-grey-300 ">
-    <a class="hover:text-grey-600" href="/resources/">Home</a> / 
+    <a class="hover:text-grey-600" href="/resources/">Resource Center Home</a> &nbsp; / &nbsp;
 
     <?php 
     	if ( !is_search() ) : 
@@ -14,12 +14,18 @@ include( get_template_directory() . '/inc/post-type-vars.php');
     	
     <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( $post_type ); ?>"><?php 
         echo $post_type_name;
-    ?></a> /
+    ?></a> &nbsp; 
 
     <?php 
 		endif;
+
+        if ( is_single() ) :
+        
     ?>
 
-    <span><?php echo $post_title ?></span>
+    / &nbsp; <span><?php echo $post_title ?></span>
 
+    <?php 
+        endif;
+    ?>
 </div>

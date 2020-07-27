@@ -27,26 +27,26 @@ if ( have_posts() ) :
         hero_section( $args );
         
 ?>
-<section class="section">
+<section class="py-10">
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="w-full px-5 lg:px-0 lg:w-11/12">
-				<div class="mb-6">
+			<div class="w-full px-5 lg:px-0 lg:w-10/12">
+				<div class="mb-6 hidden md:block">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
 				</div>
 				
 				
-				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-4">
+				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
+					<div class="w-11/12 lg:w-3/12 ">
 						<?php 
 							get_sidebar();
 						?>
 						
 					</div>
-					<div class="w-full lg:w-8/12 px-4">
+					<div class="w-full lg:w-9/12 lg:pl-6">
 						
 						<div class="flex flex-wrap justify-center md:justify-between items-center mb-4">
 							<div class="w-full lg:w-1/2 ">

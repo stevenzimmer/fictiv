@@ -273,17 +273,11 @@
 											}
 										}
 
-										&-group {
-											
-										}
-
 										&-image {
 											
 											&:first-child {
 												@apply mb-4 mt-0;
 											}
-
-										
 										}
 									}
 								}
@@ -392,7 +386,7 @@
 					&.has {
 
 						&-background {
-							@apply px-2 py-4;
+							@apply p-4;
 						}
 					}
 					

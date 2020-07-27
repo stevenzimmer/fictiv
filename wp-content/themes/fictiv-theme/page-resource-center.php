@@ -16,17 +16,17 @@
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="w-full px-5 lg:px-0 lg:w-11/12">
+			<div class="w-full px-5 lg:px-0 lg:w-10/12">
 				
 				
-				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-4">
+				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
+					<div class="w-11/12 lg:w-3/12">
 						<?php 
 							get_sidebar();
 						?>
 						
 					</div>
-					<div class="w-full lg:w-8/12 px-4">
+					<div class="w-full lg:w-9/12 lg:pl-6">
 						
 						<?php 
 							foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
@@ -39,6 +39,8 @@
 								);
 
 								$resources = new WP_Query( $resource_args );
+
+								$count = $resources->post_count;
 										
 								if ( $resources->have_posts() ) : 
 	    
@@ -59,22 +61,22 @@
 							</div>
 							<div class=" -mx-1 relative resource-carousel-wrapper">
 									
-								<div class="resources-carousel">
+								<div class="resources-carousel" >
 							<?php 
 									
 									while ( $resources->have_posts() ) :
 										$resources->the_post();
-										$count = $resources->post_count;
+										
 
 										include( get_template_directory() . '/inc/post-topics.php');
 
 							?>
 							
-									<div class="max-w-xs px-1">
+									<div class="max-w-sm px-1">
 										<div class="border border-grey-200 relative h-full">
 											<div class="relative h-0 thumbnail-ratio" >
 												<?php 
-													if( wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0] ) :
+													if( has_post_thumbnail() ) :
 												?>
 												<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0]; ?>">
 
@@ -123,7 +125,7 @@
 								</div>
 
 								<?php 
-									if ($count > 3 ) : 
+									if ( $count > 3 ) : 
 								?>
 									
 								
