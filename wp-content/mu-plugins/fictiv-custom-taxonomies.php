@@ -5,29 +5,29 @@
 
 		
 
-		register_taxonomy(
-			'fictiv_hwg_category',
-			array ('cpt_hwg'),
-			array(
-				'labels'	=> array(
-					'name'			=> 'HWG Categories',
-					'singular_name'	=> 'HWG Category',
-					'menu_name'		=> 'HWG Categories',
-					'add_new_item'	=> 'Add New HWG Category',
-					'new_item_name'	=> 'New HWG Category'
-				),
-				'show_ui'			=> true,
-				'show_in_nav_menus'	=> false,
-				'show_tagcloud'		=> false,
-				'hierarchical'		=> true,
-				'query_var'			=> true,
-				'show_admin_column'	=> true,
-				'show_in_rest'      => true,
-				'rewrite'	=> array(
-					'slug' => 'hwg-category'
-				)
-			)
-		);
+		// register_taxonomy(
+		// 	'fictiv_hwg_category',
+		// 	array ('cpt_hwg'),
+		// 	array(
+		// 		'labels'	=> array(
+		// 			'name'			=> 'HWG Categories',
+		// 			'singular_name'	=> 'HWG Category',
+		// 			'menu_name'		=> 'HWG Categories',
+		// 			'add_new_item'	=> 'Add New HWG Category',
+		// 			'new_item_name'	=> 'New HWG Category'
+		// 		),
+		// 		'show_ui'			=> true,
+		// 		'show_in_nav_menus'	=> false,
+		// 		'show_tagcloud'		=> false,
+		// 		'hierarchical'		=> true,
+		// 		'query_var'			=> true,
+		// 		'show_admin_column'	=> true,
+		// 		'show_in_rest'      => true,
+		// 		'rewrite'	=> array(
+		// 			'slug' => 'hwg-category'
+		// 		)
+		// 	)
+		// );
 
 		register_taxonomy(
 			'fictiv_page_type',

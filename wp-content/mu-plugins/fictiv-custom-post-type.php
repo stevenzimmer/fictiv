@@ -4,49 +4,49 @@
 
 	function create_post_types() {
 
-		register_post_type(
-			'cpt_hwg',
-			array(
-				'labels'		=> array(
-					'name'					=> __('Hardware Guide'),
-					'singular_name' 		=> __('Hardware Guide'),
-					'add_new'				=> __('Add to Hardware Guide'),
-					'add_new_item'			=> __('Add to Hardware Guide'),
-					'edit_item'				=> __('Edit Hardware Guide'),
-					'view_item'				=> __('View Hardware Guide'),
-					'view_items'			=> __('View Hardware Guide'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
-					'items_list'			=> __('Hardware Guide List'),
-					'archives'				=> __('Hardware Guide')
+		// register_post_type(
+		// 	'cpt_hwg',
+		// 	array(
+		// 		'labels'		=> array(
+		// 			'name'					=> __('Hardware Guide'),
+		// 			'singular_name' 		=> __('Hardware Guide'),
+		// 			'add_new'				=> __('Add to Hardware Guide'),
+		// 			'add_new_item'			=> __('Add to Hardware Guide'),
+		// 			'edit_item'				=> __('Edit Hardware Guide'),
+		// 			'view_item'				=> __('View Hardware Guide'),
+		// 			'view_items'			=> __('View Hardware Guide'),
+		// 			'featured_image' 		=> __('Thumbnail Image'),
+		// 			'set_featured_image' 	=> __('Upload Thumbnail Image'),
+		// 			'remove_featured_image' => __('Remove Thumbnail Image'),
+		// 			'use_featured_image'	=> __('Use as Thumbnail Image'),
+		// 			'items_list'			=> __('Hardware Guide List'),
+		// 			'archives'				=> __('Hardware Guide')
 					
-				),
-				'taxonomies'	=> array(
-					'fictiv_hwg_category'
-				),
-				'description' 	=> 'The Hardware Guide is a collection of the best articles from the hardware community, uncovering collective knowledge around strategic prototyping methods, lessons learned from development experience, and expert insights.<br />In the guide, you’ll find articles organized by six major stages in the hardware development lifecycle: R&D (Research and Development), Plan, Design, Fabricate, Assemble, and Test. These stages are not always linear, and most often cyclical—teams move between and through these stages until a product is fully refined.',
-				'public' 		=> true,
-				'hierarchical'  => true,
-				'has_archive' 	=> true,
-				'show_in_nav_menus'	=> true,
-				'supports'		=> array(
-					'title',
-					'editor',
-					'author',
-					'excerpt',
-					'thumbnail',
-				), 
-				'menu_position'	=> 5,
-				'menu_icon'		=> 'dashicons-portfolio',
-				'show_ui'		=> true,
-				'show_in_rest'	=> true,
-				'rest_base'		=> 'hwg',
-				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'hwg'),
-			)
-		);
+		// 		),
+		// 		'taxonomies'	=> array(
+		// 			'fictiv_hwg_category'
+		// 		),
+		// 		'description' 	=> 'The Hardware Guide is a collection of the best articles from the hardware community, uncovering collective knowledge around strategic prototyping methods, lessons learned from development experience, and expert insights.<br />In the guide, you’ll find articles organized by six major stages in the hardware development lifecycle: R&D (Research and Development), Plan, Design, Fabricate, Assemble, and Test. These stages are not always linear, and most often cyclical—teams move between and through these stages until a product is fully refined.',
+		// 		'public' 		=> true,
+		// 		'hierarchical'  => true,
+		// 		'has_archive' 	=> true,
+		// 		'show_in_nav_menus'	=> true,
+		// 		'supports'		=> array(
+		// 			'title',
+		// 			'editor',
+		// 			'author',
+		// 			'excerpt',
+		// 			'thumbnail',
+		// 		), 
+		// 		'menu_position'	=> 5,
+		// 		'menu_icon'		=> 'dashicons-portfolio',
+		// 		'show_ui'		=> true,
+		// 		'show_in_rest'	=> true,
+		// 		'rest_base'		=> 'hwg',
+		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+		// 		'rewrite' => array('slug' => 'hwg'),
+		// 	)
+		// );
 
 	
 

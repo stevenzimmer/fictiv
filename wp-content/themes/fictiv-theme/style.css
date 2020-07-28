@@ -3,3 +3,9 @@ Theme Name: Fictiv Custom Theme
 Author: The Fictiv design team
 Version: 1.0
 */
+
+/*
+    All CSS files are located under the "assets/css" subfolder and static minified file is built with webpack.
+
+    PLEASE DON'T MODIFY THIS FILE.
+*/
