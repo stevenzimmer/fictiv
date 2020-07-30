@@ -1,0 +1,58 @@
+/*! purgecss start ignore */
+.pagination {
+
+	.screen {
+
+		&-reader {
+
+			&-text {
+				@apply hidden;
+			}
+		}
+	}
+	.nav {
+
+		&-links {
+			@apply flex items-center;
+
+			
+		}
+	}
+}
+
+.page {
+
+	&-numbers {
+		@apply h-full py-2 px-4 inline-block border-r border-grey-200 text-12 font-museo-700 text-grey-300;
+		
+		&:not(.dots) {
+
+			&:hover,
+			&.current {
+				@apply bg-teal-light text-white;
+			}
+
+			&:nth-child(2) {
+				@apply border-l;
+			}
+
+			&:last-child {
+				@apply border-none;
+			}
+
+
+			&.prev {
+				@apply transform rotate-180;
+			}
+			&.next,&.prev {
+				@apply text-20 text-grey-600 border-none leading-none;
+
+				&:hover {
+					@apply bg-teal-light text-white;
+				}
+			}
+		}
+		
+	}
+}
+/*! purgecss end ignore */

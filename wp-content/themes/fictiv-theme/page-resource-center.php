@@ -20,7 +20,7 @@
 				
 				
 				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-3/12">
+					<div class="hidden lg:block lg:w-3/12">
 						<?php 
 							get_sidebar();
 						?>

@@ -9,7 +9,7 @@ get_header();
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="lg:w-11/12">
+			<div class="w-full lg:w-10/12">
 				<div class="mb-6">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
@@ -38,9 +38,15 @@ get_header();
 							<?php
 								if ( isset ( $_GET['s'] ) && !empty( $_GET['s'] ) ) :
 
-								    $response = json_decode( wp_remote_retrieve_body( wp_remote_get( 
-								    	home_url() . '/wp-json/fictiv/v1/search?filter[s]=' . $_GET['s'] 
-								   ) ) );
+									$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+								    $response = json_decode( 
+								    	wp_remote_retrieve_body( 
+								    		wp_remote_get( 
+								    			home_url() . '/wp-json/fictiv/v1/search?per_page=6&page=' . $paged .'&query=' . $_GET['s']
+								   			)
+								    	)
+								    );
 
 								endif;
 
@@ -99,7 +105,15 @@ get_header();
 					
 							<?php 
 								endforeach;
-//								wp_reset_postdata();
+							?>
+						</div>
+						<div class="flex justify-center">
+							<?php 
+								the_posts_pagination( array(
+									'prev_text' => __( '&#9656;' ),
+									'next_text' => __( '&#9656;' ),
+								) );
+								wp_reset_query();
 							?>
 						</div>
 					</div>

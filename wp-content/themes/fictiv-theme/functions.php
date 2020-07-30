@@ -82,6 +82,43 @@
 
     }
 
+    function resource_center_taxonomies() {
+        $resource_center_taxonomies = array();
+        foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
+
+            foreach ( get_post_type_object( $type )->taxonomies as $j => $tax ) :
+                
+                if ( !in_array( $tax, $resource_center_taxonomies ) ) :
+                    
+                    array_push( $resource_center_taxonomies, $tax);
+
+                endif;
+
+            endforeach;
+
+
+        endforeach;
+
+        return $resource_center_taxonomies;
+    }
+
+    function resources_filter_title( $label ) {
+?>
+    <div class="flex items-center justify-between filter-title cursor-pointer py-2 px-1 border-b border-grey-200 select-none">
+            <div>
+                <p class="text-12 uppercase font-museo-700 text-grey-600">
+                    <?php echo $label; ?>
+                </p>
+            </div>
+            <div class="px-2 filter-arrow transform tranisition-transform duration-200 origin-center">
+                <p>
+                    &#9656;
+                </p>
+            </div>
+        </div>
+<?php
+    }
+
     require get_theme_file_path('/inc/custom-rest-route.php');
 
 

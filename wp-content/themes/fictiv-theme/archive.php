@@ -11,7 +11,7 @@ include( get_template_directory() . '/inc/post-type-vars.php');
 		<div>
 			<div>
 				<p class="text-white">
-					<a >
+					<a>
 						<?php 
 							echo $post_type_name;
 						?>
@@ -35,7 +35,7 @@ if ( have_posts() ) :
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="lg:w-11/12">
+			<div class="lg:w-10/12">
 				<div class="mb-6">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
@@ -86,7 +86,17 @@ if ( have_posts() ) :
 								wp_reset_postdata();
 							?>
 						</div>
+						<div class="flex justify-center">
+							<?php 
+								the_posts_pagination( array(
+									'prev_text' => __( '&#9656;' ),
+									'next_text' => __( '&#9656;' ),
+								) );
+								wp_reset_query();
+							?>
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>

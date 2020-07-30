@@ -9,8 +9,8 @@
 			'cpt_blog',
 			array(
 				'labels'		=> array(
-					'name'					=> __('Blog'),
-					'singular_name' 		=> __('Blog'),
+					'name'					=> __('Articles'),
+					'singular_name' 		=> __('Article'),
 					'add_new'				=> __('Add New Article'),
 					'add_new_item'			=> __('Add New Article'),
 					'edit_item'				=> __('Edit Article'),
@@ -30,7 +30,7 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'Blog description goes here',
+				'description' 	=> 'Article description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -46,9 +46,9 @@
 				'menu_icon'		=> 'dashicons-welcome-write-blog',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
-				'rest_base'		=> 'blog',
+				'rest_base'		=> 'articles',
 				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				'rewrite' => array('slug' => 'blog'),
+				'rewrite' => array('slug' => 'articles'),
 			)
 		);
 

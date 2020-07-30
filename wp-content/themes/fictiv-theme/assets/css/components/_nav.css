@@ -135,3 +135,58 @@
 		}
 	}
 }
+
+
+.mobile {
+
+
+    &-toggle {
+
+        &::before,
+        &::after,
+        .nav-bar {
+            @apply absolute bg-grey-200 w-4 mx-auto transition duration-200 ease-in-out;
+       		height: 2px;
+       		left: 11px;
+        }
+
+        &::before {
+            top: 8px;
+            content: "";
+            transform-origin: 2px 0;
+        }
+
+        &::after {
+            bottom: 8px;
+            content: "";
+            transform-origin: 1px 3px;
+        }
+
+        .nav-bar {
+            top: 14px;
+            transform-origin: 0 50%;
+        }
+
+        &.open {
+
+        	&::before,
+        	&::after {
+        		/*transform: rotate(45deg) ;*/
+        	}
+
+            &::before {
+                /*top: 12px;*/
+                transform: rotate(45deg) scaleX( 1.4 );
+            }
+
+            &::after {
+                transform: rotate(-45deg) scaleX( 1.4 );
+            }
+
+            .nav-bar {
+                @apply opacity-0;
+                transform: scaleX(0);
+            }
+        }    
+    }
+}

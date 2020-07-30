@@ -7,11 +7,17 @@ $post_type_name = ( is_single() ?
 	: 
 
 		( is_search() ?
-				''
+				'Search term: "' . $_GET['s'] . '"'
 			:
-				get_queried_object()->label
-		)
+				( is_page() ?
+			
+					ucfirst( get_the_title() )
 
+					:
+					
+					get_queried_object()->label
+				)
+			)
 		
 );
 
@@ -50,12 +56,10 @@ $post_description = ( is_single() ?
 $post_title = ( is_single() ?
 		get_post( get_queried_object()->post_parent )->post_title
 	:
-		( is_search() ?
-				'Search term: "' . $_GET['s'] . '"'
-			:
+		
 			
 				''
-		)
+		
 );
 
 							

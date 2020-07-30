@@ -15,4 +15,5 @@ import './face-shields/_scripts';
 import './social-share/_scripts';
 import './filter/_scripts';
 import './resources/_scripts';
+import './nav/_scripts';
 

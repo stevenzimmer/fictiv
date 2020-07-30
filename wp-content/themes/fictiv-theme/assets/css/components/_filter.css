@@ -1,5 +1,9 @@
 .filter {
 
+	&-items {
+		@apply h-0 transition-all duration-200;
+	}
+
 	&-item {
 
 		&-checkbox {
@@ -17,11 +21,31 @@
 
 		&-btn {
 
-			&.active {
-				@apply border-teal-light;
+			&:checked {
 
-				p {
-					@apply text-teal-light;
+				+ label {
+					@apply border-teal-light;
+				}
+			}
+		}
+	}
+
+	&-title {
+
+		
+		&.active {
+
+			.filter {
+
+				&-arrow {
+					@apply rotate-90;
+				}
+			}
+
+			+ .filter {
+
+				&-items {
+					@apply h-full;
 				}
 			}
 		}
