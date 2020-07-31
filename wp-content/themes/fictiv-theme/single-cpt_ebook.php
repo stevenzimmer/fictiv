@@ -92,33 +92,6 @@ if ( have_posts() ) :
 	
 	endif;
 	
-	if( get_field('mkto_form_id') ) :
-
-?>
-<script type="text/javascript">
-	MktoForms2.loadForm("//info.fictiv.com", "852-WGR-716", <?php the_field('mkto_form_id'); ?>);
-	MktoForms2.whenReady( function( form ) {
-		form.onSuccess( function( e ) {
-			window.location = window.location.origin + window.location.pathname + 'thanks/';
-			return false;
-		});
-	});
-	// // MktoForms2.loadForm("//info.fictiv.com", "852-WGR-716", 937 );
- // // 	MktoForms2.whenReady( function( form ) {
- // //      if( form.getId() === 937 ) {
- // //          const subscribeHeader = document.getElementById('subscribe-header');
- // //          const formWrapper = document.getElementById('form-wrapper');
- // //          form.onSuccess( function( e ) {
- // //              subscribeHeader.innerText = "Thank you for Subscribing!"
- // //              formWrapper.style.display = 'none';
- // //              return false;
- // //          });
- // //      }
- //  });
-</script>
-
-<?php 
-		endif;
 		endwhile;
 	endif;
 	get_footer();

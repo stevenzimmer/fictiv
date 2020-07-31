@@ -17,4 +17,5 @@ import './filter/_scripts';
 import './resources/_scripts';
 import './search/_scripts';
 import './nav/_scripts';
+import './forms/_scripts';
 

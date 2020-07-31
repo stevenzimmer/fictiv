@@ -5,7 +5,7 @@
     function fictiv_enqueue_scripts() {
 
         
-        wp_enqueue_script( 'mkto-forms', '//info.fictiv.com/js/forms2/js/forms2.min.js', [], '1.1', false );
+        wp_enqueue_script( 'mkto-forms', '//app-ab20.marketo.com/js/forms2/js/forms2.min.js', [], '1.1', false );
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.0', true);
     
@@ -34,7 +34,8 @@
                 ?></p>
             </div>
             <div class="mb-2">
-                <form class="form-underline " id="mktoForm_<?php echo $form_number; ?>"></form>
+                <form class="mktoForm form-underline" data-formId="<?php echo $form_number; ?>" data-formInstance="one"></form>
+                <!-- <form class="form-underline " id="mktoForm_<?php echo $form_number; ?>"></form> -->
             </div>
             <div class="text-center">
 

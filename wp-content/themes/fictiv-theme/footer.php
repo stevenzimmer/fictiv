@@ -123,13 +123,19 @@
 					<div class="flex justify-center">
 						<div class="w-full md:w-7/12 ">
 				
-							<div class="flex">
-								<div class="border-2 border-teal-light py-2 px-4">
+							<div class="flex items-end">
+								<div class="global-form-wrapper">
+									<form class="mktoForm " data-formId="597" data-formInstance="one" data-form-type="global"></form>
+									<div class="global-form-success hidden">
+										<p>Thank you for subscribing!</p>
+									</div>
+								</div>
+								<div class="border-2 border-teal-light py-2 px-4 hidden">
 									<p>
 										Subscribe to our newsletter
 									</p>
 								</div>
-								<div class="bg-teal-light flex items-center justify-center px-4">
+								<div class="bg-teal-light flex items-center justify-center px-4 hidden">
 									<p class="text-white">
 										Submit
 									</p>
@@ -179,27 +185,7 @@
 			
 		</div>
 	</footer>
-	<footer class="py-20 hidden">
-		<div class="container">
-			<div class="flex justify-center lg:justify-between flex-wrap">
-				<div class="w-11/12 lg:w-24 mb-12 lg:mb-0">
-					<!-- Icon -->
-					<img alt="Fictiv logo green" src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/fictiv-green.png">
-				</div>
-				<div class="w-11/12 lg:w-10/12">
-					<?php 
-						wp_nav_menu( 
-							array(
-						    	'menu'              => "footer", 
-						    	'menu_class'        => "flex w-full justify-between footer-nav flex-wrap", 
-						    	'container_class'   => "",
-							)
-						);
-					?>
-				</div>
-			</div>
-		</div>
-	</footer>
+
 <?php 
     wp_footer();
 ?>
