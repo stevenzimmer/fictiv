@@ -117,7 +117,7 @@
 					?>
 
 				</div>
-				<div class="flex justify-center pb-10">
+				<div class="flex justify-center pb-10 hidden">
 					<div class="flex items-center text-center relative group">
 						<a href="<?php echo get_post_type_archive_link('cpt_capabilities') ?>" class="w-full absolute inset-0"></a>
 						<div class="mr-2">

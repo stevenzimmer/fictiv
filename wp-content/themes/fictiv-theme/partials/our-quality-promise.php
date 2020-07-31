@@ -1,12 +1,12 @@
 <section>
-	<div class="flex items-stretch">
-		<div class="md:w-6/12">
+	<div class="flex flex-wrap items-stretch">
+		<div class="w-full md:w-6/12">
 			<img class="lazyload" alt="Our Quality Promise" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/our-quality-promise-left.jpg">
 		</div>
-		<div class="md:w-6/12 relative">
+		<div class="w-full md:w-6/12 relative">
 			<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/graphics/our-quality-promise-right.jpg' ?>)"></div>
-			<div class="flex justify-center w-full relative items-center h-full">
-				<div class="md:w-8/12">
+			<div class="flex flex-wrap justify-center w-full relative items-center h-full">
+				<div class="w-11/12 md:w-8/12">
 					<div class="w-full">
 						<div class="mb-4">
 							<h3 class="text-36 font-museo-900 text-white uppercase">

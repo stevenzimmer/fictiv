@@ -5,57 +5,60 @@
 ?>
 <header class="py-24 relative" >
 	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/3d-printing-header.jpg'; ?>)"></div>
+	<div class="bg-white absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
-		<div class="md:w-1/2">
-			<div class="mb-2">
-				<h1 class="text-blue-dark text-h1 uppercase font-museo-900 leading-tight"><?php the_title(); ?></h1>
-				
-			</div>
-			<div class="mb-4">
-				<?php 
-					$specs = array(
-						
-						array(
-							'icon' => "clock",
-							'text' => 'INSTANT QUOTES & DFM FEEDBACK'
-						),
-						array(
-							'icon' => "parts",
-							'text' => 'MJF, SLA, POLYJET, SLS, FDM TECHNOLOGIES'
-						),
-
-						array(
-							'icon' => "calendar",
-							'text' => '3D PRINTED PARTS AS FAST AS 24 HOURS'
-						)
-					);
-
-					foreach ($specs as $i => $spec ) :
-			
-				?>
-
-				<div class="flex flex-wrap items-center mb-4">
-					<div class="mr-2 w-12">
-
-						<!-- Icon -->
-						<img width="30" alt="<?php echo strtolower( $spec['text']) ?> icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $spec['icon']; ?>.png">
-							
-					</div>
+		<div class="flex justify-center md:justify-start">
+			<div class="w-11/12 md:w-3/4 lg:w-1/2">
+				<div class="mb-2">
+					<h1 class="text-blue-dark text-h1 uppercase font-museo-900 leading-tight"><?php the_title(); ?></h1>
 					
-					<div>
-						<p class="text-blue-dark font-museo-900">
-							<?php echo $spec['text']; ?>
-						</p>
-					</div>
 				</div>
+				<div class="mb-4">
+					<?php 
+						$specs = array(
+							
+							array(
+								'icon' => "clock",
+								'text' => 'INSTANT QUOTES & DFM FEEDBACK'
+							),
+							array(
+								'icon' => "parts",
+								'text' => 'MJF, SLA, POLYJET, SLS, FDM TECHNOLOGIES'
+							),
 
-				<?php 
-					endforeach;
-				?>
+							array(
+								'icon' => "calendar",
+								'text' => '3D PRINTED PARTS AS FAST AS 24 HOURS'
+							)
+						);
+
+						foreach ($specs as $i => $spec ) :
 				
-			</div>
-			<div>
-				<?php primary_button() ?>
+					?>
+
+					<div class="flex flex-wrap items-center mb-4">
+						<div class="mr-2 w-12">
+
+							<!-- Icon -->
+							<img width="30" alt="<?php echo strtolower( $spec['text']) ?> icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $spec['icon']; ?>.png">
+								
+						</div>
+						
+						<div>
+							<p class="text-blue-dark font-museo-900">
+								<?php echo $spec['text']; ?>
+							</p>
+						</div>
+					</div>
+
+					<?php 
+						endforeach;
+					?>
+					
+				</div>
+				<div>
+					<?php primary_button() ?>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -92,7 +95,7 @@
 		</div>
 		<div class="w-10 h-1 border-b border-blue-dark mx-auto mb-8"></div>
 		<div class="flex flex-wrap -mx-4">
-			<div class="md:w-8/12 px-4">
+			<div class="lg:w-8/12 px-4">
 				<div class="toggle-module-wrapper">
 					<?php 
 
@@ -132,7 +135,7 @@
 				</div>
 				
 			</div>
-			<div class="md:w-4/12 px-4 toggle-btns-wrapper">
+			<div class="lg:w-4/12 px-4 toggle-btns-wrapper">
 			
 				<?php 
 
@@ -172,7 +175,7 @@
 			</h3>
 		</div>
 		<div class="w-10 h-1 border-b border-blue-dark mx-auto mb-8"></div>
-		<div class="flex flex-wrap -mx-2 mb-12">
+		<div class="flex flex-wrap justify-center lg:justify-start -mx-2 mb-12">
 			<?php 
 				$types = array(
 						array(
@@ -213,7 +216,7 @@
 
 					foreach ( $types as $i => $type ) :
 			?>
-			<div class="md:w-1/5 px-2 ">
+			<div class="w-11/12 md:w-1/3 lg:w-1/5 px-2 ">
 				<div class="relative group">
 					<a href="<?php echo $type['link']; ?>" class="w-full h-full inset-0 absolute z-50"></a>
 					<div class="p-4 bg-white mb-2">
@@ -389,13 +392,13 @@
 			</h3>
 		</div>
 		<div class="w-10 h-1 border-b border-blue-dark mx-auto mb-8"></div>
-		<div class="flex mb-8 justify-around toggle-btns-wrapper">
+		<div class="flex flex-wrap mb-8 justify-around toggle-btns-wrapper">
 			<?php 
 
 				foreach ( $materials as $i => $material ) :
 				
 			?>
-			<a class="inline-block module-toggle-btn inline-link <?php if( $i === 0 ) : echo 'active'; endif; ?> pb-2 border-b-2 border-transparent transition-colors duration-200 ease-in-out" href="#3d-printing-material-<?php echo $i; ?>"><?php echo $material['name']; ?></a>
+			<a class="inline-block module-toggle-btn inline-link mx-4  <?php if( $i === 0 ) : echo 'active'; endif; ?> pb-2 border-b-2 border-transparent transition-colors duration-200 ease-in-out" href="#3d-printing-material-<?php echo $i; ?>"><?php echo $material['name']; ?></a>
 			<?php 
 				endforeach;
 			?>
@@ -412,8 +415,8 @@
 
 					endif;
 				?>">
-				<div class="flex justify-between">
-					<div class="md:w-5/12">
+				<div class="flex flex-wrap justify-center md:justify-between">
+					<div class="w-11/12 md:w-5/12">
 						<div class="mb-4">
 							<h3 class="font-museo-900 text-blue-dark text-48">
 								<?php echo $material['name']; ?>
@@ -442,7 +445,7 @@
 							<a class="text-teal-light hover:text-red-dark" href="<?php echo $material['link']; ?>">Learn more</a>
 						</div>
 					</div>
-					<div class="md:w-1/2">
+					<div class="w-full md:w-1/2">
 						<img class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/3d-printing-material-<?php echo str_replace(' ', '-', strtolower( $material['name'] ) ); ?>.jpg">
 					</div>
 				</div>
@@ -471,12 +474,12 @@
 </section>
 <section class="py-24 bg-grey-100">
 	<div class="container">
-		<div class="flex flex-wrap justify-between items-stretch">
-			<div class="md:w-3/12">
+		<div class="flex flex-wrap justify-center md:justify-between items-stretch">
+			<div class="md:w-3/12 mb-6 md:mb-0">
 
 				<img class="lazyload" alt="Quip screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/quip-screenshot.jpg">
 			</div>
-			<div class="md:w-8/12">
+			<div class="w-11/12 md:w-8/12">
 				<div class="mb-6">
 					<?php 
 						echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/quip-logo.svg');
@@ -506,7 +509,7 @@
 				FROM PROTOTYPE TO PRODUCTION
 			</h3>
 		</div>
-		<div class="flex flex-wrap -mx-6 mb-12">
+		<div class="flex flex-wrap justify-center md:justify-start -mx-6 mb-12">
 			<?php 
 				$features = array(
 					array(
@@ -548,7 +551,7 @@
 				foreach ($features as $i => $feature ) :
 				
 			?>
-			<div class="md:w-1/3 px-6">
+			<div class="w-11/12 md:w-1/3 px-6 mb-6 md:mb-0">
 			
 				<div class="mb-4">
 					<h3 class="text-blue-dark mb-2 font-museo-700"><?php echo $feature['title']; ?></h3>
@@ -692,7 +695,7 @@
 			
 			<div class="py-20 bg-grey-<?php echo $i; ?>00 h-full">
 				<div class="flex justify-center">
-					<div class="md:w-8/12">
+					<div class="w-11/12 md:w-8/12">
 						<div class="mb-2">
 							<p class="uppercase font-museo-900 text-blue-dark"><?php echo $cta['label']; ?></p>
 						</div>

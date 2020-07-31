@@ -5,52 +5,55 @@
 ?>
 <header class="py-24 relative">
 	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/urethane-casting-header.png'; ?>)"></div>
+	<div class="bg-white absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
-		<div class="md:w-1/2">
-			<div class="mb-12">
-				<h1 class="text-blue-dark text-48 uppercase font-museo-900"><?php the_title(); ?></h1>
-				<h2 class="mb-12 text-blue-dark">
-					Production quality parts at low volumes and prototyping speeds.
-				</h2>
-				<div>
-					<?php primary_button() ?>
-				</div>
-			</div>
-
-			<div class="mb-4">
-				<?php 
-					$specs = array(
-				
-						array(
-							'icon' => "parts",
-							'text' => 'PARTS AS FAST AS 10 DAYS'
-						),
-
-						
-					);
-
-					foreach ($specs as $i => $spec ) :
-			
-				?>
-
-				<div class="flex flex-wrap items-center mb-2">
-					<div class="mr-2 w-12">
-
-						<!-- Icon -->
-						<img width="20" alt="<?php echo strtolower( $spec['text']) ?> icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $spec['icon']; ?>.png">
-							
-					</div>
+		<div class="flex justify-center md:justify-start">
+			<div class="w-11/12 md:w-3/4 lg:w-1/2">
+				<div class="mb-12">
+					<h1 class="text-blue-dark text-48 uppercase font-museo-900"><?php the_title(); ?></h1>
+					<h2 class="mb-12 text-blue-dark">
+						Production quality parts at low volumes and prototyping speeds.
+					</h2>
 					<div>
-						<p class="text-blue-dark font-museo-900">
-							<?php echo $spec['text']; ?>
-						</p>
+						<?php primary_button() ?>
 					</div>
 				</div>
 
-				<?php 
-					endforeach;
-				?>
+				<div class="mb-4">
+					<?php 
+						$specs = array(
+					
+							array(
+								'icon' => "parts",
+								'text' => 'PARTS AS FAST AS 10 DAYS'
+							),
+
+							
+						);
+
+						foreach ($specs as $i => $spec ) :
 				
+					?>
+
+					<div class="flex flex-wrap items-center mb-2">
+						<div class="mr-2 w-12">
+
+							<!-- Icon -->
+							<img width="20" alt="<?php echo strtolower( $spec['text']) ?> icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $spec['icon']; ?>.png">
+								
+						</div>
+						<div>
+							<p class="text-blue-dark font-museo-900">
+								<?php echo $spec['text']; ?>
+							</p>
+						</div>
+					</div>
+
+					<?php 
+						endforeach;
+					?>
+					
+				</div>
 			</div>
 			
 		</div>
@@ -59,7 +62,7 @@
 <section class="py-24">
 	<div class="container">
 		<div class="flex justify-center mb-12">
-			<div class="md:w-6/12">
+			<div class="w-11/12 md:w-6/12">
 				<div class="text-center mb-4">
 					<h3 class="uppercase text-blue-dark text-24 font-slab-300">
 						What is Urethane Casting?
@@ -76,12 +79,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-between flex-wrap mb-12">
-			<div class="md:w-5/12">
+		<div class="flex justify-center md:justify-between  flex-wrap mb-12">
+			<div class="w-full md:w-5/12">
 				<img alt="What is Urethane Casting thumbnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/urethane-casting-thumbnail.jpg">
 
 			</div>
-			<div class="md:w-6/12">
+			<div class="w-11/12 md:w-6/12">
 				<?php 
 					$features = array(
 						array(
@@ -125,15 +128,15 @@
 <section>
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="md:w-10/12">
-				<div class="flex justify-between">
-					<div class="md:w-3/12">
+			<div class="w-11/12 md:w-10/12">
+				<div class="flex flex-wrap justify-between">
+					<div class="w-6/12 md:w-3/12">
 						<div>
 							<img class="rounded-full" alt="CNC Machining finishing thumbnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/preston-fung.jpg">
 						</div>
 						
 					</div>
-					<div class="md:w-8/12">
+					<div class="w-full md:w-8/12">
 						
 						<div class="border-l-2 border-teal-dark pl-8 mb-4">
 							<p class="text-blue-dark text-24 font-semibold">"Urethane casting helps us to mitigate risk without the massive investment in a costly injection molding tool"</p>
@@ -159,7 +162,7 @@
 <section class=" py-20">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="md:w-8/12">
+			<div class="md:w-10/12 lg:w-8/12">
 				<div class="text-center">
 					<h3 class="section-header uppercase text-24 text-blue-dark font-slab-300">Colors and finishes</h3>
 				</div>
@@ -192,14 +195,14 @@
 						
 						
 					?>
-					<div class="flex justify-between items-center p-2 border border-grey-light mb-2">
-						<div class="md:w-4/12">
+					<div class="flex flex-wrap justify-center md:justify-between items-center p-2 border border-grey-light mb-2">
+						<div class="w-11/12 md:w-4/12 mb-6 md:mb-0">
 							<!-- <div class=" h-full bg-grey-500"></div> -->
 							<img alt="<?php echo $finish['title'] ?> Thumbnail" src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/colors-finishes-<?php echo $finish['img']; ?>.jpg">
 						</div>
-						<div class="md:w-7/12">
-							<div class="flex items-center">
-								<div class="md:w-6/12">
+						<div class="w-11/12 md:w-7/12">
+							<div class="flex flex-wrap items-center">
+								<div class="md:w-6/12 mb-6 md:mb-0">
 									<p class="font-museo-900 text-blue-dark">
 										<?php 
 											echo $finish['title'];
@@ -235,7 +238,7 @@
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="md:w-6/12">
+			<div class="w-11/12 md:w-6/12">
 				<div class="text-center mb-2">
 					<h3 class="section-header text-24 text-blue-dark font-slab-300 uppercase">Common Applications</h3>
 				</div>

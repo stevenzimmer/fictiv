@@ -10,12 +10,12 @@ include( get_template_directory() . '/inc/check-box-by-get.php');
 <div class="mb-4">
 	
 <?php 
-	get_template_part('partials/site', 'search');
+	get_template_part('partials/resources', 'search');
 ?>
 	
 </div>
 
-<form method="GET" action="<?php echo home_url(); ?>/filter/">
+<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 <?php
 	get_template_part('partials/filter', 'cpts');

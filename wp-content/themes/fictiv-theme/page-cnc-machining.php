@@ -1307,7 +1307,7 @@
 </section>
 
 
-<?php get_template_part('partials/tolerance-chart'); ?>
+<?php // get_template_part('partials/tolerance-chart'); ?>
 <?php get_template_part('partials/our-quality-promise'); ?>
 
 <section class="section">

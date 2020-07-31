@@ -95,6 +95,9 @@
 			</div>
 		</div>
 
+		<?php 
+			if( is_search() || is_page_template('page-filter.php') || is_page_template('page-resource-center.php') ) :
+		?>
 		<div class="relative w-full h-12 lg:hidden flex items-center border-t border-b border-white">
 			<div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div>
 			<div class="container relative">
@@ -117,6 +120,9 @@
 				</div>
 			</div>
 		</div>
+		<?php 
+			endif;
+		?>
 		
 	</nav>
 	
