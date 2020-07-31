@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 .filter {
 
 	&-items {
@@ -51,3 +52,4 @@
 		}
 	}
 }
+/*! purgecss end ignore */

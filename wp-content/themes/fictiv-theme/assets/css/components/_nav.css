@@ -1,3 +1,5 @@
+/*! purgecss start ignore */
+
 .top {
 
 	&-nav {
@@ -190,3 +192,4 @@
         }    
     }
 }
+/*! purgecss end ignore */
