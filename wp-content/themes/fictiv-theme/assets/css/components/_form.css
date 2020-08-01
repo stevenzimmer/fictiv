@@ -127,7 +127,7 @@
                     @apply flex flex-wrap w-full !important;
 
                     .mktoField {
-                        @apply h-4 w-4 mr-2 mb-2 !important;
+                        @apply h-4 w-4 mr-2 !important;
                     }
 
                     label {

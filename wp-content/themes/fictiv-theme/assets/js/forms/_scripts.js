@@ -1,7 +1,9 @@
 /* config area - replace with your instance values */
-/* config area - replace with your instance values */
 
-let mkto_forms = document.querySelectorAll('[data-formId]');
+/* const */
+var MKTOFORM_ID_ATTRNAME = "data-formId";
+
+let mkto_forms = document.querySelectorAll('[' + MKTOFORM_ID_ATTRNAME +']');
 
 if ( mkto_forms.length > 0 ) {
     
@@ -9,14 +11,13 @@ if ( mkto_forms.length > 0 ) {
 
     for ( i = 0; i < mkto_forms.length; ++i ) {
 
-    	console.log( mkto_forms[i].dataset.forminstance );
+    	if( !mkto_forms_ids.includes( mkto_forms[i].getAttribute(MKTOFORM_ID_ATTRNAME) ) ) {
 
-    
-      mkto_forms_ids.push( mkto_forms[i].getAttribute('data-formId') );
+    		mkto_forms_ids.push( mkto_forms[i].getAttribute( MKTOFORM_ID_ATTRNAME) );
+
+    	}
     
     }
-
-    console.log( mkto_forms_ids );
 
     var mktoFormConfig = {
         podId : "//app-ab20.marketo.com",
@@ -31,30 +32,34 @@ if ( mkto_forms.length > 0 ) {
         /* util */
 		var arrayFrom = Function.prototype.call.bind(Array.prototype.slice);
 
-		/* const */
-		var MKTOFORM_ID_ATTRNAME = "data-formId";
-		
 		/* fix inter-form label bug! */
-		MktoForms2.whenRendered(function(form) {
+		MktoForms2.whenRendered( function( form ) {
+
+			document.getElementById('mktoForms2BaseStyle').parentNode.removeChild(document.getElementById('mktoForms2BaseStyle'));
+			document.getElementById('mktoForms2ThemeStyle').parentNode.removeChild(document.getElementById('mktoForms2ThemeStyle'));
+			document.getElementById('mktoFontUrl').parentNode.removeChild( document.getElementById('mktoFontUrl') );
+
 			var formEl = form.getFormElem()[0],
 				rando = "_" + new Date().getTime() + Math.random();
 
-
 			form.onSuccess( function( values, followUpUrl ) {
+
+				if ( form.getFormElem()[0].dataset.formType !== 'mkto-redirect' )  {
             
-			 	// Non-download forms only
-                if ( form.getFormElem()[0].dataset.formType === 'global' )  {
+	                if ( form.getFormElem()[0].dataset.formType === 'global' )  {
+	                	// Hide subscribe forms on success
+	                	form.getFormElem()[0].classList.add('hidden');
+	                	form.getFormElem()[0].parentElement.querySelector('.global-form-success').classList.remove('hidden');
 
-                	form.getFormElem()[0].classList.add('hidden');
-                	form.getFormElem()[0].parentElement.querySelector('.global-form-success').classList.remove('hidden');
+	                } else {
 
-                } else {			
-					// Redirects download forms to thank you page
-					window.location = window.location.origin + window.location.pathname + 'thank-you/';
-					
+						// Redirect download forms to thank you page on success
+						window.location = window.location.origin + window.location.pathname + 'thank-you/';
+						
+					}
+
+					return false;
 				}
-
-				return false;
 			});
                 
 

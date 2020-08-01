@@ -3,23 +3,42 @@
 	get_header();
 
 ?>
-
-        <script src="//info.fictiv.com/js/forms2/js/forms2.min.js"></script>
-        
-<header class="py-40 bg-blue-100">
+<header class="py-20 lg:pb-32 lg:pt-40 bg-blue-100">
 	<div class="container">
-		<div class="flex flex-wrap -mx-6">
-			<div class="lg:w-1/2 px-6">
-				<div class="mb-4">
+		<div class="flex justify-center">
+			<div class="w-11/12 md:w-9/12 lg:w-6/12">
+				<div class="text-center mb-6">
 					<h1 class="uppercase text-48 text-blue-dark font-museo-900">COVID-19 Face Shields</h1>
 				</div>
-				<div class="mb-12">
+				<div class="flex justify-between flex-wrap text-blue-light mb-6">
+					<div class="w-1/2">
+						<span class="font-museo-700">Phone:</span>
+						<a href="tel:5103945236">(510) 394-5236</a>
+					</div>
+					<div class="w-1/2 lg:text-right">
+						<span class="font-museo-700">Email:</span>
+						<a href="mailto:faceshields@fictiv.com">
+							faceshields@fictiv.com
+						</a>
+
+					</div>
+				</div>
+				<div class="mb-6">
 					<p class="text-18 font-museo-500 text-blue-dark">
                         Leveraging the best open source designs, a team of manufacturing experts, and its global manufacturing network, Fictiv is manufacturing millions of protective face shields at cost, for healthcare agencies
                         with urgent need in the fight against COVID-19.
                     </p>
 				</div>
-				<div class="flex bg-white mb-12">
+				<div class="flex justify-between flex-wrap text-blue-light mb-6">
+					<div class="w-1/2 text-center">
+						<a href="#order-form" class="btn btn-secondary">Order now</a>
+					</div>
+					<div class="w-1/2 text-center">
+						<a href="#learn-more" class="btn btn-ghost btn-ghost-secondary">Learn more</a>
+					</div>
+		
+				</div>
+				<div class="flex bg-white">
 					<div class="lg:w-1/2">
 						<img alt="face shield 1" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-1.jpg"/>
 					</div>
@@ -27,104 +46,15 @@
 						<img alt="face shield 2" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-2.jpg"/>
 					</div>
 				</div>
-				<div>
-					<h2 class="uppercase text-36 text-blue-dark font-museo-900">Lead time</h2>
-				</div>
-				<div class="mb-12">
-					<p class="text-18 font-museo-500 text-blue-dark">
-                        Fictiv has invested in the upfront tooling costs to make the shields available as quickly and easily as possible to healthcare agencies, service providers, distributors, and even non-healthcare OEMs that are pivoting to support the healthcare industry during this crisis. While pricing will be matched to cost, any longer term profits beyond initial tooling and unit manufacturing costs will be donated to the
-                        <a class="text-blue-light hover:text-red-dark" href="https://covid19responsefund.org/" target="_blank">COVID-19 Solidarity Response Fund for WHO</a>.
-                    </p>
-				</div>
-				<div class="flex -mx-2">
-					<?php 
-						$units = array(
-							array(
-								'number' => '1,000 units',
-								'days' => 'Ships in 1 day',
-							),
-
-							array(
-								'number' => '5,000 units',
-								'days' => 'Ships in 2 days',
-							),
-
-							array(
-								'number' => '10,000 units',
-								'days' => 'Ships in 4 days',
-							),
-
-							array(
-								'number' => 'Over 10,000',
-								'days' => 'Please inquire via the form',
-							),
-						);
-
-						foreach ( $units as $i => $unit ) :
-						
-						
-					?>
-					<div class="md:w-1/2 lg:w-1/4 px-2">
-						<div class="bg-white h-24 flex justify-center items-center">
-							<div>
-								<div class="text-center">
-									<div class="text-blue-dark text-14 uppercase font-museo-900">
-										<p>
-											<?php echo $unit['number']; ?>
-										</p>
-									</div>
-                                    <div class="">
-                                    	<p class="text-blue-dark text-12">
-                                    		<?php echo $unit['days']; ?>
-                                    	</p>
-                                    </div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<?php 
-						endforeach;
-					?>
-				</div>
-			</div>
-			<div class="lg:w-1/2 px-6">
-				<div class="bg-white p-8">
-					<div class="text-center">
-						<h3 class="text-blue-dark uppercase font-museo-900 text-24">Request a Quote</h3>
-					</div>
-					<div class="mb-4">
-						<p class="text-blue-dark mb-2">
-							Please fill out your information in the form and a Fictiv sales rep will follow up with a quote for purchase within 1 business day.
-						</p>
-						<p class="text-blue-dark">
-							We will accept credit card or purchase order payment methods.
-						</p>
-					</div>
-					<div class="mb-4">
-
-						<script src="//app-ab20.marketo.com/js/forms2/js/forms2.min.js"></script>
-			            <form id="mktoForm_875"></form>
-			            <script>
-			                MktoForms2.loadForm("//app-ab20.marketo.com", "852-WGR-716", 875);
-			            </script>
-					
-					</div>
-					<div class="px-2">
-						<?php 
-							get_template_part('partials/gdpr', 'text');
-						?>
-					</div>
-                               
-				</div>
 			</div>
 		</div>
 	</div>
-</header>
-<section class="py-20 lg:py-32">
+</header>        
+
+<section class="py-20 lg:py-32" id="learn-more">
 	<div class="container">
-		<div class="flex mb-12">
-			<div class="lg:w-1/2">
+		<div class="flex flex-wrap justify-center items-center mb-12 flex-col-reverse lg:flex-row">
+			<div class="w-full lg:w-1/2">
 				<div class="relative">
 					<div class="face-shield-carousel">
                         <?php 
@@ -174,7 +104,7 @@
 				</div>
                 
 			</div>
-			<div class="lg:w-1/2">
+			<div class="w-11/12 lg:w-1/2">
 				<div>
 					<div class="">
 						<h2 class="uppercase text-36 text-blue-dark font-museo-900">Design Specs</h2>
@@ -264,8 +194,8 @@
 </section>
 <section class="py-20 bg-blue-100"> 
 	<div class="container">
-		<div class="flex flex-wrap -mx-6">
-			<div class="lg:w-1/2 px-6">
+		<div class="flex flex-wrap justify-center lg:justify-start -mx-6">
+			<div class="w-11/12 lg:w-1/2 px-6">
 				<h2 class="uppercase text-30 leading-tight text-blue-dark font-museo-900 mb-8">COVID-19 SOLUTIONS AND RESOURCES TO MITIGATE SUPPLY CHAIN DISRUPTION</h2>
 				<p class="text-blue-dark text-20 mb-12">Get the latest webinars, blogs, and key learnings from industry experts to help you achieve supply chain agility during the Coronavirus pandemic.</p>
 				<div>
@@ -287,20 +217,29 @@
 	</div>
 </section>    
 
-       
-       
-<script
-    src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5881ca284ac19f852fa47c23"
-    type="text/javascript"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-></script>
-<script src="https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/js/webflow.078567c83.js" type="text/javascript"></script>
-<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<section class="py-20" id="order-form">
+	<div class="container">
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-6/12">
 
+				<div class="text-center">
+					<h3 class="text-blue-dark uppercase font-museo-900 text-24">order masks</h3>
+				</div>
+				<div class="mb-4">
 
-
-
+					<form class="mktoForm" data-formId="875" data-formInstance="one" data-form-type="mkto-redirect"></form>
+				
+				</div>
+				<div class="px-2">
+					<?php 
+						get_template_part('partials/gdpr', 'text');
+					?>
+				</div>
+	              
+			</div>
+		</div>
+	</div>
+</section>
 <?php 
 	get_footer();
 ?>

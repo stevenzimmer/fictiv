@@ -14,4 +14,19 @@
 	}
 }
 
+.pm {
+
+	&-wrapper {
+
+		&.active {
+			@apply border-b-2 border-blue-light;
+
+			h3 {
+				@apply text-blue-dark opacity-100;
+			}
+			
+		}
+	}
+}
+
 /*! purgecss end ignore */

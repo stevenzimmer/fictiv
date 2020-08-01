@@ -3,7 +3,8 @@
     add_action('wp_enqueue_scripts', 'fictiv_enqueue_scripts');
 
     function fictiv_enqueue_scripts() {
-
+        wp_dequeue_script('jquery');
+        wp_deregister_script('jquery');
         
         wp_enqueue_script( 'mkto-forms', '//app-ab20.marketo.com/js/forms2/js/forms2.min.js', [], '1.1', false );
 

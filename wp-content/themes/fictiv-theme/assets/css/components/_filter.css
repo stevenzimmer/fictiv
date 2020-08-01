@@ -8,11 +8,14 @@
 	&-item {
 
 		&-checkbox {
+			+ label {
+				@apply text-grey-600 !important;
+			}
 
 			&:checked {
 
 				+ label {
-					@apply text-teal-light font-museo-700;
+					@apply text-teal-light font-museo-700 !important;
 				}
 			}
 		}
@@ -33,7 +36,6 @@
 
 	&-title {
 
-		
 		&.active {
 
 			.filter {

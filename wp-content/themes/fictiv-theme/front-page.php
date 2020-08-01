@@ -86,7 +86,7 @@
 					<div class="w-11/12 md:w-1/2 lg:w-1/4  block-link px-2 ">
 						<div class="relative shadow group">
 							<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
-							<div class="w-full bg-white p-4">
+							<div class="w-full bg-white p-6">
 								<img class="lazyload w-full" class=" inline-block" data-src="<?php the_post_thumbnail_url(); ?>">
 							</div>
 							<div class="text-center p-4">
@@ -142,19 +142,28 @@
 	endif;
 ?>
 
-<section class="section-half bg-blue-dark">
+<section class="section-half bg-grey-100">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="flex items-end">
-				<div class="mr-8">
-					<!-- Forbed Logo -->
-					<img class="lazyload" width="100" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/forbes.png">
+			<div class="flex justify-center">
+				<div class="lg:w-10/12">
+					<div class="flex">
+						<div class="mr-8">
+							<!-- IDC Logo -->
+							<img class="lazyload" width="200" alt="IDC Logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/idc-case-study-logo.png">
+						</div>
+						<div>
+							<h3 class="text-blue-dark text-24">
+								"The use of a quote-to-order platform makes sourcing and the supply chain less vulnerable to disruptions"
+							</h3>
+							<p class="mb-4">
+								— Head of IDC Manufacturing Insights Jan Burian, IDC EMEA
+							</p>
+							<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-secondary">read case study</a>
+						</div>
+					</div>
 				</div>
-				<div>
-					<h3 class="text-white text-20">
-						"The Airbnb of Manufacturing..."
-					</h3>
-				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -14,7 +14,7 @@ include( get_template_directory() . '/inc/check-box-by-get.php');
 ?>
 	
 </div>
-<div class="mb-6">
+<div class="mb-4">
 	<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 	<?php
@@ -26,9 +26,9 @@ include( get_template_directory() . '/inc/check-box-by-get.php');
 	</form>
 </div>
 
-<!-- <div class="global-form-wrapper bg-grey-100 p-2">
+<div class="global-form-wrapper">
 	<form class="mktoForm " data-formId="597" data-formInstance="two" data-form-type="global"></form>
 	<div class="global-form-success hidden">
 		<p>Thank you for subscribing!</p>
 	</div>
-</div> -->
+</div>

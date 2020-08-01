@@ -8,7 +8,7 @@ import './careers/_scripts';
 import './hwg/_menu-toggle';
 
 import './lazyload/_scripts';
-import './homepage/_scripts';
+import './toggles/_scripts';
 import './tolerance/_scripts';
 import './partners/_scripts';
 import './face-shields/_scripts';
