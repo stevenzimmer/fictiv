@@ -45,7 +45,7 @@
 								if ( $resources->have_posts() ) : 
 	    
 						?>
-						<div class="mb-4">
+						<div class="mb-2">
 							
 					
 							<div class="mb-2">

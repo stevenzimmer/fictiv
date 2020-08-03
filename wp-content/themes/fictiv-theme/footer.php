@@ -16,7 +16,7 @@
 							</div>
 							<div class="font-museo-500 text-grey-600">
 								<p>
-									168 Welsh Streets
+									168 Welsh Street
 								</p>
 								<p>
 									San Francisco, CA 94107
