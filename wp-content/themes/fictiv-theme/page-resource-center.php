@@ -156,7 +156,7 @@
 						</div>	
 						<?php
 
-								endif;
+							endif;
 							if ( $i === 0 && get_field('resources_home_form_title') ) :
 						?>
 						<div class="bg-blue-dark p-8 mb-6 ">

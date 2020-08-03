@@ -1,6 +1,6 @@
 {
     "key": "group_5f26c196cba24",
-    "title": "Resources Center Form",
+    "title": "Asset Download Form",
     "fields": [
         {
             "key": "field_5f26c1a20ff99",
@@ -67,6 +67,13 @@
                 "operator": "==",
                 "value": "page-resource-center.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_blog"
+            }
         ]
     ],
     "menu_order": 0,
@@ -77,5 +84,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596375743
+    "modified": 1596467999
 }
