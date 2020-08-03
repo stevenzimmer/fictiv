@@ -10,7 +10,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.0', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
+        // wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.2');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -35,7 +35,7 @@
                 ?></p>
             </div>
             <div class="mb-2">
-                <form class="mktoForm form-underline" data-formId="<?php echo $form_number; ?>" data-formInstance="one"></form>
+                <form class="mktoForm underline" data-form-type="resource" data-formId="<?php echo $form_number; ?>"></form>
                 <!-- <form class="form-underline " id="mktoForm_<?php echo $form_number; ?>"></form> -->
             </div>
             <div class="text-center">

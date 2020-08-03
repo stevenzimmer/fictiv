@@ -3,10 +3,9 @@ function checkBoxesByGet( $get, $slug ) {
 	if ( isset( $get ) ) :
 
 		foreach ( $get as $j => $query ) :
-			// print_r( $query );
 
-			if ( $j !== 's' ) :
-
+			if ( gettype( $query ) === 'array' ) :
+				
 				foreach ( $query as $k => $item ) :
 
 					if ( ( $j . '-' . $item ) === (  $slug ) ) : 
@@ -19,5 +18,6 @@ function checkBoxesByGet( $get, $slug ) {
 			endif;
 		endforeach;
 	endif;
+
 }
 ?>

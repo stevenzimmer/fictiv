@@ -6,23 +6,96 @@
         @apply p-4;
     }
 
-    &.form {
-
-        &-underline {
+    &.underline {
         
-            .mktoFormRow {
-        
-                .mktoFieldDescriptor, .mktoFormCol {
+        .mktoFormRow {
+    
+            .mktoFieldDescriptor, .mktoFormCol {
 
-                    .mktoFieldWrap {
+                .mktoFieldWrap {
 
-
-                        .mktoField {
-                            @apply border-t-0 border-l-0 border-r-0 rounded-none shadow-none border-b border-grey-200 px-0 py-1 h-8 !important;
-                        }
+                    .mktoField {
+                        @apply border-t-0 border-l-0 border-r-0 rounded-none shadow-none border-b border-grey-200 px-0 py-1 h-8 !important;
                     }
                 }
             }
+        }
+    }
+    
+
+    &.global {
+
+        .mktoFormRow {
+            @apply mx-0;
+
+            .mktoFieldDescriptor,.mktoFormCol {
+                @apply px-1 !important;
+                
+                .mktoFieldWrap {
+
+                    .mktoHtmlText {
+                        @apply hidden;
+                    }
+
+                    .mktoField {
+                        @apply mb-4 rounded-none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sidebar {
+
+        .mktoFormRow {
+            @apply mx-0 !important;
+
+            .mktoFieldDescriptor,.mktoFormCol {
+                @apply px-1 !important;
+                
+                .mktoFieldWrap {
+                    @apply relative;
+
+                     .mktoHtmlText {
+                        @apply text-blue-dark text-center font-museo-500 text-16 !important;
+                    }
+                 
+                }
+            }
+        }
+    }
+
+    &.horizontal {
+        @apply flex justify-between;
+
+        .mktoFormRow {
+            @apply w-0 mx-0 !important;
+            /*@apply mx-0;*/
+
+            .mktoFieldDescriptor,.mktoFormCol {
+                @apply px-0 !important;
+                
+                .mktoFieldWrap {
+                    @apply relative;
+
+                     .mktoHtmlText {
+                        @apply hidden;
+                    }
+
+                    .mktoField {
+                        /*@apply mb-4 rounded-none !important;*/
+                        @apply w-64 border border-teal-light !important;
+                        
+                    }
+
+                    .mktoError {
+                        right: auto !important;
+                    }
+                }
+            }
+        }
+        .mktoButtonRow {
+            @apply w-auto !important;
         }
     }
 
@@ -64,7 +137,7 @@
                 }
 
                 .mktoHtmlText {
-                  @apply font-museo-300 text-grey-400 w-full py-2 px-0;
+                  @apply font-museo-300 text-grey-400 w-full py-2 px-0 w-full !important;
                 }
 
 				label {
@@ -157,54 +230,29 @@
 				}
 			}
 		}
-	}
-
-	
+	}	
 }
-
-
-/*.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#Email_Opt_in_Consent__c,
-.mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap .mktoField#subscriptionFictivHardwareRoundup {
-    height: 21px;
-    float: left;
-    border: none;
-    box-shadow: none;
-}
-*/
 
 .navbar-2.no-scroll {
     background-color: #fff;
     position: relative;
 }
 
-/*@media only screen and (min-width: 320px) {
-    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
-        width: 279px !important;
-    }
+::placeholder {
+  @apply text-grey-300 text-14;
 }
 
-@media only screen and ( max-width: 480px ) {
-
-    .mktoForm .mktoCheckboxList {
-        width: 30px !important;
-    }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   @apply text-grey-300 text-14;
+}
+::-moz-placeholder { /* Firefox 19+ */
+   @apply text-grey-300 text-14;
+}
+:-ms-input-placeholder { /* IE 10+ */
+   @apply text-grey-300 text-14;
+}
+:-moz-placeholder { /* Firefox 18- */
+   @apply text-grey-300 text-14;
 }
 
-@media only screen and (min-width: 568px) {
-    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
-        width: 429px !important;
-    }
-}
-
-@media only screen and (min-width: 667px) {
-    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
-        width: 548px !important;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .mktoForm .mktoFormRow .mktoFieldDescriptor .mktoFieldWrap label.mktoLabel[for="Email_Opt_in_Consent__c"] {
-        width: 386px !important;
-    }
-}*/
 /*! purgecss end ignore */

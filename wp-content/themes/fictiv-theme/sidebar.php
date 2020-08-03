@@ -26,8 +26,8 @@ include( get_template_directory() . '/inc/check-box-by-get.php');
 	</form>
 </div>
 
-<div class="global-form-wrapper">
-	<form class="mktoForm " data-formId="597" data-formInstance="two" data-form-type="global"></form>
+<div class="global-form-wrapper bg-grey-100 px-2 py-4 text-center ">
+	<form class="mktoForm sidebar" data-formId="597" data-form-type="global"></form>
 	<div class="global-form-success hidden">
 		<p>Thank you for subscribing!</p>
 	</div>

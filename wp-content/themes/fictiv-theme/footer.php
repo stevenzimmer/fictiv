@@ -120,65 +120,68 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex justify-center">
-						<div class="w-full md:w-7/12 ">
-				
-							<div class="flex items-end">
-								<div class="global-form-wrapper">
-									<form class="mktoForm " data-formId="597" data-formInstance="one" data-form-type="global"></form>
-									<div class="global-form-success hidden">
-										<p>Thank you for subscribing!</p>
-									</div>
-								</div>
-								<div class="border-2 border-teal-light py-2 px-4 hidden">
-									<p>
-										Subscribe to our newsletter
-									</p>
-								</div>
-								<div class="bg-teal-light flex items-center justify-center px-4 hidden">
-									<p class="text-white">
-										Submit
-									</p>
-								</div>
-								<div class="flex justify-center px-2 flex-wrap ">
-									<div class=" px-2 w-1/3">
-										<div class="bg-grey-100 p-4 flex items-center justify-center">
-											<div class="">
-												<a title="Connect with us on Twitter" rel="noopener noreferrer" target="_blank" href="#">
-													<?php 
-														echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/twitter.svg');
-													?>
-														
-													</a>
-														
-											</div>
+					<div class="flex justify-start flex-wrap items-center">
+						<div class="w-full lg:w-1/4"></div>
+						<div class="w-full lg:w-3/4">
+							<div class="flex items-center justify-center md:justify-start flex-wrap">
+								<div class="w-full sm:w-7/12 lg:w-1/2 mb-6 sm:mb-0">
+									<div class="global-form-wrapper">
+										<form class="mktoForm horizontal" data-formId="597" data-form-type="global"></form>
+										<div class="global-form-success hidden">
+											<p>Thank you for subscribing!</p>
 										</div>
 									</div>
-									<div class=" px-2 w-1/3">
-										<div class="bg-grey-100 p-4 flex items-center justify-center">
-											<div class="">
-												<a title="Connect with us on Facebook" rel="noopener noreferrer" target="_blank" href="#">
+									<div class="border-2 border-teal-light py-2 px-4 hidden">
+										<p>
+											Subscribe to our newsletter
+										</p>
+									</div>
+								</div>
+								<div class="w-full sm:w-1/3 lg:w-1/2">
+									<div class="flex justify-center sm:justify-start">
+										<div class="flex justify-center px-2 flex-wrap ">
+											<div class=" px-2 w-1/3">
+												<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
+													<div class="">
+														<a title="Connect with us on Twitter" rel="noopener noreferrer" target="_blank" href="#">
 															<?php 
-															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/facebook.svg');
-														?>
-												
-													</a>
-													
+																echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/twitter.svg');
+															?>
+																
+															</a>
+																
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class=" px-2 w-1/3">
-										<div class="bg-grey-100 p-4 flex items-center justify-center">
-											<div class="">
-												<a title="Connect with us on LinkedIn" rel="noopener noreferrer" target="_blank" class="#" href=""><?php 
-														echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/linkedin.svg');
-													?></a>
+											<div class=" px-2 w-1/3">
+												<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
+													<div class="">
+														<a title="Connect with us on Facebook" rel="noopener noreferrer" target="_blank" href="#">
+																	<?php 
+																	echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/facebook.svg');
+																?>
+														
+															</a>
+															
+													</div>
+												</div>
+											</div>
+											<div class=" px-2 w-1/3">
+												<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
+													<div class="">
+														<a title="Connect with us on LinkedIn" rel="noopener noreferrer" target="_blank" class="#" href=""><?php 
+																echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/linkedin.svg');
+															?></a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							
 						</div>
+					
 					</div>
 				</div>
 			</div>

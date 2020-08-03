@@ -94,8 +94,8 @@
 											</div>
 											<div class="p-2 relative">
 										
-												<div class="h-12 mb-8">
-													<h2 class="text-14 font-museo-700 text-default max-lines max-lines-2"><?php 
+												<div class="h-18 mb-8">
+													<h2 class="text-14 font-museo-700 text-default max-lines max-lines-3"><?php 
 														echo get_the_title();
 
 													?></h2>
@@ -124,9 +124,9 @@
 									
 								</div>
 
-								<?php 
-									if ( $count > 3 ) : 
-								?>
+							<?php 
+								if ( $count > 3 ) : 
+							?>
 									
 								
 								<div class="absolute right-0 top-0 h-full w-8 bg-white opacity-75 resource-carousel-right">
@@ -139,7 +139,7 @@
 									</div>
 								</div>
 
-								<div class="absolute left-0 top-0 h-full w-8 bg-white opacity-75 resource-carousel-left ml-1 hidden">
+								<div class="absolute left-0 top-0 h-full w-8 bg-white opacity-75 resource-carousel-left hidden">
 									<div class="flex w-full h-full justify-center items-center">
 										<div class="transform rotate-180">
 											<?php 
@@ -148,30 +148,33 @@
 										</div>
 									</div>
 								</div>
-								<?php 
-									endif; 
-								?>
+							<?php 
+								endif; 
+							?>
 							
 							</div>
 						</div>	
 						<?php
 
 								endif;
-							if ( $i === 0 ) :
+							if ( $i === 0 && get_field('resources_home_form_title') ) :
 						?>
-						<div class="bg-blue-dark p-8 mb-6">
-							<div class="flex justify-between">
+						<div class="bg-blue-dark p-8 mb-6 ">
+							<div class="flex justify-between items-center">
 								<div class="lg:w-7/12">
 									<h3 class="text-white font-museo-500 text-16 mb-2">
-										Download Tolerance Analysis Calculator
+										<?php 
+											the_field('resources_home_form_title');
+										?>
 									</h3>
 									<p class="text-white text-14 font-museo-500">
-										Get access to our free tolerance analysis calculator to ensure your 3D parts are printed to spec every time
+										<?php 
+											the_field('resources_home_form_paragraph');
+										?>
 									</p>
 								</div>
 								<div class="lg:w-4/12">
-									<div class="bg-white py-4 mb-2"></div>
-									<div class="bg-teal-light py-4"></div>
+									<form data-form-type="mkto-redirect" class="mktoForm global" data-formId="<?php the_field('resources_home_form_marketo_id'); ?>"></form>
 								</div>
 							</div>
 							
