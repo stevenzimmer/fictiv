@@ -1,9 +1,4 @@
-<?php 
-include( get_template_directory() . '/inc/post-taxonomies.php');
-include( get_template_directory() . '/inc/check-box-by-get.php');
 
-
-?>
 <div class="mb-2">
 	<p class="uppercase font-museo-500 text-grey-600">filter content </p>
 </div>
@@ -14,13 +9,26 @@ include( get_template_directory() . '/inc/check-box-by-get.php');
 ?>
 	
 </div>
-<div class="mb-4">
+<div class="mb-4 ">
 	<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 	<?php
-		get_template_part('partials/filter', 'cpts');
-		get_template_part('partials/filter', 'taxonomies');
-		get_template_part('partials/resources', 'filter-btns');
+		// get_template_part('partials/filter', 'cpts');
+		filterContentType( resource_center_cpt(), 'sidebar' );
+
+		foreach ( resource_center_taxonomies() as $i => $tax ) :
+			$labels = get_taxonomy( $tax );
+
+			$filters = get_terms( array(
+				'taxonomy' => $tax,
+				'hide_empty' => true
+			));
+
+			filterTaxonomies( $labels->labels->singular_name, $filters, 'sidebar' );
+
+		endforeach;
+		// get_template_part('partials/filter', 'taxonomies');
+		get_template_part('partials/filter', 'btns');
 	?>
 		
 	</form>

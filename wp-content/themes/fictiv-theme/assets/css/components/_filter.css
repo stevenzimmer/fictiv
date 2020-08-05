@@ -32,6 +32,47 @@
 				}
 			}
 		}
+
+		&-mobile {
+
+			&.active {
+
+				+ .filter {
+
+					&-content {
+
+						&-mobile {
+
+							&-dropdown {
+								@apply block;
+
+								@screen lg {
+									@apply hidden;
+								}
+
+								
+							}
+						}
+					}
+				}
+
+				.filter {
+
+					&-content {
+
+						&-arrow {
+							@apply rotate-180;
+						}
+					}
+				}
+			}
+
+			&-dropdown {
+				@apply hidden;
+			}
+
+			
+		}
 	}
 
 	&-title {
@@ -53,5 +94,7 @@
 			}
 		}
 	}
+
+
 }
 /*! purgecss end ignore */

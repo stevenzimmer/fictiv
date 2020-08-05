@@ -5,7 +5,11 @@ if ( document.getElementById('filter-form') ) {
 	const filterTitles = Array.prototype.slice.call( document.querySelectorAll('.filter-title') );
 
 	const filterItemcheckboxes = Array.prototype.slice.call( document.querySelectorAll('.filter-item-checkbox') );
-	const clearAllBtn = document.getElementById('clear-all');
+	// const clearAllBtn = document.getElementById('clear-all');
+	const clearAllBtns = Array.prototype.slice.call( document.querySelectorAll('.clear-all') );
+	const filterApplyBtns = Array.prototype.slice.call( document.querySelectorAll('.filter-apply-btn') );
+
+	const filterContentMobile = document.getElementById('filter-content-mobile');
 
 	let checkCount = 0;
 
@@ -33,14 +37,25 @@ if ( document.getElementById('filter-form') ) {
 			}
 
 			if ( checkCount === 0 ) {
-				document.getElementById('filter-apply-btn').classList.add('hidden');
+				
+				filterApplyBtns.forEach( ( btn ) => {
+					btn.classList.add('hidden');
+				});
+
+				// document.getElementById('filter-apply-btn').classList.add('hidden');
 			} else {
-				document.getElementById('filter-apply-btn').classList.remove('hidden');
+				// document.getElementById('filter-apply-btn').classList.remove('hidden');
+				filterApplyBtns.forEach( ( btn ) => {
+					btn.classList.remove('hidden');
+				});
 			}
 		});
 
 		if ( checkCount ) {
-			document.getElementById('filter-apply-btn').classList.remove('hidden');
+			// document.getElementById('filter-apply-btn').classList.remove('hidden');
+			filterApplyBtns.forEach( ( btn ) => {
+				btn.classList.remove('hidden');
+			});
 		}
 
 	});
@@ -54,22 +69,34 @@ if ( document.getElementById('filter-form') ) {
 		});
 	});
 
+	clearAllBtns.forEach( ( btn ) => {
 
-	clearAllBtn.addEventListener('click', function(e) {
-		e.preventDefault();
+		btn.addEventListener('click', function(e) {
 
-		filterItemcheckboxes.forEach( (box) => {
+			e.preventDefault();
+
+			filterItemcheckboxes.forEach( (box) => {
 		
-			if ( box.checked ) {
+				if ( box.checked ) {
 
-				checkCount--;
-				box.checked = false;
-			
-			}
-			
-			document.getElementById('filter-apply-btn').classList.add('hidden');
-		
-		});
+					checkCount--;
+					box.checked = false;
+				
+				}
+				
+				// document.getElementById('filter-apply-btn').classList.add('hidden');
+				filterApplyBtns.forEach( ( btn ) => {
+					btn.classList.add('hidden');
+				});
+			});
+
+
+		})
+	});
+
+	filterContentMobile.addEventListener('click', function( e ) {
+		console.dir( this );
+		this.classList.toggle('active');
 	});
 
 }

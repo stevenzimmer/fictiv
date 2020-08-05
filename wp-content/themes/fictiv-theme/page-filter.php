@@ -71,12 +71,12 @@ $max_num = ( $filtered->max_num_pages ? $filtered->max_num_pages : $default->max
     
 ?>
 
-<section class="section ">
+<section class="py-32 lg:py-20 ">
 	<div class="container">
 		
 		<div class="flex justify-center">
 			<div class="lg:w-10/12">
-				<div class="mb-6">
+				<div class="mb-6 hidden lg:block">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>

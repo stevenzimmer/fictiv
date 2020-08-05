@@ -81,7 +81,6 @@ if ( mkto_forms.length > 0 ) {
 				formEl.id = "mktoForm_" + formId;
 
 				loadForm(function(form) {
-					console.log( formEls );
 
 					formEl.id = "";
 					if (formEls.length) {

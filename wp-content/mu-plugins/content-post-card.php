@@ -1,10 +1,8 @@
 <?php 
 
-	function fictiv_post_card( $topic ) {
-// echo get_the_post_thumbnail('medium_large');
-// echo wp_get_attachment_url(get_the_id(), 'medium_large' );
+function fictiv_post_card( $topic ) {
 
-$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
+	$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
 
 ?>
 <div class="border border-grey-200 relative h-full">
@@ -38,10 +36,11 @@ $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id(
 
 			?></h2>
 		</div>
-		<?php 
-			if( get_the_excerpt() ) :
-		?>
+		
 		<div class="text-14 text-grey-600 font-museo-500 h-20">
+			<?php 
+				if( get_the_excerpt() ) :
+			?>
 			<p class="max-lines max-lines-3">
 				
 				<?php 
@@ -49,11 +48,12 @@ $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id(
 				?>
 				
 			</p>
+			<?php 
+				endif;
+			?>
 		</div>
 
-		<?php 
-			endif;
-		?>
+		
 
 		<div class="absolute right-0 bottom-0 p-4">
 			<a href="<?php echo get_the_permalink(); ?>" class="absolute w-full h-full inset-0"></a>

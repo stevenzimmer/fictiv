@@ -12,7 +12,7 @@ resource_center_cpt();
 
 		foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
 
-			filter_checkbox( $type );
+			filter_checkbox( $type, rand(10,100) );
 
 		endforeach;
 	?>

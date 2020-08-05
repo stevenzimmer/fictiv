@@ -3,21 +3,41 @@ get_header();
 // global $wp_query;
 // $total_results = $wp_query->found_posts;
 
+if ( isset ( $_GET['s'] ) && !empty( $_GET['s'] ) ) :
+
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+    $response = json_decode( 
+    	wp_remote_retrieve_body( 
+    		wp_remote_get( 
+    			home_url() . '/wp-json/fictiv/v1/search?per_page=6&page=' . $paged .'&query=' . $_GET['s']
+   			)
+    	)
+    );
+
+endif;
+
+$search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"' : 'Sorry, there are no results matching “' . $_GET['s'] .'"' )
 
 ?>
-<section class="section">
+<section class="py-32">
 	<div class="container">
 		
 		<div class="flex justify-center">
 			<div class="w-full lg:w-10/12">
-				<div class="mb-6">
-					<?php 
-						get_template_part('partials/single', 'breadcrumbs');
-					?>
+				<div class="justify-center hidden md:flex">
+					<div class="w-11/12 sm:w-full">
+						<div class="mb-6">
+							<?php 
+								get_template_part('partials/single', 'breadcrumbs');
+							?>
+						</div>
+					</div>
 				</div>
 				
+				
 				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-4">
+					<div class="w-11/12 lg:w-4/12 px-4 hidden lg:block">
 						<?php 
 							get_sidebar();
 						?>
@@ -25,36 +45,44 @@ get_header();
 					</div>
 					<div class="w-full lg:w-8/12 px-4">
 						<div class="flex justify-center">
-							<div class="w-11/12 md:w-full">
+							<div class="w-11/12 sm:w-full">
 								<div class="mb-6">
 									<h3 class="font-museo-700 text-20 text-grey-600">
-									Search results for "<?php echo $_GET['s'];  ?>"
+									<?php echo $search_title; ?>
 									</h3>		
 								</div>
+								<?php 
+									if( !count( $response ) ) : 
+								?>
+								<div class="mb-6">
+									<h3 class="font-museo-500 text-grey-600 uppercase">
+									You might also be interested in this
+									</h3>		
+								</div>
+								<?php 
+									endif;
+								?>
 							</div>
 						</div>
 						
-						<div class="flex -mx-4 flex-wrap justify-center sm:justify-start">
+						<div class="flex justify-center">
+							<div class="w-11/12 md:w-full">
+							
+
+								
+							</div>
+						</div>
+
+						<div class="flex -mx-2 flex-wrap justify-center sm:justify-start">
 							<?php
-								if ( isset ( $_GET['s'] ) && !empty( $_GET['s'] ) ) :
+								
+								if ( count( $response ) ) :
+								
+									foreach ( $response as $i => $data ) :
 
-									$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-								    $response = json_decode( 
-								    	wp_remote_retrieve_body( 
-								    		wp_remote_get( 
-								    			home_url() . '/wp-json/fictiv/v1/search?per_page=6&page=' . $paged .'&query=' . $_GET['s']
-								   			)
-								    	)
-								    );
-
-								endif;
-
-
-								foreach ( $response as $i => $data) :
 									
 							?>
-							<div class="w-full sm:w-1/2 px-4 mb-6">
+							<div class="w-full sm:w-1/2 px-2 mb-6">
 								<div class="border border-grey-200 relative h-full">
 									<div class="relative h-0 thumbnail-ratio" >
 										<img title="<?php echo $data->title; ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $data->thumb; ?>">
@@ -72,10 +100,11 @@ get_header();
 
 											?></h2>
 										</div>
-										<?php 
-											if( $data->excerpt ) :
-										?>
+										
 										<div class="text-14 text-grey-600 font-museo-500 h-20">
+											<?php 
+												if( $data->excerpt ) :
+											?>
 											<p class="max-lines max-lines-3">
 												
 												<?php 
@@ -83,11 +112,12 @@ get_header();
 												?>
 												
 											</p>
+											<?php 
+												endif;
+											?>
 										</div>
 
-										<?php 
-											endif;
-										?>
+										
 
 										<div class="absolute right-0 bottom-0 p-4">
 											<a href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0"></a>
@@ -104,7 +134,63 @@ get_header();
 							
 					
 							<?php 
-								endforeach;
+									endforeach;
+
+								else :
+
+									$default_args = array(
+										'posts_per_page' => 6,
+										'post_parent'=> 0,
+										'post_type' => $GLOBALS['resource_post_types'],
+									);
+
+									$default = new WP_Query( $default_args );
+							?>
+							<?php
+
+									while ( $default->have_posts() ) : 
+							    		$default->the_post();
+										include( get_template_directory() . '/inc/post-topics.php');
+
+
+							?>
+
+							<div class="w-full sm:w-1/2 xl:w-1/3 px-2 mb-4">
+								<div class="border border-grey-200 relative h-full">
+									<div class="relative h-0 thumbnail-ratio" >
+										<img alt="<?php the_title(); ?> thumbnail" title="<?php the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0]; ?>">
+									</div>
+									<div class="p-4 relative">
+									
+										<div class="h-20">
+											<h2 class="text-14 font-museo-700 text-default max-lines max-lines-3"><?php 
+												the_title();
+
+											?></h2>
+										</div>
+									
+
+										<div class="absolute right-0 bottom-0 p-4">
+											<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0"></a>
+											<div>
+												<?php 
+													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
+												?>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							
+							
+							<?php 
+									endwhile;
+									wp_reset_postdata();
+							?>
+							<?php
+
+								endif;
 							?>
 						</div>
 						<div class="flex justify-center">

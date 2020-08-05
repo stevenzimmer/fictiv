@@ -97,8 +97,10 @@
 
 		<?php 
 			if( is_search() || is_page_template('page-filter.php') || is_page_template('page-resource-center.php') ) :
+				include( get_template_directory() . '/inc/post-taxonomies.php');
+				// include( get_template_directory() . '/inc/check-box-by-get.php');
 		?>
-		<div class="relative w-full h-12 lg:hidden flex items-center border-t border-b border-white">
+		<div class="relative w-full h-12 lg:hidden flex items-center border-t border-b border-white filter-content-mobile select-none" id="filter-content-mobile">
 			<div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div>
 			<div class="container relative">
 				<div class="flex justify-center">
@@ -109,15 +111,61 @@
 							<div class="">
 								<p class="uppercase text-white font-museo-700 text-12">filter content</p>
 							</div>
-							<div class="w-10 text-center text-white">
-								<p>
-									&#9660;
-								</p>
+							<div class="w-10 text-center text-white flex items-center justify-center ">
+								<div class="transform transition-transform origin-center duration-200 filter-content-arrow">
+								<?php 
+									echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/filter-arrow.svg');
+								?>
+								</div>
+								
 							</div>
 						
 						</div>
 					</div>
 				</div>
+
+			</div>
+			
+		</div>
+		<div class="bg-white py-4 filter-content-mobile-dropdown hidden lg:hidden shadow-lg">
+			<div class="container">
+				<div class="flex justify-center">
+					<div class="w-11/12 md:w-full">
+						<div class="mb-4">
+
+							<?php 
+								get_template_part('partials/resources', 'search');
+							?>
+							
+						</div>
+						<div class="">
+							<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
+
+							<?php
+
+								filterContentType( resource_center_cpt(), 'mobile' );
+
+								foreach ( resource_center_taxonomies() as $i => $tax ) :
+									$labels = get_taxonomy( $tax );
+
+									$filters = get_terms( array(
+										'taxonomy' => $tax,
+										'hide_empty' => true
+									));
+
+									filterTaxonomies( $labels->labels->singular_name, $filters, 'mobile'  );
+
+								endforeach;
+
+								get_template_part('partials/filter', 'btns');
+							?>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+				
+
 			</div>
 		</div>
 		<?php 
