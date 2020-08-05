@@ -95,7 +95,6 @@ if ( document.getElementById('filter-form') ) {
 	});
 
 	filterContentMobile.addEventListener('click', function( e ) {
-		console.dir( this );
 		this.classList.toggle('active');
 	});
 

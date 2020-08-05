@@ -1,7 +1,7 @@
 <?php 
 get_header();
-// global $wp_query;
-// $total_results = $wp_query->found_posts;
+
+$response = array();
 
 if ( isset ( $_GET['s'] ) && !empty( $_GET['s'] ) ) :
 
@@ -20,7 +20,7 @@ endif;
 $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"' : 'Sorry, there are no results matching “' . $_GET['s'] .'"' )
 
 ?>
-<section class="py-32">
+<section class="py-32 lg:py-24">
 	<div class="container">
 		
 		<div class="flex justify-center">
@@ -36,14 +36,14 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 				</div>
 				
 				
-				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-4 hidden lg:block">
+				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
+					<div class="w-11/12 lg:w-3/12 hidden lg:block">
 						<?php 
 							get_sidebar();
 						?>
 						
 					</div>
-					<div class="w-full lg:w-8/12 px-4">
+					<div class="w-full lg:w-9/12 lg:pl-6">
 						<div class="flex justify-center">
 							<div class="w-11/12 sm:w-full">
 								<div class="mb-6">
@@ -65,13 +65,6 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 							</div>
 						</div>
 						
-						<div class="flex justify-center">
-							<div class="w-11/12 md:w-full">
-							
-
-								
-							</div>
-						</div>
 
 						<div class="flex -mx-2 flex-wrap justify-center sm:justify-start">
 							<?php
@@ -82,7 +75,7 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 
 									
 							?>
-							<div class="w-full sm:w-1/2 px-2 mb-6">
+							<div class="w-full sm:w-1/2 px-2 mb-4">
 								<div class="border border-grey-200 relative h-full">
 									<div class="relative h-0 thumbnail-ratio" >
 										<img title="<?php echo $data->title; ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $data->thumb; ?>">
@@ -132,27 +125,25 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 								</div>
 							</div>
 							
-					
 							<?php 
 									endforeach;
 
 								else :
+									
+									resource_center_cpt();
 
 									$default_args = array(
 										'posts_per_page' => 6,
 										'post_parent'=> 0,
-										'post_type' => $GLOBALS['resource_post_types'],
+										'post_type' => $GLOBALS['resource_post_types']
 									);
 
 									$default = new WP_Query( $default_args );
-							?>
-							<?php
 
 									while ( $default->have_posts() ) : 
 							    		$default->the_post();
+
 										include( get_template_directory() . '/inc/post-topics.php');
-
-
 							?>
 
 							<div class="w-full sm:w-1/2 xl:w-1/3 px-2 mb-4">
@@ -183,12 +174,9 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 								</div>
 							</div>
 							
-							
 							<?php 
 									endwhile;
 									wp_reset_postdata();
-							?>
-							<?php
 
 								endif;
 							?>

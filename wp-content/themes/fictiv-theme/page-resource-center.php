@@ -9,8 +9,7 @@
     );
 
     hero_section( $args );
-    resource_center_cpt();
-
+ 	resource_center_cpt();
 ?>
 <section class="section">
 	<div class="container">
@@ -31,7 +30,6 @@
 						<?php 
 							foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
 
-								$count = 0;
 								$resource_args = array(
 									'posts_per_page' => 6,
 								    'post_type' => array( $type ),
@@ -47,7 +45,6 @@
 						?>
 						<div class="mb-2">
 							
-					
 							<div class="mb-2">
 								<div>
 									<p class="text-14 font-museo-700 text-grey-400 uppercase">
@@ -67,12 +64,11 @@
 									while ( $resources->have_posts() ) :
 										$resources->the_post();
 										
-
 										include( get_template_directory() . '/inc/post-topics.php');
 
 							?>
 							
-									<div class="max-w-sm px-1">
+									<div class="max-w-md md:max-w-sm px-1">
 										<div class="border border-grey-200 relative h-full">
 											<div class="relative h-0 thumbnail-ratio" >
 												<?php 
@@ -111,10 +107,7 @@
 													</div>
 												</div>
 											</div>
-											
 										</div>
-									
-									
 									</div>
 							
 							<?php 

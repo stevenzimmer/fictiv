@@ -13,8 +13,9 @@
 	<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 	<?php
-		// get_template_part('partials/filter', 'cpts');
-		filterContentType( resource_center_cpt(), 'sidebar' );
+		resource_center_cpt();
+
+		filterContentType( $GLOBALS['resource_post_types'], 'sidebar' );
 
 		foreach ( resource_center_taxonomies() as $i => $tax ) :
 			$labels = get_taxonomy( $tax );
@@ -27,7 +28,7 @@
 			filterTaxonomies( $labels->labels->singular_name, $filters, 'sidebar' );
 
 		endforeach;
-		// get_template_part('partials/filter', 'taxonomies');
+
 		get_template_part('partials/filter', 'btns');
 	?>
 		

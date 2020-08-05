@@ -1,7 +1,9 @@
 <?php 
 
-	function filterTaxonomies( $title, $filtersArr, $string) {
+	function filterTaxonomies( $title, $filtersArr, $id_append ) {
+
 ?>
+
 <div class="filter-tax-wrapper">
 		
 	<?php 
@@ -13,9 +15,10 @@
 
 			foreach ( $filtersArr as $i => $filter ) :
 
-				filter_checkbox( $filter, $string );
+				filter_checkbox( $filter, $id_append );
 				
 			endforeach;
+
 		?>
 	</div>
 		
@@ -24,65 +27,56 @@
 <?php
 	}
 
-?>
-
-
-<?php 
 	
-	function filterContentType( $types, $string ) {
+	function filterContentType( $types, $id_append ) {
+
+		if ( $id_append === 'mobile' ) :
+			
 ?>
-		<div class="">
-			<p class="text-12 uppercase font-museo-700 text-grey-600">content type</p>
-		</div>
-		<div class="pb-4 border-b border-grey-200">
+		<div class="filter-tax-wrapper">
 				
-				
-			<div class="flex flex-wrap -mx-2">
-			<?php
-
-				foreach ( $types as $i => $type ) :
-
-					filter_checkbox( $type, $string );
-
-				endforeach;
+			<?php 
+				resources_filter_title( 'content type');
 			?>
-			</div>
 
+			<div class="bg-grey-lighter filter-items overflow-hidden">
+				<?php 
+
+					foreach ( $types as $i => $type ) :
+
+						filter_checkbox( $type, $id_append );
+						
+					endforeach;
+				?>
+			</div>
+				
 		</div>
 <?php
-	}
-?>
-
-<?php 
-	
-	function filterTaxonomy( $types, $string ) {
+		else :
 ?>
 		<div class="">
-			<p class="text-12 uppercase font-museo-700 text-grey-600">content type</p>
-		</div>
-		<div class="pb-4 border-b border-grey-200">
-				
-				
-			<div class="flex flex-wrap -mx-2">
-			<?php
-
-				foreach ( $types as $i => $type ) :
-
-					filter_checkbox( $type, $string );
-
-				endforeach;
-			?>
+				<p class="text-12 uppercase font-museo-700 text-grey-600">content type</p>
 			</div>
+			<div class="pb-4 border-b border-grey-200">
+					
+					
+				<div class="flex flex-wrap -mx-2">
+				<?php
 
-		</div>
+					foreach ( $types as $i => $type ) :
+
+						filter_checkbox( $type, $id_append );
+
+					endforeach;
+				?>
+				</div>
+
+			</div>
 <?php
+		endif;
 	}
-?>
 
-<?php 
-	function filter_checkbox( $item, $i = 0 ) {
-
-		// print_r( gettype( $item ) );
+	function filter_checkbox( $item, $id_append ) {
 
 		$id_value = ( gettype( $item ) === 'string' ? 
 
@@ -121,11 +115,21 @@
 
 
 ?>
-	<div class="flex flex-row-reverse justify-between items-center px-2 py-1 filter-item ">
+	<div class="flex flex-row-reverse justify-between items-center py-1 filter-item <?php 
+		if ( gettype( $item ) === 'string' && $id_append !== 'mobile' ) :
+
+			echo 'px-1';
+		
+		else :
+		
+			echo 'px-2';
+		
+		endif;
+	?>">
 		<input 
 		class="filter-item-checkbox <?php 
 
-			if( gettype( $item ) === 'string' ) :
+			if( gettype( $item ) === 'string' && $id_append !== 'mobile' ) :
 
 				echo 'filter-content-btn hidden';
 
@@ -133,7 +137,7 @@
 
 		?>"
 		type="checkbox" 
-		id="<?php echo $id_value; ?>-<?php echo $i; ?>" 
+		id="<?php echo $id_value; ?>-<?php echo $id_append; ?>" 
 		name="<?php echo $name_value; ?>" 
 		value="<?php echo $value ?>"
 		<?php 
@@ -145,7 +149,7 @@
 
 		<label class="select-none block text-12 <?php 
 
-			if( gettype( $item ) === 'string' ) :
+			if( gettype( $item ) === 'string' && $id_append !== 'mobile' ) :
 
 				echo 'border px-3 rounded py-1 border-grey-200 font-museo-700 text-grey-600';
 
@@ -154,33 +158,32 @@
 				echo ' font-museo-500';
 
 			endif;
-		?>" for="<?php echo $id_value; ?>-<?php echo $i; ?>"><?php echo $label; ?></label>
+		?>" for="<?php echo $id_value; ?>-<?php echo $id_append; ?>"><?php echo $label; ?></label>
 		
 	</div>
 <?php
 	}
-?>
 
-<?php 
-function checkBoxesByGet( $get, $slug ) {
-	if ( isset( $get ) ) :
+	function checkBoxesByGet( $get, $slug ) {
 
-		foreach ( $get as $j => $query ) :
+		if ( isset( $get ) ) :
 
-			if ( gettype( $query ) === 'array' ) :
-				
-				foreach ( $query as $k => $item ) :
+			foreach ( $get as $j => $query ) :
 
-					if ( ( $j . '-' . $item ) === (  $slug ) ) : 
+				if ( gettype( $query ) === 'array' ) :
+					
+					foreach ( $query as $k => $item ) :
 
-						echo 'checked="true"';
+						if ( ( $j . '-' . $item ) === (  $slug ) ) : 
 
-					endif; 
+							echo 'checked="true"';
 
-				endforeach;
-			endif;
-		endforeach;
-	endif;
+						endif; 
 
-}
+					endforeach;
+				endif;
+			endforeach;
+		endif;
+
+	}
 ?>

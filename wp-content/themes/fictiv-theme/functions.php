@@ -82,13 +82,15 @@
 
         );
 
-        return $resource_post_types;
+        // return $resource_post_types;
 
     }
 
     function resource_center_taxonomies() {
+
         $resource_center_taxonomies = array();
-        foreach ( resource_center_cpt() as $i => $type ) :
+        
+        foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
 
             foreach ( get_post_type_object( $type )->taxonomies as $j => $tax ) :
                 

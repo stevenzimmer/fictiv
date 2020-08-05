@@ -3,7 +3,7 @@
 
 get_header();
 
-resource_center_cpt();
+
 
 $tax_query = array(
 	'relation' => 'OR'
@@ -39,7 +39,7 @@ $post_types = ( !empty( $content_types ) ?
 
 		: ( !empty( $_GET ) ?
 
-				$GLOBALS['resource_post_types']
+				resource_center_cpt()
 			
 			:
 
@@ -62,7 +62,7 @@ $filtered = new WP_Query( $args );
 $default_args = array(
 	'posts_per_page' => 6,
 	'post_parent'=> 0,
-	'post_type' => $GLOBALS['resource_post_types'],
+	'post_type' => resource_center_cpt()
 );
 
 $default = new WP_Query( $default_args );

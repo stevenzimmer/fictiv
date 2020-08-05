@@ -14,7 +14,10 @@ if ( document.body.classList.contains('page-template-page-resource-center')  ) {
           selector: row,
           duration: 200,
           easing: 'ease-out',
-          perPage: 3.3,
+          perPage: {
+            0: 1.5,
+            768: 3.3 
+          },
           startIndex: 0,
           draggable: true,
           multipleDrag: true,

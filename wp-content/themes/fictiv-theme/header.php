@@ -96,9 +96,13 @@
 		</div>
 
 		<?php 
-			if( is_search() || is_page_template('page-filter.php') || is_page_template('page-resource-center.php') ) :
+			// Show mobile filter on Resource center pages
+			if( is_search() || 
+				is_page_template('page-filter.php') || 
+				is_page_template('page-resource-center.php') ) :
+
 				include( get_template_directory() . '/inc/post-taxonomies.php');
-				// include( get_template_directory() . '/inc/check-box-by-get.php');
+
 		?>
 		<div class="relative w-full h-12 lg:hidden flex items-center border-t border-b border-white filter-content-mobile select-none" id="filter-content-mobile">
 			<div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div>
@@ -142,9 +146,10 @@
 							<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 							<?php
+								resource_center_cpt();
 
-								filterContentType( resource_center_cpt(), 'mobile' );
-
+								filterContentType( $GLOBALS['resource_post_types'], 'mobile' );
+								
 								foreach ( resource_center_taxonomies() as $i => $tax ) :
 									$labels = get_taxonomy( $tax );
 
@@ -165,7 +170,6 @@
 					</div>
 				</div>
 				
-
 			</div>
 		</div>
 		<?php 
@@ -173,45 +177,3 @@
 		?>
 		
 	</nav>
-	
-	<nav class="absolute w-full left-0 right-0 top-0 bg-transparent z-50 hidden">
-		
-		<div class="container relative py-4">
-			
-		
-			<div class="flex justify-between items-center">
-				<div class="w-20">
-					<a href="<?php echo home_url() ?>">
-						<?php 
-							echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-dark.svg');
-						?>
-					</a>
-				</div>
-				<div class="md:w-8/12 hidden md:block">
-					<div class="flex justify-end items-center">
-						<div class="md:w-8/12">
-							<?php 
-								wp_nav_menu( 
-									array(
-								    	'menu'              => "top-nav", 
-								    	'menu_class'        => "flex w-full items-center justify-between top-nav font-museo-700 text-14", 
-								    	'container_class'   => "",
-									)
-								);
-							?>
-							
-						</div>
-						<div class="w-8"></div>
-						<div class="">
-							<?php 
-								primary_button();
-							?>
-						</div>
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</nav>
-	
