@@ -1,12 +1,12 @@
 {
-    "key": "group_5edbc817c41c6",
-    "title": "Youtube ID",
+    "key": "group_5f3554183e5a3",
+    "title": "Thumbnail Graphic",
     "fields": [
         {
-            "key": "field_5edbc831b12e1",
-            "label": "Add YouTube ID",
-            "name": "youtube_id",
-            "type": "text",
+            "key": "field_5f355421639a4",
+            "label": "Upload Thumbnail",
+            "name": "material_thumbnail",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1500,
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -27,14 +32,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "cpt_video"
+                "value": "cpt_cap_material"
             }
         ],
         [
             {
-                "param": "post_type",
+                "param": "post_template",
                 "operator": "==",
-                "value": "cpt_cap_finish"
+                "value": "page-subprocess.php"
             }
         ]
     ],
@@ -46,5 +51,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597152631
+    "modified": 1597410385
 }

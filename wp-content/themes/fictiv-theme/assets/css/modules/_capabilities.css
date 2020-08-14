@@ -1,0 +1,119 @@
+.capabilities {
+
+	&-hero {
+
+		ul {
+			@apply pl-6;
+
+			li {
+				@apply mb-2 font-museo-700 text-20;
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+	}
+}
+
+.material {
+
+	&-finish {
+
+		p {
+			@apply mb-2;
+
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+	}
+}
+
+.about {
+
+	&-process {
+
+		p {
+			@apply mb-2;
+
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+	}
+}
+
+/*
+.design {
+
+	&-considerations {
+
+		ul {
+			list-style-image: url('./../images/icons/finish-design-considerations.svg');
+			@apply pl-6;
+
+			li {
+				@apply mb-2 font-museo-500 text-14;
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+	}
+}*/
+
+.box {
+
+	&-check {
+
+		ul {
+			@apply pl-6;
+
+			li {
+				@apply mb-2 font-museo-500 text-14;
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+
+		&-dark {
+
+			ul {
+				list-style-image: url('./../images/icons/finish-design-considerations.svg');
+			}
+		}
+
+		&-white {
+
+			ul {
+				list-style-image: url('./../images/icons/materials-hero-bullet.svg');
+			}
+		}
+	}
+}
+
+.material {
+
+	&-btn {
+
+		&.active {
+			@apply bg-teal-light border-teal-light;
+
+			p {
+				@apply text-white;
+			}
+
+			&:hover {
+				
+				p {
+					@apply text-white;
+				}
+				
+			}
+		}
+	}
+}

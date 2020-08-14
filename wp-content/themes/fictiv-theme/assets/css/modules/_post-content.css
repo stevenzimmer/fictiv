@@ -19,6 +19,14 @@
 			}
 		}
 
+		&.capabilities {
+			@apply text-16;
+
+			a {
+				@apply underline;
+			}
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}
@@ -98,6 +106,10 @@
 
 		ol {
 			@apply list-decimal;
+		}
+
+		hr {
+			@apply border-grey-200 mb-6;
 		}
 
 		/*

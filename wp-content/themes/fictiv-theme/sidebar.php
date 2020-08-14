@@ -37,6 +37,13 @@
 
 <div class="global-form-wrapper bg-grey-100 px-2 py-4 text-center ">
 	<form class="mktoForm sidebar" data-formId="597" data-form-type="global"></form>
+	<div class="text-center mt-2 subscribe-form-terms">
+
+        <?php 
+            get_template_part('partials/gdpr', 'text');
+        ?>
+    
+    </div>
 	<div class="global-form-success hidden">
 		<p>Thank you for subscribing!</p>
 	</div>

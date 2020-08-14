@@ -123,10 +123,17 @@
 					<div class="flex justify-start flex-wrap items-center">
 						<div class="w-full lg:w-1/4"></div>
 						<div class="w-full lg:w-3/4">
-							<div class="flex items-center justify-center md:justify-start flex-wrap">
+							<div class="flex justify-center md:justify-start flex-wrap">
 								<div class="w-full sm:w-7/12 lg:w-1/2 mb-6 sm:mb-0">
 									<div class="global-form-wrapper">
 										<form class="mktoForm horizontal" data-formId="597" data-form-type="global"></form>
+										<div class=" mt-2 subscribe-form-terms px-2">
+
+									        <?php 
+									            get_template_part('partials/gdpr', 'text');
+									        ?>
+									    
+									    </div>
 										<div class="global-form-success hidden">
 											<p>Thank you for subscribing!</p>
 										</div>

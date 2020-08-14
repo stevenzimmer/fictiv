@@ -1,12 +1,12 @@
 {
-    "key": "group_5edbc817c41c6",
-    "title": "Youtube ID",
+    "key": "group_5f31f88c306da",
+    "title": "Material Finish",
     "fields": [
         {
-            "key": "field_5edbc831b12e1",
-            "label": "Add YouTube ID",
-            "name": "youtube_id",
-            "type": "text",
+            "key": "field_5f31f89238881",
+            "label": "Paragraphs",
+            "name": "material_finish_paragraphs",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,10 +16,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -27,24 +27,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "cpt_video"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_cap_finish"
+                "value": "cpt_cap_material"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597152631
+    "modified": 1597110459
 }

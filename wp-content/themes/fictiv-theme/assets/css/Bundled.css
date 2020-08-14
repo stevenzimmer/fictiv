@@ -9,6 +9,7 @@
 @import "./modules/_post-content.css";
 @import "./modules/_page-content.css";
 @import "./modules/_homepage.css";
+@import "./modules/_capabilities.css";
 
 
 @import "./components/_btns.css";
@@ -37,14 +38,16 @@
 
 @font-face {
     font-family: 'museo-500';
-    src: url('./../fonts/museo-sans/500.ttf') format('truetype');
+    src: url('./../fonts/museo-sans/500.otf') format('opentype'),
+         url('./../fonts/museo-sans/500.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo-700';
-    src: url('./../fonts/museo-sans/700.ttf') format('truetype');
+    src: url('./../fonts/museo-sans/700.otf') format('opentype'),
+         url('./../fonts/museo-sans/700.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }

@@ -394,7 +394,8 @@
 				'cpt_ebook',
 				'cpt_case_study',
 				'cpt_video',
-				'cpt_tool'
+				'cpt_tool',
+
 			),
 			array(
 				'labels'	=> array(
@@ -425,7 +426,10 @@
 				'cpt_ebook',
 				'cpt_case_study',
 				'cpt_video',
-				'cpt_tool'
+				'cpt_tool',
+				'cpt_cap_material',
+				'cpt_cap_finish',
+				'page'
 			),
 			array(
 				'labels'	=> array(

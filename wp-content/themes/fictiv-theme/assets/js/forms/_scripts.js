@@ -49,6 +49,8 @@ if ( mkto_forms.length > 0 ) {
 	                if ( form.getFormElem()[0].dataset.formType === 'global' )  {
 	                	// Hide subscribe forms on success
 	                	form.getFormElem()[0].classList.add('hidden');
+	                	form.getFormElem()[0].parentElement.querySelector('.subscribe-form-terms').classList.add('hidden');
+
 	                	form.getFormElem()[0].parentElement.querySelector('.global-form-success').classList.remove('hidden');
 
 	                } else {

@@ -18,4 +18,5 @@ import './resources/_scripts';
 import './search/_scripts';
 import './nav/_scripts';
 import './forms/_scripts';
+import './capabilities/_scripts';
 

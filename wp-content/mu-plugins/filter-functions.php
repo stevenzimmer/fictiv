@@ -147,7 +147,7 @@
 		?>
 		>
 
-		<label class="select-none block text-12 <?php 
+		<label class="select-none cursor-pointer block text-12 <?php 
 
 			if( gettype( $item ) === 'string' && $id_append !== 'mobile' ) :
 
