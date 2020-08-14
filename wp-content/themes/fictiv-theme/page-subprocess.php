@@ -452,7 +452,7 @@ if ( have_posts() ) :
 
 <?php 
 
-     $about_the_process = get_field('about_the_process');
+     $about_the_process = get_field('about_this_item');
 
     if ( $about_the_process['paragraph'] ) :
         
@@ -487,18 +487,26 @@ if ( have_posts() ) :
                         <?php 
                             else :
 
-                        ?>
-                        <div class="relative h-0 p-0 overflow-hidden mb-2" style="padding-top: 56.25%">
-                            <img alt="<?php the_title() ?> thumbnail graphic" class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo $about_the_process['thumbnail_graphic']['url']; ?>">
+                                if ( get_field('material_thumbnail') ) :
+                                  
+                            ?>
+                        <div class="relative h-0 p-0 overflow-hidden" style="padding-top: 56.25%">
+                            <img alt="<?php the_title() ?> thumbnail graphic" class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                         
                         </div>
-                        <div>
+                        <?php 
+                                    if ( get_field('material_thumbnail')['caption'] ) :
+                            
+                        ?>
+                        <div class="mt-2">
                             <p class="font-museo-500 text-14 text-grey-600">
-                                <?php echo $about_the_process['thumbnail_graphic']['caption']; ?>
+                                <?php echo get_field('material_thumbnail')['caption']; ?>
                             </p>
                         </div>
-
-                        <?php
+                        <?php 
+                                    endif;
+                                endif; 
+                 
                             endif;
                         ?>
                         

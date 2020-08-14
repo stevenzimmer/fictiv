@@ -145,7 +145,7 @@ if ( have_posts() ) :
 
 <?php 
 
-     $about_the_material = get_field('about_the_material');
+     $about_the_material = get_field('about_this_item');
 
     if ( $about_the_material['paragraph'] ) :
         

@@ -1,11 +1,11 @@
 {
     "key": "group_5f3477a191ff3",
-    "title": "About the Process",
+    "title": "About Section",
     "fields": [
         {
             "key": "field_5f3477a19dc67",
-            "label": "About the Process",
-            "name": "about_the_process",
+            "label": "About this item",
+            "name": "about_this_item",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -54,30 +54,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5f3477a1a0474",
-                    "label": "Thumbnail graphic",
-                    "name": "thumbnail_graphic",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         }
@@ -99,6 +75,13 @@
                 "operator": "==",
                 "value": "page-subprocess.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_cap_material"
+            }
         ]
     ],
     "menu_order": 0,
@@ -109,5 +92,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597274085
+    "modified": 1597414455
 }
