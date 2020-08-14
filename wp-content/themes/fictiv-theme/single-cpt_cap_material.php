@@ -167,30 +167,42 @@ if ( have_posts() ) :
                     </div>
 
                     <div class="w-full lg:w-1/2 px-6">
+
                         <?php 
-                            if ( $about_the_material['youtube_id'] ) :
-                            
+
+                            if ( $about_the_material['youtube_id'] ) :    
+                        
                         ?>
                         <div class="relative h-0 p-0 overflow-hidden mb-6" style="padding-top: 56.25%">
                             
                             <iframe class="w-full h-full absolute inset-0 lazyload" data-src="https://www.youtube.com/embed/<?php echo $about_the_material['youtube_id']; ?>?rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                            
                         </div>
                         <?php 
                             else :
 
                         ?>
-                        <div class="relative h-0 p-0 overflow-hidden mb-2" style="padding-top: 56.25%">
-                            <img alt="<?php the_title() ?> thumbnail graphic" class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo $about_the_material['thumbnail_graphic']['url']; ?>">
+                            <?php 
+                                if ( get_field('material_thumbnail') ) :
+                                  
+                            ?>
+                        <div class="relative h-0 p-0 overflow-hidden" style="padding-top: 56.25%">
+                            <img alt="<?php the_title() ?> thumbnail graphic" class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                         
                         </div>
-                        <div>
+                        <?php 
+                                    if ( get_field('material_thumbnail')['caption'] ) :
+                            
+                        ?>
+                        <div class="mt-2">
                             <p class="font-museo-500 text-14 text-grey-600">
-                                <?php echo $about_the_material['thumbnail_graphic']['caption']; ?>
+                                <?php echo get_field('material_thumbnail')['caption']; ?>
                             </p>
                         </div>
-
+                        <?php 
+                                    endif;
+                                endif; 
+                        ?>
                         <?php
                             endif;
                         ?>
@@ -357,7 +369,7 @@ if ( have_posts() ) :
             endif;
         ?>
         <div class="flex justify-center">
-            <div class="w-11/12 lg:w-7/12">
+            <div class="w-11/12 vlg:w-7/12">
                 <div class="design-considerations post-content capabilities box-check box-check-dark">
                     <?php the_field('design_recommendations'); ?>
                 </div>
