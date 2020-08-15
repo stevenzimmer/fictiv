@@ -143,6 +143,81 @@ if ( have_posts() ) :
     endif;
 ?>
 
+
+<section class="py-20">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="font-museo-700 text-20">At a glance</h2>
+        </div>
+       <?php 
+            if( have_rows('at_a_glance_materials') ) :
+        ?>
+        <div class="flex justify-center mb-6">
+            <div class="w-full lg:w-11/12">
+            
+                <div class="py-10">
+                  
+                    <div class="flex flex-wrap md:flex-no-wrap items-stretch">
+                         <?php 
+                            $i = 0;
+                            while( have_rows('at_a_glance_materials') ) : 
+                                    the_row();
+                        ?>
+                        <div class="w-full flex md:block h-full">
+                            <div class="w-1/2 md:w-full p-4 bg-grey-100 lg:h-20">
+                                <p class="text-14 text-grey-700 font-museo-700">
+                                    <?php the_sub_field('column_title'); ?>
+                                </p>
+                            </div>
+                            <?php 
+                                if( have_rows('column_cells') ) :
+
+                                    $j = 0;
+
+                                    while( have_rows('column_cells') ) :
+                                        the_row();
+                            ?>
+
+                            <div class=" w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-24 border-r border-l border-t md:border-t-0">
+                                <p class="font-museo-500 text-14 text-grey-600">
+                                    <?php the_sub_field('column_cell'); ?>
+                                </p>
+                                
+                            </div>
+                            <?php 
+                                    $j++;
+                                    
+                                    endwhile;
+                                
+                                endif;
+                            ?>
+                        </div>
+                        
+                        <?php 
+                            
+                            $i++;
+                            
+                            endwhile;
+                        ?>
+                    </div>
+                </div>
+         
+            </div>
+        </div>
+        <?php 
+            endif;
+        ?>
+        <div class="flex justify-center">
+            <div class="w-11/12 lg:w-7/12">
+                <div class="design-considerations post-content capabilities box-check box-check-dark">
+                    <?php the_field('design_recommendations'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <?php 
 
      $about_the_material = get_field('about_this_item');
