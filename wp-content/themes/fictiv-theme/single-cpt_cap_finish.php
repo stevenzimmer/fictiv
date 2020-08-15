@@ -51,7 +51,7 @@ if ( have_posts() ) :
 
                             $hero_cta_btn = get_field('capabilities_hero_cta_button');
 
-                            if ( $hero_cta_btn ) :
+                            if ( $hero_cta_btn['text'] ) :
                                 
                         ?>
                         <div>
@@ -185,7 +185,6 @@ if ( have_posts() ) :
                     if( get_sub_field('about_the_process') ):
                 ?>
 
-
                 <div class="py-10">
                     <div class="text-center mb-6">
                         <h2 class="font-museo-700 text-20">About the Process</h2>
@@ -207,7 +206,6 @@ if ( have_posts() ) :
             
                     if( get_sub_field('design_considerations') ):
                 ?>
-
 
                 <div class="py-10">
                     <div class="text-center mb-6">
@@ -231,9 +229,7 @@ if ( have_posts() ) :
             </div>
         </div>
        
-        
     </div>
-    
 </section>
 
 <?php 

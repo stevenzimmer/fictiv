@@ -21,7 +21,7 @@
             "min_width": "",
             "min_height": "",
             "min_size": "",
-            "max_width": 1500,
+            "max_width": 1600,
             "max_height": "",
             "max_size": "",
             "mime_types": ""
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597412941
+    "modified": 1597417045
 }

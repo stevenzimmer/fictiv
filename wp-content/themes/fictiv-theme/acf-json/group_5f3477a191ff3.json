@@ -21,7 +21,26 @@
                     "key": "field_5f3477a1a044f",
                     "label": "Paragraph",
                     "name": "paragraph",
-                    "type": "textarea",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5f3477a1a046b",
+                    "label": "YouTube Video ID",
+                    "name": "youtube_id",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -32,14 +51,14 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
-                    "key": "field_5f3477a1a046b",
-                    "label": "YouTube ID",
-                    "name": "youtube_id",
+                    "key": "field_5f36a8a1c276b",
+                    "label": "YouTube Playlist ID",
+                    "name": "youtube_playlist_id",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -92,5 +111,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597414455
+    "modified": 1597417660
 }

@@ -32,7 +32,7 @@ if ( have_posts() ) :
                             </p>
                             
                         </div>
-                        <div class="text-white mb-2">
+                        <div class="text-white ">
                             <h1><?php 
                                 the_title()
                             ?></h1>
@@ -41,7 +41,7 @@ if ( have_posts() ) :
                         <?php 
                             if( get_field('capabilities_hero_paragraph') ) : 
                         ?>
-                        <div class="text-white capabilities-hero-paragraph box-check-white mb-4">
+                        <div class="text-white capabilities-hero-paragraph box-check-white mb-4 mt-2">
                             <?php 
                                 the_field('capabilities_hero_paragraph');
                             ?>
@@ -161,22 +161,31 @@ if ( have_posts() ) :
 
                 <div class="flex -mx-6 flex-wrap justify-center lg:justify-start">
                     <div class="w-11/12 lg:w-1/2 px-6 mb-6 lg:mb-0 post-content capabilities">
-                        <p class="font-museo-500 text-grey-600 text-14">
+                        <div class="font-museo-500 text-grey-600 text-14">
                             <?php echo $about_the_material['paragraph']; ?>
-                        </p>
+                        </div>
                     </div>
 
                     <div class="w-full lg:w-1/2 px-6">
-
                         <?php 
 
-                            if ( $about_the_material['youtube_id'] ) :    
+                            if ( $about_the_material['youtube_id'] || 
+                                 $about_the_material['youtube_playlist_id'] ) :    
                         
                         ?>
                         <div class="relative h-0 p-0 overflow-hidden mb-6" style="padding-top: 56.25%">
-                            
-                            <iframe class="w-full h-full absolute inset-0 lazyload" data-src="https://www.youtube.com/embed/<?php echo $about_the_material['youtube_id']; ?>?rel=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+                            <iframe class="w-full h-full absolute inset-0 lazyload" id="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/<?php 
+                                if( $about_the_material['youtube_playlist_id'] ) :
+
+                                    echo '?list=' . $about_the_material['youtube_playlist_id'] .'&amp;listType=playlist';
+                                else :
+
+                                    echo $about_the_material['youtube_id'] .'/?';
+
+                                endif;
+                            ?>&amp;wmode=opaque&amp;rel=0&amp;enablejsapi=1"></iframe>
+                            
                         </div>
                         <?php 
                             else :
@@ -220,7 +229,7 @@ if ( have_posts() ) :
 ?>
 
 <?php 
-    if( have_rows('material_properties_table') ):
+    if( have_rows('material_properties_tables') ):
 ?>
 <section class="py-20">
     <div class="container">
@@ -230,38 +239,64 @@ if ( have_posts() ) :
                 <div class="text-center mb-6">
                     <h2 class="font-museo-700 text-20">Material Properties</h2>
                 </div>
-                <div class="flex flex-wrap md:flex-no-wrap ">
-                     <?php 
-                        $i = 0;
-                        while( have_rows('material_properties_table') ) : 
-                                the_row();
-                    ?>
-                    <div class="w-full flex md:block">
-                        <div class="w-1/2 md:w-full p-4 bg-grey-100">
-                            <p class="text-14 text-grey-700 font-museo-700">
-                                <?php the_sub_field('material_properties_column_title'); ?>
-                            </p>
-                        </div>
-                        <div class="w-1/2 md:w-full p-4 border-b border-grey-100 h-full border-r <?php 
-
-                            if( $i === 0 ) :
-                                echo 'border-l border-t md:border-t-0';
-                            endif;
-                        ?>">
-                            <p class="font-museo-500 text-14 text-grey-600">
-                                <?php the_sub_field('material_properties_column_value'); ?>
-                            </p>
-                            
-                        </div>
+                
+                 <?php 
+                    $i = 0;
+                    while( have_rows('material_properties_tables') ) : 
+                        the_row();
+                ?>
+                <div class="mb-6 last:mb-0">
+                <?php 
+                        if( get_sub_field('material_properties_title') ) :
+                ?>
+                    <div class="mb-2">
+                        <p class="text-grey-600 font-museo-500">
+                            <?php the_sub_field('material_properties_title'); ?>
+                        </p>
                     </div>
+
+                <?php 
+                        endif;
+                ?>
+                    <div class="flex flex-wrap md:flex-no-wrap ">
+                <?php
+
+                        $i = 0;
+                        while( have_rows('material_properties_table') ) :
+                            the_row();
+                ?>
                     
-                    <?php 
+                        <div class="w-full flex md:block ">
+                            <div class="w-1/2 md:w-full p-4 bg-grey-100 h-20">
+                                <p class="text-14 text-grey-700 font-museo-700">
+                                    <?php the_sub_field('material_properties_column_title'); ?>
+                                </p>
+                            </div>
+                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-24 border-r <?php 
+
+                                if( $i === 0 ) :
+                                    echo 'border-l border-t md:border-t-0';
+                                endif;
+                            ?>">
+                                <p class="font-museo-500 text-14 text-grey-600">
+                                    <?php the_sub_field('material_properties_column_value'); ?>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    
+                    
+                <?php 
                         $i++;
                         endwhile;
-                    ?>
+                ?>
+                    </div>
                 </div>
                
-         
+                <?php
+                    endwhile;
+                ?>
+               
             </div>
         </div>
        
@@ -369,7 +404,7 @@ if ( have_posts() ) :
             endif;
         ?>
         <div class="flex justify-center">
-            <div class="w-11/12 vlg:w-7/12">
+            <div class="w-11/12 lg:w-7/12">
                 <div class="design-considerations post-content capabilities box-check box-check-dark">
                     <?php the_field('design_recommendations'); ?>
                 </div>
