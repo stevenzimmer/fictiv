@@ -126,5 +126,39 @@
 
     require get_theme_file_path('/inc/custom-rest-route.php');
 
+    function capabilities_table( $col_title, $cell_columns, $cell ) {
+?>
+       <div class="w-full flex flex-row md:flex-col ">
+            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-20 ">
+                <p class="text-14 text-grey-700 font-museo-700">
+                    <?php echo get_sub_field( $col_title ); ?>
+                </p>
+            </div>
+            <?php 
+                if( have_rows( $cell_columns ) ) :
+
+                    $j = 0;
+
+                    while( have_rows( $cell_columns ) ) :
+                        the_row();
+            ?>
+
+            <div class="w-full p-4 border-b border-grey-100 border-r border-l border-t md:border-t-0 md:flex-1">
+                <p class="font-museo-500 text-14 text-grey-600">
+                    <?php echo get_sub_field( $cell ); ?>
+                </p>
+                
+            </div>
+            <?php 
+                    $j++;
+                    
+                    endwhile;
+                
+                endif;
+            ?>
+        </div>
+
+<?php
+    }
 
 ?>

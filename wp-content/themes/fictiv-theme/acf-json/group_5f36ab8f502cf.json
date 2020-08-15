@@ -56,7 +56,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add column",
                     "sub_fields": [
                         {
@@ -80,9 +80,9 @@
                         },
                         {
                             "key": "field_5f36ac3dd0503",
-                            "label": "Column Value",
-                            "name": "material_properties_column_value",
-                            "type": "text",
+                            "label": "Column Cells",
+                            "name": "material_properties_column_cells",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -91,11 +91,32 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add cell",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f37ea492a0f2",
+                                    "label": "Cell",
+                                    "name": "material_properties_column_cell",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
                         }
                     ]
                 }
@@ -119,5 +140,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597418923
+    "modified": 1597500025
 }

@@ -90,6 +90,13 @@
                 "operator": "==",
                 "value": "cpt_cap_material"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-subprocess.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -100,5 +107,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597496723
+    "modified": 1597501159
 }

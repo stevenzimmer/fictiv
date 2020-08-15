@@ -72,74 +72,34 @@ if ( have_posts() ) :
 </header>
 
 <?php 
-    $ataglance = get_field('at_a_glance');
-
-    if( isset( $ataglance ) ) :
+    if( have_rows('at_a_glance_materials') ) :
 ?>
-<section class="py-20">
+<section class="pt-20">
     <div class="container">
-        <div class="flex justify-center">
+        <div class="text-center">
+            <h2 class="font-museo-700 text-20">At a glance</h2>
+        </div>
+      
+        <div class="flex justify-center mb-6">
             <div class="w-full lg:w-11/12">
-                
+            
                 <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">At a glance</h2>
-                    </div>
-                    <div class="flex flex-wrap md:flex-no-wrap ">
-                        <?php 
-                            $i = 0;
-                            foreach ( $ataglance as $i => $glance ) :
-                                
+                  
+                    <div class="flex flex-wrap md:flex-no-wrap items-stretch">
+                         <?php 
+                    
+                            while( have_rows('at_a_glance_materials') ) : 
+                                    the_row();
+
+                                    capabilities_table('column_title', 'column_cells', 'column_cell' );
+                            
+                            endwhile;
                         ?>
-                        <div class="w-full flex md:block ">
-                            <div class="w-1/2 md:w-full p-4  bg-grey-100">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php echo str_replace( '_', ' ', ucfirst( $i ) ); ?>
-                                </p>
-                            </div>
-                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 h-full border-r <?php 
-
-                                if( $i === 0 ) :
-                                    echo 'border-l border-t md:border-t-0';
-                                endif;
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php 
-                                        if ( gettype( $glance ) !== 'string' ) :
-                                        
-                                            foreach ( $glance as $j => $material ) :
-                                             
-                                    ?>
-
-                                    <a class="text-teal-light font-museo-500" href="<?php echo get_permalink( $material->ID ); ?>" ><?php echo $material->post_title; ?></a>,&nbsp;
-                                    
-                                    <?php
-                                            endforeach;
-
-                                        else :
-                                            
-                                            echo $glance;
-
-                                        endif;
-
-                                    ?>
-                                </p>
-                                
-                            </div>
-                        </div>
-
-                        <?php 
-                            $i++;
-                            endforeach;
-                        ?>
-                        
-                        
                     </div>
                 </div>
-         
             </div>
         </div>
-       
+      
     </div>
 </section>
 
@@ -383,52 +343,16 @@ if ( have_posts() ) :
         ?>
         <div class="flex justify-center mb-6">
             <div class="w-full lg:w-11/12">
-            
+                
                 <div class="py-10">
                   
-                    <div class="flex flex-wrap md:flex-no-wrap items-stretch">
+                    <div class="flex flex-wrap md:flex-no-wrap">
                          <?php 
-                            $i = 0;
+
                             while( have_rows('design_recomendations_table') ) : 
                                     the_row();
-                        ?>
-                        <div class="w-full flex md:block h-full">
-                            <div class="w-1/2 md:w-full p-4 bg-grey-100 lg:h-20">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('design_recomendations_table_column_title'); ?>
-                                </p>
-                            </div>
-                            <?php 
-                                if( have_rows('design_recomendations_table_column_value') ) :
 
-                                    $j = 0;
-
-                                    while( have_rows('design_recomendations_table_column_value') ) :
-                                        the_row();
-                            ?>
-
-                            <div class=" w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-20 border-r border-l border-t md:border-t-0' <?php 
-
-                            
-
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('design_recomendations_table_column_cell'); ?>
-                                </p>
-                                
-                            </div>
-                            <?php 
-                                    $j++;
-                                    
-                                    endwhile;
-                                
-                                endif;
-                            ?>
-                        </div>
-                        
-                        <?php 
-                            
-                            $i++;
+                                    capabilities_table('design_recomendations_table_column_title','design_recomendations_table_column_value','design_recomendations_table_column_cell');
                             
                             endwhile;
                         ?>
@@ -520,184 +444,8 @@ if ( have_posts() ) :
 
 <?php 
     endif;
-?>
-<?php
-
-    if( have_rows('finish_module') ):
-?>
-
-<?php 
-        while( have_rows('finish_module') ) : 
-            the_row();
-?>
-<section class="py-10">
-    <div class="container">
-        <div class="flex justify-center">
-            <div class="w-11/12">
-                 <div class="text-center py-10 border-b border-grey-200">
-                    <div>
-                        <h2 class="text-29 text-black"><?php the_sub_field('finish_module_title'); ?></h2>
-                    </div>
-                    
-                </div>
-                <?php 
-                    if( have_rows('finish_module_at_a_glance') ):
-                ?>
 
 
-                <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">At a glance</h2>
-                    </div>
-                    <div class="flex flex-wrap md:flex-no-wrap ">
-                         <?php 
-                            $i = 0;
-                            while( have_rows('finish_module_at_a_glance') ) : 
-                                    the_row();
-                        ?>
-                        <div class="w-full flex md:block">
-                            <div class="w-1/2 md:w-full p-4  bg-grey-100">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('finish_module_at_a_glance_column_title'); ?>
-                                </p>
-                            </div>
-                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 h-full border-r <?php 
-
-                                if( $i === 0 ) :
-                                    echo 'border-l border-t md:border-t-0';
-                                endif;
-                            ?>">
-                                <p class="font-museo-500 text-14 <?php 
-                                    if( $i === 0 ) :
-
-                                        echo 'text-teal-light';
-
-                                    else :
-
-                                        echo 'text-grey-600';
-
-                                    endif;
-                                ?>">
-                                    <?php the_sub_field('finish_module_at_a_glance_column_value'); ?>
-                                </p>
-                                
-                            </div>
-                        </div>
-                        
-                        <?php 
-                            $i++;
-                            endwhile;
-                        ?>
-                    </div>
-                </div>
-
-                <?php 
-                    endif;
-                ?>
-
-                <?php 
-                    if( have_rows('color_options') ):
-                ?>
-
-
-                <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">Color Options</h2>
-                    </div>
-                    <div class="flex -mx-1 flex-wrap md:flex-no-wrap">
-                         <?php 
-                            while( have_rows('color_options') ) : 
-                                    the_row();
-
-                        ?>
-                        <div class="w-full px-1 mb-6 md:mb-0">
-                            <div>
-                                <div class="mb-2">
-                                    <img class="lazyload w-full" alt="<?php the_title(); ?> <?php echo get_sub_field('image')['caption']; ?>" data-src="<?php echo get_sub_field('image')['url'] ?>">
-                                </div>
-                                <div>
-                                    <p class="text-grey-600 text-14 font-museo-500"><?php echo get_sub_field('image')['caption']; ?></p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <?php 
-                            endwhile;
-                        ?>
-                    </div>
-                </div>
-
-                <?php 
-                    endif;
-                ?>
-
-                <?php 
-                    if( get_sub_field('about_the_process') ):
-                ?>
-
-
-                <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">About the Process</h2>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="lg:w-8/12">
-                            <div class="font-museo-500 text-14 about-process text-grey-600">
-                                <?php 
-                                    the_sub_field('about_the_process');
-                                ?>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <?php 
-                    endif;
-                ?>
-
-                <?php 
-                    if( get_sub_field('design_considerations') ):
-                ?>
-
-
-                <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">Design considerations</h2>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="lg:w-8/12">
-                            <div class="font-museo-500 text-14 design-considerations text-grey-600">
-                                <?php 
-                                    the_sub_field('design_considerations');
-                                ?>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <?php 
-                    endif;
-                ?>
-            </div>
-        </div>
-       
-        
-    </div>
-    
-</section>
-
-<?php 
-        endwhile;
-    endif;
-?>
-
-
-<?php 
-
-// print_r( $processes );
 resource_center_cpt();
 
 $related_args = array(

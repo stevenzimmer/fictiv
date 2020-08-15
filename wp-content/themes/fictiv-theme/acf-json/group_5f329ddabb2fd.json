@@ -56,7 +56,7 @@
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add Column",
                     "sub_fields": [
                         {
@@ -80,9 +80,9 @@
                         },
                         {
                             "key": "field_5f329e5a53fd6",
-                            "label": "Column Value",
-                            "name": "finish_module_at_a_glance_column_value",
-                            "type": "text",
+                            "label": "Column Cells",
+                            "name": "finish_module_at_a_glance_column_cells",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -91,11 +91,32 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Cell",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f37ebc2b6dc9",
+                                    "label": "Cell",
+                                    "name": "finish_module_at_a_glance_column_cell",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
                         }
                     ]
                 },
@@ -202,5 +223,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597416638
+    "modified": 1597500406
 }

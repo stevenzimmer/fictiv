@@ -112,31 +112,12 @@ if ( have_posts() ) :
                     </div>
                     <div class="flex flex-wrap md:flex-no-wrap ">
                          <?php 
-                            $i = 0;
+                  
                             while( have_rows('finish_module_at_a_glance') ) : 
                                     the_row();
-                        ?>
-                        <div class="w-full flex md:block">
-                            <div class="w-1/2 md:w-full p-4  bg-grey-100">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('finish_module_at_a_glance_column_title'); ?>
-                                </p>
-                            </div>
-                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 h-full border-r <?php 
-
-                                if( $i === 0 ) :
-                                    echo 'border-l border-t md:border-t-0';
-                                endif;
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('finish_module_at_a_glance_column_value'); ?>
-                                </p>
-                                
-                            </div>
-                        </div>
-                        
-                        <?php 
-                            $i++;
+                                    capabilities_table('finish_module_at_a_glance_column_title','finish_module_at_a_glance_column_cells','finish_module_at_a_glance_column_cell');
+                
+                  
                             endwhile;
                         ?>
                     </div>
@@ -273,7 +254,6 @@ if ( $related_posts->have_posts() ) :
                 
                 <div class="flex flex-wrap -mx-2">
                     <?php 
-                        
 
                         while ( $related_posts->have_posts() ) : 
                             $related_posts->the_post();

@@ -143,15 +143,15 @@ if ( have_posts() ) :
     endif;
 ?>
 
-
+ <?php 
+    if( have_rows('at_a_glance_materials') ) :
+?>
 <section class="py-20">
     <div class="container">
         <div class="text-center">
             <h2 class="font-museo-700 text-20">At a glance</h2>
         </div>
-       <?php 
-            if( have_rows('at_a_glance_materials') ) :
-        ?>
+      
         <div class="flex justify-center mb-6">
             <div class="w-full lg:w-11/12">
             
@@ -159,65 +159,27 @@ if ( have_posts() ) :
                   
                     <div class="flex flex-wrap md:flex-no-wrap items-stretch">
                          <?php 
-                            $i = 0;
+                    
                             while( have_rows('at_a_glance_materials') ) : 
                                     the_row();
-                        ?>
-                        <div class="w-full flex md:block h-full">
-                            <div class="w-1/2 md:w-full p-4 bg-grey-100 lg:h-20">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('column_title'); ?>
-                                </p>
-                            </div>
-                            <?php 
-                                if( have_rows('column_cells') ) :
 
-                                    $j = 0;
-
-                                    while( have_rows('column_cells') ) :
-                                        the_row();
-                            ?>
-
-                            <div class=" w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-24 border-r border-l border-t md:border-t-0">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('column_cell'); ?>
-                                </p>
-                                
-                            </div>
-                            <?php 
-                                    $j++;
-                                    
-                                    endwhile;
-                                
-                                endif;
-                            ?>
-                        </div>
-                        
-                        <?php 
+                                    capabilities_table('column_title', 'column_cells', 'column_cell' );
                             
-                            $i++;
+                    
                             
                             endwhile;
                         ?>
                     </div>
                 </div>
-         
             </div>
         </div>
-        <?php 
-            endif;
-        ?>
-        <div class="flex justify-center">
-            <div class="w-11/12 lg:w-7/12">
-                <div class="design-considerations post-content capabilities box-check box-check-dark">
-                    <?php the_field('design_recommendations'); ?>
-                </div>
-            </div>
-        </div>
+      
     </div>
 </section>
 
-
+<?php 
+    endif;
+?>
 <?php 
 
      $about_the_material = get_field('about_this_item');
@@ -336,33 +298,11 @@ if ( have_posts() ) :
                     <div class="flex flex-wrap md:flex-no-wrap ">
                 <?php
 
-                        $i = 0;
                         while( have_rows('material_properties_table') ) :
                             the_row();
-                ?>
-                    
-                        <div class="w-full flex md:block ">
-                            <div class="w-1/2 md:w-full p-4 bg-grey-100 h-20">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('material_properties_column_title'); ?>
-                                </p>
-                            </div>
-                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-24 border-r <?php 
-
-                                if( $i === 0 ) :
-                                    echo 'border-l border-t md:border-t-0';
-                                endif;
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('material_properties_column_value'); ?>
-                                </p>
-                                
-                            </div>
-                        </div>
-                    
-                    
-                <?php 
-                        $i++;
+                            capabilities_table('material_properties_column_title','material_properties_column_cells','material_properties_column_cell');
+                
+                        
                         endwhile;
                 ?>
                     </div>
@@ -410,63 +350,26 @@ if ( have_posts() ) :
 <?php 
     endif;
 ?>
-
+ <?php 
+    if( have_rows('design_recomendations_table') || get_field('design_recommendations') ) :
+?>
 <section class="py-20">
     <div class="container">
         <div class="text-center">
             <h2 class="font-museo-700 text-20">Design Recommendations</h2>
         </div>
-       <?php 
-            if( have_rows('design_recomendations_table') ) :
-        ?>
+     
         <div class="flex justify-center mb-6">
             <div class="w-full lg:w-11/12">
             
                 <div class="py-10">
                   
-                    <div class="flex flex-wrap md:flex-no-wrap items-stretch">
+                    <div class="flex flex-wrap md:flex-no-wrap">
                          <?php 
-                            $i = 0;
+
                             while( have_rows('design_recomendations_table') ) : 
                                     the_row();
-                        ?>
-                        <div class="w-full flex md:block h-full">
-                            <div class="w-1/2 md:w-full p-4 bg-grey-100 lg:h-20">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('design_recomendations_table_column_title'); ?>
-                                </p>
-                            </div>
-                            <?php 
-                                if( have_rows('design_recomendations_table_column_value') ) :
-
-                                    $j = 0;
-
-                                    while( have_rows('design_recomendations_table_column_value') ) :
-                                        the_row();
-                            ?>
-
-                            <div class=" w-1/2 md:w-full p-4 border-b border-grey-100 lg:h-20 border-r border-l border-t md:border-t-0' <?php 
-
-                            
-
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('design_recomendations_table_column_cell'); ?>
-                                </p>
-                                
-                            </div>
-                            <?php 
-                                    $j++;
-                                    
-                                    endwhile;
-                                
-                                endif;
-                            ?>
-                        </div>
-                        
-                        <?php 
-                            
-                            $i++;
+                                    capabilities_table('design_recomendations_table_column_title', 'design_recomendations_table_column_value', 'design_recomendations_table_column_cell' ); 
                             
                             endwhile;
                         ?>
@@ -475,9 +378,7 @@ if ( have_posts() ) :
          
             </div>
         </div>
-        <?php 
-            endif;
-        ?>
+       
         <div class="flex justify-center">
             <div class="w-11/12 lg:w-7/12">
                 <div class="design-considerations post-content capabilities box-check box-check-dark">
@@ -487,7 +388,9 @@ if ( have_posts() ) :
         </div>
     </div>
 </section>
-
+ <?php 
+            endif;
+        ?>
 <?php 
 
 resource_center_cpt();
