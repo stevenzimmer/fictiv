@@ -87,63 +87,6 @@ if ( have_posts() ) :
 </header>
 
 <?php 
-    if( have_rows('at_a_glance_table') ):
-?>
-<section class="py-20">
-    <div class="container">
-        <div class="flex justify-center">
-            <div class="w-full lg:w-11/12">
-            
-                <div class="py-10">
-                    <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">At a glance</h2>
-                    </div>
-                    <div class="flex flex-wrap md:flex-no-wrap ">
-                         <?php 
-                            $i = 0;
-                            while( have_rows('at_a_glance_table') ) : 
-                                    the_row();
-                        ?>
-                        <div class="w-full flex md:block">
-                            <div class="w-1/2 md:w-full p-4  bg-grey-100">
-                                <p class="text-14 text-grey-700 font-museo-700">
-                                    <?php the_sub_field('materials_at_a_glance_column_title'); ?>
-                                </p>
-                            </div>
-                            <div class="w-1/2 md:w-full p-4 border-b border-grey-100 h-full border-r <?php 
-
-                                if( $i === 0 ) :
-                                
-                                    echo 'border-l border-t md:border-t-0';
-                                
-                                endif;
-
-                            ?>">
-                                <p class="font-museo-500 text-14 text-grey-600">
-                                    <?php the_sub_field('materials_at_a_glance_column_value'); ?>
-                                </p>
-                                
-                            </div>
-                        </div>
-                        
-                        <?php 
-                            $i++;
-                            endwhile;
-                        ?>
-                    </div>
-                </div>
-         
-            </div>
-        </div>
-       
-    </div>
-</section>
-
-<?php 
-    endif;
-?>
-
- <?php 
     if( have_rows('at_a_glance_materials') ) :
 ?>
 <section class="py-20">

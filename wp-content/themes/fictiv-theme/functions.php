@@ -129,7 +129,7 @@
     function capabilities_table( $col_title, $cell_columns, $cell ) {
 ?>
        <div class="w-full flex flex-row md:flex-col ">
-            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-20 ">
+            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-18 ">
                 <p class="text-14 text-grey-700 font-museo-700">
                     <?php echo get_sub_field( $col_title ); ?>
                 </p>
