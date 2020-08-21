@@ -132,8 +132,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
+    "hide_on_screen": [
+        "the_content",
+        "author"
+    ],
+    "active": true,
     "description": "",
-    "modified": 1597325775
+    "modified": 1597834260
 }

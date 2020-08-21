@@ -63,7 +63,7 @@
                             "key": "field_5f37dd59bc48c",
                             "label": "Column Cell",
                             "name": "column_cell",
-                            "type": "text",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -73,10 +73,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "tabs": "visual",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
                         }
                     ]
                 }
@@ -107,5 +107,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597501159
+    "modified": 1597706953
 }

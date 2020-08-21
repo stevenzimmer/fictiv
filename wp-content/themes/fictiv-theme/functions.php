@@ -10,7 +10,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.1', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.3');
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.4');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -128,8 +128,8 @@
 
     function capabilities_table( $col_title, $cell_columns, $cell ) {
 ?>
-       <div class="w-full flex flex-row md:flex-col ">
-            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-18 ">
+       <div class="w-full flex flex-row md:flex-col capabilities-table">
+            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-16 ">
                 <p class="text-14 text-grey-700 font-museo-700">
                     <?php echo get_sub_field( $col_title ); ?>
                 </p>
@@ -143,10 +143,10 @@
                         the_row();
             ?>
 
-            <div class="w-full p-4 border-b border-grey-100 border-r border-l border-t md:border-t-0 md:flex-1">
-                <p class="font-museo-500 text-14 text-grey-600">
+            <div class="w-full p-4 border-b border-grey-100 border-r border-l border-t md:border-t-0 md:flex-1 max-w-md">
+                <div class=" post-content capabilities-table-cell">
                     <?php echo get_sub_field( $cell ); ?>
-                </p>
+                </div>
                 
             </div>
             <?php 

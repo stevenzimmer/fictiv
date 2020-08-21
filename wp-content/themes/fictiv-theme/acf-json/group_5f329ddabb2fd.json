@@ -91,7 +91,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
+                            "collapsed": "field_5f37ebc2b6dc9",
                             "min": 0,
                             "max": 0,
                             "layout": "block",
@@ -101,7 +101,7 @@
                                     "key": "field_5f37ebc2b6dc9",
                                     "label": "Cell",
                                     "name": "finish_module_at_a_glance_column_cell",
-                                    "type": "text",
+                                    "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -111,10 +111,10 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "tabs": "visual",
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -223,5 +223,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597500406
+    "modified": 1597680996
 }

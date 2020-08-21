@@ -51,6 +51,12 @@
 			@apply mb-6;
 		}
 
+		p {
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+
 		iframe {
 			@apply max-w-full mx-auto;
 		}

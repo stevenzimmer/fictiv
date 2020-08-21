@@ -131,7 +131,7 @@ if ( have_posts() ) :
         
     
 ?>
-<section class="py-20">
+<section class="pb-20">
     <div class="container">
         <div class="flex justify-center">
             <div class="w-full lg:w-11/12">
@@ -211,7 +211,7 @@ if ( have_posts() ) :
 <?php 
     if( have_rows('material_properties_tables') ):
 ?>
-<section class="py-20">
+<section class="pb-20">
     <div class="container">
         <div class="flex justify-center">
             <div class="w-full lg:w-11/12">
@@ -275,14 +275,14 @@ if ( have_posts() ) :
     
 ?>
 
-<section class="py-20">
+<section class="pb-20">
     <div class="container">
         <div class="text-center mb-6">
             <h2 class="font-museo-700 text-20">Material Finish</h2>
         </div>
         <div class="flex justify-center">
             <div class="w-11/12 lg:w-7/12">
-                <div class="text-14 font-museo-500 text-grey-600 text-center material-finish">
+                <div class="text-14 font-museo-500 text-grey-600 material-finish">
                     <?php echo $material_finish; ?>
                 </div>
             </div>
@@ -296,7 +296,7 @@ if ( have_posts() ) :
  <?php 
     if( have_rows('design_recomendations_table') || get_field('design_recommendations') ) :
 ?>
-<section class="py-20">
+<section class="pb-20">
     <div class="container">
         <div class="text-center">
             <h2 class="font-museo-700 text-20">Design Recommendations</h2>

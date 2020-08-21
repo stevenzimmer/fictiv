@@ -94,31 +94,36 @@ h2 {
 }
 
 .link {
-    @apply relative inline-block pb-1;
 
-    &.active,
-    &:hover {
-    
-        &:before {
-            visibility: visible;
-            transform: scaleX(1);
-        }
-    }
-    
-    &:before {
-        content: "";
-        @apply absolute w-full bottom-0 left-0 bg-black;
-        height: 2px;
-        visibility: hidden;
-        transform: scaleX(0);
-        transform-origin: 0;
-        transition: all 0.2s ease-in-out;
-    }
-    
-    &-white {
-    
-        &:before {
-            @apply bg-white;
-        }
-    }
+	&-underline {
+
+
+	    @apply relative inline-block pb-1;
+
+	    &.active,
+	    &:hover {
+	    
+	        &:before {
+	            visibility: visible;
+	            transform: scaleX(1);
+	        }
+	    }
+	    
+	    &:before {
+	        content: "";
+	        @apply absolute w-full bottom-0 left-0 bg-black;
+	        height: 2px;
+	        visibility: hidden;
+	        transform: scaleX(0);
+	        transform-origin: 0;
+	        transition: all 0.2s ease-in-out;
+	    }
+	    
+	    &-white {
+	    
+	        &:before {
+	            @apply bg-white;
+	        }
+	    }
+	}
 }

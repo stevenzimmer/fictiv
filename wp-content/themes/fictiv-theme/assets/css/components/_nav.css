@@ -138,7 +138,18 @@
 	}
 }
 
+.primary {
 
+	&-menu {
+
+		&-item {
+
+			&.active {
+				@apply text-teal-light;
+			}
+		} 
+	}
+}
 .mobile {
 
 

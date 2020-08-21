@@ -9,7 +9,8 @@
 			'search',
 			array(
 				'methods' => WP_REST_SERVER::READABLE,
-				'callback' => 'fictiv_search_results'
+				'callback' => 'fictiv_search_results',
+				'permission_callback' => '__return_true'
 			)
 		);   
 	}

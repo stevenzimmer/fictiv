@@ -31,7 +31,7 @@ if ( have_posts() ) :
                             </p>
                             
                         </div>
-                        <div class="text-black mb-2">
+                        <div class="text-black">
                             <h1><?php 
                                 the_title()
                             ?></h1>
@@ -40,7 +40,7 @@ if ( have_posts() ) :
                         <?php 
                             if( get_field('capabilities_hero_paragraph') ) : 
                         ?>
-                        <div class="text-grey-600 capabilities-hero-paragraph mb-4 box-check-white">
+                        <div class="text-grey-600 capabilities-hero-paragraph mb-4 mt-2 box-check-white">
                             <?php 
                                 the_field('capabilities_hero_paragraph');
                             ?>
@@ -95,6 +95,9 @@ if ( have_posts() ) :
     <div class="container">
         <div class="flex justify-center">
             <div class="w-full lg:w-11/12">
+                <?php 
+                    if( get_sub_field('finish_module_title') ) :
+                ?>
                  <div class="text-center py-10 border-b border-grey-200">
                     <div>
                         <h2 class="text-29 text-black"><?php the_sub_field('finish_module_title'); ?></h2>
@@ -102,6 +105,8 @@ if ( have_posts() ) :
                     
                 </div>
                 <?php 
+                    endif;
+
                     if( have_rows('finish_module_at_a_glance') ):
                 ?>
 
@@ -171,8 +176,8 @@ if ( have_posts() ) :
                         <h2 class="font-museo-700 text-20">About the Process</h2>
                     </div>
                     <div class="flex justify-center">
-                        <div class="w-11/12 lg:w-8/12">
-                            <div class="font-museo-500 text-14 about-process text-grey-600">
+                        <div class="w-11/12 lg:w-7/12">
+                            <div class="post-content">
                                 <?php 
                                     the_sub_field('about_the_process');
                                 ?>
@@ -193,7 +198,7 @@ if ( have_posts() ) :
                         <h2 class="font-museo-700 text-20">Design considerations</h2>
                     </div>
                     <div class="flex justify-center">
-                        <div class="w-11/12 lg:w-8/12">
+                        <div class="w-11/12 lg:w-7/12">
                             <div class="font-museo-500 text-14 box-check box-check-dark text-grey-600">
                                 <?php 
                                     the_sub_field('design_considerations');
