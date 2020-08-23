@@ -11,7 +11,7 @@
 	$help_center = array(
 		'header' => 'Learn about fictiv',
 		'name' => 'Help Center',
-		'link' => '#',
+		'link' => 'https://help.fictiv.com/en/',
 		'para' => 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-help-center.png'
 	);
@@ -19,27 +19,27 @@
 	$help_center_topics = array(
 		array(
 			'name' => 'Getting Started',
-			'link' => '#'
+			'link' => 'https://help.fictiv.com/en/collections/169912-getting-started'
 		),
 
 		array(
 			'name' => 'Uploading Your Parts',
-			'link' => '#'
+			'link' => 'https://help.fictiv.com/en/collections/169916-uploading-and-organizing-parts'
 		),
 
 		array(
 			'name' => 'Receiving a Quote',
-			'link' => '#'
+			'link' => 'https://help.fictiv.com/en/collections/169923-getting-a-quote'
 		),
 
 		array(
 			'name' => 'Placing an Order',
-			'link' => '#'
+			'link' => 'https://help.fictiv.com/en/collections/169930-placing-an-order'
 		),
 
 		array(
 			'name' => 'Tracking an Order',
-			'link' => '#'
+			'link' => 'https://help.fictiv.com/en/articles/4356590-how-do-i-track-and-manage-my-orders'
 		),
 	);
 ?>

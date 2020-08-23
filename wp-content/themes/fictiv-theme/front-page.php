@@ -59,7 +59,7 @@
             array(
                 'taxonomy' => 'fictiv_page_type',
                 'field' => 'slug',
-                'terms' => 'services'
+                'terms' => 'capabilities'
             )
         )     
     );

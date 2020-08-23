@@ -26,9 +26,9 @@
 						<div class="md:px-2">
 							<div class="flex justify-center">
 								
-								<p>
-				                    &#9656;
-				                </p>
+								<?php 
+									echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg');
+								?>
 								
 							</div>
 							
@@ -42,7 +42,7 @@
 				?>
 
 				<div class="w-full px-2">
-					<div class="p-2">
+					<div class="px-4 py-2">
 						<div class="mb-2">
 							<p class=" text-14 font-museo-700 text-black"><?php echo $title; ?></p>
 						</div>
@@ -55,11 +55,9 @@
 				</div>
 				<div class="px-2">
 					<div class="flex justify-center px-2">
-						<div>
-							<p>
-			                    &#9656;
-			                </p>
-						</div>
+						<?php 
+							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg');
+						?>
 					</div>
 					
 				</div>

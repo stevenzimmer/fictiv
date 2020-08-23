@@ -1,4 +1,4 @@
-<nav class="bg-white py-10 sub-menu absolute w-full z-50" data-menu="<?php echo $i; // str_replace(' ', '-', strtolower( $item )); ?>">
+<nav class="bg-white py-10 sub-menu absolute w-full z-50" data-menu="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12">

@@ -1,4 +1,4 @@
-<div class="mobile-menu-dropdown overflow-hidden bg-white h-0" data-dropdown="<?php echo $i; // str_replace(' ', '-', strtolower( $item )); ?>">
+<div class="mobile-menu-dropdown overflow-hidden bg-white h-0" data-dropdown="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full">

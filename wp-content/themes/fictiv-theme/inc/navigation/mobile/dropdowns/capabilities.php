@@ -1,4 +1,4 @@
-<div class="mobile-menu-dropdown h-0 overflow-hidden bg-white" data-dropdown="<?php echo $i; // str_replace(' ', '-', strtolower( $item )); ?>">
+<div class="mobile-menu-dropdown h-0 overflow-hidden bg-white" data-dropdown="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full">
@@ -25,7 +25,7 @@
 					
 						if( !empty( $children ) ) :
 					?>
-					<div class="py-4 px-2 md:p-4 border-grey-200 border">
+					<div class="p-4 border-grey-200 border">
 						<div class="">
 							<div class="mb-2">
 								<p class="text-12 font-museo-700 text-black">Processes Available</p>
@@ -49,7 +49,7 @@
 						if ( $i === 0 ) :
 						
 					?>
-					<div class="border-grey-200 border-l border-r border-b py-4 px-2 md:p-4">
+					<div class="border-grey-200 border-l border-r border-b p-4">
 						<div class="mb-2">
 							<p class="text-12 font-museo-700 text-black">
 								Finishing Options
