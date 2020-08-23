@@ -69,6 +69,14 @@
 
 			&-dropdown {
 				@apply hidden;
+
+				&.active {
+					@apply block;
+
+					@screen lg {
+						@apply hidden;
+					}
+				}
 			}
 
 			
