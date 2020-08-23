@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="flex justify-center">
 			
-			<div class="w-11/12 md:w-full">
+			<div class="w-11/12">
 
 				<div class="mb-3">
 				<?php 

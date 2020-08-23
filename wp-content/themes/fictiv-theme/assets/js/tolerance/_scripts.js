@@ -7,10 +7,13 @@ const optionsContainer = Array.prototype.slice.call( document.querySelectorAll("
 const selectBox =  document.querySelector(".select-box");
 const customClick = new CustomEvent('click');
 
-selectBox.addEventListener('click', function( e ) {
-	console.dir( this );
-	this.classList.toggle('active');
-});
+if ( selectBox ) {
+	selectBox.addEventListener('click', function( e ) {
+
+		this.classList.toggle('active');
+	});
+}
+
 
 toleranceToggleBtns.forEach( ( btn, i, all ) => {
 

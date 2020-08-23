@@ -18,16 +18,20 @@
 	// Main nav wrapper
 	include get_template_directory() . '/inc/navigation/main.php';
 
-	// Show mobile filter on Resource center pages
-	if( is_search() || 
-		is_page_template('page-filter.php') || 
-		is_page_template('page-resource-center.php') ||
-		is_singular('cpt_blog') ) :
+	if ( wp_is_mobile() ) :
+		// Show mobile filter on Resource center pages
+		if( is_search() || 
 
-		include( get_template_directory() . '/inc/post-taxonomies.php');
+			is_page_template('page-filter.php') || 
+			is_archive() ||
+			is_page_template('page-resource-center.php') ||
+			is_singular('cpt_blog') ) :
 
-		include get_template_directory() . '/inc/navigation/mobile/filter.php';
+			include( get_template_directory() . '/inc/post-taxonomies.php');
 
+			include get_template_directory() . '/inc/navigation/mobile/filter.php';
+
+		endif;
 	endif;
 
 ?>

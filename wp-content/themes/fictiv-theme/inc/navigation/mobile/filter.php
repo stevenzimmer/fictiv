@@ -1,8 +1,7 @@
-<nav class="relative w-full h-12 lg:hidden flex items-center border-b border-grey-200 filter-content-mobile select-none relative" id="filter-content-mobile">
-	<!-- <div class="absolute w-full h-full inset-0 bg-black opacity-50 "></div> -->
+<nav class="relative w-full h-12 flex items-center border-b border-grey-200 filter-content-mobile select-none relative" id="filter-content-mobile">
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full">
+			<div class="w-11/12 xl:w-full">
 				
 				<div class="flex justify-between items-center">
 					
@@ -27,10 +26,10 @@
 	
 </nav>
 
-<div class="bg-white py-4 filter-content-mobile-dropdown absolute w-full lg:hidden shadow-lg z-40">
+<div class="bg-white py-4 filter-content-mobile-dropdown absolute w-full shadow-lg z-40">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full">
+			<div class="w-11/12 xl:w-full">
 				<div class="mb-4">
 
 					<?php 

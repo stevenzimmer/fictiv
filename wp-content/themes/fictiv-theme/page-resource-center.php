@@ -153,8 +153,8 @@
 							if ( $i === 0 && get_field('resources_home_form_title') ) :
 						?>
 						<div class="bg-blue-dark p-8 mb-6 ">
-							<div class="flex justify-between items-center">
-								<div class="lg:w-7/12">
+							<div class="flex flex-wrap justify-between items-center">
+								<div class="w-full lg:w-7/12">
 									<h3 class="text-white font-museo-500 text-16 mb-2">
 										<?php 
 											the_field('resources_home_form_title');
@@ -166,7 +166,7 @@
 										?>
 									</p>
 								</div>
-								<div class="lg:w-4/12">
+								<div class="w-full lg:w-4/12">
 									<form data-form-type="mkto-redirect" class="mktoForm global" data-formId="<?php the_field('resources_home_form_marketo_id'); ?>"></form>
 								</div>
 							</div>

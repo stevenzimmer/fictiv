@@ -72,7 +72,7 @@
 											$finish_menu->the_post();
 											
 									?>
-											<a href="<?php the_excerpt(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
+											<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
 												
 									<?php 
 										endwhile;

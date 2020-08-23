@@ -1,4 +1,6 @@
-
+<?php 
+	if ( !wp_is_mobile() ) :
+?>
 <div class="mb-2">
 	<p class="uppercase font-museo-500 text-grey-600">filter content </p>
 </div>
@@ -48,3 +50,6 @@
 		<p>Thank you for subscribing!</p>
 	</div>
 </div>
+<?php 
+	endif;
+?>

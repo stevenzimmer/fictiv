@@ -1,7 +1,7 @@
 <?php 
 	function hero_section( $args ) {
 ?>
-<header class="relative pt-32 lg:pt-24 pb-8 section-hero">
+<header class="relative py-20 section-hero">
 	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php echo $args['bg']; ?>);"></div>
 	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">

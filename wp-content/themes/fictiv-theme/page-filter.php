@@ -33,11 +33,18 @@ foreach ( $_GET as $i => $query ) :
 
 endforeach;
 
-$post_types = ( !empty( $content_types ) ? 
+$post_types = ( 
+		!empty( $content_types ) 
+		
+		? 
 
 			$content_types 
 
-		: ( !empty( $_GET ) ?
+		: ( 
+
+			!empty( $_GET ) 
+
+			?
 
 				resource_center_cpt()
 			
@@ -71,25 +78,25 @@ $max_num = ( $filtered->max_num_pages ? $filtered->max_num_pages : $default->max
     
 ?>
 
-<section class="py-32 lg:py-20 ">
+<section class="py-20 ">
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="lg:w-10/12">
-				<div class="mb-6 hidden lg:block">
+			<div class="w-11/12 xl:w-10/12">
+				<div class="mb-6 ">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
 				</div>
 				
 				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="hidden lg:block lg:w-3/12">
+					<div class="xl:w-3/12">
 						<?php 
 							get_sidebar();
 						?>
 						
 					</div>
-					<div class="w-full lg:w-9/12 lg:pl-6">
+					<div class="w-full xl:w-9/12 xl:pl-6">
 						<?php 
 
 							if ( $filtered->have_posts() ) : 

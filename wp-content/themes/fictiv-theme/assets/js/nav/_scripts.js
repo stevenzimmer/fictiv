@@ -10,40 +10,47 @@ const bodyOverlay = document.getElementById('body-overlay');
 
 const mobileMenu = document.getElementById('mobile-menu');
 
+if ( mobileToggle ) {
 
-mobileToggle.addEventListener('click', function( e ) {
-	this.classList.toggle('open');
 
-	mobileMenu.classList.toggle('active');
-	bodyOverlay.classList.toggle('hidden');
-});
+	mobileToggle.addEventListener('click', function( e ) {
+		this.classList.toggle('open');
 
-mobileMenuItems.forEach( ( item, i, all ) => {
-	item.addEventListener('click', function( e ) {
-		
-		if ( !document.querySelector('.mobile-menu-dropdown[data-dropdown="' + item.dataset.menu +'"]').classList.contains('active')) {
 
-			mobileMenuDropdowns.forEach( (dropdown) => {
+		mobileMenu.classList.toggle('active');
 
-				dropdown.classList.remove('active');
-			
-			});
-
-			document.querySelector('.mobile-menu-dropdown[data-dropdown="' + item.dataset.menu +'"]').classList.add('active');
-
-		} else {
-
-			mobileMenuDropdowns.forEach( (dropdown) => {
-
-				dropdown.classList.remove('active');
-			
-			});
-
-		}
-		
-		
+		bodyOverlay.classList.toggle('hidden');
 	});
-});
+
+	mobileMenuItems.forEach( ( item, i, all ) => {
+		item.addEventListener('click', function( e ) {
+			
+			if ( !document.querySelector('.mobile-menu-dropdown[data-dropdown="' + item.dataset.menu +'"]').classList.contains('active')) {
+
+				mobileMenuDropdowns.forEach( (dropdown) => {
+
+					dropdown.classList.remove('active');
+				
+				});
+
+				document.querySelector('.mobile-menu-dropdown[data-dropdown="' + item.dataset.menu +'"]').classList.add('active');
+
+			} else {
+
+				mobileMenuDropdowns.forEach( (dropdown) => {
+
+					dropdown.classList.remove('active');
+				
+				});
+
+			}
+			
+			
+		});
+	});
+}
+
+
 
 primaryMenuItems.forEach( ( item, i, all ) => {
 
@@ -90,9 +97,16 @@ bodyOverlay.addEventListener('click', function() {
 		menu.classList.remove('active');
 	});
 
-	mobileMenu.classList.remove('active');
+	if ( mobileToggle ) {
+		mobileMenu.classList.remove('active');
 
-	mobileToggle.classList.remove('open');
+		mobileToggle.classList.remove('open');
+		
+	}
+
+	
+
+	
 
 	this.classList.add('hidden');
 });

@@ -1,7 +1,7 @@
 <nav class="bg-white py-10 sub-menu absolute w-full z-50" data-menu="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="lg:w-11/12">
+			<div class="w-11/12">
 				<div class="flex -mx-4">
 						
 					<?php 

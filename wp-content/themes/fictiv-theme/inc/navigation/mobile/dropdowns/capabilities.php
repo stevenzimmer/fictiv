@@ -1,7 +1,7 @@
 <div class="mobile-menu-dropdown h-0 overflow-hidden bg-white" data-dropdown="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full">
+			<div class="w-11/12">
 			<?php 
 					
 				$i = 0;
@@ -36,7 +36,7 @@
 									foreach ( $children as $j => $child ) :
 									
 								?>
-								<a href="<?php echo  get_permalink( $child->ID ) ?>" class="lg:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo $child->post_title ?></a>
+								<a href="<?php echo get_permalink( $child->ID ) ?>" class="lg:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo $child->post_title ?></a>
 								<?php 
 									endforeach;
 								?>
@@ -63,7 +63,7 @@
 							$finish_menu->the_post();
 							
 					?>
-							<a href="<?php the_excerpt(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
+							<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
 								
 					<?php 
 						endwhile;

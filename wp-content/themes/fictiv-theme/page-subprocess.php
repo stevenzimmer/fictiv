@@ -505,7 +505,7 @@ if ( $related_posts->have_posts() ) :
 <section class="pb-10">
     <div class="container">
         <div class="flex justify-center">
-            <div class="lg:w-11/12">
+            <div class="w-full lg:w-11/12">
                 <div class="flex justify-center">
                     <div class="w-11/12 lg:w-full">
                         <div class="mb-2">

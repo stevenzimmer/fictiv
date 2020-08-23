@@ -41,15 +41,7 @@
   background-image: url('./../../assets/images/icons/download.svg');
 }
 
-.select-box:hover .selected {
- /* background-color: #EDF2F7;
-  color: #2C5282;*/
-}
-/*.select-box:hover .options-container {
-  max-height: 400px;
-  opacity: 1;
-  overflow-y:scroll;
-}*/
+
 
 .select-box.active .options-container {
   max-height: 400px;
@@ -61,13 +53,6 @@
   @apply text-red-dark;
 }
 
-/*.select-box .tolerance-option .radio {
-  display: none;
-}*/
-/*.select-box .tolerance-option.active {
-  color: #fff;
-  background-color: #2C5282;
-}*/
 .select-box .options-container.active {
   max-height: 400px;
   opacity: 1;

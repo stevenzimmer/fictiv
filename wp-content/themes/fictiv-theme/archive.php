@@ -35,15 +35,15 @@ if ( have_posts() ) :
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="lg:w-10/12">
-				<div class="mb-6">
+			<div class="w-11/12 xl:w-10/12">
+				<div class="mb-6 hidden lg:block">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
 				</div>
 				
 				<div class="flex flex-wrap -mx-4 mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-4/12 px-4">
+					<div class="w-11/12 lg:w-4/12 px-4 hidden lg:block">
 						<?php 
 							get_sidebar();
 						?>
@@ -51,7 +51,7 @@ if ( have_posts() ) :
 					</div>
 					<div class="w-full lg:w-8/12 px-4">
 						<div class="flex justify-center">
-							<div class="w-11/12 md:w-full">
+							<div class="w-full">
 								<div class="mb-6">
 									<h3 class="font-museo-700 text-20 text-grey-600">
 									Latest 

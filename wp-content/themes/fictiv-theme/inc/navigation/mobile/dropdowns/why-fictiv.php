@@ -1,7 +1,7 @@
 <div class="mobile-menu-dropdown overflow-hidden bg-white h-0" data-dropdown="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full">
+			<div class="w-11/12">
 				<?php cap_menu_header('our digital manufacturing ecosystem'); ?>
 				<div class="mb-6">
 					 
