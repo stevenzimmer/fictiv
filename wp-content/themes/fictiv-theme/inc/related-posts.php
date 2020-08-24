@@ -4,13 +4,6 @@ $related_args = array(
     'post_type' => get_queried_object()->post_type,
     'post__not_in' => array( get_the_id(), wp_get_post_parent_id( get_the_id() )  ),
     'post_parent' => 0
-    // 'tax_query' => array(
-    //     array (
-    //         'taxonomy' => $tax,
-    //         'field' => 'slug',
-    //         'terms' => $tax_slug,
-    //     )
-    // ),
 );
 
 $related_posts = new WP_Query( $related_args );

@@ -41,7 +41,6 @@
 					<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
 					<?php
-						resource_center_cpt();
 
 						filterContentType( $GLOBALS['resource_post_types'], 'mobile' );
 						

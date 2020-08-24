@@ -4,7 +4,7 @@
 		'header' => 'Digital Manufacturing Resources',
 		'name' => 'Resource Center',
 		'link' => '/resources/',
-		'para' => 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna.',
+		'para' => 'Find all your prototype answers in one place.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-center.png'
 	);
 
@@ -12,7 +12,7 @@
 		'header' => 'Learn about fictiv',
 		'name' => 'Help Center',
 		'link' => 'https://help.fictiv.com/en/',
-		'para' => 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna.',
+		'para' => 'Advice and answers from the Fictiv Team.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-help-center.png'
 	);
 
@@ -42,4 +42,18 @@
 			'link' => 'https://help.fictiv.com/en/articles/4356590-how-do-i-track-and-manage-my-orders'
 		),
 	);
+
+	$featured_args = array(
+		'post_type' => $GLOBALS['resource_post_types'],
+		'posts_per_page' => 3,
+		'meta_query' => array(
+	        array(
+	            'key' => '_thumbnail_id',
+	            'compare' => 'EXISTS'
+	        ),
+	    )
+	);
+
+	$featured_reads = new WP_Query( $featured_args );
+
 ?>

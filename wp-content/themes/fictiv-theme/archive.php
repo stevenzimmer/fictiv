@@ -2,33 +2,6 @@
 get_header();
 include( get_template_directory() . '/inc/post-type-vars.php');
 
-
-?>
-<header class="relative py-32 hidden">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php // the_post_thumbnail_url(); ?>);"></div>
-	<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
-	<div class="container relative">
-		<div>
-			<div>
-				<p class="text-white">
-					<a>
-						<?php 
-							echo $post_type_name;
-						?>
-					</a>
-					
-				</p>
-			</div>
-			<div>
-				<h1 class="text-white">
-					<?php echo $post_description; ?>
-				</h1>
-			</div>
-		</div>
-	</div>
-</header>
-
-<?php
 if ( have_posts() ) :
 ?>
 <section class="section">
@@ -78,6 +51,8 @@ if ( have_posts() ) :
 							<div class="w-full sm:w-1/2 px-4 mb-6">
 								<?php 
 									fictiv_post_card( $topic_name );
+									
+									the_content();
 								?>
 							
 							</div>

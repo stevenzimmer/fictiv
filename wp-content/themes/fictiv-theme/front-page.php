@@ -145,25 +145,22 @@
 <section class="section-half bg-grey-100">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="flex justify-center">
-				<div class="lg:w-10/12">
-					<div class="flex">
-						<div class="mr-8">
-							<!-- IDC Logo -->
-							<img class="lazyload" width="200" alt="IDC Logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/idc-case-study-logo.png">
-						</div>
-						<div>
-							<h3 class="text-blue-dark text-24">
-								"The use of a quote-to-order platform makes sourcing and the supply chain less vulnerable to disruptions"
-							</h3>
-							<p class="mb-4">
-								— Head of IDC Manufacturing Insights Jan Burian, IDC EMEA
-							</p>
-							<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-secondary">read case study</a>
-						</div>
+			<div class="w-11/12 lg:w-10/12">
+				<div class="flex flex-wrap">
+					<div class="w-full lg:w-1/4 ">
+						<!-- IDC Logo -->
+						<img class="lazyload w-full" width="200" alt="IDC Logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/idc-case-study-logo.png">
+					</div>
+					<div class="w-full lg:w-3/4">
+						<h3 class="text-blue-dark text-24">
+							"The use of a quote-to-order platform makes sourcing and the supply chain less vulnerable to disruptions"
+						</h3>
+						<p class="mb-4">
+							— Head of IDC Manufacturing Insights Jan Burian, IDC EMEA
+						</p>
+						<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-secondary">read case study</a>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>

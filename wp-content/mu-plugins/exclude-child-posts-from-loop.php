@@ -10,6 +10,5 @@
         
     }
 
-
     add_action( 'pre_get_posts', 'exclude_child_posts_in_loop' );
 ?>

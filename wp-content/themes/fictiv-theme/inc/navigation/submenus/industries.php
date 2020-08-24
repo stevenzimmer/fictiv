@@ -10,6 +10,7 @@
 
 					?>
 					<div class="lg:w-4/12 px-4">
+						<div class=" border border-grey-200 ">
 						<?php 
 							cap_menu_item( 
 								$industry['link'], 
@@ -18,6 +19,7 @@
 								get_template_directory_uri() . '/assets/images/graphics/primary-nav-' . $industry['img'] . '-industries.jpg' 
 							); 
 						?>
+						</div>
 					
 					</div>
 					<?php 

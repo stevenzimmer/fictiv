@@ -5,8 +5,8 @@
 			<?php 
 					
 				$i = 0;
-				while ( $cap_menu->have_posts() ) :
-					$cap_menu->the_post();
+				while ( $capabilities_menu->have_posts() ) :
+					$capabilities_menu->the_post();
 
 					$children = get_children( array( 'post_parent' => get_the_id() ) );
 					 
@@ -14,7 +14,7 @@
 					
 			?>
 				<div class=" bg-white mb-3">
-
+					<div class="border-l border-t border-r border-grey-200">
 					<?php 
 						cap_menu_item( 
 							get_permalink(), 
@@ -22,6 +22,9 @@
 							get_the_excerpt(), 
 							''
 						);
+					?>
+					</div>
+					<?php
 					
 						if( !empty( $children ) ) :
 					?>
@@ -59,8 +62,8 @@
 
 					<?php 
 
-						while ( $finish_menu->have_posts() ) :
-							$finish_menu->the_post();
+						while ( $finishes_menu->have_posts() ) :
+							$finishes_menu->the_post();
 							
 					?>
 							<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
@@ -88,9 +91,9 @@
 			?>
 			<?php
 			
-				while ( $cap_menu->have_posts() ) :
+				while ( $capabilities_menu->have_posts() ) :
 
-					$cap_menu->the_post();
+					$capabilities_menu->the_post();
 
 					$children = get_children( array( 'post_parent' => get_the_id() ) );
 
@@ -98,6 +101,7 @@
 					if( empty( $children ) ) :
 			?>
 					<div class="mb-3 last:mb-0">
+						<div class="border border-grey-200">
 			<?php
 
 						cap_menu_item( 
@@ -107,6 +111,7 @@
 							''
 						);
 			?>
+						</div>
 					</div>
 			<?php
 					endif;

@@ -9,6 +9,7 @@
 
 			?>
 				<div class="mb-3 last:mb-0">
+					<div class="border border-grey-200">
 			<?php 
 				cap_menu_item( 
 					$industry['link'], 
@@ -17,6 +18,7 @@
 					'' 
 				); 
 			?>
+					</div>
 				</div>
 			
 			<?php 

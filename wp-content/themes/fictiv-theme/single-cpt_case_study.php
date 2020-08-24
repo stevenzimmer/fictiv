@@ -1,7 +1,6 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-// include( get_template_directory() . '/inc/post-taxonomies.php');
+
 
 if ( have_posts() ) : 
 
@@ -10,7 +9,7 @@ if ( have_posts() ) :
 
         include( get_template_directory() . '/inc/post-topics.php');
 
-           $args = array(
+        $args = array(
         	'bg' => get_the_post_thumbnail_url(),
         	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
         	'title' => get_the_excerpt(),
@@ -18,13 +17,10 @@ if ( have_posts() ) :
         	'logo' => get_field( 'case_study_logo' ),
         	'download_link' => get_field('download_asset_link'),
         	'subparagraph' => get_field('hero_subparagraph', $has_parent),
-
-        	'parent_id' => $has_parent,
-
+        	'parent_id' => $has_parent
         );
 
         hero_section( $args );
-
 ?>
 
 <section class="py-10">
@@ -60,7 +56,9 @@ if ( have_posts() ) :
 			<div class="w-full md:w-11/12 lg:w-10/12 overflow-hidden">	
 				<div class="post-content px-5 md:px-0">
 					<?php 
-						the_content();
+
+						echo get_the_content();
+
 					?>	
 				</div>
 			</div>
@@ -69,8 +67,10 @@ if ( have_posts() ) :
 </section>
 
 <?php 
-	include( get_template_directory() . '/inc/related-posts.php');
+		include( get_template_directory() . '/inc/related-posts.php');
+									
 	endwhile;
+
 	wp_reset_postdata();
 endif;
 

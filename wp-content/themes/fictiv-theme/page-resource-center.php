@@ -9,7 +9,6 @@
     );
 
     hero_section( $args );
- 	resource_center_cpt();
 ?>
 <section class="section">
 	<div class="container">
@@ -70,6 +69,7 @@
 							
 									<div class="max-w-md md:max-w-sm px-1">
 										<div class="border border-grey-200 relative h-full">
+											<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0 z-50"></a>
 											<div class="relative h-0 thumbnail-ratio" >
 												<?php 
 													if( has_post_thumbnail() ) :
@@ -96,6 +96,7 @@
 
 													?></h2>
 												</div>
+										
 												
 
 												<div class="absolute right-0 bottom-0 p-4">

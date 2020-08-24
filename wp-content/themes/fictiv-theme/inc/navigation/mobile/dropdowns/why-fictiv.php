@@ -8,12 +8,18 @@
 				<?php 
 
 					foreach ( $ecosystems as $i => $ecosystem ) :
+				?>
+					<div class="border-t border-l border-r last:border-b border-grey-200">
+				<?php
 						cap_menu_item( 
 							$ecosystem['link'], 
 							$ecosystem['title'], 
 							$ecosystem['para'],
 							''
 						);
+				?>
+					</div>
+				<?php
 					
 					endforeach;
 				?>
@@ -25,7 +31,7 @@
 
 					foreach ( $features as $i => $feature ) :
 				?>
-				<div class="mb-3 last:mb-0">
+				<div class="border-t border-l border-r last:border-b border-grey-200">
 				<?php
 			
 						cap_menu_item( 

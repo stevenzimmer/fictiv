@@ -1,5 +1,5 @@
 <?php 
-	foreach ( resource_center_taxonomies() as $i => $tax ) :
+	foreach ( $GLOBALS['resource_post_types'] as $i => $tax ) :
 		$labels = get_taxonomy( $tax );
 
 		$filters = get_terms( array(

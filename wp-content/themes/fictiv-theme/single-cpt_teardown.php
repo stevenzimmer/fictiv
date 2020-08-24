@@ -1,7 +1,6 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-$post_taxonomies = get_object_taxonomies( get_queried_object()->post_type, 'objects' );
+
 
 if ( have_posts() ) : 
 
@@ -19,12 +18,6 @@ if ( have_posts() ) :
         	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
         	'title' => get_the_title(),
         	'post_type' => get_queried_object()->post_type,
-        	// 'download_link' => get_field('download_asset_link'),
-        	// 'subparagraph' => get_field('hero_subparagraph', $has_parent),
-        	// 'form_header' =>  get_field('form_header'),
-        	// 'form_id' => get_field('mkto_form_id'),
-        	// 'thumbnail' => get_field('asset_thumbnail', $has_parent ),
-        	// 'parent_id' => $has_parent,
 
         );
 
@@ -92,11 +85,13 @@ if ( have_posts() ) :
 										</div>
 										<div>
 											<p class="font-museo-700 text-grey-600 uppercase">
-												<?php the_date('m.d.Y') ?> <a href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ) ?>">
-												<?php echo get_post_type_object( get_queried_object()->post_type )->labels->name; ?>
+												<?php the_date('m.d.Y') ?> 
+												<a href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ) ?>">
+													<?php echo get_post_type_object( get_queried_object()->post_type )->labels->name; ?>
+												</a>
 											</p>
 											
-											</a>
+											
 										</div>
 										
 									</div>
@@ -108,7 +103,7 @@ if ( have_posts() ) :
 						
 						<div class="post-content border-b border-grey-300 mb-8">
 							<?php 
-								the_content();
+							echo get_the_content();
 							?>	
 						</div>
 							
@@ -153,6 +148,7 @@ if ( have_posts() ) :
 	include( get_template_directory() . '/inc/related-posts.php');
 
 	endwhile;
+	wp_reset_postdata();
 endif;
 get_footer();
 ?>

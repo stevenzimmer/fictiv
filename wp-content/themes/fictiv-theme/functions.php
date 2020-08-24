@@ -5,7 +5,7 @@
     function fictiv_enqueue_scripts() {
         wp_dequeue_script('jquery');
         wp_deregister_script('jquery');
-        
+
         wp_enqueue_script( 'mkto-forms', '//app-ab20.marketo.com/js/forms2/js/forms2.min.js', [], '1.1', false );
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.1', true);
@@ -81,7 +81,6 @@
             'cpt_video'            
 
         );
-
 
     }
 

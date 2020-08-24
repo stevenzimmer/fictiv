@@ -1,5 +1,5 @@
 <?php 
-	$child_taxes = get_posts( array(
+	$materials_terms_children = get_posts( array(
 		'post_type' => 'cpt_cap_material',
 		'numberposts' => -1,
 		'tax_query' => array(

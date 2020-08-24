@@ -1,7 +1,5 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-include( get_template_directory() . '/inc/post-taxonomies.php');
 
 if ( have_posts() ) : 
 
@@ -13,14 +11,8 @@ if ( have_posts() ) :
         $args = array(
         	'bg' => get_the_post_thumbnail_url(),
         	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
-        	'title' => $post_title,
+        	'title' => get_the_title(),
         	'post_type' => get_queried_object()->post_type,
-        	// 'download_link' => get_field('download_asset_link'),
-        	// 'subparagraph' => get_field('hero_subparagraph', $has_parent),
-        	// 'form_header' =>  get_field('form_header'),
-        	// 'form_id' => get_field('mkto_form_id'),
-        	// 'thumbnail' => get_field('asset_thumbnail', $has_parent ),
-        	// 'parent_id' => $has_parent,
 
         );
 
@@ -86,6 +78,7 @@ if ( have_posts() ) :
 						
 						<div class="post-content border-b border-grey-300 mb-8">
 							<?php 
+
 								the_content();
 							?>	
 						</div>
@@ -136,6 +129,7 @@ if ( have_posts() ) :
 
 
 	endwhile;
+	wp_reset_postdata();
 endif;
 get_footer();
 ?>

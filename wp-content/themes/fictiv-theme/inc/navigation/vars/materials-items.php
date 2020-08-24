@@ -1,6 +1,6 @@
 <?php 
 	
-	$material_args = array(
+	$materials_args = array(
 		'posts_per_page' => -1,
 		'post_type' => array(
 			'cpt_cap_material'
@@ -19,5 +19,5 @@
 		)
 	);
 
-	$mat_posts = new WP_Query( $material_args );
+	$materials_posts = new WP_Query( $materials_args );
 ?>

@@ -1,5 +1,5 @@
 <?php 
-resource_center_cpt();
+// resource_center_cpt();
 ?>
 <div class="">
 	<p class="text-12 uppercase font-museo-700 text-grey-600">content type</p>

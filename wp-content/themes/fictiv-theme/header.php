@@ -18,6 +18,7 @@
 	// Main nav wrapper
 	include get_template_directory() . '/inc/navigation/main.php';
 
+	// Filter Mobile
 	if ( wp_is_mobile() ) :
 		// Show mobile filter on Resource center pages
 		if( is_search() || 

@@ -9,8 +9,8 @@
 						<?php 
 						
 							$i = 0;
-							while ( $cap_menu->have_posts() ) :
-								$cap_menu->the_post();
+							while ( $capabilities_menu->have_posts() ) :
+								$capabilities_menu->the_post();
 
 								$children = get_children( array( 'post_parent' => get_the_id() ) );
 								 
@@ -21,6 +21,7 @@
 						?>
 							<div class="lg:w-1/3 px-4 ">
 
+									<div class=" border-t border-t border-grey-200 border-r">
 									<?php 
 										cap_menu_item( 
 											get_permalink(),
@@ -29,6 +30,7 @@
 											$thumbnail
 										);
 									?>
+									</div>
 								
 									<?php 
 										if( !empty( $children ) ) :
@@ -68,8 +70,8 @@
 									<?php 
 
 
-										while ( $finish_menu->have_posts() ) :
-											$finish_menu->the_post();
+										while ( $finishes_menu->have_posts() ) :
+											$finishes_menu->the_post();
 											
 									?>
 											<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
@@ -98,8 +100,8 @@
 						?>
 							<div class="lg:w-1/3 px-4 ">
 								<?php 
-									while ( $cap_menu->have_posts() ) :
-										$cap_menu->the_post();
+									while ( $capabilities_menu->have_posts() ) :
+										$capabilities_menu->the_post();
 
 										$children = get_children( array( 'post_parent' => get_the_id() ) );
 
@@ -107,7 +109,8 @@
 
 											$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
 								?>
-								<div class="mb-3 last:mb-0">
+								<div class="mb-3 last:mb-0 border border-grey-200">
+
 								<?php 
 										cap_menu_item( 
 											get_permalink(), 

@@ -4,11 +4,11 @@
 			<div class="w-11/12">
 		<?php 
 
-			foreach ( $terms as $j => $term ) :
+			foreach ( $materials_terms as $j => $term ) :
 
-				include get_template_directory() . '/inc/navigation/vars/material-menu-items.php';
+				include get_template_directory() . '/inc/navigation/vars/materials-items.php';
 
-				if ( $mat_posts->have_posts() ) :
+				if ( $materials_posts->have_posts() ) :
 				
 					if ( !$term->parent ) :
 				
@@ -37,9 +37,9 @@
 							<div>
 								<?php 
 									
-									include get_template_directory() . '/inc/navigation/vars/material-menu-children.php';
+									include get_template_directory() . '/inc/navigation/vars/materials-terms-children.php';
 
-									foreach ( $child_taxes as $l => $tax ) :
+									foreach ( $materials_terms_children as $l => $tax ) :
 
 								?>
 								<a class="block text-teal-light text-12 font-museo-700" href="<?php echo get_permalink( $tax->ID ); ?>"><?php echo $tax->post_title; ?></a>
@@ -62,8 +62,8 @@
 							</div>
 							<div class="flex flex-wrap">
 								<?php 
-									while ( $mat_posts->have_posts() ) :
-										$mat_posts->the_post();
+									while ( $materials_posts->have_posts() ) :
+										$materials_posts->the_post();
 									
 								?>
 								<a class="w-1/2 block text-teal-light text-teal-light text-12 font-museo-700 mb-2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
