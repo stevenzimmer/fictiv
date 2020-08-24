@@ -196,6 +196,7 @@
 	</div>
 </footer>
 <div class="fixed w-full h-full inset-0 bg-black opacity-50 z-40 hidden" id="body-overlay"></div>
+
 <?php 
     wp_footer();
 ?>
