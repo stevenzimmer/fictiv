@@ -51,8 +51,7 @@ if ( have_posts() ) :
 							<div class="w-full sm:w-1/2 px-4 mb-6">
 								<?php 
 									fictiv_post_card( $topic_name );
-									
-									the_content();
+								
 								?>
 							
 							</div>
