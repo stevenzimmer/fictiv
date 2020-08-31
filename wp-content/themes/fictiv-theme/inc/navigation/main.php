@@ -16,7 +16,7 @@
 
 
 ?>
-<nav class="relative w-full h-12 lg:h-18 flex items-center z-50 bg-white border-b border-grey-200">
+<nav class="relative w-full h-auto lg:h-18 flex items-center z-50 bg-white border-b border-grey-200">
 	
 	<div class="container relative">
 		<div class="flex justify-center">
@@ -37,7 +37,7 @@
 					
 					?>
 					
-					<div class="w-3/5">
+					<div class="w-3/5 hidden lg:block">
 						<ul class="flex justify-around items-center ">
 							<?php 
 
@@ -60,7 +60,7 @@
 
 						</ul>
 					</div>
-					<div class="w-1/5 px-6">
+					<div class="w-1/5 px-6 hidden lg:block">
 						<ul class="flex justify-between items-center  font-museo-700 text-black">
 							<li>
 								<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-black hover:text-teal-light lg:text-14 xl:text-16">

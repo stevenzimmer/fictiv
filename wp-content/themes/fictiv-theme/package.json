@@ -35,7 +35,7 @@
         "purifycss-extended": "^1.3.6",
         "purifycss-extended-webpack": "^0.7.1",
         "style-loader": "^0.23.1",
-        "tailwindcss": "^1.1.4",
+        "tailwindcss": "^1.7.6",
         "uglifyjs-webpack-plugin": "^2.2.0",
         "url-loader": "^1.1.2",
         "vanilla-lazyload": "^12.5.1",

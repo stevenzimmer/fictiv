@@ -3,234 +3,168 @@
 	get_header();
 	// the_title();
 ?>
-<header class="py-32">
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
-	<div class="w-full h-full opacity-50 bg-white absolute inset-0"></div>
+
+<header class="py-20 bg-grey-100">
 	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-2/5 text-center">
-				<h1 class="text-48 text-blue-dark font-museo-500 mb-4">
-					Do more, with ease
+		<div class="flex justify-center  mb-6" >
+			<div class="w-11/12 text-center">
+				
+				<h1 class="text-29 md:text-48 leading-none text-blue-dark font-museo-900">
+					MANUFACTURING DATA AT YOUR FINGERTIPS
 				</h1>
-				<p class="text-24 font-light">
-					Modern tools to help you save time, work smart, and impress your boss.
+				
+			</div>
+		</div>
+		<div class="flex justify-center mb-12">
+			<div class="w-11/12 lg:w-8/12 text-center">
+				<p class="md:text-20 text-blue-dark">
+					Our digital quote-to-order platform puts you back in the driver’s seat and keeps you connected at every step of the manufacturing process.
 				</p>
 			</div>
 		</div>
-		<div class="section-half hidden lg:block"></div>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-11/12 text-center relative z-20">
+			
+				<img class="lazyload w-full" alt="MANUFACTURING DATA AT YOUR FINGERTIPS" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-hero.png">
+				<div class="absolute w-full h-full -mt-28 -z-1 hidden lg:block">
+					<div class="flex justify-end">
+						<div class="w-9/12">
+							<img class="lazyload mx-auto" alt="Line 1" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-1.svg">
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </header>
-<section class="section bg-teal-dark relative" >
-	<div class="w-full absolute h-full inset-0 hidden lg:block">
-		<div class="container h-full">
-			<div class="flex justify-end h-full">
-				<div class="w-full h-full lg:w-3/5 relative">
-					<div class="absolute" style="bottom: -100px">
-						<img class="lazyload" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/platform-technology.png">
-					</div>
-				
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-5/6">
-				<div class="flex justify-start">
-					<div class="w-full lg:w-2/5">
-						<div class="text-center lg:text-left">
-							<h2 class="text-white text-36 font-museo-500 ">
-								Platform technology
-							</h2>
-							<p class="text-white">
-								Save time with our streamlined quote-to-order platform.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-</section>
 
-<section class="section relative bg-white">
-	<div class="container">
-		<div class="flex items-center justify-center lg:justify-start flex-wrap">
-			<div class="w-11/12 lg:w-1/2">
-
-				<div class="w-full md:w-8/12">
-					<h2 class="text-blue-dark text-30 leading-tight mb-4 font-museo-500">
-						Easily upload native CAD & 2D drawings
-					</h2>
-					<p class="text-16 mb-8">
-						Simply drag-and-drop your native CAD files to the Fictiv platform. We also accept 2D drawings attachments for CNC machining.
-					</p>
-					
-				</div>
-				<div class="flex items-center mb-6 md:mb-0">
-					<div>
-						<p class="font-bold text-16">
-							Available For 
-						</p>
-					</div>
-					<div class="w-4"></div>
-					<div>
-						<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/3d-printing-service/">3D Printing</a>
-					</div>
-					<div class="w-4"></div>
-					<div>
-						<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/cnc-machining-service/">CNC Machining</a> 
-					</div>
-					<div class="w-4"></div>
-					<div>
-						<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/urethane-casting-service/">Urethane Casting</a> 
-					</div>
-				</div>
-			
-			
-			</div>
-			<div class="w-11/12 lg:w-1/2">
-				<div class="flex flex-wrap items-center">
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="120" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/autodesk-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="120" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/ds-catia-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="120" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/solidworks-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="120" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/rhinoceros-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="50" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/nx-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="120" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/solid-edge-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="60" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/acrobat-pdf-light.png">
-					</div>
-
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="80" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/creo-light.png">
-					</div>
-					<div class="px-4 mb-4">
-						<img class="lazyload" width="80" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/alphacam-light.png">
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
-
-<section class="section">
-	<div class="container">
-		<div class="flex items-center justify-center lg:justify-start flex-wrap">
-			<div class="w-11/12 lg:w-2/5">
-				<h2 class="text-blue-dark text-30 mb-4 font-museo-500">
-					Faster quotes powered by intelligent model processing
-				</h2>
-			</div>
-		</div>
-		<div class="flex -mx-4 flex-wrap justify-center lg:justify-start">
-			<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
-				<div class="mb-4">
-					<img class="shadow-lg lazyload" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/faster-quotes-1.png">
-				</div>
-				<div>
-					<p class="text-16 font-bold mb-2 font-museo-700">
+<section class="py-20">
+	<div class="container relative">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
+			<div class="w-11/12 lg:w-6/12 px-6">
+				<div class="mb-6">
+					<h2 class="text-blue-dark font-museo-900 text-36">
 						Instant Pricing
-					</p>
-					<p class="text-16 mb-4">
-						3D models process in minutes, providing instant pricing feedback so you can quickly compare costs, make faster decisions, and keep your projects on track.
-					</p>
-					<div class="flex items-center">
-						<div>
-							<p class="font-bold text-16">
-								Available For 
-							</p>
-						</div>
-						<div class="w-4"></div>
-						<div>
-							<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/3d-printing-service/">3D Printing</a>
-						</div>
-						<div class="w-4"></div>
-						<div>
-							<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/cnc-machining-service/">CNC Machining</a> 
-						</div>
-						
-					</div>
+					</h2>
 				</div>
-				
-			</div>
-			<div class="w-11/12 lg:w-1/2 px-4">
-				<div class="mb-4">
-					<img class="shadow-lg lazyload" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/faster-quotes-2.png">
+				<div class="mb-6">
+					<p class="text-black text-20">
+						Waiting days to get a quote is a thing of the past. With Fictiv, you get pricing instantly, or within 1 hour for complex parts that require additional guided expertise. In addition to 3D CAD, we accept 2D drawings for tight tolerances and other specialized requirements.
+					</p>
 				</div>
 				<div>
-					<p class="text-16 font-museo-700 mb-2">
-						Auto Thread Detection
-					</p>
-					<p class="text-16 mb-4">
-						Only have threaded holes to call out? Skip the drawing and quickly specify holes using our Auto Thread Detection feature.
-					</p>
-					<div class="flex items-center">
-						<div>
-							<p class="font-bold text-16">
-								Available For 
-							</p>
-						</div>
-						<div class="w-4"></div>
-						
-						<div>
-							<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/cnc-machining-service/">CNC Machining</a> 
-						</div>
-						
-					</div>
+					<a class="btn btn-secondary" href="https://app.fictiv.com/signup">get instant quote</a>
+				</div>
+			</div>
+			<div class="w-full lg:w-6/12 px-6 relative z-50">
+				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-instant-pricing.png">
+				
+			</div>
+		</div>
+		<div class="absolute w-full h-full -mt-48 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-8/12">
+					<img class="lazyload" alt="Line 2" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-2.svg">
+			
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section">
-	<div class="container">
-		<div class="flex justify-center lg:justify-between flex-wrap">
-			<div class="w-11/12 lg:w-4/12 mb-6 lg:mb-0">
-				<div>
-					<h2 class="text-blue-dark text-30 leading-tight mb-4 font-museo-500">
-						Online Manufacturing Feedback
+<section class="py-20">
+	<div class="container relative">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
+			<div class="w-11/12 lg:w-6/12 px-6">
+				<div class="mb-6">
+					<h2 class="text-blue-dark font-museo-900 text-36 leading-tight">
+						Expert DFM Feedback
 					</h2>
-					<p class="text-18 mb-4">
-						Review manufacturing recommendations, questions, and requirements in our cloud-based 3D viewer and respond or upload revisions on the spot.
+				</div>
+				<div class="mb-6">
+					<p class="text-black text-20">
+						Every part uploaded to the platform receives expert design for manufacturability feedback—including instant, automated warnings, and customized recommendations from our manufacturing engineers, as needed.
 					</p>
-					<div class="flex items-center">
-						<div>
-							<p class="font-bold text-16">
-								Available For 
-							</p>
-						</div>
-						<div class="w-4"></div>
-						
-						<div>
-							<a class="text-blue-light hover:text-red-dark font-semibold text-14" href="/cnc-machining-service/">CNC Machining</a> 
-						</div>
-						
-					</div>
+				</div>
+				<div>
+					<a class="btn btn-secondary" href="https://app.fictiv.com/signup">upload your designs</a>
 				</div>
 			</div>
-			<div class="w-11/12 lg:w-7/12">
-				<div>
-					<img class="shadow-lg lazyload" alt="Platform Technology screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/online-manufacturing-feedback.png">
+			<div class="w-full lg:w-6/12 px-6">
+				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-expert-dfm-feedback.png">
+			</div>
+		</div>
+		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-7/12">
+					<img class="lazyload" alt="Line 3" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-3.svg">
+			
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<section class="py-20">
+	<div class="container relative">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
+			<div class="w-11/12 lg:w-6/12 px-6">
+				<div class="mb-6">
+					<h2 class="text-blue-dark font-museo-900 text-36 leading-tight">
+						On-Demand Production Transparency
+					</h2>
+				</div>
+				<div class="mb-6">
+					<p class="text-black text-20">
+						Transparency doesn’t end after you place your order. Get real-time visibility into the production status of your parts, including photos of your parts at the manufacturing partner facility taken during inspection.
+					</p>
+				</div>
+				<div>
+					<a class="btn btn-secondary" href="https://app.fictiv.com/signup">get started</a>
+				</div>
+			</div>
+			<div class="w-full lg:w-6/12 px-6">
+				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-on-demand-production-transparency.png">
+			</div>
+		</div>
+		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-7/12">
+					<img class="lazyload" alt="Line 4" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-4.svg">
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-20">
+	<div class="container">
+		<div class="flex flex-wrap items-center flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start -mx-6">
+			<div class="w-11/12 lg:w-6/12 px-6">
+				<div class="mb-6">
+					<h2 class="text-blue-dark font-museo-900 text-36 leading-tight">
+						All Your Data, In One Place
+					</h2>
+				</div>
+				<div class="mb-6">
+					<p class="text-black text-20">
+						Easily find requested quality documentation, configuration details, DFM, design files, invoices, and inspection reports for all your previous orders.
+					</p>
+				</div>
+				<div>
+					<a class="btn btn-secondary" href="https://app.fictiv.com/signup">create free account</a>
+				</div>
+			</div>
+			<div class="w-full lg:w-6/12 px-6">
+				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-all-your-data.png">
+			</div>
+		</div>
+	</div>
+</section>
+
+
 <?php
 	get_footer();
 ?>

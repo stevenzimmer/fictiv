@@ -109,10 +109,10 @@
 	return $urls;
 	}
 
-	function deregister_embed(){
+	function deregister_embed() {
 	 wp_dequeue_script( 'wp-embed' );
 	}
-	add_action( 'wp_footer', 'deregister_embed' );
+	// add_action( 'wp_footer', 'deregister_embed' );
 
 	
 

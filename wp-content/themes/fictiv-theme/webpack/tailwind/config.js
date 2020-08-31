@@ -158,6 +158,7 @@ module.exports = {
       '18': '4.5rem',
       '20': '5rem',
       '24': '6rem',
+      '28': '7rem',
       '32': '8rem',
       '40': '10rem',
       '48': '12rem',
@@ -382,6 +383,7 @@ module.exports = {
       '6xl': '72rem',
       full: '100%',
       ...breakpoints(theme('screens')),
+      '1600': "1600px"
     }),
     minHeight: {
       '0': '0',
@@ -472,6 +474,7 @@ module.exports = {
     }),
     zIndex: {
       auto: 'auto',
+      '-1': '-1',
       '0': '0',
       '10': '10',
       '20': '20',
@@ -654,6 +657,10 @@ module.exports = {
       '700': '700ms',
       '1000': '1000ms',
     },
+
+    gradientColorStops: theme => ({
+      ...theme('colors'),
+    })
   },
   variants: {
     accessibility: ['responsive', 'focus'],
@@ -744,6 +751,7 @@ module.exports = {
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
+    radientColorStops: ['responsive', 'hover', 'focus', 'active', 'group-hover']
   },
   corePlugins: {},
   plugins: [],

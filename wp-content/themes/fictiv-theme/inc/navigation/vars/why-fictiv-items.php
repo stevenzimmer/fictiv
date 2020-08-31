@@ -3,13 +3,13 @@
 		array(
 			'title' => 'Quote-to-Order Platform',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore',
-			'link' => '#1'
+			'link' => '/our-platform/'
 		),
 
 		array(
 			'title' => 'Global Manufacturing Network',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore',
-			'link' => '#2'
+			'link' => '/our-network/'
 		),
 
 		array(

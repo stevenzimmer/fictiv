@@ -7,9 +7,7 @@ if ( have_posts() ) :
     while ( have_posts() ) : 
         the_post();
 
-        $topics = get_the_terms( get_the_id(), 'fictiv_topic' );
-        $topic_link = get_category_link( $topics[0]->term_id );
-        $topic_name = $topics[0]->name;
+        // include( get_template_directory() . '/inc/post-topics.php');
 
         $authors = get_coauthors( get_the_id() );
 
@@ -103,7 +101,7 @@ if ( have_posts() ) :
 						
 						<div class="post-content border-b border-grey-300 mb-8">
 							<?php 
-							echo get_the_content();
+								the_content();
 							?>	
 						</div>
 							

@@ -1,5 +1,5 @@
 .btn {
-	@apply py-4 px-5 uppercase text-16 inline-block leading-tight font-museo-700 text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
+	@apply py-5 px-10 uppercase text-14 inline-block leading-tight font-museo-900 tracking-wide text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
 
 	&-primary {
 		@apply text-white bg-teal-light;

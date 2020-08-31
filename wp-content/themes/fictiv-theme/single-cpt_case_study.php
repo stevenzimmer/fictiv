@@ -57,7 +57,7 @@ if ( have_posts() ) :
 				<div class="post-content px-5 md:px-0">
 					<?php 
 
-						echo get_the_content();
+						the_content();
 
 					?>	
 				</div>
