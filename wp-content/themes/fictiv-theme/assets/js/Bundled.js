@@ -20,3 +20,5 @@ import './nav/_scripts';
 import './forms/_scripts';
 import './capabilities/_scripts';
 
+import './modal/_scripts';
+

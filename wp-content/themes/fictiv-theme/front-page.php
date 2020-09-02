@@ -1,22 +1,72 @@
 <?php 
 	get_header();
 ?>
+<div class="modal micromodal-slide z-50 relative" id="vimeo-modal" aria-hidden="true">
+	<div class="modal__overlay fixed inset-0 flex justify-center items-center" tabindex="-1" vimeo-close="vimeo-modal">
+    	<div class="modal__container container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+    		<header class="modal__header flex justify-between items-center relative">
+        		<!-- <button class="modal__close absolute top-0 right-0 p-8 z-50" aria-label="Close modal" vimeo-close></button> -->
+        	</header>
+        	<main class="modal__content w-full" id="vimeo-modal-content">
+    			<div class="embed-responsive aspect-ratio-16/9 relative h-0 bg-white" style="padding-bottom: 56.25%">
+					<iframe id="vimeo-modal-iframe" class="absolute w-full h-full inset-0" frameborder="0" src="" allowfullscreen="" allow="autoplay"></iframe>
+				</div>
+        		
+        	</main>
+      	</div>
+    </div>
+</div>
+
 <header class="py-12 relative homepage-hero">
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>)"></div>
+	<div class="w-full h-full absolute inset-0" style="background-image: url()">
+		<div class="relative h-full w-full hidden md:block">
+			<img class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
+		</div>
+
+		<div class="relative h-full w-full md:hidden">
+			<img class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
+		</div>
+		
+	</div>
 	<div class="bg-black absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-full">
+			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
 					<div class="mb-6">
 						<h1 class="text-white font-museo-900 leading-none text-29 md:text-48">
 							YOUR GO-TO PARTNER FOR PRECISION PARTS AT THE SPEED OF DIGITAL
 						</h1>
 					</div>
-					<div class="mb-6">
+				</div>
+			</div>
+		</div>
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-10/12">
+				<div class="text-center">
+					<div class="mb-2">
 						<p class="text-white  md:text-20 ">
 							Fictiv’s Digital Manufacturing Ecosystem is the go-to destination for engineers and supply chain managers who need high tolerance mechanical parts at unprecedented speeds.
 						</p>
+					</div>
+					<div class="flex justify-center mb-2">
+						<div>
+							<div class="flex items-center relative group">
+								<a href="#" class="absolute w-full h-full inset-0" vimeo-open="vimeo-modal"></a>
+								<div class="mr-2">
+									<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
+								</div>
+								<div class="mr-2">
+									<p class="text-white text-12 md:text-14">Discover Fictiv’s radical transparency features
+									</p>
+								</div>
+								<div class="relative transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
+									<?php 
+										echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg');
+									?>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div>
 						<a href="https://app.fictiv.com/signup" class="btn btn-primary">get a quote</a>
@@ -44,7 +94,7 @@
 					</div>
 				</div>
 				<div class="flex items-center relative mb-4 md:mb-0">
-					<a class="absolute w-full h-full inset-0" href="https://docsend.com/view/fwev6a8jj6zd59rq"></a>
+					<a class="absolute w-full h-full inset-0" href="https://docsend.com/view/fwev6a8jj6zd59rq" target="_blank"></a>
 					<div class="mr-2 svg">
 						<?php 
 							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/iso.svg');
@@ -60,10 +110,10 @@
 								<p class="text-white font-museo-900 uppercase leading-tight">
 								certified </p>
 							</div>
-							<div>
-								<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M9.76726 4.58926C10.0776 4.26382 10.0776 3.73618 9.76726 3.41074L6.79373 0.244078C6.48338 -0.0813592 5.9802 -0.0813592 5.66985 0.244078C5.3595 0.569515 5.3595 1.09715 5.66985 1.42259L7.28673 3.16667L0.794705 3.16667C0.355801 3.16667 0 3.53976 0 4C0 4.46024 0.355801 4.83333 0.794705 4.83333H7.28673L5.66985 6.57741C5.3595 6.90285 5.3595 7.43049 5.66985 7.75592C5.9802 8.08136 6.48338 8.08136 6.79373 7.75592L9.76726 4.58926Z" fill="white"></path>
-								</svg>
+							<div class="">
+								<?php 
+									echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg');
+								?>
 							</div>
 						</div>
 					
@@ -576,30 +626,38 @@
 
 <section class="section bg-white">
 	<div class="container">
-		<div class="flex flex-wrap justify-center lg:justify-between">
-			<div class="w-6/12 lg:w-5/12">
-				<img class="lazyload" alt="Quip screenshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/quip-screenshot.jpg">
+		<div class="flex flex-wrap justify-center lg:justify-between -mx-6">
+			<div class="w-full lg:w-6/12 px-6">
+				<div class="mb-2">
+					<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-1.jpg'; ?>">
+				</div>
+				<div class="flex -mx-1">
+					<div class="px-1 flex-1">
+						<img class="lazyload w-full" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-2.jpg'; ?>">
+					</div>
+					<div class="px-1 flex-1">
+						<img class="lazyload w-full" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-3.jpg'; ?>">
+					</div>
+				</div>
 			</div>
-			<div class="w-11/12 lg:w-1/2">
+			<div class="w-11/12 lg:w-1/2 px-6">
 				<div class="mb-4">
-					<?php 
-						echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/quip-logo.svg');
-					?>
+					<img width="280" class="lazyload" alt="Gecko Robotics logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/gecko-robotics.png">
 				</div>
 				<div class="mb-4">
-					<p class="text-blue-light text-18 uppercase font-museo-900">customer stories</p>	
+					<p class="text-blue-light text-18 uppercase font-museo-900">customer story</p>	
 					
 				</div>
 				<div class="mb-4">
-					<p class="text-blue-dark text-36 font-museo-900 leading-tight">"Fictiv was able to get our mold up and running within four weeks, whereas other partners were taking eight weeks just to get first-off tool parts."</p>
+					<p class="text-blue-dark text-36 font-museo-900 leading-tight">“Our robot has a lot of unique and high tolerance parts. Finding a trustworthy partner that can make those parts reliably and quickly has been extremely helpful.”</p>
 				</div>
 				<div class="mb-4">
-					<p>
-						- Bill May, Co-founder & COO, quip
+					<p class="text-blue-dark">
+						—Dillon Jourde, Mechanical Engineer, Gecko Robotics
 					</p>
 				</div>
 				<div class="mb-8">
-					<a href="" class="btn btn-secondary">read case study</a>
+					<a href="/customer-stories/gecko-robotics/" class="btn btn-secondary">read case study</a>
 				</div>
 				<div class="flex justify-start items-center">
 					<div class="flex items-center">
@@ -609,7 +667,7 @@
 						</div>
 						<div>
 							<p class="text-blue-dark font-museo-900 text-14">
-								INJECTION MOLDING
+								TIGHT TOLERANCE CNC
 							</p>
 						</div>
 					</div>
@@ -621,7 +679,7 @@
 						</div>
 						<div>
 							<p class="text-blue-dark font-museo-900 text-14">
-								4 WEEKS
+								43K+ CUSTOM PARTS
 							</p>
 						</div>
 					</div>
@@ -630,56 +688,61 @@
 		</div>
 	</div>
 </section>
-<section class="section relative">
-	<div class="absolute w-full h-full inset-0">
-		<div class="flex-wrap h-full w-full hidden lg:flex">
-			<div class="w-full lg:w-1/2 h-full bg-blue-dark"></div>	
-			<div class="w-full lg:w-1/2 h-full bg-teal-light"></div>
+
+	
+<section class="relative max-w-1600 mx-auto">
+	
+	<div class="flex flex-wrap justify-center lg:justify-between">
+		<div class="w-full lg:w-6/12 relative py-20">
+			
+			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-cta-dyson-webinar-rev.jpg'; ?>)"></div>
+
+			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+
+			<div class="flex justify-center relative">
+				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
+					<div class="mb-4">
+						<p class="text-white text-18 uppercase font-museo-900">industry report</p>	
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-36 font-museo-900 leading-none uppercase">2020 State of manufacturing</p>
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-18">
+							Fictiv's fifth annual manufacturing industry report polled hundreds of senior manufacturing and supply chain decision makers at companies producing medical device, robotics, automotive, aerospace, and consumer electronics products.
+						</p>
+					</div>
+					<div>
+						<a href="/resources/2020-state-of-manufacturing-report/" class="btn btn-secondary">get free report</a>
+					</div>
+				</div>
+			</div>
+			
 		</div>
-	</div>
-	<div class="container relative">
-		<div class="flex flex-wrap justify-center lg:justify-between">
-			<div class="w-full lg:w-5/12 bg-blue-dark py-20 lg:py-0">
-				<div class="flex justify-center w-full">
-					<div class="w-11/12 lg:w-full">
-						<div class="mb-4">
-							<p class="text-white text-18 uppercase font-fat">live webinar</p>	
-						</div>
-						<div class="mb-4">
-							<p class="text-white text-36 font-fat">The Hidden Costs of Supply Chain Unpredictability</p>
-						</div>
-						<div class="mb-4">
-							<p class="text-white text-20">
-								March 12 at 10am PST
-							</p>
-						</div>
-						<div>
-							<a href="" class="btn btn-secondary">register now</a>
-						</div>
+		<div class="w-full lg:w-6/12 py-20 relative">
+
+			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-cta-fictiv-hardware-guide-article-hero.jpg'; ?>)"></div>
+
+			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+			<div class="flex justify-center relative">
+				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
+					<div class="mb-4">
+						<p class="text-white text-18 uppercase font-museo-900">FICTIV BLOG</p>	
 					</div>
-				</div>
-				
-			</div>
-			<div class="w-full lg:w-5/12 bg-teal-light  py-20 lg:py-0">
-				<div class="flex justify-center">
-					<div class="w-11/12 lg:w-full">
-						<div class="mb-4">
-							<p class="text-white text-18 uppercase font-fat">live webinar</p>	
-						</div>
-						<div class="mb-4">
-							<p class="text-white text-36 font-fat">Get smart on injection molding</p>
-						</div>
-						<div class="mb-4">
-							<p class="text-blue-dark text-20">
-								A collection of industry best practices including; recommended wall thickness, boss design, and gate types.
-							</p>
-						</div>
-						<div>
-							<a href="" class="btn btn-secondary">register now</a>
-						</div>
+					<div class="mb-4">
+						<p class="text-white text-36 font-museo-900 leading-none uppercase">5 CRITICAL MISTAKES R&D TEAMS MADE</p>
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-18">
+							Learn from Gregg Miner, a serial product innovator with more than 500 products under his belt, 5 key mistakes that can and should be avoided in product development.
+						</p>
+					</div>
+					<div>
+						<a href="/articles/5-critical-mistakes-r-d-teams-make-avoid-them-with-these-simple-practices/" class="btn btn-secondary">read article</a>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </section>
