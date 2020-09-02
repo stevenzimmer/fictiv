@@ -2,11 +2,9 @@
 	get_header();
 ?>
 <div class="modal micromodal-slide z-50 relative" id="vimeo-modal" aria-hidden="true">
-	<div class="modal__overlay fixed inset-0 flex justify-center items-center" tabindex="-1" vimeo-close="vimeo-modal">
-    	<div class="modal__container container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-    		<header class="modal__header flex justify-between items-center relative">
-        		<!-- <button class="modal__close absolute top-0 right-0 p-8 z-50" aria-label="Close modal" vimeo-close></button> -->
-        	</header>
+	<div class="modal__overlay fixed inset-0 flex justify-center items-center bg-black bg-opacity-75" tabindex="-1" vimeo-close="vimeo-modal">
+    	<div class="modal__container container max-h-screen overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+    		
         	<main class="modal__content w-full" id="vimeo-modal-content">
     			<div class="embed-responsive aspect-ratio-16/9 relative h-0 bg-white" style="padding-bottom: 56.25%">
 					<iframe id="vimeo-modal-iframe" class="absolute w-full h-full inset-0" frameborder="0" src="" allowfullscreen="" allow="autoplay"></iframe>
