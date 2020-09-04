@@ -1,4 +1,4 @@
-if ( document.body.classList.contains('page-template-page-subprocess') ) {
+if ( document.body.classList.contains('page-template-page-subprocess') || document.body.classList.contains('page-template-page-process') ) {
 	
 	const materialBtns = Array.prototype.slice.call( document.querySelectorAll('.material-btn') );
 	const materialContentItems = Array.prototype.slice.call( document.querySelectorAll('.material-content-item') );

@@ -134,3 +134,51 @@ h2 {
 		@apply w-full;
 	}
 }
+
+.fpp {
+
+	&-col {
+
+		h3 {
+			@apply font-museo-700 text-grey-700;
+		}
+
+		p,h3, ul li {
+			@apply mb-4;
+		}
+
+		ul {
+			@apply pl-8;
+
+			li {
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+	}
+}
+
+.oqp {
+
+	&-section {
+
+		h3 {
+			@apply text-29 mb-2;
+		}
+
+		ul {
+			@apply pl-6;
+			list-style-image: url('./../images/icons/bullet-point-white.svg');
+
+			li {
+				@apply mb-2;
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+	}
+}

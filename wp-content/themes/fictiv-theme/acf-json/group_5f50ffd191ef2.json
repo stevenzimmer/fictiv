@@ -1,12 +1,12 @@
 {
-    "key": "group_5f31edd85831d",
-    "title": "Capabilities Hero",
+    "key": "group_5f50ffd191ef2",
+    "title": "Processes Advantages",
     "fields": [
         {
-            "key": "field_5f31ede3c4597",
-            "label": "Add paragraph text",
-            "name": "capabilities_hero_paragraph",
-            "type": "wysiwyg",
+            "key": "field_5f51026c4cae8",
+            "label": "Add Advantage",
+            "name": "processes_advantage",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,31 +15,40 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5f31ee46c4598",
-            "label": "Add CTA Button",
-            "name": "capabilities_hero_cta_button",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
+            "collapsed": "",
+            "min": 0,
+            "max": 3,
             "layout": "block",
+            "button_label": "Add advantage",
             "sub_fields": [
                 {
-                    "key": "field_5f31ee60c4599",
-                    "label": "Button Text",
-                    "name": "text",
+                    "key": "field_5f5102814cae9",
+                    "label": "Icon",
+                    "name": "process_icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5f5102a64caea",
+                    "label": "Title",
+                    "name": "process_title",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -56,9 +65,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f31ee77c459a",
-                    "label": "Button Link",
-                    "name": "link",
+                    "key": "field_5f5102b14caeb",
+                    "label": "Paragraph",
+                    "name": "process_paragraph",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -80,30 +89,9 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_cap_material"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_cap_finish"
-            }
-        ],
-        [
-            {
                 "param": "post_template",
                 "operator": "==",
                 "value": "page-process.php"
-            }
-        ],
-        [
-            {
-                "param": "post_template",
-                "operator": "==",
-                "value": "page-subprocess.php"
             }
         ]
     ],
@@ -115,5 +103,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599142330
+    "modified": 1599144835
 }

@@ -23,80 +23,99 @@
 			<div class="w-11/12 xl:w-full">
 
 				<div class="flex justify-between items-center w-full">
-					<div class="w-24">
-						<a href="<?php echo home_url() ?>">
-							<?php 
-								echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg');
-							?>
-						</a>
-					</div>
+					<div class="lg:w-7/12 flex items-center justify-between">
+						<div class="lg:w-24 xl:w-32">
+							<a href="<?php echo home_url() ?>">
+								<?php 
+									echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg');
+								?>
+							</a>
+						</div>
 
-					<?php 
-					
-						if( !wp_is_mobile() ) :
-					
-					?>
-					
-					<div class="w-3/5 hidden lg:block">
-						<ul class="flex justify-around items-center ">
-							<?php 
-
-								foreach ( $main_menu_items as $i => $item ) :
-								
-							?>
-							<li>
-								<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-black hover:text-teal-light flex items-center lg:text-14 xl:text-16" href="#" data-menu="<?php echo $i; ?>">
-									<?php echo $item; ?>
-									&nbsp;
-									<?php 
-										echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
-									?>
-								</a>
-							</li>
-
-							<?php 
-								endforeach;
-							?>
-
-						</ul>
-					</div>
-					<div class="w-1/5 px-6 hidden lg:block">
-						<ul class="flex justify-between items-center  font-museo-700 text-black">
-							<li>
-								<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-black hover:text-teal-light lg:text-14 xl:text-16">
-									<?php echo $demo['name']; ?>
-								</a>
-							</li>
-							<li>
-								<a class="primary-menu-item text-black hover:text-teal-light lg:text-14 xl:text-16" href="<?php echo $log_in['link']; ?>">
-									<?php echo $log_in['name']; ?>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="">
 						<?php 
-							primary_button();
+						
+							if( !wp_is_mobile() ) :
+						
+						?>
+						
+						<div class="w-full hidden lg:block">
+							<ul class="flex justify-between items-center ">
+								<?php 
+
+									foreach ( $main_menu_items as $i => $item ) :
+									
+								?>
+								<li>
+									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-black hover:text-teal-light flex items-center lg:text-14" href="#" data-menu="<?php echo $i; ?>">
+										<?php echo $item; ?>
+										&nbsp;
+										<?php 
+											echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
+										?>
+									</a>
+								</li>
+
+								<?php 
+									endforeach;
+								?>
+
+							</ul>
+						</div>
+
+						<?php 
+							endif;
 						?>
 					</div>
-					<?php 
-						else :
-					?>
+					<div class="lg:w-5/12">
+						<div class="flex justify-end items-center">
+							<?php 
+						
+								if( !wp_is_mobile() ) :
+							
+							?>
+							<div class="w-3/5 px-6 hidden lg:block">
+								<ul class="flex justify-end items-center  font-museo-700 text-black">
+									<li class="lg:mx-1 xl:mx-4">
+										<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-black hover:text-teal-light text-14">
+											<?php echo $demo['name']; ?>
+										</a>
+									</li>
+									<li class="lg:mx-1 xl:mx-4">
+										<a class="primary-menu-item text-black hover:text-teal-light text-14" href="<?php echo $log_in['link']; ?>">
+											<?php echo $log_in['name']; ?>
+										</a>
+									</li>
+								</ul>
+							</div>
 
-					<div class="">
+							
+							<div class="">
+								<?php 
+									primary_button();
+								?>
+							</div>
 
-						<div class="mobile-toggle cursor-pointer relative w-10 h-8 " id="mobile-toggle">
-				            <span class="sr-only">Toggle Navigation</span>
-				            <span class="nav-bar"></span>
-				        </div>
-					
+							<?php 
+								else :
+
+							?>
+							<div class="py-2">
+
+								<div class="mobile-toggle cursor-pointer relative w-10 h-8 " id="mobile-toggle">
+						            <span class="sr-only">Toggle Navigation</span>
+						            <span class="nav-bar"></span>
+						        </div>
+							
+							</div>
+
+							<?php 
+								endif;
+							?>
+						</div>
+						
 					</div>
 					
-					<?php
-						endif;
-					?>
 				</div>
-				
 				
 			</div>
 		</div>
