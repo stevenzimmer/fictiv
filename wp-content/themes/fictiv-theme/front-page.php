@@ -18,11 +18,11 @@
 <header class="py-12 relative homepage-hero">
 	<div class="w-full h-full absolute inset-0" style="background-image: url()">
 		<div class="relative h-full w-full hidden md:block">
-			<img class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
+			<img alt="homepage hero" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
 		</div>
 
 		<div class="relative h-full w-full md:hidden">
-			<img class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
+			<img alt="homepage hero mobile" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
 		</div>
 		
 	</div>

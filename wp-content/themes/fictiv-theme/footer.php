@@ -27,7 +27,16 @@
 						</div>
 					</div>
 					<div class="w-full sm:w-2/3 md:w-3/4 px-6">
-						<div class="flex justify-between flex-wrap">
+						<?php 
+							wp_nav_menu( 
+								array(
+							    	'menu'              => "footer", 
+							    	'menu_class'        => "flex flex-wrap md:flex-no-wrap justify-between menu-footer",
+							    	'container_class' => "w-full"
+								)
+							);
+						?>
+						<div class="flex justify-between flex-wrap hidden">
 							<?php 
 								$footer_items = array(
 									array(

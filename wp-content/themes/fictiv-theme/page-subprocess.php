@@ -53,7 +53,7 @@ if ( have_posts() ) :
 
                             $hero_cta_btn = get_field('capabilities_hero_cta_button');
 
-                            if ( $hero_cta_btn ) :
+                            if ( $hero_cta_btn['link'] ) :
                                 
                         ?>
                         <div>

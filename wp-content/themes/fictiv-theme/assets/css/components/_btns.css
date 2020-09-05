@@ -5,7 +5,7 @@
 		@apply text-white bg-teal-light;
 
 		&:hover {
-			@apply bg-teal-light;
+			@apply bg-teal-dark;
 		}
 	}
 

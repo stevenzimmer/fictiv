@@ -1,4 +1,47 @@
 /*! purgecss start ignore */
+
+.menu {
+
+	&-footer {
+
+		.menu {
+
+			&-item {
+				a {
+					@apply font-museo-700 text-14 mb-2 block text-grey-700;
+				}
+				
+
+				.sub {
+
+					&-menu {
+						@apply block;
+
+						.menu {
+
+							&-item {
+								@apply mb-2;
+
+								a {
+									@apply font-museo-500 text-12 text-grey-600 block;
+
+									&:hover {
+										@apply text-teal-light;
+									}	
+								}
+
+								&:last-child {
+									@apply mb-0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .footer {
 
 	&-nav {

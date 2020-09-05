@@ -1,7 +1,6 @@
 /*! purgecss start ignore */
 .jobs {
 	&-overlay {
-		@apply fixed w-full h-full max-h-full inset-0 bg-white invisible opacity-0 transition-opacity duration-200 py-20 overflow-scroll hidden;
 		z-index: 999;
 
 		&.active {
