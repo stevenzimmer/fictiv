@@ -111,7 +111,12 @@
 									while ( $capabilities_menu->have_posts() ) :
 										$capabilities_menu->the_post();
 
-										$children_processes = get_children( array( 'post_parent' => get_the_id() ) );
+										$children_processes = get_children( 
+											array( 
+												'post_type' => array('page'),
+												'post_parent' => get_the_id() 
+											)
+										);
 
 										if( empty( $children_processes ) ) :
 

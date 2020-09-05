@@ -4,7 +4,7 @@
 	<div class="bg-white">
 
 		<div class=" relative">
-			<a class="absolute w-full h-full inset-0" href="<?php echo $link; ?>"></a>
+			<a class="absolute w-full h-full inset-0 z-50" href="<?php echo $link; ?>"></a>
 			<div class="flex items-center -mx-2">
 				<?php 
 					if ( $img ) :
