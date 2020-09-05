@@ -19,7 +19,7 @@
 								 
 								if( !empty( $children_processes ) ) :
 
-									$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
+									$thumbnail = get_field('material_thumbnail')['sizes']['thumbnail'];
 								
 						?>
 							<div class="lg:w-1/3 px-4 ">
@@ -37,7 +37,7 @@
 									</div>
 								
 									<?php 
-									
+
 										if( !empty( $children_processes ) ) :
 
 									?>
@@ -115,7 +115,7 @@
 
 										if( empty( $children_processes ) ) :
 
-											$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
+											$thumbnail = get_field('material_thumbnail')['sizes']['thumbnail'];
 								?>
 								<div class="mb-3 last:mb-0 border border-grey-200">
 

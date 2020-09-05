@@ -46,7 +46,7 @@
 						<div class="mr-2">
 
 							<!-- Icon -->
-							<img width="20" alt="circle green check icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
+							<img class="lazyload" width="20" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
 								
 						</div>
 						
@@ -91,52 +91,58 @@
 								array(
 									'img' => "cnc-milling",
 									'title' => 'CNC MILLING',
-									'text' => '3, 4 and 5-axis machining capabilities for simple and complex geometries'
+									'text' => '3, 4 and 5-axis machining capabilities for simple and complex geometries',
+									'link' => '/processes/cnc-milling/'
 								),
 
 								array(
 									'img' => "cnc-turning",
 									'title' => 'CNC TURNING',
-									'text' => 'Standard and live tooling capabilities for cylindrical parts such as pins, shafts, and spacers.'
+									'text' => 'Standard and live tooling capabilities for cylindrical parts such as pins, shafts, and spacers.',
+									'link' => '/processes/cnc-turning/'
 								),
 
 								array(
 									'img' => "gear-hobbing",
 									'title' => 'GEAR HOBBING',
-									'text' => 'A wide range of stock hobbing tools available for quick turnaround times. Custom hobbing also available.'
+									'text' => 'A wide range of stock hobbing tools available for quick turnaround times. Custom hobbing also available.',
+									'link' => '/processes/gear-hobbing/'
 								),
 
 								array(
 									'img' => "high-resolution-3d-printing",
 									'title' => 'HIGH RESOLUTION 3D PRINTING',
-									'text' => 'MJF, SLA, PolyJet SLS, FDM.'
+									'text' => 'MJF, SLA, PolyJet SLS, FDM.',
+									'link' => '/3d-printing-service/'
 								),
 
 								array(
 									'img' => "finishing",
 									'title' => 'Finishing',
-									'text' => 'Anodizing, Alodine, Media Blasting, Tumbling, Passivation, Plating, Powder Coating and more.'
+									'text' => 'Anodizing, Alodine, Media Blasting, Tumbling, Passivation, Plating, Powder Coating and more.',
+									'link' => 'https://docsend.com/view/2b5d4ye'
 								),
 
 								array(
 									'img' => "electrical-discharge-machining",
 									'title' => 'ELECTRICAL DISCHARGE MACHINING (EDM)',
-									'text' => 'Useful for cutting deep pockets and complex features such as gears and holes with a keyway. Wire & sinker.'
+									'text' => 'Useful for cutting deep pockets and complex features such as gears and holes with a keyway. Wire & sinker.',
+									'link' => '/processes/electrical-discharge-machining/'
 								)
 							);
 
 							foreach ( $types as $i => $type ) :
 					?>
-					<div class="w-11/12 md:w-1/2 lg:w-1/3 px-4 mb-12">
+					<div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-12 last:mb-0">
 						<div class="relative group">
-							<a href="#" class="absolute w-full h-full inset-0"></a>
-							<div class=" mb-2">
+							<a href="<?php echo $type['link']; ?>" class="absolute w-full h-full inset-0"></a>
+							<div class="">
 								<div class="relative h-0 bg-white" style="padding-bottom: 92%">
 						            <img class="absolute top-0 left-0 w-full h-full object-cover lazyload" alt="<?php echo $type['title']; ?> thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/<?php echo $type['img']; ?>-thumbnail.jpg">
 						        </div>
 							</div>
 						
-							<div class="text-center">
+							<div class="text-center py-2">
 								<div class="mb-2">
 									<p class="text-blue-dark uppercase font-semibold mb-2 font-museo-900">
 										<?php 
@@ -171,7 +177,7 @@
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="flex flex-wrap justify-center lg:justify-between">
-			<div class="w-11/12 lg:w-3/12">
+			<div class="w-11/12 lg:w-3/12 mb-6 lg:mb-0">
 				<h3 class="text-blue-dark font-museo-900 text-36 leading-tight mb-4">
 					Get <span class="text-teal-light">10x</span> the precision offered by other leading online solutions
 				</h3>
@@ -249,7 +255,7 @@
 					'title' => 'HOW TO CHOOSE THE BEST FASTENERS FOR 3D PRINTED PARTS',
 					'para' => 'There are a lot of different ways to implement threads into your 3D printed part. Here we cover the pros and cons of the most common methods as well as specific installation steps to help get you started.',
 					'cta_text' => 'learn more',
-					'cta_link' => '#'
+					'cta_link' => '/webinars/how-to-automate-robotics-processes-in-record-time/'
 				),
 				array(
 					'bg' => '',
@@ -257,7 +263,7 @@
 					'title' => 'Fictiv Tolerance standards',
 					'para' => 'Download the PDF reference sheet for our tightest tolerance standards for CNC.',
 					'cta_text' => 'free download',
-					'cta_link' => '#'
+					'cta_link' => 'https://docsend.com/view/zvfpzcx'
 				),
 				array(
 					'bg' => '',
@@ -265,7 +271,7 @@
 					'title' => 'RECOMMENDED WALL THICKNESS FOR 3D PRINTING',
 					'para' => 'One of the most important considerations when designing parts for 3D printing is the wall thickness. Here are some guidelines to ensure your 3D parts are structurally sound.',
 					'cta_text' => 'keep reading',
-					'cta_link' => '#'
+					'cta_link' => '/articles/introduction-to-clearance-fits-for-components/'
 				),
 			);
 

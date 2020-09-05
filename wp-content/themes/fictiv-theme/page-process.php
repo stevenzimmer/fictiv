@@ -43,9 +43,9 @@ if ( have_posts() ) :
                             </p>
                             
                         </div>
-                        <div class="text-black">
-                            <h1><?php 
-                                $processes[0]->name;
+                        <div >
+                            <h1 class="text-black"><?php 
+                               echo $processes[0]->name;
                             ?> Services</h1>
 
                         </div>
@@ -69,7 +69,8 @@ if ( have_posts() ) :
                         <div>
                             <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>  
                         </div>
-                        <?php 
+
+                        <?php
                             endif;
                         ?>
                     </div>
@@ -98,9 +99,15 @@ if ( have_posts() ) :
             <div class="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-grey-200 last:border-transparent">
                 <div class="px-12 pt-8 pb-12 text-center">
                     <div class="h-20 flex justify-center items-center mb-4">
+                        <?php 
+                            if( get_sub_field('process_icon') ) :
+                        ?>
                         <div class="">
                             <img class="mx-auto" src="<?php the_sub_field('process_icon'); ?>">
                         </div>
+                        <?php 
+                            endif;
+                        ?>
                     </div>
                     <div class="mb-4">
                         <p class="font-museo-700 text-14 text-grey-700"><?php the_sub_field('process_title'); ?></p>

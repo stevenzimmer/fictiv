@@ -329,7 +329,10 @@
 						<div class="relative shadow group">
 							<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
 							<div class="w-full bg-white p-6">
-								<img class="lazyload w-full" class=" inline-block" data-src="<?php the_post_thumbnail_url(); ?>">
+								<div class="relative h-0" style="padding-bottom: 75.25%">
+									<img class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
+								</div>
+								
 							</div>
 							<div class="text-center p-4">
 								<div class="mb-2 h-12">
