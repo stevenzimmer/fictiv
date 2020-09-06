@@ -105,6 +105,20 @@
                 "operator": "==",
                 "value": "page-subprocess.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-injection-molding.php"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-robotics.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -115,5 +129,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599142330
+    "modified": 1599404508
 }

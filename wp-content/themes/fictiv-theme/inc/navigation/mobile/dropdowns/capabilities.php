@@ -8,9 +8,9 @@
 				while ( $capabilities_menu->have_posts() ) :
 					$capabilities_menu->the_post();
 
-					$children = get_children( array( 'post_parent' => get_the_id() ) );
+					include get_template_directory() . '/inc/navigation/vars/capabilities-children-processes.php';
 					 
-					if( !empty( $children ) ) :
+					if( !empty( $children_processes ) ) :
 					
 			?>
 				<div class=" bg-white mb-3">
@@ -26,7 +26,7 @@
 					</div>
 					<?php
 					
-						if( !empty( $children ) ) :
+						if( !empty( $children_processes ) ) :
 					?>
 					<div class="p-4 border-grey-200 border">
 						<div class="">
@@ -36,7 +36,7 @@
 							<div class="flex-wrap flex -mx-6">
 								<?php 
 
-									foreach ( $children as $j => $child ) :
+									foreach ( $children_processes as $j => $child ) :
 									
 								?>
 								<a href="<?php echo get_permalink( $child->ID ) ?>" class="lg:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo $child->post_title ?></a>
@@ -95,10 +95,9 @@
 
 					$capabilities_menu->the_post();
 
-					$children = get_children( array( 'post_parent' => get_the_id() ) );
-
+					include get_template_directory() . '/inc/navigation/vars/capabilities-children-processes.php';
 			 
-					if( empty( $children ) ) :
+					if( empty( $children_processes ) ) :
 			?>
 					<div class="mb-3 last:mb-0">
 						<div class="border border-grey-200">

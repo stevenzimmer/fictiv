@@ -3,71 +3,71 @@
 */ 
 	get_header();
 ?>
-<header class="py-24 relative" >
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
-	<div class="container relative">
-		<div class="flex justify-center lg:justify-start">
-			
-			<div class="w-11/12 lg:w-9/12">
-				<div class="mb-2">
-					<p class="text-blue-dark font-museo-900 text-36">
-						Fictiv for robotics:
-					</p>
-				</div>
-				<div class="mb-2">
-					<h1 class="text-blue-dark text-36 
-					lg:text-h1 uppercase font-museo-900 leading-tight">PRECISION QUALITY PARTS AT UNMATCHED SPEEDS</h1>
-					
-				</div>
-				<div class="mb-4">
-					<?php 
-						$specs = array(
-							
-							array(
-								'icon' => "clock",
-								'text' => 'PRECISION CAPABILITIES ON DEMAND'
-							),
-							array(
-								'icon' => "parts",
-								'text' => 'ISO CERTIFIED QUALITY MANAGEMENT'
-							),
+<header class="py-12 relative capabilities-hero">
+ 	<?php 
+        if ( has_post_thumbnail() ) :
+    ?>
+    <div class="absolute w-full h-full inset-0 max-w-1600 mx-auto">
+        <div class="flex lg:justify-end h-full">
+            <div class="w-full lg:w-9/12">
+                <div class="h-full bg-cover bg-center inset-0 lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <?php 
+        endif;
+    ?>
+ 
+    <div class="bg-white bg-opacity-75 md:bg-transparent bg-gradient-to-r from-white to-transparent absolute w-full inset-0 h-full"></div>
 
-							array(
-								'icon' => "calendar",
-								'text' => 'RELIABLY FAST LEAD TIME'
-							)
-						);
+    <div class="container relative">
+        <div class="flex justify-center">
+            <div class="w-11/12">
+                <div class="flex flex-wrap justify-center lg:justify-start">
+                    <div class="w-full lg:w-5/12 lg:w-6/12">
+                        <div>
+                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                                Fictiv for robotics
+                            </p>
+                            
+                        </div>
+                        <div >
+                            <h1 class="text-black leading-tight">PRECISION QUALITY PARTS AT UNMATCHED SPEEDS</h1>
 
-						foreach ($specs as $i => $spec ) :
-				
-					?>
+                        </div>
+                        <?php 
+                            if( get_field('capabilities_hero_paragraph') ) : 
+                        ?>
+                        <div class="text-grey-600 capabilities-hero-paragraph box-check-dark mb-4 mt-2">
+                            <?php 
+                                the_field('capabilities_hero_paragraph');
+                            ?>
+                        </div>
 
-					<div class="flex flex-wrap items-center mb-4">
-						<div class="mr-2">
+                        <?php 
+                            endif;
 
-							<!-- Icon -->
-							<img class="lazyload" width="20" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
-								
-						</div>
-						
-						<div>
-							<p class="text-blue-dark font-museo-900">
-								<?php echo $spec['text']; ?>
-							</p>
-						</div>
-					</div>
+                            $hero_cta_btn = get_field('capabilities_hero_cta_button');
 
-					<?php 
-						endforeach;
-					?>
-					
-				</div>
-				<div>
-					<?php primary_button() ?>
-				</div>
-			</div>
-		</div>
-	</div>
+                            if ( $hero_cta_btn ) :
+                                
+                        ?>
+                        <div>
+                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>  
+                        </div>
+
+                        <?php
+                            endif;
+                        ?>
+                    </div>
+                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </header>
 
 <section class="bg-white py-20">
@@ -75,14 +75,13 @@
 		<div class="flex justify-center mb-12">
 			<div class="w-11/12 lg:w-8/12">
 				<div class="text-center">
-					<h3 class="text-blue-dark uppercase font-museo-900 text-36 leading-tight">
+					<h3 class="text-blue-dark uppercase font-museo-900 text-24 lg:text-36 leading-tight">
 						ACCESS A VARIETY OF HIGH PRECISION CAPABILITIES THROUGH ONE PLATFORM
 					</h3>
 				</div>
 			</div>
 		</div>
 		
-<!-- 		<div class="w-10 h-1 border-b border-blue-dark mx-auto mb-8"></div> -->
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-full">
 				<div class="flex flex-wrap -mx-4">
@@ -245,71 +244,63 @@
 </section>
 
 
-<section>
-	<div class="flex flex-wrap items-stretch justify-center lg:justify-start">
-		<?php 
-			$ctas = array(
-				array(
-					'bg' => '',
-					'label' => 'SECONDARY OPERATIONS',
-					'title' => 'HOW TO CHOOSE THE BEST FASTENERS FOR 3D PRINTED PARTS',
-					'para' => 'There are a lot of different ways to implement threads into your 3D printed part. Here we cover the pros and cons of the most common methods as well as specific installation steps to help get you started.',
-					'cta_text' => 'learn more',
-					'cta_link' => '/webinars/how-to-automate-robotics-processes-in-record-time/'
-				),
-				array(
-					'bg' => '',
-					'label' => 'Datasheet',
-					'title' => 'Fictiv Tolerance standards',
-					'para' => 'Download the PDF reference sheet for our tightest tolerance standards for CNC.',
-					'cta_text' => 'free download',
-					'cta_link' => 'https://docsend.com/view/zvfpzcx'
-				),
-				array(
-					'bg' => '',
-					'label' => 'design GUIDE',
-					'title' => 'RECOMMENDED WALL THICKNESS FOR 3D PRINTING',
-					'para' => 'One of the most important considerations when designing parts for 3D printing is the wall thickness. Here are some guidelines to ensure your 3D parts are structurally sound.',
-					'cta_text' => 'keep reading',
-					'cta_link' => '/articles/introduction-to-clearance-fits-for-components/'
-				),
-			);
-
-			foreach ( $ctas as $i => $cta ) :
-
-				$i++;
+<section class="relative max-w-1600 mx-auto">
+	
+	<div class="flex flex-wrap justify-center lg:justify-between">
+		<div class="w-full lg:w-6/12 relative py-20">
 			
-		?>
-		<div class="w-full lg:w-1/3">
-			
-			<div class="py-20 bg-grey-<?php echo $i; ?>00 h-full">
-				<div class="flex justify-center">
-					<div class="w-11/12 lg:w-8/12">
-						<div class="mb-2">
-							<p class="uppercase font-museo-900 text-blue-dark"><?php echo $cta['label']; ?></p>
-						</div>
-						<div class="mb-2">
-							<h3 class="uppercase font-museo-900 text-blue-dark text-24 leading-tight">
-								<?php echo $cta['title']; ?>
-							</h3>
-						</div>
-						<div class="mb-2">
-							<p class="text-blue-dark">
-								<?php echo $cta['para']; ?>
-							</p>
-						</div>
-						<div>
-							<a href="<?php echo $cta['cta_link']; ?>" class="btn btn-secondary"><?php echo $cta['cta_text']; ?></a>
-						</div>
+			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/cnc-machining-header.jpg'; ?>)"></div>
+
+			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+
+			<div class="flex justify-center relative">
+				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
+					<div class="mb-4">
+						<p class="text-white text-18 uppercase font-museo-900">webinar</p>	
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-36 font-museo-900 leading-none uppercase">HOW TO CHOOSE THE BEST FASTENERS FOR 3D PRINTED PARTS</p>
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-18">
+							There are a lot of different ways to implement threads into your 3D printed part. Here we cover the pros and cons of the most common methods as well as specific installation steps to help get you started.
+						</p>
+					</div>
+					<div>
+						<a href="/webinars/how-to-automate-robotics-processes-in-record-time/" class="btn btn-secondary">learn more</a>
 					</div>
 				</div>
 			</div>
+			
 		</div>
-		<?php 
-			endforeach;
-		?>
+		<div class="w-full lg:w-6/12 py-20 relative">
+
+			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/404-bg.jpg'; ?>)"></div>
+
+			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
+			<div class="flex justify-center relative">
+				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
+					<div class="mb-4">
+						<p class="text-white text-18 uppercase font-museo-900">Datasheet</p>	
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-36 font-museo-900 leading-none uppercase">Fictiv Tolerance standards</p>
+					</div>
+					<div class="mb-4">
+						<p class="text-white text-18">
+							Download the PDF reference sheet for our tightest tolerance standards for CNC.
+						</p>
+					</div>
+					<div>
+						<a href="https://docsend.com/view/zvfpzcx" class="btn btn-secondary">free download</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 	</div>
 </section>
+
 <?php 
 	get_footer();
 ?>

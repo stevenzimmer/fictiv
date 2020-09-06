@@ -23,7 +23,7 @@
 			<div class="w-11/12 xl:w-full">
 
 				<div class="flex justify-between items-center w-full">
-					<div class="lg:w-7/12 flex items-center justify-between">
+					<div class="w-full lg:w-7/12 flex items-center justify-between">
 						<div class="lg:w-24 xl:w-32">
 							<a href="<?php echo home_url() ?>">
 								<?php 
@@ -46,12 +46,12 @@
 									
 								?>
 								<li>
-									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-black hover:text-teal-light flex items-center lg:text-14" href="#" data-menu="<?php echo $i; ?>">
-										<?php echo $item; ?>
-										&nbsp;
-										<?php 
+									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-black hover:text-teal-light flex items-center lg:text-14" data-menu="<?php echo $i; ?>">
+										<span class=""><?php echo $item; ?></span>
+										&nbsp;&nbsp;
+										<span class="block mb-1"><?php 
 											echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
-										?>
+										?></span>
 									</a>
 								</li>
 
@@ -66,14 +66,14 @@
 							endif;
 						?>
 					</div>
-					<div class="lg:w-5/12">
+					<div class="w-full lg:w-5/12">
 						<div class="flex justify-end items-center">
 							<?php 
 						
 								if( !wp_is_mobile() ) :
 							
 							?>
-							<div class="w-3/5 px-6 hidden lg:block">
+							<div class="w-full lg:w-3/5 px-6 hidden lg:block">
 								<ul class="flex justify-end items-center  font-museo-700 text-black">
 									<li class="lg:mx-1 xl:mx-4">
 										<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-black hover:text-teal-light text-14">
@@ -138,12 +138,12 @@
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12 ">
-					<a class="select-none cursor-pointer mobile-menu-item text-black flex items-center text-14 font-museo-700 py-3" href="#" data-menu="<?php echo $i; ?>">
+					<a class="select-none cursor-pointer mobile-menu-item text-black flex items-center text-14 font-museo-700 py-3" data-menu="<?php echo $i; ?>">
 						<?php echo $item; ?>
 						&nbsp;
-						<?php 
+						<span class="block mb-1"><?php 
 							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
-						?>
+						?></span>
 					</a>
 				</div>
 			</div>

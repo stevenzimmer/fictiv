@@ -295,6 +295,7 @@
 
 	$args = array(
         'post_type' => array('page'),
+        'order' => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'fictiv_page_type',

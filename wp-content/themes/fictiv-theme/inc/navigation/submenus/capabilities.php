@@ -12,10 +12,7 @@
 							while ( $capabilities_menu->have_posts() ) :
 								$capabilities_menu->the_post();
 
-								$children_processes = get_children( array(
-									'post_type' => array('page'),
-									'post_parent' => get_the_id() 
-								));
+								include get_template_directory() . '/inc/navigation/vars/capabilities-children-processes.php';
 								 
 								if( !empty( $children_processes ) ) :
 
@@ -24,7 +21,7 @@
 						?>
 							<div class="lg:w-1/3 px-4 ">
 
-									<div class=" border-t border-t border-grey-200 border-r">
+									<div class=" border-l border-t border-grey-200 border-r">
 									<?php 
 
 										cap_menu_item( 
@@ -63,9 +60,9 @@
 
 									</div>
 									<?php 
+
 										if ( $i === 0 ) :
-								
-										
+									
 									?>
 									<div class="border-grey-200 border-l border-r border-b p-4">
 										<div class="mb-2">
@@ -111,12 +108,7 @@
 									while ( $capabilities_menu->have_posts() ) :
 										$capabilities_menu->the_post();
 
-										$children_processes = get_children( 
-											array( 
-												'post_type' => array('page'),
-												'post_parent' => get_the_id() 
-											)
-										);
+										include get_template_directory() . '/inc/navigation/vars/capabilities-children-processes.php';
 
 										if( empty( $children_processes ) ) :
 

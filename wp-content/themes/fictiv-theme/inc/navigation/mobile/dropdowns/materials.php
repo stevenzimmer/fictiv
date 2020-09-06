@@ -42,7 +42,7 @@
 									foreach ( $materials_terms_children as $l => $tax ) :
 
 								?>
-								<a class="block text-teal-light text-12 font-museo-700" href="<?php echo get_permalink( $tax->ID ); ?>"><?php echo $tax->post_title; ?></a>
+								<a class="block text-teal-light text-12 font-museo-700 mb-2 last:mb-0" href="<?php echo get_permalink( $tax->ID ); ?>"><?php echo $tax->post_title; ?></a>
 								<?php
 									endforeach;
 								?>
@@ -66,7 +66,7 @@
 										$materials_posts->the_post();
 									
 								?>
-								<a class="w-1/2 block text-teal-light text-teal-light text-12 font-museo-700 mb-2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								<a class="w-1/2 block text-teal-light text-teal-light text-12 font-museo-700 mb-2 last:mb-0" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								<?php 
 									endwhile;
 									wp_reset_postdata();

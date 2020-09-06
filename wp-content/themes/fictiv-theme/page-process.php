@@ -98,17 +98,19 @@ if ( have_posts() ) :
             ?>
             <div class="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-grey-200 last:border-transparent">
                 <div class="px-12 pt-8 pb-12 text-center">
+                    <?php 
+                        if( get_sub_field('process_icon') ) :
+                    ?>
                     <div class="h-20 flex justify-center items-center mb-4">
-                        <?php 
-                            if( get_sub_field('process_icon') ) :
-                        ?>
+                        
                         <div class="">
                             <img class="mx-auto" src="<?php the_sub_field('process_icon'); ?>">
                         </div>
-                        <?php 
-                            endif;
-                        ?>
+                        
                     </div>
+                    <?php 
+                        endif;
+                    ?>
                     <div class="mb-4">
                         <p class="font-museo-700 text-14 text-grey-700"><?php the_sub_field('process_title'); ?></p>
                     </div>
@@ -328,13 +330,13 @@ if ( have_posts() ) :
     if ( get_field('case_study_quote') ) :
     
 ?>
-<section class="">
+<section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
             <h2 class="text-29 text-black font-museo-500"><?php echo $processes[0]->name; ?> Case Study</h2>
         </div>
     </div>
-    <div class="bg-grey-100 max-w-1600 mx-auto relative py-10">
+    <div class="bg-grey-100 max-w-1600 mx-auto relative pb-10 lg:py-10">
         <div class="relative lg:absolute w-full h-full inset-0 mb-6 lg:mb-0">
             <div class="flex lg:justify-end h-full">
                 <div class="w-full lg:w-1/2 ">
@@ -347,7 +349,7 @@ if ( have_posts() ) :
                                     the_row();
                            
                         ?>
-                        <div class="md:mx-auto lg:h-half w-1/2 md:w-auto" style="">
+                        <div class="md:mx-auto lg:h-half w-1/2 lg:w-auto" style="">
                             <img alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" class="lazyload lg:h-full" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
                             
                         </div>
@@ -437,12 +439,12 @@ if ( have_posts() ) :
             <p class="text-14 font-museo-700 text-grey-400 uppercase mb-4">Fictiv <?php echo $processes[0]->name; ?> Advantages</p>
             <h2 class="text-29 text-black font-museo-500">From Prototype to Production</h2>
         </div>
-        <div class="flex flex-wrap -mx-6 justify-center lg:justify-start">
+        <div class="flex flex-wrap lg:flex-no-wrap -mx-6 justify-center lg:justify-start">
             <?php 
                 while( have_rows('fpp_columns') ) : 
                     the_row();
             ?>
-            <div class="w-11/12 lg:w-1/3 px-6 ">
+            <div class="w-11/12 lg:w-auto px-6 lg:flex-1">
                 <div class="border-t border-grey-200 p-8">
                      <div class="font-museo-500 box-check-dark text-grey-600 text-14 fpp-col">
                          <?php the_sub_field('fpp_column'); ?>
@@ -464,7 +466,7 @@ if ( have_posts() ) :
     if ( get_field('oqp_text') ) :
     
 ?>
-<section class="relative py-40 max-w-1600 mx-auto">
+<section class="relative py-20 lg:py-40 max-w-1600 mx-auto">
     <div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_field('oqp_background_image')['url']; ?>)"></div>
     <div class="flex h-full lg:justify-end relative">
         <div class=" w-full lg:w-6/12">

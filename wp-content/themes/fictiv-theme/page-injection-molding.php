@@ -2,64 +2,86 @@
 /* 	Template Name: Injection Molding 
 */ 
 	get_header();
+
+	if ( have_posts() ) : 
+
+	    while ( have_posts() ) : 
+    	    the_post();
+
+	$processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
+    $page_type = get_the_terms( get_the_id(), 'fictiv_page_type' );
 ?>
-<header class="py-24 relative">
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/injection-molding-header.jpg'; ?>)"></div>
-	<div class="bg-white absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
-	<div class="container relative">
-		<div class="flex justify-center md:justify-start">
-			<div class="w-11/12 md:w-3/4 lg:w-1/2">
-				<div class="mb-6">
-					<h1 class="text-blue-dark text-h1 uppercase font-museo-900 leading-tight"><?php the_title(); ?></h1>
-					<h2 class="text-blue-dark">
-						No minimum order quantities and free manufacturability feedback with every quote.
-					</h2>
-					
-				</div>
-				<div class="mb-6">
-					<?php primary_button() ?>
-				</div>
+<header class="py-12 relative">
+ 	<?php 
+        if ( has_post_thumbnail() ) :
+    ?>
+    <div class="absolute w-full h-full inset-0 max-w-1600 mx-auto">
+        <div class="flex lg:justify-end h-full">
+            <div class="w-full lg:w-9/12">
+                <div class="h-full bg-cover bg-center inset-0 lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <?php 
+        endif;
+    ?>
+ 
+    <div class="bg-white bg-opacity-75 md:bg-transparent bg-gradient-to-r from-white to-transparent absolute w-full inset-0 h-full"></div>
 
-				<div class="mb-4">
-					<?php 
-						$specs = array(
+    <div class="container relative">
+        <div class="flex justify-center">
+            <div class="w-11/12">
+                <div class="flex flex-wrap justify-center lg:justify-start">
+                    <div class="w-full lg:w-5/12 lg:w-6/12">
+                        <div>
+                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                                <?php 
+                                    echo $page_type[0]->name;
+                                ?>
+                            </p>
+                            
+                        </div>
+                        <div >
+                            <h1 class="text-black"><?php 
+                               echo $processes[0]->name;
+                            ?> Services</h1>
 
-							array(
-								'icon' => "parts",
-								'text' => 'PARTS AS FAST AS 10 DAYS'
-							),
+                        </div>
+                        <?php 
+                            if( get_field('capabilities_hero_paragraph') ) : 
+                        ?>
+                        <div class="text-grey-600 capabilities-hero-paragraph box-check-dark mb-4 mt-2">
+                            <?php 
+                                the_field('capabilities_hero_paragraph');
+                            ?>
+                        </div>
 
-							
-						);
+                        <?php 
+                            endif;
 
-						foreach ($specs as $i => $spec ) :
-				
-					?>
+                            $hero_cta_btn = get_field('capabilities_hero_cta_button');
 
-					<div class="flex flex-wrap items-center mb-2">
-						<div class="mr-2 w-12">
+                            if ( $hero_cta_btn ) :
+                                
+                        ?>
+                        <div>
+                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>  
+                        </div>
 
-							<!-- Icon -->
-							<img class="lazyload" width="30" alt="<?php echo strtolower( $spec['text']) ?> icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $spec['icon']; ?>.png">
-								
-						</div>
-						<div>
-							<p class="text-blue-dark font-museo-900 text-14">
-								<?php echo $spec['text']; ?>
-							</p>
-						</div>
-					</div>
-
-					<?php 
-						endforeach;
-					?>
-					
-				</div>
-			</div>
-			
-		</div>
-	</div>
+                        <?php
+                            endif;
+                        ?>
+                    </div>
+                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </header>
+
 <?php 
 	$steps = array(
 		array(
@@ -88,60 +110,65 @@
 ?>
 <section class="py-24">
 	<div class="container">
-		<div class="text-center mb-12">
-			<h3 class="uppercase text-blue-light font-museo-900 text-18">
-				FROM PROTOTYPE TO PRODUCTION 
-			</h3>
-		</div>
-		<?php 
-			foreach ($steps as $i => $step ) :
-		?>
-		<div class="flex flex-wrap justify-center lg:justify-between h-full items-stretch mb-12 <?php 
-			if( $i % 2 !== 0 ) :
-				echo 'flex-row-reverse';
-			endif;
-		?> -mx-6">
-
-			<div class="w-full lg:w-6/12 px-6">
-				<img class="lazyload" alt="<?php echo $step['title'] ?> graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/<?php echo $step['img'] ?>-graphic.png">
-			</div>
-			<div class="w-11/12 lg:w-5/12 py-10 px-6">
-				<div class="mb-4">
-					<h3 class="mb-2 text-36 text-blue-dark font-museo-900">
-						<?php echo $step['title']; ?>
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-10/12">
+				
+				<div class="text-center mb-12">
+					<h3 class="uppercase text-blue-light font-museo-900 text-18">
+						FROM PROTOTYPE TO PRODUCTION 
 					</h3>
-					<p class="text-blue-dark">
-						<?php echo $step['para']; ?>
-					</p>	
 				</div>
 				<?php 
-					foreach ( $step['items'] as $j => $item ) :
-					
+					foreach ( $steps as $i => $step ) :
 				?>
-				<div class="flex flex-wrap items-center mb-2">
-					<div class="w-8">
-						<div class="w-6">
-							<!-- Icon -->
-							<img class="lazyload" width="15" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
+				<div class="flex flex-wrap justify-center lg:justify-start items-center mb-12 <?php 
+					if( $i % 2 !== 0 ) :
+						echo 'flex-row-reverse';
+					endif;
+				?> -mx-6">
+
+					<div class="w-full lg:w-6/12 px-6">
+						<img class="lazyload" alt="<?php echo $step['title'] ?> graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/<?php echo $step['img'] ?>-graphic.png">
+					</div>
+					<div class="w-11/12 lg:w-6/12 px-6">
+						<div class="mb-4">
+							<h2 class="mb-2 text-blue-dark font-museo-900 text-24 md:text-36 leading-tight">
+								<?php echo $step['title']; ?>
+							</h2>
+							<p class="text-blue-dark">
+								<?php echo $step['para']; ?>
+							</p>	
 						</div>
-						
+						<?php 
+							foreach ( $step['items'] as $j => $item ) :
+							
+						?>
+						<div class="flex flex-wrap items-center mb-2">
+							<div class="w-8">
+								<div class="w-6">
+									<!-- Icon -->
+									<img class="lazyload" width="15" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
+								</div>
+								
+							</div>
+							<div>
+								<p class="font-museo-900 text-14 text-blue-dark">
+									<?php echo $item; ?>
+								</p>
+							</div>
+						</div>
+						<?php 
+							endforeach;
+						?>
+
 					</div>
-					<div>
-						<p class="font-museo-900 text-14 text-blue-dark">
-							<?php echo $item; ?>
-						</p>
-					</div>
+
 				</div>
-				<?php 
+				<?php
 					endforeach;
 				?>
-
 			</div>
-
 		</div>
-		<?php
-			endforeach;
-		?>
 		
 	</div>
 </section>
@@ -151,7 +178,7 @@
 			<div class="lg:w-10/12">
 				
 			
-				<div class="flex flex-wrap justify-center lg:justify-start -mx-6 mb-12">
+				<div class="flex flex-wrap justify-center md:justify-start -mx-6 mb-12">
 					<?php 
 						$features = array(
 							array(
@@ -187,37 +214,43 @@
 						foreach ($features as $i => $feature ) :
 						
 					?>
-					<div class="w-11/12 lg:w-1/3 px-6">
-
-						<div class="mb-4">
-							<!-- Icon -->
-							<img class="lazyload" width="30" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $feature['icon']; ?>.png">
-						</div>
-						
-						<div class="mb-4">
-							<h3 class="text-blue-dark font-museo-900"><?php echo $feature['title']; ?></h3>
-						</div>
-						<div>
-							<?php 
-								foreach ($feature['dots'] as $j => $dot ) :
-							?>
-							<div class="flex mb-2 items-center">
-								<div class="w-8 mt-1">
-									<div class="w-6">
-										<!-- Icon -->
-										<img class="lazyload" width="15" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
-									</div>
-									
+					<div class="w-11/12 md:w-1/3 px-6 mb-6 md:mb-0">
+						<div class="flex justify-center">
+							<div class="w-auto">
+								
+							
+								<div class="mb-4">
+									<!-- Icon -->
+									<img class="lazyload" width="30" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $feature['icon']; ?>.png">
 								</div>
-								<div class="w-full">
-									<p class="text-blue-dark text-12">
-										<?php echo $dot; ?>
-									</p>
+								
+								<div class="mb-4">
+									<h3 class="text-blue-dark font-museo-900"><?php echo $feature['title']; ?></h3>
+								</div>
+								<div>
+									<?php 
+										foreach ($feature['dots'] as $j => $dot ) :
+									?>
+									<div class="flex mb-2 items-center">
+										<div class="w-8">
+											<div class="w-6">
+												<!-- Icon -->
+												<img class="lazyload" width="15" alt="circle green check icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/check-circle-green.png">
+											</div>
+											
+										</div>
+										<div class="w-full">
+											<p class="text-blue-dark text-12">
+												<?php echo $dot; ?>
+											</p>
+										</div>
+									</div>
+									<?php 
+										endforeach;
+									?>
 								</div>
 							</div>
-							<?php 
-								endforeach;
-							?>
+							
 						</div>
 					</div>
 					<?php 
@@ -234,9 +267,9 @@
 		<div class="flex justify-center mb-12">
 			<div class="w-11/12 md:w-8/12 ">
 				<div class="text-center mb-8">
-					<h3 class="text-blue-dark text-36 font-museo-900">
+					<h2 class="text-blue-dark font-museo-900 text-24 md:text-36 leading-tight">
 						Get free expert manufacturability feedback
-					</h3>
+					</h2>
 				</div>
 				<div class="flex flex-wrap -mx-6 mb-4">
 					<div class="lg:w-1/2 px-6 mb-6 lg:mb-0">
@@ -321,7 +354,7 @@
 		<div class="flex justify-center mb-12">
 			<div class="w-11/12 md:w-9/12 lg:w-5/12 ">
 				<div class="text-center mb-2">
-					<h3 class="text-blue-dark text-36 font-museo-900">
+					<h3 class="text-blue-dark font-museo-900 text-24 md:text-36 leading-tight">
 						Your Fictiv Project Management Team
 					</h3>
 				</div>
@@ -350,7 +383,7 @@
 						?>" data-pm="<?php echo $i; ?>">
 							<div class="mb-4">
 								<div class="mx-auto rounded-full">
-									<img class="lazyload" alt="<?php echo strtolower( $rep['title'] ); ?> thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $rep['img']; ?>.png">
+									<img class="lazyload" alt="<?php echo strtolower( $rep['title'] ); ?> thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/headshots/<?php echo $rep['img']; ?>.png">
 									
 								</div>
 							</div>
@@ -397,55 +430,10 @@
 		</div>
 	</div>
 </section>
-<section>
-	<div class="flex flex-wrap hidden">
-	
-		<div class="md:w-1/2">
-			<div class="p-20 bg-grey-100">
-				<div>
-					<div class="h-12 w-12 rounded-full bg-grey-500 mx-auto"></div>
-	
-				</div>
-				<div class="text-center">
-					<h3 class="uppercase">
-						“Since starting to work with Fictiv, we’re able to take on projects with more complex manufacturing requirements.”
-					</h3>
-					<p>
-						—Miguel Piedrahita, Founder, 219 Design
-					</p>
-				</div>
-				<div class="text-center">
-					<a href="#" class="btn btn-secondary">read case study</a>
-				</div>
-			</div>
-		</div>
 
-		<div class="md:w-1/2 bg-grey-200">
-			<div class="flex justify-center">
-				<div class="md:w-8/12">
-					<div class="p-20 ">
-						<div>
-							<p class="uppercase">design guides</p>	
-						</div>
-						<div>
-							<h3>
-								Get Smart on Injection Molding
-							</h3>
-							<p>
-								A collection of industry best practices, including: recommended wall thicknesses, boss design, gate types and more.
-							</p>
-						</div>
-						<div class="">
-							<a href="#" class="btn btn-secondary">free download</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-				
-		</div>
-	</div>
-</section>
 <?php 
+		endwhile;
+		wp_reset_postdata();
+	endif;
 	get_footer();
 ?>
