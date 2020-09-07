@@ -3,19 +3,19 @@
 	get_header();
 
 ?>
-<header class="py-20 lg:pb-32 lg:pt-40 bg-blue-100">
+<header class="py-20 bg-blue-100">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-9/12 lg:w-6/12">
 				<div class="text-center mb-6">
-					<h1 class="uppercase text-48 text-blue-dark font-museo-900">COVID-19 Face Shields</h1>
+					<h1 class="uppercase text-24 lg:text-48 text-blue-dark font-museo-900 leading-tight">COVID-19 Face Shields</h1>
 				</div>
 				<div class="flex justify-between flex-wrap text-blue-light mb-6">
-					<div class="w-1/2">
+					<div class="w-full lg:w-1/2 text-center lg:text-left">
 						<span class="font-museo-700">Phone:</span>
 						<a href="tel:5103945236">(510) 394-5236</a>
 					</div>
-					<div class="w-1/2 lg:text-right">
+					<div class="w-full lg:w-1/2 text-center lg:text-right">
 						<span class="font-museo-700">Email:</span>
 						<a href="mailto:faceshields@fictiv.com">
 							faceshields@fictiv.com
@@ -30,19 +30,19 @@
                     </p>
 				</div>
 				<div class="flex justify-between flex-wrap text-blue-light mb-6">
-					<div class="w-1/2 text-center">
+					<div class="w-full lg:w-1/2 text-center mb-6 lg:mb-0">
 						<a href="#order-form" class="btn btn-secondary">Order now</a>
 					</div>
-					<div class="w-1/2 text-center">
+					<div class="w-full lg:w-1/2 text-center">
 						<a href="#learn-more" class="btn btn-ghost btn-ghost-secondary">Learn more</a>
 					</div>
 		
 				</div>
-				<div class="flex bg-white">
-					<div class="lg:w-1/2">
+				<div class="flex flex-wrap bg-white">
+					<div class="w-full lg:w-1/2">
 						<img alt="face shield 1" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-1.jpg"/>
 					</div>
-					<div class="lg:w-1/2">
+					<div class="w-full lg:w-1/2">
 						<img alt="face shield 2" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-2.jpg"/>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 	</div>
 </header>        
 
-<section class="py-20 lg:py-32" id="learn-more">
+<section class="py-20" id="learn-more">
 	<div class="container">
 		<div class="flex flex-wrap justify-center items-center mb-12 flex-col-reverse lg:flex-row">
 			<div class="w-full lg:w-1/2">
@@ -106,8 +106,8 @@
 			</div>
 			<div class="w-11/12 lg:w-1/2">
 				<div>
-					<div class="">
-						<h2 class="uppercase text-36 text-blue-dark font-museo-900">Design Specs</h2>
+					<div class="mb-6">
+						<h2 class="uppercase text-24 lg:text-36 text-blue-dark font-museo-900 leading-tight">Design Specs</h2>
 					</div>
                     <div class="mb-8">
                         <p class="text-blue-dark">
@@ -165,7 +165,7 @@
 <section class="bg-blue-100 py-20 ">
 	<div class="container">
 		<div class="text-center mb-12">
-			<h2 class="uppercase text-36 text-blue-dark font-museo-900">FACE SHIELD ASSEMBLY DEMO</h2>
+			<h2 class="uppercase text-24 lg:text-36 text-blue-dark font-museo-900 leading-tight">FACE SHIELD ASSEMBLY DEMO</h2>
 		</div>
 		<div>
 			<div style="padding-top: 56.25%;" class=" w-full relative p-0">
@@ -185,7 +185,7 @@
 <section class="py-20 ">
 	<div class="container">
 		<div class="text-center mb-12">
-			<h2 class="uppercase text-36 text-blue-dark font-museo-900">ASSEMBLY INSTRUCTIONS</h2>
+			<h2 class="uppercase text-24 lg:text-36 leading-tight text-blue-dark font-museo-900">ASSEMBLY INSTRUCTIONS</h2>
 		</div>
 		<div>
 			<img alt="face shield Assembly" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-assembly.png"/>
@@ -196,7 +196,7 @@
 	<div class="container">
 		<div class="flex flex-wrap justify-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-1/2 px-6">
-				<h2 class="uppercase text-30 leading-tight text-blue-dark font-museo-900 mb-8">COVID-19 SOLUTIONS AND RESOURCES TO MITIGATE SUPPLY CHAIN DISRUPTION</h2>
+				<h2 class="uppercase text-24 lg:text-30 leading-tight text-blue-dark font-museo-900 mb-6">COVID-19 SOLUTIONS AND RESOURCES TO MITIGATE SUPPLY CHAIN DISRUPTION</h2>
 				<p class="text-blue-dark text-20 mb-12">Get the latest webinars, blogs, and key learnings from industry experts to help you achieve supply chain agility during the Coronavirus pandemic.</p>
 				<div>
 					<a href="/covid-19-supply-chain-solutions/" class="btn btn-ghost btn-ghost-secondary">Learn more</a>
@@ -222,8 +222,8 @@
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-6/12">
 
-				<div class="text-center">
-					<h3 class="text-blue-dark uppercase font-museo-900 text-24">order masks</h3>
+				<div class="text-center mb-6">
+					<h3 class="text-blue-dark uppercase font-museo-900 text-24 lg:text-36">order masks</h3>
 				</div>
 				<div class="mb-4">
 

@@ -30,14 +30,10 @@ if ( mkto_forms.length > 0 ) {
  	function mktoFormChain(config) {
 
         /* util */
-		var arrayFrom = Function.prototype.call.bind(Array.prototype.slice);
+		var arrayFrom = Function.prototype.call.bind( Array.prototype.slice );
 
 		/* fix inter-form label bug! */
 		MktoForms2.whenRendered( function( form ) {
-
-			// document.getElementById('mktoForms2BaseStyle').parentNode.removeChild(document.getElementById('mktoForms2BaseStyle'));
-			// document.getElementById('mktoForms2ThemeStyle').parentNode.removeChild(document.getElementById('mktoForms2ThemeStyle'));
-			// document.getElementById('mktoFontUrl').parentNode.removeChild( document.getElementById('mktoFontUrl') );
 
 			var formEl = form.getFormElem()[0],
 				rando = "_" + new Date().getTime() + Math.random();

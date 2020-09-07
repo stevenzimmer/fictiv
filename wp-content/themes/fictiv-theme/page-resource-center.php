@@ -100,7 +100,7 @@
 												
 
 												<div class="absolute right-0 bottom-0 p-4">
-													<a href="<?php echo get_the_permalink(); ?>" class="absolute w-full h-full inset-0"></a>
+												
 													<div>
 														<?php 
 															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');

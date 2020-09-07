@@ -1,0 +1,47 @@
+{
+    "key": "group_5f564b9247a90",
+    "title": "Supply Chain Resources Section",
+    "fields": [
+        {
+            "key": "field_5f564b9d3378c",
+            "label": "Add Resource Post",
+            "name": "add_resource_post",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cpt_blog",
+                "cpt_webinar"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-supply-chain-solutions.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1599491310
+}

@@ -58,10 +58,10 @@
 									<p class="text-white text-12 md:text-14">Discover Fictiv’s radical transparency features
 									</p>
 								</div>
-								<div class="relative transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
-									<?php 
-										echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg');
-									?>
+								<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
+
+									<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
+								
 								</div>
 							</div>
 						</div>
@@ -80,10 +80,8 @@
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
 				
 				<div class="flex items-center mb-4 md:mb-0">
-					<div class="mr-2 svg">
-						<?php 
-							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/parts.svg');
-						?>
+					<div class="mr-2 ">
+						<img alt="10 MILLION + PARTS MADE icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/parts.svg'; ?>">
 					</div>
 					<div class="w-full">
 						<p class="text-white font-museo-900 uppercase leading-tight">
@@ -93,12 +91,12 @@
 				</div>
 				<div class="flex items-center relative mb-4 md:mb-0">
 					<a class="absolute w-full h-full inset-0" href="https://docsend.com/view/fwev6a8jj6zd59rq" target="_blank"></a>
-					<div class="mr-2 svg">
-						<?php 
-							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/iso.svg');
-						?>
+					<div class="mr-2 ">
+						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/iso.svg'; ?>">
+					
 					</div>
-					<div class="w-full">
+					<div class="w-full relative group ">
+						<a href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
 						<div>
 							<p class="text-white font-museo-900 uppercase leading-tight">
 							iso 9001</p>
@@ -108,10 +106,9 @@
 								<p class="text-white font-museo-900 uppercase leading-tight">
 								certified </p>
 							</div>
-							<div class="">
-								<?php 
-									echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg');
-								?>
+							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
+								<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
+								
 							</div>
 						</div>
 					
@@ -119,10 +116,9 @@
 				</div>
 
 				<div class="flex items-center relative">
-					<div class="mr-2 svg">
-						<?php 
-							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/guarantee.svg');
-						?>
+					<div class="mr-2">
+						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/guarantee.svg'; ?>">
+						
 					</div>
 					<div class="w-full">
 						<p class="text-white font-museo-900 uppercase leading-tight">
@@ -203,8 +199,8 @@
 
 <section class="py-20">
 	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
-			<div class="w-11/12 lg:w-6/12 px-6">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
+			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4se">
 					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
 						Digital Platform
@@ -219,7 +215,7 @@
 					<a class="btn btn-secondary" href="/our-platform/">learn more</a>
 				</div>
 			</div>
-			<div class="w-full lg:w-6/12 px-6">
+			<div class="w-full lg:w-6/12 lg:px-6">
 				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
 				
 			</div>
@@ -241,8 +237,8 @@
 		</div>
 
 
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
-			<div class="w-11/12 lg:w-6/12 px-6">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
+			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
 					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
 						Partner Network
@@ -266,8 +262,8 @@
 <section class="py-20 hidden lg:block"></section>
 <section class="py-20">
 	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
-			<div class="w-11/12 lg:w-6/12 px-6">
+		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
+			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
 					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
 						People on the Ground
@@ -282,7 +278,7 @@
 					<a class="btn btn-secondary" href="/our-people/">learn more</a>
 				</div>
 			</div>
-			<div class="w-full lg:w-6/12 px-6">
+			<div class="w-full lg:w-6/12 lg:px-6">
 				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
 				
 			</div>
@@ -329,7 +325,7 @@
 					<div class="w-11/12 md:w-1/2 lg:w-1/4  block-link px-2 ">
 						<div class="relative shadow group">
 							<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
-							<div class="w-full bg-white p-6">
+							<div class="w-full bg-white lg:p-2">
 								<div class="relative h-0" style="padding-bottom: 75.25%">
 									<img class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
 								</div>
@@ -628,12 +624,12 @@
 
 <section class="section bg-white">
 	<div class="container">
-		<div class="flex flex-wrap justify-center lg:justify-between -mx-6">
-			<div class="w-full lg:w-6/12 px-6">
+		<div class="flex flex-wrap justify-center lg:justify-between lg:-mx-6">
+			<div class="w-full lg:w-6/12 lg:px-6">
 				<div class="mb-2">
-					<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-1.jpg'; ?>">
+					<img class="lazyload w-full px-1 lg:px-0" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-1.jpg'; ?>">
 				</div>
-				<div class="flex -mx-1">
+				<div class="flex lg:-mx-1">
 					<div class="px-1 flex-1">
 						<img class="lazyload w-full" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-2.jpg'; ?>">
 					</div>
@@ -642,7 +638,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-11/12 lg:w-1/2 px-6">
+			<div class="w-11/12 lg:w-1/2 lg:px-6">
 				<div class="mb-4">
 					<img width="280" class="lazyload" alt="Gecko Robotics logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/gecko-robotics.png">
 				</div>
@@ -651,7 +647,7 @@
 					
 				</div>
 				<div class="mb-4">
-					<p class="text-blue-dark text-36 font-museo-900 leading-tight">“Our robot has a lot of unique and high tolerance parts. Finding a trustworthy partner that can make those parts reliably and quickly has been extremely helpful.”</p>
+					<p class="text-blue-dark text-24 lg:text-36 font-museo-900 leading-tight">“Our robot has a lot of unique and high tolerance parts. Finding a trustworthy partner that can make those parts reliably and quickly has been extremely helpful.”</p>
 				</div>
 				<div class="mb-4">
 					<p class="text-blue-dark">
@@ -661,8 +657,8 @@
 				<div class="mb-8">
 					<a href="/customer-stories/gecko-robotics/" class="btn btn-secondary">read case study</a>
 				</div>
-				<div class="flex justify-start items-center">
-					<div class="flex items-center">
+				<div class="flex justify-start items-center flex-wrap">
+					<div class="flex items-center mb-6 lg:mb-0">
 						<div class="mr-2">
 							<!-- Icon -->
 							<img width="30" alt="10M+ Parts made icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">

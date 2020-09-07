@@ -3,15 +3,16 @@
 */ 
 	get_header();
 ?>
-<header class="pt-40 pb-20 relative">
+<header class="py-20 relative">
 	<div class="absolute w-full h-full inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/thank-you-hero.png'; ?>)"></div>
 	<div class="container relative">
 		<div class="flex justify-center lg:justify-start flex-wrap">
 			<div class="w-11/12 lg:w-5/12 mb-12 lg:mb-0">
 				<div class="uppercase text-blue-dark font-museo-900">Video Course</div>
-                <h1 class="text-blue-dark font-museo-900 text-48 uppercase leading-tight mb-12">Guide to Injection Molding Success</h1>
-                <div class="div-block-120">
-                	<a href="#register" data-fa-placement="cta banner" data-fa-name="get quote" class="button cta-button-green imvideoseries w-button">SIGN UP NOW</a></div>
+                <h1 class="text-blue-dark font-museo-900 text-24 lg:text-48 uppercase leading-tight mb-6">Guide to Injection Molding Success</h1>
+                <div class="">
+                	<a href="#register" class="btn btn-primary">SIGN UP NOW</a>
+                </div>
 			</div>
 			<div class="w-full lg:w-7/12">
 				<div style="padding-top: 56.25%;" class=" w-full relative p-0">
@@ -27,7 +28,7 @@
 		</div>
 	</div>
 </header>
-<section class="py-20 lg:py-32">
+<section class="py-20">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-8/12">
@@ -49,31 +50,27 @@
 					<?php 
 						$episodes = array(
 							array(
-								'img' => 'https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/5cc9e51f73a9a47df914b2d4_pic-intro.jpg',
 								'title' => 'Tool Types: Single vs Multi vs Family Cavity Tools',
 								'para' => 'Learn the pros and cons of different tool types and which one is best suited for your manufacturing needs.'
 							),
 
 							array(
-								'img' => 'https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/5cc9e51f89b7a6ba7a2007dc_pic4.jpg',
 								'title' => 'Tricks of the Trade: Secondary Operations',
 								'para' => 'Learn expert tips on how to manage multi-step post processing operations for injection molding including heat staking, painting and assembly.'
 							),
 
 							array(
-								'img' => 'https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/5cc9e51fbddc864cd6ab843a_pic3.jpg',
 								'title' => 'Mold Life: Rapid vs Production Tooling',
 								'para' => 'Learn the differences and pros and con between rapid vs production tooling and tricks of the trade to extend your mold life.'
 							),
 
 							array(
-								'img' => 'https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/5cc9e51f89b7a6855b2007dd_pic2.jpg',
 								'title' => 'Manufacturability Feedback Tips',
 								'para' => 'Learn why manufacturability early on is critical to your success in injection molding and how Fictiv can help.'
 							),
 						);
 
-						foreach ($episodes as $i => $ep) :
+						foreach ( $episodes as $i => $ep ) :
 						
 					?>
 					<div class="lg:w-1/2 px-2 mb-4">
@@ -117,7 +114,7 @@
 	</div>
 </section>
 
-<section class="bg-grey-100 py-20 lg:py-32">
+<section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="text-center mv-12">
 			 
@@ -148,27 +145,26 @@
 		                    </p>
 						</div>
 					</div>
-					
-	                <div class="div-block-118">
-	                    
-	                </div>
+				
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="py-20 lg:py-32">
+<section class="py-20 ">
 	<div class="container">
-		<div class="mb-12 text-center">
-			<h2 class="text-30 font-museo-500 text-blue-dark">Sign up for the free 4-day course</h2>
+		<div class="mb-6 text-center">
+			<h2 class="text-24 lg:text-30 font-museo-500 text-blue-dark">Sign up for the free 4-day course</h2>
 		</div>
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-8/12 lg:w-6/12">
-				<script src="//app-ab20.marketo.com/js/forms2/js/forms2.min.js"></script>
-	            <form id="mktoForm_468"></form>
-	            <script>
-	                MktoForms2.loadForm("//app-ab20.marketo.com", "852-WGR-716", 468);
-	            </script>
+				<div class="mb-2">
+					<form data-form-type="guide-to-injection-molding" class="mktoForm mb-6" data-formId="468"></form>
+				</div>
+				
+				<?php 
+					get_template_part('partials/gdpr', 'text');
+				?>
 			</div>
 			
 		</div>

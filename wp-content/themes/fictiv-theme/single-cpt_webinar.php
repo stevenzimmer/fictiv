@@ -41,8 +41,6 @@ if ( have_posts() ) :
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
 			<div class="w-full lg:w-10/12 px-5 lg:px-0">
-				
-
 				<div class="mb-6 hidden md:block">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');

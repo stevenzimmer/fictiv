@@ -22,6 +22,25 @@
             "button_label": "Add News",
             "sub_fields": [
                 {
+                    "key": "field_5f5650a496a0f",
+                    "label": "Title",
+                    "name": "featured_press_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5ec9b65ec483e",
                     "label": "Press Logo",
                     "name": "featured_press_logo",
@@ -93,6 +112,13 @@
                 "operator": "==",
                 "value": "page-press.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-supply-chain-solutions.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -103,5 +129,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599142245
+    "modified": 1599492283
 }

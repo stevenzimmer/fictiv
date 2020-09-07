@@ -43,7 +43,8 @@
 					?>
 					<div class="mb-4">
 						<!-- Form -->
-						<form id="mktoForm_<?php the_field('mkto_form_id'); ?>"></form>
+						<form data-form-type="invite-friend" class="mktoForm " data-formId="<?php the_field('mkto_form_id'); ?>"></form>
+						<form id="mktoForm_"></form>
 					</div>
 
 					<?php 
@@ -55,9 +56,7 @@
 		</div>
 	</div>
 </header>
-<script type="text/javascript">
-	MktoForms2.loadForm("//app-ab20.marketo.com", "852-WGR-716", <?php the_field('mkto_form_id'); ?>);
-</script>
+
 <?php 
 		endwhile;
 	endif;
