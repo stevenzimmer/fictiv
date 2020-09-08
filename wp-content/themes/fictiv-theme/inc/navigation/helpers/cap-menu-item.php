@@ -26,7 +26,7 @@
 								if ( $excerpt ) :
 									
 							?>
-							<div class="text-12 text-black mt-2 max-lines max-lines-2">
+							<div class="text-12 text-black mt-1 max-lines max-lines-2">
 								<?php echo $excerpt; ?>		
 							</div>
 							<?php 
@@ -61,7 +61,7 @@
 							if ( $excerpt ) :
 								
 						?>
-						<div class="text-12 text-black mt-2 max-lines max-lines-2">
+						<div class="text-12 text-black mt-1 max-lines max-lines-2">
 							<?php echo $excerpt; ?>		
 						</div>
 						<?php 

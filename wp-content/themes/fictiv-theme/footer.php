@@ -147,11 +147,7 @@
 										<p>Thank you for subscribing!</p>
 									</div>
 								</div>
-								<div class="border-2 border-teal-light py-2 px-4 hidden">
-									<p>
-										Subscribe to our newsletter
-									</p>
-								</div>
+								
 							</div>
 							<div class="w-full sm:w-1/3 lg:w-1/2">
 								<div class="flex justify-center sm:justify-start">

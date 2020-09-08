@@ -1,6 +1,6 @@
 /*! purgecss start ignore */
 
-.tolerance {
+/*.tolerance {
 
 	&-toggle {
 
@@ -19,9 +19,9 @@
       }
 		}
 	}
-}
+}*/
 
-.select-box .options-container {
+/*.select-box .options-container {
   transition: .2s max-height ease-in-out;
   max-height: 0;
 }
@@ -57,6 +57,6 @@
   max-height: 400px;
   opacity: 1;
   overflow-y:scroll;
-}
+}*/
 
 /*! purgecss end ignore */

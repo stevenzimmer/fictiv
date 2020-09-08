@@ -1,7 +1,5 @@
-/* config area - replace with your instance values */
-
 /* const */
-var MKTOFORM_ID_ATTRNAME = "data-formId";
+const MKTOFORM_ID_ATTRNAME = "data-formId";
 
 let mkto_forms = document.querySelectorAll('[' + MKTOFORM_ID_ATTRNAME +']');
 
@@ -19,7 +17,7 @@ if ( mkto_forms.length > 0 ) {
     
     }
 
-    var mktoFormConfig = {
+    const mktoFormConfig = {
         podId : "//info.fictiv.com",
         munchkinId : "852-WGR-716",
         formIds : mkto_forms_ids

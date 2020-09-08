@@ -68,6 +68,10 @@
     &.horizontal {
         @apply flex justify-between;
 
+        &.hidden {
+            @apply hidden;
+        }
+
         .mktoFormRow {
             @apply w-0 mx-0 !important;
             /*@apply mx-0;*/
