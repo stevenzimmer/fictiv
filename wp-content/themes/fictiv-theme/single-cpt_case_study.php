@@ -58,6 +58,7 @@ if ( have_posts() ) :
 					<?php 
 
 						the_content();
+					
 
 					?>	
 				</div>

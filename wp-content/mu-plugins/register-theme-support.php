@@ -21,7 +21,7 @@
 	function register_fictiv_menus() {
 	 register_nav_menus(
 	    array(
-	      'top-nav' => __( 'Top Nav' ),
+	      // 'top-nav' => __( 'Top Nav' ),
 	      'footer' => __( 'Footer' )
 	    )
 	  );

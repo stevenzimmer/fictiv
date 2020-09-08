@@ -10,7 +10,7 @@
 
 		<div class="page-content">
 			<?php 
-				echo get_the_content();
+				the_content();
 			?>
 		</div>
 	</div>

@@ -6,7 +6,7 @@ function fictiv_post_card( $topic ) {
 
 ?>
 <div class="border border-grey-200 relative h-full">
-	<a href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-50"></a>
+	<a href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
 	<div class="relative h-0 thumbnail-ratio" >
 		
 		<?php 
@@ -38,6 +38,7 @@ function fictiv_post_card( $topic ) {
 
 			?></h2>
 		</div>
+
 		
 		<div class="text-14 text-grey-600 font-museo-500 h-20">
 			<?php 

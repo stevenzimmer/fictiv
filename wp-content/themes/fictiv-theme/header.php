@@ -11,7 +11,7 @@
   	?>
 </head><!--/head-->
 
-<body <?php body_class('overflow-x-hidden') ?>>
+<body <?php body_class('overflow-x-hidden'); ?>>
 	
 <?php 	
 
@@ -26,7 +26,9 @@
 			is_page_template('page-filter.php') || 
 			is_archive() ||
 			is_page_template('page-resource-center.php') ||
-			is_singular('cpt_blog') ) :
+			is_singular('cpt_blog') ||
+			is_singular('cpt_teardown') 
+		) :
 
 			include( get_template_directory() . '/inc/post-taxonomies.php');
 

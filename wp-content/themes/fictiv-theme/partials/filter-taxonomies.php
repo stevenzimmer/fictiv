@@ -1,33 +1,35 @@
 <?php 
-	foreach ( $GLOBALS['resource_post_types'] as $i => $tax ) :
-		$labels = get_taxonomy( $tax );
 
-		$filters = get_terms( array(
-			'taxonomy' => $tax,
-			'hide_empty' => true
-		));
+	// resource_center_cpt();
+	// foreach ( $GLOBALS['resource_post_types'] as $i => $tax ) :
+	// 	$labels = get_taxonomy( $tax );
+
+	// 	$filters = get_terms( array(
+	// 		'taxonomy' => $tax,
+	// 		'hide_empty' => true
+	// 	));
 
 ?>
-	<div class="filter-tax-wrapper">
+	<!-- <div class="filter-tax-wrapper"> -->
 		
 		<?php 
-			resources_filter_title( $labels->labels->singular_name );
+			// resources_filter_title( $labels->labels->singular_name );
 		?>
 
-		<div class="bg-grey-lighter filter-items overflow-hidden">
+		<!-- <div class="bg-grey-lighter filter-items overflow-hidden"> -->
 			<?php 
 
-				foreach ( $filters as $i => $filter ) :
+				// foreach ( $filters as $i => $filter ) :
 
-					filter_checkbox( $filter );
+				// 	filter_checkbox( $filter );
 					
-				endforeach;
+				// endforeach;
 			?>
-		</div>
+		<!-- </div> -->
 			
 	
-	</div>
+	<!-- </div> -->
 <?php
 
-	endforeach;
+	// endforeach;
 ?>

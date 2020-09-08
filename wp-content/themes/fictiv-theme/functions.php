@@ -6,7 +6,7 @@
         wp_dequeue_script('jquery');
         wp_deregister_script('jquery');
 
-        wp_enqueue_script( 'mkto-forms', '//app-ab20.marketo.com/js/forms2/js/forms2.min.js', [], '1.1', false );
+        wp_enqueue_script( 'mkto-forms', '//info.fictiv.com/js/forms2/js/forms2.min.js', [], '1.1', false );
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.5', true);
     
@@ -15,7 +15,7 @@
 
     function primary_button( $text = 'get a quote' ) {
 ?>
-		<a href="https://app.fictiv.com/signup" class="btn btn-primary">
+		<a href="https://app.fictiv.com/signup/" class="btn btn-primary">
 			<?php 
                 echo $text;
             ?>
@@ -64,7 +64,7 @@
         return $content;
     }
 
-    add_filter('the_content', 'lazyload_images_in_posts');
+    add_filter('the_content', 'lazyload_images_in_posts' );
 
     function resource_center_cpt() {
 
@@ -86,6 +86,8 @@
     function resource_center_taxonomies() {
 
         $resource_center_taxonomies = array();
+
+        resource_center_cpt();
         
         foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
 
@@ -122,8 +124,6 @@
 <?php
     }
 
-    require get_theme_file_path('/inc/custom-rest-route.php');
-
     function capabilities_table( $col_title, $cell_columns, $cell ) {
 ?>
        <div class="w-full flex flex-row md:flex-col capabilities-table">
@@ -158,5 +158,7 @@
 
 <?php
     }
+
+    require get_theme_file_path('/inc/custom-rest-route.php');
 
 ?>

@@ -51,8 +51,6 @@ $post_description = ( is_single() ?
 		
 );
 
-
-// print_r( get_queried_object()->post_title );
 $post_title = ( is_single() ?
 		get_post( get_queried_object()->post_parent )->post_title
 	:

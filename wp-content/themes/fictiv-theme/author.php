@@ -6,8 +6,8 @@ $curauth = get_queried_object();
 
 
 ?>
-<header class="relative pt-24 pb-12">
-	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php the_field( 'author_background_image', get_queried_object() ) ?>);"></div>
+<header class="relative  py-20">
+	<div class="absolute w-full h-full bg-cover bg-center inset-0"  style="background-image: url(<?php the_field( 'author_background_image', $curauth ) ?>);"></div>
 	<div class="absolute w-full h-full inset-0 bg-black opacity-75"></div>
 	<div class="container relative">
 		<div class="lg:w-2/3">

@@ -23,7 +23,6 @@
 
 	</div>
 		
-	
 </nav>
 
 <div class="bg-white py-4 filter-content-mobile-dropdown absolute w-full shadow-lg z-40">

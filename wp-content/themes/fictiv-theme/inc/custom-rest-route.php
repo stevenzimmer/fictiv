@@ -33,30 +33,6 @@
 		while( $resources->have_posts() ) :
 			$resources->the_post();
 
-			// $taxonomies = array();
-
-			// foreach ( get_post_type_object( get_post_type() )->taxonomies as $j => $tax ) :
-
-			// 	if ( !in_array( $tax, $taxonomies ) ) :
-					
-			// 		array_push( $taxonomies, $tax);
-
-			// 	endif;
-			// endforeach;
-
-			// $filters = get_terms( array(
-			// 	'taxonomy' => $tax,
-			// 	'hide_empty' => true
-			// ));
-
-			// $terms = array();
-
-			// foreach ($filters as $i => $filter ) {
-				
-			// 	array_push($terms, $filter->name );
-
-			// }
-
 			array_push( $resource_results, array(
 				'title' => get_the_title(),
 				'link' => get_the_permalink(),

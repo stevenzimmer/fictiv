@@ -1,6 +1,6 @@
 <?php 
 
-	add_action('init', 'create_resource_center_content');
+	add_action('init', 'create_resource_center_content', 1);
 
 	function create_resource_center_content() {
 
@@ -30,7 +30,6 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'Article description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -69,14 +68,12 @@
 					'use_featured_image'	=> __('Use as Hero Image'),
 					'items_list'			=> __('Teardown List'),
 					'archives'				=> __('Teardown Archive')
-					
 				),
 				'taxonomies'	=> array(
 					'fictiv_role',
 					'fictiv_topic',
 					'fictiv_industry'
 				),
-				'description' 	=> 'Teardown description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -88,7 +85,7 @@
 					'excerpt', 
 					'thumbnail',
 				), 
-				'menu_position'	=> 1,
+				'menu_position'	=> 5,
 				'menu_icon'		=> 'dashicons-hammer',
 				'show_ui'		=> true,
 				'show_in_rest'	=> true,
@@ -123,7 +120,6 @@
 					'fictiv_topic',
 					'fictiv_industry'
 				),
-				'description' 	=> 'Webinar description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -170,7 +166,6 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'eBook description goes here',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -214,7 +209,6 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -257,7 +251,6 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -300,7 +293,6 @@
 					'fictiv_industry',
 					'fictiv_manufacturing_process'
 				),
-				'description' 	=> 'We work with leading innovators across a range of industries, to help them manufacture products faster and more efficiently than ever before.',
 				'public' 		=> true,
 				'hierarchical'  => true,
 				'has_archive' 	=> true,
@@ -334,8 +326,6 @@
 				'cpt_ebook'
 			),
 			array(
-				// 'capability_type' => 'fictiv_role',
-				// 'map_meta_cap' => true,
 				'labels'	=> array(
 					'name'			=> 'Roles',
 					'singular_name'	=> 'Role',

@@ -15,7 +15,7 @@
 			<div class="w-11/12 lg:w-8/12">
 				<div class="bg-white p-12 page-content shadow-lg">
 					<?php 
-						echo get_the_content();
+						the_content();
 					?>
 				</div>
 			</div>

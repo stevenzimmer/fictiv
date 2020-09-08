@@ -1,25 +1,26 @@
 <?php 
 get_header();
 
-if ( have_posts() ) : 
+// print_r( get_queried_object() );
 
-    while ( have_posts() ) : 
-        the_post();
+while ( have_posts() ) :
 
-        include( get_template_directory() . '/inc/post-topics.php');
+    the_post();
 
-        $args = array(
-        	'bg' => get_the_post_thumbnail_url(),
-        	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
-        	'title' => get_the_title(),
-        	'post_type' => get_queried_object()->post_type,
+    include( get_template_directory() . '/inc/post-topics.php');
 
-        );
+    $args = array(
+    	'bg' => get_the_post_thumbnail_url(),
+    	'label' => get_post_type_object( get_queried_object()->post_type )->labels->singular_name,
+    	'title' => get_the_title(),
+    	'post_type' => get_queried_object()->post_type,
 
-        hero_section( $args );
+    );
+
+    hero_section( $args );
         
 ?>
-<section class="py-10">
+<section class="py-20">
 	<div class="container">
 		
 		<div class="flex justify-center">
@@ -47,7 +48,7 @@ if ( have_posts() ) :
 										<img width="40" src="<?php echo get_avatar_url( get_the_author_meta('ID') ); ?>">
 									</div>
 								
-									<div class=" w-full px-2 text-12">
+									<div class="w-full px-2 text-12">
 										<div>
 											<p class="text-blue-dark uppercase font-museo-700">
 												<?php the_author(); ?>
@@ -80,6 +81,7 @@ if ( have_posts() ) :
 							<?php 
 
 								the_content();
+
 							?>	
 						</div>
 							
@@ -128,8 +130,8 @@ if ( have_posts() ) :
 	include( get_template_directory() . '/inc/related-posts.php');
 
 
-	endwhile;
-	wp_reset_postdata();
-endif;
+endwhile;
+wp_reset_postdata();
+
 get_footer();
 ?>

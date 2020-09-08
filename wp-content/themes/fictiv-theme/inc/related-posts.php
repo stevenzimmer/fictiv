@@ -1,4 +1,5 @@
 <?php 
+
 $related_args = array(
 	'posts_per_page' => 2,
     'post_type' => get_queried_object()->post_type,
@@ -31,11 +32,13 @@ if ( $related_posts->have_posts() ) :
 				    $related_posts->the_post();
 			?>
 			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-				<div class="h-full">
+				<div class="h-full group relative">
+					<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
 					<?php 
 						if( has_post_thumbnail() ) :
 					?>
 					<div class="relative h-0" style="padding-bottom: 40.25%">
+						
 						<img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
 					</div>
 					<?php 
@@ -51,7 +54,7 @@ if ( $related_posts->have_posts() ) :
 					?>
 					<div class="p-4">
 						<h3 class="text-14 font-museo-700">
-							<a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
+							<a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
 								<?php 
 									the_title();
 								?>

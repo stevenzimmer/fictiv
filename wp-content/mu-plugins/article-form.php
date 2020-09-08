@@ -3,7 +3,7 @@
 
 	    if ( !is_singular('cpt_blog') ) :
 
-	    	
+	    	return $content;
 	 	
 	 	else:
 
