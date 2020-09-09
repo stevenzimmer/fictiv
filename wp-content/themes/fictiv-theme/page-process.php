@@ -103,8 +103,8 @@ if ( have_posts() ) :
                     ?>
                     <div class="h-20 flex justify-center items-center mb-4">
                         
-                        <div class="">
-                            <img class="mx-auto" src="<?php the_sub_field('process_icon'); ?>">
+                        <div class="h-full">
+                            <img class="mx-auto h-full" src="<?php the_sub_field('process_icon'); ?>">
                         </div>
                         
                     </div>
@@ -369,7 +369,7 @@ if ( have_posts() ) :
            
                 <div class="w-11/12 lg:w-5/12">
                     <div class="mb-4">
-                         <p class="text-29 text-blue-dark font-museo-500 leading-tight">
+                         <p class="text-20 md:text-29 text-blue-dark font-museo-500 leading-tight">
                             <?php the_field('case_study_quote') ?>
                         </p>
                     </div>

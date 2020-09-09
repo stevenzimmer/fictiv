@@ -28,26 +28,26 @@
 	</div>
 	<div class="bg-black absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
-		<div class="flex justify-center">
+		<div class="flex justify-center mb-6">
 			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
-					<div class="mb-6">
-						<h1 class="text-white font-museo-900 leading-none text-29 md:text-48">
-							YOUR GO-TO PARTNER FOR PRECISION PARTS AT THE SPEED OF DIGITAL
-						</h1>
-					</div>
+				
+					<h1 class="text-white font-museo-500 text-29 md:text-36">
+						Your go-to partner for precision parts at the speed of digital
+					</h1>
+			
 				</div>
 			</div>
 		</div>
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-10/12">
 				<div class="text-center">
-					<div class="mb-2">
-						<p class="text-white  md:text-20 ">
+					<div class="mb-4">
+						<p class="text-white md:text-20 font-museo-500">
 							Fictiv’s Digital Manufacturing Ecosystem is the go-to destination for engineers and supply chain managers who need high tolerance mechanical parts at unprecedented speeds.
 						</p>
 					</div>
-					<div class="flex justify-center mb-2">
+					<div class="flex justify-center mb-4">
 						<div>
 							<div class="flex items-center relative group">
 								<a href="#" class="absolute w-full h-full inset-0" vimeo-open="vimeo-modal"></a>
@@ -84,8 +84,8 @@
 						<img alt="10 MILLION + PARTS MADE icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/parts.svg'; ?>">
 					</div>
 					<div class="w-full">
-						<p class="text-white font-museo-900 uppercase leading-tight">
-							10 MILLION + <br>PARTS MADE
+						<p class="text-white font-museo-700 leading-tight md:text-20">
+							10 million + <br>parts made
 						</p>
 					</div>
 				</div>
@@ -98,12 +98,12 @@
 					<div class="w-full relative group ">
 						<a href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
 						<div>
-							<p class="text-white font-museo-900 uppercase leading-tight">
-							iso 9001</p>
+							<p class="text-white font-museo-700 leading-tight md:text-20">
+							ISO 9001</p>
 						</div>
 						<div class="flex items-center">
 							<div class="mr-2">
-								<p class="text-white font-museo-900 uppercase leading-tight">
+								<p class="text-white font-museo-700 leading-tight md:text-20">
 								certified </p>
 							</div>
 							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
@@ -121,58 +121,9 @@
 						
 					</div>
 					<div class="w-full">
-						<p class="text-white font-museo-900 uppercase leading-tight">
-							FICTIV INSPECTIONS <br>ON EVERY PART
+						<p class="text-white font-museo-700 leading-tight md:text-20">
+							Fictiv inspections <br>on every part
 						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-<header class="py-40 relative hidden">
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>)"></div>
-	<div class="bg-white absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
-	<div class="container relative">
-		<div class="flex justify-center lg:justify-start">
-			<div class="w-11/12 lg:w-6/12">
-				<div class="mb-4">
-					<h1 class="uppercase text-blue-dark font-museo-900 leading-none text-29 md:text-h1 ">
-						MANUFACTURING AGILITY MADE POSSIBLE
-					</h1>
-				</div>
-				<div class="mb-4">
-					<p class="text-blue-dark text-20">
-						Get high quality mechanical parts at unprecedented speeds, from prototype to production.
-					</p>
-				</div>
-				<div class="mb-8">
-					<?php 
-						primary_button();
-					?>
-				</div>
-				<div class="flex items-center justify-start flex-wrap -mx-6">
-					<div class="flex items-center w-full mb-6 md:mb-0 md:w-1/2 xl:w-1/3 px-6 mb-0">
-						<div class="mr-2">
-							<!-- Icon -->
-							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
-						</div>
-						<div>
-							<p class="text-blue-dark font-museo-900 uppercase text-14">
-								10M+ PARTS MADE
-							</p>
-						</div>
-					</div>
-					<div class="flex items-center w-full md:w-1/2 xl:w-5/12 px-6">
-						<div class="mr-2">
-							<!-- Icon -->
-							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/clock.png">
-						</div>
-						<div>
-							<p class="text-blue-dark font-museo-900 uppercase text-14">
-								PARTS AS FAST AS 24 HRS
-							</p>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -184,10 +135,10 @@
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-9/12">
 				<div class="text-center">
-					<h2 class="text-blue-dark font-museo-900 uppercase text-36 md:text-48 mb-2">
-						DISCOVER THE FICTIV DIFFERENCE
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+						Discover the Fictiv difference
 					</h2>
-					<p>
+					<p class="md:text-20 font-museo-500 text-grey-600 ">
 						Partnering with Fictiv means quality you can rely on and production speeds that hit your deadlines — made possible by the unique combination of a technology-backed platform, the highest quality partners, and people with boots-on-the-ground to ensure quality.
 					</p>
 				</div>
@@ -202,17 +153,17 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4se">
-					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						Digital Platform
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 md:text-16">
+					<p class="text-14 font-museo-500 text-grey-600">
 						Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.
 					</p>
 				</div>
 				<div>
-					<a class="btn btn-secondary" href="/our-platform/">learn more</a>
+					<a class="btn btn-primary" href="/our-platform/">learn more</a>
 				</div>
 			</div>
 			<div class="w-full lg:w-6/12 lg:px-6">
@@ -240,17 +191,17 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
-					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						Partner Network
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class=" text-14 md:text-16">
+					<p class=" text-14 font-museo-500 text-grey-600">
 						Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.
 					</p>
 				</div>
 				<div>
-					<a class="btn btn-secondary" href="/our-network/">learn more</a>
+					<a class="btn btn-primary" href="/our-network/">learn more</a>
 				</div>
 			</div>
 			
@@ -265,17 +216,17 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
-					<h2 class="text-blue-dark font-museo-900 text-20 md:text-36">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						People on the Ground
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class=" text-14 md:text-16">
+					<p class="text-14 font-museo-500 text-grey-600">
 						Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.
 					</p>
 				</div>
 				<div>
-					<a class="btn btn-secondary" href="/our-people/">learn more</a>
+					<a class="btn btn-primary" href="/our-people/">learn more</a>
 				</div>
 			</div>
 			<div class="w-full lg:w-6/12 lg:px-6">
@@ -311,8 +262,8 @@
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-full">
 				
-				<h2 class="text-blue-dark font-museo-900 uppercase text-36 md:text-48 mb-4 text-center">
-					our capabilities
+				<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
+					Our capabilities
 				</h2>
 				<div class="flex flex-wrap justify-center -mx-2 relative">
 
@@ -386,10 +337,10 @@
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="text-center mb-6">
-			<h2 class="text-blue-dark font-museo-900 uppercase text-36 md:text-48 text-center">
+			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
 				FICTIV POWERS OVER 2,500 COMPANIES
 			</h2>
-			<p>
+			<p class="md:text-20 font-museo-500 text-grey-600">
 				We’ve manufactured over 10M mechanical parts for our customers’ prototyping and NPI applications
 			</p>
 		</div>
@@ -524,7 +475,7 @@
 			<p class="text-blue-light text-18 uppercase font-museo-900">fictiv digital manufacturing</p>	
 		</div>
 		<div class="text-center mb-6">
-			<h2 class="text-blue-dark font-museo-900 text-36 md:text-48">
+			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
 				EVERYTHING IN ONE PLACE
 			</h2>
 		</div>
@@ -608,13 +559,19 @@
 						<img class="lazyload w-full" width="200" alt="IDC Logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/idc-case-study-logo.png">
 					</div>
 					<div class="w-full lg:w-3/4">
-						<h3 class="text-blue-dark text-24">
+						<h3 class="text-20 md:text-29 text-blue-dark font-museo-500 leading-tight mb-4">
 							"The use of a quote-to-order platform makes sourcing and the supply chain less vulnerable to disruptions"
 						</h3>
-						<p class="mb-4">
-							— Head of IDC Manufacturing Insights Jan Burian, IDC EMEA
-						</p>
-						<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-secondary">read case study</a>
+						<div class="mb-6 ">
+							<p class="text-14 text-grey-700 font-museo-700">
+								Jan Burian
+							</p>
+							<p class="text-14 text-grey-600 font-museo-500">
+								Head of IDC Manufacturing Insights, IDC EMEA
+							</p>
+						</div>
+						
+						<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-primary">read case study</a>
 					</div>
 				</div>
 			</div>

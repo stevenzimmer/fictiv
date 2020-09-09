@@ -41,28 +41,28 @@
     font-family: 'museo-300-italic';
     src: url('./../fonts/museo-sans/300_italic.woff') format('woff');
     font-weight: 300;
-    font-style: normal;
+    /*font-style: normal;*/
 }
 
 @font-face {
     font-family: 'museo-500';
     src: url('./../fonts/museo-sans/500.woff') format('woff');
     font-weight: 500;
-    font-style: normal;
+    /*font-style: normal;*/
 }
 
 @font-face {
     font-family: 'museo-700';
     src: url('./../fonts/museo-sans/700.woff') format('woff');
     font-weight: 700;
-    font-style: normal;
+    /*font-style: normal;*/
 }
 
 @font-face {
     font-family: 'museo-900';
     src: url('./../fonts/museo-sans/900.woff') format('woff');
     font-weight: 900;
-    font-style: normal;
+    /*font-style: normal;*/
 }
 
 @font-face {

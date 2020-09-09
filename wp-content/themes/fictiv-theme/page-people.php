@@ -20,12 +20,12 @@
 				<div class="flex "> 
 					<div class="lg:w-7/12">
 						<div class="mb-6 lg:pr-12">
-							<h1 class="text-blue-dark text-20 md:text-48 font-museo-900 leading-none uppercase">
-								Real Humans, here to help
+							<h1 class="text-grey-700 font-museo-500 leading-none text-29 md:text-36">
+								Real humans, here to help
 							</h1>
 						</div>
 						<div class="mb-6">
-							<p class="text-blue-dark text-16 md:text-20">
+							<p class="md:text-20 font-museo-500 text-grey-600">
 								Fictiv is more than just a digital platform. Our technical manufacturing and quality experts are eager to help from quote to fulfillment, ensuring you get the parts you need, when you need them.
 							</p>
 						</div>
@@ -35,8 +35,8 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
 							</div>
 							<div>
-								<p class="text-blue-dark font-museo-900 uppercase text-14">
-									ALL PARTS INSPECTED BY FICTIV QUALITY ENGINEERS
+								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+									All parts inspected by Fictiv quality Engineers
 								</p>
 							</div>
 						</div>
@@ -55,12 +55,12 @@
 				<div class="flex flex-wrap -mx-6">
 					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<div class="mb-6">
-							<h2 class="text-blue-dark text-20 md:text-36 font-museo-900 leading-tight">
+							<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 								All Your Part Inspections, Verified
 							</h2>
 						</div>
 						<div>
-							<p class="text-default text-16">
+							<p class="text-14 font-museo-500 text-grey-600">
 								All parts ordered through the Fictiv platform are verified by a Fictiv-employed Supplier Quality Engineer (SQE) to ensure quality. We employee SQEs in all supply locations, who regularly visit our partners, audit facilities, and inspect customer parts to ensure requirements are met.
 							</p>
 						</div>
@@ -97,12 +97,12 @@
 				<div class="flex flex-wrap lg:-mx-6">
 					<div class="w-full lg:w-6/12 lg:px-6">
 						<div class="mb-6">
-							<h2 class="text-blue-dark text-20 md:text-36 font-museo-900 leading-tight">
+							<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 								All Your Designs, Supported
 							</h2>
 						</div>
 						<div>
-							<p class="text-default text-16">
+							<p class="text-14 font-museo-500 text-grey-600">
 								During the quoting process, our Technical Applications Engineers are on stand-by to provide expert guidance on design manufacturability to ensure the parts you receive meet your requirements.
 							</p>
 						</div>
@@ -119,12 +119,12 @@
 				<div class="flex flex-wrap -mx-6">
 					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<div class="mb-6">
-							<h2 class="text-blue-dark text-20 md:text-36 font-museo-900 leading-tight">
+							<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 								All Your Programs, Managed
 							</h2>
 						</div>
 						<div>
-							<p class="text-default text-16">
+							<p class="text-14 font-museo-500 text-grey-600">
 								Intelligent orchestration doesn’t end with our digital technology. We also employ Technical Program Managers to advocate for your design requirements during productions and ensure schedules stay on-track.
 							</p>
 						</div>

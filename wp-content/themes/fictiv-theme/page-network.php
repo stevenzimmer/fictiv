@@ -18,12 +18,12 @@
 				
 				<div class="lg:w-7/12">
 					<div class="mb-6 lg:pr-12">
-						<h1 class="text-blue-dark text-20 md:text-48 font-museo-900 leading-none uppercase">
-							THE WORLD’S BEST MANUFACTURERS, CONNECTED
+						<h1 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36">
+							The world's best manufacturers, connected
 						</h1>
 					</div>
 					<div class="mb-6">
-						<p class="text-blue-dark text-16 md:text-20">
+						<p class="md:text-20 font-museo-500 text-grey-600">
 							Fictiv’s Digital Manufacturing Ecosystem connects the best suppliers around the globe, enabling true manufacturing agility.
 						</p>
 					</div>
@@ -34,8 +34,8 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/countries.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-blue-dark font-museo-900 uppercase text-14">
-									4 COUNTRIES
+								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+									4 countries
 								</p>
 							</div>
 						</div>
@@ -46,8 +46,8 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/partners.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-blue-dark font-museo-900 uppercase text-14">
-									250+ HIGHLY  VETTED PARTNERS
+								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+									250+ highly vetted partners
 								</p>
 							</div>
 						</div>
@@ -57,8 +57,8 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/hours-of-capacity.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-blue-dark font-museo-900 uppercase text-14">
-									10,000 MONTHLY  <br>HOURS OF CAPACITY
+								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+									10,000 monthly hours of capacity
 								</p>
 							</div>
 						</div>
@@ -77,7 +77,7 @@
 			<h2 class="uppercase text-blue-dark text-20 mb-4 font-slab-500">How it Works</h2>
 			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
-		<div class="flex flex-wrap -mx-4 justify-center">
+		<div class="flex flex-wrap -mx-6 justify-center">
 			<?php 
 				$works = array(
 					array(
@@ -114,17 +114,17 @@
 				foreach ( $works as $i => $work ) :
 				
 			?>
-			<div class="w-11/12 md:w-1/2 lg:w-1/3 px-4 mb-12">
+			<div class="w-11/12 md:w-1/2 lg:w-1/3 px-6 mb-12">
 				<div class="mb-2 h-24 flex justify-center items-center">
 					<img class="mx-auto lazyload h-16" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/<?php echo $work['icon']; ?>.png">
 				</div>
 				<div>
-					<p class="text-blue-dark text-24 font-semibold">
+					<p class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						<span class="text-teal-light"><?php echo $i + 1; ?>.</span>&nbsp;<?php 
 							echo $work['title'];
 						?>
 					</p>
-					<p>
+					<p class="text-14 font-museo-500 text-grey-600">
 						<?php echo $work['para']; ?>
 
 					</p>
@@ -154,8 +154,8 @@
 								<img class="lazyload" width="50" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/nda.png">
 							</div>
 							<div class="lg:w-3/5">
-								<h3 class="text-blue-dark text-36 mb-4 leading-tight font-bold">Non-disclosure agreements</h3>
-								<p class="text-18">
+								<h3 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">Non-disclosure agreements</h3>
+								<p class="text-14 font-museo-500 text-grey-600">
 									All Fictiv Partners are under strict NDA agreements. Fictiv is also happy to sign company-specific NDAs.
 								</p>
 							</div>
@@ -167,8 +167,8 @@
 								<img class="lazyload" width="50" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/anonymized.png">
 							</div>
 							<div class="lg:w-3/5">
-								<h3 class="text-blue-dark text-36 mb-4 leading-tight font-bold">Anonymized drawings &amp; files</h3>
-								<p class="text-18">
+								<h3 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">Anonymized drawings &amp; files</h3>
+								<p class="text-14 font-museo-500 text-grey-600">
 									We remove any identifying information from 2D drawings and 3D file names and only share files with the Partner who produces your parts.
 								</p>
 							</div>
