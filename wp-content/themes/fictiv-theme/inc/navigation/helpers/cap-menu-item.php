@@ -20,7 +20,7 @@
 				<div class="w-full lg:w-8/12 py-2 px-4 md:py-0 md:px-2">
 					<div class="flex items-center ">
 						<div class="w-full ">
-							<p class="text-14 font-museo-700 text-black"><?php echo $title; ?></p>
+							<p class="text-14 font-museo-700 text-black max-lines max-lines-2"><?php echo $title; ?></p>
 							<?php 
 
 								if ( $excerpt ) :

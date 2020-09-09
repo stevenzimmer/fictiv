@@ -656,15 +656,17 @@
 
 
 <?php
-$featured_args = array(
-	'posts_per_page' => 2,
-    'post_type' => $GLOBALS['resource_post_types'],
-    'post_parent' => 0
-);
 
-$featured_posts = new WP_Query( $featured_args );
+	$featured_args = array(
+		'posts_per_page' => 2,
+		'post_type' => $GLOBALS['resource_post_types'],
+		'post_parent' => 0
+	);
 
-if ( $featured_posts->have_posts() ) : 
+	$featured_posts = new WP_Query( $featured_args );
+
+	if ( $featured_posts->have_posts() ) :
+
 ?>
 <section class="py-20">
 	<div class="container">
@@ -743,9 +745,6 @@ if ( $featured_posts->have_posts() ) :
 </section>
 <?php 
 	endif;
-?>
-
-<?php
 
 	get_footer();
 ?>
