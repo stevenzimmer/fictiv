@@ -682,9 +682,9 @@ if ( $featured_posts->have_posts() ) :
 		<div class="flex flex-wrap -mx-2">
 			<?php 
 				
-
 				while ( $featured_posts->have_posts() ) : 
 				    $featured_posts->the_post();
+
 			?>
 			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
 				<div class="h-full group relative border border-grey-200">
@@ -710,11 +710,10 @@ if ( $featured_posts->have_posts() ) :
 					<div class="p-4 relative">
 						<div class="mb-2">
 							<h3 class="text-14 font-museo-700">
-								<a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
-									<?php 
-										the_title();
-									?>
-								</a>
+
+								<?php 
+									the_title();
+								?>
 								
 							</h3>
 						</div>
@@ -725,7 +724,7 @@ if ( $featured_posts->have_posts() ) :
 
 						</div>
 						<div class="">
-							<p class="text-teal-light text-14 font-museo-500">Learn More</p>
+							<p class="group-hover:text-teal-dark text-teal-light text-14 font-museo-500">Learn More</p>
 						</div>
 						
 					</div>
