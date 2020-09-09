@@ -81,7 +81,56 @@
         </div>
     </div>
 </header>
-
+<?php 
+    if( have_rows('processes_advantage') ) :
+?>
+<section class="py-20">
+    <div class="container">
+        <div class="text-center mb-6">
+            <h2 class="text-29 text-black font-museo-500">Fictiv <?php echo $processes[0]->name; ?> Advantages</h2>
+        </div>
+        <div class="border-grey-200 border flex flex-wrap justify-center lg:justify-start">
+            <?php 
+     
+                while( have_rows('processes_advantage') ) : 
+                    the_row();
+                   
+            ?>
+            <div class="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-grey-200 last:border-transparent">
+                <div class="px-12 pt-8 pb-12 text-center">
+                    <?php 
+                        if( get_sub_field('process_icon') ) :
+                    ?>
+                    <div class="h-20 flex justify-center items-center mb-4">
+                        
+                        <div class="h-full">
+                            <img class="mx-auto h-full" src="<?php the_sub_field('process_icon'); ?>">
+                        </div>
+                        
+                    </div>
+                    <?php 
+                        endif;
+                    ?>
+                    <div class="mb-4">
+                        <p class="font-museo-700 text-14 text-grey-700"><?php the_sub_field('process_title'); ?></p>
+                    </div>
+                    <div>
+                        <p class="font-museo-500 text-14 text-grey-600">
+                            <?php the_sub_field('process_paragraph'); ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <?php 
+                endwhile;
+                reset_rows();
+            ?>
+        </div>
+    </div>
+</section>
+<?php 
+    endif;
+?>
 <?php 
 	$steps = array(
 		array(
