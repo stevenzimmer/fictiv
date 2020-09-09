@@ -2,8 +2,6 @@
 /*  Template Name: Sub Process 
 */ 
 get_header();
-// print_r( get_queried_object() );
-// include( get_template_directory() . '/inc/post-taxonomies.php');
 
 if ( have_posts() ) : 
 
@@ -33,7 +31,7 @@ if ( have_posts() ) :
                             </p>
                             
                         </div>
-                        <div class="text-black">
+                        <div class="text-grey-700">
                             <h1><?php 
                                 the_title()
                             ?></h1>
@@ -115,7 +113,7 @@ if ( have_posts() ) :
 
         <div class="text-center py-10 border-b border-grey-200">
             <div>
-                <h2 class="text-29 text-black">Machines</h2>
+                <h2 class="text-29 text-grey-700">Machines</h2>
             </div>
             
         </div>
@@ -261,7 +259,7 @@ if ( have_posts() ) :
             <div class="w-full lg:w-11/12">
                  <div class="text-center mb-6">
                     <div>
-                        <h2 class="text-29 text-black"><?php echo $processes[0]->name; ?> Materials</h2>
+                        <h2 class="text-29 text-grey-700"><?php echo $processes[0]->name; ?> Materials</h2>
                     </div>
                 </div>
                 <?php 

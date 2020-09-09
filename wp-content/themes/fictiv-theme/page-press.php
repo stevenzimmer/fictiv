@@ -7,7 +7,7 @@
 	<div class="absolute w-full h-full inset-0 bg-center" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
 	<div class="absolute w-full h-full inset-0 opacity-50 bg-black"></div>
 	<div class="container relative text-center">
-		<h1 class="text-white text-48 font-museo-500"><?php the_title(); ?></h1>
+		<h1 class="text-white font-museo-500 text-29 md:text-36"><?php the_title(); ?></h1>
 	</div>
 </header>
 <section class="py-20">
@@ -16,13 +16,12 @@
 			<div class="w-11/12 lg:w-7/12">
 				<div class="text-center">
 					<div class="mb-4">
-						<h3 class="mb-2 text-blue-dark uppercase text-36 font-slab-500">
+						<h3 class="text-grey-700 font-museo-500 text-29 md:text-36">
 							About Fictiv
 						</h3>
-						<div class="w-12 h-1 bg-blue-dark mx-auto"></div>
 					</div>
 					<div class="mb-4">
-						<p class="text-18">
+						<p class="md:text-20 font-museo-500 text-grey-600">
 							At a time when manufacturing has become global but remains rooted in outdated, time and cost-intensive processes, Fictiv’s modern approach has proven to be a disruptive force in hardware manufacturing. Used by Silicon Valley innovators in electric and autonomous automobiles, medical robotics and consumer electronics, Fictiv has become a trusted partner to bring new products to market faster.
 						</p>
 					</div>
@@ -62,8 +61,8 @@
 						'bio' => 'Nate Evans is a designer, artist, and entrepreneur. As Co-Founder and Chief Experience Officer (CXO) at Fictiv he’s responsible for motivating and helping a talented team of creatives working to democratize manufacturing.'
 					),
 				);
+
 				foreach ($founders as $i => $founder ) :
-					# code...
 				
 			?>
 			<div class="w-11/12 lg:w-1/2 px-6 mb-12 lg:mb-0">
@@ -76,10 +75,10 @@
 							<h3 class="text-blue-dark text-24 font-museo-700"><?php echo $founder['name']; ?></h3>
 						</div>
 						<div class="mb-4">
-							<p class="text-grey-light text-18"><?php echo $founder['title']; ?></p>
+							<p class="text-grey-700 font-museo-500 text-14"><?php echo $founder['title']; ?></p>
 						</div>
 						<div class="">
-							<p><?php echo $founder['bio']; ?></p>
+							<p class="text-14 font-museo-500 text-grey-600"><?php echo $founder['bio']; ?></p>
 						</div>
 					</div>	
 				</div>
@@ -98,10 +97,9 @@ if ( have_rows('featured_press') ) :
 	<div class="container">
 		<div class="text-center mb-12">
 			<div>
-				<h3 class="mb-2 text-blue-dark uppercase text-36 font-slab-500">
+				<h3 class="text-grey-700 font-museo-500 text-29 md:text-36">
 					Featured Press
 				</h3>
-				<div class="w-12 h-1 bg-blue-dark mx-auto"></div>
 			</div>
 		</div>
 		<div class="flex -mx-6 flex-wrap justify-center md:justify-start">
@@ -121,13 +119,13 @@ if ( have_rows('featured_press') ) :
 				</div>
 
 				<div  class="text-center mb-4">
-					<p>
+					<p class="text-14 font-museo-500 text-grey-600">
 						<?php the_sub_field('featured_press_snippet'); ?>
 					</p>
 				</div>
 				
 				<div class="text-center">
-					<a href="<?php the_sub_field('featured_press_external_link'); ?>" class="uppercase text-blue-dark font-museo-500 text-14">read more</a>
+					<a href="<?php the_sub_field('featured_press_external_link'); ?>" class="text-teal-light font-museo-500 text-14">Read More</a>
 				</div>
 			</div>
 

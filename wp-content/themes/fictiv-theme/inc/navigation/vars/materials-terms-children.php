@@ -1,7 +1,9 @@
 <?php 
 	$materials_terms_children = get_posts( array(
 		'post_type' => 'cpt_cap_material',
-		'numberposts' => -1,
+		'posts_per_page' => -1,
+		'order' => 'ASC',
+		'orderby' => 'title',
 		'tax_query' => array(
 			array(
 				'taxonomy' => $term->taxonomy,

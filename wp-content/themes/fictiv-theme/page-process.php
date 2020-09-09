@@ -44,7 +44,7 @@ if ( have_posts() ) :
                             
                         </div>
                         <div >
-                            <h1 class="text-black"><?php 
+                            <h1 class="text-grey-700"><?php 
                                echo $processes[0]->name;
                             ?> Services</h1>
 
@@ -87,7 +87,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="text-29 text-black font-museo-500">Fictiv <?php echo $processes[0]->name; ?> Advantages</h2>
+            <h2 class="text-29 text-grey-700 font-museo-500">Fictiv <?php echo $processes[0]->name; ?> Advantages</h2>
         </div>
         <div class="border-grey-200 border flex flex-wrap justify-center lg:justify-start">
             <?php 
@@ -158,7 +158,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="text-29 text-black font-museo-500"><?php echo $processes[0]->name; ?> Processes</h2>
+            <h2 class="text-29 text-grey-700 font-museo-500"><?php echo $processes[0]->name; ?> Processes</h2>
         </div>
  
         <div class="flex flex-wrap justify-center -mx-2 relative items-stretch">
@@ -234,7 +234,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="text-29 text-black font-museo-500"><?php echo $processes[0]->name; ?> Materials</h2>
+            <h2 class="text-29 text-grey-700 font-museo-500"><?php echo $processes[0]->name; ?> Materials</h2>
         </div>
 
         <div class="flex justify-center">
@@ -330,10 +330,11 @@ if ( have_posts() ) :
     if ( get_field('case_study_quote') ) :
     
 ?>
+
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="text-29 text-black font-museo-500"><?php echo $processes[0]->name; ?> Case Study</h2>
+            <h2 class="text-29 text-grey-700 font-museo-500"><?php echo $processes[0]->name; ?> Case Study</h2>
         </div>
     </div>
     <div class="bg-grey-100 max-w-1600 mx-auto relative pb-10 lg:py-10">
@@ -437,7 +438,7 @@ if ( have_posts() ) :
     <div class="container">
         <div class="text-center mb-6">
             <p class="text-14 font-museo-700 text-grey-400 uppercase mb-4">Fictiv <?php echo $processes[0]->name; ?> Advantages</p>
-            <h2 class="text-29 text-black font-museo-500">From Prototype to Production</h2>
+            <h2 class="text-29 text-grey-700 font-museo-500">From Prototype to Production</h2>
         </div>
         <div class="flex flex-wrap lg:flex-no-wrap -mx-6 justify-center lg:justify-start">
             <?php 
@@ -487,7 +488,7 @@ if ( have_posts() ) :
     <div class="container">
         <div class="text-center mb-6">
             <p class="text-14 font-museo-700 text-grey-400 uppercase mb-4">Technology Overview</p>
-            <h2 class="text-29 text-black font-museo-500">What is <?php echo $processes[0]->name; ?></h2>
+            <h2 class="text-29 text-grey-700 font-museo-500">What is <?php echo $processes[0]->name; ?></h2>
         </div>
         <div class="flex justify-center">
             <div class="w-11/12 lg:w-8/12">

@@ -1,7 +1,5 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-// include( get_template_directory() . '/inc/post-taxonomies.php');
 
 if ( have_posts() ) : 
 
@@ -31,7 +29,7 @@ if ( have_posts() ) :
                             </p>
                             
                         </div>
-                        <div class="text-black">
+                        <div class="text-grey-700">
                             <h1><?php 
                                 the_title()
                             ?></h1>
@@ -100,7 +98,7 @@ if ( have_posts() ) :
                 ?>
                  <div class="text-center py-10 border-b border-grey-200">
                     <div>
-                        <h2 class="text-29 text-black"><?php the_sub_field('finish_module_title'); ?></h2>
+                        <h2 class="text-29 text-grey-700"><?php the_sub_field('finish_module_title'); ?></h2>
                     </div>
                     
                 </div>

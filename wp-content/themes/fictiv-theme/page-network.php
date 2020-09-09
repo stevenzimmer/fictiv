@@ -73,8 +73,8 @@
 
 <section class="section">
 	<div class="container">
-		<div class="text-center mb-8">
-			<h2 class="uppercase text-blue-dark text-20 mb-4 font-slab-500">How it Works</h2>
+		<div class="text-center mb-6">
+			<h2 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36 mb-6">How it Works</h2>
 			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
 		<div class="flex flex-wrap -mx-6 justify-center">
@@ -142,7 +142,7 @@
 <section class="section bg-blue-100">
 	<div class="container">
 		<div class="text-center mb-8">
-			<h2 class="uppercase text-blue-dark text-20 mb-4 font-slab-500">SAFEGUARD SECURITY SYSTEM</h2>
+			<h2 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36 mb-6">Safeguard Security System</h2>
 			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
 		<div class="flex justify-center">

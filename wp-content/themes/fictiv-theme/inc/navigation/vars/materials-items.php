@@ -6,7 +6,7 @@
 			'cpt_cap_material'
 		),
 		'order' => 'ASC',
-		'orderby' => 'name',
+		'orderby' => 'title',
 		'tax_query' => array(
 			array(
 				'taxonomy' => $term->taxonomy,

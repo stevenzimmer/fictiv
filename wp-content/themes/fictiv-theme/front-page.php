@@ -1,5 +1,6 @@
 <?php 
 	get_header();
+
 ?>
 <div class="modal micromodal-slide z-50 relative" id="vimeo-modal" aria-hidden="true">
 	<div class="modal__overlay fixed inset-0 flex justify-center items-center bg-black bg-opacity-75" tabindex="-1" vimeo-close="vimeo-modal">
@@ -28,12 +29,12 @@
 	</div>
 	<div class="bg-black absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
-		<div class="flex justify-center mb-6">
+		<div class="flex justify-center mb-4">
 			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
 				
 					<h1 class="text-white font-museo-500 text-29 md:text-36">
-						Your go-to partner for precision parts at the speed of digital
+						Your Go-to Partner for Precision Parts at the Speed of Digital
 					</h1>
 			
 				</div>
@@ -48,23 +49,23 @@
 						</p>
 					</div>
 					<div class="flex justify-center mb-4">
-						<div>
-							<div class="flex items-center relative group">
-								<a href="#" class="absolute w-full h-full inset-0" vimeo-open="vimeo-modal"></a>
-								<div class="mr-2">
-									<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
-								</div>
-								<div class="mr-2">
-									<p class="text-white text-12 md:text-14">Discover Fictiv’s radical transparency features
-									</p>
-								</div>
-								<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
+						
+						<div class="flex items-center relative group">
+							<a class="absolute w-full h-full inset-0 cursor-pointer" vimeo-open="vimeo-modal"></a>
+							<div class="mr-2">
+								<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
+							</div>
+							<div class="mr-2">
+								<p class="text-white text-12 md:text-14">Discover Fictiv’s radical transparency features
+								</p>
+							</div>
+							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
 
-									<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
-								
-								</div>
+								<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
+							
 							</div>
 						</div>
+						
 					</div>
 					<div>
 						<a href="https://app.fictiv.com/signup" class="btn btn-primary">get a quote</a>
@@ -75,7 +76,7 @@
 		
 	</div>
 	<div class="py-40"></div>
-	<div class="absolute w-full bottom-0 pb-12">
+	<div class="absolute w-full bottom-0 pb-10">
 		<div class="container flex justify-center">
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
 				
@@ -136,7 +137,7 @@
 			<div class="w-11/12 lg:w-9/12">
 				<div class="text-center">
 					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
-						Discover the Fictiv difference
+						Discover the Fictiv Difference
 					</h2>
 					<p class="md:text-20 font-museo-500 text-grey-600 ">
 						Partnering with Fictiv means quality you can rely on and production speeds that hit your deadlines — made possible by the unique combination of a technology-backed platform, the highest quality partners, and people with boots-on-the-ground to ensure quality.
@@ -257,78 +258,59 @@
 	if ( $services->have_posts() ) :
 	
 ?>
-<section class="bg-white pb-20">
-	<div class="container">
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-full">
-				
-				<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
-					Our capabilities
-				</h2>
-				<div class="flex flex-wrap justify-center -mx-2 relative">
 
-					<?php 
+<section class="py-20">
+    <div class="container">
+        <h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
+			Our Capabilities
+		</h2>
+ 
+        <div class="flex flex-wrap justify-center -mx-2 relative items-stretch">
 
-						while ( $services->have_posts() ) :
-							$services->the_post();
-						
-					?>
-					<div class="w-11/12 md:w-1/2 lg:w-1/4  block-link px-2 ">
-						<div class="relative shadow group">
-							<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
-							<div class="w-full bg-white lg:p-2">
-								<div class="relative h-0" style="padding-bottom: 75.25%">
-									<img class="lazyload w-full h-full absolute inset-0 object-cover" data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
-								</div>
-								
-							</div>
-							<div class="text-center p-4">
-								<div class="mb-2 h-12">
-									<p class="font-museo-900 text-18 text-blue-dark uppercase">
-										<?php 
-											the_title();
-										?>
-									</p>
-								</div>
-								
-								<div class="mb-2 h-20">
-									<p class="text-blue-dark">
-										<?php 
-											echo get_the_excerpt();
-										?>
-									</p>
-								</div>
-								<div>
-									<p class="text-blue-light underline font-bold group-hover:text-red-dark">Learn more</p>
-								</div>
-							</div>
-						</div>
-					</div>
+            <?php 
 
-					<?php 
-						endwhile;
-					?>
+                while ( $services->have_posts() ) :
+                    $services->the_post();
 
-				</div>
-				<div class="flex justify-center pb-10 hidden">
-					<div class="flex items-center text-center relative group">
-						<a href="<?php echo get_post_type_archive_link('cpt_capabilities') ?>" class="w-full absolute inset-0"></a>
-						<div class="mr-2">
-							<!-- Icon -->
-							<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/arrow-right-circle.png">
-						</div>
-						
-						<div>
-							
-							<p class="text-14 font-museo-900 text-14 uppercase text-blue-dark group-hover:text-red-dark">
-								see our full capabilies
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            ?>
+            <div class="w-11/12 md:w-1/2 lg:w-1/4 block-link px-2 h-full mb-4">
+                <div class="relative group border border-grey-200">
+                    <a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
+                    <div class="relative h-0" style="padding-bottom: 65.25%">
+
+                        <img alt="<?php the_title() ?> thumbnail" class="lazyload w-full absolute  inset-0 h-full object-cover" data-src="<?php echo get_field('material_thumbnail')['sizes']['medium_large']; ?>">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-2 h-8">
+                            <p class="font-museo-700 text-14 text-grey-700 uppercase">
+                                <?php 
+                                    the_title();
+                                ?>
+                            </p>
+                        </div>
+                        
+                        <div class="mb-2 h-20">
+                            <p class="font-museo-500 text-14 text-grey-600">
+                                <?php 
+                                    echo get_the_excerpt();
+                                ?>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-teal-light text-12 font-museo-500 group-hover:text-red-dark">Learn more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                endwhile;
+                wp_reset_postdata();
+            ?>
+
+        </div>
+
+    </div>
 </section>
 
 <?php 
@@ -338,7 +320,7 @@
 	<div class="container">
 		<div class="text-center mb-6">
 			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
-				FICTIV POWERS OVER 2,500 COMPANIES
+				Fictiv Powers Over 2,500 Companies
 			</h2>
 			<p class="md:text-20 font-museo-500 text-grey-600">
 				We’ve manufactured over 10M mechanical parts for our customers’ prototyping and NPI applications
@@ -443,7 +425,7 @@
 				<img width="<?php echo $logo['size'] ?>" class="lazyload mx-auto" alt="<?php echo $logo['slug'] ?> logo grey" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/<?php echo $logo['slug']; ?>-grey.png">
 			</div>
 			<?php
-				endforeach
+				endforeach;
 			?>
 		</div>
 	</div>
@@ -472,11 +454,11 @@
 <section class="section bg-white">
 	<div class="container">
 		<div class="text-center mb-4">
-			<p class="text-blue-light text-18 uppercase font-museo-900">fictiv digital manufacturing</p>	
+			<p class="md:text-20 font-museo-500 text-grey-600">Fictiv Digital Manufacturing</p>	
 		</div>
 		<div class="text-center mb-6">
 			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
-				EVERYTHING IN ONE PLACE
+				Everything In One Place
 			</h2>
 		</div>
 		<div class="flex justify-center flex-col items-center">
@@ -489,11 +471,11 @@
 				?>
 				<div data-toggle-module="manufacturing-module-<?php echo $i; ?>" class="relative toggle-module <?php 
 
-					if( $i !== 0 ) :
+						if( $i !== 0 ) :
 
-						echo 'hidden';
+							echo 'hidden';
 
-					endif;
+						endif;
 				?>">
 	
 					<div class="relative h-0" style="padding-bottom: 56.25%">
@@ -509,14 +491,14 @@
 
 				
 			</div>
-			<div class="flex mb-8 flex-wrap justify-center md:justify-start toggle-btns-wrappper">
+			<div class="flex mb-12 flex-wrap justify-center md:justify-start toggle-btns-wrappper">
 			<?php 
 
 				foreach ( $modules as $i => $module ) :
 				
 			?>
 
-				<a href="#manufacturing-module-<?php echo $i; ?>" class="btn-rounded btn-rounded-primary module-toggle-btn inline-btn mb-6 md:mb-0 <?php 
+				<a href="#manufacturing-module-<?php echo $i; ?>" class="module-toggle-btn <?php 
 
 					if( $i === 0 ) :
 				
@@ -524,7 +506,7 @@
 
 					endif;
 
-				?> hover:opacity-100 transition-opacity duration-200 ease-in-out mx-2"><?php echo $module['name']; ?></a>
+				?> mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-12 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out"><?php echo $module['name']; ?></a>
 			
 			<?php 
 				endforeach;
@@ -532,24 +514,15 @@
 				
 			</div>
 			<div class="flex items-center text-center relative group">
-				<a href="/our-platform/" class="w-full absolute inset-0 "></a>
-				<div class="mr-2">
-					<!-- Icon -->
-					<img class="lazyload" width="25" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/carat-right-circle.svg">
-				</div>
+				<a href="/our-platform/" class="btn btn-primary">Learn more about our platform</a>
 				
-				<div>
-					
-					<p class="text-blue-light font-semibold group-hover:text-red-dark">
-						Learn more about our platform
-					</p>
-				</div>
 			</div>
 		</div>
 		
 	</div>
 </section>
-<section class="section-half bg-grey-100">
+
+<section class="section border-grey-200 border-t">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-10/12">
@@ -579,128 +552,199 @@
 	</div>
 </section>
 
-<section class="section bg-white">
+<?php
+
+    if ( get_field('case_study_quote') ) :
+    
+?>
+
+<section class="bg-grey-100">
+
+
+    <div class=" max-w-1600 mx-auto relative pb-10 lg:py-10">
+        <div class="relative lg:absolute w-full h-full inset-0 mb-6 lg:mb-0">
+            <div class="flex lg:justify-end h-full">
+                <div class="w-full lg:w-1/2 ">
+                    <div class="flex flex-wrap flex-row lg:flex-col h-full lg:max-w-screen-sm w-full mx-auto">
+                        <?php 
+                            if( have_rows('case_study_graphics') ) :
+
+                                $i = 1;
+                                while( have_rows('case_study_graphics') ) : 
+                                    the_row();
+                           
+                        ?>
+                        <div class="md:mx-auto lg:h-half w-1/2 lg:w-auto" style="">
+                            <img alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" class="lazyload lg:h-full" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
+                            
+                        </div>
+                        <?php 
+                                $i++;
+                                endwhile;
+                                reset_rows();
+                            endif;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container relative ">
+            <div class="flex justify-center lg:justify-start">
+                
+                <div class="w-11/12 lg:w-5/12">
+                    <div class="mb-4">
+                         <p class="text-20 md:text-29 text-blue-dark font-museo-500 leading-tight">
+                            <?php the_field('case_study_quote') ?>
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <p class="text-14 text-grey-700 font-museo-700">
+                            <?php the_field('case_study_name') ?>
+                        </p>
+                        <p class="text-14 text-grey-600 font-museo-500">
+                            <?php the_field('case_study_title') ?>
+                        </p>
+                    </div>
+                    <?php
+
+                        if( have_rows('case_study_details') ) :
+
+                            while( have_rows('case_study_details') ) : 
+                                the_row();
+                       
+                    ?>
+                    <div class="flex items-center mb-4">
+                        <div class="mr-2">
+                            <!-- Icon -->
+                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
+                        </div>
+                        <div>
+                            <p class="text-grey-600 font-museo-500 text-16">
+                                <?php the_sub_field('case_study_details_text'); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <?php 
+                            endwhile;
+                            reset_rows();
+                        endif;
+
+                        if ( get_field('case_study_cta') ) :
+                        
+                    ?>
+
+                    <div>
+                        <a href="<?php 
+                            echo get_field('case_study_cta')['url'];
+                        ?>" class="btn btn-primary"><?php 
+                            echo get_field('case_study_cta')['title'];
+                        ?></a>
+                    </div>
+
+                    <?php 
+                        endif;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php 
+    endif;
+?>
+
+
+
+<?php
+$featured_args = array(
+	'posts_per_page' => 2,
+    'post_type' => $GLOBALS['resource_post_types'],
+    'post_parent' => 0
+);
+
+$featured_posts = new WP_Query( $featured_args );
+
+if ( $featured_posts->have_posts() ) : 
+?>
+<section class="py-20">
 	<div class="container">
-		<div class="flex flex-wrap justify-center lg:justify-between lg:-mx-6">
-			<div class="w-full lg:w-6/12 lg:px-6">
+		
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-full">
 				<div class="mb-2">
-					<img class="lazyload w-full px-1 lg:px-0" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-1.jpg'; ?>">
-				</div>
-				<div class="flex lg:-mx-1">
-					<div class="px-1 flex-1">
-						<img class="lazyload w-full" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-2.jpg'; ?>">
-					</div>
-					<div class="px-1 flex-1">
-						<img class="lazyload w-full" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/gecko-robotics-case-study-3.jpg'; ?>">
-					</div>
-				</div>
-			</div>
-			<div class="w-11/12 lg:w-1/2 lg:px-6">
-				<div class="mb-4">
-					<img width="280" class="lazyload" alt="Gecko Robotics logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/gecko-robotics.png">
-				</div>
-				<div class="mb-4">
-					<p class="text-blue-light text-18 uppercase font-museo-900">customer story</p>	
-					
-				</div>
-				<div class="mb-4">
-					<p class="text-blue-dark text-24 lg:text-36 font-museo-900 leading-tight">“Our robot has a lot of unique and high tolerance parts. Finding a trustworthy partner that can make those parts reliably and quickly has been extremely helpful.”</p>
-				</div>
-				<div class="mb-4">
-					<p class="text-blue-dark">
-						—Dillon Jourde, Mechanical Engineer, Gecko Robotics
-					</p>
-				</div>
-				<div class="mb-8">
-					<a href="/customer-stories/gecko-robotics/" class="btn btn-secondary">read case study</a>
-				</div>
-				<div class="flex justify-start items-center flex-wrap">
-					<div class="flex items-center mb-6 lg:mb-0">
-						<div class="mr-2">
-							<!-- Icon -->
-							<img width="30" alt="10M+ Parts made icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
-						</div>
-						<div>
-							<p class="text-blue-dark font-museo-900 text-14">
-								TIGHT TOLERANCE CNC
-							</p>
-						</div>
-					</div>
-					<div class="w-10"></div>
-					<div class="flex items-center">
-						<div class="mr-2">
-							<!-- Icon -->
-							<img width="30" alt="10M+ Parts made icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/clock.png">
-						</div>
-						<div>
-							<p class="text-blue-dark font-museo-900 text-14">
-								43K+ CUSTOM PARTS
-							</p>
-						</div>
-					</div>
+					<h3 class="uppercase text-16 font-museo-500 text-grey-600">
+						Featured reads
+					</h3>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+		
+		<div class="flex flex-wrap -mx-2">
+			<?php 
+				
 
-	
-<section class="relative max-w-1600 mx-auto">
-	
-	<div class="flex flex-wrap justify-center lg:justify-between">
-		<div class="w-full lg:w-6/12 relative py-20">
-			
-			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-cta-dyson-webinar-rev.jpg'; ?>)"></div>
+				while ( $featured_posts->have_posts() ) : 
+				    $featured_posts->the_post();
+			?>
+			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
+				<div class="h-full group relative border border-grey-200">
+					<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
+					<?php 
+						if( has_post_thumbnail() ) :
+					?>
+					<div class="relative h-0" style="padding-bottom: 40.25%">
+						
+						<img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
+					</div>
+					<?php 
+						else :
+					?>
+					<div class="w-full h-56 bg-grey-100">
+						<div class="flex justify-center items-center h-full">
+							Please upload Hero graphic to this post
+						</div>
+					</div>
+					<?php 
+						endif;
+					?>
+					<div class="p-4 relative">
+						<div class="mb-2">
+							<h3 class="text-14 font-museo-700">
+								<a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
+									<?php 
+										the_title();
+									?>
+								</a>
+								
+							</h3>
+						</div>
+						<div class="text-14 mb-4 max-lines max-lines-3">
+							<?php 
+								the_excerpt();
+							?>
 
-			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
-
-			<div class="flex justify-center relative">
-				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
-					<div class="mb-4">
-						<p class="text-white text-18 uppercase font-museo-900">industry report</p>	
-					</div>
-					<div class="mb-4">
-						<p class="text-white text-36 font-museo-900 leading-none uppercase">2020 State of manufacturing</p>
-					</div>
-					<div class="mb-4">
-						<p class="text-white text-18">
-							Fictiv's fifth annual manufacturing industry report polled hundreds of senior manufacturing and supply chain decision makers at companies producing medical device, robotics, automotive, aerospace, and consumer electronics products.
-						</p>
-					</div>
-					<div>
-						<a href="/resources/2020-state-of-manufacturing-report/" class="btn btn-secondary">get free report</a>
+						</div>
+						<div class="">
+							<p class="text-teal-light text-14 font-museo-500">Learn More</p>
+						</div>
+						
 					</div>
 				</div>
+				
 			</div>
-			
-		</div>
-		<div class="w-full lg:w-6/12 py-20 relative">
-
-			<div class="absolute w-full h-full inset-0 bg-cover bg-center lazyload" data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/background/homepage-cta-fictiv-hardware-guide-article-hero.jpg'; ?>)"></div>
-
-			<div class="absolute w-full h-full inset-0 bg-black opacity-50"></div>
-			<div class="flex justify-center relative">
-				<div class="w-11/12 lg:w-9/12 xl:w-8/12">
-					<div class="mb-4">
-						<p class="text-white text-18 uppercase font-museo-900">FICTIV BLOG</p>	
-					</div>
-					<div class="mb-4">
-						<p class="text-white text-36 font-museo-900 leading-none uppercase">5 CRITICAL MISTAKES R&D TEAMS MADE</p>
-					</div>
-					<div class="mb-4">
-						<p class="text-white text-18">
-							Learn from Gregg Miner, a serial product innovator with more than 500 products under his belt, 5 key mistakes that can and should be avoided in product development.
-						</p>
-					</div>
-					<div>
-						<a href="/articles/5-critical-mistakes-r-d-teams-make-avoid-them-with-these-simple-practices/" class="btn btn-secondary">read article</a>
-					</div>
-				</div>
-			</div>
+			<?php
+				endwhile;
+				wp_reset_postdata();
+				
+			?>
 			
 		</div>
 	</div>
+		
 </section>
+<?php 
+	endif;
+?>
 
 <?php
 
