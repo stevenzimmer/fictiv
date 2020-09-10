@@ -4,7 +4,7 @@ $industries = array(
 		'img' => 'robotics',
 		'title' => 'Robotics',
 		'para' => 'Precision Quality Parts At Unmatched Speeds',
-		'link' => '/robotics/'
+		'link' => '/robotics'
 	),
 
 	array(

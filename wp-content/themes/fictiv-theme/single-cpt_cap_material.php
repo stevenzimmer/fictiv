@@ -33,7 +33,7 @@ if ( have_posts() ) :
                             
                         </div>
                         <div class="text-white ">
-                            <h1><?php 
+                            <h1 class="font-museo-700"><?php 
                                 the_title()
                             ?></h1>
 
@@ -92,7 +92,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center">
-            <h2 class="font-museo-700 text-20">At a glance</h2>
+            <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">At a glance</h2>
         </div>
       
         <div class="flex justify-center mb-6">
@@ -136,7 +136,7 @@ if ( have_posts() ) :
         <div class="flex justify-center">
             <div class="w-full lg:w-11/12">
                 <div class="text-center mb-6">
-                    <h2 class="font-museo-700 text-20">About the material</h2>
+                    <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">About the material</h2>
                 </div>
 
                 <div class="flex -mx-6 flex-wrap justify-center lg:justify-start">
@@ -217,7 +217,7 @@ if ( have_posts() ) :
             <div class="w-full lg:w-11/12">
                 
                 <div class="text-center mb-6">
-                    <h2 class="font-museo-700 text-20">Material Properties</h2>
+                    <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Material Properties</h2>
                 </div>
                 
                  <?php 
@@ -278,7 +278,7 @@ if ( have_posts() ) :
 <section class="pb-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="font-museo-700 text-20">Material Finish</h2>
+            <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Material Finish</h2>
         </div>
         <div class="flex justify-center">
             <div class="w-11/12 lg:w-7/12">
@@ -299,7 +299,7 @@ if ( have_posts() ) :
 <section class="pb-20">
     <div class="container">
         <div class="text-center">
-            <h2 class="font-museo-700 text-20">Design Recommendations</h2>
+            <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Design Recommendations</h2>
         </div>
      
         <div class="flex justify-center mb-6">

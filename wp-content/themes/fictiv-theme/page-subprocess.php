@@ -32,7 +32,7 @@ if ( have_posts() ) :
                             
                         </div>
                         <div class="text-grey-700">
-                            <h1><?php 
+                            <h1 class="text-grey-700 font-museo-700"><?php 
                                 the_title()
                             ?></h1>
 
@@ -75,7 +75,7 @@ if ( have_posts() ) :
 <section class="pt-20">
     <div class="container">
         <div class="text-center">
-            <h2 class="font-museo-700 text-20">At a glance</h2>
+            <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">At a glance</h2>
         </div>
       
         <div class="flex justify-center mb-6">
@@ -113,7 +113,7 @@ if ( have_posts() ) :
 
         <div class="text-center py-10 border-b border-grey-200">
             <div>
-                <h2 class="text-29 text-grey-700">Machines</h2>
+                <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Machines</h2>
             </div>
             
         </div>
@@ -140,7 +140,7 @@ if ( have_posts() ) :
                         if( get_sub_field('machines_title') ) :
                     ?>
                     <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">
                             <?php the_sub_field('machines_title'); ?>
                         </h2>
                     </div>
@@ -259,7 +259,7 @@ if ( have_posts() ) :
             <div class="w-full lg:w-11/12">
                  <div class="text-center mb-6">
                     <div>
-                        <h2 class="text-29 text-grey-700"><?php echo $processes[0]->name; ?> Materials</h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29"><?php echo $processes[0]->name; ?> Materials</h2>
                     </div>
                 </div>
                 <?php 
@@ -277,7 +277,7 @@ if ( have_posts() ) :
                         echo 'active';
 
                     endif; ?>">
-                        <p class="text-12 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php echo get_the_title( $material_id ); ?></p>
+                        <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php echo get_the_title( $material_id ); ?></p>
                     </div>
                     <?php 
                         endforeach;
@@ -353,7 +353,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="font-museo-700 text-20">Design Recommendations</h2>
+            <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Design Recommendations</h2>
         </div>
         <?php 
             if( have_rows('design_recomendations_table') ) :
@@ -402,7 +402,7 @@ if ( have_posts() ) :
 
            
             <div class="text-center mb-6">
-                <h2 class="font-museo-700 text-20">About the Process</h2>
+                <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">About the Process</h2>
             </div>
             <?php 
                 if ( $about_the_process['youtube_id'] || get_field('material_thumbnail') ) :

@@ -147,15 +147,15 @@
 		?>
 		>
 
-		<label class="select-none cursor-pointer block text-12 <?php 
+		<label class="select-none cursor-pointer block  <?php 
 
 			if( gettype( $item ) === 'string' && $id_append !== 'mobile' ) :
 
-				echo 'border px-3 rounded py-1 border-grey-200 font-museo-700 text-grey-600';
+				echo 'text-16 border px-3 rounded py-1 border-grey-200 font-museo-700 text-grey-600';
 
 			else :
 				
-				echo ' font-museo-500';
+				echo 'text-12 font-museo-500';
 
 			endif;
 		?>" for="<?php echo $id_value; ?>-<?php echo $id_append; ?>"><?php echo $label; ?></label>

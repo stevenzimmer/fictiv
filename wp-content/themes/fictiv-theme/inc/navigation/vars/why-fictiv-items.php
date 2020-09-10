@@ -3,19 +3,19 @@
 		array(
 			'title' => 'Quote-to-Order Platform',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore',
-			'link' => '/our-platform/'
+			'link' => '/our-platform'
 		),
 
 		array(
 			'title' => 'Global Manufacturing Network',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore',
-			'link' => '/our-network/'
+			'link' => '/our-network'
 		),
 
 		array(
-			'title' => 'Our Quality Difference',
+			'title' => 'People on the ground',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore',
-			'link' => '#3'
+			'link' => '/our-people'
 		),
 	);
 

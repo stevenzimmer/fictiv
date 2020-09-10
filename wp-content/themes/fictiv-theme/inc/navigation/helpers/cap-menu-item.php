@@ -20,7 +20,7 @@
 				<div class="w-full lg:w-8/12 py-2 px-4 md:py-0 md:px-2">
 					<div class="flex items-center ">
 						<div class="w-full ">
-							<p class="text-14 font-museo-700 text-black max-lines max-lines-2"><?php echo $title; ?></p>
+							<p class="text-14 font-museo-700 text-teal-light max-lines max-lines-2 "><?php echo $title; ?></p>
 							<?php 
 
 								if ( $excerpt ) :
@@ -54,14 +54,14 @@
 				<div class="w-full px-2">
 					<div class="px-4 py-2">
 						<div class="">
-							<p class=" text-14 font-museo-700 text-black"><?php echo $title; ?></p>
+							<p class=" text-14 font-museo-700 text-teal-light"><?php echo $title; ?></p>
 						</div>
 						<?php 
 
 							if ( $excerpt ) :
 								
 						?>
-						<div class="text-12 text-black mt-1 max-lines max-lines-2">
+						<div class="text-12 text-grey-700 mt-1 max-lines max-lines-2">
 							<?php echo $excerpt; ?>		
 						</div>
 						<?php 

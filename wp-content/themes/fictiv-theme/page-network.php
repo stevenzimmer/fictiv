@@ -18,7 +18,7 @@
 				
 				<div class="lg:w-7/12">
 					<div class="mb-6 lg:pr-12">
-						<h1 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36">
+						<h1 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36">
 							The world's best manufacturers, connected
 						</h1>
 					</div>
@@ -74,7 +74,7 @@
 <section class="section">
 	<div class="container">
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36 mb-6">How it Works</h2>
+			<h2 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36 mb-6">How it Works</h2>
 			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
 		<div class="flex flex-wrap -mx-6 justify-center">
@@ -142,7 +142,7 @@
 <section class="section bg-blue-100">
 	<div class="container">
 		<div class="text-center mb-8">
-			<h2 class="text-grey-700 font-museo-500 leading-tight text-29 md:text-36 mb-6">Safeguard Security System</h2>
+			<h2 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36 mb-6">Safeguard Security System</h2>
 			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
 		<div class="flex justify-center">
@@ -155,7 +155,7 @@
 							</div>
 							<div class="lg:w-3/5">
 								<h3 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">Non-disclosure agreements</h3>
-								<p class="text-14 font-museo-500 text-grey-600">
+								<p class=" font-museo-500 text-grey-600">
 									All Fictiv Partners are under strict NDA agreements. Fictiv is also happy to sign company-specific NDAs.
 								</p>
 							</div>
@@ -168,7 +168,7 @@
 							</div>
 							<div class="lg:w-3/5">
 								<h3 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">Anonymized drawings &amp; files</h3>
-								<p class="text-14 font-museo-500 text-grey-600">
+								<p class=" font-museo-500 text-grey-600">
 									We remove any identifying information from 2D drawings and 3D file names and only share files with the Partner who produces your parts.
 								</p>
 							</div>

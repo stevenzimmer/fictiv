@@ -11,7 +11,7 @@
   	?>
 </head><!--/head-->
 
-<body <?php body_class('overflow-x-hidden'); ?>>
+<body <?php body_class('overflow-x-hidden pt-0 lg:pt-18'); ?>>
 	
 <?php 	
 

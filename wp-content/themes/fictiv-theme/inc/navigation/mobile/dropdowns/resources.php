@@ -22,7 +22,7 @@
 		
 					<div class="border-grey-200 border p-4">
 						<div class="mb-2">
-							<p class="text-12 font-museo-700 text-black">
+							<p class="text-12 font-museo-700 text-grey-700">
 								Content Categories
 							</p>
 						</div>
@@ -64,7 +64,7 @@
 		
 					<div class="border-grey-200 border p-4">
 						<div class="mb-2">
-							<p class="text-12 font-museo-700 text-black">
+							<p class="text-12 font-museo-700 text-grey-700">
 								Topics
 							</p>
 						</div>
@@ -103,7 +103,8 @@
 						cap_menu_item( 
 							get_permalink(), 
 							get_the_title(), 
-							get_the_excerpt(),
+							'',
+							// get_the_excerpt(),
 							'' 
 						);
 				?>

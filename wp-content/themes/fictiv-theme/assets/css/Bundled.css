@@ -24,11 +24,8 @@
 @import "./components/_pagination.css";
 /*@import "./components/_search.css";*/
 @import "./components/_modal.css";
+/*@import "./pages/_partners.css";*/
 
-@import "./pages/_partners.css";
-
-
-/*@import "./pages/_2018-state-of-hardware-report.css";*/
 
 @font-face {
     font-family: 'museo-300';

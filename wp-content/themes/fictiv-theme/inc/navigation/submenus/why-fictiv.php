@@ -1,4 +1,4 @@
-<nav class="bg-white py-10 sub-menu absolute w-full z-50" data-menu="<?php echo $i; ?>">
+<nav class="bg-white py-10 sub-menu absolute w-full z-50 top-0 left-0 mt-16" data-menu="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="lg:w-11/12">
@@ -7,20 +7,20 @@
 						<?php cap_menu_header('our digital manufacturing ecosystem'); ?>
 				
 
-						<div class="flex ">
-							<div class="lg:w-6/12 border border-grey-200 flex items-center">
+						<div class="flex items-stretch">
+							<div class="lg:w-6/12 border-l border-t border-b border-grey-200 flex">
 								<div class="relative w-full" >
 									<img class="lazyload" alt="our digital manufacturing ecosystem thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/our-digital-manufacuring-ecosystem.jpg">
 								</div>
 								
 							</div>
-							<div class="w-full lg:w-6/12 flex flex-col justify-between">
+							<div class="w-full lg:w-6/12 border border-grey-200">
 								<?php 
 
 									foreach ( $ecosystems as $i => $ecosystem ) :
 								?>
 
-								<div class=" border-t border-grey-200 border-r border-b">
+								<div class="border-b border-grey-200 last:border-b-0 py-2">
 								<?php
 										cap_menu_item( 
 											$ecosystem['link'], 

@@ -76,7 +76,8 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 									
 							?>
 							<div class="w-full sm:w-1/2 px-2 mb-4">
-								<div class="border border-grey-200 relative h-full">
+								<div class="border border-grey-200 relative h-full relative">
+									<a href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0 z-30"></a>
 									<div class="relative h-0 thumbnail-ratio" >
 										<img title="<?php echo $data->title; ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $data->thumb; ?>">
 									</div>
@@ -110,10 +111,8 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 											?>
 										</div>
 
-										
-
 										<div class="absolute right-0 bottom-0 p-4">
-											<a href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0"></a>
+											
 											<div>
 												<?php 
 													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
@@ -148,6 +147,7 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 
 							<div class="w-full sm:w-1/2 xl:w-1/3 px-2 mb-4">
 								<div class="border border-grey-200 relative h-full">
+									<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-30"></a>
 									<div class="relative h-0 thumbnail-ratio" >
 										<img alt="<?php the_title(); ?> thumbnail" title="<?php the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0]; ?>">
 									</div>
@@ -160,9 +160,8 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 											?></h2>
 										</div>
 									
-
 										<div class="absolute right-0 bottom-0 p-4">
-											<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0"></a>
+											
 											<div>
 												<?php 
 													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');

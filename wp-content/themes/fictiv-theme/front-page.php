@@ -18,11 +18,11 @@
 
 <header class="py-12 relative homepage-hero">
 	<div class="w-full h-full absolute inset-0" style="background-image: url()">
-		<div class="relative h-full w-full hidden md:block">
+		<div class="relative h-full w-full hidden lg:block">
 			<img alt="homepage hero" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
 		</div>
 
-		<div class="relative h-full w-full md:hidden">
+		<div class="relative h-full w-full lg:hidden">
 			<img alt="homepage hero mobile" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
 		</div>
 		
@@ -33,7 +33,7 @@
 			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
 				
-					<h1 class="text-white font-museo-500 text-29 md:text-36">
+					<h1 class="text-white font-museo-700 text-29 md:text-36">
 						Your Go-to Partner for Precision Parts at the Speed of Digital
 					</h1>
 			
@@ -73,10 +73,11 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
-	<div class="py-40"></div>
-	<div class="absolute w-full bottom-0 pb-10">
+
+	<div class="py-40 md:py-32 lg:py-40"></div>
+	
+	<div class="absolute w-full bottom-0 pb-12 md:pb-6 lg:pb-10">
 		<div class="container flex justify-center">
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
 				
@@ -136,7 +137,7 @@
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-9/12">
 				<div class="text-center">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Discover the Fictiv Difference
 					</h2>
 					<p class="md:text-20 font-museo-500 text-grey-600 ">
@@ -154,12 +155,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4se">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Digital Platform
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class="font-museo-500 text-grey-600">
 						Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.
 					</p>
 				</div>
@@ -192,12 +193,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Partner Network
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class=" text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.
 					</p>
 				</div>
@@ -217,12 +218,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
 			<div class="w-11/12 lg:w-6/12 lg:px-6">
 				<div class="mb-4">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						People on the Ground
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.
 					</p>
 				</div>
@@ -261,7 +262,7 @@
 
 <section class="py-20">
     <div class="container">
-        <h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
+        <h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
 			Our Capabilities
 		</h2>
  
@@ -297,7 +298,7 @@
                             </p>
                         </div>
                         <div>
-                            <p class="text-teal-light text-12 font-museo-500 group-hover:text-red-dark">Learn more</p>
+                            <p class="text-teal-light text-12 font-museo-700 group-hover:text-red-dark">Learn more</p>
                         </div>
                     </div>
                 </div>
@@ -319,7 +320,7 @@
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
+			<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
 				Fictiv Powers Over 2,500 Companies
 			</h2>
 			<p class="md:text-20 font-museo-500 text-grey-600">
@@ -457,12 +458,35 @@
 			<p class="md:text-20 font-museo-500 text-grey-600">Fictiv Digital Manufacturing</p>	
 		</div>
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6 text-center">
+			<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
 				Everything In One Place
 			</h2>
 		</div>
 		<div class="flex justify-center flex-col items-center">
-			<div class="w-full toggle-module-wrapper">
+			<div class="flex mb-6 flex-wrap justify-center md:justify-start toggle-btns-wrappper">
+			<?php 
+
+				foreach ( $modules as $i => $module ) :
+				
+			?>
+
+				<a href="#manufacturing-module-<?php echo $i; ?>" class="module-toggle-btn <?php 
+
+					if( $i === 0 ) :
+				
+						echo 'active';
+
+					endif;
+
+				?> mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-16 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out"><?php echo $module['name']; ?></a>
+			
+			<?php 
+				endforeach;
+			?>
+				
+			</div>
+
+			<div class="w-full toggle-module-wrapper mb-12">
 				<?php 
 					
 
@@ -491,28 +515,7 @@
 
 				
 			</div>
-			<div class="flex mb-12 flex-wrap justify-center md:justify-start toggle-btns-wrappper">
-			<?php 
-
-				foreach ( $modules as $i => $module ) :
-				
-			?>
-
-				<a href="#manufacturing-module-<?php echo $i; ?>" class="module-toggle-btn <?php 
-
-					if( $i === 0 ) :
-				
-						echo 'active';
-
-					endif;
-
-				?> mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-12 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out"><?php echo $module['name']; ?></a>
 			
-			<?php 
-				endforeach;
-			?>
-				
-			</div>
 			<div class="flex items-center text-center relative group">
 				<a href="/our-platform/" class="btn btn-primary">Learn more about our platform</a>
 				

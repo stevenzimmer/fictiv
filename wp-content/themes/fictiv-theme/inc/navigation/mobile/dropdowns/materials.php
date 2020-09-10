@@ -29,7 +29,7 @@
 				?>
 						<div class="w-1/2">
 							<div class="mb-4">
-								<p class="text-12 text-black font-museo-700">
+								<p class="text-12 text-grey-700 font-museo-700">
 									<?php echo get_term( $mat, $term->taxonomy )->name; ?>
 								</p>
 								
@@ -58,7 +58,7 @@
 						<div class="w-full">
 
 							<div class="mb-4">
-								<p class="text-12 text-black font-museo-700"><?php echo $term->name; ?> Materials</p>
+								<p class="text-12 text-grey-700 font-museo-700"><?php echo $term->name; ?> Materials</p>
 							</div>
 							<div class="flex flex-wrap">
 								<?php 

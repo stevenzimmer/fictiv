@@ -9,7 +9,7 @@
 		<div class="flex justify-center  mb-6" >
 			<div class="w-11/12 text-center">
 				
-				<h1 class="text-grey-700 font-museo-500 leading-none text-29 md:text-36">
+				<h1 class="text-grey-700 font-museo-700 leading-none text-29 md:text-36">
 					Manufacturing data at your fingertips
 				</h1>
 				
@@ -44,12 +44,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Instant Pricing
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class="font-museo-500 text-grey-600">
 						Waiting days to get a quote is a thing of the past. With Fictiv, you get pricing instantly, or within 1 hour for complex parts that require additional guided expertise. In addition to 3D CAD, we accept 2D drawings for tight tolerances and other specialized requirements.
 					</p>
 				</div>
@@ -78,12 +78,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Expert DFM Feedback
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						Every part uploaded to the platform receives expert design for manufacturability feedback—including instant, automated warnings, and customized recommendations from our manufacturing engineers, as needed.
 					</p>
 				</div>
@@ -111,12 +111,12 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						On-Demand Production Transparency
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						Transparency doesn’t end after you place your order. Get real-time visibility into the production status of your parts, including photos of your parts at the manufacturing partner facility taken during inspection.
 					</p>
 				</div>
@@ -144,12 +144,12 @@
 		<div class="flex flex-wrap items-center flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						All Your Data, In One Place
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						Easily find requested quality documentation, configuration details, DFM, design files, invoices, and inspection reports for all your previous orders.
 					</p>
 				</div>

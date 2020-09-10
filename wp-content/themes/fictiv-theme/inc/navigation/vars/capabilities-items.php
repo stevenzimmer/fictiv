@@ -5,7 +5,7 @@
 			'cpt_cap_finish'
 		),
 		'order' => 'ASC',
-		'order' => 'title',
+		'orderby' => 'title',
 		'posts_per_page' => -1,
 		
 	);

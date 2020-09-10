@@ -31,7 +31,7 @@
 					<div class="p-4 border-grey-200 border">
 						<div class="">
 							<div class="mb-2">
-								<p class="text-12 font-museo-700 text-black">Processes Available</p>
+								<p class="text-12 font-museo-700 text-grey-700">Processes Available</p>
 							</div>
 							<div class="flex-wrap flex -mx-6">
 								<?php 
@@ -54,7 +54,7 @@
 					?>
 					<div class="border-grey-200 border-l border-r border-b p-4">
 						<div class="mb-2">
-							<p class="text-12 font-museo-700 text-black">
+							<p class="text-12 font-museo-700 text-grey-700">
 								Finishing Options
 							</p>
 						</div>

@@ -16,7 +16,7 @@
 
 
 ?>
-<nav class="relative w-full h-auto lg:h-18 flex items-center z-50 bg-white border-b border-grey-200">
+<nav class="relative lg:fixed top-0 left-0 right-0 w-full h-16 lg:h-18 flex items-center z-50 bg-white border-b border-grey-200">
 	
 	<div class="container relative">
 		<div class="flex justify-center">
@@ -26,9 +26,7 @@
 					<div class="w-full lg:w-7/12 flex items-center justify-between">
 						<div class="lg:w-24 xl:w-32">
 							<a href="<?php echo home_url() ?>">
-								<?php 
-									echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg');
-								?>
+								<img alt="Fictiv logo green " class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg'; ?>">
 							</a>
 						</div>
 
@@ -46,12 +44,12 @@
 									
 								?>
 								<li>
-									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-black hover:text-teal-light flex items-center lg:text-14" data-menu="<?php echo $i; ?>">
+									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-grey-700 hover:text-teal-light flex items-center lg:text-14" data-menu="<?php echo $i; ?>">
 										<span class=""><?php echo $item; ?></span>
 										&nbsp;&nbsp;
-										<span class="block mb-1"><?php 
-											echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
-										?></span>
+										<span class="block">
+											<img alt="Navigation arrow down" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg'; ?>">
+										</span>
 									</a>
 								</li>
 
@@ -74,14 +72,14 @@
 							
 							?>
 							<div class="w-full lg:w-3/5 px-6 hidden lg:block">
-								<ul class="flex justify-end items-center  font-museo-700 text-black">
+								<ul class="flex justify-end items-center  font-museo-700 text-grey-700">
 									<li class="lg:mx-1 xl:mx-4">
-										<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-black hover:text-teal-light text-14">
+										<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-grey-700 hover:text-teal-light text-14">
 											<?php echo $demo['name']; ?>
 										</a>
 									</li>
 									<li class="lg:mx-1 xl:mx-4">
-										<a class="primary-menu-item text-black hover:text-teal-light text-14" href="<?php echo $log_in['link']; ?>">
+										<a class="primary-menu-item text-grey-700 hover:text-teal-light text-14" href="<?php echo $log_in['link']; ?>">
 											<?php echo $log_in['name']; ?>
 										</a>
 									</li>
@@ -120,6 +118,17 @@
 			</div>
 		</div>
 	</div>
+	<?php 
+		if ( !wp_is_mobile() ) :
+
+			foreach ( $main_menu_items as $i => $item ) :
+				
+				include get_template_directory() . '/inc/navigation/submenus/' . str_replace(' ', '-', strtolower( $item )) . '.php';
+
+			endforeach;
+
+		endif;
+	?>
 </nav>
 
 <?php
@@ -138,12 +147,12 @@
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12 ">
-					<a class="select-none cursor-pointer mobile-menu-item text-black flex items-center text-14 font-museo-700 py-3" data-menu="<?php echo $i; ?>">
+					<a class="select-none cursor-pointer mobile-menu-item text-grey-700 flex items-center text-14 font-museo-700 py-3" data-menu="<?php echo $i; ?>">
 						<?php echo $item; ?>
 						&nbsp;
-						<span class="block mb-1"><?php 
-							echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg');
-						?></span>
+						<span class="block">
+							<img alt="Navigation arrow down" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/primary-nav-arrow-down.svg'; ?>">
+						</span>
 					</a>
 				</div>
 			</div>
@@ -161,7 +170,7 @@
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12 ">
-					<a class=" mobile-menu-item text-black block text-14 font-museo-700 py-3" href="<?php echo $demo['link']; ?>" >
+					<a class=" mobile-menu-item text-grey-700 block text-14 font-museo-700 py-3" href="<?php echo $demo['link']; ?>" >
 						<?php echo $demo['name']; ?>
 					</a>
 				</div>
@@ -173,7 +182,7 @@
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12">
-					<a class="mobile-menu-item text-black text-14 block font-museo-700 py-3" href="<?php echo $log_in['link']; ?>" >
+					<a class="mobile-menu-item text-grey-700 text-14 block font-museo-700 py-3" href="<?php echo $log_in['link']; ?>" >
 						<?php echo $log_in['name']; ?>
 					</a>
 				</div>
@@ -194,15 +203,11 @@
 	</div>
 </div>
 <?php 
-	else : 
+	// else : 
 		// Display Desktop Submenus
 
 
-		foreach ( $main_menu_items as $i => $item ) :
-			
-			include get_template_directory() . '/inc/navigation/submenus/' . str_replace(' ', '-', strtolower( $item )) . '.php';
-
-		endforeach;
+		
 
 	endif; 
 ?>

@@ -3,7 +3,7 @@
 	$resource_center = array(
 		'header' => 'Digital Manufacturing Resources',
 		'name' => 'Resource Center',
-		'link' => '/resources/',
+		'link' => '/resources',
 		'para' => 'Find all your prototype answers in one place.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-center.png'
 	);

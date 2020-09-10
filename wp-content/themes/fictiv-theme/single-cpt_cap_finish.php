@@ -30,7 +30,7 @@ if ( have_posts() ) :
                             
                         </div>
                         <div class="text-grey-700">
-                            <h1><?php 
+                            <h1 class="font-museo-700 text-grey-700"><?php 
                                 the_title()
                             ?></h1>
 
@@ -98,7 +98,7 @@ if ( have_posts() ) :
                 ?>
                  <div class="text-center py-10 border-b border-grey-200">
                     <div>
-                        <h2 class="text-29 text-grey-700"><?php the_sub_field('finish_module_title'); ?></h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29"><?php the_sub_field('finish_module_title'); ?></h2>
                     </div>
                     
                 </div>
@@ -111,7 +111,7 @@ if ( have_posts() ) :
 
                 <div class="py-10">
                     <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">At a glance</h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">At a glance</h2>
                     </div>
                     <div class="flex flex-wrap md:flex-no-wrap ">
                          <?php 
@@ -137,7 +137,7 @@ if ( have_posts() ) :
 
                 <div class="py-10">
                     <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">Color Options</h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Color Options</h2>
                     </div>
                     <div class="flex -mx-1 flex-wrap md:flex-no-wrap">
                          <?php 
@@ -171,7 +171,7 @@ if ( have_posts() ) :
 
                 <div class="py-10">
                     <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">About the Process</h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">About the Process</h2>
                     </div>
                     <div class="flex justify-center">
                         <div class="w-11/12 lg:w-7/12">
@@ -193,7 +193,7 @@ if ( have_posts() ) :
 
                 <div class="py-10">
                     <div class="text-center mb-6">
-                        <h2 class="font-museo-700 text-20">Design considerations</h2>
+                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Design considerations</h2>
                     </div>
                     <div class="flex justify-center">
                         <div class="w-11/12 lg:w-7/12">

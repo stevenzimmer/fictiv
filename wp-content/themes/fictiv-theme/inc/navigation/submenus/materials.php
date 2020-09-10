@@ -1,4 +1,4 @@
-<nav class="bg-white py-10 sub-menu absolute w-full z-50" data-menu="<?php echo $i; ?>">
+<nav class="bg-white py-10 sub-menu absolute w-full z-50 top-0 left-0 mt-16" data-menu="<?php echo $i; ?>">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12">
@@ -30,7 +30,7 @@
 						?>
 								<div class="lg:w-1/2">
 									<div class="mb-4">
-										<p class="text-12 text-black font-museo-700">
+										<p class="text-12 text-grey-700 font-museo-700">
 											<?php echo get_term( $mat, $term->taxonomy )->name; ?>
 										</p>
 										
@@ -59,7 +59,7 @@
 								<div class="lg:w-full">
 
 									<div class="mb-4">
-										<p class="text-12 text-black font-museo-700"><?php echo $term->name; ?> Materials</p>
+										<p class="text-12 text-grey-700 font-museo-700"><?php echo $term->name; ?> Materials</p>
 									</div>
 									<div class="flex flex-wrap">
 										<?php 

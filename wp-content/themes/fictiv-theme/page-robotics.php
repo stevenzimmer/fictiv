@@ -34,7 +34,7 @@
                             
                         </div>
                         <div >
-                            <h1 class="text-black leading-tight">PRECISION QUALITY PARTS AT UNMATCHED SPEEDS</h1>
+                            <h1 class="text-grey-700 font-museo-700">PRECISION QUALITY PARTS AT UNMATCHED SPEEDS</h1>
 
                         </div>
                         <?php 
