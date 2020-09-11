@@ -1,13 +1,5 @@
 body {
     @apply font-museo-300 not-italic leading-normal text-16 text-default leading-normal h-full antialiased;
-    /*-moz-osx-font-smoothing: grayscale;*/
-
-    &.admin {
-
-    	&-bar {
-    		@apply mt-4;
-    	}
-    }
 }
 
 h1 {

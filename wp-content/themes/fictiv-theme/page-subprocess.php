@@ -8,7 +8,8 @@ if ( have_posts() ) :
     while ( have_posts() ) : 
         the_post();
         $processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
-        
+        $materials = get_field('materials_section');
+
 ?>
 <header class="bg-grey-200 py-10 capabilities-hero relative">
     <?php 
@@ -85,12 +86,43 @@ if ( have_posts() ) :
                   
                     <div class="flex flex-wrap md:flex-no-wrap items-stretch">
                          <?php 
-                    
+                            
+                            $i = 0;
                             while( have_rows('at_a_glance_materials') ) : 
                                     the_row();
 
+                                    if ( $i === 2 && !empty( $materials ) ) :
+                        ?>
+                        <div class="w-full flex flex-row md:flex-col capabilities-table">
+                            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-16 ">
+                                <p class="text-14 text-grey-700 font-museo-700">
+                                    Materials                
+                                </p>
+                            </div>
+                            
+                            <div class="w-full p-4 border-b border-grey-100 border-r border-l border-t md:border-t-0 md:flex-1 max-w-md">
+                                <div class=" post-content capabilities-table-cell">
+
+                            <?php 
+        
+                                foreach ( $materials as $j => $material_id ) :
+                                
+                            ?>
+                            <a href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a>
+                                  
+                            <?php 
+                                endforeach;
+                                
+                            ?>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <?php
+                                    endif;
                                     capabilities_table('column_title', 'column_cells', 'column_cell' );
                             
+                            $i++;
                             endwhile;
                         ?>
                     </div>
@@ -247,7 +279,7 @@ if ( have_posts() ) :
 <?php
     endif;
 
-    $materials = get_field('materials_section');
+   
     
 
     if ( $materials ) :
@@ -255,91 +287,143 @@ if ( have_posts() ) :
 ?>
 <section class="py-10">
     <div class="container">
-        <div class="flex justify-center">
-            <div class="w-full lg:w-11/12">
-                 <div class="text-center mb-6">
-                    <div>
-                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29"><?php echo $processes[0]->name; ?> Materials</h2>
-                    </div>
-                </div>
-                <?php 
-                    if ( count( $materials ) > 1 ) :
-                ?>
-                <div class="flex justify-center mb-4 flex-wrap">
-                    <?php 
-                                 
-                        
-                        foreach ( $materials as $i => $material_id ) :
-                        
-                    ?>
-                    <div data-material="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group material-btn mb-2 <?php if( $i === 0 ) :
-                        
-                        echo 'active';
 
-                    endif; ?>">
-                        <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php echo get_the_title( $material_id ); ?></p>
-                    </div>
-                    <?php 
-                        endforeach;
-                        
-                    ?>
-                </div>
-                <?php 
-                    endif;
-                ?>
-                <div class="material-content-wrapper">
-                    <?php 
-                        foreach ( $materials as $i => $material_id ) :
-                    ?>
-                    <div data-material="<?php echo $i; ?>" class="material-content-item <?php if( $i !== 0 ) :
-                        
-                        echo 'hidden';
-
-                    endif; ?>">
-                        <div class="flex flex-wrap border border-grey-200">
-                            <div class="w-full lg:w-1/3">
-                                <div class="p-4">
-                                    <div class="mb-2">
-                                        <p class="text-20 font-museo-700 text-grey-700">
-                                            <?php echo get_the_title( $material_id ); ?>
-                                        </p>
-                                    </div>
-
-                                    <?php 
-                                       
-
-                                        if ( get_the_excerpt() ) : 
-                                    ?>
-                                        
-                                    <div class="mb-2 post-content">
-                                        <?php 
-                                            the_excerpt();
-                                        ?>  
-                                    </div>
-                                    <?php 
-                                        endif; 
-                                    ?>
-                                    <div>
-                                        <a class="text-12 text-teal-light font-museo-500" href="<?php echo get_the_permalink( $material_id ); ?>">Learn more</a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <div class="w-full lg:w-2/3">
-                                <div class="relative h-0" style="padding-bottom: 65%">
-                                     <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php 
-                        endforeach;
-                    ?>
-                </div>
+         <div class="text-center mb-6">
+            <div>
+                <h2 class="text-grey-700 font-museo-700 text-20 md:text-29"><?php echo $processes[0]->name; ?> Materials</h2>
             </div>
         </div>
+        <?php 
+            if ( count( $materials ) > 1 ) :
+        ?>
+        <div class="flex justify-center mb-4 flex-wrap">
+            <?php 
+                         
+                
+                foreach ( $materials as $i => $material_id ) :
+                
+            ?>
+            <div data-material="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group material-btn mb-2 <?php if( $i === 0 ) :
+                
+                echo 'active';
+
+            endif; ?>">
+                <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php echo get_the_title( $material_id ); ?></p>
+            </div>
+            <?php 
+                endforeach;
+                
+            ?>
+        </div>
+        <?php 
+            endif;
+        ?>
+        <div class="material-content-wrapper">
+            <?php 
+                foreach ( $materials as $i => $material_id ) :
+            ?>
+            <div data-material="<?php echo $i; ?>" class="material-content-item <?php if( $i !== 0 ) :
+                
+                echo 'hidden';
+
+            endif; ?>">
+                <div class="flex flex-wrap border border-grey-200">
+                    <div class="w-full lg:w-1/3">
+                        <div class="p-4">
+                            <div class="mb-2">
+                                <p class="text-20 font-museo-700 text-grey-700">
+                                    <?php echo get_the_title( $material_id ); ?>
+                                </p>
+                            </div>
+
+                            <?php 
+                               
+
+                                if ( get_the_excerpt() ) : 
+                            ?>
+                                
+                            <div class="mb-4 post-content">
+                                <?php 
+                                    the_excerpt();
+                                ?>  
+                            </div>
+                            <?php 
+                                endif;
+
+                                if ( have_rows('at_a_glance_materials', $material_id ) ) :
+                                
+
+                                    $i = 0;
+                                    while( have_rows('at_a_glance_materials', $material_id ) ) :
+                                        the_row();
+
+
+                            ?>
+                            <div class=" flex mb-4">
+                                
+                                <div class="text-grey-700 font-museo-700 w-1/3">
+                                     <?php 
+                                        the_sub_field('column_title');
+                                    ?>:
+                                </div>
+                               <?php 
+                                    
+                                ?>
+                                <div class="w-2/3 text-grey-600 font-museo-500">
+                                <?php
+
+
+                                    $j = 0;
+                                    $cells_count = count( get_sub_field('column_cells', $material_id ) );
+
+                                    while( have_rows('column_cells', $material_id ) ) :
+                                        the_row();
+                                        if ( $i === 0 ||  $cells_count < 2 ) :
+
+echo get_sub_field('column_cell'); 
+                                        
+                                        else :
+                                
+echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_materials', $material_id )[0]['column_cells'][$j]['column_cell'] . ')</span> ' . get_sub_field('column_cell'); 
+
+                                        endif;
+
+                                        echo '<br>';
+                                    $j++;
+                                    endwhile;
+                                ?>
+                                </div>
+                                
+                            
+                            </div>
+                            <?php
+                                $i++;
+                                endwhile;
+                            ?>
+                        
+                            <?php 
+                                endif;
+                            ?>
+                            <div>
+                                <a class="text-teal-light hover:text-teal-dark font-museo-700" href="<?php echo get_the_permalink( $material_id ); ?>">Learn more</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/3">
+                        <div class="relative h-full">
+                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                endforeach;
+            ?>
+        </div>
+           
     </div>
 </section>
 

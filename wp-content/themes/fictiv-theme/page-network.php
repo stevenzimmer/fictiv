@@ -14,10 +14,10 @@
 	<!-- <div class="bg-white md:bg-transparent md:bg-gradient-to-r from-white via-white  absolute w-full h-full inset-0 opacity-75 md:opacity-100"></div> -->
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-9/12">
+			<div class="w-11/12 ">
 				
-				<div class="lg:w-7/12">
-					<div class="mb-6 lg:pr-12">
+				<div class="w-full lg:w-5/12">
+					<div class="mb-6">
 						<h1 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36">
 							The world's best manufacturers, connected
 						</h1>

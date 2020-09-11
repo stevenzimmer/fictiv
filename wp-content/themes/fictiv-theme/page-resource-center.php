@@ -123,7 +123,7 @@
 							?>
 									
 								
-								<div class="absolute right-0 top-0 h-full w-8 bg-white opacity-75 resource-carousel-right">
+								<div class="absolute right-0 top-0 h-full w-8 bg-white opacity-50 hover:opacity-75 duration-200 ease-in-out transition-color resource-carousel-right">
 									<div class="flex w-full h-full justify-center items-center">
 										<div>
 											<?php 
@@ -133,7 +133,7 @@
 									</div>
 								</div>
 
-								<div class="absolute left-0 top-0 h-full w-8 bg-white opacity-75 resource-carousel-left hidden">
+								<div class="absolute left-0 top-0 h-full w-8 bg-white opacity-50 hover:opacity-75 duration-200 ease-in-out transition-color resource-carousel-left hidden">
 									<div class="flex w-full h-full justify-center items-center">
 										<div class="transform rotate-180">
 											<?php 

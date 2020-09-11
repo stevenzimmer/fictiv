@@ -47,7 +47,7 @@
 													foreach ( $children_processes as $j => $child_process ) :
 													
 												?>
-												<a href="<?php echo get_permalink( $child_process->ID ) ?>" class="lg:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo $child_process->post_title ?></a>
+												<a href="<?php echo get_permalink( $child_process->ID ) ?>" class="lg:w-1/2 px-6 text-12 font-museo-700 text-teal-light hover:text-teal-dark block mb-2 last:mb-0"><?php echo $child_process->post_title ?></a>
 												<?php 
 													endforeach;
 												?>
@@ -76,7 +76,7 @@
 												$finishes_menu->the_post();
 											
 									?>
-											<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php the_title() ?></a>
+											<a href="<?php the_permalink(); ?>" class="md:w-1/2 px-6 text-12 font-museo-700 text-teal-light hover:text-teal-dark block mb-2 last:mb-0"><?php the_title() ?></a>
 												
 									<?php 
 											endwhile;

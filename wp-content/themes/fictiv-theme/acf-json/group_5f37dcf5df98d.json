@@ -63,7 +63,7 @@
                             "key": "field_5f37dd59bc48c",
                             "label": "Column Cell",
                             "name": "column_cell",
-                            "type": "wysiwyg",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -73,10 +73,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "tabs": "visual",
-                            "toolbar": "full",
-                            "media_upload": 0,
-                            "delay": 0
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ]
                 }
@@ -105,7 +105,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1597706953
+    "modified": 1599833197
 }

@@ -16,10 +16,10 @@
 	<div class="bg-white md:bg-transparent md:bg-gradient-to-r from-white via-white  absolute w-full h-full inset-0 opacity-75 md:opacity-100"></div>
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-9/12">
+			<div class="w-11/12">
 				<div class="flex "> 
-					<div class="lg:w-7/12">
-						<div class="mb-6 lg:pr-12">
+					<div class="lg:w-6/12">
+						<div class="mb-6">
 							<h1 class="text-grey-700 font-museo-700 leading-none text-29 md:text-36">
 								Real humans, here to help
 							</h1>
@@ -51,7 +51,7 @@
 <section class="py-20">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-9/12">
+			<div class="w-11/12">
 				<div class="flex flex-wrap -mx-6">
 					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<div class="mb-6">
@@ -93,7 +93,7 @@
 	</div>
 	<div class="container relative">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-9/12">
+			<div class="w-11/12">
 				<div class="flex flex-wrap lg:-mx-6">
 					<div class="w-full lg:w-6/12 lg:px-6">
 						<div class="mb-6">
@@ -115,7 +115,7 @@
 <section class="py-20">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-9/12">
+			<div class="w-11/12">
 				<div class="flex flex-wrap -mx-6">
 					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<div class="mb-6">

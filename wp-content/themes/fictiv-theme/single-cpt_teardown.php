@@ -162,7 +162,7 @@ while ( have_posts() ) :
 												echo get_the_author_meta('description',  $author->data->ID );
 											?>
 											<br>
-											<a class="text-teal-light font-museo-500 " href="<?php echo get_author_posts_url( $author->data->ID ); ?>">Learn More »</a>
+											<a class="text-teal-light hover:text-teal-dark font-museo-700 " href="<?php echo get_author_posts_url( $author->data->ID ); ?>">Learn More »</a>
 										</span>
 									</div>
 								</div>

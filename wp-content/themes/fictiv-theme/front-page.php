@@ -152,27 +152,32 @@
 
 <section class="py-20">
 	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
-			<div class="w-11/12 lg:w-6/12 lg:px-6">
-				<div class="mb-4se">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						Digital Platform
-					</h2>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-10/12 lg:px-6">
+				<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
+					<div class="w-11/12 lg:w-6/12 lg:px-6">
+						<div class="mb-4">
+							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+								Digital Platform
+							</h2>
+						</div>
+						<div class="mb-6">
+							<p class="font-museo-500 text-grey-600">
+								Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.
+							</p>
+						</div>
+						<div>
+							<a class="btn btn-primary" href="/our-platform/">learn more</a>
+						</div>
+					</div>
+					<div class="w-full lg:w-6/12 lg:px-6">
+						<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
+						
+					</div>
 				</div>
-				<div class="mb-6">
-					<p class="font-museo-500 text-grey-600">
-						Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.
-					</p>
-				</div>
-				<div>
-					<a class="btn btn-primary" href="/our-platform/">learn more</a>
-				</div>
-			</div>
-			<div class="w-full lg:w-6/12 lg:px-6">
-				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
-				
 			</div>
 		</div>
+		
 	</div>
 </section>
 
@@ -186,54 +191,58 @@
 					
 				</div>
 			</div>
-			
 		</div>
-
-
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
-			<div class="w-11/12 lg:w-6/12 lg:px-6">
-				<div class="mb-4">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						Partner Network
-					</h2>
-				</div>
-				<div class="mb-6">
-					<p class=" font-museo-500 text-grey-600">
-						Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.
-					</p>
-				</div>
-				<div>
-					<a class="btn btn-primary" href="/our-network/">learn more</a>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-10/12 lg:px-6">
+				<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
+					<div class="w-11/12 lg:w-6/12 lg:px-6">
+						<div class="mb-4">
+							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+								Partner Network
+							</h2>
+						</div>
+						<div class="mb-6">
+							<p class=" font-museo-500 text-grey-600">
+								Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.
+							</p>
+						</div>
+						<div>
+							<a class="btn btn-primary" href="/our-network/">learn more</a>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-			
 		</div>
-		
 	</div>
 </section>
 
 <section class="py-20 hidden lg:block"></section>
 <section class="py-20">
 	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
-			<div class="w-11/12 lg:w-6/12 lg:px-6">
-				<div class="mb-4">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						People on the Ground
-					</h2>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-10/12 lg:px-6">
+				<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
+					<div class="w-11/12 lg:w-6/12 lg:px-6">
+						<div class="mb-4">
+							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+								People on the Ground
+							</h2>
+						</div>
+						<div class="mb-6">
+							<p class=" font-museo-500 text-grey-600">
+								Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.
+							</p>
+						</div>
+						<div>
+							<a class="btn btn-primary" href="/our-people/">learn more</a>
+						</div>
+					</div>
+					<div class="w-full lg:w-6/12 lg:px-6">
+						<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
+						
+					</div>
 				</div>
-				<div class="mb-6">
-					<p class=" font-museo-500 text-grey-600">
-						Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.
-					</p>
-				</div>
-				<div>
-					<a class="btn btn-primary" href="/our-people/">learn more</a>
-				</div>
-			</div>
-			<div class="w-full lg:w-6/12 lg:px-6">
-				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
-				
 			</div>
 		</div>
 	</div>
@@ -298,7 +307,7 @@
                             </p>
                         </div>
                         <div>
-                            <p class="text-teal-light text-12 font-museo-700 group-hover:text-red-dark">Learn more</p>
+                            <p class="text-teal-light font-museo-700 group-hover:text-teal-dark">Learn more</p>
                         </div>
                     </div>
                 </div>
@@ -363,7 +372,7 @@
 						<img width="80" class="lazyload  mx-auto" alt="<?php echo $company['logo']; ?> logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/<?php echo $company['logo']; ?>.png">
 					</div>
 					<div class="lg:h-28">
-						<p class="">
+						<p class="text-grey-600 font-museo-500">
 							<?php echo $company['quote']; ?>
 						</p>
 					</div>
@@ -374,10 +383,10 @@
 					</div>
 					<div>
 						<div>
-							<p class="font-museo-700">
+							<p class="font-museo-500 text-grey-700">
 								<?php echo $company['name']; ?>
 							</p>
-							<p class="">
+							<p class="text-grey-600 font-museo-500">
 								<?php echo $company['title']; ?>
 							</p>
 						</div>
@@ -563,12 +572,11 @@
 
 <section class="bg-grey-100">
 
-
     <div class=" max-w-1600 mx-auto relative pb-10 lg:py-10">
         <div class="relative lg:absolute w-full h-full inset-0 mb-6 lg:mb-0">
             <div class="flex lg:justify-end h-full">
                 <div class="w-full lg:w-1/2 ">
-                    <div class="flex flex-wrap flex-row lg:flex-col h-full lg:max-w-screen-sm w-full mx-auto">
+                   <div class="flex flex-wrap h-full ">
                         <?php 
                             if( have_rows('case_study_graphics') ) :
 
@@ -577,10 +585,12 @@
                                     the_row();
                            
                         ?>
-                        <div class="md:mx-auto lg:h-half w-1/2 lg:w-auto" style="">
-                            <img alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" class="lazyload lg:h-full" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
+                        <div class="relative h-64 lg:h-half w-1/2">
+                            <img class="absolute inset-0 object-cover w-full h-full lazyload" alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
                             
                         </div>
+                        
+                            
                         <?php 
                                 $i++;
                                 endwhile;
@@ -729,7 +739,7 @@
 
 						</div>
 						<div class="">
-							<p class="group-hover:text-teal-dark text-teal-light font-museo-500">Learn More</p>
+							<p class="group-hover:text-teal-dark text-teal-light font-museo-700">Learn More</p>
 						</div>
 						
 					</div>

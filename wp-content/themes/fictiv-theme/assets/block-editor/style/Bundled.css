@@ -110,7 +110,7 @@
                                                     }
 
                                                     h3 {
-                                                        @apply text-teal-light text-20 font-museo-700 ;
+                                                        @apply text-grey-700 text-20 font-museo-700 ;
                                                     }
                                                 }
                                             }
@@ -154,7 +154,7 @@
             }
 
             h2 {
-                @apply text-20 mb-6 text-teal-light font-museo-500 leading-tight;
+                @apply text-20 mb-6 text-grey-700 font-museo-500 leading-tight;
 
                 @screen md {
                     @apply text-29;

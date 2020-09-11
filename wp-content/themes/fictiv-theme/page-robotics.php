@@ -157,7 +157,7 @@
 									</p>
 								</div>
 								<div>
-									<p class="text-blue-light font-museo-700 group-hover:text-red-dark underline">Learn more</p>
+									<p class="text-teal-light font-museo-700 group-hover:text-teal-dark">Learn more</p>
 								</div>
 								
 							</div>

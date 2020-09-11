@@ -36,7 +36,7 @@
 										foreach ( $GLOBALS['resource_post_types']	 as $i => $resource ) :
 
 									?>
-											<a href="<?php echo get_post_type_archive_link( $resource ); ?>" class="md:w-1/2 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo get_post_type_object( $resource )->labels->name; ?></a>
+											<a href="<?php echo get_post_type_archive_link( $resource ); ?>" class="md:w-1/2 text-12 font-museo-700 text-teal-light hover:text-teal-dark block mb-2 last:mb-0"><?php echo get_post_type_object( $resource )->labels->name; ?></a>
 												
 									<?php 
 										endforeach;
@@ -76,7 +76,7 @@
 										foreach ( $help_center_topics as $i => $topic ) :		
 						 
 									?>
-											<a href="<?php echo $topic['link']; ?>" class="md:w-1/2 text-12 font-museo-700 text-teal-light block mb-2 last:mb-0"><?php echo $topic['name']; ?></a>
+											<a href="<?php echo $topic['link']; ?>" class="md:w-1/2 text-12 font-museo-700 text-teal-light hover:text-teal-dark block mb-2 last:mb-0"><?php echo $topic['name']; ?></a>
 												
 									<?php 
 										endforeach;
@@ -104,7 +104,7 @@
 											cap_menu_item( 
 												get_permalink(), 
 												get_the_title(), 
-												'',// get_the_excerpt(), 
+												'',
 												$thumbnail
 											);
 									?>
@@ -113,9 +113,7 @@
 									<?php
 
 									     endwhile;
-										// Reset Post Data
 										wp_reset_postdata();
-									
 									
 									?>
 							

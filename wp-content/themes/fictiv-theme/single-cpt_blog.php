@@ -100,7 +100,7 @@ while ( have_posts() ) :
 												echo get_the_author_meta('description', get_the_author_meta('ID') );
 											?>
 											<br>
-											<a class="text-teal-light font-museo-500 " href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">Learn More »</a>
+											<a class="text-teal-light font-museo-700 hover:text-teal-dark" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">Learn More »</a>
 										</span>
 									</div>
 								</div>
