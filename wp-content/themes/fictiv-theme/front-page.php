@@ -171,7 +171,7 @@
 						</div>
 					</div>
 					<div class="w-full lg:w-6/12 lg:px-6">
-						<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
+						<img class="lazyload w-full" alt="Digital Platform graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
 						
 					</div>
 				</div>
@@ -184,14 +184,7 @@
 
 <section class="py-20">
 	<div class="container relative">
-		<div class=" relative lg:absolute w-full h-full top-0 right-0 -z-1">
-			<div class="flex justify-end">
-				<div class="w-full lg:w-8/12">
-					<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-middle-2.png">
-					
-				</div>
-			</div>
-		</div>
+
 		<div class="flex justify-center">
 			<div class="w-full lg:w-10/12 lg:px-6">
 				<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
@@ -209,6 +202,10 @@
 						<div>
 							<a class="btn btn-primary" href="/our-network/">learn more</a>
 						</div>
+					</div>
+					<div class="w-full lg:w-6/12 lg:px-6">
+						<img class="lazyload w-full" alt="Partner Network Graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-middle-2.png">
+						
 					</div>
 					
 				</div>
@@ -239,7 +236,7 @@
 						</div>
 					</div>
 					<div class="w-full lg:w-6/12 lg:px-6">
-						<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
+						<img class="lazyload w-full" alt="People on the Ground Graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
 						
 					</div>
 				</div>
