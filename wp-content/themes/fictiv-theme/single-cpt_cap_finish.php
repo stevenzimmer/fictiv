@@ -6,7 +6,7 @@ if ( have_posts() ) :
     while ( have_posts() ) : 
         the_post();
         $processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
-        
+        $materials = get_field('materials_section');
 ?>
 <header class="bg-grey-200 py-10 capabilities-hero relative">
     <?php 
@@ -115,12 +115,51 @@ if ( have_posts() ) :
                     </div>
                     <div class="flex flex-wrap md:flex-no-wrap ">
                          <?php 
-                  
+                            
+                            $i = 0;
                             while( have_rows('finish_module_at_a_glance') ) : 
-                                    the_row();
+                                the_row();
+
+                                    if ( $i === 0 && !empty( $materials ) ) :
+                        ?>
+                        <div class="w-full flex flex-row md:flex-col capabilities-table">
+                            <div class="w-full p-4 bg-grey-100 flex md:flex-0 md:h-16 ">
+                                <p class="text-14 text-grey-700 font-museo-700">
+                                    Applicable Materials                
+                                </p>
+                            </div>
+                            
+                            <div class="w-full p-4 border-b border-grey-100 border-r border-l border-t md:border-t-0 md:flex-1 max-w-md">
+                                <div class=" post-content capabilities-table-cell">
+
+                            <?php 
+                              
+                                foreach ( $materials as $j => $material_id ) :
+                              
+                            ?>
+                            <a href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a><?php 
+                                if ( ($j + 1) !== count( $materials ) ) :
+
+                                    echo ', ';
+                                
+                                endif;
+                            ?>
+                                  
+                            <?php 
+                                endforeach;
+                                
+                            ?>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <?php
+                                    endif;
+                                    
                                     capabilities_table('finish_module_at_a_glance_column_title','finish_module_at_a_glance_column_cells','finish_module_at_a_glance_column_cell');
                 
-                  
+                            
+                            $i++;
                             endwhile;
                         ?>
                     </div>

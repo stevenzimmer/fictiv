@@ -32,6 +32,13 @@
                 "operator": "==",
                 "value": "page-subprocess.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_cap_finish"
+            }
         ]
     ],
     "menu_order": 0,
@@ -40,7 +47,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1597328291
+    "modified": 1599837185
 }

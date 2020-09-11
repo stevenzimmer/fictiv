@@ -104,11 +104,17 @@ if ( have_posts() ) :
                                 <div class=" post-content capabilities-table-cell">
 
                             <?php 
-        
+                              
                                 foreach ( $materials as $j => $material_id ) :
-                                
+                              
                             ?>
-                            <a href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a>
+                            <a href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a><?php 
+                                if ( ($j + 1) !== count( $materials ) ) :
+
+                                    echo ', ';
+                                
+                                endif;
+                            ?>
                                   
                             <?php 
                                 endforeach;
