@@ -46,7 +46,7 @@
 							
 							<div class="mb-2">
 								<div>
-									<p class="text-14 font-museo-700 text-grey-400 uppercase">
+									<p class=" font-museo-700 text-grey-400 uppercase">
 										<?php 
 											echo get_post_type_object( $type )->labels->name;
 										?>
@@ -90,8 +90,8 @@
 											</div>
 											<div class="p-2 relative">
 										
-												<div class="h-18 mb-8">
-													<h2 class="text-14 font-museo-700 text-default max-lines max-lines-3"><?php 
+												<div class="h-20 mb-8">
+													<h2 class="text-16 font-museo-700 text-default max-lines max-lines-3"><?php 
 														echo get_the_title();
 
 													?></h2>
@@ -161,7 +161,7 @@
 											the_field('resources_home_form_title');
 										?>
 									</h3>
-									<p class="text-white text-14 font-museo-500">
+									<p class="text-white font-museo-500">
 										<?php 
 											the_field('resources_home_form_paragraph');
 										?>

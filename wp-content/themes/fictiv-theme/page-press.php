@@ -75,10 +75,10 @@
 							<h3 class="text-blue-dark text-24 font-museo-700"><?php echo $founder['name']; ?></h3>
 						</div>
 						<div class="mb-4">
-							<p class="text-grey-700 font-museo-500 text-14"><?php echo $founder['title']; ?></p>
+							<p class="text-grey-700 font-museo-500"><?php echo $founder['title']; ?></p>
 						</div>
 						<div class="">
-							<p class="text-14 font-museo-500 text-grey-600"><?php echo $founder['bio']; ?></p>
+							<p class="font-museo-500 text-grey-600"><?php echo $founder['bio']; ?></p>
 						</div>
 					</div>	
 				</div>
@@ -119,13 +119,13 @@ if ( have_rows('featured_press') ) :
 				</div>
 
 				<div  class="text-center mb-4">
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class="font-museo-500 text-grey-600">
 						<?php the_sub_field('featured_press_snippet'); ?>
 					</p>
 				</div>
 				
 				<div class="text-center">
-					<a href="<?php the_sub_field('featured_press_external_link'); ?>" class="text-teal-light font-museo-500 text-14">Read More</a>
+					<a href="<?php the_sub_field('featured_press_external_link'); ?>" class="text-teal-light font-museo-500">Read More</a>
 				</div>
 			</div>
 

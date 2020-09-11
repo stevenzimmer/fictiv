@@ -91,7 +91,7 @@
 						</div>
 						<div class="border-b border-grey-light pb-4">
 							<h3 class=" font-museo-700 "><?php echo $quote['name']; ?></h3>
-							<p class="text-14"><?php echo $quote['title']; ?></p>
+							<p class=""><?php echo $quote['title']; ?></p>
 						</div>
 						<div class="py-4">
 							<p class="text-blue-dark text-12 mb-4 italic font-museo-500">

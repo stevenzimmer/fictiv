@@ -3,7 +3,7 @@
 		'Why Fictiv',
 		'Capabilities',
 		'Materials',
-		'Industries',
+		// 'Industries',
 		'Resources'
 	);
 

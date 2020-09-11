@@ -28,7 +28,7 @@
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 lg:w-6/12">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 Fictiv for robotics
                             </p>
                             
@@ -150,7 +150,7 @@
 									</p>
 								</div>
 								<div class="h-12 mb-2">
-									<p class="text-blue-dark text-14">
+									<p class="text-blue-dark">
 										<?php 
 											echo $type['text'];
 										?>

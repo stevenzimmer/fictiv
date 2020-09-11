@@ -124,7 +124,7 @@
 							echo $work['title'];
 						?>
 					</p>
-					<p class="text-14 font-museo-500 text-grey-600">
+					<p class=" font-museo-500 text-grey-600">
 						<?php echo $work['para']; ?>
 
 					</p>

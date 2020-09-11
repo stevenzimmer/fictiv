@@ -10,7 +10,7 @@
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.5', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.17');
+        // wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.17');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -60,7 +60,6 @@
         //-- Add .lazyload class to each image that doesn't already have a class.
         $content = preg_replace('/<img((.(?!class=))*)\/?>/i', '<img class="lazyload"$1>', $content);
 
-        
         return $content;
     }
 

@@ -37,13 +37,13 @@
 						?>
 						
 						<div class="w-full hidden lg:block">
-							<ul class="flex justify-between items-center ">
+							<ul class="flex justify-start items-center ">
 								<?php 
 
 									foreach ( $main_menu_items as $i => $item ) :
 									
 								?>
-								<li>
+								<li class="mx-4">
 									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-grey-700 hover:text-teal-light flex items-center lg:text-14" data-menu="<?php echo $i; ?>">
 										<span class=""><?php echo $item; ?></span>
 										&nbsp;&nbsp;

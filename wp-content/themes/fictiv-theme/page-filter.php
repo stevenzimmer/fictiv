@@ -177,7 +177,7 @@ $max_num = ( $filtered->max_num_pages ? $filtered->max_num_pages : $default->max
 									<div class="p-4 relative">
 									
 										<div class="h-20">
-											<h2 class="text-14 font-museo-700 text-default max-lines max-lines-3"><?php 
+											<h2 class=" font-museo-700 text-default max-lines max-lines-3"><?php 
 												the_title();
 
 											?></h2>

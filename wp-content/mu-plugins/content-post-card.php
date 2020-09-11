@@ -32,19 +32,19 @@ function fictiv_post_card( $topic ) {
 				echo $topic;
 			?></p>
 		</div>
-		<div class="h-12">
-			<h2 class="text-14 font-museo-700 text-default max-lines max-lines-2"><?php 
+		<div class="h-16">
+			<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
 				echo get_the_title();
 
 			?></h2>
 		</div>
 
 		
-		<div class="text-14 text-grey-600 font-museo-500 h-20">
+		<div class=" text-grey-600 font-museo-500 h-24">
 			<?php 
 				if( get_the_excerpt() ) :
 			?>
-			<p class="max-lines max-lines-3">
+			<p class=" max-lines max-lines-3">
 				
 				<?php 
 					echo get_the_excerpt();

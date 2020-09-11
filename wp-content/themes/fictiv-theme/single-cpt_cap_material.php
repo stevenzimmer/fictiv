@@ -24,7 +24,7 @@ if ( have_posts() ) :
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 xl:w-1/2 mb-6 lg:mb-0">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
                                 // print_r( $processes[0]->name );
                                     echo $processes[0]->name;
@@ -141,7 +141,7 @@ if ( have_posts() ) :
 
                 <div class="flex -mx-6 flex-wrap justify-center lg:justify-start">
                     <div class="w-11/12 lg:w-1/2 px-6 mb-6 lg:mb-0 post-content capabilities">
-                        <div class="font-museo-500 text-grey-600 text-14">
+                        <div class="font-museo-500 text-grey-600">
                             <?php echo $about_the_material['paragraph']; ?>
                         </div>
                     </div>
@@ -184,7 +184,7 @@ if ( have_posts() ) :
                             
                         ?>
                         <div class="mt-2">
-                            <p class="font-museo-500 text-14 text-grey-600">
+                            <p class="font-museo-500 text-grey-600">
                                 <?php echo get_field('material_thumbnail')['caption']; ?>
                             </p>
                         </div>
@@ -282,7 +282,7 @@ if ( have_posts() ) :
         </div>
         <div class="flex justify-center">
             <div class="w-11/12 lg:w-7/12">
-                <div class="text-14 font-museo-500 text-grey-600 material-finish">
+                <div class="font-museo-500 text-grey-600 material-finish">
                     <?php echo $material_finish; ?>
                 </div>
             </div>
@@ -397,7 +397,7 @@ if ( $related_posts->have_posts() ) :
                                 endif;
                             ?>
                             <div class="p-4">
-                                <h3 class="text-14 font-museo-700">
+                                <h3 class=" font-museo-700">
                                     <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();

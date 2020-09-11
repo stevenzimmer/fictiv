@@ -72,7 +72,7 @@ if ( have_posts() ) :
 							if( have_rows('webinar_hosts', $has_parent) ):
 						?>
 						<div class="mb-2">
-							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+							<p class="text-white uppercase font-museo-700 text-grey-400">
 								Hosted by
 							</p>
 						</div>

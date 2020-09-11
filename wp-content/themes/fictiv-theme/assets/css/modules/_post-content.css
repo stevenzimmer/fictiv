@@ -2,7 +2,7 @@
 .post {
 
 	&-content {
-		@apply text-grey-600 text-14 font-museo-500;
+		@apply text-grey-600 font-museo-500;
 
 		&.resource {
 

@@ -151,7 +151,7 @@
 		</div>
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-8/12 lg:w-6/12 text-center">
-				<p class=" text-grey-dark text-14">
+				<p class=" text-grey-dark">
                     <em>
                         The face shields are supplied on an as-is basis and a buyer&#x27;s use or sale of the products is at the buyer&#x27;s sole risk. Fictiv does not make any representations or warranties regarding the safety,
                         effectiveness or fitness of this product for any particular purpose or intended use. Unfortunately, we are unable to ship samples.

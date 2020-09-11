@@ -101,7 +101,7 @@
 							?></p>
 						</div>
 						<div class="h-18 mb-8">
-							<h2 class="text-14 font-museo-700 text-default max-lines max-lines-3"><?php 
+							<h2 class="font-museo-700 text-default max-lines max-lines-3"><?php 
 								echo get_the_title( $resource_id );
 
 							?></h2>

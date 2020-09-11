@@ -22,7 +22,7 @@ if ( have_posts() ) :
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 xl:w-1/2 mb-6 lg:mb-0">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
                                     echo $processes[0]->name;
                                 ?> services
@@ -151,7 +151,7 @@ if ( have_posts() ) :
                                     <img class="lazyload w-full" alt="<?php the_title(); ?> <?php echo get_sub_field('image')['caption']; ?>" data-src="<?php echo get_sub_field('image')['url'] ?>">
                                 </div>
                                 <div class="px-4 md:px-0">
-                                    <p class="text-grey-600 text-14 font-museo-500"><?php echo get_sub_field('image')['caption']; ?></p>
+                                    <p class="text-grey-600 font-museo-500"><?php echo get_sub_field('image')['caption']; ?></p>
                                 </div>
                             </div>
                             
@@ -197,7 +197,7 @@ if ( have_posts() ) :
                     </div>
                     <div class="flex justify-center">
                         <div class="w-11/12 lg:w-7/12">
-                            <div class="font-museo-500 text-14 box-check box-check-dark text-grey-600">
+                            <div class="font-museo-500 box-check box-check-dark text-grey-600">
                                 <?php 
                                     the_sub_field('design_considerations');
                                 ?>
@@ -281,7 +281,7 @@ if ( $related_posts->have_posts() ) :
                                 endif;
                             ?>
                             <div class="p-4">
-                                <h3 class="text-14 font-museo-700">
+                                <h3 class=" font-museo-700">
                                     <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();

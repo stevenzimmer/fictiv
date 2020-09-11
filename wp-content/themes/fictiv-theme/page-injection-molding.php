@@ -36,7 +36,7 @@
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 lg:w-6/12">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
                                     echo $page_type[0]->name;
                                 ?>
@@ -44,7 +44,7 @@
                             
                         </div>
                         <div >
-                            <h1 class="text-black"><?php 
+                            <h1 class="text-grey-700 font-museo-700"><?php 
                                echo $processes[0]->name;
                             ?> Services</h1>
 
@@ -112,10 +112,10 @@
                         endif;
                     ?>
                     <div class="mb-4">
-                        <p class="font-museo-700 text-14 text-grey-700"><?php the_sub_field('process_title'); ?></p>
+                        <p class="font-museo-700 text-grey-700"><?php the_sub_field('process_title'); ?></p>
                     </div>
                     <div>
-                        <p class="font-museo-500 text-14 text-grey-600">
+                        <p class="font-museo-500 text-grey-600">
                             <?php the_sub_field('process_paragraph'); ?>
                         </p>
                     </div>
@@ -125,6 +125,107 @@
                 endwhile;
                 reset_rows();
             ?>
+        </div>
+    </div>
+</section>
+<?php 
+    endif;
+    if ( get_field('case_study_quote') ) :
+    
+?>
+
+<section class="py-20">
+    <div class="container">
+        <div class="text-center mb-6">
+            <h2 class="text-20 md:text-29 text-grey-700 font-museo-700"><?php echo $processes[0]->name; ?> Case Study</h2>
+        </div>
+    </div>
+    <div class="bg-grey-100 max-w-1600 mx-auto relative pb-10 lg:py-10">
+        <div class="relative lg:absolute w-full h-full inset-0 mb-6 lg:mb-0">
+            <div class="flex lg:justify-end h-full">
+                <div class="w-full lg:w-1/2 ">
+                    <div class="flex flex-wrap flex-row lg:flex-col h-full lg:max-w-screen-sm w-full mx-auto">
+                        <?php 
+                            if( have_rows('case_study_graphics') ) :
+
+                                $i = 1;
+                                while( have_rows('case_study_graphics') ) : 
+                                    the_row();
+                           
+                        ?>
+                        <div class="md:mx-auto lg:h-half w-1/2 lg:w-auto" style="">
+                            <img alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" class="lazyload lg:h-full" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
+                            
+                        </div>
+                        <?php 
+                                $i++;
+                                endwhile;
+                                reset_rows();
+                            endif;
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container relative ">
+            <div class="flex justify-center lg:justify-start">
+                
+           
+                <div class="w-11/12 lg:w-5/12">
+                    <div class="mb-4">
+                         <p class="text-20 md:text-29 text-blue-dark font-museo-500 leading-tight">
+                            <?php the_field('case_study_quote') ?>
+                        </p>
+                    </div>
+                    <div class="mb-6">
+                        <p class=" text-grey-700 font-museo-700">
+                            <?php the_field('case_study_name') ?>
+                        </p>
+                        <p class=" text-grey-600 font-museo-500">
+                            <?php the_field('case_study_title') ?>
+                        </p>
+                    </div>
+                    <?php
+
+                        if( have_rows('case_study_details') ) :
+
+                            while( have_rows('case_study_details') ) : 
+                                the_row();
+                       
+                    ?>
+                    <div class="flex items-center mb-4">
+                        <div class="mr-2">
+                            <!-- Icon -->
+                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
+                        </div>
+                        <div>
+                            <p class="text-grey-600 font-museo-500 text-16">
+                                <?php the_sub_field('case_study_details_text'); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <?php 
+                            endwhile;
+                            reset_rows();
+                        endif;
+
+                        if ( get_field('case_study_cta') ) :
+                        
+                    ?>
+
+                    <div>
+                        <a href="<?php 
+                            echo get_field('case_study_cta')['url'];
+                        ?>" class="btn btn-primary"><?php 
+                            echo get_field('case_study_cta')['title'];
+                        ?></a>
+                    </div>
+
+                    <?php 
+                        endif;
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -201,7 +302,7 @@
 								
 							</div>
 							<div>
-								<p class="font-museo-900 text-14 text-blue-dark">
+								<p class="font-museo-900 text-blue-dark">
 									<?php echo $item; ?>
 								</p>
 							</div>
@@ -375,7 +476,7 @@
 
 								endif;
 							?>">
-								<h3 class="font-museo-900 text-blue-dark uppercase text-14 mb-2"><?php echo $rep['title']; ?></h3>
+								<h3 class="font-museo-900 text-blue-dark uppercase mb-2"><?php echo $rep['title']; ?></h3>
 								<p class="text-blue-dark"><?php echo $rep['description'] ?></p>
 							</div>
 

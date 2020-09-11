@@ -24,7 +24,7 @@ if ( have_posts() ) :
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 xl:w-7/12 mb-6 lg:mb-0">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
                                     echo $processes[0]->name;
                                 ?> services
@@ -154,7 +154,7 @@ if ( have_posts() ) :
                                 while( have_rows('machines_checks') ) :
                                     the_row();
                             ?>
-                            <li class="w-full md:w-auto text-14 font-museo-500 text-grey-600 mx-8">
+                            <li class="w-full md:w-auto font-museo-500 text-grey-600 mx-8">
                                 <?php the_sub_field('machines_checks_text'); ?>
                             </li>
                             <?php
@@ -177,7 +177,7 @@ if ( have_posts() ) :
                             
                                 
                     ?>
-                        <table border="0" class="text-14 border border-grey-100 table-auto w-full" cellpadding="0" cellspacing="0" valign="top">
+                        <table border="0" class=" border border-grey-100 table-auto w-full" cellpadding="0" cellspacing="0" valign="top">
                             <?php 
                                 if( !empty( $table['header'] ) ) :
                             ?>
@@ -442,7 +442,7 @@ if ( have_posts() ) :
                                 
                             ?>
                             <div class="mt-2">
-                                <p class="font-museo-500 text-14 text-grey-600">
+                                <p class="font-museo-500 text-grey-600">
                                     <?php echo get_field('material_thumbnail')['caption']; ?>
                                 </p>
                             </div>
@@ -541,7 +541,7 @@ if ( $related_posts->have_posts() ) :
                                 endif;
                             ?>
                             <div class="p-4">
-                                <h3 class="text-14 font-museo-700">
+                                <h3 class="font-museo-700">
                                     <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();

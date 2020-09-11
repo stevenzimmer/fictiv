@@ -31,7 +31,7 @@ if ( have_posts() ) :
 				<div class="flex flex-wrap justify-center lg:justify-start -mx-4">
 					<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
 						<div class="pt-4 mb-2">
-							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+							<p class="text-white uppercase font-museo-700 text-grey-400">
 								
 								<?php 
 									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
@@ -94,7 +94,7 @@ if ( have_posts() ) :
 							if( have_rows('webinar_hosts', $has_parent) ):
 						?>
 						<div class="mb-2">
-							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+							<p class="text-white uppercase font-museo-700 text-grey-400">
 								Hosted by
 							</p>
 						</div>

@@ -53,7 +53,7 @@
 
 					<div class="w-11/12 lg:w-1/2 px-4 mb-6 lg:mb-0">
 						<div class="pt-4 mb-2">
-							<p class="text-white uppercase font-museo-700 text-grey-400 text-14">
+							<p class="text-white uppercase font-museo-700 text-grey-400">
 								<?php 
 
 									echo $args['label'];

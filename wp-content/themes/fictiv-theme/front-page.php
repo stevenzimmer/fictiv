@@ -56,7 +56,7 @@
 								<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
 							</div>
 							<div class="mr-2">
-								<p class="text-white text-12 md:text-14">Discover Fictiv’s radical transparency features
+								<p class="text-white text-14 md:text-16">Discover Fictiv’s radical transparency features
 								</p>
 							</div>
 							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
@@ -283,7 +283,7 @@
                     </div>
                     <div class="p-4">
                         <div class="mb-2 h-8">
-                            <p class="font-museo-700 text-14 text-grey-700 uppercase">
+                            <p class="font-museo-700 text-grey-700 uppercase">
                                 <?php 
                                     the_title();
                                 ?>
@@ -291,7 +291,7 @@
                         </div>
                         
                         <div class="mb-2 h-20">
-                            <p class="font-museo-500 text-14 text-grey-600">
+                            <p class="font-museo-500 text-grey-600">
                                 <?php 
                                     echo get_the_excerpt();
                                 ?>
@@ -363,7 +363,7 @@
 						<img width="80" class="lazyload  mx-auto" alt="<?php echo $company['logo']; ?> logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/<?php echo $company['logo']; ?>.png">
 					</div>
 					<div class="lg:h-28">
-						<p class="text-14">
+						<p class="">
 							<?php echo $company['quote']; ?>
 						</p>
 					</div>
@@ -374,10 +374,10 @@
 					</div>
 					<div>
 						<div>
-							<p class="font-museo-700 text-14">
+							<p class="font-museo-700">
 								<?php echo $company['name']; ?>
 							</p>
-							<p class="text-14">
+							<p class="">
 								<?php echo $company['title']; ?>
 							</p>
 						</div>
@@ -539,10 +539,10 @@
 							"The use of a quote-to-order platform makes sourcing and the supply chain less vulnerable to disruptions"
 						</h3>
 						<div class="mb-6 ">
-							<p class="text-14 text-grey-700 font-museo-700">
+							<p class=" text-grey-700 font-museo-700">
 								Jan Burian
 							</p>
-							<p class="text-14 text-grey-600 font-museo-500">
+							<p class=" text-grey-600 font-museo-500">
 								Head of IDC Manufacturing Insights, IDC EMEA
 							</p>
 						</div>
@@ -601,10 +601,10 @@
                         </p>
                     </div>
                     <div class="mb-6">
-                        <p class="text-14 text-grey-700 font-museo-700">
+                        <p class=" text-grey-700 font-museo-700">
                             <?php the_field('case_study_name') ?>
                         </p>
-                        <p class="text-14 text-grey-600 font-museo-500">
+                        <p class=" text-grey-600 font-museo-500">
                             <?php the_field('case_study_title') ?>
                         </p>
                     </div>
@@ -714,7 +714,7 @@
 					?>
 					<div class="p-4 relative">
 						<div class="mb-2">
-							<h3 class="text-14 font-museo-700">
+							<h3 class=" font-museo-700">
 
 								<?php 
 									the_title();
@@ -722,14 +722,14 @@
 								
 							</h3>
 						</div>
-						<div class="text-14 mb-4 max-lines max-lines-3">
+						<div class=" mb-4 max-lines max-lines-3">
 							<?php 
 								the_excerpt();
 							?>
 
 						</div>
 						<div class="">
-							<p class="group-hover:text-teal-dark text-teal-light text-14 font-museo-500">Learn More</p>
+							<p class="group-hover:text-teal-dark text-teal-light font-museo-500">Learn More</p>
 						</div>
 						
 					</div>

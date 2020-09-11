@@ -54,8 +54,8 @@
 <?php
 		else :
 ?>
-		<div class="">
-				<p class="text-12 uppercase font-museo-700 text-grey-600">content type</p>
+			<div class="mb-2">
+				<p class="uppercase font-museo-500 text-grey-600">content type</p>
 			</div>
 			<div class="pb-4 border-b border-grey-200">
 					

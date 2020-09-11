@@ -36,7 +36,7 @@ if ( have_posts() ) :
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 xl:w-7/12 mb-6 lg:mb-0">
                         <div>
-                            <p class="text-grey-400 font-museo-700 text-14 uppercase" >
+                            <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
                                     echo $page_type[0]->name;
                                 ?>
@@ -112,10 +112,10 @@ if ( have_posts() ) :
                         endif;
                     ?>
                     <div class="mb-4">
-                        <p class="font-museo-700 text-14 text-grey-700"><?php the_sub_field('process_title'); ?></p>
+                        <p class="font-museo-700 text-grey-700"><?php the_sub_field('process_title'); ?></p>
                     </div>
                     <div>
-                        <p class="font-museo-500 text-14 text-grey-600">
+                        <p class="font-museo-500 text-grey-600">
                             <?php the_sub_field('process_paragraph'); ?>
                         </p>
                     </div>
@@ -178,7 +178,7 @@ if ( have_posts() ) :
                     </div>
                     <div class="p-4">
                         <div class="mb-2 h-8">
-                            <p class="font-museo-700 text-14 text-grey-700 uppercase">
+                            <p class="font-museo-700 text-grey-700 uppercase">
                                 <?php 
                                     the_title();
                                 ?>
@@ -186,7 +186,7 @@ if ( have_posts() ) :
                         </div>
                         
                         <div class="mb-2 h-20">
-                            <p class="font-museo-500 text-14 text-grey-600">
+                            <p class="font-museo-500 text-grey-600">
                                 <?php 
                                     echo get_the_excerpt();
                                 ?>
@@ -331,7 +331,7 @@ if ( have_posts() ) :
     
 ?>
 
-<section class="py-20">
+<section class="py-20 bg-grey-100">
     <div class="container">
         <div class="text-center mb-6">
             <h2 class="text-20 md:text-29 text-grey-700 font-museo-700"><?php echo $processes[0]->name; ?> Case Study</h2>
@@ -375,10 +375,10 @@ if ( have_posts() ) :
                         </p>
                     </div>
                     <div class="mb-6">
-                        <p class="text-14 text-grey-700 font-museo-700">
+                        <p class=" text-grey-700 font-museo-700">
                             <?php the_field('case_study_name') ?>
                         </p>
-                        <p class="text-14 text-grey-600 font-museo-500">
+                        <p class=" text-grey-600 font-museo-500">
                             <?php the_field('case_study_title') ?>
                         </p>
                     </div>
@@ -437,7 +437,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <p class="text-14 font-museo-700 text-grey-400 uppercase mb-4">Fictiv <?php echo $processes[0]->name; ?> Advantages</p>
+            <p class=" font-museo-700 text-grey-400 uppercase mb-4">Fictiv <?php echo $processes[0]->name; ?> Advantages</p>
             <h2 class="text-20 md:text-29 text-grey-700 font-museo-700">From Prototype to Production</h2>
         </div>
         <div class="flex flex-wrap lg:flex-no-wrap -mx-6 justify-center lg:justify-start">
@@ -447,7 +447,7 @@ if ( have_posts() ) :
             ?>
             <div class="w-11/12 lg:w-auto px-6 lg:flex-1">
                 <div class="border-t border-grey-200 p-8">
-                     <div class="font-museo-500 box-check-dark text-grey-600 text-14 fpp-col">
+                     <div class="font-museo-500 box-check-dark text-grey-600 fpp-col">
                          <?php the_sub_field('fpp_column'); ?>
                     </div>
                 </div>
@@ -487,7 +487,7 @@ if ( have_posts() ) :
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <p class="text-14 font-museo-700 text-grey-400 uppercase mb-4">Technology Overview</p>
+            <p class=" font-museo-700 text-grey-400 uppercase mb-4">Technology Overview</p>
             <h2 class="text-20 md:text-29 text-grey-700 font-museo-700">What is <?php echo $processes[0]->name; ?></h2>
         </div>
         <div class="flex justify-center">
@@ -566,7 +566,7 @@ if ( $related_posts->have_posts() ) :
                                 endif;
                             ?>
                             <div class="p-4">
-                                <h3 class="text-14 font-museo-700">
+                                <h3 class="font-museo-700">
                                     <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();
