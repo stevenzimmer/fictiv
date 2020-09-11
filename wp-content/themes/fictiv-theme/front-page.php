@@ -214,7 +214,6 @@
 	</div>
 </section>
 
-<section class="py-20 hidden lg:block"></section>
 <section class="py-20">
 	<div class="container relative">
 		<div class="flex justify-center">
