@@ -187,7 +187,7 @@
 		<div class=" relative lg:absolute w-full h-full top-0 right-0 -z-1">
 			<div class="flex justify-end">
 				<div class="w-full lg:w-8/12">
-					<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-middle.png">
+					<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-middle-2.png">
 					
 				</div>
 			</div>
