@@ -76,12 +76,12 @@
 							<div class="w-full lg:w-3/5 px-6 hidden lg:block">
 								<ul class="flex justify-end items-center  font-museo-700 text-grey-700">
 									<li class="lg:mx-1 xl:mx-4">
-										<a href="<?php echo $demo['link']; ?>" class="primary-menu-item text-grey-700 hover:text-teal-light text-14">
+										<a href="<?php echo $demo['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
 											<?php echo $demo['name']; ?>
 										</a>
 									</li>
 									<li class="lg:mx-1 xl:mx-4">
-										<a class="primary-menu-item text-grey-700 hover:text-teal-light text-14" href="<?php echo $log_in['link']; ?>">
+										<a href="<?php echo $log_in['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
 											<?php echo $log_in['name']; ?>
 										</a>
 									</li>
