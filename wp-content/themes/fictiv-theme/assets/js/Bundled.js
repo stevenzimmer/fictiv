@@ -19,6 +19,7 @@ import './search/_scripts';
 import './nav/_scripts';
 import './forms/_scripts';
 import './capabilities/_scripts';
+import './network/_scripts';
 
 import './modal/_scripts';
 

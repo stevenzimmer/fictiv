@@ -62,6 +62,13 @@
                 "operator": "==",
                 "value": "page-injection-molding.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_partners"
+            }
         ]
     ],
     "menu_order": 0,
@@ -72,5 +79,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599329008
+    "modified": 1600355180
 }

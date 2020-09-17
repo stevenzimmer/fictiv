@@ -22,6 +22,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_5f5ce15749753",
+            "label": "Clock Widget Link",
+            "name": "clock_widget_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5ce05db2221",
+            "label": "Weather widget link",
+            "name": "weather_widget_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ef752195d740",
             "label": "Certifications",
             "name": "partners_certifications",
@@ -134,7 +172,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1593266818
+    "modified": 1599922535
 }

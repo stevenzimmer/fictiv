@@ -23,17 +23,11 @@
 			}
 
 			h3 {
-				@apply font-slab-500 mb-2 ;
+				@apply font-slab-500 mb-2;
 			}
 
 			ul {
-
-				li {
-					@apply mt-2 pl-8 bg-no-repeat text-16;
-					background-image: url( https://uploads-ssl.webflow.com/5881ca284ac19f852fa47c23/5a6d5ff17bd20a000184794a_614367-check-512.png );
-					background-position: 0 1px;
-					background-size: 16px;
-				}
+				@apply pl-8;
 			}
 		}
 	}

@@ -181,3 +181,35 @@ h2 {
 		}
 	}
 }
+
+.box {
+
+	&-check {
+
+		ul {
+			@apply pl-6;
+
+			li {
+				@apply mb-2 font-museo-500;
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+
+		&-dark {
+
+			ul {
+				list-style-image: url('./../images/icons/finish-design-considerations.svg');
+			}
+		}
+
+		&-white {
+
+			ul {
+				list-style-image: url('./../images/icons/materials-hero-bullet.svg');
+			}
+		}
+	}
+}

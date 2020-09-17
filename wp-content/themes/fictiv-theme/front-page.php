@@ -281,7 +281,7 @@
             ?>
             <div class="w-11/12 md:w-1/2 lg:w-1/4 block-link px-2 h-full mb-4">
                 <div class="relative group border border-grey-200">
-                    <a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0"></a>
+                    <a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
                     <div class="relative h-0" style="padding-bottom: 65.25%">
 
                         <img alt="<?php the_title() ?> thumbnail" class="lazyload w-full absolute  inset-0 h-full object-cover" data-src="<?php echo get_field('material_thumbnail')['sizes']['medium_large']; ?>">

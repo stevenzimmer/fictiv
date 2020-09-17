@@ -70,12 +70,118 @@
 	</div>
 </header>
 <section class="py-10 bg-grey-100"></section>
+<?php 
 
+	$partner_args = array(
+		'posts_per_page' => -1,
+	    'post_type' => array('cpt_partners'),
+	    'post_parent' => 0
+	);
+
+	$partner_posts = new WP_Query( $partner_args );
+
+	$partner_processes = array();
+
+
+	if ( $partner_posts->have_posts() ) :
+
+?>
+<section class="py-20 hidden">
+	<div class="container">
+		<div class="text-center mb-6">
+			<h2 class="text-grey-700 font-museo-700 leading-3 text-20 md:text-29 mb-6">Fictiv Partners</h2>
+			<p class="md:text-20 font-museo-500 text-grey-600 ">
+				Meet a few of the trusted partners that power our network
+			</p>
+		</div>
+		<div class="flex justify-center mb-12">
+
+			<?php 
+				$i = 0;
+				while ( $partner_posts->have_posts() ) : 
+					$partner_posts->the_post();
+
+					if ( !in_array( get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id, $partner_processes) ) :
+						array_push( $partner_processes, get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id );
+			?>
+			<a class="partner-toggle-btn mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-16 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out <?php 
+				
+				if( $i === 0 ) :
+
+					echo 'active';
+				
+				endif;
+
+			?>" data-manufacturing-process="<?php echo get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id ?>">
+				<?php echo get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->name ?>
+					
+			</a>
+			<?php
+					endif;
+				
+				$i++;
+				endwhile;
+				wp_reset_postdata();
+			?>
+
+
+		</div>
+		<div class="flex justify-center">
+			<div class="w-full lg:w-10/12">
+				<div class="flex flex-wrap justify-center -mx-2">
+					<?php 
+						$i = 0;
+						while ( $partner_posts->have_posts() ) : 
+							$partner_posts->the_post();
+							// print_r(  );
+					?>
+					<div class="w-11/12 lg:w-1/3 mb-6 partner-card px-2 <?php 
+						if( get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id !== $partner_processes[0] ) :
+							echo 'hidden';
+						endif;
+					?>" data-manufacturing-process="<?php echo get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id; ?>">
+
+		                <div class="relative group border border-grey-200">
+		                    <a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
+		                    <div class="relative h-0" style="padding-bottom: 65.25%">
+
+		                        <img alt="<?php the_title() ?> thumbnail" class="lazyload w-full absolute  inset-0 h-full object-cover" data-src="<?php echo get_field('material_thumbnail')['sizes']['medium_large']; ?>">
+		                    </div>
+		                    <div class="p-4">
+		                        <div class="mb-2 h-12">
+		                            <p class="font-museo-700 text-grey-700 uppercase">
+		                                <?php 
+		                                    the_title();
+		                                ?>
+		                            </p>
+		                        </div>
+		                        
+		                    	
+		                        <div>
+		                            <p class="text-teal-light font-museo-700 group-hover:text-teal-dark">Learn more</p>
+		                        </div>
+		                    </div>
+		                </div>
+		        
+					</div>
+
+					<?php 
+						endwhile;
+						wp_reset_postdata();
+					?>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<?php 	
+	endif;
+?>
 <section class="section">
 	<div class="container">
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36 mb-6">How it Works</h2>
-			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
+			<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29">How it Works</h2>
 		</div>
 		<div class="flex flex-wrap -mx-6 justify-center">
 			<?php 
@@ -143,7 +249,6 @@
 	<div class="container">
 		<div class="text-center mb-8">
 			<h2 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36 mb-6">Safeguard Security System</h2>
-			<div class="w-20 bg-blue-dark mx-auto border-b-2 border-blue-dark"></div>
 		</div>
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-4/5">

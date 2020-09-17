@@ -29,4 +29,17 @@
 	}
 }
 
+.partner {
+
+	&-toggle {
+
+		&-btn {
+
+			&.active {
+				@apply bg-teal-light border-teal-light text-white;
+			}
+		}
+	}
+}
+
 /*! purgecss end ignore */
