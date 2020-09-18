@@ -377,6 +377,207 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
 
 <?php 
     endif;
+
+    if ( $processes[0]->slug === 'cnc-machining' ) :
+
+        $cap_finish_args = array(
+            'posts_per_page' => -1,
+            'post_type' => array('cpt_cap_finish'),
+            'orderby' => 'title',
+            'order' => 'ASC'
+        );
+
+        
+        $cap_finishes = new WP_Query( $cap_finish_args );
+       
+        if ( $cap_finishes->have_posts() ) :
+?>
+<section class="py-20">
+    <div class="container">
+        <div class="text-center mb-6">
+            <h2 class="text-20 md:text-29 text-grey-700 font-museo-700"><?php echo $processes[0]->name; ?> Finishes</h2>
+        </div>
+
+               
+        <div class="flex justify-center mb-4 flex-wrap">
+            <?php 
+                
+                $i = 0;     
+                while ( $cap_finishes->have_posts() ) :
+                    $cap_finishes->the_post();
+                
+            ?>
+            <div data-finish="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group finish-btn mb-2 <?php if( $i === 0 ) :
+                
+                echo 'active';
+
+            endif; ?>">
+                <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php the_title(); ?></p>
+            </div>
+            <?php 
+
+                $i++;
+                endwhile;
+                wp_reset_postdata();
+            ?>
+        </div>
+      
+        <div class="finish-content-wrapper">
+            <?php 
+
+                $i = 0;     
+                while ( $cap_finishes->have_posts() ) :
+                    $cap_finishes->the_post();
+
+                    $materials = get_field('materials_section');
+
+                    // print_r( $materials );
+            ?>
+            <div data-finish="<?php echo $i; ?>" class="finish-content-item <?php if( $i !== 0 ) :
+                
+                echo 'hidden';
+
+            endif; ?>">
+                <div class="flex flex-wrap border border-grey-200">
+                    <div class="w-full lg:w-1/3">
+                        <div class="p-4">
+                            <div class="mb-2">
+                                <p class="text-20 font-museo-700 text-grey-700">
+                                    <?php the_title(); ?>
+                                </p>
+                            </div>
+
+                            <?php 
+                                if ( get_the_excerpt() ) : 
+                            ?>
+                                
+                            <div class="mb-4 post-content">
+                                <?php 
+                                    the_excerpt();
+                                ?>  
+                            </div>
+                            <?php 
+                                endif; 
+
+                                if ( have_rows('at_a_glance_materials' ) ) :
+                                
+                            ?>
+                            <div>
+                                <?php 
+                                    $j = 0;
+                                    while( have_rows('at_a_glance_materials' ) ) :
+                                        the_row();
+
+
+                                            if ( $j === 2 ) : 
+                                ?>
+                                <div class=" flex mb-4">
+                                    
+                                    <span class="text-grey-700 font-museo-700 block w-1/3">
+                                        Applicable materials:
+                                    </span>
+                                    <div class="w-2/3 text-grey-600 font-museo-500">
+                                        <?php 
+                                  
+                                            foreach ( $materials as $k => $material_id ) :
+                                          
+                                        ?>
+                                        <a class="text-teal-light" href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a><?php 
+                                            if ( ($k + 1) !== count( $materials ) ) :
+
+                                                echo ', ';
+                                            
+                                            endif;
+                                        ?>
+                                              
+                                        <?php 
+                                            endforeach;
+                                            
+                                        ?>
+                                    </div>
+                                </div>
+
+                                <?php
+
+                                            endif; 
+
+
+                                ?>
+                                <div class=" flex mb-4">
+                                    
+                                    <span class="text-grey-700 font-museo-700 block w-1/3">
+                                        
+                                         <?php 
+                                            the_sub_field('column_title');
+                                        ?>:
+                                    </span>
+                                   <?php 
+                                        
+                                    ?>
+                                    <div class="w-2/3 text-grey-600 font-museo-500">
+                                    <?php
+
+
+                                    $k = 0;
+                                    $cells_count = count( get_sub_field('column_cells' ) );
+
+                                    while( have_rows('column_cells' ) ) :
+                                        the_row();
+
+                                        if ( $j === 0 ||  $cells_count < 2 ) :
+
+echo get_sub_field('column_cell'); 
+                                        
+                                        else :
+                                
+echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_materials' )[0]['column_cells'][$k]['column_cell'] . ')</span> ' . get_sub_field('column_cell'); 
+
+                                        endif;
+
+                                        echo '<br>';
+                                    $k++;
+                                    endwhile;
+                                ?>
+                                    </div>
+                                    
+                                
+                                </div>
+                                <?php
+                                    $j++;
+                                    endwhile;
+                                ?>
+                            </div>
+                            <?php 
+                                endif;
+                            ?>
+                            <div>
+                                <a class="text-teal-light font-museo-700 hover:text-teal-dark" href="<?php the_permalink(); ?>">Learn more</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/3">
+                        <div class="relative h-full">
+                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                $i++;
+                endwhile;
+                wp_reset_postdata();
+            ?>
+        </div>
+       
+    </div>
+</section>
+
+<?php 
+        endif;
+    endif;
     if ( get_field('case_study_quote') ) :
     
 ?>

@@ -67,7 +67,8 @@
 	}
 }
 
-.material {
+.material,
+.finish {
 
 	&-btn {
 

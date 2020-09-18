@@ -50,7 +50,7 @@ if ( mkto_forms.length > 0 ) {
 	                } else {
 
 						// Redirect download forms to thank you page on success
-						window.location = window.location.origin + window.location.pathname + 'thank-you/';
+						window.location = window.location.origin + window.location.pathname + '/thank-you/';
 						
 					}
 

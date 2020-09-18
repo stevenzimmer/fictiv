@@ -22,4 +22,27 @@ if ( document.body.classList.contains('page-template-page-subprocess') || docume
 		});
 
 	});
+
+	const finishBtns = Array.prototype.slice.call( document.querySelectorAll('.finish-btn') );
+	const finishContentItems = Array.prototype.slice.call( document.querySelectorAll('.finish-content-item') );
+
+	finishBtns.forEach( (btn, i, all ) => {
+
+		btn.addEventListener('click', function() {
+
+			all.forEach( (item) => {
+				item.classList.remove('active');
+			});
+
+			this.classList.add('active');
+
+			finishContentItems.forEach( (contentItem) => {
+				contentItem.classList.add('hidden');
+			});
+
+			document.querySelector('.finish-content-item[data-finish="' + this.dataset.finish + '"]').classList.remove('hidden');
+
+		});
+
+	});
 }
