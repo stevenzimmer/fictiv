@@ -1,0 +1,45 @@
+{
+    "key": "group_5f64d64e7d3b6",
+    "title": "Machining Tolerance table",
+    "fields": [
+        {
+            "key": "field_5f64d65762b11",
+            "label": "Table",
+            "name": "machining_tolerance_table",
+            "type": "table",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "use_header": 0,
+            "use_caption": 2
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-process.php"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "fictiv_manufacturing_process:cnc-machining"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600444042
+}

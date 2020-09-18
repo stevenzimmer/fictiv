@@ -572,6 +572,93 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
 <?php 
         endif;
     endif;
+?>
+<?php 
+
+  $table = get_field( 'machining_tolerance_table' );
+
+    if ( !empty( $table ) ) :
+?>
+<section class="py-20">
+    <div class="container">
+        <div class="flex justify-center">
+            <div class="w-full md:w-11/12 lg:w-10/12">
+                <div class="text-center mb-6">
+                    <h2 class="text-20 md:text-29 text-grey-700 font-museo-700">Precision Machining Tolerance</h2>
+                    <p class="md:text-20 text-grey-600 font-museo-500">
+                        With a drawing, Fictiv can produce parts with tolerance as low as +/- 0.0002 in. Without a drawing, all parts are produced to our ISO 2768 medium standard.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center mb-12">
+                    
+                    <table border="0" class=" border border-grey-100 table-auto w-full" cellpadding="0" cellspacing="0" valign="top">
+                        <?php 
+                            if( !empty( $table['header'] ) ) :
+                        ?>
+                        <thead>
+                            <tr class="bg-grey-100 ">
+                        <?php 
+                                foreach ($table['header'] as $i => $th ) :
+                        ?>
+                                <th valign="top" class="max-w-2xl text-left text-grey-700 font-museo-900 p-2">
+                                    <?php echo $th['c']; ?>
+                                </th>
+                        <?php
+                                endforeach;
+                        ?>
+                            </tr>
+                        </thead>
+                        <?php 
+                            endif;
+                        ?>
+                        <tbody>
+                            <?php 
+                                
+                                foreach ( $table['body'] as $i => $tr ) :
+                            
+                            ?>
+                            <tr class="border-b border-grey-100">
+                            <?php 
+                                
+                                    foreach ( $tr as $j => $td ) :
+                                
+                            ?>
+                                <td valign="top" class="max-w-md p-2 border-r border-grey-100 <?php 
+                                    if( $j === 0 ) :
+
+                                        echo 'font-museo-900 text-grey-700 ';
+                                    
+                                    endif;
+                                ?>">
+                                    <?php 
+                                        echo $td['c'];
+                                    ?>
+                                </td>
+                            <?php
+                                    endforeach;
+                            ?>
+                            </tr>
+                            <?php
+                                endforeach;
+                            ?>
+                        </tbody>
+        
+                    </table>
+                </div>
+                <div class="text-center">
+                    <a target="_blank" href="https://docsend.com/view/iaa5nip" class="btn btn-primary">download full tolerance chart</a>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</section>
+<?php 
+    endif;
+?>
+<?php
     if ( get_field('case_study_quote') ) :
     
 ?>

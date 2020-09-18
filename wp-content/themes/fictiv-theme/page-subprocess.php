@@ -209,12 +209,6 @@ if ( have_posts() ) :
                     ?>
                     <div class="flex justify-center">
                         
-                    
-                    <?php
-
-                            
-                                
-                    ?>
                         <table border="0" class=" border border-grey-100 table-auto w-full" cellpadding="0" cellspacing="0" valign="top">
                             <?php 
                                 if( !empty( $table['header'] ) ) :
@@ -264,8 +258,7 @@ if ( have_posts() ) :
                                 ?>
                             </tbody>
 
-                           
-                            
+                    
             
                         </table>
                     </div>
