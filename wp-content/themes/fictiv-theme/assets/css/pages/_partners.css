@@ -32,6 +32,19 @@
 		}
 	}
 
+	&-block {
+
+		.partner {
+
+			&-uppercase {
+
+				&-title {
+					@apply font-museo-500 mb-4;
+				}
+			}
+		}
+	}
+
 	&-btn {
 		@apply text-grey-light rounded px-8 py-2 font-museo-500 inline-block whitespace-no-wrap;
 

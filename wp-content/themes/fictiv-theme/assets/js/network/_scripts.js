@@ -1,8 +1,5 @@
 const partnerToggleBtns = Array.prototype.slice.call( document.querySelectorAll('.partner-toggle-btn') );
 const partnerCards = Array.prototype.slice.call( document.querySelectorAll('.partner-card') );
-// const toggleModules = Array.prototype.slice.call( document.querySelectorAll('.toggle-module') );
-// const toggleModuleWrapper = Array.prototype.slice.call( document.querySelectorAll('.toggle-module-wrapper') );
-// const toggleBtnsWrapper = Array.prototype.slice.call( document.querySelectorAll('.toggle-btns-wrapper') );
 
 partnerToggleBtns.forEach( ( btn, i, all ) => {
 

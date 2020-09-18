@@ -86,7 +86,7 @@
 	if ( $partner_posts->have_posts() ) :
 
 ?>
-<section class="py-20 hidden">
+<section class="py-20">
 	<div class="container">
 		<div class="text-center mb-6">
 			<h2 class="text-grey-700 font-museo-700 leading-3 text-20 md:text-29 mb-6">Fictiv Partners</h2>

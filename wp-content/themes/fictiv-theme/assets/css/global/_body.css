@@ -195,6 +195,7 @@ h2 {
 				&:last-child {
 					@apply mb-0;
 				}
+				
 			}
 		}
 
@@ -202,6 +203,13 @@ h2 {
 
 			ul {
 				list-style-image: url('./../images/icons/finish-design-considerations.svg');
+
+				li {
+					ul {
+						list-style-image: none;
+						@apply pl-2;
+					}
+				}
 			}
 		}
 
@@ -209,6 +217,13 @@ h2 {
 
 			ul {
 				list-style-image: url('./../images/icons/materials-hero-bullet.svg');
+
+				li {
+					ul {
+						list-style-image: none;
+						@apply pl-2;
+					}
+				}
 			}
 		}
 	}

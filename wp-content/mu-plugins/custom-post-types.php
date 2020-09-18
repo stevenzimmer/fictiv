@@ -349,8 +349,6 @@
 				'show_in_nav_menus'	=> true,
 				'supports'		=> array(
 					'title',
-					// 'editor',
-					// 'author',
 					'excerpt',
 					'thumbnail',
 				), 
@@ -391,8 +389,6 @@
 				'show_in_nav_menus'	=> true,
 				'supports'		=> array(
 					'title',
-					// 'editor',
-					// 'author',
 					'excerpt',
 					'thumbnail',
 				), 

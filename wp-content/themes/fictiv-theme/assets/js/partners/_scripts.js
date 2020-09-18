@@ -1,6 +1,8 @@
 import Siema from 'siema';
 
 if ( document.body.classList.contains('single-cpt_partners')  ) {
+if ( document.querySelector('.partner-facility-carousel') ) {
+
 
 
 const partnerCarousel = new Siema({
@@ -58,5 +60,5 @@ function changeDotStatus( arr ) {
 
     });
 }
-
+}
 }
