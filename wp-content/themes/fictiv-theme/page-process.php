@@ -491,7 +491,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
 
                                         if ( $j === 0 ||  $cells_count < 2 ) :
 
-echo get_sub_field('column_cell'); 
+                echo get_sub_field('column_cell'); 
                                         
                                         else :
                                 
@@ -522,16 +522,17 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                             foreach ( $materials as $k => $material_id ) :
                                           
                                         ?>
-                                        <p class="">
-                                            <?php echo get_the_title( $material_id ); ?>
-                                                
-                                        </p><?php 
-                                            if ( ($k + 1) !== count( $materials ) ) :
+                                        <span class="">
+                                            <?php 
+                                                echo get_the_title( $material_id ); 
+                                                if ( ($k + 1) !== count( $materials ) ) :
 
-                                                echo ', ';
-                                            
-                                            endif;
-                                        ?>
+                                                    echo ', ';
+                                                
+                                                endif;
+                                            ?>
+                                                
+                                        </span>
                                               
                                         <?php 
                                             endforeach;
