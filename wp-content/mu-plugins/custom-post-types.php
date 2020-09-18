@@ -446,7 +446,7 @@
 				'show_in_rest'	=> true,
 				'rest_base'		=> 'partners',
 				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-				// 'rewrite' => array('slug' => 'partners'),
+				'rewrite' => array('slug' => 'partners'),
 			)
 		);
 	}
