@@ -178,7 +178,7 @@ if ( have_posts() ) :
                     </div>
                     <div class="p-4">
                         <div class="mb-2 h-12">
-                            <p class="font-museo-700 text-grey-700 uppercase">
+                            <p class="font-museo-700 text-grey-700">
                                 <?php 
                                     the_title();
                                 ?>

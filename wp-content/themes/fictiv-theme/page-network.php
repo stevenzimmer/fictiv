@@ -133,7 +133,7 @@
 						$i = 0;
 						while ( $partner_posts->have_posts() ) : 
 							$partner_posts->the_post();
-							// print_r(  );
+
 					?>
 					<div class="w-11/12 lg:w-1/3 mb-6 partner-card px-2 <?php 
 						if( get_the_terms( get_the_id(), 'fictiv_manufacturing_process')[0]->term_id !== $partner_processes[0] ) :
@@ -149,7 +149,7 @@
 		                    </div>
 		                    <div class="p-4">
 		                        <div class="mb-2 h-12">
-		                            <p class="font-museo-700 text-grey-700 uppercase">
+		                            <p class="font-museo-700 text-grey-700">
 		                                <?php 
 		                                    the_title();
 		                                ?>
