@@ -406,48 +406,48 @@
 			)
 		);
 
-		// register_post_type(
-		// 	'cpt_partners',
-		// 	array(
-		// 		'labels'		=> array(
-		// 			'name'					=> __('Partners'),
-		// 			'singular_name' 		=> __('Partner'),
-		// 			'add_new'				=> __('Add New Partner'),
-		// 			'add_new_item'			=> __('Add New Partner'),
-		// 			'edit_item'				=> __('Edit Partner'),
-		// 			'view_item'				=> __('View Partner'),
-		// 			'view_items'			=> __('View Partner'),
-		// 			'featured_image' 		=> __('Hero Image'),
-		// 			'set_featured_image' 	=> __('Upload Hero Image'),
-		// 			'remove_featured_image' => __('Remove Hero Image'),
-		// 			'use_featured_image'	=> __('Use as Hero Image'),
-		// 			'items_list'			=> __('Partner List'),
+		register_post_type(
+			'cpt_partners',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Partners'),
+					'singular_name' 		=> __('Partner'),
+					'add_new'				=> __('Add New Partner'),
+					'add_new_item'			=> __('Add New Partner'),
+					'edit_item'				=> __('Edit Partner'),
+					'view_item'				=> __('View Partner'),
+					'view_items'			=> __('View Partner'),
+					'featured_image' 		=> __('Hero Image'),
+					'set_featured_image' 	=> __('Upload Hero Image'),
+					'remove_featured_image' => __('Remove Hero Image'),
+					'use_featured_image'	=> __('Use as Hero Image'),
+					'items_list'			=> __('Partner List'),
 					
-		// 		),
-		// 		'taxonomies'	=> array(
-		// 			'fictiv_manufacturing_process'
-		// 		),
-		// 		'description' 	=> '',
-		// 		'public' 		=> true,
-		// 		'hierarchical'  => true,
-		// 		'has_archive' 	=> true,
-		// 		'show_in_nav_menus'	=> true,
-		// 		'supports'		=> array(
-		// 			'title',
-		// 			'excerpt', 
-		// 			'thumbnail',
-		// 			'excerpt',
-		// 			'editor', 
-		// 			'thumbnail'
-		// 		), 
-		// 		'menu_position'	=> 5,
-		// 		'menu_icon'		=> 'dashicons-groups',
-		// 		'show_ui'		=> true,
-		// 		'show_in_rest'	=> true,
-		// 		'rest_base'		=> 'partners',
-		// 		'rest_controller_class'	=> 'WP_REST_Posts_Controller',
-		// 		'rewrite' => array('slug' => 'partners'),
-		// 	)
-		// );
+				),
+				'taxonomies'	=> array(
+					'fictiv_manufacturing_process'
+				),
+				'description' 	=> '',
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> false,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'excerpt', 
+					'thumbnail',
+					'excerpt',
+					'editor', 
+					'thumbnail'
+				), 
+				'menu_position'	=> 5,
+				'menu_icon'		=> 'dashicons-groups',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'partners',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				// 'rewrite' => array('slug' => 'partners'),
+			)
+		);
 	}
 ?>

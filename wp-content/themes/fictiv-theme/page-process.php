@@ -395,7 +395,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
 <section class="py-20">
     <div class="container">
         <div class="text-center mb-6">
-            <h2 class="text-20 md:text-29 text-grey-700 font-museo-700"><?php echo $processes[0]->name; ?> Finishes</h2>
+            <h2 class="text-20 md:text-29 text-grey-700 font-museo-700">CNC Surface Finishing Options</h2>
         </div>
 
                
@@ -431,7 +431,6 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
 
                     $materials = get_field('materials_section');
 
-                    // print_r( $materials );
             ?>
             <div data-finish="<?php echo $i; ?>" class="finish-content-item <?php if( $i !== 0 ) :
                 
@@ -467,40 +466,6 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                     $j = 0;
                                     while( have_rows('at_a_glance_materials' ) ) :
                                         the_row();
-
-
-                                            if ( $j === 2 ) : 
-                                ?>
-                                <div class=" flex mb-4">
-                                    
-                                    <span class="text-grey-700 font-museo-700 block w-1/3">
-                                        Applicable materials:
-                                    </span>
-                                    <div class="w-2/3 text-grey-600 font-museo-500">
-                                        <?php 
-                                  
-                                            foreach ( $materials as $k => $material_id ) :
-                                          
-                                        ?>
-                                        <a class="text-teal-light" href="<?php echo get_the_permalink( $material_id ); ?>"><?php echo get_the_title( $material_id ); ?></a><?php 
-                                            if ( ($k + 1) !== count( $materials ) ) :
-
-                                                echo ', ';
-                                            
-                                            endif;
-                                        ?>
-                                              
-                                        <?php 
-                                            endforeach;
-                                            
-                                        ?>
-                                    </div>
-                                </div>
-
-                                <?php
-
-                                            endif; 
-
 
                                 ?>
                                 <div class=" flex mb-4">
@@ -539,13 +504,41 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                     endwhile;
                                 ?>
                                     </div>
-                                    
-                                
+                            
                                 </div>
                                 <?php
                                     $j++;
                                     endwhile;
                                 ?>
+                                <div class=" flex mb-4">
+                                    
+                                    <span class="text-grey-700 font-museo-700 block w-1/3">
+                                        Applicable materials:
+                                    </span>
+                                    <div class="w-2/3 text-grey-600 font-museo-500">
+                                        <?php 
+                                        
+                                        
+                                            foreach ( $materials as $k => $material_id ) :
+                                          
+                                        ?>
+                                        <p class="">
+                                            <?php echo get_the_title( $material_id ); ?>
+                                                
+                                        </p><?php 
+                                            if ( ($k + 1) !== count( $materials ) ) :
+
+                                                echo ', ';
+                                            
+                                            endif;
+                                        ?>
+                                              
+                                        <?php 
+                                            endforeach;
+                                        ?>
+
+                                    </div>
+                                </div>
                             </div>
                             <?php 
                                 endif;
