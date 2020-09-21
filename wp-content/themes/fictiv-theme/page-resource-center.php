@@ -27,6 +27,95 @@
 					<div class="w-full lg:w-9/12 lg:pl-6">
 						
 						<?php 
+							$latest_args = array(
+								'post_type' => $GLOBALS['resource_post_types'],
+								'posts_per_page' => 6,
+								'post_parent' => 0,
+								'meta_query' => array(
+							        array(
+							            'key' => '_thumbnail_id',
+							            'compare' => 'EXISTS'
+							        ),
+							    )
+							);
+
+							$latest_reads = new WP_Query( $latest_args );
+						?>
+						<div class="mb-2">
+							<div class="mb-2">
+								<p class=" font-museo-700 text-grey-400 uppercase">read the latest</p>
+							</div>
+							<div class="-mx-1 relative resource-carousel-wrapper">
+								
+								<div class="resources-latest-carousel">
+									<?php
+										while ( $latest_reads->have_posts() ) :
+										      	$latest_reads->the_post();
+
+												$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
+									
+										?>
+									<div class="px-1">
+										<div class="border border-grey-200 relative h-full">
+											<a href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
+											<div class="relative h-0 thumbnail-ratio" >
+												<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail; ?>">
+											</div>
+											<div class="p-4 relative">
+												<div class="mb-1">
+													<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
+														echo get_post_type_object( get_post_type() )->labels->name ;
+													?></p>
+												</div>
+												<div class="h-16">
+													<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
+														echo get_the_title();
+
+													?></h2>
+												</div>
+
+												<div class="absolute right-0 bottom-0 p-4">
+													<div>
+														<?php 
+															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
+														?>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+
+									</div>
+										<?php
+
+										     endwhile;
+											wp_reset_postdata();
+										
+										?>
+								</div>
+								<div class="absolute right-0 top-0 h-full w-8 bg-white opacity-50 hover:opacity-75 duration-200 ease-in-out transition-color resource-carousel-right">
+										<div class="flex w-full h-full justify-center items-center">
+											<div>
+												<?php 
+													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/resource-carousel-right.svg');
+												?>
+											</div>
+										</div>
+									</div>
+
+									<div class="absolute left-0 top-0 h-full w-8 bg-white opacity-50 hover:opacity-75 duration-200 ease-in-out transition-color resource-carousel-left hidden">
+										<div class="flex w-full h-full justify-center items-center">
+											<div class="transform rotate-180">
+												<?php 
+													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/resource-carousel-right.svg');
+												?>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<?php
+
 							foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
 
 								$resource_args = array(

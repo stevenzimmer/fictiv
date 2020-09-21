@@ -55,22 +55,26 @@ if ( have_posts() ) :
                                 the_field('capabilities_hero_paragraph');
                             ?>
                         </div>
-
                         <?php 
-                            endif;
-
-                            $hero_cta_btn = get_field('capabilities_hero_cta_button');
-
-                            if ( $hero_cta_btn ) :
-                                
+                            endif; 
                         ?>
-                        <div>
-                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>  
+
+                        <div class="mt-4">
+                            <?php 
+                                $hero_cta_btn = get_field('capabilities_hero_cta_button');
+
+                                if ( $hero_cta_btn['text'] ) :
+                            ?>
+                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>
+                            <?php 
+
+                                else :
+                            ?>
+                            <a class="btn btn-primary" href="https://app.fictiv.com/signup/">Get a quote</a>
+                            <?php
+                                endif;
+                            ?>    
                         </div>
-
-                        <?php
-                            endif;
-                        ?>
                     </div>
                   
                 </div>
@@ -881,7 +885,8 @@ if ( $related_posts->have_posts() ) :
                             $related_posts->the_post();
                     ?>
                     <div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-                        <div class="h-full">
+                        <div class="h-full relative group">
+                            <a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
                             <?php 
                                 if( has_post_thumbnail() ) :
                             ?>
@@ -901,7 +906,7 @@ if ( $related_posts->have_posts() ) :
                             ?>
                             <div class="p-4">
                                 <h3 class="font-museo-700">
-                                    <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
+                                    <a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();
                                         ?>

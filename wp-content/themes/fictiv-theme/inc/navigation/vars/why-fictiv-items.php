@@ -24,21 +24,21 @@
 			'icon' => 'instant-quotes',
 			'title' => 'Instant Quotes',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur',
-			'link' => '#1'
+			'link' => '/our-platform#pricing'
 		),
 
 		array(
 			'icon' => 'manufacturability-feedback',
 			'title' => 'Manufacturability Feedback',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur',
-			'link' => '#2'
+			'link' => '/our-platform#feedback'
 		),
 
 		array(
 			'icon' => 'fulfillment-transparency',
 			'title' => 'Fulfillment Transparency',
 			'para' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-			'link' => '#3'
+			'link' => '/our-platform#transparency'
 		),
 	);
 ?>

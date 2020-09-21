@@ -45,7 +45,7 @@
 									foreach ( $main_menu_items as $i => $item ) :
 									
 								?>
-								<li class="mx-4">
+								<li class="lg:mx-2 xl:mx-4">
 									<a class="font-museo-700 select-none cursor-pointer primary-menu-item text-grey-700 hover:text-teal-light flex items-center lg:text-14" data-menu="<?php echo $i; ?>">
 										<span class=""><?php echo $item; ?></span>
 										&nbsp;&nbsp;
@@ -73,14 +73,14 @@
 								if( !wp_is_mobile() ) :
 							
 							?>
-							<div class="w-full lg:w-3/5 px-6 hidden lg:block">
+							<div class="w-full w-3/5 lg:px-2 xl:px-6 hidden lg:block">
 								<ul class="flex justify-end items-center  font-museo-700 text-grey-700">
-									<li class="lg:mx-1 xl:mx-4">
+									<li class="lg:mx-2 xl:mx-4">
 										<a href="<?php echo $demo['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
 											<?php echo $demo['name']; ?>
 										</a>
 									</li>
-									<li class="lg:mx-1 xl:mx-4">
+									<li class="lg:mx-2 xl:mx-4">
 										<a href="<?php echo $log_in['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
 											<?php echo $log_in['name']; ?>
 										</a>

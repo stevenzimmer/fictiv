@@ -11,27 +11,24 @@
 	$processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
     $page_type = get_the_terms( get_the_id(), 'fictiv_page_type' );
 ?>
-<header class="py-12 relative">
- 	<?php 
-        if ( has_post_thumbnail() ) :
-    ?>
-    <div class="absolute w-full h-full inset-0 max-w-1600 mx-auto">
-        <div class="flex lg:justify-end h-full">
-            <div class="w-full lg:w-9/12">
-                <div class="h-full bg-cover bg-center inset-0 lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+<header class="capabilities-hero">
+    <div class="container relative py-12 h-full">
+        <?php 
+            if ( has_post_thumbnail() ) :
+        ?>
+        <div class="absolute w-full h-full inset-0">
+            <div class="flex md:justify-end h-full">
+                <div class="w-full md:w-11/12 lg:w-full">
+                    <div class="h-full bg-cover bg-right lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+                </div>
             </div>
         </div>
-        
-    </div>
-    
-    <?php 
-        endif;
-    ?>
- 
-    <div class="bg-white bg-opacity-75 md:bg-transparent bg-gradient-to-r from-white to-transparent absolute w-full inset-0 h-full"></div>
+        <?php 
+            endif;
+        ?>
+        <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r from-white absolute w-full inset-0 h-full"></div>
 
-    <div class="container relative">
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
             <div class="w-11/12">
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 lg:w-6/12">
@@ -194,7 +191,7 @@
 	                                the_row();
 	                       
 	                    ?>
-	                    <div class="flex items-center mb-4">
+	                    <div class="flex items-center mb-4 hidden">
 	                        <div class="mr-2">
 	                            <!-- Icon -->
 	                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
@@ -279,7 +276,7 @@
 					endif;
 				?> -mx-6">
 
-					<div class="w-full lg:w-6/12 px-6">
+					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<img class="lazyload" alt="<?php echo $step['title'] ?> graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/<?php echo $step['img'] ?>-graphic.png">
 					</div>
 					<div class="w-11/12 lg:w-6/12 px-6">

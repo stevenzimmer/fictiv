@@ -315,7 +315,8 @@ if ( $related_posts->have_posts() ) :
                             $related_posts->the_post();
                     ?>
                     <div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-                        <div class="h-full">
+                        <div class="h-full relative group">
+                            <a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
                             <?php 
                                 if( has_post_thumbnail() ) :
                             ?>
@@ -335,7 +336,7 @@ if ( $related_posts->have_posts() ) :
                             ?>
                             <div class="p-4">
                                 <h3 class=" font-museo-700">
-                                    <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
+                                    <a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();
                                         ?>
@@ -362,7 +363,6 @@ if ( $related_posts->have_posts() ) :
     endif;
 ?>
 <?php 
-    // include( get_template_directory() . '/inc/related-posts.php');
     endwhile;
 endif;
 get_footer();

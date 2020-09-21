@@ -339,7 +339,7 @@ if ( have_posts() ) :
                 echo 'hidden';
 
             endif; ?>">
-                <div class="flex flex-wrap border border-grey-200">
+                <div class="flex flex-wrap flex-col-reverse lg:flex-row border border-grey-200">
                     <div class="w-full lg:w-1/3">
                         <div class="p-4">
                             <div class="mb-2">
@@ -423,8 +423,8 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-full">
-                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
+                        <div class="relative h-64 lg:h-full">
+                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                         </div>
                        
                     </div>
@@ -618,7 +618,8 @@ if ( $related_posts->have_posts() ) :
                             $related_posts->the_post();
                     ?>
                     <div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-                        <div class="h-full">
+                        <div class="h-full relative group">
+                            <a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
                             <?php 
                                 if( has_post_thumbnail() ) :
                             ?>
@@ -638,7 +639,7 @@ if ( $related_posts->have_posts() ) :
                             ?>
                             <div class="p-4">
                                 <h3 class="font-museo-700">
-                                    <a class="hover:text-grey-600" href="<?php the_permalink(); ?>">
+                                    <a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
                                         <?php 
                                             the_title();
                                         ?>

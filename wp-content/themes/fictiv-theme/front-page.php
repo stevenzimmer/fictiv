@@ -669,7 +669,13 @@
 	$featured_args = array(
 		'posts_per_page' => 2,
 		'post_type' => $GLOBALS['resource_post_types'],
-		'post_parent' => 0
+		'post_parent' => 0,
+		'meta_query' => array(
+	        array(
+	            'key' => '_thumbnail_id',
+	            'compare' => 'EXISTS'
+	        ),
+	    )
 	);
 
 	$featured_posts = new WP_Query( $featured_args );

@@ -39,7 +39,7 @@
 	</div>
 </header>
 
-<section class="py-20">
+<section class="py-20" id="pricing">
 	<div class="container relative">
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
@@ -73,7 +73,7 @@
 	</div>
 </section>
 
-<section class="py-20">
+<section class="py-20" id="feedback">
 	<div class="container relative">
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
@@ -106,7 +106,7 @@
 	</div>
 </section>
 
-<section class="py-20">
+<section class="py-20" id="transparency">
 	<div class="container relative">
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
