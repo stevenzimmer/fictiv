@@ -15,7 +15,12 @@
 
 			foreach ( $filtersArr as $i => $filter ) :
 
-				filter_checkbox( $filter, $id_append );
+				if ( !$filter->parent ) :
+
+					filter_checkbox( $filter, $id_append );
+				
+				endif;
+				
 				
 			endforeach;
 

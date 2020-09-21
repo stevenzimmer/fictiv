@@ -89,17 +89,17 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 											?></p>
 										</div>
 										<div class="h-12">
-											<h2 class=" font-museo-700 text-default max-lines max-lines-2"><?php 
+											<h2 class="text-16 font-museo-700 text-default max-lines max-lines-2"><?php 
 												echo $data->title;
 
 											?></h2>
 										</div>
 										
-										<div class=" text-grey-600 font-museo-500 h-20">
+										<div class=" text-grey-600 font-museo-500 h-24">
 											<?php 
 												if( $data->excerpt ) :
 											?>
-											<p class="max-lines max-lines-3">
+											<p class="text-14 max-lines max-lines-3">
 												
 												<?php 
 													echo $data->excerpt;
