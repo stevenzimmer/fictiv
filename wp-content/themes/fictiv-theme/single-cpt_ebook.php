@@ -70,11 +70,23 @@ if ( have_posts() ) :
 				
 				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
 					<div class="w-11/12 lg:w-1/2 px-6">
-						<div class="post-content ebook">
+						
+						<div class="post-content ebook mb-6">
 							<p>
 								You can download now, or check your inbox for a download link at your own convenience.
 							</p>
 						</div>
+
+						<?php 
+							if ( get_field('download_asset_link') ) :
+							
+						?>
+						<div>
+							<a target="_blank" href="<?php the_field('download_asset_link') ?>" class="btn btn-primary">download ebook</a>
+						</div>
+						<?php 
+							endif;
+						?>
 					</div>
 				</div>
 				<?php

@@ -753,7 +753,7 @@ module.exports = {
     transitionProperty: ['responsive'],
     transitionTimingFunction: ['responsive'],
     transitionDuration: ['responsive'],
-    radientColorStops: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+    gradientColorStops: ['responsive']
   },
   corePlugins: {},
   plugins: [],

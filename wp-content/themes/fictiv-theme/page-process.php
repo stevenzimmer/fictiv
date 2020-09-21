@@ -12,26 +12,24 @@ if ( have_posts() ) :
 
         
 ?>
-<header class="py-12 capabilities-hero relative">
-    <?php 
-        if ( has_post_thumbnail() ) :
-    ?>
-    <div class="absolute w-full h-full inset-0">
-        <div class="flex lg:justify-end h-full">
-            <div class="w-full lg:w-9/12">
-                <div class="h-full bg-cover bg-center inset-0 lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+<header class="capabilities-hero">
+    <div class="container relative py-12 h-full">
+        <?php 
+            if ( has_post_thumbnail() ) :
+        ?>
+        <div class="absolute w-full h-full inset-0">
+            <div class="flex md:justify-end h-full">
+                <div class="w-full md:w-11/12 lg:w-full">
+                    <div class="h-full bg-cover bg-right lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+                </div>
             </div>
         </div>
-        
-    </div>
-    
-    <?php 
-        endif;
-    ?>
-    <div class="bg-white bg-opacity-75 md:bg-transparent bg-gradient-to-r from-white to-transparent absolute w-full inset-0 h-full"></div>
+        <?php 
+            endif;
+        ?>
+        <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r from-white absolute w-full inset-0 h-full"></div>
 
-    <div class="container relative">
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
             <div class="w-11/12">
                 <div class="flex flex-wrap justify-center lg:justify-start">
                     <div class="w-full lg:w-5/12 xl:w-7/12 mb-6 lg:mb-0">
@@ -246,12 +244,12 @@ if ( have_posts() ) :
                     $cap_materials->the_post();
                 
             ?>
-            <div data-material="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group material-btn mb-2 <?php if( $i === 0 ) :
+            <div data-material="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group material-btn mb-2 text-center  <?php if( $i === 0 ) :
                 
                 echo 'active';
 
             endif; ?>">
-                <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php the_title(); ?></p>
+                <p class="text-14 md:text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php the_title(); ?></p>
             </div>
             <?php 
 
@@ -273,7 +271,7 @@ if ( have_posts() ) :
                 echo 'hidden';
 
             endif; ?>">
-                <div class="flex flex-wrap border border-grey-200">
+                <div class="flex flex-wrap flex-col-reverse lg:flex-row border border-grey-200">
                     <div class="w-full lg:w-1/3">
                         <div class="p-4">
                             <div class="mb-2">
@@ -305,9 +303,9 @@ if ( have_posts() ) :
                                     while( have_rows('at_a_glance_materials' ) ) :
                                         the_row();
                                 ?>
-                                <div class=" flex mb-4">
+                                <div class=" flex flex-wrap mb-4">
                                     
-                                    <span class="text-grey-700 font-museo-700 block w-1/3">
+                                    <span class="text-grey-700 font-museo-700 block w-full md:w-1/3">
                                          <?php 
                                             the_sub_field('column_title');
                                         ?>:
@@ -315,7 +313,7 @@ if ( have_posts() ) :
                                    <?php 
                                         
                                     ?>
-                                    <div class="w-2/3 text-grey-600 font-museo-500">
+                                    <div class="w-full md:w-2/3 text-grey-600 font-museo-500">
                                     <?php
 
 
@@ -357,7 +355,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-full">
+                        <div class="relative h-64 lg:h-full">
                              <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                         </div>
                        
@@ -407,12 +405,12 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                     $cap_finishes->the_post();
                 
             ?>
-            <div data-finish="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group finish-btn mb-2 <?php if( $i === 0 ) :
+            <div data-finish="<?php echo $i; ?>" class="mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer group finish-btn mb-2 text-center <?php if( $i === 0 ) :
                 
                 echo 'active';
 
             endif; ?>">
-                <p class="text-16 font-museo-700 text-grey-600 group-hover:text-teal-light whitespace-no-wrap"><?php the_title(); ?></p>
+                <p class="text-14 md:text-16 font-museo-700 text-grey-600 group-hover:text-teal-light md:whitespace-no-wrap"><?php the_title(); ?></p>
             </div>
             <?php 
 
@@ -437,7 +435,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                 echo 'hidden';
 
             endif; ?>">
-                <div class="flex flex-wrap border border-grey-200">
+                <div class="flex flex-wrap flex-col-reverse lg:flex-row border border-grey-200">
                     <div class="w-full lg:w-1/3">
                         <div class="p-4">
                             <div class="mb-2">
@@ -551,7 +549,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-full">
+                        <div class="relative h-64 lg:h-full">
                              <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                         </div>
                        
@@ -647,7 +645,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                     </table>
                 </div>
                 <div class="text-center">
-                    <a target="_blank" href="https://docsend.com/view/iaa5nip" class="btn btn-primary">download full tolerance chart</a>
+                    <a target="_blank" href="https://docsend.com/view/iaa5nip" class="btn btn-primary text-14 md:text-16">download full tolerance chart</a>
                 </div>
             </div>
 

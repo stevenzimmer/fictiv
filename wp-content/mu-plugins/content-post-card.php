@@ -2,7 +2,7 @@
 
 function fictiv_post_card( $topic ) {
 
-	$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
+	$thumbnail_src = ( has_post_thumbnail() ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0] : false );
 
 ?>
 <div class="border border-grey-200 relative h-full">
@@ -55,8 +55,6 @@ function fictiv_post_card( $topic ) {
 				endif;
 			?>
 		</div>
-
-		
 
 		<div class="absolute right-0 bottom-0 p-4">
 			<div>

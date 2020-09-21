@@ -1,7 +1,5 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-// include( get_template_directory() . '/inc/post-taxonomies.php');
 
 if ( have_posts() ) : 
 
@@ -10,29 +8,36 @@ if ( have_posts() ) :
         $processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
         
 ?>
-<header class="bg-black py-10 capabilities-hero relative">
-    <?php 
-        if ( has_post_thumbnail() ) :
-    ?>
-    <div class="absolute w-full h-full bg-cover bg-center inset-0 lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
-    <?php 
-        endif;
-    ?>
-    <div class="container">
-        <div class="flex justify-center">
+<header class="capabilities-hero">
+    <div class="container relative py-12 h-full">
+        <?php 
+            if ( has_post_thumbnail() ) :
+        ?>
+        <div class="absolute w-full h-full inset-0">
+            <div class="flex md:justify-end h-full">
+                <div class="w-full md:w-11/12 lg:w-full">
+                    <div class="h-full bg-cover bg-right lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
+                </div>
+            </div>
+        </div>
+        <?php 
+            endif;
+        ?>
+        <div class="bg-white bg-opacity-50 md:bg-transparent md:bg-gradient-to-r from-white absolute w-full inset-0 h-full"></div>
+
+        <div class="flex justify-center relative">
             <div class="w-11/12">
                 <div class="flex flex-wrap justify-center lg:justify-start">
-                    <div class="w-full lg:w-5/12 xl:w-1/2 mb-6 lg:mb-0">
+                    <div class="w-full lg:w-5/12 xl:w-1/2">
                         <div>
                             <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
-                                // print_r( $processes[0]->name );
                                     echo $processes[0]->name;
                                 ?> services
                             </p>
                             
                         </div>
-                        <div class="text-white ">
+                        <div class="text-grey-700 ">
                             <h1 class="font-museo-700"><?php 
                                 the_title()
                             ?></h1>
@@ -41,46 +46,34 @@ if ( have_posts() ) :
                         <?php 
                             if( get_field('capabilities_hero_paragraph') ) : 
                         ?>
-                        <div class="text-white capabilities-hero-paragraph box-check-white mb-4 mt-2">
+                        <div class="text-grey-600 capabilities-hero-paragraph box-check-dark mb-4 mt-2">
                             <?php 
                                 the_field('capabilities_hero_paragraph');
                             ?>
                         </div>
 
                         <?php 
-                            endif;
-
-                            $hero_cta_btn = get_field('capabilities_hero_cta_button');
-
-                            if ( $hero_cta_btn['text'] ) :
-                                
-                            
+                            endif; 
                         ?>
                         <div>
-                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>  
-                        </div>
-                        <?php 
-                            endif;
-                        ?>
-                    </div>
-                    <div class="w-1/2 lg:w-7/12 xl:w-1/2">
-                        <div class="flex justify-end">
-                            <div class="lg:w-7/12">
-                                <?php 
-                                    if( has_post_thumbnail() ) :
-                                ?>
-                                <div>
-                                    <img class="lazyload" data-src="<?php the_post_thumbnail_url(); ?>">
-                                </div>
-                                <?php 
-                                    endif;
-                                ?>
-                            </div>
+                            <?php 
+                                $hero_cta_btn = get_field('capabilities_hero_cta_button');
+
+                                if ( $hero_cta_btn['text'] ) :
+                            ?>
+                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>
+                            <?php 
+
+                                else :
+                            ?>
+                            <a class="btn btn-primary" href="https://app.fictiv.com/signup/">Get a quote</a>
+                            <?php
+                                endif;
+                            ?>  
                         </div>
                         
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
