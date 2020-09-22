@@ -7,7 +7,7 @@
             "label": "Featured Reads",
             "name": "nav_featured_reads",
             "type": "post_object",
-            "instructions": "",
+            "instructions": "Start typing title of featured read in the input to select. *Limit to three",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -48,5 +48,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1600739581
+    "modified": 1600787071
 }

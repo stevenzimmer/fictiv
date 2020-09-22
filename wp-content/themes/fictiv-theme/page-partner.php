@@ -97,7 +97,7 @@
 							<p class="text-blue-dark text-12 mb-4 italic font-museo-500">
 								<?php echo $quote['cta_text']; ?>
 							</p>
-							<a class="btn btn-primary" href="<?php echo $quote['cta_link']; ?>">Read case study</a>
+							<!-- <a class="btn btn-primary" href="<?php // echo $quote['cta_link']; ?>">Read case study</a> -->
 						</div>
 
 					</div>	
