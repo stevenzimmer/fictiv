@@ -10,79 +10,18 @@ if ( have_posts() ) :
         $processes = get_the_terms( get_the_id(), 'fictiv_manufacturing_process' );
         $page_type = get_the_terms( get_the_id(), 'fictiv_page_type' );
 
+$hero_arr = array(
+    'img' => get_the_post_thumbnail_url(),
+    'label' => $page_type[0]->name,
+    'title' => $processes[0]->name . ' Service',
+    'para' => get_field('capabilities_hero_paragraph'),
+    'btn' => get_field('capabilities_hero_cta_button')
+);
+
+capabilities_hero( $hero_arr );
         
 ?>
-<header class="capabilities-hero">
-    <div class="container relative py-12 h-full">
-        <?php 
-            if ( has_post_thumbnail() ) :
-        ?>
-        <div class="absolute w-full h-full inset-0">
-            <div class="flex md:justify-end h-full">
-                <div class="w-full md:w-11/12 lg:w-full">
-                    <div class="h-full bg-cover bg-right lazyload" data-bg="url(<?php the_post_thumbnail_url() ?>)"></div>
-                </div>
-            </div>
-        </div>
-        <?php 
-            endif;
-        ?>
-        <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r from-white absolute w-full inset-0 h-full"></div>
 
-        <div class="flex justify-center relative">
-            <div class="w-11/12">
-                <div class="flex flex-wrap justify-center lg:justify-start">
-                    <div class="w-full lg:w-5/12 xl:w-7/12 mb-6 lg:mb-0">
-                        <div>
-                            <p class="text-grey-400 font-museo-700 uppercase" >
-                                <?php 
-                                    echo $page_type[0]->name;
-                                ?>
-                            </p>
-                            
-                        </div>
-                        <div >
-                            <h1 class="text-grey-700 font-museo-700"><?php 
-                               echo $processes[0]->name;
-                            ?> Service</h1>
-
-                        </div>
-                        <?php 
-                            if( get_field('capabilities_hero_paragraph') ) : 
-                        ?>
-                        <div class="text-grey-600 capabilities-hero-paragraph box-check-dark mb-4 mt-2">
-                            <?php 
-                                the_field('capabilities_hero_paragraph');
-                            ?>
-                        </div>
-                        <?php 
-                            endif; 
-                        ?>
-
-                        <div class="mt-4">
-                            <?php 
-                                $hero_cta_btn = get_field('capabilities_hero_cta_button');
-
-                                if ( $hero_cta_btn['text'] ) :
-                            ?>
-                            <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>
-                            <?php 
-
-                                else :
-                            ?>
-                            <a class="btn btn-primary" href="https://app.fictiv.com/signup/">Get a quote</a>
-                            <?php
-                                endif;
-                            ?>    
-                        </div>
-                    </div>
-                  
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</header>
 <?php 
     if( have_rows('processes_advantage') ) :
 ?>

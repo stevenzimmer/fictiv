@@ -9,7 +9,7 @@
 
 						<div class="flex items-stretch">
 							<div class="lg:w-6/12 border-l border-t border-b border-grey-200 flex">
-								<div class="relative w-full" >
+								<div class="relative w-full flex items-center" >
 									<img class="lazyload" alt="our digital manufacturing ecosystem thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/our-digital-manufacuring-ecosystem.jpg">
 								</div>
 								

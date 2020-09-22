@@ -171,7 +171,7 @@
 				<?php 
 					if( $args['post_type'] === 'page' ) :
 				?>
-				<div class="lg:w-1/2">
+				<div class="lg:w-7/12">
 					<h1 class="text-white font-museo-500 leading-tight"><?php echo $args['title']; ?></h1>
 				</div>
 				<?php

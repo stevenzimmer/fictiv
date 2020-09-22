@@ -3,7 +3,7 @@
 	get_header();
 	$args = array(
     	'bg' => get_the_post_thumbnail_url(),
-    	'label' => 'resource center',
+    	'label' => 'DIGITAL MANUFACTURING RESOURCE CENTER',
     	'title' => get_the_title(),
     	'post_type' => get_queried_object()->post_type
     );

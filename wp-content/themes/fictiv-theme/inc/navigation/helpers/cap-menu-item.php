@@ -25,7 +25,7 @@
 							if ( $excerpt ) :
 								
 						?>
-						<div class="text-12 text-black mt-1 max-lines max-lines-2">
+						<div class="text-12 text-black mt-1 max-lines max-lines-3">
 							<?php echo $excerpt; ?>		
 						</div>
 						<?php 
@@ -51,7 +51,7 @@
 			?>
 
 			<div class="w-full px-2">
-				<div class="px-4 py-2">
+				<div class="px-4">
 					<div class="">
 						<p class=" group-hover:text-teal-dark text-14 font-museo-700 text-teal-light"><?php echo $title; ?></p>
 					</div>
@@ -60,7 +60,7 @@
 						if ( $excerpt ) :
 							
 					?>
-					<div class="text-12 text-grey-700 mt-1 max-lines max-lines-2">
+					<div class="text-12 text-grey-700 mt-1 max-lines max-lines-3">
 						<?php echo $excerpt; ?>		
 					</div>
 					<?php 

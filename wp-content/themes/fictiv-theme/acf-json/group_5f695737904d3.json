@@ -1,0 +1,52 @@
+{
+    "key": "group_5f695737904d3",
+    "title": "Navigation",
+    "fields": [
+        {
+            "key": "field_5f69573c52b1e",
+            "label": "Featured Reads",
+            "name": "nav_featured_reads",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cpt_blog",
+                "cpt_teardown",
+                "cpt_tool",
+                "cpt_video",
+                "cpt_case_study",
+                "cpt_ebook",
+                "cpt_webinar"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "navigation"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1600739581
+}

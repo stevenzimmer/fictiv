@@ -4,7 +4,7 @@
 		'header' => 'Digital Manufacturing Resources',
 		'name' => 'Resource Center',
 		'link' => '/resources',
-		'para' => 'Find all your prototype answers in one place.',
+		'para' => 'A rich library of design guides and manufacturing tips.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-center.png'
 	);
 
@@ -12,7 +12,7 @@
 		'header' => 'Learn about fictiv',
 		'name' => 'Help Center',
 		'link' => 'https://help.fictiv.com/en/',
-		'para' => 'Advice and answers from the Fictiv Team.',
+		'para' => 'Find answers about the Fictiv platform.',
 		'icon' => get_template_directory_uri() . '/assets/images/graphics/primary-nav-resources-help-center.png'
 	);
 
@@ -43,17 +43,17 @@
 		),
 	);
 
-	$featured_args = array(
-		'post_type' => $GLOBALS['resource_post_types'],
-		'posts_per_page' => 3,
-		'meta_query' => array(
-	        array(
-	            'key' => '_thumbnail_id',
-	            'compare' => 'EXISTS'
-	        ),
-	    )
-	);
+	// $featured_args = array(
+	// 	'post_type' => $GLOBALS['resource_post_types'],
+	// 	'posts_per_page' => 3,
+	// 	'meta_query' => array(
+	//         array(
+	//             'key' => '_thumbnail_id',
+	//             'compare' => 'EXISTS'
+	//         ),
+	//     )
+	// );
 
-	$featured_reads = new WP_Query( $featured_args );
+	$featured_reads = get_field('nav_featured_reads', 'option');
 
 ?>
