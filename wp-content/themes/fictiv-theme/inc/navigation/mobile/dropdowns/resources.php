@@ -90,21 +90,17 @@
 				<?php 
 					cap_menu_header( 'featured reads' );
 
-					while ( $featured_reads->have_posts() ) :
-				      $featured_reads->the_post();
-				
-						$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
-
+					foreach ($featured_reads as $key => $read ) :
+						
 			
 				?>
 				<div class="mb-3 last:mb-0">
-					<div class=" border border-grey-200 ">
+					<div class=" py-2 border border-grey-200 ">
 				<?php
 						cap_menu_item( 
-							get_permalink(), 
-							get_the_title(), 
+							get_permalink( $read ), 
+							get_the_title( $read ), 
 							'',
-							// get_the_excerpt(),
 							'' 
 						);
 				?>
@@ -112,9 +108,7 @@
 				</div>
 				<?php
 
-				    endwhile;
-					// Reset Post Data
-					wp_reset_postdata();
+				    endforeach;
 				
 				
 				?>
