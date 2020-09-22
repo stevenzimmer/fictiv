@@ -15,7 +15,7 @@
     <?php 
         endif;
     ?>
-    <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r from-white via-white absolute w-full inset-0 h-full"></div>
+    <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r via-white from-white absolute w-full inset-0 h-full"></div>
 
     <div class="container relative py-12">
        

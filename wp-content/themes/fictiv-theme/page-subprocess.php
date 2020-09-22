@@ -360,7 +360,19 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                     </div>
                     <div class="w-full lg:w-2/3">
                         <div class="relative h-64 lg:h-full">
-                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
+                            <?php 
+                            
+                                if ( !empty( get_field('material_thumbnail', $material_id ) ) ) :
+                                
+                            ?>
+                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
+                             <?php 
+                                else :
+                            ?>
+                            <div class="bg-grey-100 h-full"></div>
+                            <?php
+                                endif;
+                             ?>
                         </div>
                        
                     </div>
