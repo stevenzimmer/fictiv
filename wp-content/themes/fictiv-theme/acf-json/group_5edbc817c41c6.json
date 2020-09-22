@@ -36,6 +36,13 @@
                 "operator": "==",
                 "value": "cpt_cap_finish"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-guide-to-injection-molding-success.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -44,7 +51,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1597152631
+    "modified": 1600746912
 }

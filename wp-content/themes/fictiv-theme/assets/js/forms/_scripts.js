@@ -41,6 +41,7 @@ if ( mkto_forms.length > 0 ) {
 				if ( form.getFormElem()[0].dataset.formType !== 'mkto-redirect' )  {
             
 	                if ( form.getFormElem()[0].dataset.formType === 'global' )  {
+	                	
 	                	// Hide subscribe forms on success
 	                	form.getFormElem()[0].classList.add('hidden');
 	                	form.getFormElem()[0].parentElement.querySelector('.subscribe-form-terms').classList.add('hidden');
@@ -50,7 +51,7 @@ if ( mkto_forms.length > 0 ) {
 	                } else {
 
 						// Redirect download forms to thank you page on success
-						window.location = window.location.origin + window.location.pathname + '/thank-you/';
+						window.location = window.location.origin + window.location.pathname + '/thank-you';
 						
 					}
 

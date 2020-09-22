@@ -1,4 +1,7 @@
-<?php /* Template Name: Thank you */ ?>
+<?php 
+	/* Template Name: Thank you */
+	// Template Post Type: cpt_video, page
+?>
 <?php 
 	get_header();
 

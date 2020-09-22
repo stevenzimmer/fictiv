@@ -1,5 +1,6 @@
 <?php 
 /* 	Template Name: Guide to Injection Molding Success
+**	Template Post Type: cpt_video, page
 */ 
 	get_header();
 ?>
@@ -9,7 +10,7 @@
 		<div class="flex justify-center lg:justify-start flex-wrap">
 			<div class="w-11/12 lg:w-5/12 mb-12 lg:mb-0">
 				<div class="uppercase text-blue-dark font-museo-900">Video Course</div>
-                <h1 class="text-blue-dark font-museo-900 text-24 lg:text-48 uppercase leading-tight mb-6">Guide to Injection Molding Success</h1>
+                <h1 class="text-blue-dark font-museo-900 text-24 lg:text-48 uppercase leading-tight mb-6"><?php the_title(); ?></h1>
                 <div class="">
                 	<a href="#register" class="btn btn-primary">SIGN UP NOW</a>
                 </div>
@@ -18,7 +19,7 @@
 				<div style="padding-top: 56.25%;" class=" w-full relative p-0">
                     <iframe
                         class="absolute w-full h-full inset-0 "
-                        src="https://www.youtube.com/embed/O1URZfpt7OM" 
+                        src="https://www.youtube.com/embed/<?php the_field('youtube_id') ?>" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                        
@@ -30,15 +31,10 @@
 </header>
 <section class="py-20">
 	<div class="container">
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-8/12">
-				<p class="paragraph-17">
-                Compared to other manufacturing processes, injection molding is incredibly complex and requires experience to achieve mastery. From designing parts for injection molding constraints to choosing between single vs multi cavity
-                tooling to overseeing multi-step post processing operations, there’s a lot to manage and consider.<br />
-                <br />
-                To help jumpstart your understanding of this complex process, we put together this 4-part educational video series where Fictiv’s Director of Overseas Manufacturing, Cameron Moore, will walk you through key injection molding
-                tricks of the trade he’s acquired over thirteen years living and working in the manufacturing industry in China.
-            </p>
+		<div class="flex justify-center mb-6">
+			<div class="w-11/12 lg:w-9/12">
+				<p class="mb-4">Compared to other manufacturing processes, injection molding is incredibly complex and requires experience to achieve mastery. From designing parts for injection molding constraints to choosing between single vs multi cavity tooling to overseeing multi-step post processing operations, there’s a lot to manage and consider.</p>
+               	<p class="">To help jumpstart your understanding of this complex process, we put together this 4-part educational video series where Fictiv’s Director of Overseas Manufacturing, Cameron Moore, will walk you through key injection molding tricks of the trade he’s acquired over thirteen years living and working in the manufacturing industry in China.</p>
 			</div>
 		</div>
 		<div class="flex justify-center">

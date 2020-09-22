@@ -262,7 +262,8 @@
 					'title',
 					'excerpt',
 					'editor', 
-					'thumbnail'
+					'thumbnail',
+					'page-attributes'
 				), 
 				'menu_position'	=> 1,
 				'menu_icon'		=> 'dashicons-format-video',
