@@ -51,7 +51,7 @@
 			?>
 
 			<div class="w-full px-2">
-				<div class="px-4">
+				<div class="px-4 py-2">
 					<div class="">
 						<p class=" group-hover:text-teal-dark text-14 font-museo-700 text-teal-light"><?php echo $title; ?></p>
 					</div>
