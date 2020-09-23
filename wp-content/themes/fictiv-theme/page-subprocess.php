@@ -304,6 +304,7 @@ capabilities_hero( $hero_arr );
                                     $i = 0;
                                     while( have_rows('at_a_glance_materials', $material_id ) ) :
                                         the_row();
+                                        if ( get_sub_field('display_in_card') ) :
 
 
                             ?>
@@ -346,6 +347,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                             </div>
                             <?php
                                 $i++;
+                            endif;
                                 endwhile;
                             ?>
                         

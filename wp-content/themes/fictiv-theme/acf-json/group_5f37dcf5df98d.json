@@ -22,6 +22,25 @@
             "button_label": "Add Column",
             "sub_fields": [
                 {
+                    "key": "field_5f6b73c149fda",
+                    "label": "Display in card?",
+                    "name": "display_in_card",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_5f37dd24bc48a",
                     "label": "Column Title",
                     "name": "column_title",
@@ -114,5 +133,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1600387498
+    "modified": 1600877606
 }

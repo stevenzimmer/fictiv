@@ -10,7 +10,7 @@
 			<div class="w-11/12 text-center">
 				
 				<h1 class="xl text-grey-700">
-					Manufacturing data at your fingertips
+					Manufacturing Data at Your Fingertips
 				</h1>
 				
 			</div>
@@ -44,7 +44,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Instant Pricing
 					</h2>
 				</div>
@@ -78,7 +78,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Expert DFM Feedback
 					</h2>
 				</div>
@@ -111,7 +111,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						On-Demand Production Transparency
 					</h2>
 				</div>
@@ -144,12 +144,12 @@
 		<div class="flex flex-wrap items-center flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						All Your Data, In One Place
 					</h2>
 				</div>
 				<div class="mb-6">
-					<p class=" font-museo-500 text-grey-600">
+					<p class="font-museo-500 text-grey-600">
 						Easily find requested quality documentation, configuration details, DFM, design files, invoices, and inspection reports for all your previous orders.
 					</p>
 				</div>

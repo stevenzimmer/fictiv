@@ -17,7 +17,7 @@
 </div>
 
 <header class="py-12 relative homepage-hero">
-	<div class="w-full h-full absolute inset-0" style="background-image: url()">
+	<div class="w-full h-full absolute inset-0">
 		<div class="relative h-full w-full hidden lg:block">
 			<img alt="homepage hero" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
 		</div>
@@ -75,9 +75,9 @@
 		</div>
 	</div>
 
-	<div class="py-40 md:py-32 lg:py-40"></div>
+	<div class="py-40 md:py-32 lg:py-48"></div>
 	
-	<div class="absolute w-full bottom-0 pb-12 md:pb-6 lg:pb-10">
+	<div class="absolute w-full bottom-0 pb-12 md:pb-6 lg:pb-12">
 		<div class="container flex justify-center">
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
 				
@@ -628,7 +628,7 @@
                             <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
                         </div>
                         <div>
-                            <p class="text-grey-600 font-museo-500 text-16">
+                            <p class="text-blue-dark font-museo-700 text-16">
                                 <?php the_sub_field('case_study_details_text'); ?>
                             </p>
                         </div>

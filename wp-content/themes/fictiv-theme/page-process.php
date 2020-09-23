@@ -245,6 +245,9 @@ capabilities_hero( $hero_arr );
                                     $j = 0;
                                     while( have_rows('at_a_glance_materials' ) ) :
                                         the_row();
+
+                                        if ( get_sub_field('display_in_card') ) :
+                                        
                                 ?>
                                 <div class=" flex flex-wrap mb-4">
                                     
@@ -284,6 +287,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                 
                                 </div>
                                 <?php
+                                    endif;
                                     $j++;
                                     endwhile;
                                 ?>
@@ -408,6 +412,8 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                     while( have_rows('at_a_glance_materials' ) ) :
                                         the_row();
 
+                                        if ( get_sub_field('display_in_card') ) :
+
                                 ?>
                                 <div class=" flex mb-4">
                                     
@@ -430,9 +436,9 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                     while( have_rows('column_cells' ) ) :
                                         the_row();
 
-                                        if ( $j === 0 ||  $cells_count < 2 ) :
+                                        if ( $j === 0 || $cells_count < 2 ) :
 
-                echo get_sub_field('column_cell'); 
+echo get_sub_field('column_cell'); 
                                         
                                         else :
                                 
@@ -448,7 +454,9 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                             
                                 </div>
                                 <?php
+
                                     $j++;
+                                    endif;
                                     endwhile;
                                 ?>
                                 <div class=" flex mb-4">
