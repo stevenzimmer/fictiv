@@ -133,7 +133,7 @@
 	                                the_row();
 	                       
 	                    ?>
-	                    <div class="flex items-center mb-4 hidden">
+	                    <div class="flex items-center mb-4">
 	                        <div class="mr-2">
 	                            <!-- Icon -->
 	                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
