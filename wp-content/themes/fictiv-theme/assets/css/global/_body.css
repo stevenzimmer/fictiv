@@ -8,10 +8,27 @@ h1 {
 	@screen md {
 		@apply text-36;
 	}
+
+	&.xl {
+		@apply font-museo-700 text-29 leading-tight;
+
+		@screen md {
+			font-size: 56px;
+		}
+		
+	}
 }
 
 h2 {
 	@apply text-29 font-museo-500;
+
+	&.xl {
+		@apply font-museo-700 text-29 leading-tight;
+
+		@screen md {
+			font-size: 56px;
+		}	
+	}
 }
 
 
@@ -165,6 +182,11 @@ h2 {
 
 		h3 {
 			@apply text-29 mb-2;
+
+			@screen md {
+				@apply font-museo-700 leading-tight;
+				font-size: 56px;
+			}
 		}
 
 		ul {

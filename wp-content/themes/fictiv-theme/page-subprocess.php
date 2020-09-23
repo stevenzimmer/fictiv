@@ -100,7 +100,7 @@ capabilities_hero( $hero_arr );
 
         <div class="text-center py-10 border-b border-grey-200">
             <div>
-                <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">Machines</h2>
+                <h2 class="text-grey-700 font-museo-500 text-20 md:text-29">Machines</h2>
             </div>
             
         </div>
@@ -127,7 +127,7 @@ capabilities_hero( $hero_arr );
                         if( get_sub_field('machines_title') ) :
                     ?>
                     <div class="text-center mb-6">
-                        <h2 class="text-grey-700 font-museo-700 text-20 md:text-29">
+                        <h2 class="text-grey-700 font-museo-500 text-20 md:text-29">
                             <?php the_sub_field('machines_title'); ?>
                         </h2>
                     </div>

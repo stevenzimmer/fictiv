@@ -9,7 +9,7 @@ if ( have_posts() ) :
 
         $hero_arr = array(
             'img' => get_the_post_thumbnail_url(),
-            'label' => $processes[0]->name . ' Services',
+            'label' => $processes[0]->name . ' Materials',
             'title' => get_the_title(),
             'para' => get_field('capabilities_hero_paragraph'),
             'btn' => get_field('capabilities_hero_cta_button')

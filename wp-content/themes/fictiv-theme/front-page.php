@@ -33,7 +33,7 @@
 			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
 				
-					<h1 class="text-white font-museo-700 text-29 md:text-36">
+					<h1 class="xl text-white font-museo-700 text-29 md:text-36">
 						Your Go-to Partner for Precision Parts at the Speed of Digital
 					</h1>
 			
@@ -137,7 +137,7 @@
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-9/12">
 				<div class="text-center">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="xl text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 						Discover the Fictiv Difference
 					</h2>
 					<p class="md:text-20 font-museo-500 text-grey-600 ">
@@ -325,7 +325,7 @@
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
+			<h2 class="xl text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
 				Fictiv Powers Over 2,500 Companies
 			</h2>
 			<p class="md:text-20 font-museo-500 text-grey-600">
@@ -463,7 +463,7 @@
 			<p class="md:text-20 font-museo-500 text-grey-600">Fictiv Digital Manufacturing</p>	
 		</div>
 		<div class="text-center mb-6">
-			<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
+			<h2 class="xl text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
 				Everything In One Place
 			</h2>
 		</div>

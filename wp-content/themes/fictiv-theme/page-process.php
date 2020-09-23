@@ -672,7 +672,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                                 <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
                             </div>
                             <div>
-                                <p class="text-grey-600 font-museo-500 text-16">
+                                <p class="text-blue-dark font-museo-700">
                                     <?php the_sub_field('case_study_details_text'); ?>
                                 </p>
                             </div>
@@ -715,7 +715,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
     <div class="container">
         <div class="text-center mb-6">
             <p class=" font-museo-700 text-grey-400 uppercase mb-4">Fictiv <?php echo $processes[0]->name; ?> Advantages</p>
-            <h2 class="text-20 md:text-29 text-grey-700 font-museo-700">From Prototype to Production</h2>
+            <h2 class="xl text-grey-700">From Prototype to Production</h2>
         </div>
         <div class="flex flex-wrap lg:flex-no-wrap -mx-6 justify-center lg:justify-start">
             <?php 

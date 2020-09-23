@@ -2,19 +2,19 @@
 	$ecosystems = array(
 		array(
 			'title' => 'Digital Platform',
-			'para' => 'Our platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.',
+			'para' => 'Accelerate development with instant quotes, expert DFM, and automated production updates.',
 			'link' => '/our-platform'
 		),
 
 		array(
 			'title' => 'Global Manufacturing Network',
-			'para' => 'Our highly vetted partner network gives you access to a wide breadth of capabilities through a single access point.',
+			'para' => 'Access a wide breadth of capabilities through our highly vetted manufacturing network.',
 			'link' => '/our-network'
 		),
 
 		array(
 			'title' => 'People on the ground',
-			'para' => 'Fictiv experts have boots on the ground at all supply locations to ensure your parts are delivered on time and to spec.',
+			'para' => 'Our trained employees ensure your parts will be delivered on time and to spec.',
 			'link' => '/our-people'
 		),
 	);

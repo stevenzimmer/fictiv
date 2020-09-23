@@ -5,7 +5,7 @@
         {
             "key": "field_5f26c1a20ff99",
             "label": "Title",
-            "name": "resources_home_form_title",
+            "name": "ad_download_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -24,7 +24,7 @@
         {
             "key": "field_5f26c1f20ff9a",
             "label": "Paragraph",
-            "name": "resources_home_form_paragraph",
+            "name": "ad_download_paragraph",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,10 +41,10 @@
             "new_lines": ""
         },
         {
-            "key": "field_5f26c2070ff9b",
-            "label": "Marketo Form ID",
-            "name": "resources_home_form_marketo_id",
-            "type": "text",
+            "key": "field_5f6aadf91ad04",
+            "label": "Link",
+            "name": "ad_download_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,11 +53,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -82,7 +78,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1596467999
+    "modified": 1600826969
 }

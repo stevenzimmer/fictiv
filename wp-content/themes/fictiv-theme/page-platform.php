@@ -9,7 +9,7 @@
 		<div class="flex justify-center  mb-6" >
 			<div class="w-11/12 text-center">
 				
-				<h1 class="text-grey-700 font-museo-700 leading-none text-29 md:text-36">
+				<h1 class="xl text-grey-700">
 					Manufacturing data at your fingertips
 				</h1>
 				
@@ -44,7 +44,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						Instant Pricing
 					</h2>
 				</div>
@@ -78,7 +78,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						Expert DFM Feedback
 					</h2>
 				</div>
@@ -111,7 +111,7 @@
 		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						On-Demand Production Transparency
 					</h2>
 				</div>
@@ -144,7 +144,7 @@
 		<div class="flex flex-wrap items-center flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+					<h2 class="text-grey-700 font-museo-500 leading-tight text-20 md:text-29 mb-6">
 						All Your Data, In One Place
 					</h2>
 				</div>

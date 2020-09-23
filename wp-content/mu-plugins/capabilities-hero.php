@@ -17,12 +17,22 @@
     ?>
     <div class="bg-white bg-opacity-75 md:bg-transparent md:bg-gradient-to-r via-white from-white absolute w-full inset-0 h-full"></div>
 
-    <div class="container relative py-12">
+    <div class="container relative  <?php 
+            if( $arr['para'] ) :
+
+               echo 'py-12';
+            
+            else :
+            
+                echo 'py-24';
+            
+            endif;
+        ?>">
        
         <div class="flex justify-center">
             <div class="w-11/12">
                 <div class="flex flex-wrap justify-center lg:justify-start">
-                    <div class="w-full lg:w-5/12 xl:w-7/12 mb-6 lg:mb-0">
+                    <div class="w-full lg:w-6/12 xl:w-7/12">
                         <div>
                             <p class="text-grey-400 font-museo-700 uppercase" >
                                 <?php 
@@ -32,13 +42,13 @@
                             
                         </div>
                         <div >
-                            <h1 class="text-grey-700 font-museo-700"><?php 
+                            <h1 class="xl text-grey-700"><?php 
                                     echo $arr['title'];
                                 ?></h1>
 
                         </div>
                         <?php 
-                            if( $arr['para'] ) : 
+                            if( $arr['para'] ) :
                         ?>
                         <div class="text-grey-600 capabilities-hero-paragraph box-check-dark mb-4 mt-2">
                             <?php 
@@ -48,23 +58,20 @@
                         <?php 
                             endif; 
                         ?>
+                        <?php 
+                            $hero_cta_btn = $arr['btn'];
 
+                            if ( $hero_cta_btn['text'] ) :
+                        ?>
                         <div class="mt-4">
-                            <?php 
-                                $hero_cta_btn = $arr['btn'];
-
-                                if ( $hero_cta_btn['text'] ) :
-                            ?>
+                            
                             <a class="btn btn-primary" href="<?php echo $hero_cta_btn['link']; ?>"><?php echo $hero_cta_btn['text']; ?></a>
-                            <?php 
-
-                                else :
-                            ?>
-                            <a class="btn btn-primary" href="https://app.fictiv.com/signup/">Get a quote</a>
-                            <?php
-                                endif;
-                            ?>    
+                               
                         </div>
+                        <?php 
+
+                            endif;
+                        ?>
                     </div>
                   
                 </div>

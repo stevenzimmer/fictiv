@@ -118,6 +118,23 @@
 			@apply border-grey-200 mb-6;
 		}
 
+		.content {
+
+			&-subscribe {
+			
+				&-wrapper {
+
+					h3 {
+						@apply mb-0;
+					}
+
+					.btn {
+						@apply text-white;
+					}
+				}
+			}
+		}
+
 		/*
 		 * Default WP Alignment Classes
 		 *****************************************************************************/

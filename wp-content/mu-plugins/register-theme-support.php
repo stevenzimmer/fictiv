@@ -114,6 +114,4 @@
 	}
 	// add_action( 'wp_footer', 'deregister_embed' );
 
-	
-
 ?>

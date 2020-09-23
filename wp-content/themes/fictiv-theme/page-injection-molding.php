@@ -139,7 +139,7 @@
 	                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
 	                        </div>
 	                        <div>
-	                            <p class="text-grey-600 font-museo-500 text-16">
+	                            <p class="text-blue-dark font-museo-700">
 	                                <?php the_sub_field('case_study_details_text'); ?>
 	                            </p>
 	                        </div>

@@ -18,8 +18,8 @@
 				
 				<div class="w-full lg:w-5/12">
 					<div class="mb-6">
-						<h1 class="text-grey-700 font-museo-700 leading-tight text-29 md:text-36">
-							The world's best manufacturers, connected
+						<h1 class="xl text-grey-700 font-museo-700 leading-tight text-29 md:text-36">
+							The World's Best Manufacturers, Connected
 						</h1>
 					</div>
 					<div class="mb-6">
@@ -34,7 +34,7 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/countries.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+								<p class="text-blue-dark font-museo-700 leading-tight">
 									4 countries
 								</p>
 							</div>
@@ -46,7 +46,7 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/partners.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+								<p class="text-blue-dark font-museo-700 leading-tight">
 									250+ highly vetted partners
 								</p>
 							</div>
@@ -57,7 +57,7 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/hours-of-capacity.svg">
 							</div>
 							<div class="w-full">
-								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+								<p class="text-blue-dark font-museo-700 leading-tight">
 									10,000 monthly hours of capacity
 								</p>
 							</div>

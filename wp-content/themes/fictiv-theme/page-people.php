@@ -20,8 +20,8 @@
 				<div class="flex "> 
 					<div class="lg:w-6/12">
 						<div class="mb-6">
-							<h1 class="text-grey-700 font-museo-700 leading-none text-29 md:text-36">
-								Real humans, here to help
+							<h1 class="xl text-grey-700">
+								Real Humans, Here to Help
 							</h1>
 						</div>
 						<div class="mb-6">
@@ -35,7 +35,7 @@
 								<img class="lazyload" width="30" alt="10M+ Parts made icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/parts.png">
 							</div>
 							<div>
-								<p class="text-grey-600 font-museo-700 leading-tight md:text-20">
+								<p class="text-blue-dark font-museo-700 leading-tight">
 									All parts inspected by Fictiv quality Engineers
 								</p>
 							</div>

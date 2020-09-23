@@ -247,17 +247,21 @@
 								<div class="w-full lg:w-7/12">
 									<h3 class="text-white font-museo-500 text-16 mb-2">
 										<?php 
-											the_field('resources_home_form_title');
+											the_field('ad_download_title');
 										?>
 									</h3>
 									<p class="text-white font-museo-500">
 										<?php 
-											the_field('resources_home_form_paragraph');
+											the_field('ad_download_paragraph');
 										?>
 									</p>
 								</div>
 								<div class="w-full lg:w-4/12">
-									<form data-form-type="mkto-redirect" class="mktoForm global" data-formId="<?php the_field('resources_home_form_marketo_id'); ?>"></form>
+									 <a href="<?php 
+											echo get_field('ad_download_link')['url'];
+										?>" class="btn btn-primary"><?php 
+											echo get_field('ad_download_link')['title'];
+										?></a>
 								</div>
 							</div>
 							
