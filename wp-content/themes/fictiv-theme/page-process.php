@@ -302,7 +302,19 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
+                        <?php 
+                        
+                            if ( !empty( get_field('material_thumbnail' ) ) ) :
+                            
+                        ?>
                         <img class="lazyload w-full loaded object-cover" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
+                        <?php 
+                            else :
+                        ?>
+                        <div class="bg-grey-100 h-full"></div>
+                        <?php
+                            endif;
+                         ?>
                     </div>
                 </div>
             </div>
