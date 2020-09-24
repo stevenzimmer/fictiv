@@ -236,7 +236,7 @@ capabilities_hero( $hero_arr );
 <section class="py-10">
     <div class="container">
 
-         <div class="text-center mb-6">
+        <div class="text-center mb-6">
             <div>
                 <h2 class="text-grey-700 font-museo-700 text-20 md:text-29"><?php echo $processes[0]->name; ?> Materials</h2>
             </div>
@@ -292,7 +292,7 @@ capabilities_hero( $hero_arr );
                                 
                             <div class="mb-4 post-content">
                                 <?php 
-                                    the_excerpt();
+                                    echo get_the_excerpt( $material_id );
                                 ?>  
                             </div>
                             <?php 
@@ -320,8 +320,6 @@ capabilities_hero( $hero_arr );
                                 ?>
                                 <div class="w-2/3 text-grey-600 font-museo-500">
                                 <?php
-
-
                                     $j = 0;
                                     $cells_count = count( get_sub_field('column_cells', $material_id ) );
 
@@ -361,22 +359,22 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-64 lg:h-full">
-                            <?php 
+
+                        <?php 
+                        
+                            if ( !empty( get_field('material_thumbnail', $material_id ) ) ) :
                             
-                                if ( !empty( get_field('material_thumbnail', $material_id ) ) ) :
-                                
-                            ?>
-                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
-                             <?php 
-                                else :
-                            ?>
-                            <div class="bg-grey-100 h-full"></div>
-                            <?php
-                                endif;
-                             ?>
-                        </div>
-                       
+                        ?>
+                        <img class="lazyload w-full loaded object-cover" alt="<?php echo get_the_title( $material_id ); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail', $material_id )['url']; ?>">
+                        
+                        <?php 
+                            else :
+                        ?>
+                        <div class="bg-grey-100 h-full"></div>
+                        <?php
+                            endif;
+                         ?>
+                   
                     </div>
                 </div>
             </div>
@@ -385,6 +383,17 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                 endforeach;
             ?>
         </div>
+        <?php 
+            if ( $processes[0]->slug === 'cnc-machining' ) :
+            
+        ?>
+        <div class="text-center mt-12">
+            <a target="_blank" class="btn btn-primary" href="https://docsend.com/view/epw522h">Download CNC Material Datasheet</a>
+        </div>
+
+        <?php 
+            endif;
+        ?>
            
     </div>
 </section>
