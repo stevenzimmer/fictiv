@@ -214,7 +214,7 @@ capabilities_hero( $hero_arr );
                 echo 'hidden';
 
             endif; ?>">
-                <div class="flex flex-wrap flex-col-reverse items-center lg:flex-row border border-grey-200">
+                <div class="flex flex-wrap flex-col-reverse lg:flex-row border border-grey-200">
                     <div class="w-full lg:w-1/3">
                         <div class="p-4">
                             <div class="mb-2">
