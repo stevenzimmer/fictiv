@@ -9,6 +9,10 @@
   	<?php 
   		wp_head(); 
   	?>
+  	 <script>
+      window.fa=window.fa||function(){(fa.q=fa.q||[]).push(arguments)};fa.l=+new Date;
+      fa('init',{product:'dotcom'});fa('pageview');fa('tracklinks');
+    </script>
   	<script async src='https://app.fictiv.com/analytics.js'></script>  
 </head><!--/head-->
 
