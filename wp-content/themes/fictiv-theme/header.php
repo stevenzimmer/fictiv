@@ -6,12 +6,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="profile" href="http://gmpg.org/xfn/11">
   	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-  	<?php 
+
+  	<?php
   		wp_head(); 
   	?>
-  	 <script>
-      window.fa=window.fa||function(){(fa.q=fa.q||[]).push(arguments)};fa.l=+new Date;
-      fa('init',{product:'dotcom'});fa('pageview');fa('tracklinks');
+
+  	<script>
+    	window.fa=window.fa||function(){(fa.q=fa.q||[]).push(arguments)};fa.l=+new Date;
+      	fa('init',{product:'dotcom'});fa('pageview');fa('tracklinks');
     </script>
   	<script async src='https://app.fictiv.com/analytics.js'></script>  
 </head><!--/head-->
@@ -38,6 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	// Filter Mobile
 	if ( wp_is_mobile() ) :
+
 		// Show mobile filter on Resource center pages
 		if( is_search() || 
 
@@ -46,6 +49,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			is_page_template('page-resource-center.php') ||
 			is_singular('cpt_blog') ||
 			is_singular('cpt_teardown') 
+		
 		) :
 
 			include( get_template_directory() . '/inc/post-taxonomies.php');

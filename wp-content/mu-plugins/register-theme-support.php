@@ -52,15 +52,6 @@
 	    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 	}
 
-	// End remove post type
-
-	// add_action( 'wp_print_styles', 'deregister_dashicons', 100 );
-
-	function deregister_dashicons() { 
-	   wp_deregister_style( 'dashicons' ); 
-
-	}
-
 	/**
 	 * Disable the emoji's
 	 */
@@ -75,7 +66,7 @@
 	 add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	 add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 	}
-	// add_action( 'init', 'disable_emojis' );
+	add_action( 'init', 'disable_emojis' );
 
 	/**
 	 * Filter function used to remove the tinymce emoji plugin.
@@ -112,6 +103,6 @@
 	function deregister_embed() {
 	 wp_dequeue_script( 'wp-embed' );
 	}
-	// add_action( 'wp_footer', 'deregister_embed' );
+	add_action( 'wp_footer', 'deregister_embed' );
 
 ?>

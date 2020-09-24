@@ -214,7 +214,7 @@ capabilities_hero( $hero_arr );
                 echo 'hidden';
 
             endif; ?>">
-                <div class="flex flex-wrap flex-col-reverse lg:flex-row border border-grey-200">
+                <div class="flex flex-wrap flex-col-reverse items-center lg:flex-row border border-grey-200">
                     <div class="w-full lg:w-1/3">
                         <div class="p-4">
                             <div class="mb-2">
@@ -295,17 +295,14 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                             <?php 
                                 endif;
                             ?>
-                            <div>
+                             <div>
                                 <a class="text-teal-light font-museo-700 hover:text-teal-dark" href="<?php the_permalink(); ?>">Learn more</a>
                             </div>
                            
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-64 lg:h-full">
-                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
-                        </div>
-                       
+                        <img class="lazyload w-full loaded object-cover" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                     </div>
                 </div>
             </div>
@@ -500,10 +497,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                         </div>
                     </div>
                     <div class="w-full lg:w-2/3">
-                        <div class="relative h-64 lg:h-full">
-                             <img class="lazyload absolute w-full h-full object-cover inset-0" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
-                        </div>
-                       
+                        <img class="lazyload w-full loaded object-cover h-full" alt="<?php the_title(); ?> thumbnail"  data-src="<?php echo get_field('material_thumbnail')['url']; ?>">
                     </div>
                 </div>
             </div>
@@ -596,7 +590,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
                     </table>
                 </div>
                 <div class="text-center">
-                    <a target="_blank" href="https://docsend.com/view/iaa5nip" class="btn btn-primary text-14 md:text-16">download full tolerance chart</a>
+                    <a target="_blank" href="https://docsend.com/view/iaa5nip" class="btn btn-primary text-14 md:text-16">download tolerance chart</a>
                 </div>
             </div>
 

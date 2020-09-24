@@ -9,9 +9,8 @@
 					<div class="w-full sm:w-1/3 md:w-1/4 mb-12 md:mb-0 px-6">
 						<div class="w-24 mb-4">
 							<a href="<?php echo home_url() ?>">
-								<?php 
-									echo file_get_contents( get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg');
-								?>
+								<img alt="Fictiv logo green" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg'; ?>">
+								
 							</a>
 						</div>
 						<div class="font-museo-500 text-grey-600">

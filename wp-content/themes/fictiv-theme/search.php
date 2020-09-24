@@ -17,10 +17,10 @@ if ( isset ( $_GET['s'] ) && !empty( $_GET['s'] ) ) :
 
 endif;
 
-$search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"' : 'Sorry, there are no results matching “' . $_GET['s'] .'"' )
+$search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sorry, there are no results matching “' . $_GET['s'] .'"' )
 
 ?>
-<section class="py-32 lg:py-24">
+<section class="py-32 lg:py-20">
 	<div class="container">
 		
 		<div class="flex justify-center">
@@ -52,7 +52,7 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 									</h3>		
 								</div>
 								<?php 
-									if( !count( $response ) ) : 
+									if( !$response ) : 
 								?>
 								<div class="mb-6">
 									<h3 class="font-museo-500 text-grey-600 uppercase">
@@ -65,11 +65,10 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 							</div>
 						</div>
 						
-
 						<div class="flex -mx-2 flex-wrap justify-center sm:justify-start">
 							<?php
 								
-								if ( count( $response ) ) :
+								if ( $response ) :
 								
 									foreach ( $response as $i => $data ) :
 
@@ -153,8 +152,8 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 									</div>
 									<div class="p-4 relative">
 									
-										<div class="h-20">
-											<h2 class="font-museo-700 text-default max-lines max-lines-3"><?php 
+										<div class="h-24">
+											<h2 class="text-16 font-museo-700 text-default max-lines max-lines-3"><?php 
 												the_title();
 
 											?></h2>
@@ -168,8 +167,7 @@ $search_title = ( count( $response )  ? 'Search results for "' . $_GET['s'] . '"
 												?>
 											</div>
 										</div>
-									</div>
-									
+									</div> 
 								</div>
 							</div>
 							
