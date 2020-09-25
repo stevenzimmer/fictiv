@@ -83,7 +83,7 @@
 							
 						?>
 						<div class="mt-4">
-							<a target="_blank" href="<?php echo $args['download_link']; ?>" class="btn btn-primary">download ebook</a>
+							<a target="_blank" href="<?php echo $args['download_link']; ?>" class="btn btn-primary">download now</a>
 						</div>
 						<?php 
 							endif;
