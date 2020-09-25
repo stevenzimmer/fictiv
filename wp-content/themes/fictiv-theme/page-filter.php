@@ -3,7 +3,7 @@
 
 get_header();
 
-
+resource_center_cpt();
 
 $tax_query = array(
 	'relation' => 'OR'
@@ -20,33 +20,36 @@ foreach ( $_GET as $i => $query ) :
 			array_push( $content_types, $item );
 
 		else :
-			array_push($tax_query, array(
+
+			array_push( $tax_query, array(
 				'taxonomy' => $i,
 				'terms' => array(
 					$item
 				),
 				'field' => 'slug'
 			));
+		
 		endif;
 
 	endforeach;
 
 endforeach;
 
-$post_types = ( 
+$post_types = (
+
 		!empty( $content_types ) 
 		
 		? 
 
 			$content_types 
 
-		: ( 
+		: (
 
 			!empty( $_GET ) 
 
 			?
 
-				resource_center_cpt()
+				$GLOBALS['resource_post_types']
 			
 			:
 
@@ -55,7 +58,10 @@ $post_types = (
 		  )
 );
 
+// print_r( $content_types );
+
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 $args = array(
 	'posts_per_page' => 6,
 	'post_parent'=> 0,
