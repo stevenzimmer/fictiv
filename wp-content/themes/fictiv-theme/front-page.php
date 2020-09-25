@@ -98,7 +98,7 @@
 					
 					</div>
 					<div class="w-full relative group ">
-						<a href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
+						<a target="_blank" href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
 						<div>
 							<p class="text-white font-museo-700 leading-tight md:text-20">
 							ISO 9001</p>
