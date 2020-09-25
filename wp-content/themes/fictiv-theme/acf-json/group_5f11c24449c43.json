@@ -44,7 +44,7 @@
             {
                 "param": "page_type",
                 "operator": "==",
-                "value": "top_level"
+                "value": "child"
             }
         ],
         [
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599674500
+    "modified": 1601070687
 }

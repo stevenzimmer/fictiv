@@ -180,7 +180,7 @@
 										<div class=" px-2 w-1/3">
 											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
 												<div class="">
-													<a title="Connect with us on LinkedIn" rel="noopener noreferrer" target="_blank" class="https://www.linkedin.com/company/fictiv/" href=""><?php 
+													<a title="Connect with us on LinkedIn" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/fictiv/"><?php 
 															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/linkedin.svg');
 														?></a>
 												</div>
