@@ -75,7 +75,7 @@
             'cpt_ebook',
             'cpt_teardown',
             'cpt_tool',
-            'cpt_video',
+            // 'cpt_video',
             'cpt_webinar',
 
         );

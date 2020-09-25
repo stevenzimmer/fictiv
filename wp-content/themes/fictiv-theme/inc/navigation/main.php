@@ -75,7 +75,7 @@
 							?>
 							<div class="w-full w-3/5 lg:px-2 xl:px-6 hidden lg:block">
 								<ul class="flex justify-end items-center  font-museo-700 text-grey-700">
-									<li class="lg:mx-2 xl:mx-4">
+									<li class="lg:mx-2 xl:mx-4 hidden">
 										<a href="<?php echo $demo['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
 											<?php echo $demo['name']; ?>
 										</a>
@@ -168,7 +168,7 @@
 		endforeach;
 	?>
 
-	<div class="border-b border-grey-200">
+	<div class="border-b border-grey-200 hidden">
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12 ">
