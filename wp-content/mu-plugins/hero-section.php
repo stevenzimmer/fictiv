@@ -78,6 +78,15 @@
 						</div>
 						<?php 
 							endif;
+						
+							if ( $args['download_link'] ) :
+							
+						?>
+						<div class="mt-4">
+							<a target="_blank" href="<?php echo $args['download_link']; ?>" class="btn btn-primary">download ebook</a>
+						</div>
+						<?php 
+							endif;
 
 							if ( !empty( $args['webinar'] ) ) :
 							

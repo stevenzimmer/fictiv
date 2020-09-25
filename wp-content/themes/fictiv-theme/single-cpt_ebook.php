@@ -77,16 +77,6 @@ if ( have_posts() ) :
 							</p>
 						</div>
 
-						<?php 
-							if ( get_field('download_asset_link') ) :
-							
-						?>
-						<div>
-							<a target="_blank" href="<?php the_field('download_asset_link') ?>" class="btn btn-primary">download ebook</a>
-						</div>
-						<?php 
-							endif;
-						?>
 					</div>
 				</div>
 				<?php

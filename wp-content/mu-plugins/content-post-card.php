@@ -1,6 +1,6 @@
 <?php 
 
-function fictiv_post_card( $topic ) {
+function fictiv_post_card( $resource_type ) {
 
 	$thumbnail_src = ( has_post_thumbnail() ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0] : false );
 
@@ -29,10 +29,10 @@ function fictiv_post_card( $topic ) {
 	<div class="p-4 relative">
 		<div class="mb-1">
 			<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
-				echo $topic;
+				echo $resource_type;
 			?></p>
 		</div>
-		<div class="h-16">
+		<div class="h-12 mb-2">
 			<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
 				echo get_the_title();
 

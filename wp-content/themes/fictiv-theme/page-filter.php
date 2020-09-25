@@ -103,19 +103,19 @@ $max_num = ( $filtered->max_num_pages ? $filtered->max_num_pages : $default->max
 
 						?>
 						
-						<div class="flex -mx-4 flex-wrap justify-center sm:justify-start">
+						<div class="flex -mx-1 flex-wrap justify-center sm:justify-start">
 
 							<?php
 
 								while ( $filtered->have_posts() ) : 
 							    	$filtered->the_post();
-									include( get_template_directory() . '/inc/post-topics.php');
+								
 
 
 							?>
-							<div class="w-full sm:w-1/2 px-4 mb-6">
+							<div class="w-full sm:w-1/2 px-1 mb-2">
 								<?php 
-									fictiv_post_card( $topic_name );
+									fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
 								?>
 							
 							</div>

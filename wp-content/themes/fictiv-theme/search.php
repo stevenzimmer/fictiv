@@ -65,7 +65,7 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 							</div>
 						</div>
 						
-						<div class="flex -mx-2 flex-wrap justify-center sm:justify-start">
+						<div class="flex -mx-1 flex-wrap justify-center sm:justify-start">
 							<?php
 								
 								if ( $response ) :
@@ -74,7 +74,7 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 
 									
 							?>
-							<div class="w-full sm:w-1/2 px-2 mb-4">
+							<div class="w-full sm:w-1/2 px-1 mb-2">
 								<div class="border border-grey-200 relative h-full relative">
 									<a href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0 z-30"></a>
 									<div class="relative h-0 thumbnail-ratio" >
@@ -141,34 +141,14 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 									while ( $default->have_posts() ) : 
 							    		$default->the_post();
 
-										include( get_template_directory() . '/inc/post-topics.php');
 							?>
 
-							<div class="w-full sm:w-1/2 xl:w-1/3 px-2 mb-4">
-								<div class="border border-grey-200 relative h-full">
-									<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-30"></a>
-									<div class="relative h-0 thumbnail-ratio" >
-										<img alt="<?php the_title(); ?> thumbnail" title="<?php the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0]; ?>">
-									</div>
-									<div class="p-4 relative">
-									
-										<div class="h-24">
-											<h2 class="text-16 font-museo-700 text-default max-lines max-lines-3"><?php 
-												the_title();
+							<div class="w-full md:w-1/2 px-1 mb-2">
+								<?php 
 
-											?></h2>
-										</div>
-									
-										<div class="absolute right-0 bottom-0 p-4">
-											
-											<div>
-												<?php 
-													echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
-												?>
-											</div>
-										</div>
-									</div> 
-								</div>
+									fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+								
+								?>
 							</div>
 							
 							<?php 

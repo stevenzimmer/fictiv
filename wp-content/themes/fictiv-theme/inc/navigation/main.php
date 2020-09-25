@@ -75,8 +75,8 @@
 							?>
 							<div class="w-full w-3/5 lg:px-2 xl:px-6 hidden lg:block">
 								<ul class="flex justify-end items-center  font-museo-700 text-grey-700">
-									<li class="lg:mx-2 xl:mx-4 hidden">
-										<a href="<?php echo $demo['link']; ?>" class=" text-grey-700 hover:text-teal-light text-14">
+									<li class="lg:mx-2 xl:mx-4">
+										<a onclick="drift.api.startInteraction({ interactionId: 227629 });" class="cursor-pointer text-grey-700 hover:text-teal-light text-14">
 											<?php echo $demo['name']; ?>
 										</a>
 									</li>
@@ -172,7 +172,7 @@
 		<div class="container">
 			<div class="flex justify-center">
 				<div class="w-11/12 ">
-					<a class=" mobile-menu-item text-grey-700 block text-14 font-museo-700 py-3" href="<?php echo $demo['link']; ?>" >
+					<a onclick="drift.api.startInteraction({ interactionId: 227629 });" class=" mobile-menu-item text-grey-700 block text-14 font-museo-700 py-3" >
 						<?php echo $demo['name']; ?>
 					</a>
 				</div>

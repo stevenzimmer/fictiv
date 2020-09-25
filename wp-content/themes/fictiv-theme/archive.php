@@ -37,23 +37,23 @@ if ( have_posts() ) :
 							</div>
 						</div>
 						
-						<div class="flex -mx-2 flex-wrap justify-center sm:justify-start" data-resource-type="<?php echo $post_type; ?>">
+						<div class="flex -mx-1 flex-wrap justify-center sm:justify-start" data-resource-type="<?php echo $post_type; ?>">
 							<?php
 
 								while( have_posts() ) :
 
 									the_post();
 
-									include( get_template_directory() . '/inc/post-topics.php');
-
 
 							?>
-							<div class="w-full sm:w-1/2 px-2 mb-4">
+							<div class="w-full sm:w-1/2 px-1 mb-4">
+						
 								<?php 
-									fictiv_post_card( $topic_name );
+
+									fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
 								
 								?>
-							
+						
 							</div>
 							<?php 
 								endwhile;

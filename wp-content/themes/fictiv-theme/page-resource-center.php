@@ -41,7 +41,7 @@
 
 							$latest_reads = new WP_Query( $latest_args );
 						?>
-						<div class="mb-2">
+						<div class="mb-6">
 							<div class="mb-2">
 								<p class=" font-museo-700 text-grey-400 uppercase">read the latest</p>
 							</div>
@@ -52,46 +52,23 @@
 										while ( $latest_reads->have_posts() ) :
 										      	$latest_reads->the_post();
 
-												$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0];
-									
-										?>
+									?>
 									<div class="px-1">
-										<div class="border border-grey-200 relative h-full">
-											<a href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
-											<div class="relative h-0 thumbnail-ratio" >
-												<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail; ?>">
-											</div>
-											<div class="p-4 relative">
-												<div class="mb-1">
-													<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
-														echo get_post_type_object( get_post_type() )->labels->name ;
-													?></p>
-												</div>
-												<div class="h-16">
-													<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
-														echo get_the_title();
+							
+									<?php 
 
-													?></h2>
-												</div>
-
-												<div class="absolute right-0 bottom-0 p-4">
-													<div>
-														<?php 
-															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
-														?>
-													</div>
-												</div>
-											</div>
-											
-										</div>
+										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+									
+									?>
 
 									</div>
-										<?php
+									
+									<?php
 
-										     endwhile;
-											wp_reset_postdata();
-										
-										?>
+									    endwhile;
+										wp_reset_postdata();
+									
+									?>
 								</div>
 								<div class="absolute right-0 top-0 h-full w-8 bg-white opacity-50 hover:opacity-75 duration-200 ease-in-out transition-color resource-carousel-right">
 										<div class="flex w-full h-full justify-center items-center">
@@ -113,7 +90,7 @@
 										</div>
 									</div>
 								</div>
-						</div>
+							</div>
 						<?php
 
 							foreach ( $GLOBALS['resource_post_types'] as $i => $type ) :
@@ -131,7 +108,7 @@
 								if ( $resources->have_posts() ) : 
 	    
 						?>
-						<div class="mb-2">
+						<div class="mb-6">
 							
 							<div class="mb-2">
 								<div>
@@ -144,7 +121,7 @@
 									</p>
 								</div>
 							</div>
-							<div class=" -mx-1 relative resource-carousel-wrapper">
+							<div class="-mx-1 relative resource-carousel-wrapper">
 									
 								<div class="resources-carousel" >
 							<?php 
@@ -152,54 +129,21 @@
 									while ( $resources->have_posts() ) :
 										$resources->the_post();
 										
-										include( get_template_directory() . '/inc/post-topics.php');
 
 							?>
 							
 									<div class="max-w-md md:max-w-sm px-1">
-										<div class="border border-grey-200 relative h-full">
-											<a href="<?php the_permalink(); ?>" class="w-full h-full absolute inset-0 z-50"></a>
-											<div class="relative h-0 thumbnail-ratio" >
-												<?php 
-													if( has_post_thumbnail() ) :
-												?>
-												<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0]; ?>">
-
-												<?php 
-													else :
-												?>
-												<div class="bg-grey-100 absolute inset-0 w-full h-full flex items-center justify-center">
-													<div>
-														<p>Upload hero image to this post</p>
-													</div>
-												</div>
-												<?php
-													endif;
-												?>
-											</div>
-											<div class="p-2 relative">
 										
-												<div class="h-20 mb-8">
-													<h2 class="text-16 font-museo-700 text-default max-lines max-lines-3"><?php 
-														echo get_the_title();
-
-													?></h2>
-												</div>
-										
-												
-
-												<div class="absolute right-0 bottom-0 p-4">
-												
-													<div>
-														<?php 
-															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
-														?>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
 							
+									<?php 
+
+										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+									
+									?>
+
+									</div>
+
+									
 							<?php 
 										endwhile;
 										wp_reset_postdata();

@@ -315,23 +315,23 @@
 							),
 
 							array(
-								'icon' => 'food',
-								'text' => 'Free catered lunch, snacks, and drinks'
+								'icon' => 'parental',
+								'text' => 'Paid parental leave'
 							),
 
 							array(
-								'icon' => 'learning',
-								'text' => 'Learning and development stipend'
+								'icon' => 'stocks',
+								'text' => 'Equity options'
 							),
 
 							array(
-								'icon' => 'food',
-								'text' => 'Free catered lunch, snacks, and drinks'
+								'icon' => 'wellness',
+								'text' => 'Wellness stipend'
 							),
 
 							array(
-								'icon' => 'learning',
-								'text' => 'Learning and development stipend'
+								'icon' => 'pto',
+								'text' => 'Paid volunteer days'
 							),
 
 							
@@ -342,7 +342,7 @@
 					?>
 					<div class="w-full md:w-1/2 lg:w-1/3 text-center px-2 mb-4">
 						<div class="p-4 bg-white h-full">
-							<div class="mb-4">
+							<div class="mb-2">
 								<div class="flex items-center justify-center h-24">
 									<div class=" w-full">
 										<img class="mx-auto lazyload" alt="fictiv values" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/perk-<?php echo $perk['icon']; ?>.svg">
