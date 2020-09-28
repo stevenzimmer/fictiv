@@ -702,51 +702,20 @@
 				while ( $featured_posts->have_posts() ) : 
 				    $featured_posts->the_post();
 
+				    $arr = array(
+				    	'link' => get_the_permalink(),
+				    	'img' => get_the_post_thumbnail_url(),
+				    	'title' => get_the_title(),
+				    	'excerpt' => get_the_excerpt()
+				    );
+
+
+
 			?>
 			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-				<div class="h-full group relative border border-grey-200">
-					<a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
-					<?php 
-						if( has_post_thumbnail() ) :
-					?>
-					<div class="relative h-0" style="padding-bottom: 40.25%">
-						
-						<img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
-					</div>
-					<?php 
-						else :
-					?>
-					<div class="w-full h-56 bg-grey-100">
-						<div class="flex justify-center items-center h-full">
-							Please upload Hero graphic to this post
-						</div>
-					</div>
-					<?php 
-						endif;
-					?>
-					<div class="p-4 relative">
-						<div class="mb-2">
-							<h3 class=" font-museo-700">
-
-								<?php 
-									the_title();
-								?>
-								
-							</h3>
-						</div>
-						<div class=" mb-4 max-lines max-lines-3">
-							<?php 
-								the_excerpt();
-							?>
-
-						</div>
-						<div class="">
-							<p class="group-hover:text-teal-dark text-teal-light font-museo-700">Learn More</p>
-						</div>
-						
-					</div>
-				</div>
-				
+				<?php 
+					related_content_module( $arr );
+				?>
 			</div>
 			<?php
 				endwhile;

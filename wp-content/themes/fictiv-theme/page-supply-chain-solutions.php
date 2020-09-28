@@ -100,11 +100,26 @@
 							echo get_post_type_object( get_post_type( $resource_id ) )->labels->singular_name;
 							?></p>
 						</div>
-						<div class="h-18 mb-8">
-							<h2 class="font-museo-700 text-default max-lines max-lines-3"><?php 
+						<div class="h-12 mb-2">
+							<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
 								echo get_the_title( $resource_id );
 
 							?></h2>
+						</div>
+						<div class=" text-grey-600 font-museo-500 h-24">
+							<?php 
+								if( get_the_excerpt(  $resource_id  ) ) :
+							?>
+							<p class=" max-lines max-lines-3">
+								
+								<?php 
+									echo get_the_excerpt( $resource_id  );
+								?>
+								
+							</p>
+							<?php 
+								endif;
+							?>
 						</div>
 
 						<div class="absolute right-0 bottom-0 p-4">

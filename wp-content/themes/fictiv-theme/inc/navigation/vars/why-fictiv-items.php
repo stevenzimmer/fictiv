@@ -30,7 +30,7 @@
 		array(
 			'icon' => 'manufacturability-feedback',
 			'title' => 'Manufacturability Feedback',
-			'para' => 'Improved designs with automated DFM warnings and suggestions.',
+			'para' => 'Improve designs with automated DFM warnings and suggestions.',
 			'link' => '/our-platform#feedback'
 		),
 

@@ -1,6 +1,3 @@
-<?php 
-    // get_template_part('partials/footer', 'cta');
-?>
 <footer class="py-10 border-t border-teal-lighter">
 	<div class="container">
 		<div class="flex justify-center">
@@ -35,97 +32,7 @@
 								)
 							);
 						?>
-						<div class="flex justify-between flex-wrap hidden">
-							<?php 
-								$footer_items = array(
-									array(
-										'title' => 'Why Fictiv',
-										'links' => array(
-											'Loremipsum dolor',
-											'Sitamet, consectur ',
-											'tempaliquam',
-											'Adipiscing elitdo',
-											'Rhoncus ellensque ',
-											'Ullamcorper gnis',
-										)
-									),
-
-									array(
-										'title' => 'Solutions',
-										'links' => array(
-											'Loremipsum dolor',
-											'Sitamet, consectur ',
-											'tempaliquam',
-											'Adipiscing elitdo',
-											'Rhoncus ellensque ',
 						
-										)
-									),
-
-									array(
-										'title' => 'Capabilities',
-										'links' => array(
-											'Loremipsum dolor',
-											'Sitamet, consectur ',
-											'tempaliquam',
-											'Adipiscing elitdo',
-											'Rhoncus ellensque ',
-					
-										)
-									),
-
-									array(
-										'title' => 'Resources Center',
-										'links' => array(
-											'Loremipsum dolor',
-											'Sitamet, consectur ',
-											'tempaliquam',
-										
-										)
-									),
-
-									array(
-										'title' => 'Help Center',
-										'links' => array(
-											'Loremipsum dolor',
-											'Sitamet, consectur ',
-											'tempaliquam',
-											'Adipiscing elitdo',
-											'Rhoncus ellensque ',
-											
-										)
-									),
-								);
-
-								foreach ( $footer_items as $i => $item ) :
-								
-							?>
-							<div class="w-1/2 md:w-1/3 lg:w-1/5 mb-12 lg:mb-0">
-								<p class="font-museo-700 mb-4">
-									<?php 
-										echo $item['title'];
-									?>
-								</p>
-
-								<?php 
-									foreach ($item['links'] as $j => $link ) :
-									
-								?>
-								<p class="text-black text-12 mb-2 last:mb-0">
-									<?php 
-										echo $link;
-									?>
-								</p>
-								<?php 
-									endforeach;
-								?>
-
-							
-							</div>
-							<?php 
-								endforeach;
-							?>
-						</div>
 					</div>
 				</div>
 				<div class="flex justify-start flex-wrap items-center">
@@ -151,41 +58,43 @@
 							<div class="w-full sm:w-1/3 lg:w-1/2">
 								<div class="flex justify-center sm:justify-start">
 									<div class="flex justify-center px-2 flex-wrap ">
-										<div class=" px-2 w-1/3">
-											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
+										<?php 
+
+											$social_icons = array(
+												array(
+													'name' => 'Twitter',
+													'link' => 'https://twitter.com/fictiv'
+												),
+
+												array(
+													'name' => 'Facebook',
+													'link' => 'https://www.facebook.com/fictivmade'
+												),
+
+												array(
+													'name' => 'LinkedIn',
+													'link' => 'https://www.linkedin.com/company/fictiv/'
+												)
+											);
+
+
+											foreach ( $social_icons as $i => $icon ) :
+												
+											
+										?>
+										<div class=" px-2 w-1/3 h-full">
+											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center h-full">
 												<div class="">
-													<a title="Connect with us on Twitter" rel="noopener noreferrer" target="_blank" href="https://twitter.com/fictiv">
-														<?php 
-															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/twitter.svg');
-														?>
-															
-														</a>
-															
+													<a title="Connect with us on <?php echo $icon['name']; ?>" rel="noopener noreferrer" target="_blank" href="<?php echo $icon['link']; ?>">
+														<img alt="<?php echo $icon['name']; ?> icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/' . strtolower( $icon['name'] ) . '.svg' ?>">
+													</a>
 												</div>
 											</div>
 										</div>
-										<div class=" px-2 w-1/3">
-											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
-												<div class="">
-													<a title="Connect with us on Facebook" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/fictivmade">
-															<?php 
-																echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/facebook.svg');
-															?>
-													
-														</a>
-														
-												</div>
-											</div>
-										</div>
-										<div class=" px-2 w-1/3">
-											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center">
-												<div class="">
-													<a title="Connect with us on LinkedIn" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/fictiv/"><?php 
-															echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/linkedin.svg');
-														?></a>
-												</div>
-											</div>
-										</div>
+										<?php 
+											endforeach;
+										?>
+									
 									</div>
 								</div>
 							</div>

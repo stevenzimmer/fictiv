@@ -847,45 +847,25 @@ if ( $related_posts->have_posts() ) :
 
                         while ( $related_posts->have_posts() ) : 
                             $related_posts->the_post();
-                    ?>
+        
+                            $arr = array(
+                                'link' => get_the_permalink(),
+                                'img' => get_the_post_thumbnail_url(),
+                                'title' => get_the_title(),
+                                'excerpt' => get_the_excerpt()
+                            );
+
+                ?>
                     <div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-                        <div class="h-full relative group">
-                            <a href="<?php the_permalink(); ?>" class="absolute w-full h-full inset-0 z-50"></a>
-                            <?php 
-                                if( has_post_thumbnail() ) :
-                            ?>
-                            <div class="relative h-0" style="padding-bottom: 40.25%">
-                                <img class="absolute w-full h-full inset-0 object-cover" src="<?php the_post_thumbnail_url(); ?>">
-                            </div>
-                            <?php 
-                                else :
-                            ?>
-                            <div class="w-full h-64 bg-grey-100">
-                                <div class="flex justify-center items-center h-full">
-                                    Please upload Hero graphic to this post
-                                </div>
-                            </div>
-                            <?php 
-                                endif;
-                            ?>
-                            <div class="p-4">
-                                <h3 class="font-museo-700">
-                                    <a class="group-hover:text-grey-600" href="<?php the_permalink(); ?>">
-                                        <?php 
-                                            the_title();
-                                        ?>
-                                    </a>
-                                    
-                                </h3>
-                            </div>
-                        </div>
-                        
+                        <?php 
+                            related_content_module( $arr );
+                        ?>
                     </div>
-                    <?php
-                        endwhile;
-                        wp_reset_postdata();
-                        
-                    ?>
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                    
+                ?>
                     
                 </div>
             </div>
