@@ -321,82 +321,67 @@
 
 <?php 
 	endif;
+	
 ?>
 <section class="bg-grey-100 py-20">
 	<div class="container">
 		<div class="text-center mb-6">
 			<h2 class="xl text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6 text-center">
-				Fictiv Powers Over 2,500 Companies
+				<?php the_field('cqs_title'); ?>
 			</h2>
 			<p class="md:text-20 font-museo-500 text-grey-600">
-				We’ve manufactured over 10M mechanical parts for our customers’ prototyping and NPI applications
+				<?php the_field('cqs_subtitle'); ?>
 			</p>
 		</div>
+		<?php 
+			if( have_rows('cqs_quotes') ) :
+		?>
 		<div class="flex flex-wrap justify-center lg:justify-start -mx-2 mb-12">
 			<?php 
-				$companies = array(
-					array(
-						'logo' => 'nasa',
-						'quote' => '“Having 24/7 visibility and access to the real-time schedule of things is a game-changer.”',
-						'headshot' => 'antonio-ruiz',
-						'name' => 'Antonio Ruiz',
-						'title' => 'Supervisor, Strategic Sourcing'
-					),
 
-					array(
-						'logo' => 'lyft',
-						'quote' => '“Fictiv’s streamlined end-to-end process captures the entire value chain from design upload through DFM with real-time pricing. Impressive stuff.”',
-						'headshot' => 'ibrahim-toukan',
-						'name' => 'Ibrahim Toukan',
-						'title' => 'Head of Level 5 Supply Chain<br>Autonomous Vehicle Devision'
-					),
+                while( have_rows('cqs_quotes') ) : 
+                    the_row();
 
-					array(
-						'logo' => 'rise-robotics',
-						'quote' => '“Having all our data updating live in one centralized place — part by part, order by order — is incredible.”',
-						'headshot' => 'blake-sessions',
-						'name' => 'Blake Sessions',
-						'title' => 'Director of R&D'
-					),
-				);
-
-				foreach ($companies as $i => $company ) :
 			?>
 			<div class="w-11/12 lg:w-1/3 px-2 mb-6 lg:mb-0 last:mb-0">
 				<div class="bg-white text-center px-6 py-6 pb-10">
 					<div class="mb-4 lg:h-20 flex items-center">
-						<img width="80" class="lazyload  mx-auto" alt="<?php echo $company['logo']; ?> logo" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/<?php echo $company['logo']; ?>.png">
+						<img width="80" class="lazyload  mx-auto" alt="<?php echo $company['logo']; ?> logo" data-src="<?php the_sub_field('cqs_quotes_customer_logo'); ?>">
 					</div>
 					<div class="lg:h-28">
 						<p class="text-grey-600 font-museo-500">
-							<?php echo $company['quote']; ?>
+							<?php the_sub_field('cqs_quotes_quote_text'); ?>
 						</p>
 					</div>
 				</div>
 				<div class="text-center -mt-10">
 					<div class="mb-4">
-						<img width="80" class="lazyload rounded-full mx-auto" alt="<?php echo $company['name']; ?> headshot" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/headshots/<?php echo $company['headshot']; ?>.jpg">
+						<img width="80" class="lazyload rounded-full mx-auto" alt="<?php the_sub_field('cqs_quotes_citation_name'); ?> headshot" data-src="<?php the_sub_field('cqs_quotes_citation_headshot'); ?>">
 					</div>
 					<div>
-						<div>
-							<p class="font-museo-500 text-grey-700">
-								<?php echo $company['name']; ?>
-							</p>
-							<p class="text-grey-600 font-museo-500">
-								<?php echo $company['title']; ?>
-							</p>
-						</div>
+
+						<p class="font-museo-500 text-grey-700">
+							<?php the_sub_field('cqs_quotes_citation_name'); ?>
+						</p>
+						<p class="text-grey-600 font-museo-500">
+							<?php the_sub_field('cqs_quotes_citation_title'); ?>
+						</p>
+					
 					</div>
 				</div>
 			</div>
 			<?php
-				endforeach;
+				endwhile;
 			?>
 		</div>
+		<?php 
+			endif;
+		?>
 		<div class="flex flex-wrap justify-center items-center">
 			
 			<?php 
 				$logos_grey = array(
+
 					array(
 						'size' => 100,
 						'slug' => 'intuitive-surgical'
