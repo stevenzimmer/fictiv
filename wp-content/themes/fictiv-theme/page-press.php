@@ -13,7 +13,7 @@
 <section class="py-20">
 	<div class="container">
 		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-7/12">
+			<div class="w-11/12 lg:w-8/12">
 				<div class="text-center">
 					<div class="mb-4">
 						<h3 class="text-grey-700 font-museo-500 text-20 md:text-29">
@@ -29,7 +29,7 @@
 						<a href="https://www.dropbox.com/sh/g830nmoumjtu1pl/AABtBA6rDHoIhosL3aar8uqKa?dl=0" class="btn btn-primary" download>download press kit</a>
 					</div>
 					<div class="flex justify-center">
-						<div class="md:w-6/12">
+						<div class="md:w-9/12">
 							<p class="leading-tight">
 								<small>
 									If you are a member of the press and can’t find something you need—or want to speak with someone from Fictiv—please contact us at <a href="mailto:press@fictiv.com">press@fictiv.com</a>
@@ -62,7 +62,7 @@
 					),
 				);
 
-				foreach ($founders as $i => $founder ) :
+				foreach ( $founders as $i => $founder ) :
 				
 			?>
 			<div class="w-11/12 lg:w-1/2 px-6 mb-12 lg:mb-0">
@@ -72,7 +72,7 @@
 					</div>
 					<div class="md:w-7/12">
 						<div>
-							<h3 class="text-blue-dark text-24 font-museo-700"><?php echo $founder['name']; ?></h3>
+							<h3 class="text-grey-700 text-24 font-museo-700"><?php echo $founder['name']; ?></h3>
 						</div>
 						<div class="mb-4">
 							<p class="text-grey-700 font-museo-500"><?php echo $founder['title']; ?></p>
@@ -98,7 +98,7 @@ if ( have_rows('featured_press') ) :
 		<div class="text-center mb-12">
 			<div>
 				<h3 class="text-grey-700 font-museo-500 text-20 md:text-29">
-					Featured Press
+					Featured Media Coverage
 				</h3>
 			</div>
 		</div>
@@ -170,7 +170,7 @@ if ( have_rows('featured_press') ) :
 						</p>
 					</div>
 					<div>
-						<a class="text-teal-light hover:text-teal-dark font-museo-500" href="<?php the_sub_field('press_release_link'); ?>">Read More</a>
+						<a target="_blank" class="text-teal-light hover:text-teal-dark font-museo-500" href="<?php the_sub_field('press_release_link'); ?>">Read More</a>
 					</div>
 				</div>
 			</div>
