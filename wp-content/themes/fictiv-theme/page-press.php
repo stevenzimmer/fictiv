@@ -147,7 +147,7 @@ if ( have_rows('featured_press') ) :
 				Latest Press Releases
 			</h3>
 		</div>
-		<div class="flex justify-center lg:justify-start flex-wrap -mx-4">
+		<div class="flex justify-center lg:justify-start flex-wrap -mx-4 mb-12">
 			<?php 
 				while ( have_rows('press_releases') ) :
 					the_row();
@@ -177,6 +177,9 @@ if ( have_rows('featured_press') ) :
 			<?php 
 				endwhile;
 			?>
+		</div>
+		<div class="text-center">
+			<a target="_blank" class="btn btn-primary" href="http://www.globenewswire.com/Search?organization=Fictiv">See all press releases</a>
 		</div>
 
 	</div>

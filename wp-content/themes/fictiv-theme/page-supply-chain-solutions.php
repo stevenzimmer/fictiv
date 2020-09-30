@@ -25,29 +25,6 @@
 		</div>
 	</div>
 </header>
-<section class="py-20 bg-blue-100">
-	<div class="container">
-		<div class="flex flex-wrap justify-center lg:justify-start lg:-mx-6">
-			<div class="lg:w-1/2 lg:px-6">
-				<div class="flex flex-wrap bg-white mb-12">
-					<div class="w-full lg:w-1/2">
-						<img alt="face shield 1" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-1.jpg"/>
-					</div>
-					<div class="w-full lg:w-1/2">
-						<img alt="face shield 2" class="lazyload" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/face-shield-2.jpg"/>
-					</div>
-				</div>
-			</div>
-			<div class="w-11/12 lg:w-1/2 lg:px-6">
-				<h2 class="uppercase text-30 leading-tight text-blue-dark font-museo-900 mb-8">COVID-19 Face Shields</h2>
-				<p class="text-blue-dark text-20 mb-8">Leveraging the best open source designs, a team of manufacturing experts, and its global manufacturing network, Fictiv is manufacturing millions of protective face shields at cost, for healthcare agencies with urgent need in the fight against COVID-19.</p>
-				<div>
-					<a href="/covid-19-face-shields/" class="btn btn-ghost btn-ghost-secondary">Learn more</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 
 <section class="relative py-20">
 	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/careers-header.jpg'; ?>)"></div>
