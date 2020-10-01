@@ -19,11 +19,11 @@
 <header class="py-12 relative homepage-hero">
 	<div class="w-full h-full absolute inset-0">
 		<div class="relative h-full w-full hidden lg:block">
-			<img alt="homepage hero" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
+			<img alt="homepage hero" class="absolute w-full h-full object-cover lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero.jpg'; ?>">
 		</div>
 
 		<div class="relative h-full w-full lg:hidden">
-			<img alt="homepage hero mobile" class="absolute w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
+			<img alt="homepage hero mobile" class="absolute w-full h-full object-cover lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
 		</div>
 		
 	</div>
@@ -424,6 +424,7 @@
 
 
 <?php 
+
 	$modules = array(
 		array(
 			'name' => 'Instant Pricing',
@@ -438,10 +439,11 @@
 		array(
 			'name' => 'Order Tracking',
 			'vimeo_id' => 452393900
-		),
+		)
 	);
 
 ?>
+
 <section class="section bg-white">
 	<div class="container">
 		<div class="text-center mb-4">
@@ -479,7 +481,6 @@
 			<div class="w-full toggle-module-wrapper mb-12">
 				<?php 
 					
-
 					foreach ( $modules as $i => $module ) :
 					
 				?>

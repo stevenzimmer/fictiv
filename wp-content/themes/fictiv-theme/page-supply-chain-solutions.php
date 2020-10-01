@@ -85,7 +85,7 @@
 						</div>
 						<div class=" text-grey-600 font-museo-500 h-24">
 							<?php 
-								if( get_the_excerpt(  $resource_id  ) ) :
+								if( get_the_excerpt( $resource_id ) ) :
 							?>
 							<p class=" max-lines max-lines-3">
 								

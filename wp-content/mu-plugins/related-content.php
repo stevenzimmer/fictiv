@@ -5,7 +5,7 @@ function related_content_module( $rc_arr ) {
         <a href="<?php echo $rc_arr['link']; ?>" class="absolute w-full h-full inset-0 z-50"></a>
 
         <div class="relative h-0" style="padding-bottom: 40.25%">
-            <img class="absolute w-full h-full inset-0 object-cover" src="<?php echo $rc_arr['img']; ?>">
+            <img class="absolute w-full h-full inset-0 object-cover lazyload" data-src="<?php echo $rc_arr['img']; ?>">
         </div>
         <div class="p-4">
         	<div>
