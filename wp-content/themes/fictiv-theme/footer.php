@@ -111,8 +111,8 @@
 <?php 
     wp_footer();
 ?>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 !(function(){var q=new URLSearchParams(window.location.search).toString();q&&q.includes("utm_")&&(document.cookie=`_fictiv_utm=${q}; path=/; domain=.fictiv.com; max-age=604800; samesite=lax;`);})();
-</script> -->
+</script>
 </body>
 </html>
