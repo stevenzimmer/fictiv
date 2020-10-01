@@ -77,7 +77,6 @@
 												)
 											);
 
-
 											foreach ( $social_icons as $i => $icon ) :
 												
 											

@@ -35,9 +35,7 @@
 					<div class="md:px-2">
 						<div class="flex justify-center">
 							
-							<?php 
-								echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg');
-							?>
+							<img alt="Menu Arrow Right icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg'; ?>">
 							
 						</div>
 						
@@ -71,19 +69,14 @@
 			</div>
 			<div class="px-2">
 				<div class="flex justify-center px-2">
-					<?php 
-						echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg');
-					?>
+					<img alt="Menu Arrow Right icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/cap-menu-arrow.svg'; ?>">
 				</div>
-				
 			</div>
 			<?php 
 				endif;
 			?>
 		</div>
-	
 	</div>
-
 <?php 
 	}
 ?>
