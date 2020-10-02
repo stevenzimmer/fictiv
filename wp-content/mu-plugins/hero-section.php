@@ -45,7 +45,8 @@
 			<?php 
 				elseif( $args['post_type'] === 'cpt_webinar' || 
 						$args['post_type'] === 'cpt_ebook' || 
-						$args['post_type'] === 'cpt_tool'
+						$args['post_type'] === 'cpt_tool' ||
+						$args['post_type'] === 'page'
 					) :			
 			?>
 			<div class="w-full lg:w-10/12">

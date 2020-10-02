@@ -11,18 +11,15 @@
 @import "./modules/_homepage.css";
 @import "./modules/_capabilities.css";
 
-
 @import "./components/_btns.css";
 @import "./components/_nav.css";
 @import "./components/_footer.css";
 @import "./components/_toggle-modules.css";
-/*@import "./components/_tolerance-chart.css";*/
 @import "./components/_form.css";
 @import "./components/_carousel.css";
 @import "./components/_hero.css";
 @import "./components/_filter.css";
 @import "./components/_pagination.css";
-/*@import "./components/_search.css";*/
 @import "./components/_modal.css";
 @import "./pages/_partners.css";
 

@@ -53,6 +53,18 @@
                 "operator": "==",
                 "value": "cpt_case_study"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-landing-page-form.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "child"
+            }
         ]
     ],
     "menu_order": 0,
@@ -63,5 +75,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1601070687
+    "modified": 1601644555
 }

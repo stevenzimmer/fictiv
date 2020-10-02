@@ -208,6 +208,17 @@
 
 			&-block {
 
+				&-atomic {
+
+					&-blocks {
+					
+						&-ab {
+					
+
+						}
+					}
+				}
+
 				&-separator {
 					@apply border-grey-200 mb-4;
 				}
@@ -769,4 +780,5 @@
 		}
 	}
 }
+
 /*! purgecss end ignore */

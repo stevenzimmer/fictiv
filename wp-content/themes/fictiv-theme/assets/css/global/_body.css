@@ -112,8 +112,6 @@ h2 {
 .link {
 
 	&-underline {
-
-
 	    @apply relative inline-block pb-1;
 
 	    &.active,

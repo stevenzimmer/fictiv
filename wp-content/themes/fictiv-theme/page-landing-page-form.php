@@ -1,16 +1,14 @@
 <?php 
+/* 	Template Name: Landing page w/form
+*/ 
 get_header();
-// print_r( get_queried_object() );
-// $post_taxonomies = get_object_taxonomies( get_queried_object()->post_type, 'objects' );
 
-// print_r( $post_taxonomies );
-// print_r( get_queried_object()->post_type)
 if ( have_posts() ) : 
 
     while ( have_posts() ) : 
         the_post();
-        include( get_template_directory() . '/inc/post-topics.php');
 
+        include( get_template_directory() . '/inc/post-topics.php');
         include( get_template_directory() . '/inc/hero-vars.php');
 
         $args = array(
@@ -33,19 +31,15 @@ if ( have_posts() ) :
 
 ?>
 
-
 <section class="py-10">
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
 			<div class="w-full lg:w-10/12 px-5 lg:px-0">
-				<div class="mb-6">
-					<?php 
-						get_template_part('partials/single', 'breadcrumbs');
-					?>
-				</div>
+				
 				<?php 
 				
 					if ( !$has_parent ) :
+				
 				?>
 				<div class="flex flex-wrap justify-center lg:justify-start -mx-6">
 				
@@ -53,12 +47,13 @@ if ( have_posts() ) :
 						
 						<div class="post-content resource">
 							<?php 
-								echo get_post_field( 'post_content', $has_parent );
+								the_content();
 							?>
 						</div>
 					</div>
 					<div class="w-full lg:w-1/2 px-6">
 						<?php 
+
 							if ( get_field('asset_thumbnail', $has_parent ) ) :
 							
 						?>
@@ -66,7 +61,9 @@ if ( have_posts() ) :
 							the_field('asset_thumbnail', $has_parent );
 						?>">
 						<?php 
+
 							endif;
+						
 						?>
 					</div>
 				
@@ -80,11 +77,23 @@ if ( have_posts() ) :
 					<div class="w-11/12 lg:w-1/2 px-6">
 						
 						<div class="post-content ebook mb-6">
+							<?php 
+							
+								if ( !get_post_field( 'post_content' ) ) :
+							
+							?>
 							<p>
 								You can download now, or check your inbox for a download link at your own convenience.
 							</p>
+							<?php 
+							
+								else :
+						
+									the_content();
+							
+								endif;
+							?>
 						</div>
-
 					</div>
 				</div>
 				<?php
@@ -96,9 +105,54 @@ if ( have_posts() ) :
 </section>
 <?php 
 
-	if ( $has_parent ) :
+	if ( get_field('add_resources') ) :
+?>
+<section class="py-10">
+	<div class="container">
+		
+		<div class="flex justify-center">
+			<div class="w-11/12 lg:w-full">
+				<div class="mb-2">
+					<h3 class="uppercase text-16 font-museo-500 text-grey-600">
+						You might also be interested in
+					</h3>
+				</div>
+			</div>
+		</div>
+		
+		<div class="flex flex-wrap -mx-2">
+			<?php 
+				
+				foreach ( get_field('add_resources') as $i => $resource_id ) :
+		
+				
+					
+					$arr = array(
+				    	'link' => get_the_permalink( $resource_id ),
+				    	'img' => get_the_post_thumbnail_url($resource_id ),
+				    	'title' => get_the_title($resource_id),
+				    	'excerpt' => get_the_excerpt($resource_id)
+				    );
 
-		include( get_template_directory() . '/inc/related-posts.php');
+
+
+			?>
+			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
+				<?php 
+					related_content_module( $arr );
+				?>
+			</div>
+			<?php
+				endforeach;
+
+				
+			?>
+			
+		</div>
+	</div>
+		
+</section>
+<?php
 	
 	endif;
 	

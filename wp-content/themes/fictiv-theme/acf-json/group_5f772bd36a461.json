@@ -1,0 +1,57 @@
+{
+    "key": "group_5f772bd36a461",
+    "title": "Related Resources",
+    "fields": [
+        {
+            "key": "field_5f772bdd4caf4",
+            "label": "Add Resources",
+            "name": "add_resources",
+            "type": "post_object",
+            "instructions": "Limit to 2 resources",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cpt_blog",
+                "cpt_tool",
+                "cpt_video",
+                "cpt_case_study",
+                "cpt_ebook",
+                "cpt_webinar",
+                "cpt_teardown"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-landing-page-form.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "child"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1601645645
+}
