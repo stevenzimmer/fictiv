@@ -33,7 +33,7 @@
 			<div class="w-11/12 lg:w-11/12">
 				<div class="text-center">
 				
-					<h1 class="xl text-white font-museo-700 text-29 md:text-36">
+					<h1 class="xl text-white font-museo-700">
 						Your Go-to Partner for Precision Parts at the Speed of Digital
 					</h1>
 			
@@ -77,7 +77,7 @@
 
 	<div class="py-40 md:py-32 lg:py-48"></div>
 	
-	<div class="absolute w-full bottom-0 pb-12 md:pb-6 lg:pb-12">
+	<div class="absolute w-full bottom-0 pb-6 lg:pb-12">
 		<div class="container flex justify-center">
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
 				
@@ -94,8 +94,7 @@
 				<div class="flex items-center relative mb-4 md:mb-0">
 					<a class="absolute w-full h-full inset-0" href="https://docsend.com/view/fwev6a8jj6zd59rq" target="_blank"></a>
 					<div class="mr-2 ">
-						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/iso.svg'; ?>">
-					
+						<img alt="ISO 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/iso.svg'; ?>">
 					</div>
 					<div class="w-full relative group ">
 						<a target="_blank" href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
@@ -113,11 +112,10 @@
 								
 							</div>
 						</div>
-					
 					</div>
 				</div>
 
-				<div class="flex items-center relative">
+				<div class="flex items-center relative mb-4 md:mb-0">
 					<div class="mr-2">
 						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/guarantee.svg'; ?>">
 						
@@ -125,6 +123,17 @@
 					<div class="w-full">
 						<p class="text-white font-museo-700 leading-tight md:text-20">
 							Fictiv inspections <br>on every part
+						</p>
+					</div>
+				</div>
+				<div class="flex items-center relative">
+					<div class="mr-2">
+						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/parts.svg'; ?>">
+						
+					</div>
+					<div class="w-full">
+						<p class="text-white font-museo-700 leading-tight md:text-20">
+							We accept drawings <br>with 3D CAD
 						</p>
 					</div>
 				</div>
@@ -388,8 +397,8 @@
 					),
 
 					array(
-						'size' => 60,
-						'slug' => 'facebook'
+						'size' => 110,
+						'slug' => 'oculus'
 					),
 
 					array(
