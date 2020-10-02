@@ -36,7 +36,7 @@
 							</div>
 							<div>
 								<p class="text-blue-dark font-museo-700 leading-tight">
-									All parts inspected by Fictiv quality Engineers
+									All parts inspected by Fictiv Quality Engineers
 								</p>
 							</div>
 						</div>

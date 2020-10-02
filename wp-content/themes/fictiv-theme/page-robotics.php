@@ -51,7 +51,7 @@
 
                             $hero_cta_btn = get_field('capabilities_hero_cta_button');
 
-                            if ( $hero_cta_btn ) :
+                            if ( !empty( $hero_cta_btn ) ) :
                                 
                         ?>
                         <div>
@@ -73,11 +73,11 @@
 <section class="bg-white py-20">
 	<div class="container">
 		<div class="flex justify-center mb-12">
-			<div class="w-11/12 lg:w-8/12">
+			<div class="w-11/12 lg:w-6/12">
 				<div class="text-center">
-					<h3 class="text-blue-dark uppercase font-museo-900 text-24 lg:text-36 leading-tight">
-						ACCESS A VARIETY OF HIGH PRECISION CAPABILITIES THROUGH ONE PLATFORM
-					</h3>
+					<h2 class="text-20 md:text-29 text-grey-700 font-museo-700">
+						Access a Varierty of High Precisiion Capabilities Throught One Platform
+					</h2>
 				</div>
 			</div>
 		</div>
@@ -87,81 +87,82 @@
 				<div class="flex flex-wrap -mx-4">
 					<?php 
 						$types = array(
-								array(
-									'img' => "cnc-milling",
-									'title' => 'CNC MILLING',
-									'text' => '3, 4 and 5-axis machining capabilities for simple and complex geometries',
-									'link' => '/processes/cnc-milling/'
-								),
+								
+							array(
+								'img' => "cnc-milling",
+								'title' => 'CNC MILLING',
+								'text' => '3, 4 and 5-axis machining capabilities for simple and complex geometries',
+								'link' => '/processes/cnc-milling/'
+							),
 
-								array(
-									'img' => "cnc-turning",
-									'title' => 'CNC TURNING',
-									'text' => 'Standard and live tooling capabilities for cylindrical parts such as pins, shafts, and spacers.',
-									'link' => '/processes/cnc-turning/'
-								),
+							array(
+								'img' => "cnc-turning",
+								'title' => 'CNC TURNING',
+								'text' => 'Standard and live tooling capabilities for cylindrical parts such as pins, shafts, and spacers.',
+								'link' => '/processes/cnc-turning/'
+							),
 
-								array(
-									'img' => "gear-hobbing",
-									'title' => 'GEAR HOBBING',
-									'text' => 'A wide range of stock hobbing tools available for quick turnaround times. Custom hobbing also available.',
-									'link' => '/processes/gear-hobbing/'
-								),
+							array(
+								'img' => "gear-hobbing",
+								'title' => 'GEAR HOBBING',
+								'text' => 'A wide range of stock hobbing tools available for quick turnaround times. Custom hobbing also available.',
+								'link' => '/processes/gear-hobbing/'
+							),
 
-								array(
-									'img' => "high-resolution-3d-printing",
-									'title' => 'HIGH RESOLUTION 3D PRINTING',
-									'text' => 'MJF, SLA, PolyJet SLS, FDM.',
-									'link' => '/3d-printing-service/'
-								),
+							array(
+								'img' => "high-resolution-3d-printing",
+								'title' => 'HIGH RESOLUTION 3D PRINTING',
+								'text' => 'MJF, SLA, PolyJet SLS, FDM.',
+								'link' => '/3d-printing-service/'
+							),
 
-								array(
-									'img' => "finishing",
-									'title' => 'Finishing',
-									'text' => 'Anodizing, Alodine, Media Blasting, Tumbling, Passivation, Plating, Powder Coating and more.',
-									'link' => 'https://docsend.com/view/2b5d4ye'
-								),
+							array(
+								'img' => "finishing-1",
+								'title' => 'Finishing',
+								'text' => 'Anodizing, Alodine, Media Blasting, Tumbling, Passivation, Plating, Powder Coating and more.',
+								'link' => 'https://docsend.com/view/2b5d4ye'
+							),
 
-								array(
-									'img' => "electrical-discharge-machining",
-									'title' => 'ELECTRICAL DISCHARGE MACHINING (EDM)',
-									'text' => 'Useful for cutting deep pockets and complex features such as gears and holes with a keyway. Wire & sinker.',
-									'link' => '/processes/electrical-discharge-machining/'
-								)
-							);
+							array(
+								'img' => "electrical-discharge-machining",
+								'title' => 'ELECTRICAL DISCHARGE MACHINING (EDM)',
+								'text' => 'Useful for cutting deep pockets and complex features such as gears and holes with a keyway. Wire & sinker.',
+								'link' => '/processes/electrical-discharge-machining/'
+							)
+						);
 
-							foreach ( $types as $i => $type ) :
+						foreach ( $types as $i => $type ) :
+					
 					?>
-					<div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-12 last:mb-0">
-						<div class="relative group">
-							<a href="<?php echo $type['link']; ?>" class="absolute w-full h-full inset-0"></a>
-							<div class="">
-								<div class="relative h-0 bg-white" style="padding-bottom: 92%">
-						            <img class="absolute top-0 left-0 w-full h-full object-cover lazyload" alt="<?php echo $type['title']; ?> thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/<?php echo $type['img']; ?>-thumbnail.jpg">
-						        </div>
-							</div>
-						
-							<div class="text-center py-2">
-								<div class="mb-2">
-									<p class="text-blue-dark uppercase font-semibold mb-2 font-museo-900">
-										<?php 
+					<div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 last:mb-0">
+						 <div class="relative group border border-grey-200">
+		                    <a href="<?php echo $type['link']; ?>" class="w-full h-full absolute inset-0 z-50"></a>
+		                    <div class="relative h-0" style="padding-bottom: 65.25%">
+
+		                        <img alt="<?php the_title() ?> thumbnail" class="lazyload w-full absolute  inset-0 h-full object-cover" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/screenshots/<?php echo $type['img']; ?>-thumbnail.jpg">
+		                    </div>
+		                    <div class="p-4">
+		                        <div class="mb-2 h-12">
+		                            <p class="font-museo-700 text-grey-700">
+		                                <?php 
 											echo $type['title'];
 										?>
-									</p>
-								</div>
-								<div class="h-12 mb-2">
-									<p class="text-blue-dark">
-										<?php 
+		                            </p>
+		                        </div>
+		                        
+		                        <div class="mb-4 h-18">
+		                            <p class="font-museo-500 text-grey-600 max-lines max-lines-3">
+		                                <?php 
 											echo $type['text'];
 										?>
-									</p>
-								</div>
-								<div>
-									<p class="text-teal-light font-museo-700 group-hover:text-teal-dark">Learn more</p>
-								</div>
-								
-							</div>
-						</div>
+		                            </p>
+		                        </div>
+		                        <div>
+		                            <p class="text-teal-light font-museo-700 group-hover:text-teal-dark">Learn more</p>
+		                        </div>
+		                    </div>
+		                </div>
+						
 						
 					</div>
 					<?php 
