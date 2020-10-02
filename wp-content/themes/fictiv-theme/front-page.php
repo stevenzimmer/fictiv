@@ -34,7 +34,18 @@
 				<div class="text-center">
 				
 					<h1 class="xl text-white font-museo-700">
+						<?php 
+							if(	get_field('homepage_hero_title') ) :
+							
+								the_field('homepage_hero_title');
+
+							else :
+						?>
 						Your Go-to Partner for Precision Parts at the Speed of Digital
+						<?php
+							endif;
+						?>
+						
 					</h1>
 			
 				</div>
@@ -45,7 +56,18 @@
 				<div class="text-center">
 					<div class="mb-4">
 						<p class="text-white md:text-20 font-museo-500">
+							<?php 
+								if(	get_field('homepage_hero_paragraph') ) :
+								
+									the_field('homepage_hero_paragraph');
+
+								else :
+							?>
 							Fictiv’s Digital Manufacturing Ecosystem is the go-to destination for engineers and supply chain managers who need high tolerance mechanical parts at unprecedented speeds.
+							<?php
+								endif;
+							?>
+							
 						</p>
 					</div>
 					<div class="flex justify-center mb-4">
@@ -56,7 +78,20 @@
 								<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
 							</div>
 							<div class="mr-2">
-								<p class="text-white text-14 md:text-16">Discover Fictiv’s radical transparency features
+								<p class="text-white text-14 md:text-16">
+									<?php 
+										if(	get_field('homepage_hero_video_link_text') ) :
+										
+											the_field('homepage_hero_video_link_text');
+
+										else :
+									?>
+										Discover Fictiv’s radical transparency features
+									<?php
+										endif;
+									?>
+
+							
 								</p>
 							</div>
 							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
@@ -68,7 +103,20 @@
 						
 					</div>
 					<div>
+						<?php 
+							if( empty( get_field('homepage_hero_button' ) ) ) :
+
+						?>
 						<a href="https://app.fictiv.com/signup" class="btn btn-primary">get a quote</a>
+						<?php 
+							else :
+						?>
+						<a href="<?php echo get_field('homepage_hero_button' )['url'];
+						?>" class="btn btn-primary"><?php echo get_field('homepage_hero_button' )['title'];
+						?></a>
+						<?php
+							endif;
+						?>
 					</div>
 				</div>
 			</div>
@@ -77,69 +125,60 @@
 
 	<div class="py-40 md:py-32 lg:py-48"></div>
 	
+	<?php 
+		if ( have_rows('homepage_hero_bottom_row') ) :
+		
+	?>
 	<div class="absolute w-full bottom-0 pb-6 lg:pb-12">
 		<div class="container flex justify-center">
 			<div class="flex flex-col md:flex-row justify-around md:w-full">
+
+				<?php 
+					while( have_rows('homepage_hero_bottom_row') ) :
+						the_row();
+				?>
 				
-				<div class="flex items-center mb-4 md:mb-0">
+				<div class="flex items-center relative mb-4 md:mb-0 group">
+					<?php 
+						if( get_sub_field('homepage_hero_bottom_row_link') ) :
+					?>
+					<a class="absolute w-full h-full inset-0 z-50" href="<?php the_sub_field('homepage_hero_bottom_row_link'); ?>" target="_blank"></a>
+					<?php 
+						endif;
+					?>
 					<div class="mr-2 ">
-						<img alt="10 MILLION + PARTS MADE icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/parts.svg'; ?>">
+						<img width="30" alt="<?php the_sub_field('homepage_hero_bottom_row_text'); ?> icon" class="lazyload" data-src="<?php the_sub_field('homepage_hero_bottom_row_icon'); ?>">
 					</div>
-					<div class="w-full">
-						<p class="text-white font-museo-700 leading-tight md:text-20">
-							10 million + <br>parts made
-						</p>
-					</div>
-				</div>
-				<div class="flex items-center relative mb-4 md:mb-0">
-					<a class="absolute w-full h-full inset-0" href="https://docsend.com/view/fwev6a8jj6zd59rq" target="_blank"></a>
-					<div class="mr-2 ">
-						<img alt="ISO 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/iso.svg'; ?>">
-					</div>
-					<div class="w-full relative group ">
-						<a target="_blank" href="https://docsend.com/view/fwev6a8jj6zd59rq" class="absolute w-full h-full inset-0 z-30"></a>
-						<div>
-							<p class="text-white font-museo-700 leading-tight md:text-20">
-							ISO 9001</p>
-						</div>
+					<div class="w-full ">
+						
 						<div class="flex items-center">
-							<div class="mr-2">
+							<div>
 								<p class="text-white font-museo-700 leading-tight md:text-20">
-								certified </p>
+								<?php the_sub_field('homepage_hero_bottom_row_text'); ?></p>
 							</div>
-							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
+							<?php 
+								if( get_sub_field('homepage_hero_bottom_row_link') ) :
+							?>
+							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1 mt-4 md:mt-5">
 								<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
 								
 							</div>
+							<?php 
+								endif;
+							?>
 						</div>
 					</div>
 				</div>
-
-				<div class="flex items-center relative mb-4 md:mb-0">
-					<div class="mr-2">
-						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/guarantee.svg'; ?>">
-						
-					</div>
-					<div class="w-full">
-						<p class="text-white font-museo-700 leading-tight md:text-20">
-							Fictiv inspections <br>on every part
-						</p>
-					</div>
-				</div>
-				<div class="flex items-center relative">
-					<div class="mr-2">
-						<img alt="iso 9001 certified icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/parts.svg'; ?>">
-						
-					</div>
-					<div class="w-full">
-						<p class="text-white font-museo-700 leading-tight md:text-20">
-							We accept drawings <br>with 3D CAD
-						</p>
-					</div>
-				</div>
+				<?php 
+					endwhile;
+				?>
+				
 			</div>
 		</div>
 	</div>
+	<?php 
+		endif;
+	?>
 </header>
 <section class="pt-20">
 	<div class="container">
@@ -186,7 +225,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </section>
 
