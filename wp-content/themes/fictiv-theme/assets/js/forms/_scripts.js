@@ -1,3 +1,5 @@
+// import { readCookie } from './../cookies/read-cookie';
+
 /* const */
 const MKTOFORM_ID_ATTRNAME = "data-formId";
 
@@ -5,9 +7,9 @@ let mkto_forms = document.querySelectorAll('[' + MKTOFORM_ID_ATTRNAME +']');
 
 if ( mkto_forms.length > 0 ) {
     
-    mkto_forms_ids = [];
+    let mkto_forms_ids = [];
 
-    for ( i = 0; i < mkto_forms.length; ++i ) {
+    for ( let i = 0; i < mkto_forms.length; ++i ) {
 
     	if( !mkto_forms_ids.includes( mkto_forms[i].getAttribute(MKTOFORM_ID_ATTRNAME) ) ) {
 
@@ -32,6 +34,10 @@ if ( mkto_forms.length > 0 ) {
 
 		/* fix inter-form label bug! */
 		MktoForms2.whenRendered( function( form ) {
+
+			// form.addHiddenFields({
+			// 	'utm_content__c' : readCookie('utm_content')
+			// });
 
 			var formEl = form.getFormElem()[0],
 				rando = "_" + new Date().getTime() + Math.random();

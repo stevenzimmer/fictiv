@@ -80,7 +80,7 @@
 						<?php 
 							endif;
 						
-							if ( $args['download_link'] ) :
+							if ( !empty( $args['download_link'] ) ) :
 							
 						?>
 						<div class="mt-4">

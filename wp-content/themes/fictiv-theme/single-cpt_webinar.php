@@ -83,7 +83,7 @@ if ( have_posts() ) :
 						?>
 						<div class="flex flex-wrap mb-6 -mx-2">
 							<div class="w-1/3 px-2 mb-2 lg:mb-0">
-								<img class="lazyload" alt="<?php the_sub_field('webinar_host_name'); ?> headshot" data-src="<?php the_sub_field('webinar_host_headshot'); ?>">
+								<img class="lazyload w-full" alt="<?php the_sub_field('webinar_host_name'); ?> headshot" data-src="<?php the_sub_field('webinar_host_headshot'); ?>">
 							</div>
 							<div class="w-full md:w-2/3 px-2">
 								<p class="text-teal-light font-museo-500">
