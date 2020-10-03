@@ -6,15 +6,18 @@ import { createCookie } from './create-cookie';
 // var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
 var url = new URL( location.href );
 
-// console.log(url);
-// console.log(utmContent);
+function utmCookie( $query ) {
 
-// var utmContent = url.searchParams.get("utm_content");
+	if ( !readCookie($query) || readCookie( $query ) === 'null' ) {
+		createCookie( $query, url.searchParams.get( $query ), 1 );	
+	}
 
-// if ( !readCookie('utm_content') ) {
-// 	createCookie( 'utm_content', utmContent, 1 );	
-// }
+	console.log( readCookie( $query ) ); 
 
+}
 
-// console.log( readCookie('utm_content') );
-
+utmCookie('utm_content');
+utmCookie('utm_medium');
+utmCookie('utm_campaign');
+utmCookie('utm_term');
+utmCookie('utm_source');
