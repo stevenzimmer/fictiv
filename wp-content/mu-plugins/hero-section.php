@@ -60,7 +60,6 @@
 									echo $args['label'];
 								
 								?>
-						
 							</p>
 						</div>
 						<div >
@@ -112,7 +111,6 @@
 					
 					<div class="w-full lg:w-1/2 px-4">
 						
-						
 						<?php 
 							if( !$args['parent_id'] ) :
 						?>
@@ -131,6 +129,7 @@
 						</div>							
 						
 						<?php
+
 							elseif( $args['parent_id'] && !empty( $args['webinar'] )  ) :
 
 								if ( !$args['webinar']['yt_id']  ) :
@@ -155,14 +154,13 @@
 							?>">
 						</div> 
 						<?php
+
 								endif;
 							endif;
-
 
 						?>
 
 					</div>
-					
 				</div>
 			</div> 
 

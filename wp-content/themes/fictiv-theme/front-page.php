@@ -585,7 +585,7 @@
 							</p>
 						</div>
 						
-						<a href="/resources/idc-case-study-digital-quote-to-order" class="btn btn-primary">read case study</a>
+						<a href="/ebooks/idc-case-study-digital-quote-to-order" class="btn btn-primary">read case study</a>
 					</div>
 				</div>
 			</div>
