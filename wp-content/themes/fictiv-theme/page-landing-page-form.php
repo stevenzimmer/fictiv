@@ -15,7 +15,7 @@ if ( have_posts() ) :
         	'bg' => $hero_graphic,
         	'label' => get_field('hero_label', $has_parent),
         	'title' => $post_title,
-        	'post_type' => get_queried_object()->post_type,
+        	'post_type' => 'cpt_ebook',
         	'download_link' => get_field('download_asset_link'),
         	'subparagraph' => get_field('hero_subparagraph', $has_parent),
         	'form' => array(
