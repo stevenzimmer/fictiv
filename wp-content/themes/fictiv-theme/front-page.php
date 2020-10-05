@@ -198,6 +198,7 @@
 </section>
 
 <?php 
+
 	$differences = array(
 
 		array(
@@ -209,6 +210,7 @@
 				'link' => '/our-platform'
 			)
 		),
+		
 		array(
 			'img' => 'homepage-illo-middle-2',
 			'title' => 'Partner Network',
@@ -218,6 +220,7 @@
 				'link' => '/our-network'
 			)
 		),
+
 		array(
 			'img' => 'homepage-illo-bottom',
 			'title' => 'People on the Ground',
@@ -538,7 +541,7 @@
 			</div>
 			
 			<div class="flex items-center text-center relative group">
-				<a href="/our-platform/" class="btn btn-primary">Learn more about our platform</a>
+				<a href="/our-platform" class="btn btn-primary">Learn more about our platform</a>
 				
 			</div>
 		</div>
