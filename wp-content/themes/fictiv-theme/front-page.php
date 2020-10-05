@@ -206,7 +206,7 @@
 			'para' => 'Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.',
 			'cta' => array(
 				'text' => 'learn more',
-				'link' => '/our-platform/'
+				'link' => '/our-platform'
 			)
 		),
 		array(
@@ -215,7 +215,7 @@
 			'para' => 'Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.',
 			'cta' => array(
 				'text' => 'learn more',
-				'link' => '/our-platform/'
+				'link' => '/our-network'
 			)
 		),
 		array(
@@ -224,7 +224,7 @@
 			'para' => 'Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.',
 			'cta' => array(
 				'text' => 'learn more',
-				'link' => '/our-platform/'
+				'link' => '/our-people'
 			)
 		)
 	);
