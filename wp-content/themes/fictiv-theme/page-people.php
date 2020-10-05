@@ -48,100 +48,139 @@
 		
 	</div>
 </header>
-<section class="py-20">
-	<div class="container">
-		<div class="flex justify-center">
-			<div class="w-11/12">
-				<div class="flex flex-wrap -mx-6">
-					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
-						<div class="mb-6">
-							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								All Your Part Inspections, Verified
-							</h2>
-						</div>
-						<div>
-							<p class=" font-museo-500 text-grey-600">
-								All parts ordered through the Fictiv platform are verified by a Fictiv-employed Supplier Quality Engineer (SQE) to ensure quality. We employee SQEs in all supply locations, who regularly visit our partners, audit facilities, and inspect customer parts to ensure requirements are met.
-							</p>
-						</div>
-					</div>
-					<div class="w-full lg:w-6/12 px-6">
-						<div class="mb-2">
-							<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/all-your-inspections-1.jpg'; ?>">
-						</div>
-						<div class="flex -mx-1">
-							<div class="px-1">
-								<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/all-your-inspections-2.jpg'; ?>">
-							</div>
-							<div class="px-1">
-								<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/all-your-inspections-3.jpg'; ?>">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-</section>
-<section class="pb-20 lg:py-20 bg-grey-100 relative">
-	<div class="w-full h-full relative lg:absolute inset-0 flex lg:justify-end mb-6 lg:pl-12">
+<?php 
+	$sections = array(
+		array(
+			'title' => 'All Your Part Inspections, Verified',
+			'para' => 'All parts ordered through the Fictiv platform are verified by a Fictiv-employed Supplier Quality Engineer (SQE) to ensure quality. We employee SQEs in all supply locations, who regularly visit our partners, audit facilities, and inspect customer parts to ensure requirements are met.',
+			'graphics' => array(
+				'all-your-inspections-1',
+				'all-your-inspections-2',
+				'all-your-inspections-3'
+			)
+		),
+		array(
+			'title' => 'All Your Designs, Supported',
+			'para' => 'During the quoting process, our Technical Applications Engineers are on stand-by to provide expert guidance on design manufacturability to ensure the parts you receive meet your requirements.',
+			'graphics' => array(
+				'all-your-designs-bg'
+			)
+		),
+		array(
+			'title' => 'All Your Programs, Managed',
+			'para' => 'Intelligent orchestration doesn’t end with our digital technology. We also employ Technical Program Managers to advocate for your design requirements during productions and ensure schedules stay on-track.',
+			'graphics' => array(
+				'all-your-programs-1'
+			)
+		)
+	);
 
+	foreach ( $sections as $i => $section ) :
+	
+?>
+<section class=" <?php 
+	if( $i % 2 !== 0 ) :
+	
+		echo 'pb-20 lg:py-20 bg-grey-100 relative';
+	
+	else :
+
+		echo 'py-20';
+	
+	endif;
+?>">
+	<?php 
+
+		if( $i % 2 !== 0 ) :
+	
+	?>
+	<div class="w-full h-full relative lg:absolute inset-0 flex lg:justify-end mb-6 lg:pl-12">
 		<div class="w-full h-64 lg:w-6/12 lg:h-full bg-cover bg-center lazyload " data-bg="url(<?php echo get_template_directory_uri() . '/assets/images/graphics/all-your-designs-bg.jpg'; ?>)">
 			
 		</div>
 	</div>
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-11/12">
-				<div class="flex flex-wrap lg:-mx-6">
-					<div class="w-full lg:w-6/12 lg:px-6">
-						<div class="mb-6">
-							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								All Your Designs, Supported
-							</h2>
-						</div>
-						<div>
-							<p class=" font-museo-500 text-grey-600">
-								During the quoting process, our Technical Applications Engineers are on stand-by to provide expert guidance on design manufacturability to ensure the parts you receive meet your requirements.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="py-20">
-	<div class="container">
+	<?php
+		endif;
+	?>
+	<div class="container <?php 
+
+		if( $i % 2 !== 0 ) :
+			
+			echo 'relative';
+
+		endif;
+	?>">
 		<div class="flex justify-center">
 			<div class="w-11/12">
 				<div class="flex flex-wrap -mx-6">
 					<div class="w-full lg:w-6/12 px-6 mb-6 lg:mb-0">
 						<div class="mb-6">
 							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								All Your Programs, Managed
+								<?php echo $section['title']; ?>
 							</h2>
 						</div>
 						<div>
 							<p class=" font-museo-500 text-grey-600">
-								Intelligent orchestration doesn’t end with our digital technology. We also employ Technical Program Managers to advocate for your design requirements during productions and ensure schedules stay on-track.
+								<?php echo $section['para']; ?>
 							</p>
 						</div>
 					</div>
+					<?php 
+
+						if( $i % 2 === 0 ) :
+							
+					?>
 					<div class="w-full lg:w-6/12 px-6">
-						<div class="">
-							<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/all-your-programs-1.jpg'; ?>">
+						<?php 
+
+							foreach ( $section['graphics'] as $j => $graphic ) :
+							
+								if ( $j === 0 ) :
+						?>
+						<div class="mb-2 last:mb-0">
+							<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/' .  $graphic . '.jpg'; ?>">
 						</div>
 					
+						<?php 
+								endif;
+							endforeach;
+							
+							if ( count( $section['graphics'] ) > 1 ) :
+									
+						?>
+
+						<div class="flex -mx-1">
+						<?php
+								foreach ( $section['graphics'] as $j => $graphic ) :
+									if ( $j > 0 ) :
+
+						?>
+							<div class="px-1">
+								<img class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/graphics/' .  $graphic . '.jpg'; ?>">
+							</div>
+						<?php
+									endif;
+								endforeach;
+							
+						?>
+						</div>
+						<?php 
+							endif;;
+						?>
 					</div>
+					<?php 
+						endif;
+					?>
 				</div>
 			</div>
 		</div>
 		
 	</div>
 </section>
+
 <?php 
+	endforeach;
+
 		endwhile;
 	endif;
 	get_footer();

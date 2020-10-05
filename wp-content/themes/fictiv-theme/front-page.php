@@ -197,29 +197,76 @@
 	</div>
 </section>
 
+<?php 
+	$differences = array(
+
+		array(
+			'img' => 'homepage-illo-top',
+			'title' => 'Digital Platform',
+			'para' => 'Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.',
+			'cta' => array(
+				'text' => 'learn more',
+				'link' => '/our-platform/'
+			)
+		),
+		array(
+			'img' => 'homepage-illo-middle-2',
+			'title' => 'Partner Network',
+			'para' => 'Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.',
+			'cta' => array(
+				'text' => 'learn more',
+				'link' => '/our-platform/'
+			)
+		),
+		array(
+			'img' => 'homepage-illo-bottom',
+			'title' => 'People on the Ground',
+			'para' => 'Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.',
+			'cta' => array(
+				'text' => 'learn more',
+				'link' => '/our-platform/'
+			)
+		)
+	);
+
+	foreach ( $differences as $i => $difference ) :
+	
+?>
 
 <section class="py-20">
 	<div class="container relative">
 		<div class="flex justify-center">
 			<div class="w-full lg:w-10/12 lg:px-6">
-				<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
+				<div class="flex flex-wrap flex-col-reverse <?php 
+
+					if( $i % 2 === 0 ) :
+		
+						echo 'lg:flex-row-reverse ';
+		
+					else :
+		
+						echo 'lg:flex-row';
+		
+					endif;
+				
+				?> justify-center lg:justify-start items-center lg:-mx-6">
 					<div class="w-11/12 lg:w-6/12 lg:px-6">
 						<div class="mb-4">
 							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								Digital Platform
+								<?php echo $difference['title']; ?>
 							</h2>
 						</div>
 						<div class="mb-6">
 							<p class="font-museo-500 text-grey-600">
-								Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.
+								<?php echo $difference['para']; ?>
 							</p>
 						</div>
 						<div>
-							<a class="btn btn-primary" href="/our-platform/">learn more</a>
+							<a class="btn btn-primary" href="<?php echo $difference['cta']['link']; ?>"><?php echo $difference['cta']['text']; ?></a>
 						</div>
 					</div>
 					<div class="w-full lg:w-6/12 lg:px-6">
-						<img class="lazyload w-full" alt="Digital Platform graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-top.png">
+						<img class="lazyload w-full" alt="Digital Platform graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/<?php echo $difference['img']; ?>.png">
 						
 					</div>
 				</div>
@@ -227,72 +274,8 @@
 		</div>
 	</div>
 </section>
-
-
-<section class="py-20">
-	<div class="container relative">
-
-		<div class="flex justify-center">
-			<div class="w-full lg:w-10/12 lg:px-6">
-				<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center lg:-mx-6">
-					<div class="w-11/12 lg:w-6/12 lg:px-6">
-						<div class="mb-4">
-							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								Partner Network
-							</h2>
-						</div>
-						<div class="mb-6">
-							<p class=" font-museo-500 text-grey-600">
-								Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.
-							</p>
-						</div>
-						<div>
-							<a class="btn btn-primary" href="/our-network/">learn more</a>
-						</div>
-					</div>
-					<div class="w-full lg:w-6/12 lg:px-6">
-						<img class="lazyload w-full" alt="Partner Network Graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-middle-2.png">
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="py-20">
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-full lg:w-10/12 lg:px-6">
-				<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center lg:-mx-6">
-					<div class="w-11/12 lg:w-6/12 lg:px-6">
-						<div class="mb-4">
-							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-								People on the Ground
-							</h2>
-						</div>
-						<div class="mb-6">
-							<p class=" font-museo-500 text-grey-600">
-								Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.
-							</p>
-						</div>
-						<div>
-							<a class="btn btn-primary" href="/our-people/">learn more</a>
-						</div>
-					</div>
-					<div class="w-full lg:w-6/12 lg:px-6">
-						<img class="lazyload w-full" alt="People on the Ground Graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/homepage-illo-bottom.png">
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 <?php 
+	endforeach;
 
 	$args = array(
         'post_type' => array('page'),
@@ -594,110 +577,7 @@
 </section>
 
 <?php
-
-    if ( get_field('case_study_quote') ) :
-    
-?>
-
-<section class="bg-grey-100">
-
-    <div class=" max-w-1600 mx-auto relative pb-10 lg:py-10">
-        <div class="relative lg:absolute w-full h-full inset-0 mb-6 lg:mb-0">
-            <div class="flex lg:justify-end h-full">
-                <div class="w-full lg:w-1/2 ">
-                   <div class="flex flex-wrap h-full ">
-                        <?php 
-                            if( have_rows('case_study_graphics') ) :
-
-                                $i = 1;
-                                while( have_rows('case_study_graphics') ) : 
-                                    the_row();
-                           
-                        ?>
-                        <div class="relative h-64 lg:h-half w-1/2">
-                            <img class="absolute inset-0 object-cover w-full h-full lazyload" alt="<?php echo get_sub_field('case_study_graphics_image')['alt']; ?>" data-src="<?php echo get_sub_field('case_study_graphics_image')['link']; ?>">
-                            
-                        </div>
-                        
-                            
-                        <?php 
-                                $i++;
-                                endwhile;
-                                reset_rows();
-                            endif;
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container relative ">
-            <div class="flex justify-center lg:justify-start">
-                
-                <div class="w-11/12 lg:w-5/12">
-                    <div class="mb-4">
-                         <p class="text-20 md:text-29 text-blue-dark font-museo-500 leading-tight">
-                            <?php the_field('case_study_quote') ?>
-                        </p>
-                    </div>
-                    <div class="mb-6">
-                        <p class=" text-grey-700 font-museo-700">
-                            <?php the_field('case_study_name') ?>
-                        </p>
-                        <p class=" text-grey-600 font-museo-500">
-                            <?php the_field('case_study_title') ?>
-                        </p>
-                    </div>
-                    <?php
-
-                        if( have_rows('case_study_details') ) :
-
-                            while( have_rows('case_study_details') ) : 
-                                the_row();
-                       
-                    ?>
-                    <div class="flex items-center mb-4">
-                        <div class="mr-2">
-                            <!-- Icon -->
-                            <img class="lazyload" width="30" alt="<?php the_sub_field('case_study_details_text'); ?> icon" data-src="<?php the_sub_field('case_study_details_icon'); ?>">
-                        </div>
-                        <div>
-                            <p class="text-blue-dark font-museo-700 text-16">
-                                <?php the_sub_field('case_study_details_text'); ?>
-                            </p>
-                        </div>
-                    </div>
-                    <?php 
-                            endwhile;
-                            reset_rows();
-                        endif;
-
-                        if ( get_field('case_study_cta') ) :
-                        
-                    ?>
-
-                    <div>
-                        <a href="<?php 
-                            echo get_field('case_study_cta')['url'];
-                        ?>" class="btn btn-primary"><?php 
-                            echo get_field('case_study_cta')['title'];
-                        ?></a>
-                    </div>
-
-                    <?php 
-                        endif;
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<?php 
-    endif;
-?>
-
-
-
-<?php
+	case_study_section();
 
 	$featured_args = array(
 		'posts_per_page' => 2,

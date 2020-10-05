@@ -69,7 +69,7 @@
 			}
 
 			&[role="button"] {
-				@apply inline-block px-4 py-2 text-16 font-bold text-center text-white bg-teal-light;
+				@apply inline-block px-4 py-2 text-16 font-museo-700 text-center text-white bg-teal-light;
 				min-width: 140px;
 			}
 		}
@@ -207,17 +207,6 @@
 			}
 
 			&-block {
-
-				&-atomic {
-
-					&-blocks {
-					
-						&-ab {
-					
-
-						}
-					}
-				}
 
 				&-separator {
 					@apply border-grey-200 mb-4;
@@ -435,7 +424,36 @@
 							@apply p-4;
 						}
 					}
-					
+				}
+
+				&-button {
+
+					&__link {
+						@apply uppercase font-museo-700 transition-colors duration-200 ease-in-out;
+
+						&:hover {
+							@apply no-underline bg-opacity-75;
+						}
+					}
+				}
+			}
+		}
+
+		.ab {
+
+			&-container {
+				
+				&-image {
+
+					&.has {
+
+						&-background {
+
+							&-dim {
+								@apply opacity-50;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -686,20 +704,6 @@
 	&-background {
 		@apply p-4;
 	}
-
-	&-text {
-
-		&-color {
-
-		}
-	}
-
-	&-blue {
-
-		&-color {
-
-		}
-	}
 }
 
 .single {
@@ -780,5 +784,7 @@
 		}
 	}
 }
+
+
 
 /*! purgecss end ignore */

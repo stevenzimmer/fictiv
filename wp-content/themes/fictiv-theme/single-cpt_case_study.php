@@ -27,8 +27,8 @@ if ( have_posts() ) :
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-full md:w-11/12 lg:w-10/12">
-				<div class="flex justify-between items-center">
-					<div class="mb-6 w-full">
+				<div class="flex justify-between items-center mb-6">
+					<div class=" w-full">
 					<?php 
 						get_template_part('partials/single', 'breadcrumbs');
 					?>
@@ -38,7 +38,7 @@ if ( have_posts() ) :
 					
 					?>
 					<div class="">
-						<a href="<?php the_field('download_asset_link'); ?>" class="btn btn-primary">download <?php 
+						<a target="_blank" href="<?php the_field('download_asset_link'); ?>" class="btn btn-primary">download <?php 
 							echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
 						?></a>
 					</div>
@@ -56,10 +56,7 @@ if ( have_posts() ) :
 			<div class="w-full md:w-11/12 lg:w-10/12 overflow-hidden">	
 				<div class="post-content px-5 md:px-0">
 					<?php 
-
 						the_content();
-					
-
 					?>	
 				</div>
 			</div>
