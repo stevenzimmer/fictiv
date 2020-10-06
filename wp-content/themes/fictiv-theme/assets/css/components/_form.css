@@ -138,6 +138,13 @@
 
                 .mktoLogicalField {
                     @apply w-8 !important;
+
+                    &.mktoCheckboxList {
+
+                        input {
+                            @apply w-4 h-4 !important;
+                        }
+                    }
                 }
 
                 .mktoHtmlText {
@@ -152,6 +159,11 @@
                         &:not([id="LblEmail_Opt_in_Consent__c"]),
                         &:not([id="LblsubscriptionFictivHardwareRoundup"]) {
                             @apply hidden;
+                        }
+
+                        &#LblActive_Project__c,
+                        &#LblFabrication_Process__c {
+                            @apply block;
                         }
 
                         &[id="LblEmail_Opt_in_Consent__c"],
@@ -207,7 +219,8 @@
                     }
 
                     label {
-                        @apply ml-0 mr-4 text-default font-museo-500;
+                        @apply ml-0 mr-4 text-default font-museo-500 w-auto;
+
                     }
                 }
 			}
