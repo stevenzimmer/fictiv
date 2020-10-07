@@ -1,102 +1,85 @@
 import { readCookie } from './read-cookie';
 import { createCookie } from './create-cookie';
-// console.log( readCookie );
-// console.log( location );
 
-// var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; // window.location.href
-var url = new URL( location.href );
-// var hour = 1 / 192;
-var hour = .001;
-// console.log( hour );
-// document.referrer = "https://www.google.com";
-const regex = /(?:[\w-]+\.)+[\w-]+/;
+const url = new URL( location.href );
+const hour = (1 / 24);
 
 function regexMatch( domain ) {
-	var re = new RegExp( "(https?:\/\/(.+?\.)?" + domain + "\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\\*\+,;\=]\\*)?)", "g" );
-	console.log( re );
-	// var reg = "domain".replace( re, domain );
-	// console.log( reg );
-	
-	console.log( document.referrer );
+	const re = new RegExp( "(https?:\/\/(.+?\.)?" + domain + "(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\\*\+,;\=]\\*)?)", "g" );
 
-	return re.test(document.referrer);
+	return re.test( document.referrer );
 
 }
-
-console.log( regexMatch('google') );
 
 function utmCookie( $query ) {
 
 	if ( !readCookie( $query ) || readCookie( $query ) === 'null' ) {
-
+		
 		if ( url.searchParams.get( $query ) ) {
-			console.log('there are search params');
 
 			createCookie( $query, url.searchParams.get( $query ), hour );
 
 		} else if ( document.referrer ) {
 
-			console.log( 'there is a referrer' );
 			let source;
-			let medium;
+			
+			switch( true ) {
 
-			switch( document.referrer ) {
-
-				// case "https://www.google.com/" :
-				// case "google.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}google\.com$/.test('https://google.com') :
+				case regexMatch('google.com') :
 					source = "google";
-					medium = "organicsearch";
 					break;
 
-				// case "https://www.bing.com/" :
-				// case "bing.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}bing\.com$/.test('https://bing.com') :
+				case regexMatch('bing.com') :
 					source = "bing";
-					medium = "organicsearch";
 					break;
 
-				// case "https://www.youtube.com/" :
-				// case "youtube.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}youtube\.com$/.test('https://youtube.com') :
+				case regexMatch('youtube.com') :
 					source = "youtube";
-					medium = "organicsearch";
 					break;
 
-				// case "https://www.facebook.com/" :
-				// case "facebook.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}facebook\.com$/.test('https://facebook.com') :
+				case regexMatch('facebook.com') :
 					source = "facebook";
-					medium = "organicsocial";
 					break;
 
-				// case "https://www.linkedin.com/" :
-				// case "linkedin.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}linkedin\.com$/.test('https://linkedin.com') :
+				case regexMatch('linkedin.com') :
 					source = "linkedin";
-					medium = "organicsocial";
 					break;
 
-				// case "https://www.instagram.com/" :
-				// case "instagram.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}instagram\.com$/.test('https://instagram.com') :
+				case regexMatch('instagram.com') :
 					source = "instagram";
-					medium = "organicsocial";
 					break;
 
-				// case "https://www.twitter.com/" :
-				// case "twitter.com".match(regex) :
-				case /^https?:\/\/([a-zA-Z\d-]+\.){0,}twitter\.com$/.test('https://twitter.com') :
-				case "https://t.co/" :
+				case regexMatch('twitter.com') :
+				case regexMatch('t.co') :
 					source = "twitter";
-					medium = "organicsocial";
 					break;
 
 				default:
 					source = document.referrer;
-					medium = "organic";
 					break;
 
+			}
+
+			let medium;
+			switch( true ) {
+
+				case regexMatch('google.com') :
+				case regexMatch('bing.com') :
+				case regexMatch('youtube.com') :
+					medium = "organicsearch";
+					break;
+
+				case regexMatch('facebook.com') :
+				case regexMatch('linkedin.com') :
+				case regexMatch('instagram.com') :
+				case regexMatch('twitter.com') :
+				case regexMatch('t.co') :
+					medium = "organicsocial";
+					break;
+
+				default:
+					medium = "organic";
+					break;
 			}
 
 			switch( $query ) {
@@ -116,7 +99,6 @@ function utmCookie( $query ) {
 			}
 
 		} else {
-			console.log('no referrer, no params');
 
 			switch( $query ) {
 				case "utm_medium" :
@@ -131,14 +113,7 @@ function utmCookie( $query ) {
 			}
 		}
 
-	} else {
-
-		console.log('cookie is set');
-	
 	}
-
-	console.log( $query, readCookie( $query ) ); 
-
 }
 
 utmCookie('utm_medium');
