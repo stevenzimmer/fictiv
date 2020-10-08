@@ -101,6 +101,7 @@ function utmCookie( $query ) {
 		} else {
 
 			switch( $query ) {
+				
 				case "utm_medium" :
 				case "utm_source" :
 					createCookie( $query, 'X', hour );
