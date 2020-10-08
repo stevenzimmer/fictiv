@@ -25,6 +25,7 @@
 					'new_item_name'	=> 'New Role'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -87,6 +88,7 @@
 					'new_item_name'	=> 'New Industry'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -122,6 +124,7 @@
 					'new_item_name'	=> 'New Process'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -148,6 +151,7 @@
 					'new_item_name'	=> 'New Page Type'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
