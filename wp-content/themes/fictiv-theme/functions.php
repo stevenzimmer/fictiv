@@ -15,7 +15,7 @@
 
     function primary_button( $text = 'get a quote' ) {
 ?>
-		<a href="https://app.fictiv.com/signup/" class="btn btn-primary">
+		<a href="https://app.fictiv.com/signup" class="btn btn-primary">
 			<?php 
                 echo $text;
             ?>
