@@ -3,9 +3,6 @@
 
 	function create_custom_taxonomies() {
 
-
-
-
 		// Custom Taxonomies for Resources
 
 		register_taxonomy(
@@ -62,7 +59,8 @@
 				'show_admin_column'	=> true,
 				'show_in_rest'      => true,
 				'rewrite'	=> array(
-					'slug' => 'topic', 'with_front' => false
+					'slug' => 'topic', 
+					'with_front' => false
 				)
 			)
 		);
