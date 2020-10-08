@@ -44,7 +44,6 @@
 					<div class="mb-4">
 						<!-- Form -->
 						<form data-form-type="invite-friend" class="mktoForm " data-formId="<?php the_field('mkto_form_id'); ?>"></form>
-						<form id="mktoForm_"></form>
 					</div>
 
 					<?php 
