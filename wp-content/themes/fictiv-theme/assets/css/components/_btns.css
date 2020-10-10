@@ -1,6 +1,11 @@
 .btn {
 	@apply py-5 px-10 uppercase text-16 inline-block leading-3 font-museo-700 tracking-wide text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
+	max-width: 320px;
 
+	@screen sm {
+		@apply max-w-full;
+	}
+	
 	&-primary {
 		@apply text-white bg-teal-light;
 
@@ -53,5 +58,9 @@
 				@apply bg-blue-light text-white;
 			}
 		}
+	}
+
+	&-long {
+		@apply whitespace-normal leading-normal;
 	}
 }
