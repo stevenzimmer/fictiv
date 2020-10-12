@@ -110,6 +110,65 @@
 		</div>
 	</div>
 </section>
-<?php
+
+<?php 
+	if( get_field('mkto_form_id') ) :
+?>
+
+<section class="py-20" id="application-form">
+	<div class="container">
+		<div class="flex justify-center">
+			<div class="w-11/12 sm:w-7/12 md:w-6/12 lg:w-5/12">
+				<div class="bg-white shadow-lg p-8">
+					<div>
+						<!-- Form title set in marketo -->
+			            <form class="mktoForm" data-form-type="global" data-formId="<?php the_field('mkto_form_id');  ?>"></form>
+
+						<div class="text-center mt-2 subscribe-form-terms">
+
+					        <?php 
+					            get_template_part('partials/gdpr', 'text');
+					        ?>
+					    
+					    </div>
+						<div class="global-form-success text-center hidden">
+							<?php 
+
+								if ( get_field('form_thank_you_message') ) :
+								
+							?>
+							<div class="font-museo-500 text-grey-400">
+								<?php 
+									the_field('form_thank_you_message');
+								?>
+							</div>
+
+							<?php 
+								else :
+							?>
+
+							<div>
+								<h2 class="font-museo-700 text-grey-400">
+									Thank you for your submission! 
+								</h2>
+								<p class="font-museo-500 text-grey-600">
+									Confirmation email is on its way.
+								</p>
+							</div>
+							<?php
+								endif;
+							?>
+							
+						</div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+ <?php 
+	endif;
+
 	get_footer();
 ?>

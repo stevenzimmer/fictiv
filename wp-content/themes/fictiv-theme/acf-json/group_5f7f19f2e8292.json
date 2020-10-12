@@ -1,11 +1,11 @@
 {
-    "key": "group_5ef658d32e1f5",
-    "title": "Partners Graphics Gallery",
+    "key": "group_5f7f19f2e8292",
+    "title": "Hero Icons",
     "fields": [
         {
-            "key": "field_5ef658e199314",
-            "label": "Add Images",
-            "name": "partners_images_gallery",
+            "key": "field_5f7f19f671f45",
+            "label": "Add Icon",
+            "name": "hero_icons",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -17,14 +17,14 @@
             },
             "collapsed": "",
             "min": 0,
-            "max": 4,
+            "max": 0,
             "layout": "block",
-            "button_label": "Add Image",
+            "button_label": "Add Hero icon",
             "sub_fields": [
                 {
-                    "key": "field_5ef6590b99315",
-                    "label": "Image",
-                    "name": "partners_gallery_image",
+                    "key": "field_5f7f1a0971f46",
+                    "label": "Icon",
+                    "name": "hero_icon",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -35,7 +35,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "thumbnail",
+                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -44,6 +44,25 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_5f7f1a3171f47",
+                    "label": "Text",
+                    "name": "hero_icon_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -51,9 +70,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "cpt_partners"
+                "value": "page-people.php"
             }
         ]
     ],
@@ -65,5 +84,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1602167356
+    "modified": 1602165619
 }

@@ -69,7 +69,7 @@
 
 							if ( $args['subparagraph'] && !$args['parent_id'] && empty( $args['download_link'] ) ) :					
 						?>
-						<div>
+						<div class="mt-4">
 							<p class="text-white text-20">
 								<?php 
 									echo $args['subparagraph'];

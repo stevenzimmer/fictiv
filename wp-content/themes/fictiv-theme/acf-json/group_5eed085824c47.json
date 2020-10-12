@@ -96,6 +96,13 @@
                 "operator": "==",
                 "value": "top_level"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-partner.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -106,5 +113,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1601644351
+    "modified": 1602346244
 }

@@ -9,7 +9,15 @@
 
   	<?php
   		wp_head(); 
+  		if ( is_author() ) :
+  			// Canonical for Author Archive page
   	?>
+  	<link rel="canonical" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+  	<?php
+  		endif;
+  	?>
+
+
 
   	<script>
     	window.fa=window.fa||function(){(fa.q=fa.q||[]).push(arguments)};fa.l=+new Date;

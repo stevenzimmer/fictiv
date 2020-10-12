@@ -22,7 +22,6 @@ function utmCookie( $query ) {
 		} else if ( document.referrer ) {
 
 			let source;
-			
 			switch( true ) {
 
 				case regexMatch('google.com') :
@@ -54,6 +53,10 @@ function utmCookie( $query ) {
 					source = "twitter";
 					break;
 
+				case regexMatch('fictiv.com') :
+					source = "fictiv.com";
+					break;
+
 				default:
 					source = document.referrer;
 					break;
@@ -75,6 +78,10 @@ function utmCookie( $query ) {
 				case regexMatch('twitter.com') :
 				case regexMatch('t.co') :
 					medium = "organicsocial";
+					break;
+
+				case regexMatch('fictiv.com') :
+					medium = "direct";
 					break;
 
 				default:

@@ -25,7 +25,6 @@
 		<div class="relative h-full w-full lg:hidden">
 			<img alt="homepage hero mobile" class="absolute w-full h-full object-cover lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/background/homepage-hero-mobile.jpg'; ?>">
 		</div>
-		
 	</div>
 	<div class="bg-black absolute w-full h-full inset-0 opacity-50 lg:hidden"></div>
 	<div class="container relative">
@@ -74,33 +73,35 @@
 						
 						<div class="flex items-center relative group">
 							<a class="absolute w-full h-full inset-0 cursor-pointer" vimeo-open="vimeo-modal"></a>
-							<div class="mr-2">
+							<div class="mr-1 md:mr-2">
 								<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
 							</div>
-							<div class="mr-2">
-								<p class="text-white text-14 md:text-16">
-									<?php 
-										if(	get_field('homepage_hero_video_link_text') ) :
-										
-											the_field('homepage_hero_video_link_text');
+							<div class="w-full">
+								<div class="flex items-center">
+									<div>
+										<p class="text-white text-14 md:text-16 text-left sm:text-center">
+										<?php 
+											if(	get_field('homepage_hero_video_link_text') ) :
+											
+												the_field('homepage_hero_video_link_text');
 
-										else :
-									?>
-										Discover Fictiv’s radical transparency features
-									<?php
-										endif;
-									?>
+											else :
+										?>
+											Discover Fictiv’s radical transparency features
+										<?php
+											endif;
+										?>
+										&nbsp;
+										</p>
+									</div>
+									<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
 
-							
-								</p>
-							</div>
-							<div class="transition-transform duration-200 ease-in-out transform group-hover:translate-x-1">
-
-								<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
-							
+										<img alt="homepage hero arrow" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/arrow-right-small-white.svg'; ?>">
+									
+									</div>
+								</div>
 							</div>
 						</div>
-						
 					</div>
 					<div>
 						<?php 
@@ -503,7 +504,7 @@
 
 					endif;
 
-				?> mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-16 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out"><?php echo $module['name']; ?></a>
+				?> mx-1 border border-grey-200 hover:border-teal-light py-1 px-3 rounded select-none cursor-pointer text-16 font-museo-700 text-grey-600 hover:text-teal-light whitespace-no-wrap duration-200 ease-in-out mb-2 md:mb-0"><?php echo $module['name']; ?></a>
 			
 			<?php 
 				endforeach;
@@ -541,7 +542,7 @@
 			</div>
 			
 			<div class="flex items-center text-center relative group">
-				<a href="/our-platform" class="btn btn-primary">Learn more about our platform</a>
+				<a href="/our-platform" class="btn btn-long btn-primary">Learn more about our platform</a>
 				
 			</div>
 		</div>

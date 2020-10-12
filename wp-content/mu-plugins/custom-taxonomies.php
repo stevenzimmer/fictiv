@@ -3,9 +3,6 @@
 
 	function create_custom_taxonomies() {
 
-
-
-
 		// Custom Taxonomies for Resources
 
 		register_taxonomy(
@@ -25,6 +22,7 @@
 					'new_item_name'	=> 'New Role'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -61,7 +59,8 @@
 				'show_admin_column'	=> true,
 				'show_in_rest'      => true,
 				'rewrite'	=> array(
-					'slug' => 'topic', 'with_front' => false
+					'slug' => 'topic', 
+					'with_front' => false
 				)
 			)
 		);
@@ -87,6 +86,7 @@
 					'new_item_name'	=> 'New Industry'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -122,6 +122,7 @@
 					'new_item_name'	=> 'New Process'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,
@@ -148,6 +149,7 @@
 					'new_item_name'	=> 'New Page Type'
 				),
 				'show_ui'			=> true,
+				'public' => false,
 				'show_in_nav_menus'	=> false,
 				'show_tagcloud'		=> false,
 				'hierarchical'		=> true,

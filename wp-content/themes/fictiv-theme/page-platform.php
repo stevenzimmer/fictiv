@@ -10,22 +10,37 @@
 			<div class="w-11/12 text-center">
 				
 				<h1 class="xl text-grey-700">
-					Manufacturing Data at Your Fingertips
+					<?php the_title(); ?>
 				</h1>
 				
 			</div>
 		</div>
 		<div class="flex justify-center mb-12">
 			<div class="w-11/12 lg:w-8/12 text-center">
-				<p class="md:text-20 font-museo-500 text-grey-600">
-					Our digital quote-to-order platform puts you back in the driver’s seat and keeps you connected at every step of the manufacturing process.
-				</p>
+				<div class="md:text-20 font-museo-500 text-grey-600">
+					<?php the_excerpt(); ?>
+				</div>
 			</div>
 		</div>
 		<div class="flex justify-center">
 			<div class="w-full lg:w-11/12 text-center relative z-20">
-			
-				<img class="lazyload w-full" alt="Manufacturing data at your fingertips" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-hero.png">
+				
+				<?php 
+					if( has_post_thumbnail() ) :
+				?>
+				
+				<img class="lazyload w-full" alt="<?php the_title(); ?> hero graphic" data-src="<?php the_post_thumbnail_url(); ?>">
+
+				<?php
+					else :
+				?>
+				
+				<img class="lazyload w-full" alt="<?php the_title(); ?> hero graphic" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-hero.png">
+				
+				<?php
+					endif;
+				?>
+				
 				<div class="absolute w-full h-full -mt-28 -z-1 hidden lg:block">
 					<div class="flex justify-end">
 						<div class="w-9/12">
@@ -38,63 +53,78 @@
 		</div>
 	</div>
 </header>
-
-<section class="py-20" id="pricing">
+<?php 
+	if ( have_rows('page_sections') ) :
+		
+		$i = 0;
+		while(  have_rows('page_sections') ) :
+			the_row();
+?>
+<section class="py-20" id="<?php the_sub_field('page_section_hash'); ?>">
 	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row justify-center lg:justify-start items-center -mx-6">
+		<div class="flex flex-wrap flex-col-reverse <?php 
+			
+			if( $i % 2 !== 0 ) :
+			
+				echo 'lg:flex-row-reverse';
+			
+			else :
+			
+				echo 'lg:flex-row';
+
+			endif;
+
+		?> justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
 					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						Instant Pricing
+						<?php the_sub_field('page_section_title'); ?>
 					</h2>
 				</div>
 				<div class="mb-6">
 					<p class="font-museo-500 text-grey-600">
-						Waiting days to get a quote is a thing of the past. With Fictiv, you get pricing instantly, or within 1 hour for complex parts that require additional guided expertise. In addition to 3D CAD, we accept 2D drawings for tight tolerances and other specialized requirements.
+						<?php the_sub_field('page_section_paragraph'); ?>
 					</p>
 				</div>
 				<div>
-					<a class="btn btn-primary" href="https://app.fictiv.com/signup">get instant quote</a>
+					<a target="<?php 
+							
+							echo get_sub_field('page_section_cta')['target'];
+
+						?>" class="btn btn-primary" href="<?php 
+							
+							echo get_sub_field('page_section_cta')['url'];
+						
+						?>"><?php 
+						
+							echo get_sub_field('page_section_cta')['title'];
+						
+						?></a>
 				</div>
 			</div>
 			<div class="w-full lg:w-6/12 px-6 relative z-20">
-				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-instant-pricing.png">
+				<img class="lazyload w-full" alt="<?php the_sub_field('page_section_title'); ?> thumbnail" data-src="<?php the_sub_field('page_section_graphic'); ?>">
 				
 			</div>
 		</div>
+		<?php 
+
+			if ( $i === 0 ) :
+				
+			
+		?>
 		<div class="absolute w-full h-full -mt-48 -z-1 hidden lg:block">
 			<div class="flex justify-center">
 				<div class="w-8/12">
 					<img class="lazyload" alt="Line 2" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-2.svg">
-			
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+		<?php 
+			endif;
 
-<section class="py-20" id="feedback">
-	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start items-center -mx-6">
-			<div class="w-11/12 lg:w-6/12 px-6">
-				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						Expert DFM Feedback
-					</h2>
-				</div>
-				<div class="mb-6">
-					<p class=" font-museo-500 text-grey-600">
-						Every part uploaded to the platform receives expert design for manufacturability feedback—including instant, automated warnings, and customized recommendations from our manufacturing engineers, as needed.
-					</p>
-				</div>
-				<div>
-					<a class="btn btn-primary" href="https://app.fictiv.com/signup">upload your designs</a>
-				</div>
-			</div>
-			<div class="w-full lg:w-6/12 px-6">
-				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-expert-dfm-feedback.png">
-			</div>
-		</div>
+			if ( $i === 1 ) :
+		?>
 		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
 			<div class="flex justify-center">
 				<div class="w-7/12">
@@ -103,31 +133,14 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+		<?php
 
-<section class="py-20" id="transparency">
-	<div class="container relative">
-		<div class="flex flex-wrap flex-col-reverse lg:flex-row items-center lg:justify-start -mx-6">
-			<div class="w-11/12 lg:w-6/12 px-6">
-				<div class="mb-6">
-					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						On-Demand Production Transparency
-					</h2>
-				</div>
-				<div class="mb-6">
-					<p class=" font-museo-500 text-grey-600">
-						Transparency doesn’t end after you place your order. Get real-time visibility into the production status of your parts, including photos of your parts at the manufacturing partner facility taken during inspection.
-					</p>
-				</div>
-				<div>
-					<a class="btn btn-primary" href="https://app.fictiv.com/signup">get started</a>
-				</div>
-			</div>
-			<div class="w-full lg:w-6/12 px-6">
-				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-on-demand-production-transparency.png">
-			</div>
-		</div>
+			endif;
+
+			if ( $i === 2 ) :
+				
+		?>
+
 		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
 			<div class="flex justify-center">
 				<div class="w-7/12">
@@ -136,34 +149,164 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php
+			endif;
+		?>
+
 	</div>
 </section>
+<?php
+		$i++;
+		endwhile;
 
-<section class="py-20">
-	<div class="container">
-		<div class="flex flex-wrap items-center flex-col-reverse lg:flex-row-reverse justify-center lg:justify-start -mx-6">
+	else :
+		$sections = array(
+			array(
+				'hash' => 'pricing',
+				'title' => 'Instant Pricing',
+				'para' => 'Waiting days to get a quote is a thing of the past. With Fictiv, you get pricing instantly, or within 1 hour for complex parts that require additional guided expertise. In addition to 3D CAD, we accept 2D drawings for tight tolerances and other specialized requirements.',
+				'img' => 'platform-instant-pricing',
+				'cta' => array(
+					'text' => 'get instant quote',
+					'link' => 'https://app.fictiv.com/signup'
+				)
+			),
+			array(
+				'hash' => 'feedback',
+				'title' => 'Expert DFM Feedback',
+				'para' => 'Every part uploaded to the platform receives expert design for manufacturability feedback—including instant, automated warnings, and customized recommendations from our manufacturing engineers, as needed.',
+				'img' => 'platform-expert-dfm-feedback',
+				'cta' => array(
+					'text' => 'upload your designs',
+					'link' => 'https://app.fictiv.com/signup'
+				)
+			),
+			array(
+				'hash' => 'transparency',
+				'title' => 'On-Demand Production Transparency',
+				'para' => 'Transparency doesn’t end after you place your order. Get real-time visibility into the production status of your parts, including photos of your parts at the manufacturing partner facility taken during inspection.',
+				'img' => 'platform-on-demand-production-transparency',
+				'cta' => array(
+					'text' => 'get started',
+					'link' => 'https://app.fictiv.com/signup'
+				)
+			),
+			array(
+				'hash' => 'all-your-data',
+				'title' => 'All Your Data, In One Place',
+				'para' => 'Easily find requested quality documentation, configuration details, DFM, design files, invoices, and inspection reports for all your previous orders.',
+				'img' => 'platform-all-your-data',
+				'cta' => array(
+					'text' => 'create free account',
+					'link' => 'https://app.fictiv.com/signup'
+				)
+			),
+		);
+
+		foreach ( $sections as $i => $section ) :
+	
+?>
+<section class="py-20" id="<?php echo $section['hash']; ?>">
+	<div class="container relative">
+		<div class="flex flex-wrap flex-col-reverse <?php 
+			
+			if( $i % 2 !== 0 ) :
+			
+				echo 'lg:flex-row-reverse';
+			
+			else :
+			
+				echo 'lg:flex-row';
+
+			endif;
+
+		?> justify-center lg:justify-start items-center -mx-6">
 			<div class="w-11/12 lg:w-6/12 px-6">
 				<div class="mb-6">
 					<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
-						All Your Data, In One Place
+						<?php 
+							echo $section['title'];
+						?>
 					</h2>
 				</div>
 				<div class="mb-6">
 					<p class="font-museo-500 text-grey-600">
-						Easily find requested quality documentation, configuration details, DFM, design files, invoices, and inspection reports for all your previous orders.
+						<?php 
+							echo $section['para'];
+						?>
 					</p>
 				</div>
 				<div>
-					<a class="btn btn-primary" href="https://app.fictiv.com/signup">create free account</a>
+					<a class="btn btn-primary" href="<?php 
+							echo $section['cta']['link'];
+						?>"><?php 
+							echo $section['cta']['text'];
+						?></a>
 				</div>
 			</div>
-			<div class="w-full lg:w-6/12 px-6">
-				<img class="lazyload w-full" alt="Expert DFM Feedback thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/platform-all-your-data.png">
+			<div class="w-full lg:w-6/12 px-6 relative z-20">
+				<img class="lazyload w-full" alt="Instant Pricing thumbnail" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/<?php 
+							echo $section['img'];
+						?>.png">
+				
 			</div>
 		</div>
+		<?php 
+
+			if ( $i === 0 ) :
+				
+			
+		?>
+		<div class="absolute w-full h-full -mt-48 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-8/12">
+					<img class="lazyload" alt="Line 2" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-2.svg">
+				</div>
+			</div>
+		</div>
+		<?php 
+			endif;
+
+			if ( $i === 1 ) :
+		?>
+		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-7/12">
+					<img class="lazyload" alt="Line 3" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-3.svg">
+			
+				</div>
+			</div>
+		</div>
+		<?php
+
+			endif;
+
+			if ( $i === 2 ) :
+				
+		?>
+
+		<div class="absolute w-full h-full -mt-64 -z-1 hidden lg:block">
+			<div class="flex justify-center">
+				<div class="w-7/12">
+					<img class="lazyload" alt="Line 4" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/graphics/lines-4.svg">
+			
+				</div>
+			</div>
+		</div>
+		
+		<?php
+			endif;
+		?>
+
 	</div>
 </section>
 
+<?php 
+	
+		endforeach;
+	endif;
+?>
 
 <?php
 	get_footer();

@@ -330,7 +330,7 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
             
         ?>
         <div class="text-center mt-12">
-            <a target="_blank" class="btn btn-primary" href="https://docsend.com/view/epw522h">Download CNC Material Datasheet</a>
+            <a target="_blank" class="btn btn-long btn-primary" href="https://docsend.com/view/epw522h">Download CNC Material Datasheet</a>
         </div>
 
         <?php 
