@@ -6,7 +6,7 @@ include( get_template_directory() . '/inc/post-type-vars.php');
 ?>
 
 <div class=" font-museo-500 text-14 text-grey-400 ">
-    <a class="hover:text-grey-600" href="/resources/">Resource Center Home</a> &nbsp; / &nbsp;
+    <a class="hover:text-grey-600" href="/resources">Resource Center Home</a> &nbsp; / &nbsp;
 
     
     <?php 

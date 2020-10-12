@@ -8,10 +8,7 @@
 
         // wp_enqueue_script( 'mkto-forms', '//app-ab20.marketo.com/js/forms2/js/forms2.min.js', [], '1.1', false );
 
-        wp_enqueue_script( 'mkto-forms', '//info.fictiv.com/js/forms2/js/forms2.min.js', [], '1.1', false );
-        
-
-        
+        wp_enqueue_script( 'mkto-forms', '//info.fictiv.com/js/forms2/js/forms2.min.js', [], '1.1', false );    
 
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.8', true);
     
@@ -162,5 +159,9 @@
     }
 
     require get_theme_file_path('/inc/custom-rest-route.php');
+
+    // Remove trailing forward slash from pagination
+    add_filter('paginate_links','untrailingslashit');
+
 
 ?>
