@@ -314,6 +314,7 @@
 				?>
 				<div class="flex flex-wrap -mx-6 mb-4">
 					<?php 
+						$i = 1;
 						while( have_rows('emf_steps') ) :
 							the_row();
 					?>
@@ -323,7 +324,7 @@
 								<div class="rounded-full border border-teal-dark w-8 h-8">
 									<div class="flex justify-center items-center h-full">
 										<div>
-											<p class="text-12 text-teal-dark">1</p>
+											<p class="text-12 text-teal-dark"><?php echo $i; ?></p>
 										</div>
 									</div>
 									
@@ -338,6 +339,7 @@
 
 					</div>
 					<?php
+						$i++;
 						endwhile; 
 					?>
 				</div>
