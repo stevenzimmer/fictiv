@@ -55,38 +55,44 @@
 								</div>
 								
 							</div>
-							<div class="w-full sm:w-1/3 lg:w-1/2">
+							<div class="w-full sm:w-5/12 lg:w-1/2">
 								<div class="flex justify-center sm:justify-start">
-									<div class="flex justify-center px-2 flex-wrap ">
+									<div class="flex justify-center flex-wrap ">
 										<?php 
 
 											$social_icons = array(
-												array(
-													'name' => 'Twitter',
-													'link' => 'https://twitter.com/fictiv'
-												),
-
 												array(
 													'name' => 'Facebook',
 													'link' => 'https://www.facebook.com/fictivmade'
 												),
 
 												array(
+													'name' => 'Twitter',
+													'link' => 'https://twitter.com/fictiv'
+												),
+
+												array(
 													'name' => 'LinkedIn',
 													'link' => 'https://www.linkedin.com/company/fictiv/'
-												)
+												),
+
+												array(
+													'name' => 'YouTube',
+													'link' => 'https://www.youtube.com/fictivmade'
+												),
 											);
 
 											foreach ( $social_icons as $i => $icon ) :
 												
 											
 										?>
-										<div class=" px-2 w-1/3 h-full">
-											<div class="bg-grey-100 px-4 py-3 flex items-center justify-center h-full">
+										<div class=" px-1 w-1/4 h-full">
+											<div class="bg-grey-100 px-4 py-2 flex items-center justify-center h-full relative">
+												<a class="absolute w-full h-full inset-0 z-30" title="Connect with us on <?php echo $icon['name']; ?>" rel="noopener noreferrer" target="_blank" href="<?php echo $icon['link']; ?>"></a>
 												<div class="">
-													<a title="Connect with us on <?php echo $icon['name']; ?>" rel="noopener noreferrer" target="_blank" href="<?php echo $icon['link']; ?>">
-														<img alt="<?php echo $icon['name']; ?> icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/' . strtolower( $icon['name'] ) . '.svg' ?>">
-													</a>
+												
+													<img alt="<?php echo $icon['name']; ?> icon" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/icons/' . strtolower( $icon['name'] ) . '.svg' ?>">
+													
 												</div>
 											</div>
 										</div>
