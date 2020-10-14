@@ -79,19 +79,7 @@ if ( have_posts() ) :
 					?>
 				
 				</div>
-				<?php 
-					else :
-				?>
-				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
-				
-					<div class="w-11/12 lg:w-1/2 px-6">
-						<div class="post-content ebook">
-							<p>
-								You can download now, or check your inbox for a download link at your own convenience.
-							</p>
-						</div>
-					</div>
-				</div>
+
 				<?php
 					endif;
 				?>

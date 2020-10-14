@@ -109,8 +109,8 @@ while ( have_posts() ) :
 
 								<div class="flex justify-center lg:justify-end">
 									<?php 
-									get_template_part('partials/social', 'post');
-								?>
+										get_template_part('partials/social', 'post');
+									?>
 									
 								</div>
 							</div>

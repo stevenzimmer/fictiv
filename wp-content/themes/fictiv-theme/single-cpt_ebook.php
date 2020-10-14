@@ -33,7 +33,6 @@ if ( have_posts() ) :
 
 ?>
 
-
 <section class="py-10">
 	<div class="container">
 		<div class="flex justify-center flex-wrap">
@@ -71,22 +70,7 @@ if ( have_posts() ) :
 					</div>
 				
 				</div>
-
-				<?php 
-					else :
-				?>
 				
-				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
-					<div class="w-11/12 lg:w-1/2 px-6">
-						
-						<div class="post-content ebook mb-6">
-							<p>
-								You can download now, or check your inbox for a download link at your own convenience.
-							</p>
-						</div>
-
-					</div>
-				</div>
 				<?php
 					endif;
 				?>
