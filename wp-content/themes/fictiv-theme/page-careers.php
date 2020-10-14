@@ -250,7 +250,7 @@
 					</p>
 				</div>
 				<div class="mb-8">
-					<a href="/articles/meet-our-team-kathleen-kat-lopez/" class="btn btn-secondary">read the blog post</a>
+					<a href="/articles/meet-our-team-kathleen-kat-lopez" class="btn btn-secondary">read the blog post</a>
 				</div>
 			
 			</div>

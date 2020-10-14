@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="flex flex-wrap justify-center lg:justify-start lg:-mx-6">
 			<div class="w-11/12 lg:w-1/2 lg:px-6">
-				<h2 class="uppercase text-24 lg:text-30 leading-tight text-blue-dark font-museo-900 mb-8">COVID-19 SOLUTIONS AND RESOURCES TO MITIGATE SUPPLY CHAIN DISRUPTION</h2>
+				<h1 class="uppercase text-24 lg:text-30 leading-tight text-blue-dark font-museo-900 mb-8">COVID-19 SOLUTIONS AND RESOURCES TO MITIGATE SUPPLY CHAIN DISRUPTION</h1>
 				<p class="text-blue-dark text-20 mb-12">Get the latest webinars, blogs, and key learnings from industry experts to help you achieve supply chain agility during the Coronavirus pandemic.</p>
 				
 			</div>
