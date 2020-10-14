@@ -14,7 +14,7 @@
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.9', true);
 
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.34');
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.35');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -162,5 +162,9 @@
     }
 
     require get_theme_file_path('/inc/custom-rest-route.php');
+
+    // Remove trailing forward slash from pagination
+    add_filter('paginate_links','untrailingslashit');
+
 
 ?>

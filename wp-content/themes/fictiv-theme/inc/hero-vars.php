@@ -9,5 +9,5 @@ $webinar_time = get_field('webinar_time', $has_parent);
 
 $hero_graphic = ( $has_parent ? get_the_post_thumbnail_url( $has_parent ) : get_the_post_thumbnail_url() );
 
-$post_title = ( $has_parent ? 'Thank you for signing up for our exclusive content' : get_the_title( $has_parent ) );
+$post_title = ( $has_parent ? 'Thank you for downloading!' : get_the_title( $has_parent ) );
 ?>

@@ -16,9 +16,7 @@
 					</p>
 					<div>
 
-						<?php 
-							primary_button('Apply now');
-						?>
+						<a class="btn btn-primary" href="#application-form">apply now</a>
 					
 					</div>
 				</div>

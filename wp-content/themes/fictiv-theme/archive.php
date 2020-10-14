@@ -63,6 +63,7 @@ if ( have_posts() ) :
 						<div class="flex justify-center">
 							<?php 
 								the_posts_pagination( array(
+									// 'format'             => '',
 									'prev_text' => __( '&#9656;' ),
 									'next_text' => __( '&#9656;' ),
 								) );
