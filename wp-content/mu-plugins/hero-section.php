@@ -118,12 +118,12 @@
 
 								if( $args['parent_id'] ) :
 						?>
-						<div class="mb-2 mt-4 lg:mt-8">
+						<div class="mb-2 mt-4 lg:mt-8 hidden">
 							<h3 class="text-white text-20">
 								Share the content with your colleagues
 							</h3>
 						</div>
-						<div class="flex flex-wrap -mx-1 items-stretch">
+						<div class="flex flex-wrap -mx-1 items-stretch hidden">
 							<?php 
 
 								$social_icons = array(
