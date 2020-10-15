@@ -118,12 +118,12 @@
 
 								if( $args['parent_id'] ) :
 						?>
-						<div class="mb-2 mt-4 lg:mt-8 hidden">
+						<div class="mb-2 mt-4 lg:mt-8">
 							<h3 class="text-white text-20">
 								Share the content with your colleagues
 							</h3>
 						</div>
-						<div class="flex flex-wrap -mx-1 items-stretch hidden">
+						<div class="flex flex-wrap -mx-1 items-stretch">
 							<?php 
 
 								$social_icons = array(
@@ -142,10 +142,7 @@
 									array(
 										'name' => 'Facebook',
 										'link' => 'https://www.facebook.com/dialog/share?app_id=1688841191297210&display=popup&href=' . urlencode( get_the_permalink( $args['parent_id'] ) ) . '&redirect_uri=' . urlencode( get_the_permalink( $args['parent_id'] ) )
-									),
-
-									
-
+									)
 								);
 
 								foreach ( $social_icons as $i => $icon ) :
