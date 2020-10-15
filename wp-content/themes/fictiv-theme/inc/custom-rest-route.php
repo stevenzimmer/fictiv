@@ -38,7 +38,8 @@
 				'link' => get_the_permalink(),
 				'thumb' => wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0],
 				'excerpt' => get_the_excerpt(),
-				'post_type' => get_post_type()
+				'post_type' => get_post_type(),
+				'id' => get_the_id()
 			));
 
 		endwhile;

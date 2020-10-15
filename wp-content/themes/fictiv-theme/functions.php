@@ -163,5 +163,19 @@
     // Remove trailing forward slash from pagination
     add_filter('paginate_links','untrailingslashit');
 
+    function upcoming_label() {
+?>
+    <div class="ml-2">
+        <div class="border border-teal-light rounded px-2 py-1 bg-teal-100 ">
+            <p class="font-museo-500 text-12 text-teal-light text-center leading-3">
+                Upcoming
+            </p>
+        </div>
+        
+    </div>
+<?php
+    }
+
+
 
 ?>

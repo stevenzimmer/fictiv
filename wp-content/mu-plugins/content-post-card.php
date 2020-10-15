@@ -6,7 +6,14 @@ function fictiv_post_card( $resource_type ) {
 
 ?>
 <div class="border border-grey-200 relative h-full">
-	<a href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
+	<a <?php 
+		if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', get_the_id() ) ) :	
+		?>
+		title="Upcoming webinar: <?php echo get_field('webinar_date', get_the_id() ); ?> @ <?php echo get_field('webinar_time', get_the_id() ); ?>"
+	<?php
+		endif;
+
+	?> href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
 	<div class="relative h-0 thumbnail-ratio" >
 		
 		<?php 
@@ -27,10 +34,23 @@ function fictiv_post_card( $resource_type ) {
 		?>
 	</div>
 	<div class="p-4 relative">
-		<div class="mb-1">
-			<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
-				echo $resource_type;
-			?></p>
+		<div class="mb-2">
+			<div class="flex items-center h-6">
+				<div>
+					<p class="text-grey-600 text-12 font-museo-700 uppercase leading-3"><?php 
+						echo $resource_type;
+					?></p>
+				</div>
+				<?php 
+					if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', get_the_id() ) ) :
+
+						upcoming_label();
+					
+					endif;
+				?>
+				
+			</div>
+			
 		</div>
 		<div class="h-12 mb-2">
 			<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 

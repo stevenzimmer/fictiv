@@ -72,22 +72,43 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 								
 									foreach ( $response as $i => $data ) :
 
+										$post_type_name = get_post_type_object( $data->post_type )->labels->name;
+
 									
 							?>
 							<div class="w-full sm:w-1/2 px-1 mb-2">
 								<div class="border border-grey-200 relative h-full relative">
-									<a href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0 z-30"></a>
+									<a <?php 
+										if ( strtolower( $post_type_name ) === 'webinars' && !get_field('webinar_on-demand', $data->id ) ) :	
+										?>
+										title="Upcoming webinar: <?php echo get_field('webinar_date', $data->id ); ?> @ <?php echo get_field('webinar_time', $data->id ); ?>"
+									<?php
+										endif;
+
+									?> href="<?php echo $data->link; ?>" class="absolute w-full h-full inset-0 z-30"></a>
 									<div class="relative h-0 thumbnail-ratio" >
 										<img title="<?php echo $data->title; ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $data->thumb; ?>">
 									</div>
 									<div class="p-4 relative">
-										<div class="mb-1">
-											<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
-										
-											echo get_post_type_object( $data->post_type )->labels->singular_name;
-											?></p>
+										<div class="mb-2">
+											<div class="flex items-center h-6">
+												<div>
+													<p class="text-grey-600 text-12 font-museo-700 uppercase leading-3"><?php 
+														echo $post_type_name;
+													?></p>
+												</div>
+												<?php 
+													if ( strtolower( $post_type_name ) === 'webinars' && !get_field('webinar_on-demand', $data->id ) ) :
+														
+														upcoming_label();
+													
+													endif;
+												?>
+											</div>
 										</div>
-										<div class="h-12">
+
+									
+										<div class="h-12 mb-2">
 											<h2 class="text-16 font-museo-700 text-default max-lines max-lines-2"><?php 
 												echo $data->title;
 

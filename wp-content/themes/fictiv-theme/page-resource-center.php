@@ -53,7 +53,7 @@
 										      	$latest_reads->the_post();
 
 									?>
-									<div class="px-1">
+									<div class="px-1 h-full">
 							
 									<?php 
 
