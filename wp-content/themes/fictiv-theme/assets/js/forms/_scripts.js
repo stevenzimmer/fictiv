@@ -1,4 +1,4 @@
-// import { readCookie } from './../cookies/read-cookie';
+import { readCookie } from './../cookies/read-cookie';
 
 /* const */
 const MKTOFORM_ID_ATTRNAME = "data-formId";
@@ -20,14 +20,14 @@ if ( mkto_forms.length > 0 ) {
     }
 
     const mktoFormConfig = {
-        podId : "//info.fictiv.com",
-        // podId: "//app-ab20.marketo.com",
+        // podId : "//info.fictiv.com",
+        podId: "//app-ab20.marketo.com",
+
         munchkinId : "852-WGR-716",
         formIds : mkto_forms_ids
     };
 
     /* ---- Prevent label confusion from multiple forms ---- */
-
  	function mktoFormChain(config) {
 
         /* util */
@@ -36,9 +36,13 @@ if ( mkto_forms.length > 0 ) {
 		/* fix inter-form label bug! */
 		MktoForms2.whenRendered( function( form ) {
 
-			// form.addHiddenFields({
-			// 	'utm_content__c' : readCookie('utm_content')
-			// });
+			form.addHiddenFields({
+				'utm_content__c' : readCookie('utm_content'),
+				'utm_medium__c' : readCookie('utm_medium'),
+				'utm_campaign__c' : readCookie('utm_campaign'),
+				'utm_term__c' : readCookie('utm_term'),
+				'utm_source__c' : readCookie('utm_source')
+			});
 
 			var formEl = form.getFormElem()[0],
 				rando = "_" + new Date().getTime() + Math.random();
@@ -52,7 +56,6 @@ if ( mkto_forms.length > 0 ) {
 	                	// Hide subscribe forms on success
 	                	form.getFormElem()[0].classList.add('hidden');
 	                	form.getFormElem()[0].parentElement.querySelector('.subscribe-form-terms').classList.add('hidden');
-
 	                	form.getFormElem()[0].parentElement.querySelector('.global-form-success').classList.remove('hidden');
 
 	                } else {
