@@ -24,7 +24,7 @@
 						?>
 						
 					</div>
-					<div class="w-full lg:w-9/12 lg:pl-6">
+					<div class="w-full lg:w-9/12 lg:pl-12">
 						
 						<?php 
 							$latest_args = array(
