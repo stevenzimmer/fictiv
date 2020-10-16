@@ -2,52 +2,75 @@
 <?php 
 	get_header();
 	// the_title();
-?>
-<header class="section bg-gray-100 relative">
-	<div class="w-full h-full absolute inset-0 bg-cover bg-center" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/images/background/become-partner-hero.jpg'; ?>)"></div>
-	<div class="absolute w-full h-full inset-0 opacity-50 bg-black"></div>
-	<div class="container relative">
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-1/2">
-				<div class="text-center">
-					<h1 class="text-36 lg:text-h1 mb-8 text-white">Become a partner</h1>
-					<p class="text-24 mb-8 text-white">
-						As a Fictiv Manufacturing Partner, you'll generate more revenue, with less overhead, so your business can thrive consistently.
-					</p>
-					<div>
+	if ( have_posts() ) :
+		while( have_posts() ) : 
+			the_post();
 
-						<a class="btn btn-primary" href="#application-form">apply now</a>
-					
-					</div>
-				</div>
-			</div>
+		?>
+		<div class="post-content">
+			<?php the_content(); ?>
 		</div>
-	</div>
-</header>
-<section class="section">
+<?php
+
+		endwhile;
+	
+	if ( have_rows( 'bap_quotes' ) ) :
+?>
+<section class="bg-grey-100 section">
 	<div class="container">
-		<div class="flex -mx-6 flex-wrap justify-center lg:justify-start">
-			<div class="w-11/12 lg:w-1/3 px-6">
-				<h3 class="mb-4 text-20 text-blue-dark font-semibold">Reduce Overhead Costs</h3>
-				<p class="text-16">
-					Fictiv's Quote-to-Order Platform manages quoting, manufacturing feedback, payment, and customer support so you can focus on your craft.
-				</p>
+		<div class="flex flex-wrap -mx-6 justify-center lg: justify-start">
+			<?php 
+				while( have_rows('bap_quotes') ) :
+					the_row();
+			?>
+			<div class="lg:w-1/2 px-6 mb-8 lg:mb-0">
+				<div class="flex justify-between flex-wrap">
+					<div class="md:w-3/12 mb-8 lg:mb-0">
+						
+						<div class="h-24 w-24 mx-auto">
+							<img alt="<?php the_sub_field('bp_quote_name') ?> headshot" class="rounded-full w-full h-full block mx-auto" src="<?php the_sub_field('bp_quote_headshot') ?>">
+						</div>
+					</div>
+					<div class="md:w-9/12">
+						
+						<div class="border-l-2 border-teal-dark pl-8 mb-4">
+							<p class="text-blue-dark text-20 leading-tight font-museo-500"><?php the_sub_field('bp_quote_text') ?>
+						</div>
+						<div class="border-b border-grey-light pb-4">
+							<h3 class=" font-museo-700 "><?php the_sub_field('bp_quote_name') ?></h3>
+							<p class=""><?php the_sub_field('bp_quote_title') ?></p>
+						</div>
+						<div class="py-4">
+							<p class="text-blue-dark text-12 mb-4 italic font-museo-500">
+								<?php the_sub_field('bp_quote_cta_text') ?>
+							</p>
+							<?php 
+								if ( !empty( get_sub_field('bp_quote_cta') ) ) :
+									
+								
+							?>
+							<a class="btn btn-primary" href="<?php echo get_sub_field('bp_quote_cta')['url']; ?>"><?php echo get_sub_field('bp_quote_cta')['title']; ?></a>
+							<?php 
+								endif;
+							?>
+						</div>
+
+					</div>	
+				</div>
+				
 			</div>
-			<div class="w-11/12 lg:w-1/3 px-4">
-				<h3 class="mb-4 text-20 text-blue-dark font-semibold">Monetize Idle Machine Time</h3>
-				<p class="text-16">
-					Time is money — don’t let your machines sit idle while they depreciate. Work from Fictiv fills in the gaps in your workflow so you can monetize idle machine time.
-				</p>
-			</div>
-			<div class="w-11/12 lg:w-1/3 px-4">
-				<h3 class="mb-4 text-20 text-blue-dark font-semibold">Earn Cash</h3>
-				<p class="text-16">
-					Fictiv matches customer orders with the best Manufacturing Partner for the job, so you get the right parts for your shop's machine types and skills. No bidding, just work sent directly to your shop.
-				</p>
-			</div>
+			<?php 
+				endwhile;
+			?>
 		</div>
 	</div>
 </section>
+<?php
+	
+	else :
+
+
+?>
 <section class="bg-grey-100 section">
 	<div class="container">
 		<div class="flex flex-wrap -mx-6 justify-center lg: justify-start">
@@ -110,6 +133,7 @@
 </section>
 
 <?php 
+	endif;
 	if( get_field('mkto_form_id') ) :
 ?>
 
@@ -166,6 +190,8 @@
 </section>
 
  <?php 
+
+	endif;
 	endif;
 
 	get_footer();

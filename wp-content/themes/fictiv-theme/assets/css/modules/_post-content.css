@@ -441,6 +441,14 @@
 
 		.ab {
 
+			&-button {
+				@apply py-5 px-10 uppercase text-16 inline-block leading-3 font-museo-700 tracking-wide text-center whitespace-no-wrap transition-colors duration-200 ease-in-out;
+
+				&:hover {
+					@apply no-underline bg-opacity-75;
+				}
+			}
+
 			&-container {
 				
 				&-image {
