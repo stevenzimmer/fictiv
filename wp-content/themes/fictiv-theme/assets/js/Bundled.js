@@ -4,7 +4,7 @@
 // import 'slick-carousel';
 
 
-import './cookies/_utm-parameters';
+// import './cookies/_utm-parameters';
 import './careers/_scripts';
 import './hwg/_menu-toggle';
 
