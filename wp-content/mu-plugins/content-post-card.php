@@ -2,7 +2,28 @@
 
 function fictiv_post_card( $resource_type ) {
 
-	$thumbnail_src = ( has_post_thumbnail() ? wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium_large', false )[0] : false );
+	$thumbnail_src = ( 
+
+		get_field( 'card_thumbnail', get_the_id() ) 
+		
+		?
+		
+			get_field( 'card_thumbnail', get_the_id() ) 
+		
+		:
+			(
+				has_post_thumbnail() 
+
+				? 
+					wp_get_attachment_image_src( 
+						get_post_thumbnail_id( get_the_id() ), 
+						'medium_large', 
+						false )[0] 
+
+				: 
+					false 
+			)
+		);
 
 ?>
 <div class="border border-grey-200 relative h-full">
