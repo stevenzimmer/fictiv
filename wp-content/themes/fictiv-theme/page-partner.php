@@ -95,9 +95,9 @@
 				);
 				foreach  ( $quotes as $i => $quote ) :
 			?>
-			<div class="lg:w-1/2 px-6 mb-8 lg:mb-0">
+			<div class="w-11/12 lg:w-1/2 px-6 mb-8 lg:mb-0">
 				<div class="flex justify-between flex-wrap">
-					<div class="md:w-3/12 mb-8 lg:mb-0">
+					<div class="w-full md:w-3/12 mb-8 lg:mb-0">
 						
 						<div class="h-24 w-24 mx-auto">
 							<img alt="<?php echo $quote['name'] ?> headshot" class="rounded-full w-full h-full block mx-auto" src="<?php echo get_template_directory_uri() . '/assets/images/headshots/' .  
@@ -105,7 +105,7 @@
 							?>">
 						</div>
 					</div>
-					<div class="md:w-9/12">
+					<div class="w-full md:w-9/12">
 						
 						<div class="border-l-2 border-teal-dark pl-8 mb-4">
 							<p class="text-blue-dark text-20 leading-tight font-museo-500"><?php echo $quote['quote']; ?></p>
