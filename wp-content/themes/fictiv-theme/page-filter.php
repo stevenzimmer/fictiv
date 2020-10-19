@@ -102,7 +102,7 @@ $max_num = ( $filtered->max_num_pages ? $filtered->max_num_pages : $default->max
 						?>
 						
 					</div>
-					<div class="w-full xl:w-9/12 xl:pl-6">
+					<div class="w-full xl:w-9/12 xl:pl-12">
 						<?php 
 
 							if ( $filtered->have_posts() ) : 

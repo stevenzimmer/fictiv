@@ -38,45 +38,39 @@
 		if ( $id_append === 'mobile' ) :
 			
 ?>
-		<div class="filter-tax-wrapper">
-				
-			<?php 
-				resources_filter_title( 'content type');
-			?>
-
-			<div class="bg-grey-lighter filter-items overflow-hidden">
+			<div class="filter-tax-wrapper">
+					
 				<?php 
-
-					foreach ( $types as $i => $type ) :
-
-						filter_checkbox( $type, $id_append );
-						
-					endforeach;
+					resources_filter_title( 'content type');
 				?>
+
+				<div class="bg-grey-lighter filter-items overflow-hidden">
+					<?php 
+
+						foreach ( $types as $i => $type ) :
+
+							filter_checkbox( $type, $id_append );
+							
+						endforeach;
+					?>
+				</div>
+					
 			</div>
-				
-		</div>
 <?php
 		else :
 ?>
-			<div class="mb-2">
-				<p class="uppercase font-museo-500 text-grey-600">content type</p>
-			</div>
-			<div class="pb-4 border-b border-grey-200">
 					
-					
-				<div class="flex flex-wrap -mx-2">
-				<?php
+			<div class="flex flex-wrap -mx-1">
+			<?php
 
-					foreach ( $types as $i => $type ) :
+				foreach ( $types as $i => $type ) :
 
-						filter_checkbox( $type, $id_append );
+					filter_checkbox( $type, $id_append );
 
-					endforeach;
-				?>
-				</div>
-
+				endforeach;
+			?>
 			</div>
+
 <?php
 		endif;
 	}
@@ -160,7 +154,7 @@
 
 			else :
 				
-				echo 'text-12 font-museo-500';
+				echo 'text-14 font-museo-500';
 
 			endif;
 		?>" for="<?php echo $id_value; ?>-<?php echo $id_append; ?>"><?php echo $label; ?></label>

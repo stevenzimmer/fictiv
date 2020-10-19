@@ -2,12 +2,13 @@
 .filter {
 
 	&-items {
-		@apply h-0 transition-all duration-200;
+		@apply h-0;
 	}
 
 	&-item {
 
 		&-checkbox {
+
 			+ label {
 				@apply text-grey-600 !important;
 			}
@@ -15,7 +16,7 @@
 			&:checked {
 
 				+ label {
-					@apply text-teal-light font-museo-700 !important;
+					@apply text-teal-light !important;
 				}
 			}
 		}
@@ -44,13 +45,7 @@
 						&-mobile {
 
 							&-dropdown {
-								@apply block;
-
-								/*@screen lg {
-									@apply hidden;
-								}*/
-
-								
+								@apply block;								
 							}
 						}
 					}
@@ -72,10 +67,6 @@
 
 				&.active {
 					@apply block;
-
-					/*@screen lg {
-						@apply hidden;
-					}*/
 				}
 			}
 

@@ -2,7 +2,7 @@
 	if ( !wp_is_mobile() ) :
 ?>
 	<div class="mb-2">
-		<p class="uppercase font-museo-500 text-grey-600">filter content</p>
+		<p class="uppercase font-museo-500 text-grey-400">search</p>
 	</div>
 	<div class="mb-4">
 		
@@ -11,12 +11,20 @@
 	?>
 		
 	</div>
-	<div class="mb-4 ">
+	<div class="my-8">
 		<form method="GET" action="<?php echo home_url(); ?>/filter/" id="filter-form">
 
+		<div class="pb-1">
+			<p class="uppercase font-museo-500 text-grey-400">content type</p>
+		</div>
 		<?php
 
 			filterContentType( $GLOBALS['resource_post_types'], 'sidebar' );
+		?>
+		<div class="pb-2 mt-8 border-b border-grey-200">
+			<p class="uppercase font-museo-500 text-grey-400">filter by</p>
+		</div>
+		<?php
 
 			foreach ( resource_center_taxonomies() as $i => $tax ) :
 				$labels = get_taxonomy( $tax );

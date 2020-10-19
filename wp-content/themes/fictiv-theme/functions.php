@@ -14,7 +14,7 @@
         wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.9', true);
 
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.38');
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.39');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -113,7 +113,7 @@
 ?>
     <div class="flex items-center justify-between filter-title cursor-pointer py-2 px-1 border-b border-grey-200 select-none">
             <div>
-                <p class="text-12 uppercase font-museo-700 text-grey-600">
+                <p class="text-16 font-museo-500 text-grey-600">
                     <?php echo $label; ?>
                 </p>
             </div>
