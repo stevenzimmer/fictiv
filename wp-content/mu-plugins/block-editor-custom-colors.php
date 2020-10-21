@@ -95,6 +95,12 @@ function fictiv_custom_colors() {
 			),
 
 			array(
+				'name'  => __( 'Grey Dark', 'fictiv_custom_colors' ),
+				'slug'  => 'grey-700',
+				'color'	=> '#444444',
+			),
+
+			array(
 				'name'  => __( 'Black', 'fictiv_custom_colors' ),
 				'slug'  => 'black',
 				'color'	=> '#000000',
