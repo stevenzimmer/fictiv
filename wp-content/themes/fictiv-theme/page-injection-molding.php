@@ -623,76 +623,23 @@
 </section>
 <?php 
 endif;
-$related_args = array(
-    'posts_per_page' => 2,
-    'post_type' => $GLOBALS['resource_post_types'],
-    'post__not_in' => array( get_the_id() ),
-    'post_parent' => 0,
-    'tax_query' => array(
-        array (
-            'taxonomy' => $processes[0]->taxonomy,
-            'field' => 'slug',
-            'terms' => $processes[0]->slug,
-        )
-    ),
-);
 
-$related_posts = new WP_Query( $related_args );
-
-if ( $related_posts->have_posts() ) : 
-?>
-<section class="py-20">
-    <div class="container">
-        <div class="flex justify-center">
-            <div class="w-full lg:w-11/12">
-                <div class="flex justify-center">
-                    <div class="w-11/12 lg:w-full">
-                        <div class="mb-2">
-                            <h3 class="uppercase text-16 font-museo-500 text-grey-600">
-                                Related resources
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-wrap -mx-2">
-                    <?php 
-                        
-
-                        while ( $related_posts->have_posts() ) : 
-                            $related_posts->the_post();
+	$related_args = array(
+	    'posts_per_page' => 2,
+	    'post_type' => $GLOBALS['resource_post_types'],
+	    'post__not_in' => array( get_the_id() ),
+	    'post_parent' => 0,
+	    'tax_query' => array(
+	        array (
+	            'taxonomy' => $processes[0]->taxonomy,
+	            'field' => 'slug',
+	            'terms' => $processes[0]->slug,
+	        )
+	    ),
+	);
 	
-		                    $arr = array(
-						    	'link' => get_the_permalink(),
-						    	'img' => get_the_post_thumbnail_url(),
-						    	'title' => get_the_title(),
-						    	'excerpt' => get_the_excerpt()
-						    );
-
-				?>
-					<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-						<?php 
-							related_content_module( $arr );
-						?>
-					</div>
-                        
-                 
-                <?php
-                    endwhile;
-                    wp_reset_postdata();
-                    
-                ?>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-        
-</section>
-<?php 
-    endif;
-?>
-<?php 
+	resources_module( $related_args );
+ 
 		endwhile;
 		wp_reset_postdata();
 	endif;

@@ -127,7 +127,16 @@ while ( have_posts() ) :
 
 <?php
 	
-	include( get_template_directory() . '/inc/related-posts.php');
+	// include( get_template_directory() . '/inc/related-posts.php');
+
+	$related_args = array(
+		'posts_per_page' => 2,
+	    'post_type' => get_queried_object()->post_type,
+	    'post__not_in' => array( get_the_id(), wp_get_post_parent_id( get_the_id() )  ),
+	    'post_parent' => 0
+	);
+
+	resources_module( $related_args );
 
 
 endwhile;

@@ -69,33 +69,6 @@ if ( have_posts() ) :
 				
 				</div>
 
-				<?php 
-					else :
-				?>
-				
-				<div class="flex flex-wrap justify-center md:justify-start -mx-6">
-					<div class="w-11/12 lg:w-1/2 px-6">
-						
-						<div class="post-content ebook mb-6">
-							<?php 
-							
-								if ( !get_post_field( 'post_content' ) ) :
-							
-							?>
-							<p>
-								You can download now, or check your inbox for a download link at your own convenience.
-							</p>
-							<?php 
-							
-								else :
-						
-									the_content();
-							
-								endif;
-							?>
-						</div>
-					</div>
-				</div>
 				<?php
 					endif;
 				?>
@@ -105,57 +78,8 @@ if ( have_posts() ) :
 </section>
 <?php 
 
-	if ( get_field('add_resources') ) :
-?>
-<section class="py-10">
-	<div class="container">
+	resources_module();
 		
-		<div class="flex justify-center">
-			<div class="w-11/12 lg:w-full">
-				<div class="mb-2">
-					<h3 class="uppercase text-16 font-museo-500 text-grey-600">
-						You might also be interested in
-					</h3>
-				</div>
-			</div>
-		</div>
-		
-		<div class="flex flex-wrap -mx-2">
-			<?php 
-				
-				foreach ( get_field('add_resources') as $i => $resource_id ) :
-		
-				
-					
-					$arr = array(
-				    	'link' => get_the_permalink( $resource_id ),
-				    	'img' => get_the_post_thumbnail_url($resource_id ),
-				    	'title' => get_the_title($resource_id),
-				    	'excerpt' => get_the_excerpt($resource_id)
-				    );
-
-
-
-			?>
-			<div class="w-full lg:w-1/2 px-2 mb-4 lg:mb-0">
-				<?php 
-					related_content_module( $arr );
-				?>
-			</div>
-			<?php
-				endforeach;
-
-				
-			?>
-			
-		</div>
-	</div>
-		
-</section>
-<?php
-	
-	endif;
-	
 		endwhile;
 	endif;
 	get_footer();
