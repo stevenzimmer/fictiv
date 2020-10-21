@@ -40,7 +40,7 @@
 		}
 		
 		blockquote {
-			@apply mb-6 py-2 px-5 border-l-8 border-grey-light bg-grey-lighter;
+			@apply mb-6 py-2 px-5 border-l-8 border-grey-light bg-grey-lighter m-0;
 
 			p {
 				@apply w-full mb-0;
