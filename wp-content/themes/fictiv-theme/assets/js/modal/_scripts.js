@@ -1,19 +1,21 @@
 import MicroModal from 'micromodal';
-const iFrame = document.getElementById('vimeo-modal-iframe');
-
+const iFrame = document.getElementById('homepage-modal-iframe');
 
 MicroModal.init({
-	
+		
 	onShow: ( modal ) => {
-		iFrame.src = "https://player.vimeo.com/video/453488463?autoplay=1";
+
+		iFrame.src = document.getElementById('homepage-modal-trigger').dataset.embed;
+	
 	},
 	onClose: ( modal ) => {
 		iFrame.src = "";
 	},
 	
-	openTrigger: 'vimeo-open',
-	closeTrigger: 'vimeo-close',
+	openTrigger: 'homepage-modal-open',
+	closeTrigger: 'homepage-modal-close',
 	disableScroll: false,
 	disableFocus: true,
 	awaitCloseAnimation: false
+
 });

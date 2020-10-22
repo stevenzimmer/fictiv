@@ -2,16 +2,16 @@
 	get_header();
 
 ?>
-<div class="modal micromodal-slide z-50 relative" id="vimeo-modal" aria-hidden="true">
-	<div class="modal__overlay fixed inset-0 flex justify-center items-center bg-black bg-opacity-75" tabindex="-1" vimeo-close="vimeo-modal">
+<div class="modal micromodal-slide z-50 relative" id="homepage-modal" aria-hidden="true">
+	<div class="modal__overlay fixed inset-0 flex justify-center items-center bg-black bg-opacity-75" tabindex="-1" homepage-modal-close="homepage-modal">
     	<div class="modal__container container max-h-screen overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
     		
-        	<main class="modal__content w-full" id="vimeo-modal-content">
+        	<main class="modal__content w-full" id="homepage-modal-content">
     			<div class="embed-responsive aspect-ratio-16/9 relative h-0 bg-white" style="padding-bottom: 56.25%">
-					<iframe id="vimeo-modal-iframe" class="absolute w-full h-full inset-0" frameborder="0" src="" allowfullscreen="" allow="autoplay"></iframe>
+					<iframe id="homepage-modal-iframe" class="absolute w-full h-full inset-0" frameborder="0" src="" allowfullscreen="" allow="autoplay"></iframe>
 				</div>
         		
-        	</main>
+        	</main>∂
       	</div>
     </div>
 </div>
@@ -72,7 +72,17 @@
 					<div class="flex justify-center mb-4">
 						
 						<div class="flex items-center relative group">
-							<a class="absolute w-full h-full inset-0 cursor-pointer" vimeo-open="vimeo-modal"></a>
+							<a id="homepage-modal-trigger" class="absolute w-full h-full inset-0 cursor-pointer" homepage-modal-open="homepage-modal" data-embed="<?php 
+								if( get_field('homepage_modal_popup_embed_link') ) :
+
+									the_field('homepage_modal_popup_embed_link');
+								
+								else :
+
+									echo 'https://player.vimeo.com/video/453488463?autoplay=1';
+
+								endif;
+							?>"></a>
 							<div class="mr-1 md:mr-2">
 								<img class="lazyload" width="30" alt="play button green icon" data-src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/play-button-green.png">
 							</div>
@@ -181,16 +191,41 @@
 		endif;
 	?>
 </header>
+
 <section class="pt-20">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:w-9/12">
 				<div class="text-center">
 					<h2 class="xl text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
+						<?php 
+							if ( get_field('fd_section_title') ) :
+
+								the_field('fd_section_title');
+
+							else :
+
+						?>
 						Discover the Fictiv Difference
+						<?php
+							endif;
+						?>
+						
 					</h2>
 					<p class="md:text-20 font-museo-500 text-grey-600 ">
+						<?php 
+							if ( get_field('fd_section_paragraph') ) :
+
+								the_field('fd_section_paragraph');
+
+							else :
+
+						?>
 						Partnering with Fictiv means quality you can rely on and production speeds that hit your deadlines — made possible by the unique combination of a technology-backed platform, the highest quality partners, and people with boots-on-the-ground to ensure quality.
+						<?php
+							endif;
+						?>
+						
 					</p>
 				</div>
 			</div>
@@ -198,42 +233,98 @@
 	</div>
 </section>
 
+
 <?php 
+	if ( have_rows('fd_rows') ) :
 
-	$differences = array(
+		$i = 0;
+		while ( have_rows('fd_rows') ) :
+			the_row();
+?>
 
-		array(
-			'img' => 'homepage-illo-top',
-			'title' => 'Digital Platform',
-			'para' => 'Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.',
-			'cta' => array(
-				'text' => 'learn more',
-				'link' => '/our-platform'
-			)
-		),
+<section class="py-20">
+	<div class="container relative">
+		<div class="flex justify-center">
+			<div class="w-full lg:w-10/12 lg:px-6">
+				<div class="flex flex-wrap flex-col-reverse <?php 
+
+					if( $i % 2 === 0 ) :
 		
-		array(
-			'img' => 'homepage-illo-middle-2',
-			'title' => 'Partner Network',
-			'para' => 'Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.',
-			'cta' => array(
-				'text' => 'learn more',
-				'link' => '/our-network'
-			)
-		),
+						echo 'lg:flex-row-reverse ';
+		
+					else :
+		
+						echo 'lg:flex-row';
+		
+					endif;
+				
+				?> justify-center lg:justify-start items-center lg:-mx-6">
+					<div class="w-11/12 lg:w-6/12 lg:px-6">
+						<div class="mb-4">
+							<h2 class="text-grey-700 font-museo-700 leading-tight text-20 md:text-29 mb-6">
 
-		array(
-			'img' => 'homepage-illo-bottom',
-			'title' => 'People on the Ground',
-			'para' => 'Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.',
-			'cta' => array(
-				'text' => 'learn more',
-				'link' => '/our-people'
-			)
-		)
-	);
+								<?php the_sub_field('fd_row_header'); ?>
+							</h2>
+						</div>
+						<div class="mb-6">
+							<p class="font-museo-500 text-grey-600">
+								<?php the_sub_field('fd_row_paragraph'); ?>
+							</p>
+						</div>
+						<div>
+							<a class="btn btn-primary" href="<?php echo get_sub_field('fd_row_button')['url']; ?>"><?php echo get_sub_field('fd_row_button')['title']; ?></a>
+						</div>
+					</div>
+					<div class="w-full lg:w-6/12 lg:px-6">
+						<img class="lazyload w-full" alt="<?php the_sub_field('fd_row_header'); ?> graphic" data-src="<?php the_sub_field('fd_row_graphic'); ?>">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<?php
 
-	foreach ( $differences as $i => $difference ) :
+		$i++;
+		endwhile;
+		
+	else :
+
+		$differences = array(
+
+			array(
+				'img' => 'homepage-illo-top',
+				'title' => 'Digital Platform',
+				'para' => 'Our digital quote-to-order platform gives you manufacturing data at your fingertips, so you can make faster decisions and stay connected every step of the way.',
+				'cta' => array(
+					'text' => 'learn more',
+					'link' => '/our-platform'
+				)
+			),
+			
+			array(
+				'img' => 'homepage-illo-middle-2',
+				'title' => 'Partner Network',
+				'para' => 'Our highly vetted global partner network gives you access to a wide breadth of capabilities, at the highest quality standards, through a single access point.',
+				'cta' => array(
+					'text' => 'learn more',
+					'link' => '/our-network'
+				)
+			),
+
+			array(
+				'img' => 'homepage-illo-bottom',
+				'title' => 'People on the Ground',
+				'para' => 'Fictiv employs skilled engineers and program managers to inspect parts at the factory floor, provide guided DFM expertise, and keep your production schedules on track.',
+				'cta' => array(
+					'text' => 'learn more',
+					'link' => '/our-people'
+				)
+			)
+		);
+
+		foreach ( $differences as $i => $difference ) :
 	
 ?>
 
@@ -279,7 +370,8 @@
 	</div>
 </section>
 <?php 
-	endforeach;
+		endforeach;
+	endif;
 
 	$args = array(
         'post_type' => array('page'),

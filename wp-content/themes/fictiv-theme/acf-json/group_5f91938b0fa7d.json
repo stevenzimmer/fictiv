@@ -1,11 +1,11 @@
 {
-    "key": "group_5f773d86799a9",
-    "title": "Homepage Hero",
+    "key": "group_5f91938b0fa7d",
+    "title": "Fictiv Difference section (Homepage)",
     "fields": [
         {
-            "key": "field_5f773d8ceeaab",
-            "label": "Title",
-            "name": "homepage_hero_title",
+            "key": "field_5f91939915ae8",
+            "label": "Section Title",
+            "name": "fd_section_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5f773da8eeaac",
-            "label": "Paragraph",
-            "name": "homepage_hero_paragraph",
-            "type": "text",
+            "key": "field_5f9193af15ae9",
+            "label": "Section Paragraph",
+            "name": "fd_section_paragraph",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,67 +36,14 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
-            "key": "field_5f91980245557",
-            "label": "Modal Popup embed link",
-            "name": "homepage_modal_popup_embed_link",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5f773db6eeaad",
-            "label": "Video Link Text",
-            "name": "homepage_hero_video_link_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5f773dfdeeaae",
-            "label": "Button",
-            "name": "homepage_hero_button",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_5f773e34eeaaf",
-            "label": "Bottom Row",
-            "name": "homepage_hero_bottom_row",
+            "key": "field_5f9193d215aea",
+            "label": "Difference Rows",
+            "name": "fd_rows",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -110,12 +57,12 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Column",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5f773e46eeab0",
-                    "label": "Icon",
-                    "name": "homepage_hero_bottom_row_icon",
+                    "key": "field_5f91942d15aee",
+                    "label": "Graphic",
+                    "name": "fd_row_graphic",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -137,9 +84,9 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5f773e5eeeab1",
-                    "label": "Text",
-                    "name": "homepage_hero_bottom_row_text",
+                    "key": "field_5f9193ef15aeb",
+                    "label": "Header",
+                    "name": "fd_row_header",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -156,10 +103,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f773e68eeab2",
-                    "label": "Link (optional)",
-                    "name": "homepage_hero_bottom_row_link",
-                    "type": "text",
+                    "key": "field_5f91940215aec",
+                    "label": "Paragraph",
+                    "name": "fd_row_paragraph",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -170,9 +117,24 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5f91941d15aed",
+                    "label": "Button",
+                    "name": "fd_row_button",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -187,12 +149,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603377179
+    "modified": 1603377137
 }
