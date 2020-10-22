@@ -326,11 +326,11 @@ echo '<span class="font-museo-700 text-grey-700">(' . get_field('at_a_glance_mat
             ?>
         </div>
          <?php 
-            if ( $processes[0]->slug === 'cnc-machining' ) :
+            if ( !empty( get_field('process_datasheet_link') ) ) :
             
         ?>
         <div class="text-center mt-12">
-            <a target="_blank" class="btn btn-long btn-primary" href="https://docsend.com/view/epw522h">Download CNC Material Datasheet</a>
+            <a target="_blank" class="btn btn-long btn-primary" href="<?php echo get_field('process_datasheet_link')['url']; ?><"><?php echo get_field('process_datasheet_link')['title']; ?></a>
         </div>
 
         <?php 
