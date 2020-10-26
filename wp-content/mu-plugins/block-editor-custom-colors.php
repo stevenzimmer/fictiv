@@ -67,7 +67,7 @@ function fictiv_custom_colors() {
 			array(
 				'name'  => __( 'Grey Lighter', 'fictiv_custom_colors' ),
 				'slug'  => 'grey-200',
-				'color'	=> '#DBDCDE',
+				'color'	=> '#f5f5f5',
 			),
 
 			array(

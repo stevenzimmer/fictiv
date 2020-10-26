@@ -51,7 +51,9 @@
         "jquery": "^3.5.1",
         "micromodal": "^0.4.6",
         "siema": "^1.5.1",
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "sticky-sidebar": "^3.3.1",
+        "waypoints": "^4.0.1"
     },
     "keywords": []
 }

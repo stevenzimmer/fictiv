@@ -63,52 +63,9 @@
 			?>
 
 			<div class="w-11/12 md:w-1/2 lg:w-1/3 mb-6 lg:px-3">
-				<div class="border border-grey-200 relative h-full">
-					<a href="<?php echo get_the_permalink( $resource_id ) ?>" class="w-full h-full absolute inset-0 z-50"></a>
-					<div class="relative h-0 thumbnail-ratio" >
-						
-						<img title="<?php echo get_the_title( $resource_id ); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $resource_id ), 'medium_large', false )[0]; ?>">
-
-					</div>
-					<div class="p-2 relative">
-						<div class="mb-1">
-							<p class="text-grey-600 text-12 font-museo-700 uppercase"><?php 
-						
-							echo get_post_type_object( get_post_type( $resource_id ) )->labels->singular_name;
-							?></p>
-						</div>
-						<div class="h-12 mb-2">
-							<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
-								echo get_the_title( $resource_id );
-
-							?></h2>
-						</div>
-						<div class=" text-grey-600 font-museo-500 h-24">
-							<?php 
-								if( get_the_excerpt( $resource_id ) ) :
-							?>
-							<p class=" max-lines max-lines-3">
-								
-								<?php 
-									echo get_the_excerpt( $resource_id  );
-								?>
-								
-							</p>
-							<?php 
-								endif;
-							?>
-						</div>
-
-						<div class="absolute right-0 bottom-0 p-4">
-						
-							<div>
-								<?php 
-									echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/cta-arrow.svg');
-								?>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php 
+					fictiv_post_card( $resource_id );
+				?>
 			</div>
 		
 			<?php

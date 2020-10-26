@@ -57,7 +57,7 @@
 							
 									<?php 
 
-										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+										fictiv_post_card( get_the_id() );
 									
 									?>
 
@@ -137,7 +137,7 @@
 							
 									<?php 
 
-										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+										fictiv_post_card( get_the_id() );
 									
 									?>
 

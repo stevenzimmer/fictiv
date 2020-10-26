@@ -318,6 +318,49 @@
 			)
 		);
 
+		register_post_type(
+			'cpt_masterclass',
+			array(
+				'labels'		=> array(
+					'name'					=> __('Masterclass'),
+					'singular_name' 		=> __('Masterclass'),
+					'add_new'				=> __('Add New Masterclass'),
+					'add_new_item'			=> __('Add New Masterclass'),
+					'edit_item'				=> __('Edit Masterclass'),
+					'view_item'				=> __('View Masterclass'),
+					'view_items'			=> __('View Masterclasses'),
+					'featured_image' 		=> __('Thumbnail Image'),
+					'set_featured_image' 	=> __('Upload Thumbnail Image'),
+					'remove_featured_image' => __('Remove Thumbnail Image'),
+					'use_featured_image'	=> __('Use as Thumbnail Image'),
+					'items_list'			=> __('Masterclasses'),
+					
+				),
+				'taxonomies'	=> array(
+					// 'fictiv_industry',
+					// 'fictiv_manufacturing_process'
+				),
+				'public' 		=> true,
+				'hierarchical'  => true,
+				'has_archive' 	=> true,
+				'show_in_nav_menus'	=> true,
+				'supports'		=> array(
+					'title',
+					'excerpt',
+					'editor', 
+					// 'thumbnail',
+					'page-attributes'
+				), 
+				'menu_position'	=> 1,
+				'menu_icon'		=> 'dashicons-welcome-learn-more',
+				'show_ui'		=> true,
+				'show_in_rest'	=> true,
+				'rest_base'		=> 'masterclass',
+				'rest_controller_class'	=> 'WP_REST_Posts_Controller',
+				'rewrite' => array('slug' => 'masterclass'),
+			)
+		);
+
 
 	// End Resource Center CPTs
 

@@ -16,7 +16,7 @@
 
 
 ?>
-<nav class="relative lg:fixed top-0 left-0 right-0 w-full h-16 lg:h-18 flex items-center z-50 bg-white border-b border-grey-200 <?php 
+<nav id="primary-nav" class="relative lg:fixed top-0 left-0 right-0 w-full h-16 lg:h-18 flex items-center z-50 bg-white border-b border-grey-200 <?php 
 	echo (is_user_logged_in() ? 'mt-8' : '' )
 ?>">
 	

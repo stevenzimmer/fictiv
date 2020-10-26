@@ -75,6 +75,23 @@
 
     &-type {
 
+        &-cpt {
+
+            &_masterclass {
+
+                .block-editor-block-list__layout,
+                .editor-post-title {
+
+                    .wp {
+
+                        &-block {
+                            max-width: 1084px;
+                        }
+                    }
+                }
+            }
+        }
+
         &-page {
             
             .block-editor-block-list__layout,

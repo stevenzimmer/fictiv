@@ -34,32 +34,6 @@
 			$resources->the_post();
 
 			array_push( $resource_results, array(
-				'title' => get_the_title(),
-				'link' => get_the_permalink(),
-				'thumb' => ( 
-
-					get_field( 'card_thumbnail', get_the_id() ) 
-				
-					?
-				
-						get_field( 'card_thumbnail', get_the_id() ) 
-				
-					:
-						(
-							has_post_thumbnail() 
-
-							? 
-								wp_get_attachment_image_src( 
-									get_post_thumbnail_id( get_the_id() ), 
-									'medium_large', 
-									false )[0] 
-
-							: 
-								false 
-						)
-				),
-				'excerpt' => get_the_excerpt(),
-				'post_type' => get_post_type(),
 				'id' => get_the_id()
 			));
 

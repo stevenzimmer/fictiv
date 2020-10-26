@@ -26,12 +26,14 @@ if ( have_posts() ) :
 						<div class="flex justify-center">
 							<div class="w-full">
 								<div class="mb-6">
-									<h1 class="font-museo-700 text-20 text-grey-600">
-									Latest 
-									<?php 
+									<h1 class="font-museo-700 text-20 text-grey-600">Latest <?php 
 										
 										echo strtolower( $post_type_name );
 								
+									?> <?php 
+										if ( strtolower($post_type_name ) ==='masterclass' ) :
+											echo 'courses';
+										endif;
 									?></h1>		
 								</div>
 							</div>
@@ -50,7 +52,7 @@ if ( have_posts() ) :
 						
 								<?php 
 
-									fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+									fictiv_post_card( get_the_id() );
 								
 								?>
 						

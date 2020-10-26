@@ -273,8 +273,11 @@ function getJob( hash ) {
 	}
 }
 
-if ( window.location.hash.substring(1) ) {
+if ( document.body.classList.contains('page-template-page-careers') ) {
 
-	getJob( window.location.hash );
+	if ( window.location.hash.substring(1) ) {
 
+		getJob( window.location.hash );
+
+	}
 }

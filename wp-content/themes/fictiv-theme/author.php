@@ -1,6 +1,5 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
 
 ?>
 
