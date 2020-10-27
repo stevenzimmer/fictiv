@@ -161,18 +161,6 @@
                 "operator": "==",
                 "value": "page-injection-molding.php"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_masterclass"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
-            }
         ]
     ],
     "menu_order": 0,
@@ -183,5 +171,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603454593
+    "modified": 1603759338
 }

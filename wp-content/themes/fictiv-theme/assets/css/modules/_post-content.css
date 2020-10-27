@@ -27,6 +27,50 @@
 			}
 		}
 
+		&.masterclass {
+
+			.wp {
+
+				&-block {
+
+					&-image {
+						@apply m-0 mb-6;
+					}
+				}
+			}
+
+			.ab {
+
+				&-block {
+
+					&-layout {
+
+						&-column {
+
+							&-inner {
+								@apply h-full;
+							}
+						}
+					}
+				}
+
+				&-layout {
+
+					&-column {
+
+						&-wrap {
+							@apply block;
+
+							@screen md {
+								@apply grid;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}

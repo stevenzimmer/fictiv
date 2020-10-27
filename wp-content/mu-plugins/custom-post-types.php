@@ -329,10 +329,10 @@
 					'edit_item'				=> __('Edit Masterclass'),
 					'view_item'				=> __('View Masterclass'),
 					'view_items'			=> __('View Masterclasses'),
-					'featured_image' 		=> __('Thumbnail Image'),
-					'set_featured_image' 	=> __('Upload Thumbnail Image'),
-					'remove_featured_image' => __('Remove Thumbnail Image'),
-					'use_featured_image'	=> __('Use as Thumbnail Image'),
+					'featured_image' 		=> __('Hero Image'),
+					'set_featured_image' 	=> __('Upload Hero Image'),
+					'remove_featured_image' => __('Remove Hero Image'),
+					'use_featured_image'	=> __('Use as Hero Image'),
 					'items_list'			=> __('Masterclasses'),
 					
 				),
@@ -348,7 +348,7 @@
 					'title',
 					'excerpt',
 					'editor', 
-					// 'thumbnail',
+					'thumbnail',
 					'page-attributes'
 				), 
 				'menu_position'	=> 1,

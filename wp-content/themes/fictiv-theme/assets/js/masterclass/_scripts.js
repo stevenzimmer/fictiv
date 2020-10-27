@@ -1,125 +1,127 @@
 // require('waypoints/lib/noframework.waypoints.js');
-import StickySidebar from 'sticky-sidebar';
+// import StickySidebar from 'sticky-sidebar';
 
-if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass-module')  ) {
+// if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass-module')  ) {
 	
-	const module_h2 = Array.prototype.slice.call( document.querySelectorAll('.post-content h2') );
+	// const module_h2 = Array.prototype.slice.call( document.querySelectorAll('.post-content h2') );
 
-	let headers = [];
 
-	const label = "header-";
 
-	const masterclassContents = document.getElementById('masterclass-contents');
-	const moduleFooter = document.getElementById('module-footer');
-	const masterclassContentsWidth = masterclassContents.offsetWidth;
-	const masterclassContentsHeight = masterclassContents.offsetHeight;
+	// let headers = [];
 
-	const masterclassContentsTop = masterclassContents.offsetTop;
-	const primaryNav = document.getElementById('primary-nav');
-	const scrollOffset = 20;
+	// const label = "header-";
 
-	if ( module_h2.length ) {
+	// const masterclassContents = document.getElementById('masterclass-contents');
+	// const moduleFooter = document.getElementById('module-footer');
+	// const masterclassContentsWidth = masterclassContents.offsetWidth;
+	// const masterclassContentsHeight = masterclassContents.offsetHeight;
 
-		module_h2.forEach( ( h2, i ) => {
+	// const masterclassContentsTop = masterclassContents.offsetTop;
+	// const primaryNav = document.getElementById('primary-nav');
+	// const scrollOffset = 20;
 
-			h2.id = label + i;
+	// if ( module_h2.length ) {
 
-			headers.push( h2.innerText );
+	// 	module_h2.forEach( ( h2, i ) => {
 
-		});
+	// 		h2.id = label + i;
 
-		let contents_list = document.createElement('ul');
+	// 		headers.push( h2.innerText );
 
-		document.getElementById('contents-list').appendChild( contents_list );
+	// 	});
 
-		headers.forEach( ( item, i, all ) => {
+	// 	let contents_list = document.createElement('ul');
 
-			let li = document.createElement('li');
+	// 	document.getElementById('contents-list').appendChild( contents_list );
 
-			contents_list.appendChild( li );
+	// 	headers.forEach( ( item, i, all ) => {
 
-			li.innerHTML = `<a id="contents-item-${i}" class="contents-item block py-1 text-grey-600 hover:text-black" href="#${label}${i}">${item}</a>`;
+	// 		let li = document.createElement('li');
 
-			// let waypoint = new Waypoint({
-			//     element: document.getElementById( label + i ),
-			//     handler: (direction) => {
+	// 		contents_list.appendChild( li );
+
+	// 		li.innerHTML = `<a id="contents-item-${i}" class="contents-item block py-1 text-grey-600 hover:text-black" href="#${label}${i}">${item}</a>`;
+
+	// 		// let waypoint = new Waypoint({
+	// 		//     element: document.getElementById( label + i ),
+	// 		//     handler: (direction) => {
 			    	
-			//     	document.querySelectorAll('.contents-item').forEach( ( contentItem ) => {
+	// 		//     	document.querySelectorAll('.contents-item').forEach( ( contentItem ) => {
 
-			//     		contentItem.classList.remove('active');
+	// 		//     		contentItem.classList.remove('active');
 
-			//     	});
-			//         document.getElementById("contents-item-" + i ).classList.add('active');
-			//     },
-			//     offset: scrollOffset + primaryNav.offsetHeight + 10
+	// 		//     	});
+	// 		//         document.getElementById("contents-item-" + i ).classList.add('active');
+	// 		//     },
+	// 		//     offset: scrollOffset + primaryNav.offsetHeight + 10
 		
-			// });
+	// 		// });
 			
-		});
+	// 	});
 
-		// let waypointFooter = new Waypoint({
-		//     element: moduleFooter,
-		//     handler: function(direction) {
+	// 	// let waypointFooter = new Waypoint({
+	// 	//     element: moduleFooter,
+	// 	//     handler: function(direction) {
 
-		//     	if ( direction === 'down' ) {
-		//     		console.log( 'module footer hit down' );
+	// 	//     	if ( direction === 'down' ) {
+	// 	//     		console.log( 'module footer hit down' );
 
-		// 	    	masterclassContents.classList.remove( "fixed" );
-		// 	    	masterclassContents.classList.add( "absolute" );
+	// 	// 	    	masterclassContents.classList.remove( "fixed" );
+	// 	// 	    	masterclassContents.classList.add( "absolute" );
 
-		// 			masterclassContents.style.top = ( this.triggerPoint + primaryNav.offsetHeight + scrollOffset ) + "px";
+	// 	// 			masterclassContents.style.top = ( this.triggerPoint + primaryNav.offsetHeight + scrollOffset ) + "px";
 
-		// 			masterclassContents.style.width = masterclassContentsWidth + "px";
+	// 	// 			masterclassContents.style.width = masterclassContentsWidth + "px";
 
-		//     	} else {
+	// 	//     	} else {
 
-		//     		console.log( 'module footer hit up' );
+	// 	//     		console.log( 'module footer hit up' );
 
-		// 	    	masterclassContents.classList.add( "fixed" );
-		// 	    	masterclassContents.classList.remove( "absolute" );
+	// 	// 	    	masterclassContents.classList.add( "fixed" );
+	// 	// 	    	masterclassContents.classList.remove( "absolute" );
 
-		// 	    	masterclassContents.style.width = masterclassContentsWidth + "px";
-		// 			masterclassContents.style.top = primaryNav.offsetHeight + scrollOffset + "px";
+	// 	// 	    	masterclassContents.style.width = masterclassContentsWidth + "px";
+	// 	// 			masterclassContents.style.top = primaryNav.offsetHeight + scrollOffset + "px";
 
-		//     	}
+	// 	//     	}
 		    	
-		//     },
-		//     offset: masterclassContentsHeight + moduleFooter.offsetHeight + primaryNav.offsetHeight
+	// 	//     },
+	// 	//     offset: masterclassContentsHeight + moduleFooter.offsetHeight + primaryNav.offsetHeight
 
-		// });
+	// 	// });
 
 		
 
-		// const contentsEvents = new StickySidebar( masterclassContents );
+	// 	// const contentsEvents = new StickySidebar( masterclassContents );
 
-		// masterclassContents.addEventListener('affix.top.contentsEvents', function ( e ) {
-		// 	console.log( e );
-		//     console.log( 'Fires immediately before the element has been affixed to the top of the viewport' );
-		// });
+	// 	// masterclassContents.addEventListener('affix.top.contentsEvents', function ( e ) {
+	// 	// 	console.log( e );
+	// 	//     console.log( 'Fires immediately before the element has been affixed to the top of the viewport' );
+	// 	// });
 
-		// masterclassContents.addEventListener('affixed.container-bottom.contentsEvents', function ( e ) {
-		// 	console.log( e );
-		//     console.log( 'Fired before the element is affixed to the bottom of the container' );
-		// });
+	// 	// masterclassContents.addEventListener('affixed.container-bottom.contentsEvents', function ( e ) {
+	// 	// 	console.log( e );
+	// 	//     console.log( 'Fired before the element is affixed to the bottom of the container' );
+	// 	// });
 
-		const contentsSidebar = new StickySidebar( '#masterclass-contents', {
-			topSpacing: primaryNav.offsetHeight + scrollOffset,
-			bottomSpacing: scrollOffset,
-			containerSelector: '.container',
-			innerWrapperSelector: '.masterclass-sidebar-inner'
-		});
+	// 	const contentsSidebar = new StickySidebar( '#masterclass-contents', {
+	// 		topSpacing: primaryNav.offsetHeight + scrollOffset,
+	// 		bottomSpacing: scrollOffset,
+	// 		containerSelector: '.container',
+	// 		innerWrapperSelector: '.masterclass-sidebar-inner'
+	// 	});
 
-		const contentSidebar = new StickySidebar( masterclassContents );
+	// 	const contentSidebar = new StickySidebar( masterclassContents );
 
-		masterclassContents.addEventListener('initialized.contentSidebar', function( ) {
-		   // after the sticky sidebar plugin has been initialized
-		   console.log('initialized');
-		});
+	// 	masterclassContents.addEventListener('initialized.contentSidebar', function( ) {
+	// 	   // after the sticky sidebar plugin has been initialized
+	// 	   console.log('initialized');
+	// 	});
 
-		masterclassContents.addEventListener('affixed.top.contentSidebar', function( ) {
-		   // after the sticky sidebar plugin has been initialized
-		   console.log('affixed top');
-		});
+	// 	masterclassContents.addEventListener('affixed.top.contentSidebar', function( ) {
+	// 	   // after the sticky sidebar plugin has been initialized
+	// 	   console.log('affixed top');
+	// 	});
 
 		// let waypointContents = new Waypoint({
 		//     element: masterclassContents,
@@ -176,22 +178,38 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 
 		// });
 
-		const links = document.querySelectorAll(".contents-list li .contents-item");
+		// const links = document.querySelectorAll(".contents-list li .contents-item");
 	 
-		for (const link of links) {
-		  link.addEventListener("click", clickHandler);
-		}
+		// for (const link of links) {
+		//   link.addEventListener("click", clickHandler);
+		// }
 		 
-		function clickHandler(e) {
-		  e.preventDefault();
-		  const href = this.getAttribute("href");
-		  const offsetTop = document.querySelector(href).offsetTop;
+		// function clickHandler(e) {
+		//   e.preventDefault();
+		//   const href = this.getAttribute("href");
+		//   const offsetTop = document.querySelector(href).offsetTop;
 		 
-		  scroll({
-		    top: offsetTop - ( primaryNav.offsetHeight + scrollOffset + 9.9 ),
-		    behavior: "smooth"
-		  });
-		}
-	}
-}
+		//   scroll({
+		//     top: offsetTop - ( primaryNav.offsetHeight + scrollOffset + 9.9 ),
+		//     behavior: "smooth"
+		//   });
+		// }
+	// }
+// }
 
+if ( document.body.classList.contains('cpt_masterclass-template-default')  ) {
+	const bioTriggers = Array.prototype.slice.call( document.querySelectorAll('.bio-trigger') );
+
+	bioTriggers.forEach( ( trigger ) => {
+
+		trigger.addEventListener('click', function( e ) {
+
+			e.preventDefault();
+
+			document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').classList.toggle('active');
+			document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').parentElement.classList.toggle('shadow-lg');
+		
+		});
+	});
+
+}

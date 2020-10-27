@@ -24,3 +24,13 @@
 	    }
 	}
 }
+
+.bio {
+
+	&-wrapper {
+
+		&.active {
+			@apply h-full;
+		}
+	}
+}
