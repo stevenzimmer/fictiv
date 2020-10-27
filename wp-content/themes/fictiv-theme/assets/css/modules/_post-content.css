@@ -27,6 +27,50 @@
 			}
 		}
 
+		&.masterclass {
+
+			.wp {
+
+				&-block {
+
+					&-image {
+						@apply m-0 mb-6;
+					}
+				}
+			}
+
+			.ab {
+
+				&-block {
+
+					&-layout {
+
+						&-column {
+
+							&-inner {
+								@apply h-full;
+							}
+						}
+					}
+				}
+
+				&-layout {
+
+					&-column {
+
+						&-wrap {
+							@apply block;
+
+							@screen md {
+								@apply grid;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}
@@ -40,7 +84,7 @@
 		}
 		
 		blockquote {
-			@apply mb-6 py-2 px-5 border-l-8 border-grey-light bg-grey-lighter;
+			@apply mb-6 py-2 px-5 border-l-8 border-grey-light bg-grey-lighter m-0;
 
 			p {
 				@apply w-full mb-0;
@@ -210,6 +254,13 @@
 
 				&-separator {
 					@apply border-grey-200 mb-4;
+
+					&.has {
+
+						&-background {
+							@apply p-0;
+						}
+					}
 				}
 
 				&-eedee {
@@ -229,6 +280,47 @@
 
 				&-cover {
 					@apply mb-6;
+				}
+
+				&-atomic {
+
+					&-blocks {
+
+						&-ab {
+
+							&-columns {
+								@apply mb-12;
+
+								&:last-child {
+									@apply mb-6;
+								}
+
+								.ab {
+
+									&-block {
+
+										&-layout {
+
+											&-column {
+
+												&-inner {
+
+													ul {
+														@apply pl-4;
+
+														&:last-child {
+															@apply mb-0;
+														}
+													}
+												}
+											}
+										}
+									}
+								
+								}
+							}
+						}
+					}
 				}
 
 				&-columns {
@@ -314,6 +406,13 @@
 												@apply mb-4 mt-0;
 											}
 										}
+
+										&-quote {
+
+											p {
+												@apply mb-0;
+											}
+										}
 									}
 								}
 							}
@@ -368,7 +467,7 @@
 					@apply mb-4 py-2 px-5 border-l-4 border-grey-300 bg-grey-100;
 
 					p {
-						@apply text-teal-light text-20 mb-0;
+						@apply text-blue-dark font-museo-700 text-20;
 					}
 				}
 
@@ -422,6 +521,31 @@
 
 						&-background {
 							@apply p-4;
+						}
+					}
+
+					&__inner {
+
+						&-container {
+
+							.wp {
+
+								&-block {
+
+									&-atomic {
+
+										&-blocks {
+
+											&-ab {
+
+												&-columns {
+													@apply mb-0;
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -676,6 +800,19 @@
 
 				&-color {
 					@apply bg-grey-600;
+				}
+			}
+		}
+
+		&-700 {
+			&-color {
+				@apply text-grey-700;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-grey-700;
 				}
 			}
 		}	

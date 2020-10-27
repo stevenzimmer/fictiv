@@ -95,6 +95,7 @@ module.exports = {
         900: '#234e52',
       },
       blue: {
+        lighter: "#EFF8FA",
         light:  "#5B87F2",
         dark:   "#0D0B70",
         
@@ -303,11 +304,13 @@ module.exports = {
       '18': '18px',
       '20': '20px',
       '24': '24px',
+      '26': '26px',
       '29': '29px',
       '30': '30px',
       '36': '36px',
       '40': '40px',
       '48': '48px',
+      '56': '56px',
       'h1': '60px'
     },
     fontWeight: {

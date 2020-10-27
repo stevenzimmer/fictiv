@@ -1,22 +1,24 @@
 <?php 
 
-function fictiv_post_card( $resource_type ) {
+function fictiv_post_card( $id ) {
+
+	$resource_type = get_post_type_object( get_post_type( $id ) )->labels->singular_name;
 
 	$thumbnail_src = ( 
 
-		get_field( 'card_thumbnail', get_the_id() ) 
+		get_field( 'card_thumbnail', $id ) 
 		
 		?
 		
-			get_field( 'card_thumbnail', get_the_id() ) 
+			get_field( 'card_thumbnail', $id ) 
 		
 		:
 			(
-				has_post_thumbnail() 
+				has_post_thumbnail( $id ) 
 
 				? 
 					wp_get_attachment_image_src( 
-						get_post_thumbnail_id( get_the_id() ), 
+						get_post_thumbnail_id( $id ), 
 						'medium_large', 
 						false )[0] 
 
@@ -28,19 +30,19 @@ function fictiv_post_card( $resource_type ) {
 ?>
 <div class="border border-grey-200 relative h-full">
 	<a <?php 
-		if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', get_the_id() ) ) :	
+		if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', $id ) ) :	
 		?>
-		title="Upcoming webinar: <?php echo get_field('webinar_date', get_the_id() ); ?> @ <?php echo get_field('webinar_time', get_the_id() ); ?>"
+		title="Upcoming webinar: <?php echo get_field('webinar_date', $id ); ?> @ <?php echo get_field('webinar_time', $id ); ?>"
 	<?php
 		endif;
 
-	?> href="<?php echo get_the_permalink(); ?>" class="w-full h-full absolute inset-0 z-30"></a>
+	?> href="<?php echo get_the_permalink( $id ); ?>" class="w-full h-full absolute inset-0 z-30"></a>
 	<div class="relative h-0 thumbnail-ratio" >
 		
 		<?php 
 			if( $thumbnail_src ) :
 		?>
-		<img title="<?php echo get_the_title(); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail_src; ?>">
+		<img title="<?php echo get_the_title( $id ); ?>" class="lazyload absolute inset-0 w-full h-full object-cover" data-src="<?php echo $thumbnail_src; ?>">
 
 		<?php 
 			else :
@@ -58,12 +60,12 @@ function fictiv_post_card( $resource_type ) {
 		<div class="mb-2">
 			<div class="flex items-center h-6">
 				<div>
-					<p class="text-grey-600 text-12 font-museo-700 uppercase leading-3"><?php 
+					<p class="text-grey-600 text-12 font-museo-700 uppercase leading-3"><?php
 						echo $resource_type;
 					?></p>
 				</div>
 				<?php 
-					if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', get_the_id() ) ) :
+					if ( strtolower( $resource_type ) === 'webinars' && !get_field('webinar_on-demand', $id ) ) :
 
 						upcoming_label();
 					
@@ -75,7 +77,7 @@ function fictiv_post_card( $resource_type ) {
 		</div>
 		<div class="h-12 mb-2">
 			<h2 class="text-16 font-museo-700 text-grey-700 max-lines max-lines-2"><?php 
-				echo get_the_title();
+				echo get_the_title( $id );
 
 			?></h2>
 		</div>
@@ -83,12 +85,12 @@ function fictiv_post_card( $resource_type ) {
 		
 		<div class=" text-grey-600 font-museo-500 h-24">
 			<?php 
-				if( get_the_excerpt() ) :
+				if( get_the_excerpt( $id ) ) :
 			?>
 			<p class=" max-lines max-lines-3">
 				
 				<?php 
-					echo get_the_excerpt();
+					echo get_the_excerpt( $id );
 				?>
 				
 			</p>

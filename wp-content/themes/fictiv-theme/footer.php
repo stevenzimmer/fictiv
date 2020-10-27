@@ -1,4 +1,4 @@
-<footer class="py-10 border-t border-teal-lighter">
+<footer id="footer" class="py-10 border-t border-teal-lighter">
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-10/12">

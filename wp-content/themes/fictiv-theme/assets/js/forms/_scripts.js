@@ -3,7 +3,7 @@ import { readCookie } from './../cookies/read-cookie';
 /* const */
 const MKTOFORM_ID_ATTRNAME = "data-formId";
 
-let mkto_forms = document.querySelectorAll('[' + MKTOFORM_ID_ATTRNAME +']');
+let mkto_forms = Array.prototype.slice.call( document.querySelectorAll('[' + MKTOFORM_ID_ATTRNAME +']') );
 
 if ( mkto_forms.length > 0 ) {
     

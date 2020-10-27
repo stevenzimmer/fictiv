@@ -67,7 +67,7 @@ function fictiv_custom_colors() {
 			array(
 				'name'  => __( 'Grey Lighter', 'fictiv_custom_colors' ),
 				'slug'  => 'grey-200',
-				'color'	=> '#DBDCDE',
+				'color'	=> '#f5f5f5',
 			),
 
 			array(
@@ -92,6 +92,12 @@ function fictiv_custom_colors() {
 				'name'  => __( 'Grey Heavy', 'fictiv_custom_colors' ),
 				'slug'  => 'grey-600',
 				'color'	=> '#76787A',
+			),
+
+			array(
+				'name'  => __( 'Grey Dark', 'fictiv_custom_colors' ),
+				'slug'  => 'grey-700',
+				'color'	=> '#444444',
 			),
 
 			array(

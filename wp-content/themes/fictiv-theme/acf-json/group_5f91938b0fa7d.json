@@ -1,11 +1,49 @@
 {
-    "key": "group_5f0f1929eb0ab",
-    "title": "Hosts",
+    "key": "group_5f91938b0fa7d",
+    "title": "Fictiv Difference section (Homepage)",
     "fields": [
         {
-            "key": "field_5f0f192f0ab1d",
-            "label": "Add hosts",
-            "name": "webinar_hosts",
+            "key": "field_5f91939915ae8",
+            "label": "Section Title",
+            "name": "fd_section_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f9193af15ae9",
+            "label": "Section Paragraph",
+            "name": "fd_section_paragraph",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f9193d215aea",
+            "label": "Difference Rows",
+            "name": "fd_rows",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -19,14 +57,14 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add host",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5f0f19680ab21",
-                    "label": "Headshot",
-                    "name": "webinar_host_headshot",
+                    "key": "field_5f91942d15aee",
+                    "label": "Graphic",
+                    "name": "fd_row_graphic",
                     "type": "image",
-                    "instructions": "max 400px x 400px",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -40,15 +78,15 @@
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
-                    "max_width": 400,
-                    "max_height": 400,
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": "",
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5f0f19410ab1e",
-                    "label": "Name",
-                    "name": "webinar_host_name",
+                    "key": "field_5f9193ef15aeb",
+                    "label": "Header",
+                    "name": "fd_row_header",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -65,28 +103,9 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f0f19550ab1f",
-                    "label": "Title",
-                    "name": "webinar_host_title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f0f195f0ab20",
-                    "label": "Bio",
-                    "name": "webinar_host_bio",
+                    "key": "field_5f91940215aec",
+                    "label": "Paragraph",
+                    "name": "fd_row_paragraph",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -101,6 +120,21 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": ""
+                },
+                {
+                    "key": "field_5f91941d15aed",
+                    "label": "Button",
+                    "name": "fd_row_button",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -108,38 +142,9 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_webinar"
-            },
-            {
                 "param": "page_type",
                 "operator": "==",
-                "value": "top_level"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_video"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "cpt_masterclass"
-            },
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "top_level"
+                "value": "front_page"
             }
         ]
     ],
@@ -151,5 +156,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603762826
+    "modified": 1603377137
 }
