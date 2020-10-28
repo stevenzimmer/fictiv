@@ -9,7 +9,7 @@
 		</div>
 
 		<div>
-			<div class="py-6 border-b border-grey-200 relative text-grey-600 hover:text-black">
+			<div class="py-4 border-b border-grey-200 relative text-grey-600 hover:text-teal-light">
 				<a class="absolute w-full h-full inset-0 z-30 block" href="<?php echo get_the_permalink( $parent_id ); ?>"></a>
 				<p class=" font-museo-500">
 					Introduction
@@ -22,10 +22,10 @@
 				foreach ( $masterclass_modules as $i => $module ) :
 
 			?>
-			<div class="py-6 border-b border-grey-200 font-museo-500 hover:text-black relative  <?php 
+			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative <?php 
 				if( $i === get_the_id() ) :
 
-					echo 'text-black';
+					echo 'text-teal-light';
 
 				else :
 
@@ -45,20 +45,45 @@
 				<?php 
 					endif; 
 				?>
-				<div>
+				<div class="py-2">
 				
-				<?php
+					<?php
 						if ( $j !== $arr_length ) :
-						
-						
-							echo "Module " . get_post_field( 'menu_order', $i ) . ' - ' . get_the_title( $i );
+					?>
+					<div class="flex items-center justify-between">
+						<div>
+							<p class="text-12 uppercase font-museo-500">Module <?php echo get_post_field( 'menu_order', $i ); ?></p>
+							<p class="mb-2">
+							<?php	
+									
+								echo get_the_title( $i );
+							
+							?>
+							</p>
+									
+						</div>
+						<div class="<?php 
+							if( $i === get_the_id() ) :
+
+								echo 'transform rotate-90';
+
+							endif;
+						?>">
+							<p>&#9656;</p>
+						</div>
+					</div>
+
+					<?php 
 
 						else :
 
 							echo get_the_title( $i );
 
+								
+							
 						endif;
-				?>
+					?>
+					
 
 				</div>
 
@@ -69,7 +94,7 @@
 						if ( $j !== count( $masterclass_modules ) ) :
 				
 				?>
-				<div id="contents-list" class="pl-8 mt-4 contents-list"></div>
+				<div id="contents-list" class="pl-6 py-4 contents-list bg-grey-100"></div>
 				<?php 
 						endif;
 					endif;

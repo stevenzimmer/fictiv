@@ -29,12 +29,93 @@
 
 		&.masterclass {
 
+			h2 {
+				@apply text-black;
+			}
+
+			h3 {
+				@apply text-black font-museo-700;
+			}
+
+			ul {
+				@apply pl-4;
+			}
+
 			.wp {
 
 				&-block {
 
 					&-image {
 						@apply m-0 mb-6;
+					}
+
+					&-columns {
+
+						&.module {
+
+							&-summary {
+								/*@apply p-12;*/
+
+								.wp {
+
+									&-block {
+
+										&-column {
+											@apply p-0;
+
+											.wp {
+
+												&-block {
+
+													&-group {
+														@apply p-8;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&-column {
+						@apply h-full;
+
+						.wp {
+
+							&-block {
+
+								&-group {
+									@apply h-full;
+
+									&__inner {
+
+										&-container {
+
+											p {
+												@apply mb-6;
+
+												&:last-child {
+													@apply mb-0;
+												}
+											}
+
+											ul {
+
+												li {
+													@apply mb-4;
+
+													&:last-child {
+														@apply mb-0;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -297,6 +378,38 @@
 
 								.ab {
 
+									&-layout {
+
+										&-column {
+
+											&-wrap {
+
+												.ab {
+
+													&-block {
+
+														&-layout {
+
+															&-column {
+
+																&-inner {
+
+																	ul {
+																		@apply mt-6;
+
+																		li {
+																			@apply mb-4;
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+
 									&-block {
 
 										&-layout {
@@ -316,7 +429,18 @@
 											}
 										}
 									}
+								}
+							}
+
+							&-accordion {
 								
+
+								details {
+
+									summary {
+										@apply bg-grey-100 text-black font-museo-700;
+
+									}
 								}
 							}
 						}
@@ -550,6 +674,25 @@
 					}
 				}
 
+				&-table {
+					/*@apply bg-black;*/
+
+					table {
+						@apply border-t border-l border-r border-grey-100;
+
+						thead {
+							@apply text-left;
+						}
+
+						tr {
+
+							th,td {
+								@apply py-2 px-4 border-b border-r border-grey-200;
+							}
+						}
+					}
+				}
+
 				&-button {
 
 					&__link {
@@ -588,6 +731,8 @@
 					}
 				}
 			}
+
+
 		}
 	}
 }
@@ -602,6 +747,20 @@
 	}
 
 	&-teal {
+
+		&-lightest {
+
+			&-color {
+				@apply text-teal-lightest;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-teal-lightest;
+				}
+			}
+		}
 
 		&-lighter {
 

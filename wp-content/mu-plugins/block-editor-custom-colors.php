@@ -29,6 +29,12 @@ function fictiv_custom_colors() {
 			),
 
 			array(
+				'name'  => __( 'Teal Lightest', 'fictiv_custom_colors' ),
+				'slug'  => 'teal-lightest',
+				'color'	=> '#EFF8FA',
+			),
+
+			array(
 				'name'  => __( 'Teal Lighter', 'fictiv_custom_colors' ),
 				'slug'  => 'teal-lighter',
 				'color'	=> '#BDEAE1',

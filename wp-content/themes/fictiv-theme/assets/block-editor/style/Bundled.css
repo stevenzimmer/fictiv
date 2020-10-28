@@ -86,6 +86,14 @@
 
                         &-block {
                             max-width: 1084px;
+
+                            h2 {
+                                @apply text-black;
+                            }
+                            
+                            h3 {
+                                @apply text-black font-museo-700;
+                            }
                         }
                     }
                 }
