@@ -26,42 +26,18 @@ while ( have_posts() ) :
 	$arr_length = count( $module_ids );
   
 ?>
-<header class="relative py-20 relative">
-	<?php 
-        if ( has_post_thumbnail() ) :
-    ?>
-    <div class="absolute w-full h-full inset-0">
-        <div class="flex md:justify-end h-full">
-            <div class="w-full md:w-11/12 lg:w-6/12">
-                <div class="h-full bg-cover bg-center lazyload" data-bg="url(<?php the_post_thumbnail_url(); ?>)"></div>
-            </div>
-        </div>
-    </div>
-    <?php 
-        endif;
-    ?>
-
-    <div class="bg-black bg-opacity-75 md:bg-transparent md:bg-gradient-to-r via-black from-black absolute w-full inset-0 h-full"></div>
+<header class="relative py-20 relative bg-black">
 
 	<div class="container relative">
 		<div class="flex justify-center">
 	
 			<div class="w-full lg:w-11/12 px-2">
-				<div class="flex flex-wrap justify-center lg:justify-start -mx-4">
+				<div class="flex flex-wrap justify-center lg:justify-between -mx-4">
 
 					<div class="w-11/12 lg:w-8/12 px-4 mb-6 lg:mb-0">
 						<div class="mb-6 text-white">
 						
-							<div class=" font-museo-500 text-14 md:text-20 text-white ">
-							    <a class="hover:text-grey-600" href="/resources">Resource Center Home</a> /
 							
-							    <a class="hover:text-grey-600" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>">
-							        <?php echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name; ?>
-							        
-							    </a>
-				
-							    / <span><?php the_title(); ?></span>
-							</div>
 						</div>
 						<div class="mb-2">
 							<p class="uppercase font-museo-500 text-white">
@@ -76,20 +52,30 @@ while ( have_posts() ) :
 							<h1 class="text-36 md:text-56 text-white font-museo-700 leading-tight"><?php the_title(); ?></h1>
 						</div>
 					
-						<div class="flex flex-wrap -mx-4 hidden">
+						<div class="flex flex-wrap -mx-4 mt-8">
 							<div class="px-4">
-								<a href="<?php echo get_the_permalink( $module_ids[0] ); ?>" class="btn btn-dark">start class</a>
+								<a href="<?php echo get_the_permalink( $module_ids[0] ); ?>" class="btn btn-primary">start class</a>
 							</div>
 							<div class="px-4">
-								<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-dark">take quiz</a>
+								<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">take quiz</a>
 							</div>
 						</div>
 						
 					</div>
 					
-					<div class="w-full lg:w-4/12 px-4">
+					<div class="w-full lg:w-3/12 px-4">
 
+							<?php 
+						        if ( has_post_thumbnail() ) :
+						    ?>
 
+						        <div class="">
+						        	<img class="lazyload" data-src="<?php the_post_thumbnail_url(); ?>">
+						        </div>
+						    
+						    <?php 
+						        endif;
+						    ?>
 					</div>
 				</div>
 			</div> 
@@ -105,6 +91,14 @@ while ( have_posts() ) :
 			<div class="w-11/12 lg:px-2">
 			
 				<div class="">
+					<div class="text-grey-600 font-museo-500 text-14 md:text-20 mb-12">
+					    <a class="hover:text-grey-700" href="/resources">Resource Center</a> /
+					
+					    <a class=" hover:text-grey-700" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>">
+					        <?php echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name; ?>
+					        
+					    </a>
+					</div>
 					<div class="post-content masterclass">
 						
 					
@@ -130,7 +124,7 @@ while ( have_posts() ) :
 					if ( have_rows('learning_takeaways') ) :
 					
 				?>
-				<div class="mb-6 text-center">
+				<div class="mb-4 text-center">
 					<h3 class="text-20 md:text-29 font-museo-700 text-black">You’ll walk away knowing</h3>
 				</div>
 				<div class="flex flex-wrap justify-center -mx-6">
@@ -467,21 +461,21 @@ while ( have_posts() ) :
 	endif;
 ?>
 
-<section class="py-20 bg-grey-100 hidden">
+<section class="py-20 bg-blue-dark">
 	<div class="container">
 		<div class="text-center">
 			<div class="mb-6">
-				<h2 class="text-24 md:text-56 font-museo-700 text-black">Let's get started</h2>
+				<h2 class="text-24 md:text-56 font-museo-700 text-white">Let's begin!</h2>
 			</div>
 			<div class="flex justify-center">
 		
 				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ 0 ] ); ?>" class="btn btn-dark">Start class</a>
+					<a href="<?php echo get_the_permalink( $module_ids[ 0 ] ); ?>" class="btn btn-primary">Start class</a>
 				</div>
 				<div class="w-8"></div>
 			
 				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-dark">Take quiz</a>
+					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take quiz</a>
 				</div>
 			</div>
 			

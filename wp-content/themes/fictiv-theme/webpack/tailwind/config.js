@@ -80,6 +80,7 @@ module.exports = {
         900: '#22543d',
       },
       teal: {
+        lightest: "#EFF8FA",
         lighter: "#BDEAE1",
         light:  "#16BC9C",
         dark:   "#0E957B",

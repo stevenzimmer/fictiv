@@ -34,9 +34,8 @@ while ( have_posts() ) :
 
 <section class="py-20">
 	<div class="container ">
-		
 		<div class="flex justify-center">
-			<div class="w-11/12 md:w-full lg:w-10/12">
+			<div class="w-11/12 md:w-full lg:w-11/12">
 				
 				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
 					<div class="w-full lg:w-3/12 hidden lg:block ">
@@ -66,7 +65,7 @@ while ( have_posts() ) :
 								
 							</div>
 						</div>
-						<div class="post-content mb-12">
+						<div class="post-content masterclass mb-12">
 							<?php 
 
 								the_content();
@@ -122,7 +121,7 @@ while ( have_posts() ) :
 	</div>
 </section>
 
-<section class="py-20 bg-grey-100" id="module-footer">
+<section class="py-20 bg-blue-dark" id="module-footer">
 	<div class="container">
 		<?php 
 			
@@ -131,20 +130,20 @@ while ( have_posts() ) :
 		?>
 		<div class="text-center">
 			<div class="mb-6">
-				<h2 class="text-24 md:text-56 font-museo-700">Onto the next module!</h2>
+				<h2 class="text-white text-24 md:text-56 font-museo-700">Onto the next module!</h2>
 			</div>
 
 			<div class="flex justify-center">
 				
 				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ $current_module ] ); ?>" class="btn btn-dark">Start class</a>
+					<a href="<?php echo get_the_permalink( $module_ids[ $current_module ] ); ?>" class="btn btn-primary">Start class</a>
 				</div>
 				<div class="w-8"></div>
 			
 				
 			
 				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-dark">Take quiz</a>
+					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take quiz</a>
 				</div>
 			</div>
 			
@@ -158,9 +157,9 @@ while ( have_posts() ) :
 			<div class="lg:w-9/12">
 				<div class="text-center">
 					<div class="mb-6">
-						<h2 class="text-24 md:text-56 font-museo-700">Certification quiz</h2>
+						<h2 class="text-24 md:text-56 font-museo-700 text-white">Certification quiz</h2>
 					</div>
-					<div class="text-20 md:text-24 font-museo-500 mb-12">
+					<div class="text-20 md:text-24 font-museo-500 mb-12 text-white">
 						<?php 
 
 							echo get_the_excerpt( $module_ids[ $arr_length - 1 ] );
@@ -171,7 +170,7 @@ while ( have_posts() ) :
 					<div class="flex justify-center">
 					
 						<div>
-							<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-dark">Take the assessment quiz</a>
+							<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take the assessment quiz</a>
 						</div>
 					</div>
 					
