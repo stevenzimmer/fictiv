@@ -1,14 +1,23 @@
-.contents {
 
-	&-item {
-
-		&.active {
-			@apply text-black;
-		}
-	}
-}
 
 .masterclass {
+
+	&-content {
+
+		&-item {
+
+			&.active {
+				/*@apply text-black;*/
+
+				svg {
+
+					path {
+						stroke: #16bc9c;
+					}
+				}
+			}
+		}
+	}
 
 	&-sidebar {
 	    will-change: min-height;
