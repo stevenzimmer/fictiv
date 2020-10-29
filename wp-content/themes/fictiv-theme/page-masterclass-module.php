@@ -32,13 +32,13 @@ while ( have_posts() ) :
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
 ?>
 
-<section class="py-20">
+<section class="py-10 lg:py-20">
 	<div class="container ">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-full lg:w-3/12 hidden lg:block ">
+				<div class="flex flex-wrap mb-12 ">
+					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
 
 						<?php 
 							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');
@@ -46,8 +46,8 @@ while ( have_posts() ) :
 						
 					</div>
 					<div class="w-full lg:w-9/12 lg:pl-12">
-						<div class="mb-6">
-							<p class="uppercase font-museo-500 text-grey-600">
+						<div class="mb-6 px-3 py-1 rounded-lg bg-grey-100 inline-block">
+							<p class="uppercase font-museo-700 text-grey-600 text-12">
 								module <?php echo get_post_field( 'menu_order', get_the_id() ); ?>
 							</p>
 						</div>
@@ -59,7 +59,7 @@ while ( have_posts() ) :
 							</div>
 							<div class="w-full lg:w-8/12 px-2">
 
-								<div>
+								<div class="text-black font-museo-500">
 									<?php the_excerpt(); ?>
 								</div>
 								
@@ -83,7 +83,19 @@ while ( have_posts() ) :
 
 							<div class="mb-6">
 								<h2 class="font-museo-700 text-20 md:text-29">
-									Other Resources
+									<?php 
+
+										if ( get_field('related_resources_title', $parent_id ) ) :
+											
+											the_field('related_resources_title', $parent_id );
+										else :
+
+											echo 'Other Resources';
+
+										endif;
+
+									?>
+									
 								</h2>
 							</div>
 							<div class="flex flex-wrap -mx-2">

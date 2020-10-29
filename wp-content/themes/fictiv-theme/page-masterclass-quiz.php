@@ -6,7 +6,7 @@ get_header();
 while ( have_posts() ) :
 
     the_post();
-$parent_id = wp_get_post_parent_id( get_the_id() );
+	$parent_id = wp_get_post_parent_id( get_the_id() );
 
    	$masterclass_modules = get_children(array(
 		'posts_per_page' => -1,
@@ -31,14 +31,14 @@ $parent_id = wp_get_post_parent_id( get_the_id() );
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
 ?>
 
-<section class="py-20">
+<section class="py-10 lg:py-20">
 	<div class="container">
 		
 		<div class="flex justify-center">
-			<div class="w-full px-5 lg:px-0 lg:w-10/12">
+			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="flex flex-wrap mb-12 flex-col-reverse lg:flex-row items-center lg:items-start lg:justify-start">
-					<div class="w-11/12 lg:w-3/12 ">
+				<div class="flex flex-wrap mb-12 ">
+					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
 
 						<?php 
 							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');
