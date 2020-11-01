@@ -28,12 +28,14 @@
 
 									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
 
+								?>: <?php 
+									echo get_the_title( $parent_id );
 								?>
 							</p>
 						</div>
 				
 						<div>
-							<h1 class="text-white font-museo-700 leading-tight text-24 md:text-36"><?php echo get_the_title( $parent_id ); ?></h1>
+							<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
 						</div>
 						
 					</div>

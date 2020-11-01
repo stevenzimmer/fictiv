@@ -40,7 +40,7 @@ while ( have_posts() ) :
 							
 						</div>
 						<div class="mb-2">
-							<p class="uppercase font-museo-500 text-white">
+							<p class="uppercase font-museo-700 text-white">
 								<?php 
 
 									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
@@ -48,8 +48,9 @@ while ( have_posts() ) :
 								?>
 							</p>
 						</div>
+
 						<div class="">
-							<h1 class="text-36 md:text-56 text-white font-museo-700 leading-tight"><?php the_title(); ?></h1>
+							<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
 						</div>
 					
 						<div class="flex flex-wrap -mx-4 mt-8">
@@ -91,14 +92,12 @@ while ( have_posts() ) :
 			<div class="w-11/12 lg:px-2">
 			
 				<div class="">
-					<div class="text-grey-600 font-museo-500 text-14 md:text-20 mb-12">
-					    <a class="hover:text-grey-700" href="/resources">Resource Center</a> /
-					
-					    <a class=" hover:text-grey-700" href="<?php echo get_post_type_archive_link( get_queried_object()->post_type ); ?>">
-					        <?php echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name; ?>
-					        
-					    </a>
+					<div class="mb-12">
+						<?php 
+							get_template_part('partials/single', 'breadcrumbs');
+						?>
 					</div>
+
 					<div class="post-content masterclass">
 						
 					

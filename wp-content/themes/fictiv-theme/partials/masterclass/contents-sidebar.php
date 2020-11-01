@@ -1,7 +1,6 @@
-<div class="max-w-full w-full overflow-scroll masterclass-sidebar" id="masterclass-contents">
+<div class="max-w-full w-full h-full overflow-y-auto masterclass-sidebar" id="masterclass-contents">
 	<div class="masterclass-sidebar-inner">
 		
-	
 		<div class="pb-6 border-b border-grey-200">
 			<p class="uppercase font-museo-500 text-grey-600">
 				masterclass contents
@@ -12,8 +11,7 @@
 			<div class="py-4 border-b border-grey-200 relative text-grey-600 hover:text-teal-light">
 				<a class="absolute w-full h-full inset-0 z-30 block" href="<?php echo get_the_permalink( $parent_id ); ?>"></a>
 				<p class=" font-museo-500">
-					Introduction
-				
+					Course Overview
 				</p>
 			</div>
 			<?php 
@@ -115,7 +113,9 @@
 						if ( $j !== count( $masterclass_modules ) ) :
 				
 				?>
-				<div id="contents-list" class="p-4 contents-list bg-grey-100"></div>
+				<div id="contents-list" class="p-4 contents-list bg-grey-100">
+					
+				</div>
 				<?php 
 						endif;
 					endif;

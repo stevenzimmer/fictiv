@@ -438,7 +438,7 @@
 								details {
 
 									summary {
-										@apply bg-grey-100 text-black font-museo-700;
+										@apply bg-grey-100 text-black;
 
 									}
 								}

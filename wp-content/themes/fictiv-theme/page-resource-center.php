@@ -116,6 +116,13 @@
 										<?php 
 											echo get_post_type_object( $type )->labels->name;
 										?>
+
+										<?php 
+
+											if ( $type === 'cpt_masterclass' ) :
+												echo 'courses';
+											endif;
+										?>
 										&nbsp;&nbsp;
 										<a href="<?php echo get_post_type_archive_link( $type ); ?>" class="text-teal-light text-12 font-museo-500">See More</a>
 									</p>
