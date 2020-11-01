@@ -37,12 +37,13 @@ while ( have_posts() ) :
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="flex flex-wrap mb-12 ">
+				<div class="flex flex-wrap mb-12 " id="module-container">
 					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
-
+					
 						<?php 
 							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');
 						?>
+
 						
 					</div>
 					<div class="w-full lg:w-9/12 lg:pl-12">
@@ -51,20 +52,7 @@ while ( have_posts() ) :
 								module <?php echo get_post_field( 'menu_order', get_the_id() ); ?>
 							</p>
 						</div>
-						<div class="flex flex-wrap mb-12 -mx-2">
-							<div class="w-full lg:w-4/12 px-2 mb-6 lg:mb-0">
-								<h2 class="font-museo-700 leading-tight">
-									<?php the_title(); ?>
-								</h2>
-							</div>
-							<div class="w-full lg:w-8/12 px-2">
-
-								<div class="text-black font-museo-500">
-									<?php the_excerpt(); ?>
-								</div>
-								
-							</div>
-						</div>
+						
 						<div class="post-content masterclass mb-12">
 							<?php 
 
@@ -72,59 +60,7 @@ while ( have_posts() ) :
 
 							?>	
 						</div>
-						<div>
-						<?php 
-
-
-							if ( !empty( get_field('related_resources', $parent_id ) ) ) :
-
 							
-						?>
-
-							<div class="mb-6">
-								<h2 class="font-museo-700 text-20 md:text-29">
-									<?php 
-
-										if ( get_field('related_resources_title', $parent_id ) ) :
-											
-											the_field('related_resources_title', $parent_id );
-										else :
-
-											echo 'Other Resources';
-
-										endif;
-
-									?>
-									
-								</h2>
-							</div>
-							<div class="flex flex-wrap -mx-2">
-								<?php 
-
-									foreach (  get_field('related_resources', $parent_id ) as $i => $related_id ) :
-
-
-								?>
-								<div class="w-full md:w-1/3 px-2 mb-6 md:mb-0 ">
-									
-									<?php 
-										fictiv_post_card( $related_id ); 
-									?>
-									
-								</div>
-								<?php 
-
-									endforeach;
-
-								?>
-							</div>
-							
-						<?php 
-							endif;
-						?>
-
-						</div>
-			
 					</div>
 				</div>
 			</div>
@@ -194,7 +130,58 @@ while ( have_posts() ) :
 		?>
 	</div>	
 </section>
+<section class="py-20">
+	<div class="container">
+	<?php 
 
+
+		if ( !empty( get_field('related_resources', $parent_id ) ) ) :
+
+		
+	?>
+		<div class="mb-6">
+			<h2 class="font-museo-700 text-20 md:text-29">
+				<?php 
+
+					if ( get_field('related_resources_title', $parent_id ) ) :
+						
+						the_field('related_resources_title', $parent_id );
+					else :
+
+						echo 'Other Resources';
+
+					endif;
+
+				?>
+				
+			</h2>
+		</div>
+		<div class="flex flex-wrap -mx-2">
+			<?php 
+
+				foreach (  get_field('related_resources', $parent_id ) as $i => $related_id ) :
+
+
+			?>
+			<div class="w-full md:w-1/3 px-2 mb-6 md:mb-0 ">
+				
+				<?php 
+					fictiv_post_card( $related_id ); 
+				?>
+				
+			</div>
+			<?php 
+
+				endforeach;
+
+			?>
+		</div>
+		
+	<?php 
+		endif;
+	?>
+	</div>
+</section>
 <?php
 	
 	endwhile;

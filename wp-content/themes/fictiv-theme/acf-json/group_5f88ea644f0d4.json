@@ -25,6 +25,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5f9d781c5e25c",
+            "label": "Feature with \"New\" label?",
+            "name": "resource_center_new",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -133,5 +152,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603722396
+    "modified": 1604156653
 }

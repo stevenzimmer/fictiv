@@ -7,7 +7,7 @@
 		&-item {
 
 			&.active {
-				/*@apply text-black;*/
+				@apply text-teal-light;
 
 				svg {
 
