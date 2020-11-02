@@ -15,16 +15,37 @@
 						stroke: #16bc9c;
 					}
 				}
+
+				
 			}
+
+			.caret {
+			
+				&.active {
+					@apply rotate-90;
+				}
+			}
+
+			.contents {
+
+				&-list {
+
+					&.active {
+						@apply h-full;
+					}
+
+					ul {
+						@apply p-4;
+					}
+				}
+			}
+
+
 		}
 	}
 
 	&-sidebar {
 	    will-change: min-height;
-
-/*	    &.is-affixed {
-	    	@apply absolute
-	    }*/
 
 	    &-inner {
 	    	transform: translate(0, 0); /* For browsers don't support translate3d. */
