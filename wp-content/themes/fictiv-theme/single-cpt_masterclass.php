@@ -26,7 +26,28 @@ while ( have_posts() ) :
 	$arr_length = count( $module_ids );
   
 ?>
-<header class="relative py-20 relative bg-black">
+<header class="relative py-20 relative">
+	
+	<?php 
+        if ( has_post_thumbnail() ) :
+    ?>
+    
+    <div class="absolute w-full h-full inset-0">
+        <div class="flex md:justify-end h-full">
+            <div class="w-full lg:w-7/12">
+                <div class="h-full bg-cover bg-center lazyload" data-bg="url(<?php the_post_thumbnail_url(); ?>)"></div>
+            </div>
+        </div>
+    </div>
+
+    <?php 
+        endif;
+    ?>
+
+    
+    <div class="bg-black bg-opacity-75 lg:bg-transparent lg:bg-gradient-to-r via-black from-black absolute w-full lg:w-10/12 inset-0 h-full"></div>
+
+    
 
 	<div class="container relative">
 		<div class="flex justify-center">
@@ -64,20 +85,6 @@ while ( have_posts() ) :
 						
 					</div>
 					
-					<div class="w-full lg:w-3/12 px-4">
-
-							<?php 
-						        if ( has_post_thumbnail() ) :
-						    ?>
-
-						        <div class="">
-						        	<img class="lazyload" data-src="<?php the_post_thumbnail_url(); ?>">
-						        </div>
-						    
-						    <?php 
-						        endif;
-						    ?>
-					</div>
 				</div>
 			</div> 
 	
