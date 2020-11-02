@@ -20,16 +20,18 @@
 				foreach ( $masterclass_modules as $i => $module ) :
 
 			?>
-			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative masterclass-content-item <?php 
+			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative masterclass-content-item cursor-pointer <?php 
+
 				if( $i === get_the_id() ) :
 
-					echo 'text-teal-light active';
+					echo 'text-teal-light current';
 
 				else :
 
 					echo 'text-grey-600';
 
 				endif;
+			
 			?>">
 
 				<?php 
@@ -45,14 +47,13 @@
 				?>
 				<div class="py-2">
 				
-					
 					<div class="flex items-center justify-between -mx-1">
 						<?php
 							if ( $j !== $arr_length ) :
 						?>
 						<div class="px-1">
 							<p class="text-12 uppercase font-museo-700 mb-1">Module <?php echo get_post_field( 'menu_order', $i ); ?></p>
-							<p class="mb-2">
+							<p class="">
 							<?php	
 									
 								echo get_the_title( $i );
@@ -61,13 +62,7 @@
 							</p>
 									
 						</div>
-						<div class="px-1 <?php 
-							if( $i === get_the_id() ) :
-
-								echo 'transform rotate-90';
-
-							endif;
-						?>">
+						<div class="px-2 transform transition-transform duration-200 caret origin-center">
 							<p>&#9656;</p>
 						</div>
 						<?php 
@@ -113,7 +108,7 @@
 						if ( $j !== count( $masterclass_modules ) ) :
 				
 				?>
-				<div id="contents-list" class="p-4 contents-list bg-grey-100">
+				<div id="contents-list" class="contents-list bg-grey-100 h-0 overflow-hidden ">
 					
 				</div>
 				<?php 

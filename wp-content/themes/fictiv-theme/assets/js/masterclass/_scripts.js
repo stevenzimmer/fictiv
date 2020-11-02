@@ -1,5 +1,8 @@
 require('waypoints/lib/noframework.waypoints.js');
 import StickySidebar from 'sticky-sidebar';
+const primaryNav = document.getElementById('primary-nav');
+const scrollOffset = 20;
+let contentsSidebar;
 
 if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass-module')  ) {
 	
@@ -11,9 +14,8 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 	const masterclassContentsWidth = masterclassContents.offsetWidth;
 	const masterclassContentsHeight = masterclassContents.offsetHeight;
 	const masterclassContentsTop = masterclassContents.offsetTop;
-	const primaryNav = document.getElementById('primary-nav');
-	const scrollOffset = 20;
-	let contentsSidebar;
+
+	const currentContentItem = document.querySelector('.masterclass-content-item.current');
 	const sidebarObj = {
 		topSpacing: primaryNav.offsetHeight + scrollOffset,
 		bottomSpacing: scrollOffset,
@@ -22,9 +24,16 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 		minWidth: 1024
 	};
 
-
 	contentsSidebar = new StickySidebar( masterclassContents, sidebarObj);
+	
+	currentContentItem.addEventListener('click', function() {
 
+		this.querySelector('.contents-list').classList.toggle('active');
+		this.querySelector('.caret').classList.toggle('active');
+		contentsSidebar.updateSticky();
+
+	});
+	
 
 	if ( module_h2.length ) {
 	
@@ -50,27 +59,27 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 			li.innerHTML = `<a id="masterclass-content-item-${i}" class="masterclass-content-item block py-2 text-grey-600 hover:text-teal-light ${ i === 0 ? 'active' : '' }" href="#${label}${i}">${item}</a>`;
 			
 
-				let contentsLinks = new Waypoint({
-				    element: document.getElementById( label + i ),
-				    handler: (direction) => {
-				    	
-				    	document.querySelectorAll('.masterclass-content-item').forEach( ( contentItem ) => {
+			let contentsLinks = new Waypoint({
+			    element: document.getElementById( label + i ),
+			    handler: (direction) => {
+			    	
+			    	document.querySelectorAll('.masterclass-content-item').forEach( ( contentItem ) => {
 
-				    		contentItem.classList.remove('active');
+			    		contentItem.classList.remove('active');
 
-				    	});
+			    	});
 
-				        document.getElementById("masterclass-content-item-" + i ).classList.add('active');
+			        document.getElementById("masterclass-content-item-" + i ).classList.add('active');
 
-				        
-				        contentsSidebar.updateSticky();
-				       
+			        
+			        contentsSidebar.updateSticky();
+			       
 
-				    },
+			    },
 
-				    offset: scrollOffset + primaryNav.offsetHeight + 10
-			
-				});
+			    offset: scrollOffset + primaryNav.offsetHeight + 10
+		
+			});
 			
 		});
 
@@ -82,16 +91,7 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 		
 		}
 		 
-		function clickHandler(e) {
-		  e.preventDefault();
-		  const href = this.getAttribute("href");
-		  const offsetTop = document.querySelector(href).offsetTop;
-		 
-		  scroll({
-		    top: offsetTop - ( primaryNav.offsetHeight + scrollOffset ),
-		    behavior: "smooth"
-		  });
-		}
+		
 	}
 }
 
@@ -109,5 +109,22 @@ if ( document.body.classList.contains('cpt_masterclass-template-default')  ) {
 		
 		});
 	});
+
+}
+
+function clickHandler(e) {
+  	e.preventDefault();
+  	const href = this.getAttribute("href");
+  
+  // console.log( document.querySelector( href ) );
+ 	const offsetTop = document.querySelector( href ).offsetTop;
+ 	
+ 	contentsSidebar.updateSticky();
+
+  	scroll({
+    	top: offsetTop - ( primaryNav.offsetHeight + scrollOffset ),
+    	behavior: "smooth"
+  	});
+
 
 }
