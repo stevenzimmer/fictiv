@@ -1,19 +1,23 @@
-<header class="relative py-10 bg-grey-100">
+<header class="relative py-20">
+
 	<?php 
         if ( has_post_thumbnail() ) :
     ?>
+    
     <div class="absolute w-full h-full inset-0">
         <div class="flex md:justify-end h-full">
-            <div class="w-full md:w-11/12 lg:w-6/12">
+            <div class="w-full lg:w-7/12">
                 <div class="h-full bg-cover bg-center lazyload" data-bg="url(<?php the_post_thumbnail_url(); ?>)"></div>
             </div>
         </div>
     </div>
+
     <?php 
         endif;
     ?>
 
-     <div class="bg-black bg-opacity-75 md:bg-transparent md:bg-gradient-to-r via-black from-black absolute w-full inset-0 h-full"></div>
+    
+    <div class="bg-black bg-opacity-75 lg:bg-transparent lg:bg-gradient-to-r via-black from-black absolute w-full lg:w-10/12 inset-0 h-full"></div>
 
 	<div class="container relative">
 		<div class="flex justify-center">
