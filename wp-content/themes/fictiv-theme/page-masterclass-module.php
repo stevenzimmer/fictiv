@@ -21,8 +21,12 @@ while ( have_posts() ) :
 
 	foreach ( $masterclass_modules as $i => $module ) :
 		
-		array_push( $module_ids, $i );
+		if( get_post_field( 'menu_order', $i ) ) :
+		
+			array_push( $module_ids, $i );
 
+		endif;
+	
 	endforeach;
 
 	$arr_length = count( $module_ids );
@@ -39,6 +43,7 @@ while ( have_posts() ) :
 				
 				<div class="flex flex-wrap mb-12 " id="module-container">
 					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
+					
 					
 						<?php 
 							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');

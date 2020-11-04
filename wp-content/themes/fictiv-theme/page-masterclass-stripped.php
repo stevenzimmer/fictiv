@@ -19,9 +19,13 @@ while ( have_posts() ) :
 	$module_ids = array();
 
 	foreach ( $masterclass_modules as $i => $module ) :
-		
-		array_push( $module_ids, $i );
 
+		if( get_post_field( 'menu_order', $i ) ) :
+		
+			array_push( $module_ids, $i );
+
+		endif;
+	
 	endforeach;
 
 	$arr_length = count( $module_ids );
@@ -37,7 +41,7 @@ while ( have_posts() ) :
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="flex flex-wrap mb-12 ">
+				<div class="flex flex-wrap mb-12 " id="module-container">
 					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
 
 						<?php 

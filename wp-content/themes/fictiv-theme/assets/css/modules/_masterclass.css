@@ -1,4 +1,3 @@
-
 /*! purgecss start ignore */
 .masterclass {
 
@@ -6,8 +5,7 @@
 
 		&-item {
 
-			&.active {
-				@apply text-teal-light;
+			&.current {
 
 				svg {
 

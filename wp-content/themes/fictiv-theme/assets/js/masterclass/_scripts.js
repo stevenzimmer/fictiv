@@ -4,13 +4,13 @@ const primaryNav = document.getElementById('primary-nav');
 const scrollOffset = 20;
 let contentsSidebar;
 
-if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass-module')  ) {
+if ( document.getElementById('masterclass-contents') ) {
 	
 	const module_h2 = Array.prototype.slice.call( document.querySelectorAll('.post-content h2') );
 	let headers = [];
 	const label = "header-";
 	const masterclassContents = document.getElementById('masterclass-contents');
-	const moduleFooter = document.getElementById('module-footer');
+	// const moduleFooter = document.getElementById('module-footer');
 	const masterclassContentsWidth = masterclassContents.offsetWidth;
 	const masterclassContentsHeight = masterclassContents.offsetHeight;
 	const masterclassContentsTop = masterclassContents.offsetTop;
@@ -25,7 +25,7 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 	};
 
 	contentsSidebar = new StickySidebar( masterclassContents, sidebarObj);
-	
+
 	currentContentItem.addEventListener('click', function() {
 
 		this.nextElementSibling.classList.toggle('active');
@@ -35,7 +35,7 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 		contentsSidebar.updateSticky();
 
 	});
-	
+
 
 	if ( module_h2.length ) {
 
@@ -90,28 +90,24 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 
 			link.addEventListener("click", clickHandler);
 		
-		}
-		 
-		
+		}	
 	}
 }
 
-if ( document.body.classList.contains('cpt_masterclass-template-default')  ) {
-	const bioTriggers = Array.prototype.slice.call( document.querySelectorAll('.bio-trigger') );
+const bioTriggers = Array.prototype.slice.call( document.querySelectorAll('.bio-trigger') );
 
-	bioTriggers.forEach( ( trigger ) => {
+bioTriggers.forEach( ( trigger ) => {
 
-		trigger.addEventListener('click', function( e ) {
+	trigger.addEventListener('click', function( e ) {
 
-			e.preventDefault();
+		e.preventDefault();
 
-			document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').classList.toggle('active');
-			document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').parentElement.classList.toggle('shadow-lg');
-		
-		});
+		document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').classList.toggle('active');
+		document.querySelector('.bio-wrapper[data-bio="' + e.target.dataset.bio + '"]').parentElement.classList.toggle('shadow-lg');
+	
 	});
+});
 
-}
 
 function clickHandler(e) {
   	e.preventDefault();
@@ -125,6 +121,4 @@ function clickHandler(e) {
     	top: offsetTop - ( primaryNav.offsetHeight + scrollOffset ),
     	behavior: "smooth"
   	});
-
-
 }
