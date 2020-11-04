@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Masterclass Quiz */
+/* Template Name: Masterclass Stripped */
 // Template Post Type: cpt_masterclass 
 get_header();
 

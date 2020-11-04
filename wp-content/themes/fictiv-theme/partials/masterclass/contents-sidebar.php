@@ -19,6 +19,7 @@
 				$j = 1;
 				foreach ( $masterclass_modules as $i => $module ) :
 
+					if( get_post_field( 'menu_order', $i ) ) :
 			?>
 			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative  cursor-pointer <?php 
 
@@ -136,7 +137,9 @@
 				?>
 			</div>
 			<?php
+				endif;
 				$j++;
+
 				endforeach;
 			?>
 		</div>
