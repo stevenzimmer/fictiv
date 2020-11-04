@@ -17,15 +17,16 @@
 			<?php 
 
 				$j = 1;
-				foreach ( $masterclass_modules as $i => $module ) :
 
-					if( get_post_field( 'menu_order', $i ) ) :
+				foreach ( $module_ids as $i => $id ) :
+
+					if( get_post_field( 'menu_order', $id ) ) :
 			?>
-			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative  cursor-pointer <?php 
+			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative cursor-pointer <?php 
 
-				if( $i === get_the_id() ) :
+				if( $id === get_the_id() ) :
 
-					echo 'text-teal-light current';
+					echo 'text-teal-light';
 
 				else :
 
@@ -37,18 +38,18 @@
 
 				<?php 
 
-					if( $i !== get_the_id() ) : 
+					if( $id !== get_the_id() ) : 
 				
 				?>
 
-				<a class="absolute w-full h-full inset-0 z-30 block" href="<?php echo get_the_permalink( $i ); ?>"></a>
+				<a class="absolute w-full h-full inset-0 z-30 block" href="<?php echo get_the_permalink( $id ); ?>"></a>
 
 				<?php 
 					endif; 
 				?>
 				<div class="py-2 masterclass-content-item <?php 
 
-					if( $i === get_the_id() ) :
+					if( $id === get_the_id() ) :
 
 						echo 'current';
 
@@ -61,11 +62,11 @@
 							if ( $j !== $arr_length ) :
 						?>
 						<div class="px-1">
-							<p class="text-12 uppercase font-museo-700 mb-1">Module <?php echo get_post_field( 'menu_order', $i ); ?></p>
+							<p class="text-12 uppercase font-museo-700 mb-1">Module <?php echo get_post_field( 'menu_order', $id ); ?></p>
 							<p class="">
 							<?php	
 									
-								echo get_the_title( $i );
+								echo get_the_title( $id );
 							
 							?>
 							</p>
@@ -73,7 +74,7 @@
 						</div>
 						<div class="px-2 transform transition-transform duration-200 caret origin-center <?php 
 
-							if( $i === get_the_id() ) : 
+							if( $id === get_the_id() ) : 
 						
 								echo 'active';
 						
@@ -89,7 +90,7 @@
 						<div class="px-1 ">
 						<?php
 
-							echo get_the_title( $i );
+							echo get_the_title( $id );
 						
 						?>
 						</div>
@@ -120,9 +121,9 @@
 
 				<?php 
 
-					if( $i === get_the_id() ) : 
+					if( $id === get_the_id() ) : 
 
-						if ( $j !== count( $masterclass_modules ) ) :
+						if ( $j !== count( $module_ids ) ) :
 				
 				?>
 

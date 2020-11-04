@@ -20,8 +20,12 @@ while ( have_posts() ) :
     $module_ids = array();
 
 	foreach ( $masterclass_modules as $i => $module ) :
+
+		if( get_post_field( 'menu_order', $i ) ) :
+				
+			array_push( $module_ids, $i );
 		
-		array_push( $module_ids, $i );
+		endif;
 
 	endforeach;
 
