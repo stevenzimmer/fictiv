@@ -20,7 +20,7 @@
 				foreach ( $masterclass_modules as $i => $module ) :
 
 			?>
-			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative masterclass-content-item cursor-pointer <?php 
+			<div class="py-2 border-b border-grey-200 font-museo-500 hover:text-teal-light relative  cursor-pointer <?php 
 
 				if( $i === get_the_id() ) :
 
@@ -45,7 +45,15 @@
 				<?php 
 					endif; 
 				?>
-				<div class="py-2">
+				<div class="py-2 masterclass-content-item <?php 
+
+					if( $i === get_the_id() ) :
+
+						echo 'current';
+
+					endif;
+				
+				?>">
 				
 					<div class="flex items-center justify-between -mx-1">
 						<?php
@@ -62,7 +70,15 @@
 							</p>
 									
 						</div>
-						<div class="px-2 transform transition-transform duration-200 caret origin-center">
+						<div class="px-2 transform transition-transform duration-200 caret origin-center <?php 
+
+							if( $i === get_the_id() ) : 
+						
+								echo 'active';
+						
+							endif; 
+						
+						?>">
 							<p>&#9656;</p>
 						</div>
 						<?php 
@@ -108,12 +124,15 @@
 						if ( $j !== count( $masterclass_modules ) ) :
 				
 				?>
-				<div id="contents-list" class="contents-list bg-grey-100 h-0 overflow-hidden ">
-					
-				</div>
+
+				<div id="contents-list" class="contents-list bg-grey-100 h-0 overflow-hidden active"></div>
+				
 				<?php 
+				
 						endif;
+				
 					endif;
+				
 				?>
 			</div>
 			<?php

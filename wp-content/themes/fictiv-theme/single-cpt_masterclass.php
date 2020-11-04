@@ -5,7 +5,9 @@ while ( have_posts() ) :
 
     the_post();
 
-    include( get_template_directory() . '/inc/post-topics.php');
+    // include( get_template_directory() . '/inc/post-topics.php');
+
+    $parent_id = wp_get_post_parent_id( get_the_id() );
 
     $masterclass_modules = get_children( array(
 		'posts_per_page' => -1,
@@ -24,73 +26,11 @@ while ( have_posts() ) :
 	endforeach;
 
 	$arr_length = count( $module_ids );
+
+
+	include( get_template_directory() . '/partials/masterclass/module-hero.php');
   
 ?>
-<header class="relative py-20 relative">
-	
-	<?php 
-        if ( has_post_thumbnail() ) :
-    ?>
-    
-    <div class="absolute w-full h-full inset-0">
-        <div class="flex md:justify-end h-full">
-            <div class="w-full lg:w-7/12">
-                <div class="h-full bg-cover bg-center lazyload" data-bg="url(<?php the_post_thumbnail_url(); ?>)"></div>
-            </div>
-        </div>
-    </div>
-
-    <?php 
-        endif;
-    ?>
-
-    
-    <div class="bg-black bg-opacity-75 lg:bg-transparent lg:bg-gradient-to-r via-black from-black absolute w-full lg:w-10/12 inset-0 h-full"></div>
-
-    
-
-	<div class="container relative">
-		<div class="flex justify-center">
-	
-			<div class="w-full lg:w-11/12 px-2">
-				<div class="flex flex-wrap justify-center lg:justify-between -mx-4">
-
-					<div class="w-11/12 lg:w-8/12 px-4 mb-6 lg:mb-0">
-						<div class="mb-6 text-white">
-						
-							
-						</div>
-						<div class="mb-2">
-							<p class="uppercase font-museo-700 text-white">
-								<?php 
-
-									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
-
-								?>
-							</p>
-						</div>
-
-						<div class="">
-							<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
-						</div>
-					
-						<div class="flex flex-wrap -mx-4 mt-8">
-							<div class="px-4">
-								<a href="<?php echo get_the_permalink( $module_ids[0] ); ?>" class="btn btn-primary">start class</a>
-							</div>
-							<div class="px-4">
-								<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">take quiz</a>
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-			</div> 
-	
-		</div>
-	</div>
-</header>
 
 <section class="py-20 ">
 	<div class="container">
