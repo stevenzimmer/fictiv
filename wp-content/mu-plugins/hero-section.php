@@ -13,7 +13,7 @@
 				<div class="flex flex-wrap">
 					<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
 						<div>
-							<p class="text-white uppercase font-museo-700 text-grey-400">
+							<p class="uppercase font-museo-700 text-grey-400">
 								<?php 
 									echo $args['label'];
 								?>
