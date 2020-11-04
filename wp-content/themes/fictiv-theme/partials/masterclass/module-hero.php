@@ -31,7 +31,7 @@
 
 						?>
 						<div class="mb-2">
-							<p class="uppercase font-museo-500 text-grey-400">
+							<p class="uppercase font-museo-700 text-grey-400">
 								<?php the_field( 'hero_label', $parent_id ); ?>
 							</p>
 						</div>
