@@ -22,21 +22,24 @@
 	<div class="container relative">
 		<div class="flex justify-center">
 	
-			<div class="w-11/12 md:w-full lg:w-11/12">
-				<div class="flex flex-wrap justify-center lg:justify-start">
+			<div class="w-11/12 md:w-full lg:w-10/12">
+				<div class="flex flex-wrap justify-center">
 
 					<div class="w-full">
+						<?php 
+							if ( get_field( 'hero_label', $parent_id ) ) :
+
+
+						?>
 						<div class="mb-2">
-							<p class="uppercase font-museo-500 text-white">
-								<?php 
-
-									echo get_post_type_object( get_queried_object()->post_type )->labels->singular_name;
-
-								?>: <?php 
-									echo get_the_title( $parent_id );
-								?>
+							<p class="uppercase font-museo-500 text-grey-400">
+								<?php the_field( 'hero_label', $parent_id ); ?>
 							</p>
 						</div>
+
+						<?php 
+							endif;
+						?>
 				
 						<div>
 							<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
@@ -45,6 +48,23 @@
 					</div>
 					
 				</div>
+				<?php 
+				
+					if ( !$parent_id ) :
+					
+				?>
+				<div class="flex flex-wrap -mx-4 mt-8">
+					<div class="px-4">
+						<a href="<?php echo get_the_permalink( $module_ids[0] ); ?>" class="btn btn-primary">start class</a>
+					</div>
+					<div class="px-4">
+						<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">take quiz</a>
+					</div>
+				</div>
+
+				<?php 
+					endif;
+				?>
 			</div> 
 	
 		</div>

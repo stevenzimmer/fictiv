@@ -28,15 +28,16 @@ if ( document.body.classList.contains('cpt_masterclass-template-page-masterclass
 	
 	currentContentItem.addEventListener('click', function() {
 
-		this.querySelector('.contents-list').classList.toggle('active');
+		this.nextElementSibling.classList.toggle('active');
+
 		this.querySelector('.caret').classList.toggle('active');
+
 		contentsSidebar.updateSticky();
 
 	});
 	
 
 	if ( module_h2.length ) {
-	
 
 		module_h2.forEach( ( h2, i ) => {
 
@@ -116,7 +117,6 @@ function clickHandler(e) {
   	e.preventDefault();
   	const href = this.getAttribute("href");
   
-  // console.log( document.querySelector( href ) );
  	const offsetTop = document.querySelector( href ).offsetTop;
  	
  	contentsSidebar.updateSticky();
