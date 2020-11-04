@@ -23,12 +23,11 @@
 		<div class="flex justify-center">
 	
 			<div class="w-11/12 md:w-full lg:w-10/12">
-				<div class="flex flex-wrap justify-center">
-
-					<div class="w-full">
+				<div class="flex flex-wrap">
+					<div class="w-full lg:w-2/3 mb-6 lg:mb-0">
 						<?php 
-							if ( get_field( 'hero_label', $parent_id ) ) :
 
+							if ( get_field( 'hero_label', $parent_id ) ) :
 
 						?>
 						<div class="mb-2">
@@ -44,9 +43,7 @@
 						<div>
 							<h1 class="text-white font-museo-500 leading-tight"><?php the_title(); ?></h1>
 						</div>
-						
 					</div>
-					
 				</div>
 				<?php 
 				
