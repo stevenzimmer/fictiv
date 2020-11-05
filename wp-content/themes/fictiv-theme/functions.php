@@ -16,7 +16,6 @@
     
         wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.48');
 
-
     }
 
     function primary_button( $text = 'get a quote' ) {

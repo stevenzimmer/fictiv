@@ -15,7 +15,7 @@ if ( document.getElementById('masterclass-contents') ) {
 	const masterclassContentsHeight = masterclassContents.offsetHeight;
 	const masterclassContentsTop = masterclassContents.offsetTop;
 
-	const currentContentItem = document.querySelector('.masterclass-content-item.current');
+	const currentContentItem = document.querySelector('.masterclass-content-item.active');
 	const sidebarObj = {
 		topSpacing: primaryNav.offsetHeight + scrollOffset,
 		bottomSpacing: scrollOffset,

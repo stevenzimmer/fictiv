@@ -51,7 +51,7 @@
 
 					if( $id === get_the_id() ) :
 
-						echo 'current';
+						echo 'active';
 
 					endif;
 				

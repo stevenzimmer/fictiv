@@ -5,7 +5,8 @@
 
 		&-item {
 
-			&.current {
+			&.active {
+				@apply text-teal-light;
 
 				svg {
 
