@@ -215,7 +215,7 @@ while ( have_posts() ) :
 					
 						<div class="border-b border-grey-200">
 							<div class="px-4 pb-6">
-								<div class="lg:h-28">
+								<div class="">
 									<p class="text-grey-600 ">
 										<?php 
 											the_sub_field('promotion_section_card_description');
