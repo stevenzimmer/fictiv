@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Masterclass Stripped */
+/* Template Name: Masterclass Full width */
 // Template Post Type: cpt_masterclass 
 get_header();
 
@@ -33,6 +33,7 @@ while ( have_posts() ) :
 	$current_module = get_post_field( 'menu_order', get_the_id() );
 
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
+
 ?>
 
 <section class="py-10 lg:py-20">
@@ -41,25 +42,14 @@ while ( have_posts() ) :
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="flex flex-wrap mb-12 " id="module-container">
-					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
+				<div class="post-content">
+					<?php 
 
-						<?php 
-							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');
-						?>
-						
-					</div>
-					<div class="w-full lg:w-9/12 lg:pl-12">
-				
-						<div class="post-content mb-12">
-							<?php 
+						the_content();
 
-								the_content();
-
-							?>	
-						</div>			
-					</div>
-				</div>
+					?>	
+				</div>			
+					
 			</div>
 		</div>
 		
@@ -67,8 +57,6 @@ while ( have_posts() ) :
 </section>
 
 <?php
-endwhile;
-
-get_footer();
-
+	endwhile;
+	get_footer();
 ?>
