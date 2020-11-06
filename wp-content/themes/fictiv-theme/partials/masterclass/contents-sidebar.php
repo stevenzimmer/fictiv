@@ -60,9 +60,19 @@
 					<div class="flex items-center justify-between -mx-1">
 						<?php
 							if ( $j !== $arr_length ) :
+
 						?>
 						<div class="px-1">
+							<?php 
+
+								if ( get_field('masterclass_module', $id ) ) :
+								
+							?>
 							<p class="text-12 uppercase font-museo-700 mb-1">Module <?php echo get_post_field( 'menu_order', $id ); ?></p>
+							<?php 
+								endif;
+							?>
+
 							<p class="">
 							<?php	
 									
