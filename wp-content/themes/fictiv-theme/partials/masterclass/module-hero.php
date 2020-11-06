@@ -1,4 +1,16 @@
-<header class="relative py-20">
+<header class="relative <?php 
+				
+		if ( !$parent_id ) :
+
+			echo 'py-32';
+
+		else :
+
+			echo 'py-20';
+		
+		endif;
+		
+	?>">
 
 	<?php 
         if ( has_post_thumbnail() ) :
