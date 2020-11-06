@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Masterclass Full width */
+/* Template Name: Masterclass Stripped */
 // Template Post Type: cpt_masterclass 
 get_header();
 
@@ -42,14 +42,25 @@ while ( have_posts() ) :
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				
-				<div class="post-content">
-					<?php 
+				<div class="flex flex-wrap mb-12 " id="module-container">
+					<div class="w-full lg:w-3/12 mb-12 lg:mb-0">
 
-						the_content();
+						<?php 
+							include( get_template_directory() . '/partials/masterclass/contents-sidebar.php');
+						?>
+						
+					</div>
+					<div class="w-full lg:w-9/12 lg:pl-12">
+				
+						<div class="post-content mb-12">
+							<?php 
 
-					?>	
-				</div>			
-					
+								the_content();
+
+							?>	
+						</div>			
+					</div>
+				</div>
 			</div>
 		</div>
 		

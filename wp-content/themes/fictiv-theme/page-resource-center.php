@@ -191,7 +191,22 @@
 						<?php
 
 							endif;
-							if ( $i === 0 && get_field('resources_home_form_title') ) :
+
+							if ( $i === 0 ) :
+
+								if ( get_field('ad_download_graphic') ) :
+						?>
+						<div class="mb-6">
+							<a href="<?php echo get_field('ad_download_link')['url']; ?>">
+								<img class="lazyload" data-src="<?php the_field('ad_download_graphic'); ?>">	
+							</a>
+							
+						</div>
+						<?php
+								
+								elseif ( get_field('ad_download_title') ) :
+									# code...
+								
 						?>
 						<div class="bg-blue-dark p-8 mb-6 ">
 							<div class="flex flex-wrap justify-between items-center">
@@ -218,6 +233,7 @@
 							
 						</div>
 						<?php
+								endif;
 							endif;
 
 							endforeach;

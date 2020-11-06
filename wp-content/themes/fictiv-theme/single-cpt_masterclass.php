@@ -328,6 +328,17 @@ while ( have_posts() ) :
 						
 
 						<?php 
+							else :
+						?>
+						<div class="border-t border-grey-200">
+							<div class="p-4">
+								<p class="py-2 uppercase block w-full bg-grey-200 text-white text-14 font-museo-700 text-center cursor-not-allowed transition-colors duration-200 ease-in-out">
+									register soon
+								</p>
+									
+							</div>
+						</div>
+						<?php
 							endif;
 						?>
 					</div>
