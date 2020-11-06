@@ -559,14 +559,14 @@
 					}
 
 					figcaption {
-						@apply text-center text-12 block my-0;
+						@apply text-center text-12 block my-1;
 					}
 
 					img {
-						@apply mb-0 w-full;
+						@apply mb-0;
 
 						@screen md {
-							@apply w-auto;
+							/*@apply w-auto;*/
 						}
 					}
 
