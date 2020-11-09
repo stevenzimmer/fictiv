@@ -315,8 +315,8 @@ while ( have_posts() ) :
 							if ( !empty( get_sub_field('promotion_section_card_details_call_to_action') ) ) :
 						?>
 						<div class="border-t border-grey-200">
-							<div class="p-4">
-								<a class="py-2 uppercase block w-full bg-teal-light text-white text-14 font-museo-700 text-center hover:bg-teal-dark transition-colors duration-200 ease-in-out" href="<?php 
+							<div class="p-4 text-center">
+								<a class="btn btn-primary" href="<?php 
 										echo get_sub_field('promotion_section_card_details_call_to_action')['url'];
 									?>">
 									<?php 
@@ -331,8 +331,8 @@ while ( have_posts() ) :
 							else :
 						?>
 						<div class="border-t border-grey-200">
-							<div class="p-4">
-								<p class="py-2 uppercase block w-full bg-grey-200 text-white text-14 font-museo-700 text-center cursor-not-allowed transition-colors duration-200 ease-in-out">
+							<div class="p-4 text-center">
+								<p class="btn bg-grey-200 text-white cursor-not-allowed transition-colors duration-200 ease-in-out">
 									coming soon
 								</p>
 									

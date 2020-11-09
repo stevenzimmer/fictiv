@@ -6,10 +6,9 @@ get_header();
 while ( have_posts() ) :
 
     the_post();
-
     $parent_id = wp_get_post_parent_id( get_the_id() );
 
-   	$masterclass_modules = get_children(array(
+   	$masterclass_modules = get_children( array(
 		'posts_per_page' => -1,
 		'post_parent' => $parent_id,
 		'post_status' => 'publish',
@@ -19,19 +18,17 @@ while ( have_posts() ) :
 
 	$module_ids = array();
 
-	foreach ( $masterclass_modules as $i => $module ) :
-		
-		if( get_post_field( 'menu_order', $i ) ) :
-		
-			array_push( $module_ids, $i );
+	foreach ( $masterclass_modules as $i => $module ) :		
 
-		endif;
-	
+		array_push( $module_ids, $i );
+
 	endforeach;
 
 	$arr_length = count( $module_ids );
 
 	$current_module = get_post_field( 'menu_order', get_the_id() );
+
+	$next_module = $current_module + 1;
 
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
 ?>
@@ -70,7 +67,6 @@ while ( have_posts() ) :
 				</div>
 			</div>
 		</div>
-		
 	</div>
 </section>
 
@@ -78,9 +74,10 @@ while ( have_posts() ) :
 	<div class="container">
 		<?php 
 			
-			if ( $current_module < ( $arr_length - 1 ) ) :
+			if ( $current_module < ( $arr_length - 1 ) && get_field('masterclass_module', $module_ids[ $next_module ] ) ) :
 			
 		?>
+
 		<div class="text-center">
 			<div class="mb-6">
 				<h2 class="text-white text-24 md:text-56 font-museo-700">Onto the next module!</h2>
@@ -89,17 +86,15 @@ while ( have_posts() ) :
 			<div class="flex justify-center">
 				
 				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ $current_module ] ); ?>" class="btn btn-primary">Start class</a>
+					<a href="<?php echo get_the_permalink( $module_ids[ $next_module ] ); ?>" class="btn btn-primary">Next module</a>
 				</div>
+
 				<div class="w-8"></div>
-			
 				
-			
 				<div>
 					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take quiz</a>
 				</div>
 			</div>
-			
 		</div>
 
 		<?php 
@@ -123,7 +118,7 @@ while ( have_posts() ) :
 					<div class="flex justify-center">
 					
 						<div>
-							<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take the assessment quiz</a>
+							<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take the certification quiz</a>
 						</div>
 					</div>
 					
