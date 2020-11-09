@@ -19,12 +19,8 @@ while ( have_posts() ) :
 	$module_ids = array();
 
 	foreach ( $masterclass_modules as $i => $module ) :
-
-		if( get_post_field( 'menu_order', $i ) ) :
 		
-			array_push( $module_ids, $i );
-
-		endif;
+		array_push( $module_ids, $i );
 	
 	endforeach;
 
@@ -33,12 +29,10 @@ while ( have_posts() ) :
 	$current_module = get_post_field( 'menu_order', get_the_id() );
 
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
-
 ?>
 
 <section class="py-10 lg:py-20">
 	<div class="container">
-		
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-full lg:w-11/12">
 				

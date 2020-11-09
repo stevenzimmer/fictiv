@@ -1,4 +1,4 @@
-<div class="max-w-full w-full h-full overflow-y-auto masterclass-sidebar" id="masterclass-contents">
+<div class="max-w-full w-full h-full masterclass-sidebar" id="masterclass-contents">
 	<div class="masterclass-sidebar-inner">
 		
 		<div class="pb-6 border-b border-grey-200">
