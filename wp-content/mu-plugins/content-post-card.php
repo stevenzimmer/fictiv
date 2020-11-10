@@ -67,7 +67,7 @@ function fictiv_post_card( $id ) {
 				<?php 
 					if ( strtolower( $resource_type ) === 'webinar' && !get_field('webinar_on-demand', $id ) ) :
 
-						card_label( 'upcoming' );
+						card_label( 'Upcoming' );
 
 					elseif ( get_field( 'resource_center_new', $id ) ) :
 
