@@ -1,12 +1,12 @@
-<header class="relative <?php 
+<header class="relative py-12 <?php 
 				
 		if ( !$parent_id ) :
 
-			echo 'py-32';
+			echo 'lg:py-32';
 
 		else :
 
-			echo 'py-20';
+			echo 'lg:py-20';
 		
 		endif;
 		
@@ -62,12 +62,13 @@
 					if ( !$parent_id ) :
 					
 				?>
-				<div class="flex flex-wrap -mx-4 mt-8">
-					<div class="px-4">
+				<div class="flex flex-wrap justify-center md:justify-start -mx-4 mt-8">
+					<div class="px-4 mb-6 md:mb-0">
 						<a href="<?php echo get_the_permalink( $module_ids[0] ); ?>" class="btn btn-primary">start class</a>
 					</div>
+
 					<div class="px-4">
-						<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">take quiz</a>
+						<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">take the test</a>
 					</div>
 				</div>
 
