@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TVR9RRN');</script>
 <!-- End Google Tag Manager -->
 
-<body <?php body_class('overflow-x-hidden pt-0 lg:pt-18' ); ?>>
+<body <?php body_class('overflow-x-hidden w-full pt-0 lg:pt-18' ); ?>>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVR9RRN"

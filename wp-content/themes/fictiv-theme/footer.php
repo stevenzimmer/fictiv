@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="flex justify-center">
 			<div class="w-11/12 md:w-10/12">
-				<div class="flex justify-between mb-12 flex-wrap -mx-6">
-					<div class="w-full sm:w-1/3 md:w-1/4 mb-12 md:mb-0 px-6">
+				<div class="flex justify-between mb-12 flex-wrap lg:-mx-6">
+					<div class="w-full sm:w-1/3 md:w-1/4 mb-12 md:mb-0 lg:px-6">
 						<div class="w-24 mb-4">
 							<a href="<?php echo home_url() ?>">
 								<img alt="Fictiv logo green" class="lazyload" data-src="<?php echo get_template_directory_uri() . '/assets/images/logos/fictiv-teal.svg'; ?>">
@@ -22,7 +22,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="w-full sm:w-2/3 md:w-3/4 px-6">
+					<div class="w-full sm:w-2/3 md:w-3/4 lg:px-6">
 						<?php 
 							wp_nav_menu( 
 								array(
