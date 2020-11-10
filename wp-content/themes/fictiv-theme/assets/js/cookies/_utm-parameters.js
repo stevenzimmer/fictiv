@@ -55,6 +55,7 @@ function utmCookie( $query ) {
 
 				case regexMatch('fictiv.com') :
 				case regexMatch('fictiv.staging.wpengine.com') :
+				case regexMatch('localhost:3000') :
 					source = "fictiv.com";
 					break;
 
@@ -83,6 +84,7 @@ function utmCookie( $query ) {
 
 				case regexMatch('fictiv.com') :
 				case regexMatch('fictiv.staging.wpengine.com') :
+				case regexMatch('localhost:3000') :
 					medium = "direct";
 					break;
 
