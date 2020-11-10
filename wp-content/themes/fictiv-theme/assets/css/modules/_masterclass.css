@@ -1,0 +1,65 @@
+/*! purgecss start ignore */
+.masterclass {
+
+	&-content {
+
+		&-item {
+
+			&.active {
+				@apply text-teal-light;
+
+				svg {
+
+					path {
+						stroke: #16bc9c;
+					}
+				}
+
+				
+			}
+
+			.caret {
+			
+				&.active {
+					@apply rotate-90;
+				}
+			}
+
+			& + .contents {
+
+				&-list {
+
+					&.active {
+						@apply h-full;
+					}
+
+					ul {
+						@apply p-4;
+					}
+				}
+			}
+		}
+	}
+
+	&-sidebar {
+	    will-change: min-height;
+
+	    &-inner {
+	    	transform: translate(0, 0); /* For browsers don't support translate3d. */
+		    transform: translate3d(0, 0, 0);
+		    will-change: position, transform;
+	    }
+	}
+}
+
+.bio {
+
+	&-wrapper {
+
+		&.active {
+			@apply h-full;
+		}
+	}
+}
+
+/*! purgecss end ignore */

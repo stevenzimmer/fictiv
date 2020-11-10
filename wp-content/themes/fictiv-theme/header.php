@@ -63,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 			include( get_template_directory() . '/inc/post-taxonomies.php');
 
-			include get_template_directory() . '/inc/navigation/mobile/filter.php';
+			include( get_template_directory() . '/inc/navigation/mobile/filter.php' );
 
 		endif;
 	endif;

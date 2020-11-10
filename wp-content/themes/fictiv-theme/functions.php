@@ -11,10 +11,9 @@
 
         wp_enqueue_script( 'mkto-forms', '//info.fictiv.com/js/forms2/js/forms2.min.js', [], '1.1', false );
         
-        wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.10', true);
-
+        wp_enqueue_script('main-js', get_template_directory_uri() . '/dist/main/js/scripts.min.js', ['mkto-forms'], '1.14', true);
     
-        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.42');
+        wp_enqueue_style('style', get_template_directory_uri() . '/dist/main/css/style.min.css', [], '1.50');
     }
 
     function primary_button( $text = 'get a quote' ) {
@@ -74,13 +73,15 @@
         global $resource_post_types;
         $resource_post_types = array(
 
+            'cpt_masterclass',
             'cpt_blog',
             'cpt_case_study',
             'cpt_ebook',
             'cpt_teardown',
             'cpt_tool',
             // 'cpt_video',
-            'cpt_webinar',
+            'cpt_webinar'
+            
 
         );
 
@@ -166,12 +167,12 @@
     // Remove trailing forward slash from pagination
     add_filter('paginate_links','untrailingslashit');
 
-    function upcoming_label() {
+    function card_label( $text ) {
 ?>
     <div class="ml-2">
         <div class="border border-teal-light rounded px-2 py-1 bg-teal-100 ">
             <p class="font-museo-500 text-12 text-teal-light text-center leading-3">
-                Upcoming
+                <?php echo $text; ?>
             </p>
         </div>
         

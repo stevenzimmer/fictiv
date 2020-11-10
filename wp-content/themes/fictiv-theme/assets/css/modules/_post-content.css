@@ -27,6 +27,138 @@
 			}
 		}
 
+		&.masterclass {
+
+			h2 {
+				@apply text-black;
+			}
+
+			h3 {
+				@apply text-black font-museo-700;
+			}
+
+			ul {
+				@apply pl-4;
+			}
+
+			.wp {
+
+				&-block {
+
+					&-image {
+						@apply m-0 mb-6;
+					}
+
+					&-columns {
+
+						&.module {
+
+							&-summary {
+								/*@apply p-12;*/
+
+								.wp {
+
+									&-block {
+
+										&-column {
+											@apply p-0;
+
+											.wp {
+
+												&-block {
+
+													&-group {
+														@apply p-8;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&-column {
+						@apply h-full;
+
+						.wp {
+
+							&-block {
+
+								&-group {
+									@apply h-full;
+
+									&__inner {
+
+										&-container {
+
+											p {
+												@apply mb-6;
+
+												&:last-child {
+													@apply mb-0;
+												}
+											}
+
+											ul {
+
+												li {
+													@apply mb-4;
+
+													&:last-child {
+														@apply mb-0;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.ab {
+
+				&-block {
+
+					&-layout {
+
+						&-column {
+
+							&-inner {
+								@apply h-full;
+							}
+						}
+					}
+				}
+
+				&-layout {
+
+					&-column {
+
+						&-wrap {
+							@apply block;
+
+							@screen md {
+								@apply grid;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+		.scroll {
+
+			&-margin {
+				scroll-margin-top: 4em;
+			}
+		}
+
 		ul,ol {
 			@apply pl-8;
 		}
@@ -63,7 +195,7 @@
 
 		a {
 			@apply text-teal-light;
-
+			
 			&:hover {
 				@apply underline;
 			}
@@ -210,6 +342,13 @@
 
 				&-separator {
 					@apply border-grey-200 mb-4;
+
+					&.has {
+
+						&-background {
+							@apply p-0;
+						}
+					}
 				}
 
 				&-eedee {
@@ -229,6 +368,90 @@
 
 				&-cover {
 					@apply mb-6;
+				}
+
+				&-atomic {
+
+					&-blocks {
+
+						&-ab {
+
+							&-columns {
+								@apply mb-12;
+
+								&:last-child {
+									@apply mb-6;
+								}
+
+								.ab {
+
+									&-layout {
+
+										&-column {
+
+											&-wrap {
+
+												.ab {
+
+													&-block {
+
+														&-layout {
+
+															&-column {
+
+																&-inner {
+
+																	ul {
+																		@apply mt-6;
+
+																		li {
+																			@apply mb-4;
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+
+									&-block {
+
+										&-layout {
+
+											&-column {
+
+												&-inner {
+
+													ul {
+														@apply pl-4;
+
+														&:last-child {
+															@apply mb-0;
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+
+							&-accordion {
+								
+
+								details {
+
+									summary {
+										@apply bg-grey-100 text-black;
+
+									}
+								}
+							}
+						}
+					}
 				}
 
 				&-columns {
@@ -336,14 +559,14 @@
 					}
 
 					figcaption {
-						@apply text-center text-12 block my-0;
+						@apply text-center text-12 block my-1;
 					}
 
 					img {
-						@apply mb-0 w-full;
+						@apply mb-0;
 
 						@screen md {
-							@apply w-auto;
+							/*@apply w-auto;*/
 						}
 					}
 
@@ -431,6 +654,50 @@
 							@apply p-4;
 						}
 					}
+
+					&__inner {
+
+						&-container {
+
+							.wp {
+
+								&-block {
+
+									&-atomic {
+
+										&-blocks {
+
+											&-ab {
+
+												&-columns {
+													@apply mb-0;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&-table {
+					/*@apply bg-black;*/
+
+					table {
+						@apply border-t border-l border-r border-grey-100;
+
+						thead {
+							@apply text-left;
+						}
+
+						tr {
+
+							th,td {
+								@apply py-2 px-4 border-b border-r border-grey-200;
+							}
+						}
+					}
 				}
 
 				&-button {
@@ -471,6 +738,8 @@
 					}
 				}
 			}
+
+
 		}
 	}
 }
@@ -485,6 +754,20 @@
 	}
 
 	&-teal {
+
+		&-lightest {
+
+			&-color {
+				@apply text-teal-lightest;
+			}
+
+			&-background {
+
+				&-color {
+					@apply bg-teal-lightest;
+				}
+			}
+		}
 
 		&-lighter {
 
@@ -812,7 +1095,5 @@
 		}
 	}
 }
-
-
 
 /*! purgecss end ignore */

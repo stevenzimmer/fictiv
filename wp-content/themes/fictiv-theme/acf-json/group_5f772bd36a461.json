@@ -26,7 +26,7 @@
             "label": "Add Resources",
             "name": "related_resources",
             "type": "post_object",
-            "instructions": "Limit to 2 resources",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -161,6 +161,18 @@
                 "operator": "==",
                 "value": "page-injection-molding.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_masterclass"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
         ]
     ],
     "menu_order": 0,
@@ -171,5 +183,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1603285258
+    "modified": 1603978723
 }

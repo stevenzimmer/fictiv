@@ -57,7 +57,7 @@
 							
 									<?php 
 
-										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+										fictiv_post_card( get_the_id() );
 									
 									?>
 
@@ -116,6 +116,13 @@
 										<?php 
 											echo get_post_type_object( $type )->labels->name;
 										?>
+
+										<?php 
+
+											if ( $type === 'cpt_masterclass' ) :
+												echo 'courses';
+											endif;
+										?>
 										&nbsp;&nbsp;
 										<a href="<?php echo get_post_type_archive_link( $type ); ?>" class="text-teal-light text-12 font-museo-500">See More</a>
 									</p>
@@ -137,7 +144,7 @@
 							
 									<?php 
 
-										fictiv_post_card( get_post_type_object( get_post_type() )->labels->name );
+										fictiv_post_card( get_the_id() );
 									
 									?>
 
@@ -184,7 +191,22 @@
 						<?php
 
 							endif;
-							if ( $i === 0 && get_field('resources_home_form_title') ) :
+
+							if ( $i === 0 ) :
+
+								if ( get_field('ad_download_graphic') ) :
+						?>
+						<div class="mb-6">
+							<a href="<?php echo get_field('ad_download_link')['url']; ?>">
+								<img class="lazyload" data-src="<?php the_field('ad_download_graphic'); ?>">	
+							</a>
+							
+						</div>
+						<?php
+								
+								elseif ( get_field('ad_download_title') ) :
+									# code...
+								
 						?>
 						<div class="bg-blue-dark p-8 mb-6 ">
 							<div class="flex flex-wrap justify-between items-center">
@@ -211,6 +233,7 @@
 							
 						</div>
 						<?php
+								endif;
 							endif;
 
 							endforeach;

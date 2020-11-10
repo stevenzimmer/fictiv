@@ -10,6 +10,7 @@
 @import "./modules/_page-content.css";
 @import "./modules/_homepage.css";
 @import "./modules/_capabilities.css";
+@import "./modules/_masterclass.css";
 
 @import "./components/_btns.css";
 @import "./components/_nav.css";
@@ -36,6 +37,13 @@
     src: url('./../fonts/museo-sans/300_italic.woff') format('woff');
     font-weight: 300;
 }
+
+/*@font-face {
+    font-family: 'museo-400';
+    src: url('./../fonts/museo-sans/400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}*/
 
 @font-face {
     font-family: 'museo-500';

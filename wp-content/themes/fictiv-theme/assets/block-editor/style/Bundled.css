@@ -75,6 +75,31 @@
 
     &-type {
 
+        &-cpt {
+
+            &_masterclass {
+
+                .block-editor-block-list__layout,
+                .editor-post-title {
+
+                    .wp {
+
+                        &-block {
+                            max-width: 1084px;
+
+                            h2 {
+                                @apply text-black;
+                            }
+                            
+                            h3 {
+                                @apply text-black font-museo-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         &-page {
             
             .block-editor-block-list__layout,

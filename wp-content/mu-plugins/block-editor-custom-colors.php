@@ -29,6 +29,12 @@ function fictiv_custom_colors() {
 			),
 
 			array(
+				'name'  => __( 'Teal Lightest', 'fictiv_custom_colors' ),
+				'slug'  => 'teal-lightest',
+				'color'	=> '#EFF8FA',
+			),
+
+			array(
 				'name'  => __( 'Teal Lighter', 'fictiv_custom_colors' ),
 				'slug'  => 'teal-lighter',
 				'color'	=> '#BDEAE1',
@@ -67,7 +73,7 @@ function fictiv_custom_colors() {
 			array(
 				'name'  => __( 'Grey Lighter', 'fictiv_custom_colors' ),
 				'slug'  => 'grey-200',
-				'color'	=> '#DBDCDE',
+				'color'	=> '#f5f5f5',
 			),
 
 			array(
