@@ -429,15 +429,14 @@ while ( have_posts() ) :
 			<div class="mb-6">
 				<h2 class="text-24 md:text-56 font-museo-700 text-white">Let's begin!</h2>
 			</div>
-			<div class="flex justify-center">
+			<div class="flex justify-center flex-wrap">
 		
-				<div>
+				<div class="px-2 mb-6 md:mb-0">
 					<a href="<?php echo get_the_permalink( $module_ids[ 0 ] ); ?>" class="btn btn-primary">Start class</a>
 				</div>
-				<div class="w-8"></div>
 			
-				<div>
-					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take quiz</a>
+				<div class="px-2">
+					<a href="<?php echo get_the_permalink( $module_ids[ $arr_length - 1 ] ); ?>" class="btn btn-primary">Take the test</a>
 				</div>
 			</div>
 			
