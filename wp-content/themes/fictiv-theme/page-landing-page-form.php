@@ -1,6 +1,7 @@
 <?php 
 /* 	Template Name: Landing page w/form
 */ 
+// Template used to create landing pages with forms similar to eBook/webinar templates
 get_header();
 
 if ( have_posts() ) : 

@@ -1,4 +1,5 @@
 <?php 
+// Used to customize editor styling based on template name
 function add_body_class_to_block_editor( $classes ) {
         //get current page
         global $pagenow;

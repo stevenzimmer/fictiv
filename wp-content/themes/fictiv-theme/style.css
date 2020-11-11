@@ -8,4 +8,8 @@ Version: 1.0
     All CSS files are located under the "assets/css" subfolder and static minified file is built with webpack.
 
     PLEASE DON'T MODIFY THIS FILE.
+
+    in terminal run: 'npm run dev' to make css file edits
+    in terminal run: 'npm run build' to build css assets after completing edits
+    
 */

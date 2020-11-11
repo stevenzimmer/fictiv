@@ -2,4 +2,7 @@
     All Block editor CSS files are located under the "assets/block-editor" subfolder and static minified file is built with webpack.
 
     PLEASE DON'T MODIFY THIS FILE.
+
+    in terminal run: 'npm run dev' to begin making css file edits
+    in terminal run: 'npm run build' to build css assets after finished with edits
 */

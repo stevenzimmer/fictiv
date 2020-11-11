@@ -1,7 +1,9 @@
+/* Modify Tailwind files output in webpack/tailwind/config.js 
+** Tailwind documentation: https://tailwindcss.com/
+********************************************************/
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 
 @import "./global/_body.css";
 
@@ -22,8 +24,8 @@
 @import "./components/_filter.css";
 @import "./components/_pagination.css";
 @import "./components/_modal.css";
-@import "./pages/_partners.css";
 
+@import "./pages/_partners.css";
 
 @font-face {
     font-family: 'museo-300';
@@ -37,13 +39,6 @@
     src: url('./../fonts/museo-sans/300_italic.woff') format('woff');
     font-weight: 300;
 }
-
-/*@font-face {
-    font-family: 'museo-400';
-    src: url('./../fonts/museo-sans/400.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}*/
 
 @font-face {
     font-family: 'museo-500';
@@ -77,3 +72,8 @@
     font-style: normal;
 }
 
+/*
+    in terminal, fictiv-theme directory:
+        'npm run dev' to make CSS file edits
+        'npm run build' to build CSS assets after completing edits
+*/

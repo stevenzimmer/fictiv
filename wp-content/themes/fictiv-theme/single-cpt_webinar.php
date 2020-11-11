@@ -1,9 +1,6 @@
 <?php 
 get_header();
-// print_r( get_queried_object() );
-// $post_taxonomies = get_object_taxonomies( get_queried_object()->post_type, 'objects' );
 
-// print_r( $post_taxonomies );
 if ( have_posts() ) : 
 
     while ( have_posts() ) : 
@@ -32,6 +29,7 @@ if ( have_posts() ) :
 
         );
 
+        // hero_section() function located in mu-plugins/hero-section.php
         hero_section( $args );
 
 ?>
@@ -119,6 +117,7 @@ if ( have_posts() ) :
 		    'post_parent' => 0
 		);
 
+		// resources_module() function located in mu-plugins/related-resources-module.php
 		resources_module( $related_args );
 
 	endif;

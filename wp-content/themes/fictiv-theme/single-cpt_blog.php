@@ -15,6 +15,7 @@ while ( have_posts() ) :
 
     );
 
+    // hero_section() function located in mu-plugins/hero-section.php
     hero_section( $args );
         
 ?>
@@ -132,6 +133,7 @@ while ( have_posts() ) :
 	    'post_parent' => 0
 	);
 
+	// resources_module() function located in mu-plugins/related-resources-module.php
 	resources_module( $related_args );
 
 

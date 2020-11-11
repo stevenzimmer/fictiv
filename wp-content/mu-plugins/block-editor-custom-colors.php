@@ -1,6 +1,6 @@
 <?php 
 /**
- * Theme Setup 
+ * Fictiv Color palette in Gutenberg editor
  *
  */
 function fictiv_custom_colors() {

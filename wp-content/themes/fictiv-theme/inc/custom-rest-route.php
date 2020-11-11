@@ -1,5 +1,8 @@
 <?php 
 	
+	// WordPress Rest Route used with search results template
+	
+	// resource_center_cpt() located in functions.php
 	resource_center_cpt();
 
 	function fictiv_custom_rest_route() {

@@ -8,8 +8,7 @@
 	 	else:
 
  			if ( get_field('ad_download_title') ) :
-
-	 		
+	
 			    $content = explode("</p>", $content);
 			    $paragraphAfter = round( count( $content ) / 4, 0 );
 			    $blog_subscribe = '';
