@@ -1,4 +1,6 @@
 <?php 
+// Search results page template
+
 get_header();
 
 $response = array();

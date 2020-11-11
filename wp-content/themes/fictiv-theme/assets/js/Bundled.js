@@ -12,3 +12,9 @@ import './partners/_scripts';
 import './resources/_scripts';
 import './search/_scripts';
 import './toggles/_scripts';
+
+/*
+	in terminal, fictiv-theme directory:
+	    'npm run dev' to make js file edits
+    	'npm run build' to build js assets after completing edits
+*/

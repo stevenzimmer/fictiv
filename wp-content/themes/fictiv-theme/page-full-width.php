@@ -1,6 +1,7 @@
 <?php 
 	/* 	Template Name: Full Width 
 	*/ 
+	// Template used to create landing pages with just the Gutenberg editor
 	get_header();
 	if ( have_posts() ) : 
 

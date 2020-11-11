@@ -1,4 +1,6 @@
 <?php 
+	// Desktop sidebar for resource filtering/search
+	// Mobile resource filter/search is set in header.php
 	if ( !wp_is_mobile() ) :
 ?>
 	<div class="mb-2">
@@ -18,7 +20,7 @@
 			<p class="uppercase font-museo-500 text-grey-400">content type</p>
 		</div>
 		<?php
-
+			// function located in mu-plugins/filter-functions.php
 			filterContentType( $GLOBALS['resource_post_types'], 'sidebar' );
 		?>
 		<div class="pb-2 mt-8 border-b border-grey-200">
@@ -26,6 +28,7 @@
 		</div>
 		<?php
 
+			// resource_center_taxonomies() located in functions.php
 			foreach ( resource_center_taxonomies() as $i => $tax ) :
 				$labels = get_taxonomy( $tax );
 
@@ -34,6 +37,7 @@
 					'hide_empty' => true
 				));
 
+				// function located in mu-plugins/filter-functions.php
 				filterTaxonomies( $labels->labels->singular_name, $filters, 'sidebar' );
 
 			endforeach;

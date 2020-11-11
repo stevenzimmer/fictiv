@@ -9,6 +9,7 @@
 
   	<?php
   		wp_head(); 
+
   		if ( is_author() ) :
   			// Canonical for Author Archive page
   	?>
@@ -16,8 +17,6 @@
   	<?php
   		endif;
   	?>
-
-
 
   	<script>
     	window.fa=window.fa||function(){(fa.q=fa.q||[]).push(arguments)};fa.l=+new Date;
@@ -48,10 +47,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	// Main nav wrapper
 	include get_template_directory() . '/inc/navigation/main.php';
 
-	// Filter Mobile
+	// Resources Filter Mobile
 	if ( wp_is_mobile() ) :
 
-		// Show mobile filter on Resource center pages
+		// Show mobile filter on Resource center templates
 		if( 
 			is_search() || 
 			is_page_template('page-filter.php') || 

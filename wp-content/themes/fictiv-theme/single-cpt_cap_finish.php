@@ -16,6 +16,7 @@ if ( have_posts() ) :
             'btn' => get_field('capabilities_hero_cta_button')
         );
 
+        // capabilities_hero() function located in mu-plugins/capabilities-hero.php
         capabilities_hero( $hero_arr );
  
     if( get_field('youtube_id') ) :
@@ -226,7 +227,8 @@ if ( have_posts() ) :
             )
         ),
     );
-
+    
+    // resources_module() function located in mu-plugins/related-resources-module.php
     resources_module( $related_args );
 
     endwhile;

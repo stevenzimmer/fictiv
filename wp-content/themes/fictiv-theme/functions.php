@@ -52,6 +52,7 @@
     }
 
     function lazyload_images_in_posts( $content ) {
+        // Lazyload images in post content
         
         //-- Change src/srcset to data attributes.
         $content = preg_replace("/<img(.*?)(src=|srcset=)(.*?)>/i", '<img$1data-$2$3>', $content);
@@ -69,8 +70,10 @@
     add_filter('the_content', 'lazyload_images_in_posts' );
 
     function resource_center_cpt() {
+        // Resource Center Post Types
 
         global $resource_post_types;
+
         $resource_post_types = array(
 
             'cpt_masterclass',
@@ -164,10 +167,11 @@
 
     require get_theme_file_path('/inc/custom-rest-route.php');
 
-    // Remove trailing forward slash from pagination
+    // Remove trailing forward slash from pagination links
     add_filter('paginate_links','untrailingslashit');
 
     function card_label( $text ) {
+        // Label used on resource cards
 ?>
     <div class="ml-2">
         <div class="border border-teal-light rounded px-2 py-1 bg-teal-100 ">

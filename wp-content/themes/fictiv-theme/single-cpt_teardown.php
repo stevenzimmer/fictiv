@@ -17,6 +17,7 @@ while ( have_posts() ) :
 
     );
 
+    // hero_section() function located in mu-plugins/hero-section.php
     hero_section( $args );
 
 ?>
@@ -180,7 +181,6 @@ while ( have_posts() ) :
 	</div>
 </section>
 <?php
-	// include( get_template_directory() . '/inc/related-posts.php');
 
 	$related_args = array(
 		'posts_per_page' => 2,
@@ -189,11 +189,11 @@ while ( have_posts() ) :
 	    'post_parent' => 0
 	);
 
+	// resources_module() function located in mu-plugins/related-resources-module.php
 	resources_module( $related_args );
 
 endwhile;
 wp_reset_postdata();
-// wp_reset_query();
 
 get_footer();
 ?>

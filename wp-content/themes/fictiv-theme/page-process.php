@@ -1,6 +1,9 @@
 <?php 
 /*  Template Name: Process 
 */ 
+// Template used for 3D printing, CNC Machining, and Urethane Casting process pages
+// Injection Molding page template found in page-injection-molding.php
+
 get_header();
 
 if ( have_posts() ) : 
@@ -17,7 +20,7 @@ $hero_arr = array(
     'para' => get_field('capabilities_hero_paragraph'),
     'btn' => get_field('capabilities_hero_cta_button')
 );
-
+// capabilities_hero() function located in mu-plugins/capabilities-hero.php
 capabilities_hero( $hero_arr );
         
 ?>
