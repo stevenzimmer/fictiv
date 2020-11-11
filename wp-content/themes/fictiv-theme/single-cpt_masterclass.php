@@ -1,11 +1,11 @@
 <?php 
+// This template is used for Masterclass Intro/Parent page
+
 get_header();
 
 while ( have_posts() ) :
 
     the_post();
-
-    // include( get_template_directory() . '/inc/post-topics.php');
 
     $parent_id = wp_get_post_parent_id( get_the_id() );
 
@@ -31,7 +31,6 @@ while ( have_posts() ) :
 
 	$arr_length = count( $module_ids );
 
-
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
   
 ?>
@@ -42,22 +41,39 @@ while ( have_posts() ) :
 		<div class="flex justify-center">
 			<div class="w-11/12 lg:px-2">
 			
-				<div class="">
-					<div class="mb-12">
-						<?php 
-							get_template_part('partials/single', 'breadcrumbs');
-						?>
-					</div>
-
-					<div class="post-content masterclass">
+				<div class="mb-12">
+					<div class="flex justify-between flex-wrap items-center">
+						<div class=" w-full lg:w-1/2 mb-6 lg:mb-0">
+							<?php 
+								get_template_part('partials/single', 'breadcrumbs');
+							?>
+						</div>
 						
+						<div class=" w-full lg:w-1/2">
+
+							<div class="flex justify-start lg:justify-end">
+								<div class="flex items-center w-full lg:justify-end">
+									<div>
+										<p class="font-museo-500 text-grey-700 text-14">Share on social:</p>
+									</div>
+									<div class="w-12"></div>
+									<?php 
+										get_template_part('partials/social', 'post');
+									?>
+								</div>
+								
+							</div>
+						</div>
+					</div>
 					
+				</div>
+
+				<div class="post-content masterclass">
+				
 					<?php 
 						the_content();
 					?>
 
-					</div>
-					
 				</div>
 			</div>
 		</div>

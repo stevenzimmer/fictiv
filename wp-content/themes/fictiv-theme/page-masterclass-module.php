@@ -1,6 +1,9 @@
 <?php 
 /* Template Name: Masterclass Module */
 // Template Post Type: cpt_masterclass 
+
+// Template used for masterclass child/module pages
+
 get_header();
 
 while ( have_posts() ) :
@@ -27,8 +30,6 @@ while ( have_posts() ) :
 	$arr_length = count( $module_ids );
 
 	$current_module = get_post_field( 'menu_order', get_the_id() );
-
-	// $next_module = $current_module + 1;
 
 	include( get_template_directory() . '/partials/masterclass/module-hero.php');
 ?>
@@ -61,6 +62,18 @@ while ( have_posts() ) :
 								the_content();
 
 							?>	
+						</div>
+						<div class="flex justify-start lg:justify-end">
+							<div class="w-full lg:w-1/2 flex items-center w-full lg:justify-end">
+								<div>
+									<p class="font-museo-500 text-grey-700 text-14">Share on social:</p>
+								</div>
+								<div class="w-6"></div>
+								<?php 
+									get_template_part('partials/social', 'post');
+								?>
+							</div>
+							
 						</div>
 							
 					</div>
@@ -133,7 +146,7 @@ while ( have_posts() ) :
 <section class="py-20">
 	<div class="container">
 	<?php 
-
+	
 		if ( !empty( get_field('related_resources', $parent_id ) ) ) :
 		
 	?>
@@ -144,12 +157,12 @@ while ( have_posts() ) :
 					if ( get_field('related_resources_title', $parent_id ) ) :
 						
 						the_field('related_resources_title', $parent_id );
+					
 					else :
 
 						echo 'Other Resources';
 
 					endif;
-
 				?>
 				
 			</h2>

@@ -1,8 +1,6 @@
 <?php 
 get_header();
 
-// print_r( get_queried_object() );
-
 while ( have_posts() ) :
 
     the_post();
@@ -126,8 +124,6 @@ while ( have_posts() ) :
 
 
 <?php
-	
-	// include( get_template_directory() . '/inc/related-posts.php');
 
 	$related_args = array(
 		'posts_per_page' => 2,
