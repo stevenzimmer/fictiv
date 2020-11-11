@@ -1,6 +1,9 @@
 <?php 
 /* Template Name: Masterclass Stripped */
-// Template Post Type: cpt_masterclass 
+// Template Post Type: cpt_masterclass
+
+// Template used for masterclass child pages that are non-modules
+
 get_header();
 
 while ( have_posts() ) :
@@ -52,7 +55,19 @@ while ( have_posts() ) :
 								the_content();
 
 							?>	
-						</div>			
+						</div>
+						<div class="flex justify-start lg:justify-end">
+							<div class="w-full lg:w-1/2 flex items-center w-full lg:justify-end">
+								<div>
+									<p class="font-museo-500 text-grey-700 text-14">Share on social:</p>
+								</div>
+								<div class="w-6"></div>
+								<?php 
+									get_template_part('partials/social', 'post');
+								?>
+							</div>
+							
+						</div>		
 					</div>
 				</div>
 			</div>
