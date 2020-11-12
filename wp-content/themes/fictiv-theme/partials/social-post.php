@@ -2,7 +2,7 @@
 include( get_template_directory() . '/inc/post-taxonomies.php');
 ?>
 <div class="w-1/2 lg:w-1/3">
-	<div class="flex justify-between">
+	<div class="flex justify-between items-center">
 		<a title="Share <?php the_title()?> on Twitter" rel="noopener noreferrer" target="_blank" class="js-share-twitter-link" href="https://twitter.com/intent/tweet?text=<?php the_title(); ?>&url=<?php echo urlencode( get_the_permalink() ); ?>&hashtags=<?php echo $topic_name; ?>&via=fictiv">
 		<?php 
 			echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/twitter.svg');

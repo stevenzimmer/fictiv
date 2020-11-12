@@ -49,14 +49,10 @@ while ( have_posts() ) :
 							?>
 						</div>
 						
-						<div class=" w-full lg:w-1/2">
+						<div class="w-4/12">
 
 							<div class="flex justify-start lg:justify-end">
 								<div class="flex items-center w-full lg:justify-end">
-									<div>
-										<p class="font-museo-500 text-grey-700 text-14">Share on social:</p>
-									</div>
-									<div class="w-12"></div>
 									<?php 
 										get_template_part('partials/social', 'post');
 									?>
