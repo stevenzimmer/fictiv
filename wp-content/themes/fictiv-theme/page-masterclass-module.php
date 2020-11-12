@@ -50,11 +50,24 @@ while ( have_posts() ) :
 						
 					</div>
 					<div class="w-full lg:w-9/12 lg:pl-12">
-						<div class="mb-6 px-3 py-1 rounded-lg bg-grey-100 inline-block">
-							<p class="uppercase font-museo-700 text-grey-600 text-12">
-								module <?php echo get_post_field( 'menu_order', get_the_id() ); ?>
-							</p>
+						<div class="flex justify-between mb-6">
+							
+							<div class=" px-3 py-1 rounded-lg bg-grey-100 inline-block">
+								<p class="uppercase font-museo-700 text-grey-600 text-12">
+									module <?php echo get_post_field( 'menu_order', get_the_id() ); ?>
+								</p>
+							</div>
+							<div class="w-5/12 flex justify-start lg:justify-end">
+								<div class="flex items-center w-full lg:justify-end">
+							
+									<?php 
+										get_template_part('partials/social', 'post');
+									?>
+								</div>
+								
+							</div>
 						</div>
+						
 						
 						<div class="post-content masterclass mb-12">
 							<?php 
@@ -65,10 +78,7 @@ while ( have_posts() ) :
 						</div>
 						<div class="flex justify-start lg:justify-end">
 							<div class="w-full lg:w-1/2 flex items-center w-full lg:justify-end">
-								<div>
-									<p class="font-museo-500 text-grey-700 text-14">Share on social:</p>
-								</div>
-								<div class="w-6"></div>
+								
 								<?php 
 									get_template_part('partials/social', 'post');
 								?>
