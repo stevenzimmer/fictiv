@@ -114,8 +114,11 @@ function utmCookie( $query ) {
 			switch( $query ) {
 				
 				case "utm_medium" :
+					createCookie( $query, 'direct', hour );
+					break;
+
 				case "utm_source" :
-					createCookie( $query, 'X', hour );
+					createCookie( $query, 'fictiv.com', hour );
 					break;
 
 				default :
