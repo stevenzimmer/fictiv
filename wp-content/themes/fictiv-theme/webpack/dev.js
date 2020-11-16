@@ -1,3 +1,5 @@
+ // File that runs for 'npm run dev'
+////
 const path = require("path");
 const entry = require("./entries");
 const output = require("./output");

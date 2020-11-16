@@ -6,6 +6,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="profile" href="http://gmpg.org/xfn/11">
   	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <!-- Preload Fonts -->
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-sans/300.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-sans/300_italic.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-sans/500.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-sans/700.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-sans/900.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-slab/300.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri() ?>/dist/assets/fonts/museo-slab/500.otf" as="font" crossorigin="anonymous">
 
   	<?php
   		wp_head(); 

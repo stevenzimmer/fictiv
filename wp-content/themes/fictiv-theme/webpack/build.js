@@ -1,3 +1,5 @@
+ // File that runs for 'npm run build'
+//// 
 const path = require("path");
 const glob = require("glob-all");
 const webpack = require("webpack");
@@ -69,21 +71,16 @@ module.exports = {
                 test: /\.(png|jpg|svg)$/,
                 loader: "url-loader"
             },
-
-             {
-                test: /\.(woff(2)?|ttf|otf|)(\?v=\d+\.\d+\.\d+)?$/,
-                loader: "url-loader"
-            }
             
-            // {
-            //     test: /\.(woff(2)?|ttf|otf|)(\?v=\d+\.\d+\.\d+)?$/,
-            //     loader: "file-loader",
-            //     options: {
-            //         name: '[name].[ext]',
-            //         outputPath: 'fonts/',
-            //         publicPath: url => './../../fonts/' + url
-            //     }
-            // }
+            {
+                test: /\.(woff(2)?|ttf|otf|)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "file-loader",
+                options: {
+                    name: '[path][name].[ext]',
+                    // outputPath: 'fonts/',
+                    publicPath: url => '../../' + url
+                }
+            }
         ]
     },
 
