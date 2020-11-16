@@ -53,9 +53,10 @@ function utmCookie( $query ) {
 					source = "twitter";
 					break;
 
-				case regexMatch('fictiv.com') :
-				case regexMatch('fictiv.staging.wpengine.com') :
-				case regexMatch('localhost:3000') :
+				case regexMatch('fictiv.com') : // production environment
+				case regexMatch('fictiv.staging.wpengine.com') : // staging environment
+				case regexMatch('localhost:3000') : // local dev - browsersync
+				case regexMatch('fictiv:8888') : // local dev
 					source = "fictiv.com";
 					break;
 
@@ -69,7 +70,7 @@ function utmCookie( $query ) {
 			switch( true ) {
 
 				case regexMatch('google.com') :
-				case regexMatch('bing.com') :
+				case regexMatch('bing.com') : 
 				case regexMatch('youtube.com') :
 					medium = "organicsearch";
 					break;
@@ -82,9 +83,10 @@ function utmCookie( $query ) {
 					medium = "organicsocial";
 					break;
 
-				case regexMatch('fictiv.com') :
-				case regexMatch('fictiv.staging.wpengine.com') :
-				case regexMatch('localhost:3000') :
+				case regexMatch('fictiv.com') : // production environment
+				case regexMatch('fictiv.staging.wpengine.com') : // staging environment
+				case regexMatch('localhost:3000') : // local dev - browsersync
+				case regexMatch('fictiv:8888') : // local dev
 					medium = "direct";
 					break;
 
