@@ -11,7 +11,7 @@ This repo comprises of `wp-content` folder for Fictiv website. Specifically, `mu
 ```
 
 ## Getting started with local dev
-Merge this repo into local wp-content folder
+Merge this repo into local `wp-content` folder
 
 cd into fictiv-theme and run 'npm install' to pull down all packages
 
