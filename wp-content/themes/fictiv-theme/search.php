@@ -78,6 +78,7 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 							?>
 							<div class="w-full sm:w-1/2 px-1 mb-2">
 								<?php 
+									// fictiv_post_card() function located in mu-plugins/content-post-card.php
 									fictiv_post_card( $data->id );
 								?>
 							</div>
@@ -104,7 +105,7 @@ $search_title = (  $response  ? 'Search results for "' . $_GET['s'] . '"' : 'Sor
 
 							<div class="w-full md:w-1/2 px-1 mb-2">
 								<?php 
-
+									// fictiv_post_card() function located in mu-plugins/content-post-card.php
 									fictiv_post_card( get_the_id() );
 								
 								?>
