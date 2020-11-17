@@ -179,7 +179,7 @@ while ( have_posts() ) :
 							if ( get_sub_field('promotion_section_card_graphic') ) :
 						?>
 						<div class="relative h-0" style="padding-bottom: 56.25%">
-							<img class="absolute w-full h-full inset-0 object-cover" src="<?php echo get_sub_field('promotion_section_card_graphic')['sizes']['medium_large']; ?>">
+							<img class="absolute w-full h-full inset-0 object-cover lazyload" data-src="<?php echo get_sub_field('promotion_section_card_graphic')['sizes']['medium_large']; ?>">
 						</div>
 						<?php
 							else :
@@ -338,7 +338,6 @@ while ( have_posts() ) :
 							</div>
 						</div>
 						
-
 						<?php 
 							else :
 						?>
@@ -386,7 +385,7 @@ while ( have_posts() ) :
 						<div class="flex items-center -mx-4">
 							<div class="w-1/3 px-4">
 								<div class="relative h-0" style="padding-bottom: 100%">
-									<img class="absolute w-full h-full object-cover inset-0" src="<?php the_sub_field('webinar_host_headshot') ?>">
+									<img class="absolute w-full h-full object-cover inset-0 lazyload" data-src="<?php the_sub_field('webinar_host_headshot') ?>">
 								</div>
 								
 							</div>

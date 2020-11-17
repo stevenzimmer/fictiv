@@ -5,13 +5,12 @@
 		</div>
 		<div id="resources-search-submit" class="bg-grey-100 resources-search-submit">
 			<div class="flex items-center h-full px-2">
+
 				<?php 
 					echo file_get_contents( get_template_directory_uri() . '/assets/images/icons/search.svg');
 				?>
+				
 			</div>
-		
-			
 		</div>
-		
 	</div>
 </form>
