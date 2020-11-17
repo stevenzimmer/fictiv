@@ -54,9 +54,9 @@ function utmCookie( $query ) {
 					break;
 
 				case regexMatch('fictiv.com') : // production environment
-				case regexMatch('fictiv.staging.wpengine.com') : // staging environment
-				case regexMatch('localhost:3000') : // local dev - browsersync
-				case regexMatch('fictiv:8888') : // local dev
+				// case regexMatch('fictiv.staging.wpengine.com') : // staging environment
+				// case regexMatch('localhost:3000') : // local dev - browsersync
+				// case regexMatch('fictiv:8888') : // local dev
 					source = "fictiv.com";
 					break;
 
@@ -84,9 +84,9 @@ function utmCookie( $query ) {
 					break;
 
 				case regexMatch('fictiv.com') : // production environment
-				case regexMatch('fictiv.staging.wpengine.com') : // staging environment
-				case regexMatch('localhost:3000') : // local dev - browsersync
-				case regexMatch('fictiv:8888') : // local dev
+				// case regexMatch('fictiv.staging.wpengine.com') : // staging environment
+				// case regexMatch('localhost:3000') : // local dev - browsersync
+				// case regexMatch('fictiv:8888') : // local dev
 					medium = "direct";
 					break;
 
