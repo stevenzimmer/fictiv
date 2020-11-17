@@ -8,6 +8,7 @@
     	'post_type' => get_queried_object()->post_type
     );
 
+	// hero_section() function located in mu-plugins/hero-section.php
     hero_section( $args );
 ?>
 <section class="section">
@@ -56,7 +57,7 @@
 									<div class="px-1 h-full">
 							
 									<?php 
-
+										// fictiv_post_card() function located in mu-plugins/content-post-card.php
 										fictiv_post_card( get_the_id() );
 									
 									?>
@@ -143,14 +144,13 @@
 										
 							
 									<?php 
-
+										// fictiv_post_card() function located in mu-plugins/content-post-card.php
 										fictiv_post_card( get_the_id() );
 									
 									?>
 
 									</div>
 
-									
 							<?php 
 										endwhile;
 										wp_reset_postdata();
@@ -194,6 +194,7 @@
 
 							if ( $i === 0 ) :
 
+								// Show Promotional banner
 								if ( get_field('ad_download_graphic') ) :
 						?>
 						<div class="mb-6">
@@ -205,7 +206,6 @@
 						<?php
 								
 								elseif ( get_field('ad_download_title') ) :
-									# code...
 								
 						?>
 						<div class="bg-blue-dark p-8 mb-6 ">

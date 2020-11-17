@@ -22,6 +22,7 @@ cd into `/fictiv-theme` and run `npm install` to pull down all packages, depende
 * Babel
 * PurgeCSS
 
+
 ## Libraries and dependencies
 * [TailwindCSS](https://tailwindcss.com/): Utility first CSS library. Reference tailwind config file for theme specific design system `flat-theme/webpack/tailwind/config.js`
 * [Micromodal](https://micromodal.now.sh/): Modal JS library
@@ -29,13 +30,12 @@ cd into `/fictiv-theme` and run `npm install` to pull down all packages, depende
 * [Vanilla Lazyload](https://github.com/verlok/vanilla-lazyload): Lazyload JS library
 
 ## Development
-
 cd into `fictiv-theme` folder and `npm run dev` to begin development
 
 reference `fictiv-theme/webpack/dev.js` for development script details
 
-## Build
 
+## Build
 cd into `fictiv-theme` folder and `npm run build` to build css and JS files into `/dist` folder once development phase is complete. 
 
 reference `fictiv-theme/webpack/build.js` for build script details
@@ -44,13 +44,16 @@ reference `fictiv-theme/webpack/build.js` for build script details
 
 Be sure to update CSS and JS versions in theme `functions.php` to clear browser cache after build
 
+
 ## Production environment
 * [fictiv.com](https://www.fictiv.com/)
 * [Production WP login](https://www.fictiv.com/wp-admin/)
 
+
 ## Staging environment
 * [fictiv.staging.wpengine.com](https://fictiv.staging.wpengine.com/)
 * [Staging WP login](https://fictiv.staging.wpengine.com/wp-admin/)
+
 
 ## Host (WPEngine)
 * [Setup git push](https://wpengine.com/support/set-git-push-user-portal/)
