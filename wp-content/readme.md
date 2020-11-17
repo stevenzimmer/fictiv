@@ -31,13 +31,17 @@ cd into fictiv-theme and run 'npm install' to pull down all packages
 ## Development
 
 cd into `fictiv-theme` folder and `npm run dev` to begin development
+
 reference `fictiv-theme/webpack/dev.js` for development script details
 
 ## Build
 
 cd into `fictiv-theme` folder and `npm run build` to build css and JS files into `/dist` folder once development phase is complete. 
+
 reference `fictiv-theme/webpack/build.js` for build script details
+
 `/dist` folder comprises of all production assets
+
 Be sure to update CSS and JS versions in theme `functions.php` to clear browser cache after build
 
 ## Production environment
